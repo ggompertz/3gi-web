@@ -1,0 +1,1049 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>3G Intelligence · Framework Unificado v3.0</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: Arial, sans-serif;
+    background: #06060D;
+    color: #EEF1F6;
+    padding: 40px 32px;
+    min-height: 100vh;
+  }
+
+  /* ── Header ── */
+  .header {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    border-bottom: 3px solid #00E891;
+    padding-bottom: 16px;
+    margin-bottom: 12px;
+  }
+  .header-left h1 { font-size: 22px; font-weight: 700; color: #00E891; letter-spacing: 0.5px; }
+  .header-left p  { font-size: 12px; color: #9CA3AF; margin-top: 4px; }
+  .header-right   { font-size: 11px; color: #6B7280; text-align: right; }
+
+  /* ── Leyenda global ── */
+  .legend-global {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    padding: 14px 16px;
+    background: #0F1117;
+    border: 1px solid #1F2937;
+    border-radius: 8px;
+    margin-bottom: 36px;
+  }
+  .legend-item { display: flex; align-items: center; gap: 7px; font-size: 11px; color: #9CA3AF; }
+  .legend-dot  { width: 12px; height: 12px; border-radius: 3px; flex-shrink: 0; }
+
+  /* ── Flow ── */
+  .flow {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    max-width: 1040px;
+    margin: 0 auto;
+  }
+
+  /* ── Phase blocks ── */
+  .phase {
+    border-left: 4px solid #00E891;
+    padding: 0 0 0 20px;
+    margin-bottom: 0;
+  }
+  .phase-label {
+    display: inline-block;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+    padding: 3px 10px;
+    border-radius: 3px;
+    margin-bottom: 10px;
+  }
+  .label-pre    { background: #1A1D2E; color: #9CA3AF; border: 1px solid #374151; }
+  .label-e0     { background: #FEF3C7; color: #92400E; }
+  .label-df     { background: #FFF7ED; color: #9A3412; }
+  .label-e1     { background: #DBEAFE; color: #1E40AF; }
+  .label-e2     { background: #D1FAE5; color: #065F46; }
+  .label-e3     { background: #EDE9FE; color: #5B21B6; }
+  .label-impl   { background: #FEE2E2; color: #991B1B; }
+  .label-ret    { background: #F0FDF4; color: #166534; }
+
+  .phase-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: #EEF1F6;
+    margin-bottom: 4px;
+  }
+  .phase-sub {
+    font-size: 12px;
+    color: #9CA3AF;
+    margin-bottom: 16px;
+  }
+
+  /* ── Card grid ── */
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
+    gap: 12px;
+    margin-bottom: 4px;
+  }
+  .card {
+    background: #1A1D2E;
+    border: 1px solid #374151;
+    border-radius: 8px;
+    padding: 14px;
+    position: relative;
+    transition: border-color 0.2s;
+  }
+  .card:hover { border-color: #00E891; }
+
+  /* Status overlay */
+  .card.built   { border-left: 3px solid #00E891; }
+  .card.missing { border-left: 3px solid #EF4444; background: #1A0F0F; }
+  .card.partial { border-left: 3px solid #F59E0B; background: #1A160A; }
+
+  .card-icon  { font-size: 18px; margin-bottom: 6px; }
+  .card-name  { font-size: 12px; font-weight: 700; color: #EEF1F6; margin-bottom: 4px; }
+  .card-file  { font-size: 10px; color: #00E891; font-family: monospace; margin-bottom: 4px; word-break: break-all; }
+  .card-url   { font-size: 10px; color: #60A5FA; font-family: monospace; margin-bottom: 4px; word-break: break-all; }
+  .card-port  { font-size: 10px; color: #A5B4FC; font-family: monospace; margin-bottom: 4px; }
+  .card-desc  { font-size: 11px; color: #9CA3AF; line-height: 1.5; margin-top: 4px; }
+  .card-warn  { font-size: 10px; color: #F59E0B; margin-top: 6px; font-weight: 700; }
+  .card-err   { font-size: 10px; color: #EF4444; margin-top: 6px; font-weight: 700; }
+
+  .card-badge {
+    position: absolute;
+    top: 8px; right: 8px;
+    font-size: 9px;
+    font-weight: 700;
+    padding: 2px 6px;
+    border-radius: 20px;
+    letter-spacing: 0.5px;
+  }
+  .badge-doc      { background: #1E3A5F; color: #93C5FD; }
+  .badge-toolkit  { background: #1C3829; color: #6EE7B7; }
+  .badge-agent    { background: #1E1B4B; color: #A5B4FC; }
+  .badge-output   { background: #3B2A0D; color: #FCD34D; }
+  .badge-missing  { background: #3B0D0D; color: #FCA5A5; }
+  .badge-partial  { background: #3B2E0D; color: #FDE68A; }
+
+  /* ── Status chips ── */
+  .status-chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 9px;
+    font-weight: 700;
+    padding: 2px 7px;
+    border-radius: 20px;
+    margin-top: 6px;
+    letter-spacing: 0.3px;
+  }
+  .chip-built    { background: #052E16; color: #00E891; border: 1px solid #00E89133; }
+  .chip-missing  { background: #450A0A; color: #FCA5A5; border: 1px solid #EF444433; }
+  .chip-partial  { background: #451A03; color: #FDE68A; border: 1px solid #F59E0B33; }
+  .chip-nodeploy { background: #1E1B4B; color: #C4B5FD; border: 1px solid #6366F133; }
+  .chip-nodoc    { background: #3B2A0D; color: #FCD34D; border: 1px solid #F59E0B33; }
+
+  /* ── Connector ── */
+  .connector {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 0 10px 20px;
+  }
+  .connector-line {
+    width: 2px;
+    height: 36px;
+    background: #374151;
+    margin-left: 10px;
+  }
+  .connector-label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 11px;
+    color: #6B7280;
+  }
+  .connector-arrow { color: #00E891; font-size: 18px; }
+  .connector-cond {
+    background: #1A1D2E;
+    border: 1px dashed #F59E0B;
+    color: #F59E0B;
+    font-size: 10px;
+    padding: 4px 10px;
+    border-radius: 4px;
+    font-weight: 700;
+  }
+
+  /* ── Output box ── */
+  .output-box {
+    background: #0D1F14;
+    border: 1px solid #00E891;
+    border-radius: 8px;
+    padding: 12px 16px;
+    margin-top: 12px;
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+  }
+  .output-box .arrow { font-size: 20px; color: #00E891; }
+  .output-label { font-size: 11px; color: #6EE7B7; font-weight: 700; text-transform: uppercase; letter-spacing: 0.8px; }
+  .output-text  { font-size: 12px; color: #EEF1F6; margin-top: 2px; }
+  .output-text span { font-family: monospace; font-size: 11px; color: #FCD34D; }
+
+  /* ── Alert box ── */
+  .alert-box {
+    border-radius: 8px;
+    padding: 12px 16px;
+    margin-top: 10px;
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    font-size: 12px;
+    line-height: 1.5;
+  }
+  .alert-warn { background: #1C150A; border: 1px dashed #F59E0B; color: #FDE68A; }
+  .alert-err  { background: #1A0808; border: 1px dashed #EF4444; color: #FCA5A5; }
+  .alert-info { background: #0D0D1F; border: 1px dashed #6366F1; color: #C4B5FD; }
+
+  /* ── Summary table ── */
+  .summary-section { margin-top: 56px; max-width: 1040px; margin-left: auto; margin-right: auto; }
+  .summary-title {
+    font-size: 14px; font-weight: 700; color: #00E891;
+    letter-spacing: 0.5px; margin-bottom: 16px; text-transform: uppercase;
+  }
+  table { width: 100%; border-collapse: collapse; font-size: 12px; }
+  th {
+    background: #1A1D2E; color: #9CA3AF; text-align: left;
+    padding: 10px 14px; font-weight: 700; text-transform: uppercase;
+    font-size: 10px; letter-spacing: 0.8px; border-bottom: 2px solid #00E891;
+  }
+  td {
+    padding: 10px 14px; border-bottom: 1px solid #1F2937;
+    vertical-align: middle; color: #D1D5DB; line-height: 1.5;
+  }
+  tr:hover td { background: #0F1117; }
+  .mono { font-family: monospace; font-size: 11px; color: #A5B4FC; }
+  .green { color: #00E891; }
+  .red   { color: #EF4444; }
+  .amber { color: #F59E0B; }
+  .purple { color: #C4B5FD; }
+  .center { text-align: center; }
+
+  /* ── Footer ── */
+  .footer {
+    margin-top: 48px; padding-top: 16px;
+    border-top: 1px solid #1F2937;
+    font-size: 10px; color: #4B5563;
+    display: flex; justify-content: space-between;
+    max-width: 1040px; margin-left: auto; margin-right: auto;
+  }
+
+  /* ── Diff note ── */
+  .diff-note {
+    display: inline-flex; align-items: center; gap: 4px;
+    font-size: 10px; color: #F59E0B;
+    background: #1C150A; border: 1px solid #F59E0B44;
+    padding: 1px 6px; border-radius: 3px; margin-left: 6px;
+  }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <div class="header-left">
+    <h1>3G Intelligence · Framework Unificado v4.0</h1>
+    <p>Fuente: código plataforma + Framework_Consultoria_IA_v2.docx + 3GI_Framework_Flujo.html · 18 Mar 2026 · 7 mejoras IA implementadas · PRD genera 3 docs</p>
+  </div>
+  <div class="header-right">
+    Documento interno — uso metodológico y técnico<br>
+    Integra: código plataforma · documentación · estado de cada componente
+  </div>
+</div>
+
+<!-- ── Leyenda ── -->
+<div class="legend-global">
+  <div class="legend-item"><div class="legend-dot" style="background:#00E891"></div> Construido y desplegado</div>
+  <div class="legend-item"><div class="legend-dot" style="background:#F59E0B"></div> Diferencia con documentación</div>
+  <div class="legend-item"><div class="legend-dot" style="background:#93C5FD"></div> Documento / Toolkit</div>
+  <div class="legend-item"><div class="legend-dot" style="background:#FCD34D"></div> Documento con observaciones</div>
+</div>
+
+<div class="flow">
+
+  <!-- ══════════════════════════════════════
+       PRE-VENTA
+  ══════════════════════════════════════ -->
+  <div class="phase">
+    <div class="phase-label label-pre">Pre-venta</div>
+    <div class="phase-title">Contacto y calificación inicial</div>
+    <div class="phase-sub">Antes de la primera reunión formal — califica al prospecto y prepara la apertura</div>
+
+    <div class="cards">
+
+      <div class="card built">
+        <span class="card-badge badge-doc">Marco</span>
+        <div class="card-icon">📘</div>
+        <div class="card-name">Framework de Consultoría IA</div>
+        <div class="card-file">Framework_Consultoria_IA_v2.docx</div>
+        <div class="card-desc">Metodología completa: 6 etapas, cliente ideal, promesa comercial, pricing y modelo de escala. Documento base del negocio.</div>
+        <div><span class="status-chip chip-built">✓ Existe</span></div>
+      </div>
+
+      <div class="card built">
+        <span class="card-badge badge-doc">Marca</span>
+        <div class="card-icon">🎨</div>
+        <div class="card-name">Manual de Marca</div>
+        <div class="card-file">Branding/Manual_Marca_3G_Intelligence.docx</div>
+        <div class="card-desc">Identidad visual, paleta de colores, tipografía y tono. También disponible en versión HTML interactiva: <code style="font-size:9px;color:#00E891">3G_Intelligence_Brand_System.html</code>.</div>
+        <div><span class="status-chip chip-built">✓ Existe en Branding/</span></div>
+      </div>
+
+      <div class="card built">
+        <span class="card-badge badge-agent">Agente IA</span>
+        <div class="card-icon">🔍</div>
+        <div class="card-name">Pre-Scan Agent</div>
+        <div class="card-url">pre-scan.3g-ia-agents.com</div>
+        <div class="card-port">Puerto 3004 · etapa: pre_e0</div>
+        <div class="card-desc">Scraping del sitio web del prospecto. Nuevo botón "✨ Enriquecer con inteligencia externa" genera tendencias sector, paisaje competitivo, dolores típicos y oportunidades emergentes con Claude (POST /enriquecer). Contexto pasa al brief principal. Claude infiere ERA hipotética, flags de riesgo y recomendación de apertura. Genera brief .docx.</div>
+        <div><span class="status-chip chip-built">✓ Construido y desplegado · Enriquecimiento externo añadido 18 Mar 2026</span></div>
+      </div>
+
+      <div class="card built">
+        <span class="card-badge badge-agent">WhatsApp</span>
+        <div class="card-icon">💬</div>
+        <div class="card-name">Bot WhatsApp Inbound</div>
+        <div class="card-url">+56 9 8897 4898 · Meta WhatsApp Business API</div>
+        <div class="card-desc">Calificación autónoma de prospectos inbound vía WhatsApp. n8n + Claude. Escala a Gonzalo si detecta intención de compra o >5 turnos sin avance. Notificación por email.</div>
+        <div><span class="status-chip chip-built">✓ Activo (n8n)</span></div>
+      </div>
+
+    </div>
+
+    <div class="output-box">
+      <div class="arrow">→</div>
+      <div>
+        <div class="output-label">Output Pre-Scan</div>
+        <div class="output-text"><span>PreScan_&lt;empresa&gt;_&lt;fecha&gt;.docx</span> — Brief con ERA hipotética, dolores probables, flags de riesgo, recomendación de apertura. Guardado en Supabase.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="connector"><div class="connector-line"></div><div class="connector-label"><span class="connector-arrow">↓</span> Primera reunión agendada (60–90 min con CEO/Dueño)</div></div>
+
+  <!-- ══════════════════════════════════════
+       ETAPA 0
+  ══════════════════════════════════════ -->
+  <div class="phase">
+    <div class="phase-label label-e0">Etapa 0 · USD 0–1.500</div>
+    <div class="phase-title">AI Opportunity Scan · Diagnóstico Inicial</div>
+    <div class="phase-sub">Reunión de 60–90 min · CEO o dueño · Toolkit A secciones A1–A5 · Score de madurez /10 · Decisión de ruta</div>
+
+    <div class="cards">
+
+      <div class="card built">
+        <span class="card-badge badge-doc">Guía</span>
+        <div class="card-icon">📋</div>
+        <div class="card-name">Etapa 0 · Scan IA</div>
+        <div class="card-file">3GI_Etapa0_Scan_IA.docx</div>
+        <div class="card-desc">Metodología completa de la sesión E0: rúbrica de 5 dimensiones, señales de descalificación, cierre y pitch de Etapa 1.</div>
+        <div><span class="status-chip chip-built">✓ Existe</span></div>
+      </div>
+
+      <div class="card built">
+        <span class="card-badge badge-toolkit">Toolkit A</span>
+        <div class="card-icon">🎙️</div>
+        <div class="card-name">Toolkit A · CEO Interview</div>
+        <div class="card-file">3GI_ToolkitA_CEO_Interview.docx</div>
+        <div class="card-desc">A1 Contexto · A2 Dolores · A3 Datos y tecnología · A4 Visión · A5 Gobernanza (9 preguntas estructuradas). Uso exclusivo en E0.</div>
+        <div><span class="status-chip chip-built">✓ Existe</span></div>
+      </div>
+
+      <div class="card built">
+        <span class="card-badge badge-agent">Agente IA</span>
+        <div class="card-icon">⚙️</div>
+        <div class="card-name">Post-Scan Agent</div>
+        <div class="card-url">post-scan.3g-ia-agents.com</div>
+        <div class="card-port">Puerto 3001 · etapa: e0</div>
+        <div class="card-desc">Procesa Toolkit A completo (A1–A5). Calcula score ponderado /10. Determina ERA. Evalúa AI Governance (semáforo verde/amarillo/rojo). Decide ruta. Genera reporte E0 + certificado.</div>
+        <div class="card-desc" style="margin-top:6px;color:#6EE7B7;font-size:10px;"><strong>Fórmula:</strong> (datos×3 + procesos×2 + tech×2 + personas + gov) / 9 → /10<br><strong>ERA:</strong> ≥3.5=Era 3 · ≥2.5=Era 2 · &lt;2.5=Era 1<br><strong>DF activado:</strong> datos≤2 O (datos+gov)/2&lt;2</div>
+        <div><span class="status-chip chip-built">✓ Construido y desplegado</span></div>
+      </div>
+
+    </div>
+
+    <div class="output-box">
+      <div class="arrow">→</div>
+      <div>
+        <div class="output-label">Outputs Etapa 0</div>
+        <div class="output-text">
+          <span>DiagnosticoE0_&lt;empresa&gt;_&lt;fecha&gt;.docx</span> — Reporte con score /10, ERA, AI Governance Assessment, decisión de ruta.<br>
+          <span>DataReadinessCert_&lt;empresa&gt;_&lt;fecha&gt;.docx</span> — DRC-1 (básico) o DRC-2 (datos≥4 y gov≥4).
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="connector"><div class="connector-line"></div><div class="connector-label"><span class="connector-arrow">↓</span> <span class="connector-cond">Si datos≤2 o (datos+gov)/2&lt;2 → Data Foundation obligatorio</span></div></div>
+
+  <!-- ══════════════════════════════════════
+       DATA FOUNDATION (condicional)
+  ══════════════════════════════════════ -->
+  <div class="phase">
+    <div class="phase-label label-df">Servicio previo · Condicional · USD 800–15.000</div>
+    <div class="phase-title">Data Foundation</div>
+    <div class="phase-sub">Solo si el score de datos o gobernanza es insuficiente para implementar IA. Habilita al cliente para Etapa 1.</div>
+
+    <div class="cards">
+
+      <div class="card built">
+        <span class="card-badge badge-agent">Agente IA</span>
+        <div class="card-icon">🗄️</div>
+        <div class="card-name">Data Foundation Agent</div>
+        <div class="card-url">data-foundation.3g-ia-agents.com</div>
+        <div class="card-port">Puerto 3007 · etapa: data_foundation</div>
+        <div class="card-desc">Selecciona problemas de datos (silos, Excel disperso, sin integración, calidad baja). Claude infiere nivel N1/N2/N3 y genera propuesta con roadmap, KPIs e inversión. Emite certificado DRC-DF.</div>
+        <div class="card-desc" style="margin-top:6px;color:#6EE7B7;font-size:10px;"><strong>N1:</strong> USD 800–2.500 (ordenamiento básico)<br><strong>N2:</strong> USD 2.500–6.000 (centralización)<br><strong>N3:</strong> USD 6.000–15.000 (data warehouse)</div>
+        <div><span class="status-chip chip-built">✓ Construido y desplegado</span></div>
+      </div>
+
+      <div class="card built">
+        <span class="card-badge badge-doc">Doc</span>
+        <div class="card-icon">📄</div>
+        <div class="card-name">Data Foundation</div>
+        <div class="card-file">3GI_Data_Foundation.docx</div>
+        <div class="card-desc">Descripción de los 3 niveles, precios, entregables y cómo presentarlo al cliente.</div>
+        <div><span class="status-chip chip-built">✓ Existe</span></div>
+      </div>
+
+      <div class="card built">
+        <span class="card-badge badge-doc">Certificado</span>
+        <div class="card-icon">🏅</div>
+        <div class="card-name">Data Readiness Certificate</div>
+        <div class="card-file">3GI_Data_Readiness_Certificate.docx</div>
+        <div class="card-desc">Certifica que el cliente está listo para proyectos de IA tras completar Data Foundation. Código: DRC-DF-&lt;año&gt;-&lt;clienteID&gt;.</div>
+        <div><span class="status-chip chip-built">✓ Existe</span></div>
+      </div>
+
+    </div>
+
+    <div class="output-box">
+      <div class="arrow">→</div>
+      <div>
+        <div class="output-label">Outputs Data Foundation</div>
+        <div class="output-text">
+          <span>DataFoundation_N&lt;n&gt;_&lt;slug&gt;_&lt;fecha&gt;.docx</span> — Propuesta con nivel, roadmap, equipo e inversión.<br>
+          <span>DataFoundationCert_N&lt;n&gt;_&lt;slug&gt;_&lt;fecha&gt;.docx</span> — Certificado DRC-DF. Habilita Etapa 1.
+        </div>
+      </div>
+    </div>
+
+    <div class="alert-box alert-info">
+      <span>ℹ</span>
+      <div><strong>Agente activo en producción:</strong> PM2 corriendo en puerto 3007 · Nginx configurado con HTTPS y auth_request · accesible en <code style="color:#C4B5FD">data-foundation.3g-ia-agents.com</code>. Nota: el directorio <code>/home/ggomp/3gi-platform/agents/data-foundation/</code> es copia local; la instancia live corre en el servidor.</div>
+    </div>
+  </div>
+
+  <div class="connector"><div class="connector-line"></div><div class="connector-label"><span class="connector-arrow">↓</span> Contrato Etapa 1 firmado · Datos OK (DRC emitido)</div></div>
+
+  <!-- ══════════════════════════════════════
+       ETAPA 1
+  ══════════════════════════════════════ -->
+  <div class="phase">
+    <div class="phase-label label-e1">Etapa 1 · USD 2.000–12.000</div>
+    <div class="phase-title">Diagnóstico Profundo</div>
+    <div class="phase-sub">2–3 semanas · entrevistas por área (Toolkit B) + auditoría de datos (Toolkit C) + scoring de oportunidades (Toolkit D) + informe diagnóstico</div>
+
+    <div class="cards">
+
+      <div class="card built">
+        <span class="card-badge badge-toolkit">Toolkit B</span>
+        <div class="card-icon">🗺️</div>
+        <div class="card-name">Mapeo de Procesos por Área</div>
+        <div class="card-file">3GI_ToolkitB_Process_Mapping.docx</div>
+        <div class="card-desc">Entrevistas de 45–60 min con responsables de cada área. Documenta procesos, horas, sistemas y tipo de automatización potencial. Insumo para Toolkit D.</div>
+        <div><span class="status-chip chip-built">✓ Existe</span></div>
+      </div>
+
+      <div class="card built">
+        <span class="card-badge badge-toolkit">Toolkit C</span>
+        <div class="card-icon">🔬</div>
+        <div class="card-name">Auditoría de Datos</div>
+        <div class="card-file">3GI_ToolkitC_Data_Audit.docx</div>
+        <div class="card-desc">Checklist en 5 dimensiones (C1–C5): completitud, consistencia, accesibilidad, integración y gobernanza. Score por dimensión. C1 o C2 ≤ 2.0 activa Data Foundation.</div>
+        <div><span class="status-chip chip-built">✓ Existe</span></div>
+      </div>
+
+      <div class="card built">
+        <span class="card-badge badge-toolkit">Toolkit D</span>
+        <div class="card-icon">📊</div>
+        <div class="card-name">Scoring Matrix</div>
+        <div class="card-file">3GI_ToolkitD_Scoring_Matrix.docx</div>
+        <div class="card-desc">Fórmula: (Impacto×3)+(Frecuencia×2)+(Facilidad×2)−(Riesgo). Máx 40 pts. Alta≥30 · Media≥20 · Baja&lt;20. Quick Win si plazo ≤ 4 sem.</div>
+        <div><span class="status-chip chip-built">✓ Existe</span></div>
+      </div>
+
+      <div class="card built">
+        <span class="card-badge badge-agent">Agente IA</span>
+        <div class="card-icon">🎯</div>
+        <div class="card-name">Scoring Agent</div>
+        <div class="card-url">scoring.3g-ia-agents.com</div>
+        <div class="card-port">Puerto 3000 · etapa: e1.0</div>
+        <div class="card-desc">Nuevo botón "✨ Sugerir con IA" lee Toolkit A completo (POST /sugerir) y genera 5-8 oportunidades pre-calificadas con scores, plazo, costo y contexto. Recibe oportunidades con scores 1–5. Claude enriquece: problema, solución, KPI, ROI. Precarga dolores desde Toolkit A. Genera fichas .docx priorizadas.</div>
+        <div><span class="status-chip chip-built">✓ Construido y desplegado · Auto-sugerencias IA añadidas 18 Mar 2026</span></div>
+      </div>
+
+      <div class="card built">
+        <span class="card-badge badge-agent">Agente IA</span>
+        <div class="card-icon">📝</div>
+        <div class="card-name">Report Agent</div>
+        <div class="card-url">report.3g-ia-agents.com</div>
+        <div class="card-port">Puerto 3002 · etapa: e1.1 → e1.2</div>
+        <div class="card-desc">Carga cliente con score/ERA/oportunidades. Pricing dinámico por tamaño × complejidad × urgencia. Claude genera informe ejecutivo con roadmap 3 fases. Avanza cliente a propuesta_enviada.</div>
+        <div><span class="status-chip chip-built">✓ Construido y desplegado</span></div>
+      </div>
+
+      <div class="card built">
+        <span class="card-badge badge-doc">Template</span>
+        <div class="card-icon">📄</div>
+        <div class="card-name">Informe Diagnóstico Template v2</div>
+        <div class="card-file">3GI_Informe_Diagnostico_Template_v2.docx</div>
+        <div class="card-desc">Template actualizado del informe de diagnóstico. Versión vigente (reemplaza a la v1).</div>
+        <div><span class="status-chip chip-built">✓ Existe</span></div>
+      </div>
+
+    </div>
+
+    <div class="output-box">
+      <div class="arrow">→</div>
+      <div>
+        <div class="output-label">Outputs Etapa 1</div>
+        <div class="output-text">
+          <span>Oportunidades_&lt;empresa&gt;_&lt;fecha&gt;.docx</span> — Fichas priorizadas con score, ROI en 3 escenarios (Scoring Agent).<br>
+          <span>InformeDiagnostico_&lt;empresa&gt;_&lt;fecha&gt;.docx</span> — Informe ejecutivo con hallazgos, oportunidades clave, roadmap y pricing (Report Agent).
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="connector"><div class="connector-line"></div><div class="connector-label"><span class="connector-arrow">↓</span> Presentación de resultados · Sesión de validación con el cliente</div></div>
+
+  <!-- ══════════════════════════════════════
+       ETAPA 2
+  ══════════════════════════════════════ -->
+  <div class="phase">
+    <div class="phase-label label-e2">Etapa 2 · USD 1.000–15.000</div>
+    <div class="phase-title">Validación + Propuesta de Implementación</div>
+    <div class="phase-sub">Sesión de validación con dirección → decisión por oportunidad → PRD Agent genera CEO Brief + Propuesta Comercial + PRD Técnico</div>
+
+    <div class="cards">
+
+      <div class="card built">
+        <span class="card-badge badge-agent">Agente IA</span>
+        <div class="card-icon">✅</div>
+        <div class="card-name">Análisis Agent E2</div>
+        <div class="card-url">analisis.3g-ia-agents.com</div>
+        <div class="card-port">Puerto 3008 · etapa: e1.2 → e2</div>
+        <div class="card-desc">Sesión de validación con el cliente. Consultor ingresa presupuesto, urgencia, restricciones. Por cada oportunidad: ejecutar / ajustar / descartar + notas. Claude genera Informe de Análisis E2 con justificaciones.</div>
+        <div><span class="status-chip chip-built">✓ Construido y desplegado</span></div>
+      </div>
+
+      <div class="card built">
+        <span class="card-badge badge-agent">Agente IA</span>
+        <div class="card-icon">📐</div>
+        <div class="card-name">PRD Agent</div>
+        <div class="card-url">prd.3g-ia-agents.com</div>
+        <div class="card-port">Puerto 3005 · etapa: e2 → e3</div>
+        <div class="card-desc">Selecciona 1–3 oportunidades + tarifa/hora (default USD 65). Claude genera <strong>tres documentos simultáneos</strong>: (1) <strong>CEO Brief</strong> — cuadro antes/después, costo inacción USD/mes, caso análogo, primer resultado visible, cuadro de decisión + firma; (2) <strong>Propuesta Comercial</strong> — opciones Esencial / Estratégica / Transformacional con precios calculados (horas × tarifa × factor), hitos de pago 40/40/20, condiciones generales, garantía, validez 30 días desde emisión; (3) <strong>PRD Técnico</strong> — user stories, stack, criterios de aceptación, fases, riesgos.</div>
+        <div><span class="status-chip chip-built">✓ Construido y desplegado</span></div>
+      </div>
+
+      <div class="card built">
+        <span class="card-badge badge-doc">Template</span>
+        <div class="card-icon">💼</div>
+        <div class="card-name">Propuesta Comercial Template</div>
+        <div class="card-file">3GI_Propuesta_Comercial_Template.docx</div>
+        <div class="card-desc">Template de referencia original. El PRD Agent genera la propuesta comercial dinámicamente (opciones Esencial/Estratégica/Transformacional con precios calculados por Claude). Este .docx sirve como respaldo o guía de formato.</div>
+        <div><span class="status-chip chip-built">✓ Existe (referencia)</span></div>
+      </div>
+
+    </div>
+
+    <div class="output-box">
+      <div class="arrow">→</div>
+      <div>
+        <div class="output-label">Outputs Etapa 2</div>
+        <div class="output-text">
+          <span>AnalisisE2_&lt;empresa&gt;_&lt;fecha&gt;.docx</span> — Informe de validación con decisiones por oportunidad (Análisis Agent).<br>
+          <span>CEO_Brief_&lt;slug&gt;_&lt;fecha&gt;.docx</span> — Documento de negocio: antes/después, costo inacción, caso análogo, primer resultado, cuadro de decisión + firma (PRD Agent).<br>
+          <span>Propuesta_&lt;slug&gt;_&lt;fecha&gt;.docx</span> — Propuesta comercial: Esencial/Estratégica/Transformacional con precios, hitos de pago, condiciones, garantía, validez 30 días (PRD Agent).<br>
+          <span>PRD_&lt;slug&gt;_&lt;fecha&gt;.docx</span> — PRD Técnico: user stories, stack, criterios, fases, riesgos (PRD Agent).
+        </div>
+      </div>
+    </div>
+
+    <div class="alert-box alert-info">
+      <span>ℹ</span>
+      <div><strong>Orden correcto de uso E2:</strong> Primero Análisis Agent (valida qué oportunidades ejecutar) → luego PRD Agent (documenta solo las aprobadas, genera 3 docs simultáneos). El Etapa2 Agent incluye benchmarks sectoriales: posición vs sector, comparativas, referentes del sector y oportunidad de diferenciación.</div>
+    </div>
+  </div>
+
+  <div class="connector"><div class="connector-line"></div><div class="connector-label"><span class="connector-arrow">↓</span> Propuesta comercial aceptada · Contrato a firmar</div></div>
+
+  <!-- ══════════════════════════════════════
+       ETAPA 3 — CONTRATO
+  ══════════════════════════════════════ -->
+  <div class="phase">
+    <div class="phase-label label-e3">Etapa 3 · Formalización</div>
+    <div class="phase-title">Contrato · Statement of Work</div>
+    <div class="phase-sub">Documento legal vinculante · alcance, entregables, timeline, términos y condiciones</div>
+
+    <div class="cards">
+
+      <div class="card built">
+        <span class="card-badge badge-agent">Agente IA</span>
+        <div class="card-icon">📜</div>
+        <div class="card-name">Contrato Agent</div>
+        <div class="card-url">contrato.3g-ia-agents.com</div>
+        <div class="card-port">Puerto 3009 · etapa: e3 → activo</div>
+        <div class="card-desc">Carga cliente en e3 o propuesta_enviada. Claude genera SOW enriquecido con 3 nuevas secciones: cláusulas sectoriales (específicas del rubro), SLA (uptime/soporte/escalación) y penalidades (retraso/KPI/límite responsabilidad). Botón "Firmado" avanza a etapa activo.</div>
+        <div><span class="status-chip chip-built">✓ Construido · SOW enriquecido (SLA + penalidades + cláusulas sectoriales) 18 Mar 2026</span></div>
+      </div>
+
+    </div>
+
+    <div class="output-box">
+      <div class="arrow">→</div>
+      <div>
+        <div class="output-label">Output Etapa 3</div>
+        <div class="output-text"><span>SOW_&lt;slug&gt;_&lt;fecha&gt;.docx</span> — Statement of Work firmado. Activa etapa "activo" en pipeline.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="connector"><div class="connector-line"></div><div class="connector-label"><span class="connector-arrow">↓</span> Contrato firmado · Inicio del proyecto</div></div>
+
+  <!-- ══════════════════════════════════════
+       ETAPA 4 — IMPLEMENTACIÓN
+  ══════════════════════════════════════ -->
+  <div class="phase">
+    <div class="phase-label label-impl">Etapa 4 · Variable</div>
+    <div class="phase-title">Implementación</div>
+    <div class="phase-sub">Sprints de 2 semanas · actas de avance por fase · entrega final · avance a Retainer</div>
+
+    <div class="cards">
+
+      <div class="card built">
+        <span class="card-badge badge-agent">Agente IA</span>
+        <div class="card-icon">🔧</div>
+        <div class="card-name">Implementación Agent</div>
+        <div class="card-url">implementacion.3g-ia-agents.com</div>
+        <div class="card-port">Puerto 3010 · etapa: activo → retainer</div>
+        <div class="card-desc">Consultor ingresa fases con oportunidades cubiertas y notas. Genera Actas de Avance intermedias y Acta de Entrega Final. Botón "Entrega Final" avanza cliente a retainer.</div>
+        <div><span class="status-chip chip-built">✓ Construido y desplegado</span></div>
+      </div>
+
+    </div>
+
+    <div class="output-box">
+      <div class="arrow">→</div>
+      <div>
+        <div class="output-label">Outputs Implementación</div>
+        <div class="output-text">
+          <span>ActaAvance_&lt;slug&gt;_&lt;fase&gt;_&lt;fecha&gt;.docx</span> — Avance por sprint (intermedias).<br>
+          <span>ActaFinal_&lt;slug&gt;_&lt;fase&gt;_&lt;fecha&gt;.docx</span> — Entrega y cierre del proyecto.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="connector"><div class="connector-line"></div><div class="connector-label"><span class="connector-arrow">↓</span> Proyecto entregado y aceptado</div></div>
+
+  <!-- ══════════════════════════════════════
+       ETAPA 5 — RETAINER
+  ══════════════════════════════════════ -->
+  <div class="phase">
+    <div class="phase-label label-ret">Etapa 5 · USD 500–5.000/mes</div>
+    <div class="phase-title">Retainer · Mejora Continua</div>
+    <div class="phase-sub">Soporte mensual · monitoreo de métricas · nuevas oportunidades · AI Opportunity Scan trimestral</div>
+
+    <div class="cards">
+
+      <div class="card built">
+        <span class="card-badge badge-agent">Agente IA</span>
+        <div class="card-icon">🔄</div>
+        <div class="card-name">Retainer Agent</div>
+        <div class="card-url">retainer.3g-ia-agents.com</div>
+        <div class="card-port">Puerto 3011 · etapa: retainer</div>
+        <div class="card-desc">Gestión del ciclo mensual. Ingresa implementaciones activas + métricas por ciclo. Claude genera resumen ejecutivo, análisis de progreso, impacto acumulado, nuevas oportunidades detectadas y recomendaciones. Alerta trimestral automática en ciclos múltiplos de 3. Genera .docx mensual.</div>
+        <div><span class="status-chip chip-built">✓ Construido y desplegado · 18 Mar 2026</span></div>
+      </div>
+
+    </div>
+  </div>
+
+</div><!-- /flow -->
+
+
+<!-- ══════════════════════════════════════
+     TABLA RESUMEN ESTADO COMPLETO
+══════════════════════════════════════ -->
+<div class="summary-section">
+  <div class="summary-title">Estado completo del sistema · Resumen ejecutivo</div>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Componente</th>
+        <th>Tipo</th>
+        <th>Etapa</th>
+        <th>Puerto</th>
+        <th>URL prod.</th>
+        <th>PM2</th>
+        <th>Nginx</th>
+        <th>Estado</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Orchestrador</strong></td>
+        <td>Agente IA</td>
+        <td>Central</td>
+        <td class="mono">3003</td>
+        <td class="mono">pipeline.3g-ia-agents.com</td>
+        <td class="center green">✓</td>
+        <td class="center green">✓</td>
+        <td><span class="status-chip chip-built">✓ Desplegado</span></td>
+      </tr>
+      <tr>
+        <td><strong>Pre-Scan Agent</strong></td>
+        <td>Agente IA</td>
+        <td>pre_e0</td>
+        <td class="mono">3004</td>
+        <td class="mono">pre-scan.3g-ia-agents.com</td>
+        <td class="center green">✓</td>
+        <td class="center green">✓</td>
+        <td><span class="status-chip chip-built">✓ Desplegado</span></td>
+      </tr>
+      <tr>
+        <td><strong>Post-Scan Agent</strong></td>
+        <td>Agente IA</td>
+        <td>e0</td>
+        <td class="mono">3001</td>
+        <td class="mono">post-scan.3g-ia-agents.com</td>
+        <td class="center green">✓</td>
+        <td class="center green">✓</td>
+        <td><span class="status-chip chip-built">✓ Desplegado</span></td>
+      </tr>
+      <tr>
+        <td><strong>Data Foundation Agent</strong></td>
+        <td>Agente IA</td>
+        <td>data_foundation</td>
+        <td class="mono">3007</td>
+        <td class="mono">data-foundation.3g-ia-agents.com</td>
+        <td class="center green">✓</td>
+        <td class="center green">✓</td>
+        <td><span class="status-chip chip-built">✓ Desplegado</span></td>
+      </tr>
+      <tr>
+        <td><strong>Scoring Agent</strong></td>
+        <td>Agente IA</td>
+        <td>e1.0</td>
+        <td class="mono">3000</td>
+        <td class="mono">scoring.3g-ia-agents.com</td>
+        <td class="center green">✓</td>
+        <td class="center green">✓</td>
+        <td><span class="status-chip chip-built">✓ Desplegado</span></td>
+      </tr>
+      <tr>
+        <td><strong>Report Agent</strong></td>
+        <td>Agente IA</td>
+        <td>e1.1</td>
+        <td class="mono">3002</td>
+        <td class="mono">report.3g-ia-agents.com</td>
+        <td class="center green">✓</td>
+        <td class="center green">✓</td>
+        <td><span class="status-chip chip-built">✓ Desplegado</span></td>
+      </tr>
+      <tr>
+        <td><strong>Análisis Agent E2</strong></td>
+        <td>Agente IA</td>
+        <td>e1.2 → e2</td>
+        <td class="mono">3008</td>
+        <td class="mono">analisis.3g-ia-agents.com</td>
+        <td class="center green">✓</td>
+        <td class="center green">✓</td>
+        <td><span class="status-chip chip-built">✓ Desplegado</span></td>
+      </tr>
+      <tr>
+        <td><strong>PRD Agent</strong> · 3 docs</td>
+        <td>Agente IA</td>
+        <td>e2 → e3</td>
+        <td class="mono">3005</td>
+        <td class="mono">prd.3g-ia-agents.com</td>
+        <td class="center green">✓</td>
+        <td class="center green">✓</td>
+        <td><span class="status-chip chip-built">✓ Desplegado</span></td>
+      </tr>
+      <tr>
+        <td><strong>Contrato Agent</strong></td>
+        <td>Agente IA</td>
+        <td>e3 → activo</td>
+        <td class="mono">3009</td>
+        <td class="mono">contrato.3g-ia-agents.com</td>
+        <td class="center green">✓</td>
+        <td class="center green">✓</td>
+        <td><span class="status-chip chip-built">✓ Desplegado</span></td>
+      </tr>
+      <tr>
+        <td><strong>Implementación Agent</strong></td>
+        <td>Agente IA</td>
+        <td>activo → retainer</td>
+        <td class="mono">3010</td>
+        <td class="mono">implementacion.3g-ia-agents.com</td>
+        <td class="center green">✓</td>
+        <td class="center green">✓</td>
+        <td><span class="status-chip chip-built">✓ Desplegado</span></td>
+      </tr>
+      <tr>
+        <td><strong>Retainer Agent</strong></td>
+        <td>Agente IA</td>
+        <td>retainer</td>
+        <td class="mono">3011</td>
+        <td class="mono">retainer.3g-ia-agents.com</td>
+        <td class="center green">✓</td>
+        <td class="center green">✓</td>
+        <td><span class="status-chip chip-built">✓ Desplegado 18 Mar 2026</span></td>
+      </tr>
+      <tr>
+        <td><strong>Auth Agent</strong></td>
+        <td>Agente IA</td>
+        <td>Transversal</td>
+        <td class="mono">3099</td>
+        <td class="mono">auth.3g-ia-agents.com</td>
+        <td class="center green">✓</td>
+        <td class="center green">✓</td>
+        <td><span class="status-chip chip-built">✓ Desplegado</span></td>
+      </tr>
+      <tr>
+        <td><strong>Etapa2 Agent</strong></td>
+        <td>Agente IA</td>
+        <td>e2</td>
+        <td class="mono">3006</td>
+        <td class="mono">etapa2.3g-ia-agents.com</td>
+        <td class="center green">✓</td>
+        <td class="center green">✓</td>
+        <td><span class="status-chip chip-built">✓ Desplegado</span></td>
+      </tr>
+
+      <tr>
+        <td><strong>Bot WhatsApp</strong></td>
+        <td>Integración</td>
+        <td>pre_e0</td>
+        <td class="mono">n8n</td>
+        <td class="mono">+56 9 8897 4898</td>
+        <td class="center">—</td>
+        <td class="center">—</td>
+        <td><span class="status-chip chip-built">✓ Activo (n8n)</span></td>
+      </tr>
+      <tr style="border-top: 2px solid #374151;">
+        <td><strong>Framework_Consultoria_IA_v4.docx</strong></td>
+        <td>Documento</td>
+        <td>Todas</td>
+        <td class="mono">—</td>
+        <td class="mono">—</td>
+        <td class="center">—</td>
+        <td class="center">—</td>
+        <td><span class="status-chip chip-built">✓ Actualizado · v4 · 18 Mar 2026</span></td>
+      </tr>
+      <tr>
+        <td><strong>3GI_Etapa0_Scan_IA.docx</strong></td>
+        <td>Documento</td>
+        <td>E0</td>
+        <td class="mono">—</td>
+        <td class="mono">—</td>
+        <td class="center">—</td>
+        <td class="center">—</td>
+        <td><span class="status-chip chip-built">✓ OK</span></td>
+      </tr>
+      <tr>
+        <td><strong>3GI_ToolkitA_CEO_Interview.docx</strong></td>
+        <td>Toolkit</td>
+        <td>E0</td>
+        <td class="mono">—</td>
+        <td class="mono">—</td>
+        <td class="center">—</td>
+        <td class="center">—</td>
+        <td><span class="status-chip chip-built">✓ OK</span></td>
+      </tr>
+      <tr>
+        <td><strong>3GI_ToolkitB_Process_Mapping.docx</strong></td>
+        <td>Toolkit</td>
+        <td>E1</td>
+        <td class="mono">—</td>
+        <td class="mono">—</td>
+        <td class="center">—</td>
+        <td class="center">—</td>
+        <td><span class="status-chip chip-built">✓ OK</span></td>
+      </tr>
+      <tr>
+        <td><strong>3GI_ToolkitC_Data_Audit.docx</strong></td>
+        <td>Toolkit</td>
+        <td>E1</td>
+        <td class="mono">—</td>
+        <td class="mono">—</td>
+        <td class="center">—</td>
+        <td class="center">—</td>
+        <td><span class="status-chip chip-built">✓ OK</span></td>
+      </tr>
+      <tr>
+        <td><strong>3GI_ToolkitD_Scoring_Matrix.docx</strong></td>
+        <td>Toolkit</td>
+        <td>E1</td>
+        <td class="mono">—</td>
+        <td class="mono">—</td>
+        <td class="center">—</td>
+        <td class="center">—</td>
+        <td><span class="status-chip chip-built">✓ OK</span></td>
+      </tr>
+      <tr>
+        <td><strong>3GI_Informe_Diagnostico_Template_v2.docx</strong></td>
+        <td>Template</td>
+        <td>E1</td>
+        <td class="mono">—</td>
+        <td class="mono">—</td>
+        <td class="center">—</td>
+        <td class="center">—</td>
+        <td><span class="status-chip chip-built">✓ OK</span></td>
+      </tr>
+      <tr>
+        <td><strong>3GI_Propuesta_Comercial_Template.docx</strong></td>
+        <td>Template</td>
+        <td>E2</td>
+        <td class="mono">—</td>
+        <td class="mono">—</td>
+        <td class="center">—</td>
+        <td class="center">—</td>
+        <td><span class="status-chip chip-built">✓ OK</span></td>
+      </tr>
+      <tr>
+        <td><strong>3GI_Data_Foundation.docx</strong></td>
+        <td>Documento</td>
+        <td>DF</td>
+        <td class="mono">—</td>
+        <td class="mono">—</td>
+        <td class="center">—</td>
+        <td class="center">—</td>
+        <td><span class="status-chip chip-built">✓ OK</span></td>
+      </tr>
+      <tr>
+        <td><strong>3GI_Data_Readiness_Certificate.docx</strong></td>
+        <td>Certificado</td>
+        <td>DF / E0</td>
+        <td class="mono">—</td>
+        <td class="mono">—</td>
+        <td class="center">—</td>
+        <td class="center">—</td>
+        <td><span class="status-chip chip-built">✓ OK</span></td>
+      </tr>
+      <tr>
+        <td><strong>Manual_Marca_3G_Intelligence.docx</strong></td>
+        <td>Documento</td>
+        <td>Pre-venta</td>
+        <td class="mono">—</td>
+        <td class="mono">—</td>
+        <td class="center">—</td>
+        <td class="center">—</td>
+        <td><span class="status-chip chip-built">✓ OK (en Branding/)</span></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+
+<!-- ══════════════════════════════════════
+     PENDIENTES PRIORIZADOS
+══════════════════════════════════════ -->
+<div class="summary-section" style="margin-top: 40px;">
+  <div class="summary-title">Mejoras implementadas (18 Mar 2026)</div>
+
+  <table>
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>Mejora</th>
+        <th>Agente</th>
+        <th>Estado</th>
+        <th>Descripción</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="center"><strong>1</strong></td>
+        <td><strong>Auto-sugerencias con IA</strong></td>
+        <td>Scoring Agent</td>
+        <td><span class="status-chip chip-built">✓ Desplegado</span></td>
+        <td>Botón "✨ Sugerir con IA" lee Toolkit A y genera 5–8 oportunidades pre-calificadas con scores, plazo, costo y contexto. POST /sugerir.</td>
+      </tr>
+      <tr>
+        <td class="center"><strong>2</strong></td>
+        <td><strong>Retainer Agent completo</strong></td>
+        <td>Retainer Agent (nuevo)</td>
+        <td><span class="status-chip chip-built">✓ Desplegado</span></td>
+        <td>Puerto 3011 · retainer.3g-ia-agents.com. Ciclos mensuales con análisis Claude: resumen ejecutivo, progreso implementaciones, impacto acumulado, nuevas oportunidades, alerta trimestral. Genera .docx.</td>
+      </tr>
+      <tr>
+        <td class="center"><strong>3</strong></td>
+        <td><strong>SOW enriquecido</strong></td>
+        <td>Contrato Agent</td>
+        <td><span class="status-chip chip-built">✓ Desplegado</span></td>
+        <td>3 nuevas secciones en el SOW generado por Claude: cláusulas sectoriales, SLA (uptime/soporte/escalación) y penalidades (retraso/KPI/límite responsabilidad).</td>
+      </tr>
+      <tr>
+        <td class="center"><strong>4</strong></td>
+        <td><strong>Alertas de clientes estancados</strong></td>
+        <td>Orchestrador</td>
+        <td><span class="status-chip chip-built">✓ Desplegado</span></td>
+        <td>GET /api/alertas calcula días sin avance por cliente. Panel ámbar/rojo en dashboard con links directos al agente que desbloquea. Umbrales por etapa (5–21 días).</td>
+      </tr>
+      <tr>
+        <td class="center"><strong>5</strong></td>
+        <td><strong>Enriquecimiento externo</strong></td>
+        <td>Pre-Scan Agent</td>
+        <td><span class="status-chip chip-built">✓ Desplegado</span></td>
+        <td>Botón "✨ Enriquecer" → POST /enriquecer: Claude genera tendencias sector, paisaje competitivo, dolores típicos, oportunidades emergentes. Contexto inyectado al brief principal.</td>
+      </tr>
+      <tr>
+        <td class="center"><strong>6</strong></td>
+        <td><strong>Benchmarks sectoriales</strong></td>
+        <td>Etapa2 Agent</td>
+        <td><span class="status-chip chip-built">✓ Desplegado</span></td>
+        <td>Nueva sección en JSON y .docx: posición del cliente vs sector (Rezagado/En la media/Adelantado/Líder), comparativas, referentes del sector y oportunidad de diferenciación.</td>
+      </tr>
+      <tr>
+        <td class="center"><strong>7</strong></td>
+        <td><strong>PRD: tres documentos simultáneos</strong></td>
+        <td>PRD Agent</td>
+        <td><span class="status-chip chip-built">✓ Desplegado</span></td>
+        <td>Un click genera 3 .docx en paralelo. <strong>CEO Brief</strong>: antes/después con números, costo inacción USD/mes, caso análogo, primer resultado (semana N), cuadro de decisión + firma. <strong>Propuesta Comercial</strong>: opciones Esencial/Estratégica/Transformacional calculadas como esfuerzo_horas × tarifa_hora (default $65/hr) × factor complejidad × ajuste tamaño, hitos de pago 40/40/20%, condiciones generales, garantía, validez 30 días desde emisión con fecha, checkbox de opción elegida + firma. <strong>PRD Técnico</strong>: arquitectura, user stories, criterios de aceptación, stack, fases, riesgos.</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+
+<div class="footer">
+  <span>3G Intelligence · Framework Unificado v4.0 · 18 Mar 2026 · Confidencial</span>
+  <span>Generado comparando: código plataforma + Framework_Consultoria_IA_v2.docx + 3GI_Framework_Flujo.html · 7 mejoras IA desplegadas</span>
+</div>
+
+</body>
+</html>
