@@ -277,12 +277,35 @@
       display: grid; grid-template-columns: repeat(3, 1fr);
       gap: 2px; margin-top: 56px; position: relative;
     }
+    .method-steps-cont {
+      display: grid; grid-template-columns: repeat(2, 1fr);
+      gap: 2px; margin-top: 2px; max-width: 66.7%; margin-left: auto; margin-right: auto;
+    }
+    .method-steps-label {
+      margin-top: 28px; margin-bottom: 4px; max-width: 66.7%;
+      margin-left: auto; margin-right: auto;
+      font-size: 10px; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase;
+      color: var(--muted);
+    }
     .method-step {
       background: var(--night-3); padding: 40px 32px;
       position: relative; border: 1px solid var(--border);
     }
-    .method-step:first-child { border-radius: 12px 0 0 12px; }
-    .method-step:last-child  { border-radius: 0 12px 12px 0; }
+    .method-step.step-cont {
+      opacity: 0.75; background: rgba(13,13,24,0.6);
+    }
+    .method-step.step-cont:first-child { border-radius: 12px 0 0 12px; }
+    .method-step.step-cont:last-child  { border-radius: 0 12px 12px 0; }
+    .method-steps .method-step:first-child { border-radius: 12px 0 0 12px; }
+    .method-steps .method-step:last-child  { border-radius: 0 12px 12px 0; }
+    /* Data Foundation callout */
+    .df-callout {
+      margin-top: 16px; padding: 10px 14px;
+      background: rgba(245,158,11,0.07); border: 1px solid rgba(245,158,11,0.2);
+      border-radius: 8px; font-size: 12px; color: rgba(238,241,246,0.65);
+      display: flex; gap: 8px; align-items: flex-start; line-height: 1.5;
+    }
+    .df-callout strong { color: var(--amber); }
     .step-num {
       font-family: 'Syne', sans-serif; font-weight: 800;
       font-size: 48px; letter-spacing: -0.04em;
@@ -438,10 +461,54 @@
     }
     .case-quote cite { font-size: 13px; color: var(--muted); font-style: normal; }
 
+    /* ── RETAINER TIERS ───────────────────────────────────── */
+    .retainer-section {
+      margin-top: 40px; padding: 32px 36px;
+      background: rgba(0,232,145,0.03); border: 1px solid rgba(0,232,145,0.15);
+      border-radius: 16px;
+    }
+    .retainer-section-label {
+      font-family: 'Syne', sans-serif; font-size: 11px; font-weight: 700;
+      letter-spacing: 0.15em; text-transform: uppercase; color: var(--green);
+      margin-bottom: 20px;
+    }
+    .retainer-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 16px; }
+    @media (max-width: 700px) { .retainer-grid { grid-template-columns: 1fr; } }
+    .retainer-card {
+      background: rgba(255,255,255,0.03); border: 1px solid var(--border);
+      border-radius: 10px; padding: 20px 22px;
+    }
+    .retainer-card.ret-featured { border-color: rgba(0,232,145,0.25); }
+    .ret-name {
+      font-family: 'Syne', sans-serif; font-weight: 700;
+      font-size: 15px; margin-bottom: 4px;
+    }
+    .ret-hrs { font-size: 12px; color: var(--muted); margin-bottom: 8px; }
+    .ret-price { font-size: 17px; font-weight: 700; color: var(--green); margin-bottom: 8px; }
+    .ret-inc { font-size: 12px; color: var(--muted); line-height: 1.5; }
+
+    /* ── FAQ ──────────────────────────────────────────────── */
+    #faq { background: var(--night); }
+    .faq-grid {
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: 16px; margin-top: 56px;
+    }
+    @media (max-width: 700px) { .faq-grid { grid-template-columns: 1fr; } }
+    .faq-item {
+      background: var(--night-3); border: 1px solid var(--border);
+      border-radius: 12px; padding: 24px 28px;
+    }
+    .faq-q {
+      font-family: 'Syne', sans-serif; font-weight: 700;
+      font-size: 15px; margin-bottom: 10px; letter-spacing: -0.01em; line-height: 1.3;
+    }
+    .faq-a { font-size: 14px; color: var(--muted); line-height: 1.65; }
+    .faq-a strong { color: var(--offwh); }
+
     /* ── FINAL CTA ────────────────────────────────────────── */
     #cta-final {
       background: linear-gradient(135deg, #0D1A12 0%, #06060D 50%, #0A0D1A 100%);
-      text-align: center; padding: 120px 0; position: relative; overflow: hidden;
+      padding: 120px 0; position: relative; overflow: hidden;
     }
     #cta-final::before {
       content: ''; position: absolute; top: 50%; left: 50%;
@@ -450,24 +517,43 @@
       background: radial-gradient(circle, rgba(0,232,145,0.07) 0%, transparent 70%);
       pointer-events: none;
     }
+    .cta-inner {
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: 64px; align-items: center; position: relative; z-index: 1;
+    }
+    @media (max-width: 900px) { .cta-inner { grid-template-columns: 1fr; gap: 48px; } }
     .cta-eyebrow {
       font-size: 11px; font-weight: 700; letter-spacing: 0.2em;
       text-transform: uppercase; color: var(--green); margin-bottom: 20px;
     }
     .cta-title {
       font-family: 'Syne', sans-serif; font-weight: 800;
-      font-size: clamp(32px, 5vw, 56px); letter-spacing: -0.03em; line-height: 1.05;
-      max-width: 680px; margin: 0 auto 20px;
+      font-size: clamp(28px, 4vw, 48px); letter-spacing: -0.03em; line-height: 1.05;
+      margin-bottom: 20px;
     }
     .cta-title span { color: var(--green); }
     .cta-sub {
-      font-size: 17px; font-weight: 300;
-      color: rgba(238,241,246,0.55); margin-bottom: 44px;
+      font-size: 16px; font-weight: 300;
+      color: rgba(238,241,246,0.55); margin-bottom: 28px;
     }
-    .cta-buttons {
-      display: flex; align-items: center; justify-content: center; gap: 14px; flex-wrap: wrap;
+    .cta-fine { margin-top: 16px; font-size: 13px; color: var(--muted); }
+    .cta-form-wrap {
+      background: rgba(255,255,255,0.03); border: 1px solid var(--border);
+      border-radius: 16px; padding: 32px;
     }
-    .cta-fine { margin-top: 20px; font-size: 13px; color: var(--muted); }
+    .cta-form-title {
+      font-family: 'Syne', sans-serif; font-weight: 700;
+      font-size: 18px; margin-bottom: 20px;
+    }
+    .cta-form { display: flex; flex-direction: column; gap: 12px; }
+    .cta-form input {
+      background: rgba(255,255,255,0.04); border: 1px solid var(--border);
+      border-radius: 8px; padding: 12px 16px; color: var(--offwh);
+      font-family: 'DM Sans', sans-serif; font-size: 14px;
+      outline: none; transition: border-color 0.2s; width: 100%;
+    }
+    .cta-form input:focus { border-color: rgba(0,232,145,0.4); }
+    .cta-form input::placeholder { color: var(--muted); }
 
     /* ── FOOTER ───────────────────────────────────────────── */
     footer {
@@ -495,10 +581,13 @@
       .eras-intro { grid-template-columns: 1fr; gap: 48px; }
       .era-grid { grid-template-columns: 1fr; }
       .method-steps { grid-template-columns: 1fr; gap: 2px; }
-      .method-step:first-child { border-radius: 12px 12px 0 0; }
-      .method-step:last-child  { border-radius: 0 0 12px 12px; }
+      .method-steps .method-step:first-child { border-radius: 12px 12px 0 0; }
+      .method-steps .method-step:last-child  { border-radius: 0 0 12px 12px; }
+      .method-steps-cont { grid-template-columns: 1fr; max-width: 100%; }
+      .method-steps-label { max-width: 100%; }
+      .method-step.step-cont:first-child { border-radius: 0; }
+      .method-step.step-cont:last-child  { border-radius: 0 0 12px 12px; }
       .method-connector { display: none; }
-      .inv-grid { grid-template-columns: 1fr; }
       .nav-links { display: none; }
       .case-header { flex-direction: column; align-items: flex-start; }
     }
@@ -587,7 +676,7 @@
       </div>
       <div class="proof-divider"></div>
       <div class="proof-item">
-        <div class="proof-num">E0→E3</div>
+        <div class="proof-num">E0→E5</div>
         <div class="proof-label" data-i18n="proof-4">metodología probada</div>
       </div>
     </div>
@@ -696,7 +785,7 @@
 <section id="metodologia">
   <div class="container">
     <div class="section-tag" data-i18n="met-tag">Cómo trabajamos</div>
-    <h2 class="section-title" data-i18n="met-title">Tres pasos. Sin consultores<br>que toman notas genéricas.</h2>
+    <h2 class="section-title" data-i18n="met-title">De E0 a E5. Sin consultores<br>que toman notas genéricas.</h2>
     <p class="section-sub" data-i18n="met-sub">
       Metodología estructurada, entregables concretos, plazos definidos.
       Sabes exactamente qué vas a recibir — y cuándo.
@@ -719,6 +808,10 @@
           <li>Decisión: ¿avanzar directo o construir Data Foundation?</li>
         </ul>
         <span class="deliverable" data-i18n="step1-deliverable">Informe Diagnóstico E0</span>
+        <div class="df-callout">
+          <span>⚠️</span>
+          <span data-i18n="step1-df">Si el diagnóstico revela datos insuficientes, se propone un paso previo de <strong>Data Foundation</strong> (USD 800–15.000) antes de continuar a E1. Previene el fracaso de proyectos de IA por falta de datos confiables.</span>
+        </div>
         <div class="method-connector">→</div>
       </div>
       <!-- PASO 2 -->
@@ -757,6 +850,43 @@
           <li>Acompañamiento en implementación (opcional)</li>
         </ul>
         <span class="deliverable" data-i18n="step3-deliverable">Propuesta Comercial + PRD</span>
+      </div>
+    </div>
+    <div class="method-steps-label" data-i18n="steps-cont-label">Continuación del proyecto</div>
+    <div class="method-steps-cont">
+      <!-- PASO 4 -->
+      <div class="method-step step-cont">
+        <div class="step-num">04</div>
+        <div class="step-tag" data-i18n="step4-tag">Etapa 4 · Implementación</div>
+        <div class="step-title" data-i18n="step4-title">Implementación</div>
+        <div class="step-desc" data-i18n="step4-desc">
+          Ejecución de las iniciativas aprobadas en sprints de 2 semanas.
+          Actas de avance por fase, validadas por el cliente. Entrega final
+          con documento firmado.
+        </div>
+        <ul class="step-detail" data-i18n-list="step4-items">
+          <li>Sprints de 2 semanas por iniciativa</li>
+          <li>Acta de avance por fase (cliente valida)</li>
+          <li>Acta de Entrega Final firmada</li>
+          <li>Precio variable según proyecto</li>
+        </ul>
+      </div>
+      <!-- PASO 5 -->
+      <div class="method-step step-cont">
+        <div class="step-num">05</div>
+        <div class="step-tag" data-i18n="step5-tag">Etapa 5 · Retainer</div>
+        <div class="step-title" data-i18n="step5-title">Mejora Continua</div>
+        <div class="step-desc" data-i18n="step5-desc">
+          Soporte mensual post-implementación. Monitoreo de métricas,
+          identificación de nuevas oportunidades y AI Opportunity Scan
+          trimestral automático.
+        </div>
+        <ul class="step-detail" data-i18n-list="step5-items">
+          <li>Informe ejecutivo mensual</li>
+          <li>Identificación de nuevas oportunidades</li>
+          <li>AI Opportunity Scan trimestral</li>
+          <li>USD 1.500–7.000/mes según nivel</li>
+        </ul>
       </div>
     </div>
   </div>
@@ -874,6 +1004,66 @@
         del retorno del primer año — y entrega la certeza de implementar en el lugar correcto.
       </p>
     </div>
+    <!-- RETAINER TIERS -->
+    <div class="retainer-section">
+      <div class="retainer-section-label" data-i18n="ret-section-label">Etapa 5 · Retainer / Mejora Continua</div>
+      <div class="retainer-grid">
+        <div class="retainer-card">
+          <div class="ret-name" data-i18n="ret1-name">Básico</div>
+          <div class="ret-hrs" data-i18n="ret1-hrs">5–10 hrs/mes</div>
+          <div class="ret-price" data-i18n="ret1-price">USD 1.500–2.500/mes</div>
+          <div class="ret-inc" data-i18n="ret1-inc">Monitoreo de métricas, soporte técnico e informe mensual</div>
+        </div>
+        <div class="retainer-card ret-featured">
+          <div class="ret-name" data-i18n="ret2-name">Estándar</div>
+          <div class="ret-hrs" data-i18n="ret2-hrs">10–20 hrs/mes</div>
+          <div class="ret-price" data-i18n="ret2-price">USD 2.500–4.000/mes</div>
+          <div class="ret-inc" data-i18n="ret2-inc">Todo lo anterior + identificación activa de nuevas oportunidades</div>
+        </div>
+        <div class="retainer-card">
+          <div class="ret-name" data-i18n="ret3-name">Avanzado</div>
+          <div class="ret-hrs" data-i18n="ret3-hrs">20–40 hrs/mes</div>
+          <div class="ret-price" data-i18n="ret3-price">USD 4.000–7.000/mes</div>
+          <div class="ret-inc" data-i18n="ret3-inc">Todo lo anterior + desarrollo de nuevas iniciativas + AI Opportunity Scan trimestral</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════
+     FAQ
+══════════════════════════════════════════════ -->
+<section id="faq">
+  <div class="container">
+    <div class="section-tag" data-i18n="faq-tag">Preguntas frecuentes</div>
+    <h2 class="section-title" data-i18n="faq-title">Lo que nos preguntan antes de empezar</h2>
+    <div class="faq-grid">
+      <div class="faq-item">
+        <div class="faq-q" data-i18n="faq1-q">¿Qué pasa si no quiero avanzar a implementación?</div>
+        <div class="faq-a" data-i18n="faq1-a">El diagnóstico es tuyo. Te entrega el roadmap completo con oportunidades priorizadas, ROI calculado y PRD técnico para que puedas ejecutarlo con quien quieras — nosotros u otro proveedor.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" data-i18n="faq2-q">¿Cuánto tiempo de mi parte requiere el proceso?</div>
+        <div class="faq-a" data-i18n="faq2-a"><strong>E0:</strong> 90 minutos. <strong>E1:</strong> 3–4 horas distribuidas en máximo 2 semanas (entrevistas por área). <strong>E2:</strong> 2 horas para la sesión de validación. El resto lo hacemos nosotros.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" data-i18n="faq3-q">¿Es presencial o remoto?</div>
+        <div class="faq-a" data-i18n="faq3-a">100% remoto vía videollamada. Trabajamos con empresas de toda Latinoamérica. No se requiere desplazamiento ni infraestructura especial de tu parte.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" data-i18n="faq4-q">¿Qué diferencia tiene esto de una consultora tradicional?</div>
+        <div class="faq-a" data-i18n="faq4-a">Entregables concretos, plazos definidos y ROI cuantificado antes de implementar — no informes genéricos. Nuestra promesa es simple: <strong>IA aplicada al negocio real.</strong></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" data-i18n="faq5-q">¿Qué pasa si mis datos no están listos para IA?</div>
+        <div class="faq-a" data-i18n="faq5-a">Lo detectamos en el E0. Si hay brechas de datos, proponemos un proyecto previo de <strong>Data Foundation</strong> (USD 800–15.000) que limpia, centraliza e integra tus datos antes de implementar cualquier solución de IA.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" data-i18n="faq6-q">¿El diagnóstico se descuenta si luego implementamos juntos?</div>
+        <div class="faq-a" data-i18n="faq6-a">Sí. El costo del diagnóstico se aplica como adelanto de la implementación si se contrata dentro de los <strong>90 días</strong> siguientes a la entrega del informe.</div>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -946,27 +1136,40 @@
 ══════════════════════════════════════════════ -->
 <section id="cta-final">
   <div class="container">
-    <div class="cta-eyebrow" data-i18n="cta-eyebrow">30 minutos · Sin costo · Sin compromiso</div>
-    <h2 class="cta-title" data-i18n="cta-title">
-      ¿En qué Era está<br><span>tu empresa?</span>
-    </h2>
-    <p class="cta-sub" data-i18n="cta-sub">
-      Agenda una llamada de exploración. En 30 minutos te decimos
-      dónde estás y qué oportunidades tiene tu negocio.
-    </p>
-    <div class="cta-buttons">
-      <a href="https://calendly.com/escribeme-3g-ia-agents/diagnostico-base-en-30-min" target="_blank" class="btn btn-primary btn-lg">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
-        <span data-i18n="cta-btn-calendar">Agendar llamada gratuita</span>
-      </a>
-      <a href="https://wa.me/56988974898?text=Hola,%20quiero%20saber%20más%20sobre%20el%20diagnóstico%20de%20IA%20para%20mi%20empresa" target="_blank" class="btn btn-whatsapp btn-lg">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-        <span data-i18n="cta-btn-wa">Escribir por WhatsApp</span>
-      </a>
+    <div class="cta-inner">
+      <!-- LEFT: texto -->
+      <div>
+        <div class="cta-eyebrow" data-i18n="cta-eyebrow">30 minutos · Sin costo · Sin compromiso</div>
+        <h2 class="cta-title" data-i18n="cta-title">
+          ¿En qué Era está<br><span>tu empresa?</span>
+        </h2>
+        <p class="cta-sub" data-i18n="cta-sub">
+          Agenda una llamada de exploración. En 30 minutos te decimos
+          dónde estás y qué oportunidades tiene tu negocio.
+        </p>
+        <a href="https://wa.me/56988974898?text=Hola,%20quiero%20saber%20más%20sobre%20el%20diagnóstico%20de%20IA%20para%20mi%20empresa" target="_blank" class="btn btn-whatsapp">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          <span data-i18n="cta-btn-wa">Escribir por WhatsApp</span>
+        </a>
+        <p class="cta-fine" data-i18n="cta-fine">
+          O escríbenos a <a href="mailto:chat@3g-ia-agents.com" style="color:var(--green);">chat@3g-ia-agents.com</a>
+        </p>
+      </div>
+      <!-- RIGHT: formulario -->
+      <div class="cta-form-wrap">
+        <div class="cta-form-title" data-i18n="form-title">Agenda tu llamada gratuita</div>
+        <form class="cta-form" onsubmit="handleCTAForm(event)">
+          <input type="text" name="nombre" required data-i18n-placeholder="form-nombre" placeholder="Nombre" />
+          <input type="email" name="email" required data-i18n-placeholder="form-email" placeholder="Email" />
+          <input type="text" name="empresa" data-i18n-placeholder="form-empresa" placeholder="Empresa o sector" />
+          <button type="submit" class="btn btn-primary" style="width:100%; justify-content:center; font-family:'Syne',sans-serif;">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+            <span data-i18n="form-btn">Agendar llamada gratuita</span>
+          </button>
+        </form>
+        <p style="margin-top:12px; font-size:12px; color:var(--muted); text-align:center;" data-i18n="form-note">Sin spam. Solo nos ponemos en contacto para coordinar la llamada.</p>
+      </div>
     </div>
-    <p class="cta-fine" data-i18n="cta-fine">
-      O escríbenos a <a href="mailto:chat@3g-ia-agents.com" style="color:var(--green);">chat@3g-ia-agents.com</a>
-    </p>
   </div>
 </section>
 
@@ -1049,7 +1252,7 @@ const T = {
     'eras-caption':      'Llevamos a tu empresa de donde está → Era 3',
 
     'met-tag':           'Cómo trabajamos',
-    'met-title':         'Tres pasos. Sin consultores<br>que toman notas genéricas.',
+    'met-title':         'De E0 a E5. Sin consultores<br>que toman notas genéricas.',
     'met-sub':           'Metodología estructurada, entregables concretos, plazos definidos. Sabes exactamente qué vas a recibir — y cuándo.',
     'step1-tag':         'Etapa 0 · Semana 1',
     'step1-title':       'Scan IA',
@@ -1116,13 +1319,52 @@ const T = {
     'caso-quote':        '"Antes de este diagnóstico no teníamos claridad sobre qué automatizar primero. Salimos con tres proyectos priorizados, el ROI de cada uno calculado, y la certeza de que íbamos a implementar en el lugar correcto."',
     'caso-cite':         '— Gerente General, empresa distribuidora (nombre reservado por confidencialidad)',
 
-    'cta-eyebrow':       '30 minutos · Sin costo · Sin compromiso',
-    'cta-title':         '¿En qué Era está<br><span>tu empresa?</span>',
-    'cta-sub':           'Agenda una llamada de exploración. En 30 minutos te decimos dónde estás y qué oportunidades tiene tu negocio.',
-    'cta-btn-calendar':  'Agendar llamada gratuita',
-    'cta-btn-wa':        'Escribir por WhatsApp',
-    'cta-fine':          'O escríbenos a <a href="mailto:chat@3g-ia-agents.com" style="color:var(--green);">chat@3g-ia-agents.com</a>',
-    'footer-contact':    'Contacto',
+    'steps-cont-label':  'Continuación del proyecto',
+    'step4-tag':         'Etapa 4 · Implementación',
+    'step4-title':       'Implementación',
+    'step4-desc':        'Ejecución de las iniciativas aprobadas en sprints de 2 semanas. Actas de avance por fase, validadas por el cliente. Entrega final con documento firmado.',
+    'step4-items':       ['Sprints de 2 semanas por iniciativa','Acta de avance por fase (cliente valida)','Acta de Entrega Final firmada','Precio variable según proyecto'],
+    'step5-tag':         'Etapa 5 · Retainer',
+    'step5-title':       'Mejora Continua',
+    'step5-desc':        'Soporte mensual post-implementación. Monitoreo de métricas, identificación de nuevas oportunidades y AI Opportunity Scan trimestral automático.',
+    'step5-items':       ['Informe ejecutivo mensual','Identificación de nuevas oportunidades','AI Opportunity Scan trimestral','USD 1.500–7.000/mes según nivel'],
+    'step1-df':          'Si el diagnóstico revela datos insuficientes, se propone un paso previo de <strong>Data Foundation</strong> (USD 800–15.000) antes de continuar a E1. Previene el fracaso de proyectos de IA por falta de datos confiables.',
+
+    'ret-section-label': 'Etapa 5 · Retainer / Mejora Continua',
+    'ret1-name': 'Básico', 'ret1-hrs': '5–10 hrs/mes', 'ret1-price': 'USD 1.500–2.500/mes',
+    'ret1-inc':  'Monitoreo de métricas, soporte técnico e informe mensual',
+    'ret2-name': 'Estándar', 'ret2-hrs': '10–20 hrs/mes', 'ret2-price': 'USD 2.500–4.000/mes',
+    'ret2-inc':  'Todo lo anterior + identificación activa de nuevas oportunidades',
+    'ret3-name': 'Avanzado', 'ret3-hrs': '20–40 hrs/mes', 'ret3-price': 'USD 4.000–7.000/mes',
+    'ret3-inc':  'Todo lo anterior + desarrollo de nuevas iniciativas + AI Opportunity Scan trimestral',
+
+    'faq-tag':   'Preguntas frecuentes',
+    'faq-title': 'Lo que nos preguntan antes de empezar',
+    'faq1-q': '¿Qué pasa si no quiero avanzar a implementación?',
+    'faq1-a': 'El diagnóstico es tuyo. Te entrega el roadmap completo con oportunidades priorizadas, ROI calculado y PRD técnico para que puedas ejecutarlo con quien quieras — nosotros u otro proveedor.',
+    'faq2-q': '¿Cuánto tiempo de mi parte requiere el proceso?',
+    'faq2-a': '<strong>E0:</strong> 90 minutos. <strong>E1:</strong> 3–4 horas distribuidas en máximo 2 semanas (entrevistas por área). <strong>E2:</strong> 2 horas para la sesión de validación. El resto lo hacemos nosotros.',
+    'faq3-q': '¿Es presencial o remoto?',
+    'faq3-a': '100% remoto vía videollamada. Trabajamos con empresas de toda Latinoamérica. No se requiere desplazamiento ni infraestructura especial de tu parte.',
+    'faq4-q': '¿Qué diferencia tiene esto de una consultora tradicional?',
+    'faq4-a': 'Entregables concretos, plazos definidos y ROI cuantificado antes de implementar — no informes genéricos. Nuestra promesa es simple: <strong>IA aplicada al negocio real.</strong>',
+    'faq5-q': '¿Qué pasa si mis datos no están listos para IA?',
+    'faq5-a': 'Lo detectamos en el E0. Si hay brechas de datos, proponemos un proyecto previo de <strong>Data Foundation</strong> (USD 800–15.000) que limpia, centraliza e integra tus datos antes de implementar cualquier solución de IA.',
+    'faq6-q': '¿El diagnóstico se descuenta si luego implementamos juntos?',
+    'faq6-a': 'Sí. El costo del diagnóstico se aplica como adelanto de la implementación si se contrata dentro de los <strong>90 días</strong> siguientes a la entrega del informe.',
+
+    'cta-eyebrow':   '30 minutos · Sin costo · Sin compromiso',
+    'cta-title':     '¿En qué Era está<br><span>tu empresa?</span>',
+    'cta-sub':       'Agenda una llamada de exploración. En 30 minutos te decimos dónde estás y qué oportunidades tiene tu negocio.',
+    'cta-btn-wa':    'Escribir por WhatsApp',
+    'cta-fine':      'O escríbenos a <a href="mailto:chat@3g-ia-agents.com" style="color:var(--green);">chat@3g-ia-agents.com</a>',
+    'form-title':    'Agenda tu llamada gratuita',
+    'form-nombre':   'Nombre',
+    'form-email':    'Email',
+    'form-empresa':  'Empresa o sector',
+    'form-btn':      'Agendar llamada gratuita',
+    'form-note':     'Sin spam. Solo nos ponemos en contacto para coordinar la llamada.',
+    'footer-contact': 'Contacto',
   },
   en: {
     'logo-sub':          'AI applied to real business',
@@ -1165,7 +1407,7 @@ const T = {
     'eras-caption':      'We take your company from where it is → Era 3',
 
     'met-tag':           'How we work',
-    'met-title':         'Three steps. No consultants<br>taking generic notes.',
+    'met-title':         'From E0 to E5. No consultants<br>taking generic notes.',
     'met-sub':           'Structured methodology, concrete deliverables, defined timelines. You know exactly what you\'ll receive — and when.',
     'step1-tag':         'Stage 0 · Week 1',
     'step1-title':       'AI Scan',
@@ -1232,13 +1474,52 @@ const T = {
     'caso-quote':        '"Before this diagnosis we had no clarity on what to automate first. We left with three prioritized projects, the ROI of each calculated, and the confidence that we were implementing in the right place."',
     'caso-cite':         '— CEO, distribution company (name withheld by confidentiality agreement)',
 
-    'cta-eyebrow':       '30 minutes · No cost · No commitment',
-    'cta-title':         'What Era is<br><span>your company in?</span>',
-    'cta-sub':           'Schedule an exploration call. In 30 minutes we\'ll tell you where you stand and what opportunities your business has.',
-    'cta-btn-calendar':  'Schedule free call',
-    'cta-btn-wa':        'Write on WhatsApp',
-    'cta-fine':          'Or write to us at <a href="mailto:chat@3g-ia-agents.com" style="color:var(--green);">chat@3g-ia-agents.com</a>',
-    'footer-contact':    'Contact',
+    'steps-cont-label':  'Project continuation',
+    'step4-tag':         'Stage 4 · Implementation',
+    'step4-title':       'Implementation',
+    'step4-desc':        'Execution of approved initiatives in 2-week sprints. Progress reports per phase, validated by the client. Final delivery with signed document.',
+    'step4-items':       ['2-week sprints per initiative','Progress report per phase (client validates)','Signed Final Delivery Certificate','Variable price per project'],
+    'step5-tag':         'Stage 5 · Retainer',
+    'step5-title':       'Continuous Improvement',
+    'step5-desc':        'Post-implementation monthly support. Metrics monitoring, identification of new opportunities, and automatic quarterly AI Opportunity Scan.',
+    'step5-items':       ['Monthly executive report','Active identification of new opportunities','Quarterly AI Opportunity Scan','USD 1,500–7,000/mo based on tier'],
+    'step1-df':          'If the diagnosis reveals insufficient data, a prior <strong>Data Foundation</strong> project (USD 800–15,000) is proposed before continuing to E1. This prevents AI project failure due to unreliable data.',
+
+    'ret-section-label': 'Stage 5 · Retainer / Continuous Improvement',
+    'ret1-name': 'Basic', 'ret1-hrs': '5–10 hrs/mo', 'ret1-price': 'USD 1,500–2,500/mo',
+    'ret1-inc':  'Metrics monitoring, technical support, and monthly report',
+    'ret2-name': 'Standard', 'ret2-hrs': '10–20 hrs/mo', 'ret2-price': 'USD 2,500–4,000/mo',
+    'ret2-inc':  'Everything above + active identification of new opportunities',
+    'ret3-name': 'Advanced', 'ret3-hrs': '20–40 hrs/mo', 'ret3-price': 'USD 4,000–7,000/mo',
+    'ret3-inc':  'Everything above + development of new initiatives + quarterly AI Opportunity Scan',
+
+    'faq-tag':   'Frequently asked questions',
+    'faq-title': 'What people ask before getting started',
+    'faq1-q': 'What if I don\'t want to move forward with implementation?',
+    'faq1-a': 'The diagnosis is yours. It delivers the full roadmap with prioritized opportunities, calculated ROI, and technical PRD so you can execute it with whoever you choose — us or another provider.',
+    'faq2-q': 'How much of my time does the process require?',
+    'faq2-a': '<strong>E0:</strong> 90 minutes. <strong>E1:</strong> 3–4 hours spread over a maximum of 2 weeks (area interviews). <strong>E2:</strong> 2 hours for the validation session. We handle the rest.',
+    'faq3-q': 'Is it in-person or remote?',
+    'faq3-a': '100% remote via video call. We work with companies across Latin America. No travel or special infrastructure required on your end.',
+    'faq4-q': 'How is this different from a traditional consulting firm?',
+    'faq4-a': 'Concrete deliverables, defined timelines, and ROI quantified before implementation — not generic reports. Our promise is simple: <strong>AI applied to real business.</strong>',
+    'faq5-q': 'What if my data isn\'t ready for AI?',
+    'faq5-a': 'We detect it at E0. If there are data gaps, we propose a prior <strong>Data Foundation</strong> project (USD 800–15,000) that cleans, centralizes, and integrates your data before implementing any AI solution.',
+    'faq6-q': 'Is the diagnosis discounted if we implement together later?',
+    'faq6-a': 'Yes. The cost of the diagnosis is applied as a credit toward implementation if contracted within <strong>90 days</strong> of the report delivery.',
+
+    'cta-eyebrow':   '30 minutes · No cost · No commitment',
+    'cta-title':     'What Era is<br><span>your company in?</span>',
+    'cta-sub':       'Schedule an exploration call. In 30 minutes we\'ll tell you where you stand and what opportunities your business has.',
+    'cta-btn-wa':    'Write on WhatsApp',
+    'cta-fine':      'Or write to us at <a href="mailto:chat@3g-ia-agents.com" style="color:var(--green);">chat@3g-ia-agents.com</a>',
+    'form-title':    'Schedule your free call',
+    'form-nombre':   'Name',
+    'form-email':    'Email',
+    'form-empresa':  'Company or industry',
+    'form-btn':      'Schedule free call',
+    'form-note':     'No spam. We\'ll only reach out to coordinate the call.',
+    'footer-contact': 'Contact',
   }
 };
 
@@ -1270,6 +1551,23 @@ function setLang(lang) {
   document.querySelectorAll('.lang-btn').forEach(btn => {
     btn.classList.toggle('active', btn.textContent === lang.toUpperCase());
   });
+
+  // Placeholders
+  document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
+    const key = el.getAttribute('data-i18n-placeholder');
+    if (dict[key]) el.placeholder = dict[key];
+  });
+}
+
+function handleCTAForm(e) {
+  e.preventDefault();
+  const f = e.target;
+  const nombre = encodeURIComponent(f.nombre.value);
+  const email  = encodeURIComponent(f.email.value);
+  window.open(
+    `https://calendly.com/escribeme-3g-ia-agents/diagnostico-base-en-30-min?name=${nombre}&email=${email}`,
+    '_blank'
+  );
 }
 </script>
 
