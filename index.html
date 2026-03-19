@@ -3,20 +3,44 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>3G Intelligence · IA aplicada al negocio real</title>
-  <meta name="description" content="Diagnóstico de IA para pequeñas y medianas empresas. Identificamos qué automatizar, cuánto vale cada oportunidad y te entregamos el roadmap listo para ejecutar." />
+  <title>Consultoría IA para PyMEs · 3G Intelligence</title>
+  <meta name="description" content="Diagnóstico de inteligencia artificial para pequeñas y medianas empresas. Identificamos qué automatizar, cuánto vale cada oportunidad y te entregamos el roadmap listo para ejecutar." />
+  <link rel="canonical" href="https://3g-ia-agents.com" />
+  <meta name="robots" content="index, follow" />
 
   <!-- ── Open Graph / Social ───────────────────────────── -->
   <meta property="og:type"        content="website" />
-  <meta property="og:url"         content="https://www.3g-ia-agents.com" />
-  <meta property="og:title"       content="3G Intelligence · IA aplicada al negocio real" />
-  <meta property="og:description" content="Diagnóstico de IA para pequeñas y medianas empresas. Identificamos qué automatizar, cuánto vale cada oportunidad y te entregamos el roadmap listo para ejecutar." />
-  <meta property="og:image"       content="https://www.3g-ia-agents.com/og-image.png" />
+  <meta property="og:url"         content="https://3g-ia-agents.com" />
+  <meta property="og:title"       content="Consultoría IA para PyMEs · 3G Intelligence" />
+  <meta property="og:description" content="Diagnóstico de inteligencia artificial para pequeñas y medianas empresas. Identificamos qué automatizar, cuánto vale cada oportunidad y te entregamos el roadmap listo para ejecutar." />
+  <meta property="og:image"       content="https://3g-ia-agents.com/3GI%20-Facebook1.1.png" />
+  <meta property="og:image:width"  content="1200" />
+  <meta property="og:image:height" content="630" />
   <meta property="og:locale"      content="es_CL" />
+  <meta property="og:site_name"   content="3G Intelligence" />
   <meta name="twitter:card"        content="summary_large_image" />
-  <meta name="twitter:title"       content="3G Intelligence · IA aplicada al negocio real" />
-  <meta name="twitter:description" content="Diagnóstico de IA para pequeñas y medianas empresas. Identificamos qué automatizar, cuánto vale cada oportunidad y te entregamos el roadmap listo para ejecutar." />
-  <meta name="twitter:image"       content="https://www.3g-ia-agents.com/og-image.png" />
+  <meta name="twitter:title"       content="Consultoría IA para PyMEs · 3G Intelligence" />
+  <meta name="twitter:description" content="Diagnóstico de inteligencia artificial para pequeñas y medianas empresas. Identificamos qué automatizar, cuánto vale cada oportunidad y te entregamos el roadmap listo para ejecutar." />
+  <meta name="twitter:image"       content="https://3g-ia-agents.com/3GI%20-Facebook1.1.png" />
+
+  <!-- ── Schema.org JSON-LD ────────────────────────────── -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "3G Intelligence",
+    "alternateName": "3GI",
+    "url": "https://3g-ia-agents.com",
+    "logo": "https://3g-ia-agents.com/isotipo.png",
+    "image": "https://3g-ia-agents.com/3GI%20-Facebook1.1.png",
+    "description": "Consultoría de inteligencia artificial para PyMEs. Diagnóstico, automatización y roadmap de IA con ROI medible.",
+    "email": "escribeme@3g-ia-agents.com",
+    "areaServed": "Latinoamérica",
+    "serviceType": "Consultoría de Inteligencia Artificial",
+    "knowsAbout": ["Inteligencia Artificial", "Automatización", "PyMEs", "Machine Learning", "Diagnóstico IA"],
+    "sameAs": []
+  }
+  </script>
 
   <!-- ── Favicon ───────────────────────────────────────── -->
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%2306060D'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-family='Arial Black,sans-serif' font-weight='900' font-size='13' fill='%2300E891'%3E3G%3C/text%3E%3C/svg%3E" />
@@ -309,7 +333,9 @@
 
     /* ── INVESTMENT ───────────────────────────────────────── */
     #inversion { background: var(--night-2); }
-    .inv-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-top: 56px; }
+    .inv-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 56px; }
+    @media (max-width: 1100px) { .inv-grid { grid-template-columns: 1fr 1fr; } }
+    @media (max-width: 700px)  { .inv-grid { grid-template-columns: 1fr; } }
     .inv-card {
       border-radius: 14px; padding: 36px 36px 40px;
       border: 1px solid var(--border); position: relative; overflow: hidden;
@@ -492,7 +518,7 @@
 <nav>
   <div class="nav-inner">
     <a href="#" class="logo">
-      <img src="isotipo.png" alt="" style="height:36px;" />
+      <img src="isotipo.png" alt="3G Intelligence" style="height:36px;" />
       <div>
         <div class="logo-name"><span>3G</span> Intelligence</div>
         <div class="logo-sub" data-i18n="logo-sub">IA aplicada al negocio real</div>
@@ -777,45 +803,65 @@
       implementaciones incorrectas. El costo de saber es una fracción de eso.
     </p>
     <div class="inv-grid">
-      <!-- SCAN IA -->
+      <!-- E0: AI OPPORTUNITY SCAN -->
       <div class="inv-card">
-        <div class="inv-name" data-i18n="inv1-name">Scan IA</div>
+        <div class="inv-name" data-i18n="inv1-name">AI Opportunity Scan · E0</div>
         <div class="inv-desc" data-i18n="inv1-desc">
-          Diagnóstico inicial completo. Ideal para empresas que quieren
-          entender su punto de partida antes de comprometerse con un proyecto mayor.
+          Primera sesión diagnóstica. Punto de entrada al proceso.
+          Sin compromiso — el objetivo es identificar si hay potencial de mejora real.
         </div>
-        <div class="inv-price">USD 2.500</div>
-        <div class="inv-price-sub" data-i18n="inv1-sub">pago único · entrega en 1 semana</div>
+        <div class="inv-price" data-i18n="inv1-price">Gratis – USD 1.500</div>
+        <div class="inv-price-sub" data-i18n="inv1-sub">según tamaño y relación comercial · entrega 24 hrs</div>
         <ul class="inv-includes" data-i18n-list="inv1-items">
-          <li>Sesión de 2 horas con la dirección</li>
+          <li>Reunión 60–90 min con dirección o CEO</li>
           <li>Score de Madurez IA en 5 dimensiones</li>
           <li>Clasificación de Era (1, 2 o 3)</li>
-          <li>Identificación de oportunidades preliminares</li>
-          <li>Informe ejecutivo para el directorio</li>
+          <li>3 oportunidades de alto impacto identificadas</li>
+          <li>Recomendación de ruta: E1 directo o Data Foundation</li>
         </ul>
         <a href="#cta-final" class="btn btn-outline" style="width:100%; justify-content:center;" data-i18n="inv1-btn">
           Agendar Scan IA
         </a>
       </div>
-      <!-- DIAGNÓSTICO COMPLETO -->
-      <div class="inv-card featured" data-popular-label="Más popular">
-        <div class="inv-name" data-i18n="inv2-name">Diagnóstico Completo</div>
+      <!-- E1: DIAGNÓSTICO PROFUNDO -->
+      <div class="inv-card">
+        <div class="inv-name" data-i18n="inv2-name">Diagnóstico Profundo · E1</div>
         <div class="inv-desc" data-i18n="inv2-desc">
-          Scan IA + Análisis profundo de procesos + Scoring de oportunidades +
-          Roadmap de implementación con propuesta comercial lista para ejecutar.
+          Análisis proceso a proceso por área funcional. Auditoría de datos.
+          Catálogo de oportunidades con scoring de priorización y ROI proyectado.
         </div>
-        <div class="inv-price">USD 6.000</div>
-        <div class="inv-price-sub" data-i18n="inv2-sub">50% inicio / 50% entrega · 3 semanas</div>
+        <div class="inv-price" data-i18n="inv2-price">USD 2.000 – 12.000</div>
+        <div class="inv-price-sub" data-i18n="inv2-sub">según tamaño y complejidad · 2–3 semanas</div>
         <ul class="inv-includes" data-i18n-list="inv2-items">
-          <li>Todo lo incluido en el Scan IA</li>
-          <li>Mapeo detallado de procesos críticos</li>
-          <li>Scoring cuantificado de cada oportunidad</li>
+          <li>Entrevistas por área funcional (Toolkit B)</li>
+          <li>Auditoría de datos e infraestructura (Toolkit C)</li>
+          <li>Scoring de oportunidades con fórmula de priorización</li>
           <li>ROI proyectado a 12 meses por iniciativa</li>
-          <li>Propuesta comercial con opciones de implementación</li>
-          <li>PRD técnico para las 3 oportunidades top</li>
+          <li>Informe diagnóstico ejecutivo (hasta 30 págs)</li>
+        </ul>
+        <a href="#cta-final" class="btn btn-outline" style="width:100%; justify-content:center;" data-i18n="inv2-btn">
+          Iniciar Diagnóstico E1
+        </a>
+      </div>
+      <!-- PACK E1+E2 -->
+      <div class="inv-card featured" data-popular-label="Más recomendado">
+        <div class="inv-name" data-i18n="inv3-name">Pack Diagnóstico Completo · E1+E2</div>
+        <div class="inv-desc" data-i18n="inv3-desc">
+          Diagnóstico profundo + análisis cuantificado + propuesta de implementación
+          con CEO Brief, Propuesta Comercial y PRD técnico listos para ejecutar.
+        </div>
+        <div class="inv-price" data-i18n="inv3-price">USD 11.000 – 19.000</div>
+        <div class="inv-price-sub" data-i18n="inv3-sub">10% descuento vs contratar por separado · 4–5 semanas</div>
+        <ul class="inv-includes" data-i18n-list="inv3-items">
+          <li>Todo lo incluido en Diagnóstico E1</li>
+          <li>Tablero ejecutivo de métricas y ROI cuantificado</li>
+          <li>Top 3 oportunidades priorizadas por impacto</li>
+          <li>CEO Brief listo para presentar al directorio</li>
+          <li>Propuesta Comercial (opciones Esencial / Estratégica / Transformacional)</li>
+          <li>PRD técnico por iniciativa aprobada</li>
         </ul>
         <a href="#cta-final" class="btn btn-primary" style="width:100%; justify-content:center;">
-          <span data-i18n="inv2-btn">Iniciar diagnóstico completo</span>
+          <span data-i18n="inv3-btn">Iniciar diagnóstico completo</span>
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
         </a>
       </div>
@@ -823,9 +869,8 @@
     <div class="inv-note" style="max-width:760px; margin:24px auto 0;">
       <p data-i18n="inv-note">
         <strong>Nota sobre el valor del diagnóstico:</strong> Si el primer proyecto de implementación
-        identificado tiene un ROI de USD 40.000 anuales, el costo del diagnóstico representa menos del 20%
-        del retorno del primer año. No contratar el diagnóstico y adivinar el proyecto correcto
-        es el riesgo real.
+        identificado tiene un ROI de USD 40.000 anuales, el costo del Pack E1+E2 representa menos del 50%
+        del retorno del primer año — y entrega la certeza de implementar en el lugar correcto.
       </p>
     </div>
   </div>
@@ -931,7 +976,7 @@
   <div class="container">
     <div class="footer-inner">
       <div class="logo">
-        <img src="isotipo.png" alt="" style="height:32px;" />
+        <img src="isotipo.png" alt="3G Intelligence" style="height:32px;" />
         <div>
           <div class="logo-name"><span>3G</span> Intelligence</div>
           <div class="logo-sub" data-i18n="logo-sub">IA aplicada al negocio real</div>
@@ -1032,17 +1077,25 @@ const T = {
     'inv-tag':           'Inversión',
     'inv-title':         'El diagnóstico cuesta menos<br>que un error de implementación.',
     'inv-sub':           'Sin diagnóstico, las empresas arriesgan USD 30.000–100.000 en implementaciones incorrectas. El costo de saber es una fracción de eso.',
-    'inv1-name':         'Scan IA',
-    'inv1-desc':         'Diagnóstico inicial completo. Ideal para empresas que quieren entender su punto de partida antes de comprometerse con un proyecto mayor.',
-    'inv1-sub':          'pago único · entrega en 1 semana',
-    'inv1-items':        ['Sesión de 2 horas con la dirección','Score de Madurez IA en 5 dimensiones','Clasificación de Era (1, 2 o 3)','Identificación de oportunidades preliminares','Informe ejecutivo para el directorio'],
+    'inv1-name':         'AI Opportunity Scan · E0',
+    'inv1-desc':         'Primera sesión diagnóstica. Punto de entrada al proceso. Sin compromiso — el objetivo es identificar si hay potencial de mejora real.',
+    'inv1-price':        'Gratis – USD 1.500',
+    'inv1-sub':          'según tamaño y relación comercial · entrega 24 hrs',
+    'inv1-items':        ['Reunión 60–90 min con dirección o CEO','Score de Madurez IA en 5 dimensiones','Clasificación de Era (1, 2 o 3)','3 oportunidades de alto impacto identificadas','Recomendación de ruta: E1 directo o Data Foundation'],
     'inv1-btn':          'Agendar Scan IA',
-    'inv2-name':         'Diagnóstico Completo',
-    'inv2-desc':         'Scan IA + Análisis profundo de procesos + Scoring de oportunidades + Roadmap de implementación con propuesta comercial lista para ejecutar.',
-    'inv2-sub':          '50% inicio / 50% entrega · 3 semanas',
-    'inv2-items':        ['Todo lo incluido en el Scan IA','Mapeo detallado de procesos críticos','Scoring cuantificado de cada oportunidad','ROI proyectado a 12 meses por iniciativa','Propuesta comercial con opciones de implementación','PRD técnico para las 3 oportunidades top'],
-    'inv2-btn':          'Iniciar diagnóstico completo',
-    'inv-note':          '<strong>Nota sobre el valor del diagnóstico:</strong> Si el primer proyecto de implementación identificado tiene un ROI de USD 40.000 anuales, el costo del diagnóstico representa menos del 20% del retorno del primer año. No contratar el diagnóstico y adivinar el proyecto correcto es el riesgo real.',
+    'inv2-name':         'Diagnóstico Profundo · E1',
+    'inv2-desc':         'Análisis proceso a proceso por área funcional. Auditoría de datos. Catálogo de oportunidades con scoring de priorización y ROI proyectado.',
+    'inv2-price':        'USD 2.000 – 12.000',
+    'inv2-sub':          'según tamaño y complejidad · 2–3 semanas',
+    'inv2-items':        ['Entrevistas por área funcional (Toolkit B)','Auditoría de datos e infraestructura (Toolkit C)','Scoring de oportunidades con fórmula de priorización','ROI proyectado a 12 meses por iniciativa','Informe diagnóstico ejecutivo (hasta 30 págs)'],
+    'inv2-btn':          'Iniciar Diagnóstico E1',
+    'inv3-name':         'Pack Diagnóstico Completo · E1+E2',
+    'inv3-desc':         'Diagnóstico profundo + análisis cuantificado + propuesta de implementación con CEO Brief, Propuesta Comercial y PRD técnico listos para ejecutar.',
+    'inv3-price':        'USD 11.000 – 19.000',
+    'inv3-sub':          '10% descuento vs contratar por separado · 4–5 semanas',
+    'inv3-items':        ['Todo lo incluido en Diagnóstico E1','Tablero ejecutivo de métricas y ROI cuantificado','Top 3 oportunidades priorizadas por impacto','CEO Brief listo para presentar al directorio','Propuesta Comercial (opciones Esencial / Estratégica / Transformacional)','PRD técnico por iniciativa aprobada'],
+    'inv3-btn':          'Iniciar diagnóstico completo',
+    'inv-note':          '<strong>Nota sobre el valor del diagnóstico:</strong> Si el primer proyecto de implementación identificado tiene un ROI de USD 40.000 anuales, el costo del Pack E1+E2 representa menos del 50% del retorno del primer año — y entrega la certeza de implementar en el lugar correcto.',
 
     'caso-tag':          'Caso de éxito',
     'caso-title':        'De 45 minutos por cotización<br>a 5 minutos.',
@@ -1140,17 +1193,25 @@ const T = {
     'inv-tag':           'Investment',
     'inv-title':         'The diagnosis costs less<br>than one implementation mistake.',
     'inv-sub':           'Without diagnosis, companies risk USD 30,000–100,000 on incorrect implementations. The cost of knowing is a fraction of that.',
-    'inv1-name':         'AI Scan',
-    'inv1-desc':         'Complete initial diagnosis. Ideal for companies that want to understand their starting point before committing to a larger project.',
-    'inv1-sub':          'one-time payment · delivered in 1 week',
-    'inv1-items':        ['2-hour session with company leadership','AI Maturity Score across 5 dimensions','Era classification (1, 2, or 3)','Identification of preliminary opportunities','Executive report for the board'],
+    'inv1-name':         'AI Opportunity Scan · E0',
+    'inv1-desc':         'First diagnostic session. Entry point to the process. No commitment — the goal is to identify whether there is real improvement potential.',
+    'inv1-price':        'Free – USD 1,500',
+    'inv1-sub':          'based on size and commercial relationship · delivered in 24 hrs',
+    'inv1-items':        ['60–90 min session with CEO or leadership','AI Maturity Score across 5 dimensions','Era classification (1, 2, or 3)','3 high-impact opportunities identified','Route recommendation: direct to E1 or Data Foundation first'],
     'inv1-btn':          'Schedule AI Scan',
-    'inv2-name':         'Complete Diagnosis',
-    'inv2-desc':         'AI Scan + Deep process analysis + Opportunity scoring + Implementation roadmap with commercial proposal ready to execute.',
-    'inv2-sub':          '50% upfront / 50% on delivery · 3 weeks',
-    'inv2-items':        ['Everything included in the AI Scan','Detailed mapping of critical processes','Quantified scoring of each opportunity','Projected ROI per initiative at 12 months','Commercial proposal with implementation options','Technical PRD for the top 3 opportunities'],
-    'inv2-btn':          'Start complete diagnosis',
-    'inv-note':          '<strong>A note on the value of diagnosis:</strong> If the first implementation project identified has an ROI of USD 40,000 per year, the cost of the diagnosis represents less than 20% of the first year\'s return. Not getting the diagnosis and guessing the right project is the real risk.',
+    'inv2-name':         'Deep Diagnosis · E1',
+    'inv2-desc':         'Process-by-process analysis by functional area. Data audit. Opportunity catalog with prioritization scoring and projected ROI.',
+    'inv2-price':        'USD 2,000 – 12,000',
+    'inv2-sub':          'based on size and complexity · 2–3 weeks',
+    'inv2-items':        ['Functional area interviews (Toolkit B)','Data & infrastructure audit (Toolkit C)','Opportunity scoring with prioritization formula','Projected ROI per initiative at 12 months','Executive diagnostic report (up to 30 pages)'],
+    'inv2-btn':          'Start Deep Diagnosis E1',
+    'inv3-name':         'Full Diagnosis Pack · E1+E2',
+    'inv3-desc':         'Deep diagnosis + quantified analysis + implementation proposal with CEO Brief, Commercial Proposal, and technical PRD ready to execute.',
+    'inv3-price':        'USD 11,000 – 19,000',
+    'inv3-sub':          '10% discount vs contracting separately · 4–5 weeks',
+    'inv3-items':        ['Everything included in Deep Diagnosis E1','Executive metrics & ROI dashboard','Top 3 opportunities prioritized by impact','CEO Brief ready to present to the board','Commercial Proposal (Essential / Strategic / Transformational options)','Technical PRD per approved initiative'],
+    'inv3-btn':          'Start full diagnosis',
+    'inv-note':          '<strong>A note on the value of diagnosis:</strong> If the first implementation project identified has an ROI of USD 40,000 per year, the cost of the E1+E2 Pack represents less than 50% of the first year\'s return — and delivers the certainty of implementing in the right place.',
 
     'caso-tag':          'Success Story',
     'caso-title':        'From 45 minutes per quote<br>to 5 minutes.',
@@ -1191,7 +1252,7 @@ function setLang(lang) {
     'data-current-label', lang === 'es' ? 'Mayoría de las PyMEs' : 'Most SMEs'
   );
   document.querySelector('.inv-card.featured').setAttribute(
-    'data-popular-label', lang === 'es' ? 'Más popular' : 'Most popular'
+    'data-popular-label', lang === 'es' ? 'Más recomendado' : 'Most recommended'
   );
 
   document.querySelectorAll('[data-i18n]').forEach(el => {
