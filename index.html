@@ -1132,6 +1132,307 @@
 </section>
 
 <!-- ══════════════════════════════════════════════
+     CONTENIDO SEMANAL
+══════════════════════════════════════════════ -->
+
+<!-- ═══════════════════════════════════════════════════════════════════════
+     SECCIÓN: CONTENIDO SEMANAL — 3G Intelligence
+
+     INSTRUCCIONES PARA ACTUALIZAR CADA SEMANA:
+     1. Copia el bloque "TARJETA TEMPLATE" (marcado con comentarios)
+     2. Pégalo AL INICIO del .content-grid (antes de la tarjeta más reciente)
+     3. Cambia: título, descripción, href de cada red, src de la imagen
+     4. Guarda y sube el archivo.
+     ══════════════════════════════════════════════════════════════════════ -->
+
+<style>
+  .content-section {
+    background: #06060d;
+    padding: 100px 0 80px;
+    border-top: 1px solid rgba(255,255,255,0.06);
+  }
+  .content-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+  .content-label {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: #00e891;
+    margin-bottom: 16px;
+  }
+  .content-main-title {
+    font-size: clamp(28px, 4vw, 42px);
+    font-weight: 800;
+    color: #eef1f6;
+    line-height: 1.15;
+    margin-bottom: 12px;
+  }
+  .content-subtitle {
+    font-size: 16px;
+    color: rgba(238,241,246,0.45);
+    max-width: 560px;
+    line-height: 1.7;
+    margin-bottom: 56px;
+  }
+  .content-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 24px;
+    margin-bottom: 56px;
+  }
+  .content-card {
+    background: #0d0d18;
+    border: 1px solid rgba(255,255,255,0.06);
+    border-radius: 16px;
+    overflow: hidden;
+    transition: border-color 0.25s, transform 0.25s;
+    display: flex;
+    flex-direction: column;
+  }
+  .content-card:hover {
+    border-color: rgba(0,232,145,0.3);
+    transform: translateY(-4px);
+  }
+  .card-thumb {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    display: block;
+    background: #111;
+  }
+  .card-meta {
+    padding: 18px 20px 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .card-week {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: #00e891;
+    background: rgba(0,232,145,0.08);
+    border: 1px solid rgba(0,232,145,0.2);
+    border-radius: 100px;
+    padding: 3px 10px;
+  }
+  .card-date {
+    font-size: 11px;
+    color: rgba(238,241,246,0.3);
+  }
+  .card-body {
+    padding: 14px 20px 20px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+  .card-title {
+    font-size: 17px;
+    font-weight: 800;
+    color: #eef1f6;
+    line-height: 1.3;
+    margin-bottom: 8px;
+  }
+  .card-desc {
+    font-size: 13px;
+    color: rgba(238,241,246,0.45);
+    line-height: 1.65;
+    flex: 1;
+    margin-bottom: 20px;
+  }
+  .card-networks {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+  .card-networks-label {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: rgba(238,241,246,0.25);
+    margin-right: 2px;
+  }
+  .net-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 11px;
+    font-weight: 600;
+    color: rgba(238,241,246,0.55);
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 100px;
+    padding: 4px 10px;
+    text-decoration: none;
+    transition: all 0.2s;
+    white-space: nowrap;
+  }
+  .net-btn:hover {
+    color: #00e891;
+    border-color: rgba(0,232,145,0.4);
+    background: rgba(0,232,145,0.06);
+  }
+  .net-btn svg {
+    width: 12px;
+    height: 12px;
+    fill: currentColor;
+    flex-shrink: 0;
+  }
+  .content-follow {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding-top: 32px;
+    border-top: 1px solid rgba(255,255,255,0.06);
+  }
+  .follow-text {
+    font-size: 15px;
+    color: rgba(238,241,246,0.45);
+    text-align: center;
+  }
+  .follow-text strong { color: #eef1f6; }
+  .follow-networks {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .follow-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 13px;
+    font-weight: 600;
+    color: #eef1f6;
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 100px;
+    padding: 10px 20px;
+    text-decoration: none;
+    transition: all 0.25s;
+  }
+  .follow-btn:hover {
+    background: rgba(0,232,145,0.1);
+    border-color: rgba(0,232,145,0.4);
+    color: #00e891;
+  }
+  .follow-btn svg {
+    width: 16px;
+    height: 16px;
+    fill: currentColor;
+  }
+  @media (max-width: 600px) { .content-grid { grid-template-columns: 1fr; } }
+</style>
+
+<!-- SVG icons (reutilizables en toda la sección) -->
+<svg style="display:none" xmlns="http://www.w3.org/2000/svg">
+  <symbol id="icon-linkedin" viewBox="0 0 24 24">
+    <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+  </symbol>
+  <symbol id="icon-youtube" viewBox="0 0 24 24">
+    <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+  </symbol>
+  <symbol id="icon-instagram" viewBox="0 0 24 24">
+    <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/>
+  </symbol>
+  <symbol id="icon-facebook" viewBox="0 0 24 24">
+    <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+  </symbol>
+</svg>
+
+<section class="content-section" id="contenido">
+  <div class="content-inner">
+
+    <p class="content-label">Contenido semanal</p>
+    <h2 class="content-main-title">Aprende antes de decidir.</h2>
+    <p class="content-subtitle">
+      Cada semana publicamos un tema de IA aplicada al negocio real —
+      sin tecnicismos, con casos concretos y resultados medibles.
+    </p>
+
+    <!-- ════════════════════════════════════════════
+         GRID DE TARJETAS
+         Agrega nuevas tarjetas AL INICIO de este div.
+         La más reciente siempre queda primera.
+         ════════════════════════════════════════════ -->
+    <div class="content-grid">
+
+      <!-- ══════════════════════════════════════════════════════════════
+           TARJETA TEMPLATE — COPIA ESTE BLOQUE COMPLETO CADA SEMANA
+           Pégalo justo aquí arriba (antes de la tarjeta anterior)
+           ══════════════════════════════════════════════════════════════
+
+      <article class="content-card">
+        <img class="card-thumb" src="URL_IMAGEN" alt="TITULO" loading="lazy" />
+        <div class="card-meta">
+          <span class="card-week">Semana X</span>
+          <span class="card-date">DD MMM 2026</span>
+        </div>
+        <div class="card-body">
+          <h3 class="card-title">TÍTULO DEL TEMA</h3>
+          <p class="card-desc">Descripción breve — 2 líneas máximo.</p>
+          <div class="card-networks">
+            <span class="card-networks-label">Ver en</span>
+            <a href="URL" target="_blank" rel="noopener" class="net-btn"><svg><use href="#icon-linkedin"/></svg> LinkedIn</a>
+            <a href="URL" target="_blank" rel="noopener" class="net-btn"><svg><use href="#icon-youtube"/></svg> YouTube</a>
+            <a href="URL" target="_blank" rel="noopener" class="net-btn"><svg><use href="#icon-instagram"/></svg> Instagram</a>
+            <a href="URL" target="_blank" rel="noopener" class="net-btn"><svg><use href="#icon-facebook"/></svg> Facebook</a>
+          </div>
+        </div>
+      </article>
+
+      FIN DEL TEMPLATE ══════════════════════════════════════════════════ -->
+
+      <!-- Semana 1 -->
+      <article class="content-card">
+        <img class="card-thumb" src="/contenido/semana1-eras.png" alt="Las 3 Eras del Negocio Digital" loading="lazy" />
+        <div class="card-meta">
+          <span class="card-week">Semana 1</span>
+          <span class="card-date">20 Mar 2026</span>
+        </div>
+        <div class="card-body">
+          <h3 class="card-title">Las 3 Eras del Negocio Digital</h3>
+          <p class="card-desc">
+            Manual, Digital o IA Aplicada — ¿en qué era está tu empresa?
+            Identifica dónde estás y qué oportunidades tienes disponibles hoy.
+          </p>
+          <div class="card-networks">
+            <span class="card-networks-label">Ver en</span>
+            <a href="https://www.linkedin.com/feed/update/urn:li:activity:7440870276487094272" target="_blank" rel="noopener" class="net-btn"><svg><use href="#icon-linkedin"/></svg> LinkedIn</a>
+            <a href="https://www.youtube.com/shorts/BPlZVZ5Jg64" target="_blank" rel="noopener" class="net-btn"><svg><use href="#icon-youtube"/></svg> YouTube</a>
+            <a href="https://www.instagram.com/p/DWHJfIRjbdt/?img_index=1" target="_blank" rel="noopener" class="net-btn"><svg><use href="#icon-instagram"/></svg> Instagram</a>
+            <a href="https://web.facebook.com/share/p/1Apgv8q29M/" target="_blank" rel="noopener" class="net-btn"><svg><use href="#icon-facebook"/></svg> Facebook</a>
+          </div>
+        </div>
+      </article>
+
+    </div><!-- fin .content-grid -->
+
+    <!-- CTA de seguimiento -->
+    <div class="content-follow">
+      <p class="follow-text">
+        <strong>Publicamos cada semana.</strong> Síguenos para no perderte el próximo tema.
+      </p>
+      <div class="follow-networks">
+        <a href="https://www.linkedin.com/company/3g-intelligence" target="_blank" rel="noopener" class="follow-btn"><svg><use href="#icon-linkedin"/></svg> LinkedIn</a>
+        <a href="https://www.youtube.com/@3gintelligence" target="_blank" rel="noopener" class="follow-btn"><svg><use href="#icon-youtube"/></svg> YouTube</a>
+        <a href="https://www.instagram.com/3gintelligence/" target="_blank" rel="noopener" class="follow-btn"><svg><use href="#icon-instagram"/></svg> Instagram</a>
+        <a href="https://www.facebook.com/3gintelligence/" target="_blank" rel="noopener" class="follow-btn"><svg><use href="#icon-facebook"/></svg> Facebook</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════
      CTA FINAL
 ══════════════════════════════════════════════ -->
 <section id="cta-final">
