@@ -619,6 +619,7 @@
       <li><a href="#inversion" data-i18n="nav-inversion">Inversión</a></li>
       <li><a href="#caso" data-i18n="nav-caso">Caso de éxito</a></li>
           <li><a href="#contenido" data-i18n="nav-contenido">Contenido</a></li>
+          <li><a href="#quien-soy" data-i18n="nav-quien">Quién soy</a></li>
     </ul>
     <div class="nav-cta">
       <div class="lang-toggle">
@@ -1434,6 +1435,158 @@
 </section>
 
 <!-- ══════════════════════════════════════════════
+     QUIÉN SOY
+══════════════════════════════════════════════ -->
+<style>
+  .qs-section {
+    background: #08080f;
+    padding: 100px 0 80px;
+    border-top: 1px solid rgba(255,255,255,0.06);
+  }
+  .qs-inner { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
+  .qs-grid {
+    display: grid; grid-template-columns: 340px 1fr;
+    gap: 64px; align-items: start;
+  }
+  .qs-left { position: sticky; top: 32px; }
+  .founder-name { font-size: 22px; font-weight: 800; color: #eef1f6; margin-bottom: 4px; }
+  .founder-role { font-size: 13px; color: rgba(238,241,246,0.4); margin-bottom: 24px; line-height: 1.5; }
+  .founder-stats { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 28px; }
+  .stat-box {
+    background: #0d0d18; border: 1px solid rgba(255,255,255,0.06);
+    border-radius: 12px; padding: 14px 12px; text-align: center;
+  }
+  .stat-num { font-size: 24px; font-weight: 800; color: #00e891; line-height: 1; margin-bottom: 4px; }
+  .stat-label { font-size: 10px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: rgba(238,241,246,0.35); line-height: 1.3; }
+  .founder-links { display: flex; flex-direction: column; gap: 8px; }
+  .founder-link {
+    display: flex; align-items: center; gap: 10px;
+    font-size: 13px; font-weight: 500; color: rgba(238,241,246,0.55);
+    text-decoration: none; padding: 10px 14px;
+    background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.07);
+    border-radius: 10px; transition: all 0.2s;
+  }
+  .founder-link:hover { color: #00e891; border-color: rgba(0,232,145,0.3); background: rgba(0,232,145,0.05); }
+  .founder-link svg { width: 15px; height: 15px; fill: currentColor; flex-shrink: 0; }
+  .founder-link-label { flex: 1; }
+  .founder-link-sub { font-size: 10px; color: rgba(238,241,246,0.25); }
+  .qs-label { font-size: 11px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: #00e891; margin-bottom: 16px; }
+  .qs-title { font-size: clamp(30px, 4vw, 44px); font-weight: 800; color: #eef1f6; line-height: 1.15; margin-bottom: 32px; }
+  .qs-title em { font-style: italic; color: #00e891; }
+  .qs-block { margin-bottom: 36px; }
+  .qs-block-title {
+    font-size: 13px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase;
+    color: rgba(0,232,145,0.7); margin-bottom: 12px;
+    display: flex; align-items: center; gap: 10px;
+  }
+  .qs-block-title::before { content: ''; display: block; width: 20px; height: 1px; background: rgba(0,232,145,0.5); }
+  .qs-block p { font-size: 15px; color: rgba(238,241,246,0.65); line-height: 1.8; margin-bottom: 14px; }
+  .qs-block p:last-child { margin-bottom: 0; }
+  .qs-quote {
+    background: linear-gradient(135deg, #0d0d18, #0a1a12);
+    border-left: 3px solid #00e891; border-radius: 0 12px 12px 0;
+    padding: 20px 24px; margin: 28px 0;
+  }
+  .qs-quote p { font-size: 16px; font-style: italic; color: rgba(238,241,246,0.8); line-height: 1.7; margin: 0; }
+  .qs-sectors { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 16px; }
+  .sector-tag {
+    font-size: 12px; font-weight: 600; color: rgba(238,241,246,0.5);
+    background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 100px; padding: 4px 12px;
+  }
+  @media (max-width: 860px) {
+    .qs-grid { grid-template-columns: 1fr; gap: 40px; }
+    .qs-left { position: static; max-width: 340px; }
+  }
+</style>
+
+<section class="qs-section" id="quien-soy">
+  <div class="qs-inner">
+    <div class="qs-grid">
+
+      <!-- Columna izquierda -->
+      <div class="qs-left">
+        <!--
+        FOTO — DESCOMENTAR cuando tengas la imagen lista
+        <img src="/img/gonzalo.jpg" alt="Gonzalo Gompertz — Fundador 3G Intelligence"
+          style="width:100%; border-radius:16px; display:block; margin-bottom:28px;" />
+        -->
+        <p class="founder-name">Gonzalo Gompertz</p>
+        <p class="founder-role">Fundador · 3G Intelligence<br>Consultor en IA y Gestión Empresarial</p>
+        <div class="founder-stats">
+          <div class="stat-box"><div class="stat-num">20+</div><div class="stat-label">años de experiencia</div></div>
+          <div class="stat-box"><div class="stat-num">13+</div><div class="stat-label">años en cargos directivos</div></div>
+          <div class="stat-box"><div class="stat-num">15+</div><div class="stat-label">años en consultoría</div></div>
+          <div class="stat-box"><div class="stat-num">8+</div><div class="stat-label">sectores de industria</div></div>
+        </div>
+        <div class="founder-links">
+          <a href="https://www.linkedin.com/in/gonzalo-gompertz-geldres" target="_blank" rel="noopener" class="founder-link">
+            <svg><use href="#icon-linkedin"/></svg>
+            <span class="founder-link-label">LinkedIn Personal</span>
+            <span class="founder-link-sub">→</span>
+          </a>
+          <a href="https://www.linkedin.com/company/3g-intelligence" target="_blank" rel="noopener" class="founder-link">
+            <svg><use href="#icon-linkedin"/></svg>
+            <span class="founder-link-label">3G Intelligence</span>
+            <span class="founder-link-sub">Empresa →</span>
+          </a>
+          <a href="https://www.instagram.com/3gintelligence/" target="_blank" rel="noopener" class="founder-link">
+            <svg><use href="#icon-instagram"/></svg>
+            <span class="founder-link-label">Instagram</span>
+            <span class="founder-link-sub">→</span>
+          </a>
+          <a href="https://www.facebook.com/3gintelligence/" target="_blank" rel="noopener" class="founder-link">
+            <svg><use href="#icon-facebook"/></svg>
+            <span class="founder-link-label">Facebook</span>
+            <span class="founder-link-sub">→</span>
+          </a>
+          <a href="https://www.youtube.com/@3gintelligence" target="_blank" rel="noopener" class="founder-link">
+            <svg><use href="#icon-youtube"/></svg>
+            <span class="founder-link-label">YouTube</span>
+            <span class="founder-link-sub">→</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Columna derecha -->
+      <div class="qs-right">
+        <p class="qs-label">Quién está detrás</p>
+        <h2 class="qs-title">Estrategia, gestión y tecnología.<br><em>Conectadas al negocio real.</em></h2>
+
+        <div class="qs-block">
+          <p class="qs-block-title">Trayectoria</p>
+          <p>Más de 20 años de experiencia en gestión empresarial, desarrollo de negocios y consultoría — con más de 13 años en cargos directivos y 15 años acompañando organizaciones en procesos de planificación estratégica, operaciones y toma de decisiones.</p>
+          <p>A lo largo de mi carrera he liderado equipos multidisciplinarios, implementado sistemas de gestión, optimizado procesos y acompañado a organizaciones en contextos de cambio, crecimiento o reestructuración.</p>
+          <p>Comencé liderando implementaciones de sistemas de administración y gestión empresarial. Con los años incorporé automatización e inteligencia artificial aplicada como herramientas concretas para mejorar la eficiencia, la gestión de información y la toma de decisiones.</p>
+          <div class="qs-sectors">
+            <span class="sector-tag">Agroindustria</span>
+            <span class="sector-tag">Servicios</span>
+            <span class="sector-tag">Turismo</span>
+            <span class="sector-tag">Comercio</span>
+            <span class="sector-tag">Educación</span>
+            <span class="sector-tag">Pesca</span>
+            <span class="sector-tag">Programas públicos</span>
+            <span class="sector-tag">Organizaciones sin fines de lucro</span>
+          </div>
+        </div>
+
+        <div class="qs-quote">
+          <p>"Vi durante años organizaciones con buenos equipos y alto potencial, pero que operaban con información dispersa y tomaban decisiones más por intuición que por datos estructurados. Hoy existen herramientas que permiten cerrar esa brecha — y eso es exactamente lo que hacemos."</p>
+        </div>
+
+        <div class="qs-block">
+          <p class="qs-block-title">Por qué nace 3G Intelligence</p>
+          <p>3G Intelligence nace de una constatación concreta: muchas empresas tienen información, sistemas y datos, pero no logran transformarlos en decisiones claras ni en mejoras reales de gestión.</p>
+          <p>El punto de quiebre fue entender que hoy existen herramientas — especialmente en automatización e inteligencia artificial — que permiten cerrar esa brecha, pero que no están siendo utilizadas de forma práctica ni conectadas a la gestión real del negocio.</p>
+          <p>3G Intelligence integra estrategia, gestión y tecnología para que las empresas puedan tomar mejores decisiones, optimizar sus resultados y operar con mayor claridad y control. Siempre desde una visión práctica y orientada a resultados.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════
      CTA FINAL
 ══════════════════════════════════════════════ -->
 <section id="cta-final">
@@ -1493,6 +1646,7 @@
         <li><a href="#inversion" data-i18n="nav-inversion">Inversión</a></li>
         <li><a href="#caso" data-i18n="nav-caso">Caso de éxito</a></li>
           <li><a href="#contenido" data-i18n="nav-contenido">Contenido</a></li>
+          <li><a href="#quien-soy" data-i18n="nav-quien">Quién soy</a></li>
         <li><a href="mailto:chat@3g-ia-agents.com" data-i18n="footer-contact">Contacto</a></li>
       </ul>
       <div class="footer-copy">
@@ -1519,6 +1673,7 @@ const T = {
     'nav-metodologia':   'Metodología',
     'nav-caso':          'Caso de éxito',
     'nav-contenido':     'Contenido',
+    'nav-quien':         'Quién soy',
     'nav-inversion':     'Inversión',
     'nav-whatsapp':      'WhatsApp',
     'nav-cta':           'Agendar reunión',
@@ -1675,6 +1830,7 @@ const T = {
     'nav-metodologia':   'Methodology',
     'nav-caso':          'Success Story',
     'nav-contenido':     'Content',
+    'nav-quien':         'About me',
     'nav-inversion':     'Investment',
     'nav-whatsapp':      'WhatsApp',
     'nav-cta':           'Schedule a meeting',
