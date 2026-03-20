@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="robots" content="noindex, nofollow" />
+  <title>Nueva cápsula semanal · 3G Intelligence</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --night: #06060D;
+      --surface: #0D0D18;
+      --border: rgba(255,255,255,0.08);
+      --green: #00E891;
+      --offwh: #EEF1F6;
+      --muted: rgba(238,241,246,0.45);
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: var(--night);
+      color: var(--offwh);
+      padding: 48px 24px 80px;
+      min-height: 100vh;
+    }
+    .wrap { max-width: 720px; margin: 0 auto; }
+
+    /* Header */
+    .header { margin-bottom: 48px; }
+    .header-tag {
+      font-size: 11px; font-weight: 700; letter-spacing: 0.18em;
+      text-transform: uppercase; color: var(--green); margin-bottom: 12px;
+    }
+    .header h1 {
+      font-family: 'Syne', sans-serif; font-weight: 800;
+      font-size: 32px; line-height: 1.15; margin-bottom: 10px;
+    }
+    .header p { font-size: 15px; color: var(--muted); line-height: 1.6; }
+
+    /* Form */
+    .form-section {
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: 16px; padding: 32px; margin-bottom: 24px;
+    }
+    .form-section-title {
+      font-family: 'Syne', sans-serif; font-weight: 700;
+      font-size: 13px; letter-spacing: 0.1em; text-transform: uppercase;
+      color: var(--green); margin-bottom: 24px;
+    }
+    .field { margin-bottom: 20px; }
+    .field label {
+      display: block; font-size: 13px; font-weight: 500;
+      color: var(--offwh); margin-bottom: 6px;
+    }
+    .field label span { color: var(--muted); font-weight: 300; margin-left: 6px; }
+    .field input, .field textarea, .field select {
+      width: 100%; background: var(--night);
+      border: 1px solid var(--border); border-radius: 10px;
+      color: var(--offwh); font-family: 'DM Sans', sans-serif;
+      font-size: 14px; padding: 12px 16px; outline: none;
+      transition: border-color 0.2s;
+    }
+    .field input:focus, .field textarea:focus {
+      border-color: rgba(0,232,145,0.5);
+    }
+    .field textarea { resize: vertical; min-height: 80px; }
+    .field input[type="file"] { padding: 10px 14px; cursor: pointer; }
+    .field-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    @media (max-width: 600px) { .field-row { grid-template-columns: 1fr; } }
+
+    .net-row {
+      display: flex; align-items: center; gap: 12px; margin-bottom: 12px;
+    }
+    .net-label {
+      font-size: 12px; font-weight: 600; color: var(--muted);
+      width: 80px; flex-shrink: 0;
+    }
+    .net-row input { flex: 1; margin: 0; }
+
+    /* Botón generar */
+    .btn-generate {
+      width: 100%; padding: 16px;
+      background: var(--green); color: var(--night);
+      font-family: 'Syne', sans-serif; font-weight: 800;
+      font-size: 15px; letter-spacing: 0.02em;
+      border: none; border-radius: 12px; cursor: pointer;
+      transition: opacity 0.2s;
+    }
+    .btn-generate:hover { opacity: 0.85; }
+
+    /* Output */
+    #output-wrap {
+      display: none;
+      background: var(--surface); border: 1px solid rgba(0,232,145,0.3);
+      border-radius: 16px; padding: 32px; margin-top: 24px;
+    }
+    #output-wrap h2 {
+      font-family: 'Syne', sans-serif; font-weight: 700;
+      font-size: 16px; margin-bottom: 8px; color: var(--green);
+    }
+    #output-wrap p { font-size: 13px; color: var(--muted); margin-bottom: 16px; }
+    #output-code {
+      background: #020204; border: 1px solid var(--border);
+      border-radius: 10px; padding: 20px; font-family: monospace;
+      font-size: 12px; color: #adf0cc; white-space: pre-wrap;
+      word-break: break-all; max-height: 400px; overflow-y: auto;
+      margin-bottom: 16px;
+    }
+    .btn-copy {
+      padding: 10px 24px;
+      background: transparent; border: 1px solid var(--green);
+      color: var(--green); border-radius: 8px; cursor: pointer;
+      font-family: 'DM Sans', sans-serif; font-weight: 600;
+      font-size: 13px; transition: all 0.2s;
+    }
+    .btn-copy:hover { background: rgba(0,232,145,0.1); }
+    .btn-copy.copied { background: rgba(0,232,145,0.15); }
+
+    /* Nota */
+    .nota {
+      margin-top: 32px; padding: 20px 24px;
+      background: rgba(0,232,145,0.05); border: 1px solid rgba(0,232,145,0.15);
+      border-radius: 12px; font-size: 13px; color: var(--muted); line-height: 1.7;
+    }
+    .nota strong { color: var(--offwh); }
+  </style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="header">
+    <div class="header-tag">3G Intelligence · Uso interno</div>
+    <h1>Nueva cápsula semanal</h1>
+    <p>Llena el formulario y copia el bloque generado. Envíalo para actualizar la web.</p>
+  </div>
+
+  <form id="form-contenido">
+
+    <!-- Info básica -->
+    <div class="form-section">
+      <div class="form-section-title">01 · Información básica</div>
+      <div class="field-row">
+        <div class="field">
+          <label>Semana <span>número</span></label>
+          <input type="number" id="semana" placeholder="2" min="1" required />
+        </div>
+        <div class="field">
+          <label>Fecha de publicación</label>
+          <input type="date" id="fecha" required />
+        </div>
+      </div>
+      <div class="field">
+        <label>Título del tema</label>
+        <input type="text" id="titulo" placeholder="Ej: Automatización de cotizaciones con IA" required />
+      </div>
+      <div class="field">
+        <label>Descripción <span>2 líneas máximo</span></label>
+        <textarea id="descripcion" placeholder="Qué aprende el lector al ver este contenido. Qué problema resuelve o qué insight entrega." required></textarea>
+      </div>
+    </div>
+
+    <!-- Imagen -->
+    <div class="form-section">
+      <div class="form-section-title">02 · Imagen (slide 1 del carrusel)</div>
+      <div class="field">
+        <label>Nombre del archivo <span>se guardará en /contenido/</span></label>
+        <input type="text" id="imagen-nombre" placeholder="Ej: semana2-cotizaciones.png" required />
+      </div>
+      <div class="field">
+        <label>Texto alternativo <span>descripción breve para accesibilidad</span></label>
+        <input type="text" id="imagen-alt" placeholder="Ej: Automatización de cotizaciones con IA" />
+      </div>
+    </div>
+
+    <!-- Links de redes -->
+    <div class="form-section">
+      <div class="form-section-title">03 · Links a las publicaciones</div>
+      <p style="font-size:13px; color:var(--muted); margin-bottom:20px; line-height:1.6;">
+        Deja vacío los que aún no estén publicados — no aparecerán en la tarjeta.
+      </p>
+
+      <div class="net-row">
+        <span class="net-label">LinkedIn</span>
+        <input type="url" id="url-linkedin" placeholder="https://www.linkedin.com/feed/update/..." />
+      </div>
+      <div class="net-row">
+        <span class="net-label">YouTube</span>
+        <input type="url" id="url-youtube" placeholder="https://www.youtube.com/shorts/..." />
+      </div>
+      <div class="net-row">
+        <span class="net-label">Instagram</span>
+        <input type="url" id="url-instagram" placeholder="https://www.instagram.com/p/..." />
+      </div>
+      <div class="net-row">
+        <span class="net-label">Facebook</span>
+        <input type="url" id="url-facebook" placeholder="https://web.facebook.com/share/p/..." />
+      </div>
+    </div>
+
+    <button type="submit" class="btn-generate">Generar bloque HTML →</button>
+  </form>
+
+  <!-- Output -->
+  <div id="output-wrap">
+    <h2>Bloque generado</h2>
+    <p>Copia este bloque completo y envíalo para actualizar la web.</p>
+    <div id="output-code"></div>
+    <button class="btn-copy" id="btn-copy" onclick="copiarCodigo()">Copiar al portapapeles</button>
+  </div>
+
+  <div class="nota">
+    <strong>¿Cómo usar esta página?</strong><br>
+    1. Llena el formulario con los datos de la cápsula de la semana<br>
+    2. Haz clic en "Generar bloque HTML"<br>
+    3. Copia el resultado y envíalo junto con la imagen<br>
+    4. La web se actualizará con la nueva tarjeta al inicio de la sección Contenido
+  </div>
+
+</div>
+
+<script>
+  // Poner fecha de hoy por defecto
+  document.getElementById('fecha').valueAsDate = new Date();
+
+  function formatearFecha(val) {
+    const meses = ['Ene','Feb','Mar','Abr','May','Jun','Jul','Ago','Sep','Oct','Nov','Dic'];
+    const [y, m, d] = val.split('-');
+    return `${parseInt(d)} ${meses[parseInt(m)-1]} ${y}`;
+  }
+
+  document.getElementById('form-contenido').addEventListener('submit', function(e) {
+    e.preventDefault();
+
+    const semana   = document.getElementById('semana').value;
+    const fecha    = formatearFecha(document.getElementById('fecha').value);
+    const titulo   = document.getElementById('titulo').value.trim();
+    const desc     = document.getElementById('descripcion').value.trim();
+    const imgNombre = document.getElementById('imagen-nombre').value.trim();
+    const imgAlt   = document.getElementById('imagen-alt').value.trim() || titulo;
+    const urlLI    = document.getElementById('url-linkedin').value.trim();
+    const urlYT    = document.getElementById('url-youtube').value.trim();
+    const urlIG    = document.getElementById('url-instagram').value.trim();
+    const urlFB    = document.getElementById('url-facebook').value.trim();
+
+    const redes = [];
+    if (urlLI) redes.push(`            <a href="${urlLI}" target="_blank" rel="noopener" class="net-btn"><svg><use href="#icon-linkedin"/></svg> LinkedIn</a>`);
+    if (urlYT) redes.push(`            <a href="${urlYT}" target="_blank" rel="noopener" class="net-btn"><svg><use href="#icon-youtube"/></svg> YouTube</a>`);
+    if (urlIG) redes.push(`            <a href="${urlIG}" target="_blank" rel="noopener" class="net-btn"><svg><use href="#icon-instagram"/></svg> Instagram</a>`);
+    if (urlFB) redes.push(`            <a href="${urlFB}" target="_blank" rel="noopener" class="net-btn"><svg><use href="#icon-facebook"/></svg> Facebook</a>`);
+
+    const html = `      <!-- Semana ${semana} -->
+      <article class="content-card">
+        <img class="card-thumb" src="/contenido/${imgNombre}" alt="${imgAlt}" loading="lazy" />
+        <div class="card-meta">
+          <span class="card-week">Semana ${semana}</span>
+          <span class="card-date">${fecha}</span>
+        </div>
+        <div class="card-body">
+          <h3 class="card-title">${titulo}</h3>
+          <p class="card-desc">${desc}</p>
+          <div class="card-networks">
+            <span class="card-networks-label">Ver en</span>
+${redes.join('\n')}
+          </div>
+        </div>
+      </article>`;
+
+    document.getElementById('output-code').textContent = html;
+    document.getElementById('output-wrap').style.display = 'block';
+    document.getElementById('output-wrap').scrollIntoView({ behavior: 'smooth' });
+  });
+
+  function copiarCodigo() {
+    const codigo = document.getElementById('output-code').textContent;
+    navigator.clipboard.writeText(codigo).then(() => {
+      const btn = document.getElementById('btn-copy');
+      btn.textContent = '✓ Copiado';
+      btn.classList.add('copied');
+      setTimeout(() => {
+        btn.textContent = 'Copiar al portapapeles';
+        btn.classList.remove('copied');
+      }, 2000);
+    });
+  }
+</script>
+</body>
+</html>
