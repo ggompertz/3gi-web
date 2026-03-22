@@ -554,6 +554,27 @@
     }
     .cta-form input:focus { border-color: rgba(0,232,145,0.4); }
     .cta-form input::placeholder { color: var(--muted); }
+    .cta-form select {
+      background: rgba(255,255,255,0.04); border: 1px solid var(--border);
+      border-radius: 8px; padding: 12px 16px; color: var(--offwh);
+      font-family: 'DM Sans', sans-serif; font-size: 14px;
+      outline: none; transition: border-color 0.2s; width: 100%;
+      appearance: none; cursor: pointer;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='rgba(238,241,246,0.35)' stroke-width='2'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+      background-repeat: no-repeat; background-position: right 14px center;
+    }
+    .cta-form select:focus { border-color: rgba(0,232,145,0.4); }
+    .cta-form select option { background: #0d0d18; color: var(--offwh); }
+    .cta-form textarea {
+      background: rgba(255,255,255,0.04); border: 1px solid var(--border);
+      border-radius: 8px; padding: 12px 16px; color: var(--offwh);
+      font-family: 'DM Sans', sans-serif; font-size: 14px;
+      outline: none; transition: border-color 0.2s; width: 100%;
+      resize: none; min-height: 80px; line-height: 1.5;
+    }
+    .cta-form textarea:focus { border-color: rgba(0,232,145,0.4); }
+    .cta-form textarea::placeholder { color: var(--muted); }
+    .form-optional { font-size: 11px; color: var(--muted); margin-top: -4px; }
 
     /* ── FOOTER ───────────────────────────────────────────── */
     footer {
@@ -1624,6 +1645,21 @@
           <input type="text" name="nombre" required data-i18n-placeholder="form-nombre" placeholder="Nombre" />
           <input type="email" name="email" required data-i18n-placeholder="form-email" placeholder="Email" />
           <input type="text" name="empresa" data-i18n-placeholder="form-empresa" placeholder="Empresa o sector" />
+          <select name="empleados">
+            <option value="" disabled selected data-i18n="form-empleados-placeholder">¿Cuántos empleados tiene tu empresa? (opcional)</option>
+            <option value="1-5">1–5 empleados</option>
+            <option value="6-20">6–20 empleados</option>
+            <option value="21-100">21–100 empleados</option>
+            <option value="100+">Más de 100 empleados</option>
+          </select>
+          <select name="ventas">
+            <option value="" disabled selected data-i18n="form-ventas-placeholder">Ventas anuales aproximadas (opcional)</option>
+            <option value="micro">Menos de USD 100K (Microempresa)</option>
+            <option value="pequena">USD 100K – 1M (Pequeña empresa)</option>
+            <option value="mediana">USD 1M – 4M (Mediana empresa)</option>
+            <option value="grande">Más de USD 4M (Gran empresa)</option>
+          </select>
+          <textarea name="proceso" data-i18n-placeholder="form-proceso" placeholder="¿Cuál es el proceso que más tiempo consume en tu equipo? (opcional)"></textarea>
           <button type="submit" class="btn btn-primary" style="width:100%; justify-content:center; font-family:'Syne',sans-serif;">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
             <span data-i18n="form-btn">Agendar llamada gratuita</span>
@@ -1834,6 +1870,9 @@ const T = {
     'cta-fine':      'O escríbenos a <a href="mailto:chat@3g-ia-agents.com" style="color:var(--green);">chat@3g-ia-agents.com</a>',
     'form-title':    'Agenda tu llamada gratuita',
     'form-nombre':   'Nombre',
+    'form-empleados-placeholder': '¿Cuántos empleados tiene tu empresa? (opcional)',
+    'form-ventas-placeholder':    'Ventas anuales aproximadas (opcional)',
+    'form-proceso':               '¿Cuál es el proceso que más tiempo consume en tu equipo? (opcional)',
     'form-email':    'Email',
     'form-empresa':  'Empresa o sector',
     'form-btn':      'Agendar llamada gratuita',
@@ -2016,6 +2055,9 @@ const T = {
     'cta-fine':      'Or write to us at <a href="mailto:chat@3g-ia-agents.com" style="color:var(--green);">chat@3g-ia-agents.com</a>',
     'form-title':    'Schedule your free call',
     'form-nombre':   'Name',
+    'form-empleados-placeholder': 'How many employees does your company have? (optional)',
+    'form-ventas-placeholder':    'Approximate annual revenue (optional)',
+    'form-proceso':               'What process takes the most time in your team? (optional)',
     'form-email':    'Email',
     'form-empresa':  'Company or industry',
     'form-btn':      'Schedule free call',
@@ -2088,12 +2130,21 @@ function setLang(lang) {
 function handleCTAForm(e) {
   e.preventDefault();
   const f = e.target;
-  const nombre = encodeURIComponent(f.nombre.value);
-  const email  = encodeURIComponent(f.email.value);
-  window.open(
-    `https://calendly.com/escribeme-3g-ia-agents/diagnostico-base-en-30-min?name=${nombre}&email=${email}`,
-    '_blank'
-  );
+  const nombre    = encodeURIComponent(f.nombre.value);
+  const email     = encodeURIComponent(f.email.value);
+  const empleados = f.empleados.value;
+  const ventas    = f.ventas.value;
+  const proceso   = f.proceso.value.trim();
+
+  const notas = [
+    f.empresa.value   ? `Empresa: ${f.empresa.value}`       : '',
+    empleados         ? `Empleados: ${empleados}`            : '',
+    ventas            ? `Ventas: ${ventas}`                  : '',
+    proceso           ? `Proceso clave: ${proceso}`          : '',
+  ].filter(Boolean).join(' | ');
+
+  const url = `https://calendly.com/escribeme-3g-ia-agents/diagnostico-base-en-30-min?name=${nombre}&email=${email}${notas ? '&a1=' + encodeURIComponent(notas) : ''}`;
+  window.open(url, '_blank');
 }
 </script>
 
