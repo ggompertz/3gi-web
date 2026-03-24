@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Guía de Entrevista Scan IA · 3G Intelligence</title>
+  <style>
+    :root {
+      --green: #009E60;
+      --green-lt: #e8f8ef;
+      --ink: #06060D;
+      --muted: #6B7280;
+      --border: #E5E7EB;
+      --bg: #F9FAFB;
+      --yellow: #FBBF24;
+      --red: #F87171;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: Arial, sans-serif;
+      font-size: 13px;
+      color: var(--ink);
+      background: white;
+      line-height: 1.55;
+    }
+
+    /* ── LAYOUT ─────────────────────────────── */
+    .page { max-width: 820px; margin: 0 auto; padding: 32px 36px; }
+
+    /* ── HEADER ─────────────────────────────── */
+    .header {
+      display: flex; align-items: center; gap: 16px;
+      border-bottom: 3px solid var(--green);
+      padding-bottom: 16px; margin-bottom: 24px;
+    }
+    .header svg { flex-shrink: 0; }
+    .header-title { font-size: 20px; font-weight: 900; letter-spacing: -0.02em; }
+    .header-title span { color: var(--green); }
+    .header-sub { font-size: 11px; color: var(--muted); letter-spacing: 0.1em; text-transform: uppercase; margin-top: 2px; }
+    .badge {
+      margin-left: auto; background: var(--green); color: white;
+      font-size: 10px; font-weight: 700; padding: 4px 10px;
+      border-radius: 20px; white-space: nowrap; letter-spacing: 0.05em;
+    }
+
+    /* ── INTRO BOX ──────────────────────────── */
+    .intro {
+      background: var(--bg); border: 1px solid var(--border);
+      border-radius: 8px; padding: 14px 18px; margin-bottom: 28px;
+      font-size: 12px; color: var(--muted);
+    }
+    .intro b { color: var(--ink); }
+
+    /* ── PHASE HEADER ───────────────────────── */
+    .phase {
+      display: flex; align-items: center; gap: 10px;
+      margin: 28px 0 14px;
+    }
+    .phase-num {
+      background: var(--ink); color: white;
+      font-size: 11px; font-weight: 700;
+      width: 26px; height: 26px; border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0;
+    }
+    .phase-num.green { background: var(--green); }
+    .phase-title { font-size: 15px; font-weight: 700; }
+    .phase-meta { font-size: 11px; color: var(--muted); margin-left: auto; white-space: nowrap; }
+
+    /* ── SECTION BLOCK ──────────────────────── */
+    .section {
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      margin-bottom: 16px;
+      overflow: hidden;
+    }
+    .section-head {
+      background: var(--bg);
+      border-bottom: 1px solid var(--border);
+      padding: 9px 16px;
+      display: flex; align-items: center; gap: 10px;
+    }
+    .section-code {
+      background: var(--ink); color: white;
+      font-size: 10px; font-weight: 700;
+      padding: 2px 7px; border-radius: 4px;
+      letter-spacing: 0.05em;
+    }
+    .section-label { font-size: 13px; font-weight: 700; }
+    .section-tip {
+      margin-left: auto; font-size: 11px;
+      color: var(--muted); font-style: italic;
+    }
+    .section-body { padding: 14px 16px; }
+
+    /* ── CHECKLIST ──────────────────────────── */
+    .checklist { list-style: none; }
+    .checklist li {
+      display: flex; align-items: flex-start; gap: 10px;
+      padding: 5px 0;
+      border-bottom: 1px dashed #F3F4F6;
+    }
+    .checklist li:last-child { border-bottom: none; }
+    .check-box {
+      width: 16px; height: 16px;
+      border: 2px solid #D1D5DB;
+      border-radius: 3px; flex-shrink: 0; margin-top: 1px;
+    }
+    .check-label { flex: 1; }
+    .check-label b { font-weight: 700; color: var(--ink); }
+    .check-label .field {
+      font-size: 10px; color: var(--green);
+      font-weight: 700; margin-left: 4px;
+      letter-spacing: 0.04em;
+    }
+
+    /* ── PREGUNTAS TIPO ─────────────────────── */
+    .preguntas {
+      background: #F0FBF5;
+      border: 1px solid #BBF7D0;
+      border-radius: 6px;
+      padding: 10px 14px;
+      margin-top: 12px;
+    }
+    .preguntas-title {
+      font-size: 10px; font-weight: 700; color: var(--green);
+      text-transform: uppercase; letter-spacing: 0.08em;
+      margin-bottom: 6px;
+    }
+    .preguntas ol { padding-left: 16px; }
+    .preguntas li { margin-bottom: 4px; font-size: 12px; color: #065F46; }
+    .preguntas li em { color: var(--muted); font-style: italic; }
+
+    /* ── TIPS CONSULTOR ─────────────────────── */
+    .tip-box {
+      background: #FFFBEB;
+      border: 1px solid #FDE68A;
+      border-radius: 6px;
+      padding: 8px 12px;
+      margin-top: 10px;
+      font-size: 11px; color: #92400E;
+    }
+    .tip-box strong { color: #78350F; }
+
+    /* ── MADUREZ TABLE ──────────────────────── */
+    .madurez-table { width: 100%; border-collapse: collapse; font-size: 12px; }
+    .madurez-table th {
+      background: var(--ink); color: white;
+      padding: 6px 10px; text-align: left; font-size: 11px;
+    }
+    .madurez-table td { padding: 7px 10px; border-bottom: 1px solid var(--border); vertical-align: top; }
+    .madurez-table tr:last-child td { border-bottom: none; }
+    .madurez-table tr:nth-child(even) td { background: var(--bg); }
+    .dim-label { font-weight: 700; }
+    .dim-peso { color: var(--green); font-size: 10px; font-weight: 700; }
+    .score-boxes { display: flex; gap: 4px; }
+    .score-box {
+      width: 22px; height: 22px; border: 1.5px solid #D1D5DB;
+      border-radius: 3px; display: flex; align-items: center;
+      justify-content: center; font-size: 10px; color: var(--muted);
+    }
+
+    /* ── DECISION GUIDE ─────────────────────── */
+    .decision-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10px; margin-top: 4px; }
+    .decision-card {
+      border-radius: 6px; padding: 10px 12px; font-size: 11px;
+    }
+    .decision-card.green { background: #F0FDF4; border: 1px solid #86EFAC; }
+    .decision-card.yellow { background: #FFFBEB; border: 1px solid #FDE68A; }
+    .decision-card.red { background: #FFF5F5; border: 1px solid #FECACA; }
+    .decision-card .dc-title { font-weight: 700; margin-bottom: 4px; font-size: 12px; }
+    .decision-card.green .dc-title { color: #166534; }
+    .decision-card.yellow .dc-title { color: #92400E; }
+    .decision-card.red .dc-title { color: #991B1B; }
+    .decision-card ul { padding-left: 14px; color: var(--muted); }
+    .decision-card li { margin-bottom: 2px; }
+
+    /* ── FOOTER ─────────────────────────────── */
+    .footer {
+      margin-top: 32px; padding-top: 16px;
+      border-top: 1px solid var(--border);
+      display: flex; justify-content: space-between; align-items: center;
+      font-size: 10px; color: var(--muted);
+    }
+
+    /* ── PRINT ──────────────────────────────── */
+    @media print {
+      body { font-size: 11.5px; }
+      .page { padding: 20px 24px; }
+      .section { break-inside: avoid; }
+      .phase { break-before: auto; }
+      .no-print { display: none; }
+      a { color: inherit; text-decoration: none; }
+    }
+
+    /* ── PRINT BUTTON ───────────────────────── */
+    .print-btn {
+      position: fixed; bottom: 24px; right: 24px;
+      background: var(--ink); color: white;
+      border: none; border-radius: 8px;
+      padding: 10px 20px; font-size: 13px; font-weight: 700;
+      cursor: pointer; box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    }
+    .print-btn:hover { background: #1a1a2e; }
+  </style>
+</head>
+<body>
+<div class="page">
+
+  <!-- ── HEADER ─────────────────────────────── -->
+  <div class="header">
+    <svg width="38" height="40" viewBox="0 0 56 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <rect x="2"  y="38" width="11" height="20" rx="2.5" fill="#009e60" opacity="0.78"/>
+      <rect x="22" y="24" width="11" height="34" rx="2.5" fill="#009e60" opacity="0.9"/>
+      <rect x="42" y="7"  width="11" height="51" rx="2.5" fill="#009e60"/>
+      <path d="M13 11 Q28 4 42 7" stroke="rgba(0,140,80,0.3)" stroke-width="1.3" fill="none" stroke-linecap="round"/>
+      <circle cx="7.5"  cy="38" r="2.2" fill="#ffffff" stroke="#009e60" stroke-width="1.6"/>
+      <circle cx="27.5" cy="24" r="2.2" fill="#ffffff" stroke="#009e60" stroke-width="1.6"/>
+      <circle cx="47.5" cy="7"  r="2.2" fill="#ffffff" stroke="#009e60" stroke-width="1.6"/>
+    </svg>
+    <div>
+      <div class="header-title"><span>3G</span> Intelligence</div>
+      <div class="header-sub">Guía de entrevista · Scan IA</div>
+    </div>
+    <div class="badge">USO INTERNO</div>
+  </div>
+
+  <!-- ── INTRO ──────────────────────────────── -->
+  <div class="intro">
+    <b>Cómo usar esta guía.</b>
+    El proceso tiene <b>dos momentos</b>: (1) preparación previa en el Pre-Scan Agent, y (2) la reunión Scan IA de ~90 min donde se completa el Toolkit A (secciones A1 a A5 + Madurez).
+    Marca cada ítem al obtener la respuesta. Si el entrevistado no sabe cómo articular algo, usa las <b style="color:var(--green)">preguntas tipo</b> de cada sección.
+    Al finalizar, ingresa los datos en el Post-Scan Agent para generar el Reporte E0.
+  </div>
+
+  <!-- ════════════════════════════════════════════
+       FASE 0 — PREPARACIÓN (PRE-SCAN)
+  ══════════════════════════════════════════════ -->
+  <div class="phase">
+    <div class="phase-num">0</div>
+    <div class="phase-title">Preparación previa — Pre-Scan Agent</div>
+    <div class="phase-meta">Antes de la reunión</div>
+  </div>
+
+  <div class="section">
+    <div class="section-head">
+      <div class="section-code">PREP</div>
+      <div class="section-label">Datos mínimos para generar el brief</div>
+      <div class="section-tip">Completar en el portal antes de la llamada</div>
+    </div>
+    <div class="section-body">
+      <ul class="checklist">
+        <li>
+          <div class="check-box"></div>
+          <div class="check-label"><b>Nombre de la empresa</b> <span class="field">EMPRESA</span><br>
+          Razón social o nombre comercial.</div>
+        </li>
+        <li>
+          <div class="check-box"></div>
+          <div class="check-label"><b>Sector / industria</b> <span class="field">SECTOR</span><br>
+          Ej: distribución, retail, salud, logística, educación.</div>
+        </li>
+        <li>
+          <div class="check-box"></div>
+          <div class="check-label"><b>Tamaño</b> <span class="field">TAMAÑO</span><br>
+          Micro · Pequeña · Mediana · Grande (referencia por número de empleados).</div>
+        </li>
+        <li>
+          <div class="check-box"></div>
+          <div class="check-label"><b>Nombre y email del contacto</b> <span class="field">CONTACTO</span></div>
+        </li>
+        <li>
+          <div class="check-box"></div>
+          <div class="check-label"><b>Sitio web</b> (opcional) — enriquece automáticamente el brief.</div>
+        </li>
+        <li>
+          <div class="check-box"></div>
+          <div class="check-label"><b>Notas del consultor</b> (opcional) — referido por, conversación previa, señales detectadas.</div>
+        </li>
+      </ul>
+      <div class="tip-box" style="margin-top:10px;">
+        <strong>Resultado esperado:</strong> Brief de Inteligencia con hipótesis de Era, oportunidades típicas del sector, flags de riesgo y pregunta de apertura recomendada. Léelo antes de entrar a la reunión.
+      </div>
+    </div>
+  </div>
+
+  <!-- ════════════════════════════════════════════
+       FASE 1 — REUNIÓN SCAN IA (TOOLKIT A)
+  ══════════════════════════════════════════════ -->
+  <div class="phase">
+    <div class="phase-num green">1</div>
+    <div class="phase-title">Reunión Scan IA — Toolkit A</div>
+    <div class="phase-meta">~90 min · con el CEO o Gerente General</div>
+  </div>
+
+  <!-- A1 CONTEXTO -->
+  <div class="section">
+    <div class="section-head">
+      <div class="section-code">A1</div>
+      <div class="section-label">Contexto del negocio</div>
+      <div class="section-tip">~10 min</div>
+    </div>
+    <div class="section-body">
+      <ul class="checklist">
+        <li>
+          <div class="check-box"></div>
+          <div class="check-label"><b>Modelo de negocio</b> <span class="field">A1 · modelo</span><br>
+          Cómo gana dinero la empresa. Qué vende y a quién.</div>
+        </li>
+        <li>
+          <div class="check-box"></div>
+          <div class="check-label"><b>Tamaño del equipo</b> <span class="field">A1 · equipo</span><br>
+          Número total de personas en la empresa.</div>
+        </li>
+        <li>
+          <div class="check-box"></div>
+          <div class="check-label"><b>Objetivos a 12 meses</b> <span class="field">A1 · objetivos</span><br>
+          Qué quieren lograr este año. Crecimiento, eficiencia, expansión, etc.</div>
+        </li>
+      </ul>
+      <div class="preguntas">
+        <div class="preguntas-title">Preguntas tipo si el entrevistado necesita apoyo</div>
+        <ol>
+          <li>"¿Cuál es el principal producto o servicio que venden, y quiénes son sus clientes típicos?"</li>
+          <li>"¿Cuántas personas trabajan en la empresa hoy, incluyendo todos los niveles?"</li>
+          <li>"Si miramos el próximo año, ¿cuál sería el logro que más les orgullecería haber alcanzado?"</li>
+          <li><em>"¿Hay alguna presión del mercado o un problema recurrente que los tiene ocupados ahora mismo?"</em></li>
+        </ol>
+      </div>
+    </div>
+  </div>
+
+  <!-- A2 DOLORES -->
+  <div class="section">
+    <div class="section-head">
+      <div class="section-code">A2</div>
+      <div class="section-label">Dolores identificados</div>
+      <div class="section-tip">~25 min · el corazón del diagnóstico</div>
+    </div>
+    <div class="section-body">
+      <p style="font-size:12px;color:var(--muted);margin-bottom:10px;">
+        Identificar <b>2 a 4 dolores concretos</b>. Para cada uno capturar los 4 campos del portal.
+      </p>
+      <ul class="checklist">
+        <li>
+          <div class="check-box"></div>
+          <div class="check-label"><b>Área funcional</b> <span class="field">A2 · área</span><br>
+          Ventas · Operaciones · Finanzas · RRHH · Logística · Atención al cliente · otro.</div>
+        </li>
+        <li>
+          <div class="check-box"></div>
+          <div class="check-label"><b>Descripción del dolor</b> <span class="field">A2 · descripción</span><br>
+          En una oración concreta. Ej: "Cotizaciones manuales en Word, 45 min por cliente."</div>
+        </li>
+        <li>
+          <div class="check-box"></div>
+          <div class="check-label"><b>Horas por semana afectadas</b> <span class="field">A2 · horas/sem</span><br>
+          Aproximado. ¿Cuántas horas por semana cuesta este problema?</div>
+        </li>
+        <li>
+          <div class="check-box"></div>
+          <div class="check-label"><b>Impacto económico estimado</b> <span class="field">A2 · USD/mes</span><br>
+          ¿Cuánto cuesta al mes este problema? (tiempo del equipo, errores, oportunidades perdidas).</div>
+        </li>
+      </ul>
+      <div class="preguntas">
+        <div class="preguntas-title">Preguntas tipo si el entrevistado necesita apoyo</div>
+        <ol>
+          <li>"¿Qué tarea hace su equipo hoy de forma manual que claramente podría hacerse de otra forma?"</li>
+          <li>"Si pudiera eliminar un proceso que le quita tiempo o le genera errores, ¿cuál sería?"</li>
+          <li>"¿Hay algo que hoy depende de una sola persona y, si esa persona no está, todo se traba?"</li>
+          <li>"¿En qué área se generan más reclamos de clientes o más reprocesos internos?"</li>
+          <li><em>Para cuantificar:</em> "¿Cuántas personas hacen eso? ¿Cuántas horas les toma por semana?"</li>
+          <li><em>Para el impacto:</em> "¿Tienen una idea de cuánto les cuesta ese problema al mes, en tiempo de equipo o en errores?"</li>
+        </ol>
+      </div>
+      <div class="tip-box">
+        <strong>Consejo:</strong> No avances hasta tener al menos 2 dolores con descripción concreta. El impacto económico es opcional pero muy valioso para el Reporte E0. Si no lo saben de inmediato, ayúdalos a estimarlo con el costo hora del equipo involucrado.
+      </div>
+    </div>
+  </div>
+
+  <!-- A3 TECNOLOGÍA -->
+  <div class="section">
+    <div class="section-head">
+      <div class="section-code">A3</div>
+      <div class="section-label">Tecnología actual</div>
+      <div class="section-tip">~15 min</div>
+    </div>
+    <div class="section-body">
+      <ul class="checklist">
+        <li>
+          <div class="check-box"></div>
+          <div class="check-label"><b>Sistemas y herramientas en uso</b> <span class="field">A3 · sistemas</span><br>
+          Listar cada sistema con su categoría: ERP, CRM, BI, Comunicación, Excel, etc.</div>
+        </li>
+        <li>
+          <div class="check-box"></div>
+          <div class="check-label"><b>Intentos previos de digitalización</b> <span class="field">A3 · intentos</span><br>
+          ¿Han intentado implementar algo antes? ¿Qué pasó?</div>
+        </li>
+        <li>
+          <div class="check-box"></div>
+          <div class="check-label"><b>¿Los datos están centralizados?</b> <span class="field">A3 · centralizado ✓</span><br>
+          ¿Hay un sistema donde vive la información principal, o está dispersa en Excel, emails, WhatsApp?</div>
+        </li>
+      </ul>
+      <div class="preguntas">
+        <div class="preguntas-title">Preguntas tipo si el entrevistado necesita apoyo</div>
+        <ol>
+          <li>"¿Qué programas usan día a día para gestionar el negocio? ¿Tienen ERP, CRM, algún software específico del sector?"</li>
+          <li>"¿Cómo guardan la información de sus clientes? ¿En algún sistema, en Excel, en la cabeza?"</li>
+          <li>"¿Han intentado implementar alguna tecnología en los últimos 3 años? ¿Cómo resultó?"</li>
+          <li>"Si alguien nuevo entrara a la empresa hoy, ¿dónde encontraría la información para hacer su trabajo?"</li>
+        </ol>
+      </div>
+    </div>
+  </div>
+
+  <!-- A4 VISIÓN -->
+  <div class="section">
+    <div class="section-head">
+      <div class="section-code">A4</div>
+      <div class="section-label">Visión y procesos clave</div>
+      <div class="section-tip">~15 min</div>
+    </div>
+    <div class="section-body">
+      <ul class="checklist">
+        <li>
+          <div class="check-box"></div>
+          <div class="check-label"><b>Decisión importante que hoy toman sin datos</b> <span class="field">A4 · decisión sin datos</span><br>
+          Qué decisión estratégica o táctica se toma hoy a "ojo" o con información incompleta.</div>
+        </li>
+        <li>
+          <div class="check-box"></div>
+          <div class="check-label"><b>Proceso clave a transformar</b> <span class="field">A4 · proceso clave</span><br>
+          Si pudieran mejorar solo un proceso con IA, ¿cuál tendría más impacto?</div>
+        </li>
+        <li>
+          <div class="check-box"></div>
+          <div class="check-label"><b>Experiencia previa con IA</b> <span class="field">A4 · experiencia IA</span><br>
+          ¿Usan ChatGPT, Copilot, o alguna herramienta de IA? ¿A nivel personal o empresarial?</div>
+        </li>
+      </ul>
+      <div class="preguntas">
+        <div class="preguntas-title">Preguntas tipo si el entrevistado necesita apoyo</div>
+        <ol>
+          <li>"¿Hay alguna decisión del negocio que toman hoy basándose más en intuición que en datos concretos?"</li>
+          <li>"Si la IA pudiera transformar un solo proceso de su empresa este año, ¿cuál elegiría y por qué?"</li>
+          <li>"¿Alguien en su equipo ya usa herramientas de IA como ChatGPT o Copilot? ¿Para qué?"</li>
+          <li><em>"¿Han evaluado o probado alguna solución de IA en el último año? ¿Qué los detuvo?"</em></li>
+        </ol>
+      </div>
+    </div>
+  </div>
+
+  <!-- A5 GOBERNANZA -->
+  <div class="section">
+    <div class="section-head">
+      <div class="section-code">A5</div>
+      <div class="section-label">Gobernanza y datos</div>
+      <div class="section-tip">~5 min</div>
+    </div>
+    <div class="section-body">
+      <ul class="checklist">
+        <li>
+          <div class="check-box"></div>
+          <div class="check-label"><b>¿Tienen política de privacidad de datos?</b> <span class="field">A5 · privacidad ✓</span><br>
+          Especialmente relevante si trabajan con datos de clientes finales.</div>
+        </li>
+        <li>
+          <div class="check-box"></div>
+          <div class="check-label"><b>¿Manejan datos regulados?</b> <span class="field">A5 · datos regulados ✓</span><br>
+          Datos de salud, financieros, menores de edad, datos sensibles por ley.</div>
+        </li>
+      </ul>
+      <div class="preguntas">
+        <div class="preguntas-title">Preguntas tipo si el entrevistado necesita apoyo</div>
+        <ol>
+          <li>"¿Tienen establecida alguna política interna sobre cómo se guardan y protegen los datos de sus clientes?"</li>
+          <li>"¿Trabajan con datos que por ley tienen restricciones de uso, como información médica o financiera de personas?"</li>
+        </ol>
+      </div>
+    </div>
+  </div>
+
+  <!-- MADUREZ IA -->
+  <div class="section">
+    <div class="section-head">
+      <div class="section-code" style="background:var(--green);">MAD</div>
+      <div class="section-label">Madurez IA — Score 1 a 5</div>
+      <div class="section-tip">Evaluar al cierre de la reunión</div>
+    </div>
+    <div class="section-body">
+      <p style="font-size:12px;color:var(--muted);margin-bottom:12px;">
+        Asigna un puntaje de <b>1 (muy bajo) a 5 (excelente)</b> en cada dimensión según lo observado durante la entrevista.
+        El score ponderado determina la Era del cliente.
+      </p>
+      <table class="madurez-table">
+        <thead>
+          <tr>
+            <th style="width:22%">Dimensión</th>
+            <th style="width:38%">Qué evaluar</th>
+            <th style="width:22%">Señales de nivel bajo (1–2)</th>
+            <th style="width:18%">Score</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><span class="dim-label">Datos</span><br><span class="dim-peso">Peso ×3</span></td>
+            <td>Calidad, disponibilidad y organización de los datos de la empresa.</td>
+            <td style="font-size:11px;color:var(--red)">Todo en Excel · datos en varios lugares · no saben qué tienen</td>
+            <td>
+              <div class="score-boxes">
+                <div class="score-box">1</div>
+                <div class="score-box">2</div>
+                <div class="score-box">3</div>
+                <div class="score-box">4</div>
+                <div class="score-box">5</div>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td><span class="dim-label">Procesos</span><br><span class="dim-peso">Peso ×2</span></td>
+            <td>Documentación y estandarización de los procesos de la empresa.</td>
+            <td style="font-size:11px;color:var(--red)">Todo de memoria · cada persona hace las cosas diferente · sin manuales</td>
+            <td>
+              <div class="score-boxes">
+                <div class="score-box">1</div>
+                <div class="score-box">2</div>
+                <div class="score-box">3</div>
+                <div class="score-box">4</div>
+                <div class="score-box">5</div>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td><span class="dim-label">Tecnología</span><br><span class="dim-peso">Peso ×2</span></td>
+            <td>Sistemas y herramientas digitales que usan hoy.</td>
+            <td style="font-size:11px;color:var(--red)">Solo Excel y email · sin ERP ni CRM · facturación en papel</td>
+            <td>
+              <div class="score-boxes">
+                <div class="score-box">1</div>
+                <div class="score-box">2</div>
+                <div class="score-box">3</div>
+                <div class="score-box">4</div>
+                <div class="score-box">5</div>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td><span class="dim-label">Personas</span><br><span class="dim-peso">Peso ×1</span></td>
+            <td>Capacidad y apertura del equipo para adoptar nuevas tecnologías.</td>
+            <td style="font-size:11px;color:var(--red)">Resistencia al cambio · equipo mayor · "aquí siempre lo hicimos así"</td>
+            <td>
+              <div class="score-boxes">
+                <div class="score-box">1</div>
+                <div class="score-box">2</div>
+                <div class="score-box">3</div>
+                <div class="score-box">4</div>
+                <div class="score-box">5</div>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td><span class="dim-label">Gobernanza</span><br><span class="dim-peso">Peso ×1</span></td>
+            <td>Políticas de datos, privacidad y control de acceso.</td>
+            <td style="font-size:11px;color:var(--red)">Sin políticas · sin control de accesos · no piensan en privacidad</td>
+            <td>
+              <div class="score-boxes">
+                <div class="score-box">1</div>
+                <div class="score-box">2</div>
+                <div class="score-box">3</div>
+                <div class="score-box">4</div>
+                <div class="score-box">5</div>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div style="margin-top:14px;padding:10px 14px;background:var(--bg);border:1px solid var(--border);border-radius:6px;font-size:12px;">
+        <b>Fórmula del score ponderado:</b>
+        (Datos×3 + Procesos×2 + Tecnología×2 + Personas×1 + Gobernanza×1) ÷ 9<br>
+        <span style="color:var(--muted);">Era 1 = score &lt;2.5 · Era 2 = 2.5–3.4 · Era 3 = ≥3.5</span>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ════════════════════════════════════════════
+       FASE 2 — POST-SCAN / DECISIÓN
+  ══════════════════════════════════════════════ -->
+  <div class="phase">
+    <div class="phase-num">2</div>
+    <div class="phase-title">Post-Scan Agent — Ingresar datos y generar Reporte E0</div>
+    <div class="phase-meta">Después de la reunión</div>
+  </div>
+
+  <div class="section">
+    <div class="section-head">
+      <div class="section-code">E0</div>
+      <div class="section-label">Resultado del diagnóstico y próximos pasos</div>
+    </div>
+    <div class="section-body">
+      <p style="font-size:12px;color:var(--muted);margin-bottom:12px;">
+        Con todos los campos completados en el Post-Scan Agent, el sistema genera el Reporte E0 y recomienda una de las siguientes decisiones:
+      </p>
+      <div class="decision-grid">
+        <div class="decision-card green">
+          <div class="dc-title">Avanzar a Etapa 1</div>
+          <ul>
+            <li>Score ≥2.5</li>
+            <li>Datos suficientes para trabajar</li>
+            <li>Disposición clara del cliente</li>
+            <li>Dolor de alto impacto identificado</li>
+          </ul>
+        </div>
+        <div class="decision-card yellow">
+          <div class="dc-title">Data Foundation primero</div>
+          <ul>
+            <li>Score &lt;2.5 en Datos</li>
+            <li>Información dispersa o sin digitalizar</li>
+            <li>Sin sistema de registro centralizado</li>
+          </ul>
+        </div>
+        <div class="decision-card red">
+          <div class="dc-title">No continuar</div>
+          <ul>
+            <li>Sin presupuesto o sin urgencia</li>
+            <li>No hay sponsor interno</li>
+            <li>Datos regulados sin gobernanza base</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── FOOTER ─────────────────────────────── -->
+  <div class="footer">
+    <span><b>3G Intelligence</b> · Guía de Entrevista Scan IA · Uso interno</span>
+    <span>gonzalo@3g-ia-agents.com · www.3g-ia-agents.com</span>
+  </div>
+
+</div><!-- /page -->
+
+<button class="print-btn no-print" onclick="window.print()">Imprimir / Guardar PDF</button>
+
+</body>
+</html>
