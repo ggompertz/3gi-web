@@ -143,20 +143,52 @@
     }
     .tip-box strong { color: #78350F; }
 
-    /* ── MADUREZ TABLE ──────────────────────── */
-    .madurez-table { width: 100%; border-collapse: collapse; font-size: 12px; }
-    .madurez-table th {
+    /* ── RÚBRICA DE MADUREZ ─────────────────── */
+    .rubrica { width: 100%; border-collapse: collapse; font-size: 11px; }
+    .rubrica th {
       background: var(--ink); color: white;
-      padding: 6px 10px; text-align: left; font-size: 11px;
+      padding: 6px 8px; text-align: center; font-size: 10px;
+      font-weight: 700; letter-spacing: 0.04em;
     }
-    .madurez-table td { padding: 7px 10px; border-bottom: 1px solid var(--border); vertical-align: top; }
-    .madurez-table tr:last-child td { border-bottom: none; }
-    .madurez-table tr:nth-child(even) td { background: var(--bg); }
-    .dim-label { font-weight: 700; }
+    .rubrica th.th-dim { text-align: left; width: 13%; }
+    .rubrica th.th-score { width: 9%; }
+    .rubrica td { padding: 0; border-bottom: 1px solid var(--border); vertical-align: top; }
+    .rubrica tr:last-child td { border-bottom: none; }
+    .dim-cell {
+      padding: 8px 10px; background: var(--bg);
+      border-right: 1px solid var(--border);
+    }
+    .dim-label { font-weight: 700; font-size: 12px; }
     .dim-peso { color: var(--green); font-size: 10px; font-weight: 700; }
-    .score-boxes { display: flex; gap: 4px; }
+    .levels-cell { display: flex; height: 100%; }
+    .level {
+      flex: 1; padding: 7px 6px;
+      border-right: 1px solid var(--border);
+      font-size: 10.5px; line-height: 1.4;
+      vertical-align: top;
+    }
+    .level:last-child { border-right: none; }
+    .level-num {
+      font-weight: 800; font-size: 11px;
+      display: block; margin-bottom: 3px;
+    }
+    .l1 .level-num { color: #EF4444; }
+    .l2 .level-num { color: #F97316; }
+    .l3 .level-num { color: #EAB308; }
+    .l4 .level-num { color: #22C55E; }
+    .l5 .level-num { color: #00C97A; }
+    .l1 { background: #FFF5F5; }
+    .l2 { background: #FFF8F0; }
+    .l3 { background: #FEFCE8; }
+    .l4 { background: #F0FDF4; }
+    .l5 { background: #ECFDF5; }
+    .score-cell {
+      padding: 8px 6px; text-align: center;
+      border-left: 1px solid var(--border);
+    }
+    .score-boxes { display: flex; flex-direction: column; gap: 3px; align-items: center; }
     .score-box {
-      width: 22px; height: 22px; border: 1.5px solid #D1D5DB;
+      width: 20px; height: 20px; border: 1.5px solid #D1D5DB;
       border-radius: 3px; display: flex; align-items: center;
       justify-content: center; font-size: 10px; color: var(--muted);
     }
@@ -494,24 +526,36 @@
     </div>
     <div class="section-body">
       <p style="font-size:12px;color:var(--muted);margin-bottom:12px;">
-        Asigna un puntaje de <b>1 (muy bajo) a 5 (excelente)</b> en cada dimensión según lo observado durante la entrevista.
-        El score ponderado determina la Era del cliente.
+        Asigna un puntaje de <b>1 (muy bajo) a 5 (excelente)</b> en cada dimensión según lo observado.
+        Marca el número que mejor describe la situación real. El score ponderado determina la Era.
       </p>
-      <table class="madurez-table">
+
+      <table class="rubrica">
         <thead>
           <tr>
-            <th style="width:22%">Dimensión</th>
-            <th style="width:38%">Qué evaluar</th>
-            <th style="width:22%">Señales de nivel bajo (1–2)</th>
-            <th style="width:18%">Score</th>
+            <th class="th-dim">Dimensión</th>
+            <th style="width:15.6%">1 — Muy bajo</th>
+            <th style="width:15.6%">2 — Bajo</th>
+            <th style="width:15.6%">3 — Medio</th>
+            <th style="width:15.6%">4 — Alto</th>
+            <th style="width:15.6%">5 — Excelente</th>
+            <th class="th-score">Score</th>
           </tr>
         </thead>
         <tbody>
+
+          <!-- DATOS -->
           <tr>
-            <td><span class="dim-label">Datos</span><br><span class="dim-peso">Peso ×3</span></td>
-            <td>Calidad, disponibilidad y organización de los datos de la empresa.</td>
-            <td style="font-size:11px;color:var(--red)">Todo en Excel · datos en varios lugares · no saben qué tienen</td>
-            <td>
+            <td class="dim-cell">
+              <span class="dim-label">Datos</span><br>
+              <span class="dim-peso">Peso ×3</span>
+            </td>
+            <td class="level l1"><span class="level-num">1</span>Información dispersa en Excel, WhatsApp y correos. Sin estructura ni respaldo.</td>
+            <td class="level l2"><span class="level-num">2</span>Excel con cierto orden. Un sistema básico presente pero subutilizado o con datos incompletos.</td>
+            <td class="level l3"><span class="level-num">3</span>CRM o ERP activo. Datos centralizados en un sistema, pero con inconsistencias o lagunas.</td>
+            <td class="level l4"><span class="level-num">4</span>Datos centralizados, limpios y actualizados regularmente. El equipo los usa para tomar decisiones.</td>
+            <td class="level l5"><span class="level-num">5</span>Datos integrados entre sistemas, disponibles en tiempo real, con alta calidad y trazabilidad completa.</td>
+            <td class="score-cell">
               <div class="score-boxes">
                 <div class="score-box">1</div>
                 <div class="score-box">2</div>
@@ -521,11 +565,19 @@
               </div>
             </td>
           </tr>
+
+          <!-- PROCESOS -->
           <tr>
-            <td><span class="dim-label">Procesos</span><br><span class="dim-peso">Peso ×2</span></td>
-            <td>Documentación y estandarización de los procesos de la empresa.</td>
-            <td style="font-size:11px;color:var(--red)">Todo de memoria · cada persona hace las cosas diferente · sin manuales</td>
-            <td>
+            <td class="dim-cell">
+              <span class="dim-label">Procesos</span><br>
+              <span class="dim-peso">Peso ×2</span>
+            </td>
+            <td class="level l1"><span class="level-num">1</span>Todo de memoria. Cada persona lo hace diferente. Sin documentación ni manuales.</td>
+            <td class="level l2"><span class="level-num">2</span>Procesos clave identificados verbalmente pero no documentados. Alta dependencia de personas.</td>
+            <td class="level l3"><span class="level-num">3</span>Procesos principales documentados, aunque no siempre respetados. Sin métricas de cumplimiento.</td>
+            <td class="level l4"><span class="level-num">4</span>Procesos estandarizados, seguidos por el equipo y medidos con KPIs básicos.</td>
+            <td class="level l5"><span class="level-num">5</span>Procesos estandarizados, medidos, con mejora continua activa y preparados para automatizar.</td>
+            <td class="score-cell">
               <div class="score-boxes">
                 <div class="score-box">1</div>
                 <div class="score-box">2</div>
@@ -535,11 +587,19 @@
               </div>
             </td>
           </tr>
+
+          <!-- TECNOLOGÍA -->
           <tr>
-            <td><span class="dim-label">Tecnología</span><br><span class="dim-peso">Peso ×2</span></td>
-            <td>Sistemas y herramientas digitales que usan hoy.</td>
-            <td style="font-size:11px;color:var(--red)">Solo Excel y email · sin ERP ni CRM · facturación en papel</td>
-            <td>
+            <td class="dim-cell">
+              <span class="dim-label">Tecnología</span><br>
+              <span class="dim-peso">Peso ×2</span>
+            </td>
+            <td class="level l1"><span class="level-num">1</span>Solo Excel y email. Sin software de gestión. Facturación manual o en papel.</td>
+            <td class="level l2"><span class="level-num">2</span>Software básico (facturación electrónica, correo corporativo). Herramientas sin integración entre sí.</td>
+            <td class="level l3"><span class="level-num">3</span>CRM o ERP implementado, con uso parcial del equipo. Datos no siempre actualizados.</td>
+            <td class="level l4"><span class="level-num">4</span>CRM/ERP en uso real por el equipo. Integraciones básicas entre 2 o más sistemas.</td>
+            <td class="level l5"><span class="level-num">5</span>Stack tecnológico integrado. APIs conectadas. Datos fluyen automáticamente entre sistemas.</td>
+            <td class="score-cell">
               <div class="score-boxes">
                 <div class="score-box">1</div>
                 <div class="score-box">2</div>
@@ -549,11 +609,19 @@
               </div>
             </td>
           </tr>
+
+          <!-- PERSONAS -->
           <tr>
-            <td><span class="dim-label">Personas</span><br><span class="dim-peso">Peso ×1</span></td>
-            <td>Capacidad y apertura del equipo para adoptar nuevas tecnologías.</td>
-            <td style="font-size:11px;color:var(--red)">Resistencia al cambio · equipo mayor · "aquí siempre lo hicimos así"</td>
-            <td>
+            <td class="dim-cell">
+              <span class="dim-label">Personas</span><br>
+              <span class="dim-peso">Peso ×1</span>
+            </td>
+            <td class="level l1"><span class="level-num">1</span>Resistencia activa al cambio. "Siempre lo hicimos así." Gerencia no impulsa transformación.</td>
+            <td class="level l2"><span class="level-num">2</span>Apertura limitada. Adoptan herramientas solo por obligación. Sin champions internos.</td>
+            <td class="level l3"><span class="level-num">3</span>Disposición a aprender, pero sin formación tecnológica formal. Curiosidad sin dirección.</td>
+            <td class="level l4"><span class="level-num">4</span>Equipo con habilidades digitales. Uno o más champions internos que lideran la adopción.</td>
+            <td class="level l5"><span class="level-num">5</span>Cultura de innovación activa. Usan IA a nivel personal. El equipo impulsa el cambio desde adentro.</td>
+            <td class="score-cell">
               <div class="score-boxes">
                 <div class="score-box">1</div>
                 <div class="score-box">2</div>
@@ -563,11 +631,19 @@
               </div>
             </td>
           </tr>
+
+          <!-- GOBERNANZA -->
           <tr>
-            <td><span class="dim-label">Gobernanza</span><br><span class="dim-peso">Peso ×1</span></td>
-            <td>Políticas de datos, privacidad y control de acceso.</td>
-            <td style="font-size:11px;color:var(--red)">Sin políticas · sin control de accesos · no piensan en privacidad</td>
-            <td>
+            <td class="dim-cell">
+              <span class="dim-label">Gobernanza</span><br>
+              <span class="dim-peso">Peso ×1</span>
+            </td>
+            <td class="level l1"><span class="level-num">1</span>Sin políticas de datos. Sin control de accesos. No piensan en privacidad.</td>
+            <td class="level l2"><span class="level-num">2</span>Conciencia básica de privacidad pero sin políticas formales. Accesos sin definir.</td>
+            <td class="level l3"><span class="level-num">3</span>Política de privacidad básica existente. Accesos definidos informalmente. Sin auditorías.</td>
+            <td class="level l4"><span class="level-num">4</span>Políticas de datos establecidas. Roles y permisos definidos. Cumplimiento básico activo.</td>
+            <td class="level l5"><span class="level-num">5</span>Gobernanza formal documentada. Auditorías periódicas de datos. Cumplimiento regulatorio activo.</td>
+            <td class="score-cell">
               <div class="score-boxes">
                 <div class="score-box">1</div>
                 <div class="score-box">2</div>
@@ -577,6 +653,7 @@
               </div>
             </td>
           </tr>
+
         </tbody>
       </table>
 
