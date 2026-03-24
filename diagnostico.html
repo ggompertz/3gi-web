@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Diagnóstico de Madurez IA · 3G Intelligence</title>
+  <meta name="description" content="Descubre en qué Era está tu empresa y qué oportunidades tiene con la IA. Test gratuito de 2 minutos." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --night:   #06060D;
+      --surface: #0E0E1A;
+      --border:  #1C1C2E;
+      --green:   #00E891;
+      --green-dk:#009E60;
+      --offwh:   #EEF1F6;
+      --muted:   #6B7280;
+      --era1:    #F87171;
+      --era2:    #FBBF24;
+      --era3:    #00E891;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--night);
+      color: var(--offwh);
+      font-family: 'Inter', sans-serif;
+      font-size: 15px;
+      line-height: 1.6;
+      min-height: 100vh;
+    }
+
+    /* ── NAV ─────────────────────────────── */
+    nav {
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 20px 32px;
+      border-bottom: 1px solid var(--border);
+    }
+    .nav-logo { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+    .logo-name {
+      font-family: 'Syne', sans-serif;
+      font-weight: 900; font-size: 18px;
+      color: var(--offwh); letter-spacing: -0.03em;
+    }
+    .logo-name span { color: var(--green); }
+    .logo-name span .g-up { display: inline-block; transform: translateY(-0.11em); }
+    .logo-sub { font-size: 10px; color: var(--muted); letter-spacing: 0.12em; text-transform: uppercase; margin-top: 1px; }
+    .nav-back {
+      font-size: 13px; color: var(--muted); text-decoration: none;
+      display: flex; align-items: center; gap: 6px;
+      transition: color .2s;
+    }
+    .nav-back:hover { color: var(--offwh); }
+
+    /* ── MAIN ────────────────────────────── */
+    main { max-width: 680px; margin: 0 auto; padding: 56px 24px 80px; }
+
+    /* ── EYEBROW + TITULO ────────────────── */
+    .eyebrow {
+      font-size: 11px; font-weight: 700; letter-spacing: 0.18em;
+      text-transform: uppercase; color: var(--green);
+      margin-bottom: 14px;
+    }
+    h1 {
+      font-family: 'Syne', sans-serif;
+      font-size: clamp(28px, 5vw, 40px);
+      font-weight: 900; line-height: 1.1;
+      letter-spacing: -0.03em;
+      margin-bottom: 14px;
+    }
+    h1 span { color: var(--green); }
+    .intro-sub {
+      font-size: 16px; color: var(--muted); line-height: 1.65;
+      margin-bottom: 48px;
+    }
+
+    /* ── PROGRESS ────────────────────────── */
+    .progress-wrap { margin-bottom: 40px; }
+    .progress-label {
+      display: flex; justify-content: space-between;
+      font-size: 12px; color: var(--muted); margin-bottom: 8px;
+    }
+    .progress-bar {
+      height: 3px; background: var(--border); border-radius: 2px; overflow: hidden;
+    }
+    .progress-fill {
+      height: 100%; background: var(--green);
+      border-radius: 2px;
+      transition: width .4s ease;
+      width: 0%;
+    }
+
+    /* ── PREGUNTA ────────────────────────── */
+    .question {
+      margin-bottom: 36px;
+      opacity: 0; transform: translateY(10px);
+      animation: fadeUp .35s ease forwards;
+    }
+    @keyframes fadeUp { to { opacity: 1; transform: translateY(0); } }
+    .q-num {
+      font-size: 11px; font-weight: 700; letter-spacing: 0.1em;
+      color: var(--green); text-transform: uppercase; margin-bottom: 8px;
+    }
+    .q-text {
+      font-family: 'Syne', sans-serif;
+      font-size: 18px; font-weight: 700;
+      color: var(--offwh); margin-bottom: 16px;
+      line-height: 1.3;
+    }
+    .options { display: flex; flex-direction: column; gap: 10px; }
+    .option {
+      display: flex; align-items: flex-start; gap: 14px;
+      background: var(--surface);
+      border: 1.5px solid var(--border);
+      border-radius: 10px;
+      padding: 14px 18px;
+      cursor: pointer;
+      transition: border-color .2s, background .2s;
+      user-select: none;
+    }
+    .option:hover { border-color: rgba(0,232,145,0.35); background: #111122; }
+    .option.selected {
+      border-color: var(--green);
+      background: rgba(0,232,145,0.07);
+    }
+    .option input[type="radio"] { display: none; }
+    .opt-letter {
+      width: 26px; height: 26px; flex-shrink: 0;
+      border-radius: 50%;
+      border: 1.5px solid var(--border);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 11px; font-weight: 700; color: var(--muted);
+      transition: all .2s;
+    }
+    .option.selected .opt-letter {
+      background: var(--green); border-color: var(--green);
+      color: var(--night);
+    }
+    .opt-text { font-size: 14px; color: #CBD5E1; line-height: 1.5; padding-top: 2px; }
+    .option.selected .opt-text { color: var(--offwh); }
+
+    /* ── DIVIDER ─────────────────────────── */
+    .q-divider { border: none; border-top: 1px solid var(--border); margin: 8px 0 36px; }
+
+    /* ── SUBMIT ──────────────────────────── */
+    #btn-submit {
+      display: none; width: 100%;
+      background: var(--green); color: var(--night);
+      font-family: 'Syne', sans-serif;
+      font-weight: 800; font-size: 16px;
+      border: none; border-radius: 10px;
+      padding: 18px 32px; cursor: pointer;
+      transition: opacity .2s, transform .15s;
+      margin-top: 8px;
+    }
+    #btn-submit:hover { opacity: .88; transform: translateY(-1px); }
+    #btn-submit:disabled { opacity: .4; cursor: default; transform: none; }
+
+    /* ── RESULTADO ───────────────────────── */
+    #resultado { display: none; }
+    .result-card {
+      border-radius: 16px;
+      padding: 40px 36px;
+      border: 2px solid;
+      margin-bottom: 28px;
+      animation: fadeUp .4s ease forwards;
+    }
+    .result-era-label {
+      font-size: 11px; font-weight: 700;
+      letter-spacing: 0.18em; text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+    .result-era-name {
+      font-family: 'Syne', sans-serif;
+      font-size: 32px; font-weight: 900;
+      line-height: 1.1; margin-bottom: 18px;
+    }
+    .result-msg {
+      font-size: 16px; line-height: 1.65;
+      color: var(--offwh); margin-bottom: 24px;
+    }
+    .result-insight {
+      font-size: 14px;
+      font-style: italic;
+      padding: 14px 18px;
+      border-radius: 8px;
+      background: rgba(255,255,255,0.05);
+      border-left: 3px solid;
+      margin-bottom: 0;
+      line-height: 1.6;
+    }
+
+    /* ── SIGUIENTE PASO ──────────────────── */
+    .next-step {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 32px;
+      text-align: center;
+    }
+    .next-step-eyebrow {
+      font-size: 11px; font-weight: 700;
+      letter-spacing: 0.15em; text-transform: uppercase;
+      color: var(--muted); margin-bottom: 12px;
+    }
+    .next-step h2 {
+      font-family: 'Syne', sans-serif;
+      font-size: 22px; font-weight: 800;
+      margin-bottom: 10px; letter-spacing: -0.02em;
+    }
+    .next-step p {
+      font-size: 14px; color: var(--muted);
+      margin-bottom: 24px; line-height: 1.6;
+    }
+    .btn-calendly {
+      display: inline-flex; align-items: center; gap: 10px;
+      background: var(--green); color: var(--night);
+      font-family: 'Syne', sans-serif;
+      font-weight: 800; font-size: 15px;
+      text-decoration: none; border-radius: 10px;
+      padding: 16px 28px;
+      transition: opacity .2s, transform .15s;
+      margin-bottom: 16px;
+    }
+    .btn-calendly:hover { opacity: .88; transform: translateY(-1px); }
+    .btn-wa {
+      display: inline-flex; align-items: center; gap: 8px;
+      color: #4ADE80; font-size: 14px; font-weight: 600;
+      text-decoration: none; padding: 8px 0;
+    }
+    .btn-wa:hover { opacity: .8; }
+    .divider-or {
+      font-size: 12px; color: var(--muted);
+      margin: 4px 0 4px;
+    }
+    .retry-link {
+      display: block; margin-top: 20px;
+      font-size: 13px; color: var(--muted);
+      cursor: pointer; text-decoration: underline;
+      background: none; border: none; color: var(--muted);
+    }
+    .retry-link:hover { color: var(--offwh); }
+
+    /* ── FOOTER ──────────────────────────── */
+    footer {
+      text-align: center; padding: 24px;
+      border-top: 1px solid var(--border);
+      font-size: 12px; color: var(--muted);
+    }
+    footer a { color: var(--muted); text-decoration: none; }
+    footer a:hover { color: var(--offwh); }
+
+    @media (max-width: 600px) {
+      nav { padding: 16px 20px; }
+      main { padding: 40px 20px 64px; }
+      .result-card { padding: 28px 22px; }
+      .next-step { padding: 24px 20px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ── NAV ──────────────────────────────── -->
+<nav>
+  <a href="/" class="nav-logo">
+    <svg width="30" height="32" viewBox="0 0 56 60" fill="none" aria-hidden="true">
+      <rect x="2"  y="38" width="11" height="20" rx="2.5" fill="#00e891" opacity="0.78"/>
+      <rect x="22" y="24" width="11" height="34" rx="2.5" fill="#00e891" opacity="0.9"/>
+      <rect x="42" y="7"  width="11" height="51" rx="2.5" fill="#00e891"/>
+      <path d="M13 11 Q28 4 42 7" stroke="rgba(0,232,145,0.35)" stroke-width="1.3" fill="none" stroke-linecap="round"/>
+      <circle cx="7.5"  cy="38" r="2.2" fill="#06060d" stroke="#00e891" stroke-width="1.6"/>
+      <circle cx="27.5" cy="24" r="2.2" fill="#06060d" stroke="#00e891" stroke-width="1.6"/>
+      <circle cx="47.5" cy="7"  r="2.2" fill="#06060d" stroke="#00e891" stroke-width="1.6"/>
+    </svg>
+    <div>
+      <div class="logo-name"><span>3<span class="g-up">G</span></span> Intelligence</div>
+      <div class="logo-sub">IA aplicada al negocio real</div>
+    </div>
+  </a>
+  <a href="/" class="nav-back">
+    ← Volver al inicio
+  </a>
+</nav>
+
+<!-- ── MAIN ─────────────────────────────── -->
+<main>
+
+  <!-- INTRO -->
+  <div id="intro">
+    <div class="eyebrow">Diagnóstico de Madurez IA</div>
+    <h1>¿En qué <span>Era</span> está<br>tu empresa?</h1>
+    <p class="intro-sub">
+      5 preguntas · 2 minutos · Sin registro.<br>
+      Descubre dónde estás y qué oportunidades tienes con la IA.
+    </p>
+  </div>
+
+  <!-- PROGRESS -->
+  <div class="progress-wrap">
+    <div class="progress-label">
+      <span id="progress-text">Pregunta 1 de 5</span>
+      <span id="progress-pct">0%</span>
+    </div>
+    <div class="progress-bar"><div class="progress-fill" id="progress-fill"></div></div>
+  </div>
+
+  <!-- QUIZ -->
+  <div id="quiz">
+
+    <!-- P1 -->
+    <div class="question" style="animation-delay:.05s">
+      <div class="q-num">Pregunta 1 — Datos</div>
+      <div class="q-text">¿Dónde vive la información crítica de tu empresa?</div>
+      <div class="options">
+        <label class="option" onclick="selectOption(this, 'q1', 1)">
+          <input type="radio" name="q1" value="1" />
+          <div class="opt-letter">A</div>
+          <div class="opt-text">Dispersa — Excel, WhatsApp, correos, carpetas sin orden</div>
+        </label>
+        <label class="option" onclick="selectOption(this, 'q1', 2)">
+          <input type="radio" name="q1" value="2" />
+          <div class="opt-letter">B</div>
+          <div class="opt-text">Centralizada en un sistema (CRM, ERP u otro software)</div>
+        </label>
+        <label class="option" onclick="selectOption(this, 'q1', 3)">
+          <input type="radio" name="q1" value="3" />
+          <div class="opt-letter">C</div>
+          <div class="opt-text">Integrada y conectada entre múltiples sistemas automáticamente</div>
+        </label>
+      </div>
+    </div>
+    <hr class="q-divider" />
+
+    <!-- P2 -->
+    <div class="question" style="animation-delay:.1s">
+      <div class="q-num">Pregunta 2 — Reportes</div>
+      <div class="q-text">¿Cómo obtienes información sobre el desempeño del negocio?</div>
+      <div class="options">
+        <label class="option" onclick="selectOption(this, 'q2', 1)">
+          <input type="radio" name="q2" value="1" />
+          <div class="opt-letter">A</div>
+          <div class="opt-text">Armo reportes a mano cuando los necesito · o no tengo</div>
+        </label>
+        <label class="option" onclick="selectOption(this, 'q2', 2)">
+          <input type="radio" name="q2" value="2" />
+          <div class="opt-letter">B</div>
+          <div class="opt-text">Tengo dashboards o reportes que se actualizan solos</div>
+        </label>
+        <label class="option" onclick="selectOption(this, 'q2', 3)">
+          <input type="radio" name="q2" value="3" />
+          <div class="opt-letter">C</div>
+          <div class="opt-text">Tengo reportes predictivos que anticipan lo que va a pasar</div>
+        </label>
+      </div>
+    </div>
+    <hr class="q-divider" />
+
+    <!-- P3 -->
+    <div class="question" style="animation-delay:.15s">
+      <div class="q-num">Pregunta 3 — Operación</div>
+      <div class="q-text">¿Cómo se ejecutan los procesos del día a día en tu empresa?</div>
+      <div class="options">
+        <label class="option" onclick="selectOption(this, 'q3', 1)">
+          <input type="radio" name="q3" value="1" />
+          <div class="opt-letter">A</div>
+          <div class="opt-text">Manualmente · depende de personas específicas para no detenerse</div>
+        </label>
+        <label class="option" onclick="selectOption(this, 'q3', 2)">
+          <input type="radio" name="q3" value="2" />
+          <div class="opt-letter">B</div>
+          <div class="opt-text">Parcialmente automatizados · algunas tareas corren solas</div>
+        </label>
+        <label class="option" onclick="selectOption(this, 'q3', 3)">
+          <input type="radio" name="q3" value="3" />
+          <div class="opt-letter">C</div>
+          <div class="opt-text">Automatizados · con IA activa en uno o más flujos clave</div>
+        </label>
+      </div>
+    </div>
+    <hr class="q-divider" />
+
+    <!-- P4 -->
+    <div class="question" style="animation-delay:.2s">
+      <div class="q-num">Pregunta 4 — Clientes y ventas</div>
+      <div class="q-text">¿Cómo gestionas los leads o nuevos clientes?</div>
+      <div class="options">
+        <label class="option" onclick="selectOption(this, 'q4', 1)">
+          <input type="radio" name="q4" value="1" />
+          <div class="opt-letter">A</div>
+          <div class="opt-text">Sin sistema · en la cabeza, WhatsApp o una planilla</div>
+        </label>
+        <label class="option" onclick="selectOption(this, 'q4', 2)">
+          <input type="radio" name="q4" value="2" />
+          <div class="opt-letter">B</div>
+          <div class="opt-text">Con CRM y seguimiento manual por parte del equipo</div>
+        </label>
+        <label class="option" onclick="selectOption(this, 'q4', 3)">
+          <input type="radio" name="q4" value="3" />
+          <div class="opt-letter">C</div>
+          <div class="opt-text">Con automatización · alertas y nurturing sin intervención manual</div>
+        </label>
+      </div>
+    </div>
+    <hr class="q-divider" />
+
+    <!-- P5 -->
+    <div class="question" style="animation-delay:.25s">
+      <div class="q-num">Pregunta 5 — Decisiones</div>
+      <div class="q-text">¿Cómo toma decisiones importantes tu empresa?</div>
+      <div class="options">
+        <label class="option" onclick="selectOption(this, 'q5', 1)">
+          <input type="radio" name="q5" value="1" />
+          <div class="opt-letter">A</div>
+          <div class="opt-text">Por intuición y experiencia · con poca información objetiva</div>
+        </label>
+        <label class="option" onclick="selectOption(this, 'q5', 2)">
+          <input type="radio" name="q5" value="2" />
+          <div class="opt-letter">B</div>
+          <div class="opt-text">Con datos históricos disponibles · análisis manual del equipo</div>
+        </label>
+        <label class="option" onclick="selectOption(this, 'q5', 3)">
+          <input type="radio" name="q5" value="3" />
+          <div class="opt-letter">C</div>
+          <div class="opt-text">Con datos + proyecciones · modelos que anticipan escenarios</div>
+        </label>
+      </div>
+    </div>
+
+    <button id="btn-submit" onclick="mostrarResultado()">
+      Ver mi diagnóstico →
+    </button>
+
+  </div><!-- /quiz -->
+
+  <!-- RESULTADO -->
+  <div id="resultado"></div>
+
+</main>
+
+<footer>
+  <a href="/">3G Intelligence</a> · <a href="/privacidad">Privacidad</a> · <a href="mailto:chat@3g-ia-agents.com">chat@3g-ia-agents.com</a>
+</footer>
+
+<script>
+  const answers = { q1: 0, q2: 0, q3: 0, q4: 0, q5: 0 };
+
+  function selectOption(el, qName, val) {
+    // Deselect siblings
+    el.closest('.options').querySelectorAll('.option').forEach(o => o.classList.remove('selected'));
+    el.classList.add('selected');
+    answers[qName] = val;
+    updateProgress();
+    checkReady();
+  }
+
+  function updateProgress() {
+    const answered = Object.values(answers).filter(v => v > 0).length;
+    const pct = Math.round((answered / 5) * 100);
+    document.getElementById('progress-fill').style.width = pct + '%';
+    document.getElementById('progress-pct').textContent = pct + '%';
+    document.getElementById('progress-text').textContent =
+      answered < 5 ? `Pregunta ${answered + 1} de 5` : '5 de 5 respondidas';
+  }
+
+  function checkReady() {
+    const answered = Object.values(answers).filter(v => v > 0).length;
+    const btn = document.getElementById('btn-submit');
+    btn.style.display = 'block';
+    btn.disabled = answered < 5;
+  }
+
+  function calcEra() {
+    const vals = Object.values(answers);
+    const sum  = vals.reduce((a, b) => a + b, 0);
+    const avg  = sum / 5;
+    // 1.0-1.8 → Era 1 · 1.9-2.6 → Era 2 · 2.7-3.0 → Era 3
+    if (avg <= 1.8) return 1;
+    if (avg <= 2.6) return 2;
+    return 3;
+  }
+
+  const ERAS = {
+    1: {
+      color:    '#F87171',
+      bg:       'rgba(248,113,113,0.06)',
+      border:   '#F87171',
+      label:    'Era 1',
+      name:     'Caos operativo',
+      msg:      'Tu empresa pierde dinero de forma invisible — en tiempo desperdiciado, oportunidades sin seguimiento y decisiones sin datos. Antes de implementar IA, hay que poner orden.',
+      insight:  '"Tu empresa no tiene un problema de IA. Tiene un problema de desorden operacional. Y eso tiene solución concreta."',
+      cta_sub:  'Te mostramos exactamente dónde estás perdiendo dinero y cómo estructurar la base para implementar IA correctamente.',
+      calendly_note: 'Era 1 — Caos operativo · necesita Data Foundation antes de IA',
+    },
+    2: {
+      color:    '#FBBF24',
+      bg:       'rgba(251,191,36,0.06)',
+      border:   '#FBBF24',
+      label:    'Era 2',
+      name:     'Datos organizados',
+      msg:      'Tienes la información y entiendes lo que pasa en tu negocio, pero todavía dependes de personas para ejecutar y escalar. Eso limita tu crecimiento sin que lo notes.',
+      insight:  '"Tu empresa entiende el negocio, pero no lo escala. Tienes la base perfecta para implementar IA de alto impacto."',
+      cta_sub:  'Te identificamos los 2 o 3 procesos donde la IA generaría el mayor impacto en los próximos 90 días.',
+      calendly_note: 'Era 2 — Datos organizados · lista para implementación IA',
+    },
+    3: {
+      color:    '#00E891',
+      bg:       'rgba(0,232,145,0.06)',
+      border:   '#00E891',
+      label:    'Era 3',
+      name:     'Empresa con IA-Potencial',
+      msg:      'Tu empresa ya opera con inteligencia. El desafío ahora es mantener la ventaja y escalar lo que funciona. La IA no es un proyecto — es una capacidad continua.',
+      insight:  '"La IA no es un proyecto. Es una capacidad que debe evolucionar. Te ayudamos a mantenerla y expandirla."',
+      cta_sub:  'Evaluamos tus capacidades actuales y diseñamos el roadmap para escalar tu operación con IA.',
+      calendly_note: 'Era 3 — Empresa con IA-Potencial · busca escalar y optimizar',
+    },
+  };
+
+  function mostrarResultado() {
+    const era  = calcEra();
+    const data = ERAS[era];
+
+    document.getElementById('quiz').style.display     = 'none';
+    document.getElementById('btn-submit').style.display = 'none';
+    document.getElementById('progress-wrap') && null;
+    document.querySelector('.progress-wrap').style.display = 'none';
+    document.getElementById('intro').style.display   = 'none';
+
+    const calendlyUrl = `https://calendly.com/escribeme-3g-ia-agents/diagnostico-base-en-30-min?a1=${encodeURIComponent(data.calendly_note)}`;
+    const waUrl = `https://wa.me/56988974898?text=${encodeURIComponent('Hola, hice el diagnóstico de Madurez IA y quedé en ' + data.label + ' — ' + data.name + '. Me gustaría saber más.')}`;
+
+    document.getElementById('resultado').style.display = 'block';
+    document.getElementById('resultado').innerHTML = `
+      <div class="eyebrow" style="color:${data.color}">Tu resultado</div>
+
+      <div class="result-card" style="background:${data.bg}; border-color:${data.border};">
+        <div class="result-era-label" style="color:${data.color}">${data.label} — Diagnóstico 3G Intelligence</div>
+        <div class="result-era-name" style="color:${data.color}">${data.name}</div>
+        <p class="result-msg">${data.msg}</p>
+        <div class="result-insight" style="border-color:${data.color}; color:#CBD5E1;">
+          ${data.insight}
+        </div>
+      </div>
+
+      <div class="next-step">
+        <div class="next-step-eyebrow">¿Qué sigue?</div>
+        <h2>Agenda tu diagnóstico gratuito</h2>
+        <p>${data.cta_sub}<br>30 minutos · Sin costo · Sin compromiso.</p>
+        <a href="${calendlyUrl}" target="_blank" class="btn-calendly">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+          Agendar llamada gratuita
+        </a>
+        <div class="divider-or">o</div>
+        <a href="${waUrl}" target="_blank" class="btn-wa">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          Escribir por WhatsApp
+        </a>
+        <button class="retry-link" onclick="reiniciar()">Volver a hacer el test</button>
+      </div>
+    `;
+
+    document.getElementById('resultado').scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+
+  function reiniciar() {
+    Object.keys(answers).forEach(k => answers[k] = 0);
+    document.getElementById('quiz').style.display = 'block';
+    document.querySelector('.progress-wrap').style.display = 'block';
+    document.getElementById('intro').style.display = 'block';
+    document.getElementById('resultado').style.display = 'none';
+    document.getElementById('btn-submit').style.display = 'none';
+    document.querySelectorAll('.option').forEach(o => o.classList.remove('selected'));
+    document.querySelectorAll('input[type="radio"]').forEach(r => r.checked = false);
+    document.getElementById('progress-fill').style.width = '0%';
+    document.getElementById('progress-pct').textContent = '0%';
+    document.getElementById('progress-text').textContent = 'Pregunta 1 de 5';
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+</script>
+
+</body>
+</html>
