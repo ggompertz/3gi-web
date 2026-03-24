@@ -242,6 +242,46 @@
     }
     .retry-link:hover { color: var(--offwh); }
 
+    /* ── PLAN DE ACCIÓN ──────────────────── */
+    .plan-card {
+      border-radius: 14px;
+      border: 1px solid var(--border);
+      background: var(--surface);
+      padding: 28px 32px;
+      margin-bottom: 20px;
+      text-align: left;
+    }
+    .plan-eyebrow {
+      font-size: 11px; font-weight: 700;
+      letter-spacing: 0.15em; text-transform: uppercase;
+      color: var(--muted); margin-bottom: 14px;
+    }
+    .plan-steps { list-style: none; margin-bottom: 20px; }
+    .plan-steps li {
+      display: flex; gap: 14px; align-items: flex-start;
+      padding: 10px 0;
+      border-bottom: 1px solid var(--border);
+      font-size: 14px; line-height: 1.55;
+    }
+    .plan-steps li:last-child { border-bottom: none; }
+    .plan-step-num {
+      width: 24px; height: 24px; flex-shrink: 0;
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 11px; font-weight: 800;
+      background: rgba(255,255,255,0.07);
+      color: var(--offwh); margin-top: 1px;
+    }
+    .plan-tool {
+      display: flex; align-items: center; gap: 10px;
+      background: rgba(0,232,145,0.07);
+      border: 1px solid rgba(0,232,145,0.2);
+      border-radius: 8px; padding: 10px 14px;
+      font-size: 13px;
+    }
+    .plan-tool-label { color: var(--muted); font-size: 11px; margin-right: 4px; }
+    .plan-tool-name { color: var(--green); font-weight: 700; }
+
     /* ── FOOTER ──────────────────────────── */
     footer {
       text-align: center; padding: 24px;
@@ -321,12 +361,12 @@
         <label class="option" onclick="selectOption(this, 'q1', 2)">
           <input type="radio" name="q1" value="2" />
           <div class="opt-letter">B</div>
-          <div class="opt-text">Centralizada en un sistema (CRM, ERP u otro software)</div>
+          <div class="opt-text">Centralizada en un sistema de gestión — CRM (clientes), ERP (operaciones) u otro software</div>
         </label>
         <label class="option" onclick="selectOption(this, 'q1', 3)">
           <input type="radio" name="q1" value="3" />
           <div class="opt-letter">C</div>
-          <div class="opt-text">Integrada y conectada entre múltiples sistemas automáticamente</div>
+          <div class="opt-text">Conectada automáticamente entre varios sistemas — los datos se actualizan solos sin que nadie los copie</div>
         </label>
       </div>
     </div>
@@ -345,12 +385,12 @@
         <label class="option" onclick="selectOption(this, 'q2', 2)">
           <input type="radio" name="q2" value="2" />
           <div class="opt-letter">B</div>
-          <div class="opt-text">Tengo dashboards o reportes que se actualizan solos</div>
+          <div class="opt-text">Tengo pantallas o informes automáticos que me muestran cómo va el negocio en tiempo real</div>
         </label>
         <label class="option" onclick="selectOption(this, 'q2', 3)">
           <input type="radio" name="q2" value="3" />
           <div class="opt-letter">C</div>
-          <div class="opt-text">Tengo reportes predictivos que anticipan lo que va a pasar</div>
+          <div class="opt-text">Tengo informes que no solo muestran lo que pasó, sino que anticipan lo que va a pasar usando IA</div>
         </label>
       </div>
     </div>
@@ -374,7 +414,7 @@
         <label class="option" onclick="selectOption(this, 'q3', 3)">
           <input type="radio" name="q3" value="3" />
           <div class="opt-letter">C</div>
-          <div class="opt-text">Automatizados · con IA activa en uno o más flujos clave</div>
+          <div class="opt-text">La IA ejecuta tareas por sí sola — sin que una persona tenga que intervenir cada vez</div>
         </label>
       </div>
     </div>
@@ -383,7 +423,7 @@
     <!-- P4 -->
     <div class="question" style="animation-delay:.2s">
       <div class="q-num">Pregunta 4 — Clientes y ventas</div>
-      <div class="q-text">¿Cómo gestionas los leads o nuevos clientes?</div>
+      <div class="q-text">¿Cómo gestionas los clientes potenciales o nuevos contactos?</div>
       <div class="options">
         <label class="option" onclick="selectOption(this, 'q4', 1)">
           <input type="radio" name="q4" value="1" />
@@ -393,12 +433,12 @@
         <label class="option" onclick="selectOption(this, 'q4', 2)">
           <input type="radio" name="q4" value="2" />
           <div class="opt-letter">B</div>
-          <div class="opt-text">Con CRM y seguimiento manual por parte del equipo</div>
+          <div class="opt-text">Con un software de gestión de clientes (CRM) y seguimiento manual por parte del equipo</div>
         </label>
         <label class="option" onclick="selectOption(this, 'q4', 3)">
           <input type="radio" name="q4" value="3" />
           <div class="opt-letter">C</div>
-          <div class="opt-text">Con automatización · alertas y nurturing sin intervención manual</div>
+          <div class="opt-text">Con automatización — el sistema envía recordatorios, hace seguimiento y avisa al equipo sin que nadie lo active manualmente</div>
         </label>
       </div>
     </div>
@@ -422,7 +462,7 @@
         <label class="option" onclick="selectOption(this, 'q5', 3)">
           <input type="radio" name="q5" value="3" />
           <div class="opt-letter">C</div>
-          <div class="opt-text">Con datos + proyecciones · modelos que anticipan escenarios</div>
+          <div class="opt-text">Con datos y proyecciones — la IA ayuda a anticipar escenarios antes de que ocurran</div>
         </label>
       </div>
     </div>
@@ -491,6 +531,12 @@
       insight:  '"Tu empresa no tiene un problema de IA. Tiene un problema de desorden operacional. Y eso tiene solución concreta."',
       cta_sub:  'Te mostramos exactamente dónde estás perdiendo dinero y cómo estructurar la base para implementar IA correctamente.',
       calendly_note: 'Era 1 — Caos operativo · necesita Data Foundation antes de IA',
+      plan: [
+        'Elige un solo lugar para centralizar tu información — una planilla compartida en la nube o un software simple de gestión. Deja de operar en silos.',
+        'Identifica los 3 procesos que más tiempo le quitan a tu equipo cada semana y escríbelos. Son tu punto de partida.',
+        'Agenda el diagnóstico gratuito — en 30 minutos te decimos exactamente dónde está la pérdida y cuál es el primer paso concreto.',
+      ],
+      tool: { name: 'Google Workspace o Notion', desc: 'Para centralizar información y empezar a estructurar antes de implementar IA.' },
     },
     2: {
       color:    '#FBBF24',
@@ -502,6 +548,12 @@
       insight:  '"Tu empresa entiende el negocio, pero no lo escala. Tienes la base perfecta para implementar IA de alto impacto."',
       cta_sub:  'Te identificamos los 2 o 3 procesos donde la IA generaría el mayor impacto en los próximos 90 días.',
       calendly_note: 'Era 2 — Datos organizados · lista para implementación IA',
+      plan: [
+        'Identifica la tarea que tu equipo repite más veces cada semana — cotizaciones, seguimiento de clientes, reportes. Ese es tu primer candidato a automatizar.',
+        'Conecta tus sistemas existentes con una herramienta de automatización sin necesidad de programadores (como Make o n8n). Una sola conexión bien hecha puede ahorrar horas semanales.',
+        'Agenda el diagnóstico gratuito — diseñamos juntos el plan de automatización con IA para los próximos 90 días.',
+      ],
+      tool: { name: 'Make o n8n', desc: 'Herramientas que conectan tus sistemas y automatizan tareas repetitivas sin necesidad de saber programar.' },
     },
     3: {
       color:    '#00E891',
@@ -513,6 +565,12 @@
       insight:  '"La IA no es un proyecto. Es una capacidad que debe evolucionar. Te ayudamos a mantenerla y expandirla."',
       cta_sub:  'Evaluamos tus capacidades actuales y diseñamos el roadmap para escalar tu operación con IA.',
       calendly_note: 'Era 3 — Empresa con IA-Potencial · busca escalar y optimizar',
+      plan: [
+        'Revisa qué automatizaciones ya tienes activas y cuáles se pueden mejorar o expandir a otras áreas del negocio.',
+        'Evalúa implementar un asistente de IA para ventas, atención al cliente o análisis de datos — tecnología que trabaja por tu equipo las 24 horas.',
+        'Agenda el diagnóstico gratuito — definimos cómo escalar tu ventaja competitiva con IA sin perder lo que ya funciona.',
+      ],
+      tool: { name: 'Agentes de IA personalizados', desc: 'Asistentes inteligentes que toman decisiones, responden clientes y analizan datos de forma autónoma.' },
     },
   };
 
@@ -530,6 +588,8 @@
     const waUrl = `https://wa.me/56988974898?text=${encodeURIComponent('Hola, hice el diagnóstico de Madurez IA y quedé en ' + data.label + ' — ' + data.name + '. Me gustaría saber más.')}`;
 
     document.getElementById('resultado').style.display = 'block';
+    const waIcon = `<svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>`;
+
     document.getElementById('resultado').innerHTML = `
       <div class="eyebrow" style="color:${data.color}">Tu resultado</div>
 
@@ -542,8 +602,25 @@
         </div>
       </div>
 
+      <div class="plan-card">
+        <div class="plan-eyebrow">Tu plan de acción — 3 pasos concretos</div>
+        <ul class="plan-steps">
+          ${data.plan.map((p, i) => `
+            <li>
+              <div class="plan-step-num">${i + 1}</div>
+              <div>${p}</div>
+            </li>`).join('')}
+        </ul>
+        <div class="plan-tool">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="${data.color}" stroke-width="2.5"><polyline points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+          <span class="plan-tool-label">Primera herramienta recomendada:</span>
+          <span class="plan-tool-name">${data.tool.name}</span>
+          <span style="color:var(--muted);font-size:12px;">— ${data.tool.desc}</span>
+        </div>
+      </div>
+
       <div class="next-step">
-        <div class="next-step-eyebrow">¿Qué sigue?</div>
+        <div class="next-step-eyebrow">¿Quieres ir más rápido?</div>
         <h2>Agenda tu diagnóstico gratuito</h2>
         <p>${data.cta_sub}<br>30 minutos · Sin costo · Sin compromiso.</p>
         <a href="${calendlyUrl}" target="_blank" class="btn-calendly">
@@ -552,8 +629,7 @@
         </a>
         <div class="divider-or">o</div>
         <a href="${waUrl}" target="_blank" class="btn-wa">
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-          Escribir por WhatsApp
+          ${waIcon} Escribir por WhatsApp
         </a>
         <button class="retry-link" onclick="reiniciar()">Volver a hacer el test</button>
       </div>
