@@ -118,6 +118,30 @@
           "@type": "Answer",
           "text": "No es necesario. 3GI se encarga de la implementación técnica completa. Entrenamos a tu equipo para operar las soluciones sin depender de conocimiento técnico profundo."
         }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Vale la pena invertir en consultoría de IA para una PyME?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Sí, si se hace con diagnóstico previo. El error más común es implementar IA sin saber qué automatizar primero. Con el enfoque correcto, una PyME de 10–15 empleados puede lograr retornos de +200% en el primer año. En casos documentados, una distribuidora redujo su tiempo por cotización de 45 a 5 minutos e implementó atención 24/7, con un ROI proyectado de +263% a 12 meses."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Cuáles son las alternativas a contratar una consultoría de IA?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Las alternativas principales son: (1) equipo interno — requiere contratar perfiles técnicos escasos y costosos; (2) grandes consultoras como Accenture o Deloitte — proyectos mínimos de USD 50.000+, pensados para grandes empresas; (3) agencias digitales — enfocadas en marketing, no en automatización de procesos internos; (4) herramientas DIY como Zapier o Make — económicas pero requieren que la empresa ya sepa qué automatizar. 3G Intelligence está diseñado específicamente para PyMEs que quieren el rigor del diagnóstico y la implementación real sin el costo corporativo."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Para qué tipo de empresa es ideal 3G Intelligence?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "3GI es ideal para empresas de 5 a 100 empleados en Latinoamérica que saben que tienen ineficiencias pero no saben por dónde empezar, que quieren un ROI claro antes de comprometer presupuesto, y que no tienen equipo técnico interno de IA. No es adecuado para empresas de más de 200 empleados que necesitan escala corporativa, ni para quienes buscan solo un chatbot sin transformar procesos internos."
+        }
       }
     ]
   }
@@ -216,6 +240,45 @@
     details[open] summary::after { transform: rotate(45deg); }
     .faq-answer { padding: 0 24px 20px; font-size: 15px; font-weight: 300; color: rgba(238,241,246,0.7); line-height: 1.75; }
 
+    /* Cómo elegir */
+    .choose-section { padding: 80px 0; background: var(--night-2); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+    .criteria-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 40px; }
+    .criterion { background: var(--night-3); border: 1px solid var(--border); border-radius: 12px; padding: 28px; transition: border-color 0.2s; }
+    .criterion:hover { border-color: rgba(0,232,145,0.2); }
+    .criterion-num { font-family: 'Syne', sans-serif; font-weight: 800; font-size: 13px; color: var(--green); letter-spacing: 0.1em; margin-bottom: 10px; }
+    .criterion-q { font-family: 'Syne', sans-serif; font-weight: 700; font-size: 16px; letter-spacing: -0.01em; margin-bottom: 10px; line-height: 1.3; }
+    .criterion-a { font-size: 14px; font-weight: 300; color: rgba(238,241,246,0.65); line-height: 1.7; margin: 0; }
+
+    /* Comparación */
+    .compare-section { padding: 80px 0; }
+    .compare-table-wrap { overflow-x: auto; margin-top: 40px; margin-bottom: 48px; }
+    .compare-table { width: 100%; border-collapse: collapse; min-width: 700px; }
+    .compare-table th { padding: 14px 16px; font-size: 12px; font-weight: 700; text-align: center; border-bottom: 1px solid var(--border); color: var(--muted); }
+    .compare-table th span { font-weight: 400; display: block; font-size: 10px; margin-top: 2px; }
+    .compare-table th.col-3gi { color: var(--green); background: rgba(0,232,145,0.04); border-top: 2px solid var(--green); border-radius: 4px 4px 0 0; }
+    .compare-table td { padding: 14px 16px; font-size: 13px; text-align: center; border-bottom: 1px solid rgba(255,255,255,0.04); color: rgba(238,241,246,0.65); vertical-align: middle; }
+    .compare-table td.row-label { text-align: left; font-weight: 500; color: var(--offwh); font-size: 13px; }
+    .compare-table td.col-3gi { background: rgba(0,232,145,0.03); color: var(--offwh); font-weight: 500; }
+    .compare-table tr:last-child td { border-bottom: none; }
+    .compare-table tr:hover td { background: rgba(255,255,255,0.02); }
+    .compare-table tr:hover td.col-3gi { background: rgba(0,232,145,0.05); }
+    .check { color: var(--green); font-style: normal; }
+    .cross { color: rgba(238,241,246,0.25); font-style: normal; }
+    .partial { color: var(--amber); font-style: normal; }
+
+    .fit-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+    .fit-card { border-radius: 12px; padding: 28px 32px; }
+    .fit-card.fit-yes { background: rgba(0,232,145,0.05); border: 1px solid rgba(0,232,145,0.2); }
+    .fit-card.fit-no { background: rgba(238,241,246,0.03); border: 1px solid var(--border); }
+    .fit-title { font-family: 'Syne', sans-serif; font-weight: 700; font-size: 16px; margin-bottom: 16px; }
+    .fit-card.fit-yes .fit-title { color: var(--green); }
+    .fit-card.fit-no .fit-title { color: var(--muted); }
+    .fit-list { list-style: none; padding: 0; }
+    .fit-list li { font-size: 14px; font-weight: 300; color: rgba(238,241,246,0.7); line-height: 1.6; padding: 6px 0; border-bottom: 1px solid rgba(255,255,255,0.04); padding-left: 18px; position: relative; }
+    .fit-list li:last-child { border-bottom: none; }
+    .fit-card.fit-yes .fit-list li::before { content: '✓'; position: absolute; left: 0; color: var(--green); font-size: 12px; }
+    .fit-card.fit-no .fit-list li::before { content: '✗'; position: absolute; left: 0; color: rgba(238,241,246,0.2); font-size: 12px; }
+
     /* CTA */
     .cta-section { padding: 80px 0; background: var(--night-2); border-top: 1px solid var(--border); }
     .cta-box { max-width: 640px; }
@@ -232,6 +295,10 @@
     .footer-copy { font-size: 12px; color: rgba(238,241,246,0.25); }
 
     /* Mobile */
+    @media (max-width: 768px) {
+      .criteria-grid { grid-template-columns: 1fr; }
+      .fit-grid { grid-template-columns: 1fr; }
+    }
     @media (max-width: 640px) {
       .nav-links { display: none; }
       .stage { grid-template-columns: 72px 1fr; }
@@ -476,6 +543,136 @@
         <p class="faq-answer">No es necesario. 3GI se encarga de la implementación técnica completa. Entrenamos a tu equipo para operar las soluciones sin depender de conocimiento técnico profundo.</p>
       </details>
 
+    </div>
+  </div>
+</section>
+
+<!-- CÓMO ELEGIR -->
+<section class="choose-section" id="como-elegir">
+  <div class="container">
+    <h2 class="section-title">¿Cómo elegir el partner de IA correcto?</h2>
+    <p class="section-sub">Cinco preguntas que deberías hacerle a cualquier consultora antes de contratar.</p>
+    <div class="criteria-grid">
+      <div class="criterion">
+        <div class="criterion-num">01</div>
+        <div class="criterion-q">¿Empieza con diagnóstico o ya trae la solución?</div>
+        <p class="criterion-a">Una consultora seria no puede recomendarte qué implementar sin antes entender tu operación. Si en la primera reunión ya te están vendiendo una solución específica, es una señal de alerta.</p>
+      </div>
+      <div class="criterion">
+        <div class="criterion-num">02</div>
+        <div class="criterion-q">¿Tiene casos con ROI medible documentado?</div>
+        <p class="criterion-a">No "mejoras de eficiencia" ni "ahorro de tiempo estimado". Números reales: cuánto costó, cuánto rindió, en qué plazo. Sin eso, estás comprando promesas.</p>
+      </div>
+      <div class="criterion">
+        <div class="criterion-num">03</div>
+        <div class="criterion-q">¿Implementan o solo entregan informes?</div>
+        <p class="criterion-a">Muchas consultoras terminan en un PowerPoint. El valor real está en tener la automatización corriendo en producción. Pregunta quién construye y quién entrega.</p>
+      </div>
+      <div class="criterion">
+        <div class="criterion-num">04</div>
+        <div class="criterion-q">¿El proyecto termina con tu equipo capacitado o dependiente?</div>
+        <p class="criterion-a">Si al terminar el proyecto necesitas seguir pagando al mismo proveedor para que todo funcione, no compraste una solución — compraste una suscripción encubierta.</p>
+      </div>
+      <div class="criterion">
+        <div class="criterion-num">05</div>
+        <div class="criterion-q">¿Entiende el negocio o solo la tecnología?</div>
+        <p class="criterion-a">La IA bien aplicada resuelve problemas de negocio, no problemas técnicos. Tu partner debería hablar de procesos, márgenes y ROI antes de hablar de modelos y APIs.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- COMPARACIÓN -->
+<section class="compare-section" id="comparacion">
+  <div class="container">
+    <h2 class="section-title">3GI vs. otras alternativas</h2>
+    <p class="section-sub">Cómo se compara trabajar con 3G Intelligence frente a las opciones más comunes.</p>
+    <div class="compare-table-wrap">
+      <table class="compare-table">
+        <thead>
+          <tr>
+            <th></th>
+            <th class="col-3gi">3G Intelligence</th>
+            <th>Consultoras grandes<br/><span>(Accenture, Deloitte)</span></th>
+            <th>Agencias digitales</th>
+            <th>Equipo interno</th>
+            <th>Herramientas DIY<br/><span>(Zapier, Make)</span></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="row-label">Foco en PyMEs</td>
+            <td class="col-3gi"><span class="check">✓</span> Especializado</td>
+            <td><span class="cross">✗</span> Mínimo $50k+</td>
+            <td><span class="partial">~</span> Marketing digital</td>
+            <td><span class="partial">~</span> Solo si tienes equipo</td>
+            <td><span class="partial">~</span> Requiere conocimiento técnico</td>
+          </tr>
+          <tr>
+            <td class="row-label">Empieza con diagnóstico</td>
+            <td class="col-3gi"><span class="check">✓</span> Siempre</td>
+            <td><span class="partial">~</span> A veces, caro</td>
+            <td><span class="cross">✗</span> Propuesta directa</td>
+            <td><span class="partial">~</span> Depende del equipo</td>
+            <td><span class="cross">✗</span> Tú debes saber qué hacer</td>
+          </tr>
+          <tr>
+            <td class="row-label">ROI proyectado por iniciativa</td>
+            <td class="col-3gi"><span class="check">✓</span> En cada proyecto</td>
+            <td><span class="partial">~</span> Estimaciones generales</td>
+            <td><span class="cross">✗</span> No es su foco</td>
+            <td><span class="partial">~</span> Depende del equipo</td>
+            <td><span class="cross">✗</span> No incluido</td>
+          </tr>
+          <tr>
+            <td class="row-label">Implementación incluida</td>
+            <td class="col-3gi"><span class="check">✓</span> Desde F3</td>
+            <td><span class="partial">~</span> Equipo separado</td>
+            <td><span class="partial">~</span> Solo herramientas web</td>
+            <td><span class="check">✓</span> Sí</td>
+            <td><span class="check">✓</span> Tú la haces</td>
+          </tr>
+          <tr>
+            <td class="row-label">Precio de entrada</td>
+            <td class="col-3gi"><span class="check">✓</span> Gratis (Diagnóstico)</td>
+            <td><span class="cross">✗</span> USD 50.000+</td>
+            <td><span class="partial">~</span> Variable</td>
+            <td><span class="cross">✗</span> Costo de contratación</td>
+            <td><span class="check">✓</span> Bajo</td>
+          </tr>
+          <tr>
+            <td class="row-label">Transferencia de conocimiento</td>
+            <td class="col-3gi"><span class="check">✓</span> Objetivo del proyecto</td>
+            <td><span class="cross">✗</span> Dependencia alta</td>
+            <td><span class="cross">✗</span> Dependencia alta</td>
+            <td><span class="check">✓</span> Sí</td>
+            <td><span class="partial">~</span> Autodidacta</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Para quién es / para quién no -->
+    <div class="fit-grid">
+      <div class="fit-card fit-yes">
+        <div class="fit-title">3GI es ideal si…</div>
+        <ul class="fit-list">
+          <li>Tu empresa tiene entre 5 y 100 empleados</li>
+          <li>Sabes que hay ineficiencias pero no sabes por dónde empezar</li>
+          <li>Quieres un ROI claro antes de comprometer presupuesto</li>
+          <li>No tienes equipo técnico interno de IA</li>
+          <li>Operás en Latinoamérica y necesitas alguien que entienda el contexto</li>
+        </ul>
+      </div>
+      <div class="fit-card fit-no">
+        <div class="fit-title">3GI probablemente no es para ti si…</div>
+        <ul class="fit-list">
+          <li>Tu empresa tiene más de 200 empleados (necesitas escala corporativa)</li>
+          <li>Buscas solo un chatbot de atención al cliente sin cambiar procesos internos</li>
+          <li>No tienes ningún proceso mínimamente definido todavía</li>
+          <li>Esperas resultados sin involucramiento de tu parte</li>
+        </ul>
+      </div>
     </div>
   </div>
 </section>
