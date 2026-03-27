@@ -1,0 +1,55 @@
+# 3G Intelligence
+
+> Consultoría de inteligencia artificial para pequeñas y medianas empresas (PyMEs) en Latinoamérica.
+
+3G Intelligence ayuda a empresas a identificar, priorizar e implementar soluciones de IA con ROI medible. No vendemos tecnología — diagnosticamos problemas reales y diseñamos soluciones concretas.
+
+## Quiénes somos
+
+Fundada por Gonzalo Gompertz Geldres, consultor con 20+ años en gestión empresarial y 15+ años en consultoría estratégica. Sectores atendidos: agroindustria, servicios, turismo, comercio, educación, pesca, programas públicos y organizaciones sin fines de lucro.
+
+Sitio web: https://3g-ia-agents.com
+Contacto: chat@3g-ia-agents.com
+WhatsApp: +56 9 8897 4898
+LinkedIn: https://www.linkedin.com/company/3g-intelligence
+
+## Qué hacemos
+
+Metodología E0→E5 para llevar empresas de la Era Manual a la Era de IA Aplicada:
+
+- **E0 – Scan IA**: Diagnóstico inicial (2 horas). Score de Madurez IA en 5 dimensiones. Clasificación de Era (1, 2 o 3). Identificación de 3–7 oportunidades preliminares. Precio: gratis–USD 1.500.
+- **E1 – Análisis profundo**: Mapeo proceso a proceso. Scoring cuantificado. ROI proyectado a 12 meses. Precio: USD 2.000–5.000.
+- **E2 – Diseño de solución**: PRD técnico. Arquitectura de datos. Propuesta comercial lista para ejecutar.
+- **Data Foundation** (opcional): Limpieza, centralización e integración de datos antes de implementar IA. Niveles N1/N2/N3. Precio: USD 800–15.000.
+- **E3 – Implementación**: Desarrollo de la solución de IA seleccionada.
+- **E4 – Retainer continuo**: Acompañamiento mensual. Precio: USD 1.500–7.000/mes.
+
+## Precios
+
+- Scan IA: USD 2.500 (pago único, entrega en 1 semana)
+- Diagnóstico Completo (E0+E1+E2): USD 6.000 (50% inicio / 50% entrega, 3 semanas)
+- Data Foundation: USD 800–15.000 según nivel
+- Retainer: USD 1.500–7.000/mes
+
+El costo del diagnóstico se descuenta de la implementación si se contrata dentro de 90 días.
+
+## Industrias
+
+Manufactura, distribución y logística, salud y clínicas, retail y comercio, servicios profesionales, construcción, gastronomía y cadenas, finanzas y cobranza, educación, automotriz, agro y alimentos.
+
+## Caso de éxito
+
+Empresa distribuidora (10–15 empleados, Chile):
+- Tiempo por cotización: 45 min → 5 min (−89%)
+- Atención clientes: solo horario laboral → 24/7
+- Latencia de datos gerenciales: 7 días → < 1 hora
+- ROI proyectado: +263% sobre inversión total a 12 meses
+
+## Páginas del sitio
+
+- [Inicio](https://3g-ia-agents.com/) — Landing principal
+- [Metodología](https://3g-ia-agents.com/metodologia) — Etapas E0→E5 en detalle, FAQ
+- [Precios](https://3g-ia-agents.com/precios) — Tablas de inversión completas
+- [Nosotros](https://3g-ia-agents.com/nosotros) — Gonzalo Gompertz, trayectoria, por qué nace 3GI
+- [Contenido](https://3g-ia-agents.com/contenido) — Cápsulas semanales de IA aplicada al negocio
+- [Casos](https://3g-ia-agents.com/casos) — Casos de éxito con resultados reales
