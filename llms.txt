@@ -15,19 +15,19 @@ LinkedIn: https://www.linkedin.com/company/3g-intelligence
 
 ## Qué hacemos
 
-Metodología E0→E5 para llevar empresas de la Era Manual a la Era de IA Aplicada:
+Metodología Diagnóstico + F1→F5 para llevar empresas de la Era Manual a la Era de IA Aplicada:
 
-- **E0 – Scan IA**: Diagnóstico inicial (2 horas). Score de Madurez IA en 5 dimensiones. Clasificación de Era (1, 2 o 3). Identificación de 3–7 oportunidades preliminares. Precio: gratis–USD 1.500.
-- **E1 – Análisis profundo**: Mapeo proceso a proceso. Scoring cuantificado. ROI proyectado a 12 meses. Precio: USD 2.000–5.000.
-- **E2 – Diseño de solución**: PRD técnico. Arquitectura de datos. Propuesta comercial lista para ejecutar.
-- **Data Foundation** (opcional): Limpieza, centralización e integración de datos antes de implementar IA. Niveles N1/N2/N3. Precio: USD 800–15.000.
-- **E3 – Implementación**: Desarrollo de la solución de IA seleccionada.
-- **E4 – Retainer continuo**: Acompañamiento mensual. Precio: USD 1.500–7.000/mes.
+- **Diagnóstico – Scan IA gratuito**: Formulario de 15 minutos. Score de Madurez IA en 5 dimensiones. Clasificación de Era (1, 2 o 3). Reporte de Diagnóstico con 3 oportunidades y recomendación de fase siguiente. Precio: gratis.
+- **F1 – Análisis profundo**: Mapeo proceso a proceso. Scoring cuantificado. ROI proyectado a 12 meses. PRD con roadmap priorizado. Precio: USD 2.500–6.000.
+- **F2 – Data Foundation**: Limpieza, centralización e integración de datos. Base sin la cual ninguna IA funciona de forma confiable. Niveles N1/N2/N3. Precio: USD 800–15.000.
+- **F3 – Quick Wins**: 2–3 automatizaciones de alto impacto y bajo riesgo. Objetivo: recuperar la inversión antes de escalar.
+- **F4 – Escala**: Expansión de la plataforma IA a más áreas. Integraciones adicionales, equipo capacitado.
+- **F5 – Autonomía / Retainer continuo**: La empresa opera con IA de forma autónoma. Acompañamiento mensual opcional. Precio: USD 1.500–7.000/mes.
 
 ## Precios
 
 - Scan IA: USD 2.500 (pago único, entrega en 1 semana)
-- Diagnóstico Completo (E0+E1+E2): USD 6.000 (50% inicio / 50% entrega, 3 semanas)
+- Diagnóstico Completo (Diag+F1+F2): USD 6.000 (50% inicio / 50% entrega, 3 semanas)
 - Data Foundation: USD 800–15.000 según nivel
 - Retainer: USD 1.500–7.000/mes
 
@@ -48,7 +48,7 @@ Empresa distribuidora (10–15 empleados, Chile):
 ## Páginas del sitio
 
 - [Inicio](https://3g-ia-agents.com/) — Landing principal
-- [Metodología](https://3g-ia-agents.com/metodologia) — Etapas E0→E5 en detalle, FAQ
+- [Metodología](https://3g-ia-agents.com/metodologia) — Diagnóstico + 5 fases F1→F5 en detalle, FAQ
 - [Precios](https://3g-ia-agents.com/precios) — Tablas de inversión completas
 - [Nosotros](https://3g-ia-agents.com/nosotros) — Gonzalo Gompertz, trayectoria, por qué nace 3GI
 - [Contenido](https://3g-ia-agents.com/contenido) — Cápsulas semanales de IA aplicada al negocio
