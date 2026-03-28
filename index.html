@@ -149,8 +149,9 @@
 
     /* ERAS */
     #eras { background: var(--night); }
-    .eras-intro { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; margin-bottom: 64px; }
-    .era-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+    .eras-intro { display: flex; flex-direction: column; gap: 48px; margin-bottom: 64px; }
+    .eras-intro > div:first-child { max-width: 640px; }
+    .era-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
     .era-card { border-radius: 12px; padding: 28px 24px; border: 1px solid var(--border); position: relative; overflow: hidden; }
     .era-card.current { border-color: rgba(0,232,145,0.3); background: rgba(0,232,145,0.04); }
     .era-card.current::after { content: attr(data-label); position: absolute; top: 14px; right: 14px; font-size: 9px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--green); background: rgba(0,232,145,0.12); padding: 3px 8px; border-radius: 10px; }
@@ -213,7 +214,6 @@
     /* RESPONSIVE */
     @media (max-width: 900px) {
       section { padding: 72px 0; }
-      .eras-intro { grid-template-columns: 1fr; gap: 48px; }
       .era-grid { grid-template-columns: 1fr; }
       .met-steps { grid-template-columns: 1fr; gap: 2px; }
       .met-step:first-child { border-radius: 12px 12px 0 0; }
