@@ -242,6 +242,50 @@
     }
     .retry-link:hover { color: var(--offwh); }
 
+    /* ── CAPTURA DE LEAD ─────────────────── */
+    .lead-capture {
+      border-radius: 14px;
+      border: 1px solid rgba(0,232,145,0.2);
+      background: rgba(0,232,145,0.04);
+      padding: 28px 32px;
+      margin-bottom: 20px;
+    }
+    .lead-capture-title {
+      font-family: 'Syne', sans-serif;
+      font-size: 17px; font-weight: 800;
+      letter-spacing: -0.02em; margin-bottom: 6px;
+    }
+    .lead-capture-sub {
+      font-size: 13px; color: var(--muted);
+      margin-bottom: 20px; line-height: 1.6;
+    }
+    .lead-form { display: flex; flex-direction: column; gap: 10px; }
+    .lead-input {
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 8px; padding: 12px 16px;
+      color: var(--offwh); font-size: 14px;
+      font-family: 'DM Sans', sans-serif;
+      outline: none; transition: border-color .2s;
+    }
+    .lead-input:focus { border-color: rgba(0,232,145,0.4); }
+    .lead-input::placeholder { color: var(--muted); }
+    .lead-submit {
+      background: var(--green); color: var(--night);
+      border: none; border-radius: 8px;
+      padding: 13px 24px; font-size: 14px; font-weight: 700;
+      cursor: pointer; transition: opacity .2s, transform .15s;
+      font-family: 'DM Sans', sans-serif;
+    }
+    .lead-submit:hover { opacity: .88; transform: translateY(-1px); }
+    .lead-submit:disabled { opacity: .5; cursor: default; transform: none; }
+    .lead-success {
+      text-align: center; padding: 16px;
+      font-size: 14px; color: var(--green);
+      background: rgba(0,232,145,0.06);
+      border-radius: 8px;
+    }
+
     /* ── PLAN DE ACCIÓN ──────────────────── */
     .plan-card {
       border-radius: 14px;
@@ -574,9 +618,22 @@
     },
   };
 
+  const TRACK_URL = 'https://pre-scan.3g-ia-agents.com/track';
+
+  function trackEvent(payload) {
+    fetch(TRACK_URL, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(payload),
+    }).catch(() => {}); // silencioso — nunca bloquea la UI
+  }
+
   function mostrarResultado() {
     const era  = calcEra();
     const data = ERAS[era];
+
+    // ── Registrar completion (sin email) ─────────────────────
+    trackEvent({ tipo: 'completion', era });
 
     document.getElementById('quiz').style.display     = 'none';
     document.getElementById('btn-submit').style.display = 'none';
@@ -622,6 +679,19 @@
         </div>
       </div>
 
+      <div class="lead-capture" id="lead-capture-box">
+        <div class="lead-capture-title">Recibe tu resultado por email</div>
+        <div class="lead-capture-sub">Te enviamos tu ERA, el plan de acción y un recordatorio para la llamada gratuita. Sin spam.</div>
+        <div class="lead-form" id="lead-form">
+          <input class="lead-input" id="lead-nombre" type="text" placeholder="Tu nombre (opcional)" />
+          <input class="lead-input" id="lead-email" type="email" placeholder="Tu email *" required />
+          <button class="lead-submit" id="lead-submit-btn" onclick="enviarLead('${era}')">Enviar mi diagnóstico →</button>
+        </div>
+        <div class="lead-success" id="lead-success" style="display:none;">
+          ✓ Enviado. Revisa tu bandeja — y si quieres agenda la llamada gratuita abajo.
+        </div>
+      </div>
+
       <div class="next-step">
         <div class="next-step-eyebrow">¿Quieres ir más rápido?</div>
         <h2>Agenda tu diagnóstico gratuito</h2>
@@ -639,6 +709,27 @@
     `;
 
     document.getElementById('resultado').scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+
+  async function enviarLead(era) {
+    const email  = document.getElementById('lead-email')?.value?.trim();
+    const nombre = document.getElementById('lead-nombre')?.value?.trim();
+    if (!email || !email.includes('@')) {
+      document.getElementById('lead-email').focus();
+      return;
+    }
+    const btn = document.getElementById('lead-submit-btn');
+    btn.disabled = true;
+    btn.textContent = 'Enviando…';
+    try {
+      await fetch(TRACK_URL, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ tipo: 'lead', era, email, nombre }),
+      });
+    } catch (_) {}
+    document.getElementById('lead-form').style.display   = 'none';
+    document.getElementById('lead-success').style.display = 'block';
   }
 
   function reiniciar() {
