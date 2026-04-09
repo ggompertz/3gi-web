@@ -294,10 +294,37 @@
     .footer-links a:hover { color: var(--offwh); }
     .footer-copy { font-size: 12px; color: rgba(238,241,246,0.25); }
 
+    /* ERA Spectrum */
+    .spectrum-section { padding: 80px 0; background: var(--night-2); border-bottom: 1px solid var(--border); }
+    .spectrum-header { max-width: 680px; margin-bottom: 40px; }
+    .spectrum-bar-row { display: grid; grid-template-columns: repeat(9, 1fr); border-radius: 6px; overflow: hidden; height: 6px; margin-bottom: 8px; }
+    .spectrum-bar-labels { display: grid; grid-template-columns: repeat(9, 1fr); margin-bottom: 36px; }
+    .bar-label { text-align: center; font-family: 'Syne', sans-serif; font-size: 9px; font-weight: 700; letter-spacing: 0.06em; color: rgba(238,241,246,0.3); padding-top: 5px; }
+    .spectrum-groups { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-bottom: 32px; }
+    .spectrum-group { border-radius: 12px; overflow: hidden; border: 1px solid var(--border); }
+    .spectrum-group-header { padding: 14px 20px 12px; font-family: 'Syne', sans-serif; font-weight: 700; font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; border-bottom: 1px solid var(--border); }
+    .spectrum-group.g-era1 .spectrum-group-header { color: #F97316; background: rgba(249,115,22,0.06); border-color: rgba(249,115,22,0.15); }
+    .spectrum-group.g-era2 .spectrum-group-header { color: #EAB308; background: rgba(234,179,8,0.06); border-color: rgba(234,179,8,0.15); }
+    .spectrum-group.g-era3 .spectrum-group-header { color: var(--green); background: rgba(0,232,145,0.06); border-color: rgba(0,232,145,0.15); }
+    .spectrum-sub { display: flex; align-items: flex-start; gap: 12px; padding: 14px 20px; border-bottom: 1px solid rgba(255,255,255,0.04); background: var(--night-3); position: relative; }
+    .spectrum-sub:last-child { border-bottom: none; }
+    .sub-dot { width: 9px; height: 9px; border-radius: 50%; flex-shrink: 0; margin-top: 5px; }
+    .sub-info { flex: 1; }
+    .sub-header { display: flex; align-items: baseline; gap: 8px; margin-bottom: 4px; }
+    .sub-name { font-family: 'Syne', sans-serif; font-size: 12px; font-weight: 700; letter-spacing: 0.08em; color: var(--offwh); }
+    .sub-score { font-size: 10px; color: var(--muted); }
+    .sub-desc { font-size: 12px; font-weight: 300; color: rgba(238,241,246,0.5); line-height: 1.55; }
+    .sub-badge { position: absolute; top: 10px; right: 12px; font-size: 8px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: #EAB308; background: rgba(234,179,8,0.1); padding: 2px 7px; border-radius: 10px; }
+    .spectrum-note { padding: 20px 28px; background: rgba(0,232,145,0.04); border: 1px solid rgba(0,232,145,0.12); border-radius: 10px; display: flex; align-items: center; justify-content: space-between; gap: 24px; flex-wrap: wrap; }
+    .spectrum-note-text { font-size: 15px; font-weight: 300; color: rgba(238,241,246,0.7); line-height: 1.6; }
+    .spectrum-note-text strong { color: var(--offwh); font-weight: 500; }
+
     /* Mobile */
     @media (max-width: 768px) {
       .criteria-grid { grid-template-columns: 1fr; }
       .fit-grid { grid-template-columns: 1fr; }
+      .spectrum-groups { grid-template-columns: 1fr; }
+      .spectrum-bar-row, .spectrum-bar-labels { display: none; }
     }
     @media (max-width: 640px) {
       .nav-links { display: none; }
@@ -338,6 +365,127 @@
     <div class="page-tag">Metodología</div>
     <h1 class="page-title">De cero a IA operativa<br/>en 5 fases.</h1>
     <p class="page-sub">Un proceso estructurado para que las PyMEs adopten inteligencia artificial de forma ordenada, sin riesgo y con retorno medible desde el primer sprint.</p>
+  </div>
+</section>
+
+<!-- ERA Spectrum -->
+<section class="spectrum-section" id="espectro">
+  <div class="container">
+    <div class="spectrum-header">
+      <div class="page-tag">Framework 3GI</div>
+      <h2 class="section-title">Tu posición exacta en el espectro</h2>
+      <p class="section-sub">No todas las ERA 2 son iguales. Una empresa con score 2.5 y una con 3.4 necesitan roadmaps completamente distintos. El Diagnóstico 3GI te ubica en uno de 9 sub-niveles — no solo la ERA.</p>
+    </div>
+
+    <!-- Gradient bar -->
+    <div class="spectrum-bar-row">
+      <div style="background:#DC2626"></div>
+      <div style="background:#EF4444"></div>
+      <div style="background:#F97316"></div>
+      <div style="background:#EAB308"></div>
+      <div style="background:#CA8A04"></div>
+      <div style="background:#65A30D"></div>
+      <div style="background:#16A34A"></div>
+      <div style="background:#15803D"></div>
+      <div style="background:#166534"></div>
+    </div>
+    <div class="spectrum-bar-labels">
+      <span class="bar-label">ERA 1-</span>
+      <span class="bar-label">ERA 1</span>
+      <span class="bar-label">ERA 1+</span>
+      <span class="bar-label">ERA 2-</span>
+      <span class="bar-label">ERA 2</span>
+      <span class="bar-label">ERA 2+</span>
+      <span class="bar-label">ERA 3-</span>
+      <span class="bar-label">ERA 3</span>
+      <span class="bar-label">ERA 3+</span>
+    </div>
+
+    <!-- 9 sub-niveles -->
+    <div class="spectrum-groups">
+
+      <div class="spectrum-group g-era1">
+        <div class="spectrum-group-header">ERA 1 — Caos Operativo</div>
+        <div class="spectrum-sub">
+          <div class="sub-dot" style="background:#DC2626"></div>
+          <div class="sub-info">
+            <div class="sub-header"><span class="sub-name">ERA 1-</span><span class="sub-score">1.0–1.5</span></div>
+            <div class="sub-desc">Todo en la cabeza del dueño. Sin procesos escritos ni herramientas. Cero documentación.</div>
+          </div>
+        </div>
+        <div class="spectrum-sub">
+          <div class="sub-dot" style="background:#EF4444"></div>
+          <div class="sub-info">
+            <div class="sub-header"><span class="sub-name">ERA 1</span><span class="sub-score">1.5–2.0</span></div>
+            <div class="sub-desc">Hay Excel pero cada uno tiene el suyo. La información existe — nadie la comparte ni la usa para decidir.</div>
+          </div>
+        </div>
+        <div class="spectrum-sub">
+          <div class="sub-dot" style="background:#F97316"></div>
+          <div class="sub-info">
+            <div class="sub-header"><span class="sub-name">ERA 1+</span><span class="sub-score">2.0–2.5</span></div>
+            <div class="sub-desc">Herramientas adoptadas, pero no se hablan entre sí. Datos atrapados en silos sin integración.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="spectrum-group g-era2">
+        <div class="spectrum-group-header">ERA 2 — Datos Organizados</div>
+        <div class="spectrum-sub">
+          <span class="sub-badge">Mayoría PyMEs</span>
+          <div class="sub-dot" style="background:#EAB308"></div>
+          <div class="sub-info">
+            <div class="sub-header"><span class="sub-name">ERA 2-</span><span class="sub-score">2.5–2.9</span></div>
+            <div class="sub-desc">Sistema centralizado, pero nadie lo usa para decidir. Los reportes se siguen armando a mano.</div>
+          </div>
+        </div>
+        <div class="spectrum-sub">
+          <div class="sub-dot" style="background:#CA8A04"></div>
+          <div class="sub-info">
+            <div class="sub-header"><span class="sub-name">ERA 2</span><span class="sub-score">2.9–3.2</span></div>
+            <div class="sub-desc">Datos fluyen. Reportes existen. La IA no está en el radar — pero el terreno está listo.</div>
+          </div>
+        </div>
+        <div class="spectrum-sub">
+          <div class="sub-dot" style="background:#65A30D"></div>
+          <div class="sub-info">
+            <div class="sub-header"><span class="sub-name">ERA 2+</span><span class="sub-score">3.2–3.5</span></div>
+            <div class="sub-desc">Experimentan con IA puntual, sin estrategia. Resultados inconsistentes, difíciles de escalar.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="spectrum-group g-era3">
+        <div class="spectrum-group-header">ERA 3 — Empresa con IA</div>
+        <div class="spectrum-sub">
+          <div class="sub-dot" style="background:#16A34A"></div>
+          <div class="sub-info">
+            <div class="sub-header"><span class="sub-name">ERA 3-</span><span class="sub-score">3.5–4.0</span></div>
+            <div class="sub-desc">IA corriendo en 1–2 procesos. ROI visible. El equipo empieza a adaptarse al nuevo ritmo operativo.</div>
+          </div>
+        </div>
+        <div class="spectrum-sub">
+          <div class="sub-dot" style="background:#15803D"></div>
+          <div class="sub-info">
+            <div class="sub-header"><span class="sub-name">ERA 3</span><span class="sub-score">4.0–4.5</span></div>
+            <div class="sub-desc">IA integrada en la operación core. Decisiones basadas en datos en tiempo real, sin fricción manual.</div>
+          </div>
+        </div>
+        <div class="spectrum-sub">
+          <div class="sub-dot" style="background:#00E891"></div>
+          <div class="sub-info">
+            <div class="sub-header"><span class="sub-name">ERA 3+</span><span class="sub-score">4.5–5.0</span></div>
+            <div class="sub-desc">IA como ventaja competitiva estructural. El sistema aprende y mejora sin intervención manual.</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="spectrum-note">
+      <p class="spectrum-note-text"><strong>El Diagnóstico 3GI identifica tu sub-nivel exacto</strong> — no solo la ERA. Esa precisión define el roadmap correcto desde el primer día.</p>
+      <a href="/diagnostico" class="btn btn-primary">Descubrir mi sub-nivel →</a>
+    </div>
   </div>
 </section>
 
