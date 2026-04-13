@@ -202,17 +202,43 @@
 
     /* ── SUBMIT ──────────────────────────── */
     #btn-submit {
-      display: none; width: 100%;
+      display: block; width: 100%;
       background: var(--green); color: var(--night);
       font-family: 'Syne', sans-serif;
       font-weight: 800; font-size: 16px;
-      border: none; border-radius: 10px;
+      border: 1.5px solid transparent; border-radius: 10px;
       padding: 18px 32px; cursor: pointer;
-      transition: opacity .2s, transform .15s;
-      margin-top: 8px;
+      transition: opacity .2s, transform .15s, background .25s, color .25s, border-color .25s;
+      margin-top: 24px;
     }
-    #btn-submit:hover { opacity: .88; transform: translateY(-1px); }
-    #btn-submit:disabled { opacity: .4; cursor: default; transform: none; }
+    #btn-submit:hover:not(:disabled) { opacity: .88; transform: translateY(-1px); }
+    #btn-submit:disabled {
+      background: var(--surface);
+      color: var(--muted);
+      border-color: var(--border);
+      cursor: not-allowed;
+      opacity: 1;
+    }
+
+    /* ── CHECKLIST DE PROGRESO ───────────── */
+    .quiz-checklist {
+      display: flex; flex-wrap: wrap; gap: 8px;
+      margin-top: 12px; justify-content: center;
+    }
+    .qc-item {
+      display: inline-flex; align-items: center; gap: 5px;
+      font-size: 12px; font-weight: 600;
+      padding: 5px 11px; border-radius: 20px;
+      border: 1px solid var(--border);
+      color: var(--muted);
+      transition: all .25s;
+    }
+    .qc-item.done {
+      border-color: rgba(0,232,145,0.45);
+      color: var(--green);
+      background: rgba(0,232,145,0.07);
+    }
+    .qc-icon { font-size: 10px; }
 
     /* ── RESULTADO ───────────────────────── */
     #resultado { display: none; }
@@ -571,9 +597,17 @@
       </div>
     </div>
 
-    <button id="btn-submit" onclick="mostrarResultado()">
-      Ver mi diagnóstico →
+    <button id="btn-submit" onclick="mostrarResultado()" disabled>
+      Responde las 5 preguntas para ver tu resultado
     </button>
+
+    <div class="quiz-checklist" id="quiz-checklist">
+      <span class="qc-item" id="chk-q1"><span class="qc-icon">○</span> Datos</span>
+      <span class="qc-item" id="chk-q2"><span class="qc-icon">○</span> Reportes</span>
+      <span class="qc-item" id="chk-q3"><span class="qc-icon">○</span> Operación</span>
+      <span class="qc-item" id="chk-q4"><span class="qc-icon">○</span> Clientes</span>
+      <span class="qc-item" id="chk-q5"><span class="qc-icon">○</span> Decisiones</span>
+    </div>
 
   </div><!-- /quiz -->
 
@@ -609,9 +643,30 @@
 
   function checkReady() {
     const answered = Object.values(answers).filter(v => v > 0).length;
+    const remaining = 5 - answered;
     const btn = document.getElementById('btn-submit');
-    btn.style.display = 'block';
-    btn.disabled = answered < 5;
+    const allDone = answered === 5;
+
+    btn.disabled = !allDone;
+    btn.textContent = allDone
+      ? 'Ver mi diagnóstico →'
+      : remaining === 1
+        ? 'Falta 1 pregunta para ver tu resultado'
+        : `Faltan ${remaining} preguntas para ver tu resultado`;
+
+    // Actualizar chips del checklist
+    const labels = { q1: 'Datos', q2: 'Reportes', q3: 'Operación', q4: 'Clientes', q5: 'Decisiones' };
+    Object.keys(labels).forEach(q => {
+      const el = document.getElementById('chk-' + q);
+      if (!el) return;
+      if (answers[q] > 0) {
+        el.classList.add('done');
+        el.innerHTML = '<span class="qc-icon">✓</span> ' + labels[q];
+      } else {
+        el.classList.remove('done');
+        el.innerHTML = '<span class="qc-icon">○</span> ' + labels[q];
+      }
+    });
   }
 
   function calcEra() {
@@ -695,10 +750,8 @@
     // ── Registrar completion (sin email) ─────────────────────
     trackEvent({ tipo: 'completion', era });
 
-    document.getElementById('quiz').style.display     = 'none';
-    document.getElementById('btn-submit').style.display = 'none';
-    document.getElementById('progress-wrap') && null;
-    document.querySelector('.progress-wrap').style.display = 'none';
+    document.getElementById('quiz').style.display          = 'none';
+    document.querySelector('.progress-wrap').style.display  = 'none';
     document.getElementById('intro').style.display   = 'none';
 
     const calendlyUrl = `https://calendly.com/escribeme-3g-ia-agents/diagnostico-base-en-30-min?a1=${encodeURIComponent(data.calendly_note)}`;
@@ -798,12 +851,16 @@
     document.querySelector('.progress-wrap').style.display = 'block';
     document.getElementById('intro').style.display = 'block';
     document.getElementById('resultado').style.display = 'none';
-    document.getElementById('btn-submit').style.display = 'none';
     document.querySelectorAll('.option').forEach(o => o.classList.remove('selected'));
     document.querySelectorAll('input[type="radio"]').forEach(r => r.checked = false);
     document.getElementById('progress-fill').style.width = '0%';
     document.getElementById('progress-pct').textContent = '0%';
     document.getElementById('progress-text').textContent = 'Pregunta 1 de 5';
+    // Resetear botón y checklist
+    const btn = document.getElementById('btn-submit');
+    btn.disabled = true;
+    btn.textContent = 'Responde las 5 preguntas para ver tu resultado';
+    checkReady();
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }
 </script>
