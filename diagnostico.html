@@ -409,6 +409,72 @@
     .plan-tool-label { color: var(--muted); font-size: 11px; margin-right: 4px; }
     .plan-tool-name { color: var(--green); font-weight: 700; }
 
+    /* ── ERA SELECTOR / TOGGLE ──────────── */
+    .era-selector {
+      display: flex; gap: 4px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 4px;
+      margin-bottom: 32px;
+    }
+    .era-tab {
+      flex: 1; padding: 11px 10px;
+      background: none; border: none;
+      border-radius: 9px;
+      font-family: 'Syne', sans-serif;
+      font-size: 13px; font-weight: 700;
+      color: var(--muted); cursor: pointer;
+      transition: all .2s; text-align: center; line-height: 1.35;
+    }
+    .era-tab:hover:not(.active) { color: var(--offwh); }
+    .era-tab.active {
+      background: var(--night);
+      color: var(--offwh);
+      box-shadow: 0 1px 4px rgba(0,0,0,0.5);
+    }
+    .era-tab-sub {
+      display: block; font-family: 'Inter', sans-serif;
+      font-size: 10px; font-weight: 500;
+      opacity: .55; margin-top: 2px;
+    }
+    .era-tab[data-mode="operacional"].active { box-shadow: 0 1px 4px rgba(0,0,0,.5), inset 0 -2px 0 #FBBF24; }
+    .era-tab[data-mode="comercial"].active   { box-shadow: 0 1px 4px rgba(0,0,0,.5), inset 0 -2px 0 #F97316; }
+    .era-tab[data-mode="ambas"].active       { box-shadow: 0 1px 4px rgba(0,0,0,.5), inset 0 -2px 0 var(--green); }
+
+    /* ── DIVISOR ENTRE DIMENSIONES ───────── */
+    .dim-divider {
+      display: none; align-items: center; gap: 16px;
+      margin: 8px 0 36px;
+    }
+    .dim-divider.visible { display: flex; }
+    .dim-divider-line { flex: 1; height: 1px; background: rgba(249,115,22,.3); }
+    .dim-divider-label {
+      font-size: 11px; font-weight: 700; letter-spacing: 0.14em;
+      text-transform: uppercase; color: #F97316; white-space: nowrap;
+    }
+
+    /* ── RESULTADO DUAL (Ambas) ──────────── */
+    .dual-scores {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 12px;
+      margin-bottom: 20px;
+    }
+    .score-mini {
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: 12px; padding: 16px 20px; text-align: center;
+    }
+    .score-mini-label {
+      font-size: 10px; font-weight: 700; letter-spacing: 0.12em;
+      text-transform: uppercase; color: var(--muted); margin-bottom: 8px;
+    }
+    .score-mini-era {
+      font-family: 'Syne', sans-serif;
+      font-size: 20px; font-weight: 900; line-height: 1.1;
+    }
+    .score-mini-name {
+      font-size: 11px; color: var(--muted); margin-top: 4px; line-height: 1.4;
+    }
+
     /* ── SOCIAL BADGE ───────────────────── */
     .social-badge {
       display: inline-flex; align-items: center; gap: 8px;
@@ -521,6 +587,19 @@
     </div>
   </div>
 
+  <!-- ERA SELECTOR -->
+  <div class="era-selector" id="era-selector">
+    <button class="era-tab active" data-mode="operacional" onclick="setMode('operacional')">
+      Operacional<span class="era-tab-sub">¿Aguanta la demanda?</span>
+    </button>
+    <button class="era-tab" data-mode="comercial" onclick="setMode('comercial')">
+      Comercial<span class="era-tab-sub">¿Genera la demanda?</span>
+    </button>
+    <button class="era-tab" data-mode="ambas" onclick="setMode('ambas')">
+      Ambas<span class="era-tab-sub">Mapa completo</span>
+    </button>
+  </div>
+
   <!-- QUIZ SECTION H2 -->
   <h2 class="visually-hidden">Test de diagnóstico: ¿en qué ERA está tu empresa?</h2>
 
@@ -535,6 +614,7 @@
 
   <!-- QUIZ -->
   <div id="quiz">
+  <div id="op-questions">
 
     <!-- P1 -->
     <div class="question" style="animation-delay:.05s">
@@ -655,16 +735,156 @@
       </div>
     </div>
 
+  </div><!-- /op-questions -->
+
+  <!-- DIVISOR ERA COMERCIAL (solo visible en modo "ambas") -->
+  <div class="dim-divider" id="com-divider">
+    <div class="dim-divider-line"></div>
+    <span class="dim-divider-label">ERA Comercial</span>
+    <div class="dim-divider-line"></div>
+  </div>
+
+  <!-- PREGUNTAS COMERCIALES -->
+  <div id="com-questions" style="display:none">
+
+    <!-- C1 -->
+    <div class="question" style="animation-delay:.05s">
+      <div class="q-num">Pregunta 1 — Generación de demanda</div>
+      <div class="q-text">¿Cómo llegan nuevos clientes a tu empresa?</div>
+      <div class="options">
+        <label class="option" onclick="selectOption(this, 'c1', 1)">
+          <input type="radio" name="c1" value="1" />
+          <div class="opt-letter">A</div>
+          <div class="opt-text">Por el esfuerzo personal del dueño — contactos directos o referidos sin proceso definido</div>
+        </label>
+        <label class="option" onclick="selectOption(this, 'c1', 2)">
+          <input type="radio" name="c1" value="2" />
+          <div class="opt-letter">B</div>
+          <div class="opt-text">Algunos canales activos (redes, web, publicidad), pero sin sistema consistente de generación</div>
+        </label>
+        <label class="option" onclick="selectOption(this, 'c1', 3)">
+          <input type="radio" name="c1" value="3" />
+          <div class="opt-letter">C</div>
+          <div class="opt-text">Canal de adquisición predecible — genera prospectos de forma sistemática sin que el dueño intervenga</div>
+        </label>
+      </div>
+    </div>
+    <hr class="q-divider" />
+
+    <!-- C2 -->
+    <div class="question" style="animation-delay:.1s">
+      <div class="q-num">Pregunta 2 — Proceso de ventas</div>
+      <div class="q-text">¿Cómo es el proceso desde que aparece un prospecto hasta que cierra?</div>
+      <div class="options">
+        <label class="option" onclick="selectOption(this, 'c2', 1)">
+          <input type="radio" name="c2" value="1" />
+          <div class="opt-letter">A</div>
+          <div class="opt-text">Informal — el dueño o cada vendedor lo maneja a su manera, sin etapas definidas</div>
+        </label>
+        <label class="option" onclick="selectOption(this, 'c2', 2)">
+          <input type="radio" name="c2" value="2" />
+          <div class="opt-letter">B</div>
+          <div class="opt-text">Hay etapas definidas, pero el seguimiento es manual e inconsistente</div>
+        </label>
+        <label class="option" onclick="selectOption(this, 'c2', 3)">
+          <input type="radio" name="c2" value="3" />
+          <div class="opt-letter">C</div>
+          <div class="opt-text">Proceso documentado, seguimiento automatizado y métricas de conversión por etapa</div>
+        </label>
+      </div>
+    </div>
+    <hr class="q-divider" />
+
+    <!-- C3 -->
+    <div class="question" style="animation-delay:.15s">
+      <div class="q-num">Pregunta 3 — Retención y recurrencia</div>
+      <div class="q-text">¿Cómo mantienes a tus clientes activos y recurrentes?</div>
+      <div class="options">
+        <label class="option" onclick="selectOption(this, 'c3', 1)">
+          <input type="radio" name="c3" value="1" />
+          <div class="opt-letter">A</div>
+          <div class="opt-text">No hay sistema — los clientes vuelven solos o no vuelven</div>
+        </label>
+        <label class="option" onclick="selectOption(this, 'c3', 2)">
+          <input type="radio" name="c3" value="2" />
+          <div class="opt-letter">B</div>
+          <div class="opt-text">Seguimiento ocasional y algunas acciones de fidelización, pero sin regularidad ni métricas</div>
+        </label>
+        <label class="option" onclick="selectOption(this, 'c3', 3)">
+          <input type="radio" name="c3" value="3" />
+          <div class="opt-letter">C</div>
+          <div class="opt-text">Programa activo: comunicación sistemática, alertas de churn y métricas de recurrencia</div>
+        </label>
+      </div>
+    </div>
+    <hr class="q-divider" />
+
+    <!-- C4 -->
+    <div class="question" style="animation-delay:.2s">
+      <div class="q-num">Pregunta 4 — Presencia y visibilidad</div>
+      <div class="q-text">¿Cómo te encuentra un cliente que no te conoce?</div>
+      <div class="options">
+        <label class="option" onclick="selectOption(this, 'c4', 1)">
+          <input type="radio" name="c4" value="1" />
+          <div class="opt-letter">A</div>
+          <div class="opt-text">Difícilmente — no tenemos presencia digital real ni posicionamiento claro</div>
+        </label>
+        <label class="option" onclick="selectOption(this, 'c4', 2)">
+          <input type="radio" name="c4" value="2" />
+          <div class="opt-letter">B</div>
+          <div class="opt-text">Tenemos presencia en redes o web, pero no genera leads de forma consistente</div>
+        </label>
+        <label class="option" onclick="selectOption(this, 'c4', 3)">
+          <input type="radio" name="c4" value="3" />
+          <div class="opt-letter">C</div>
+          <div class="opt-text">Posicionamiento activo que trae prospectos calificados de forma predecible</div>
+        </label>
+      </div>
+    </div>
+    <hr class="q-divider" />
+
+    <!-- C5 -->
+    <div class="question" style="animation-delay:.25s">
+      <div class="q-num">Pregunta 5 — Métricas comerciales</div>
+      <div class="q-text">¿Qué métricas de ventas mides regularmente?</div>
+      <div class="options">
+        <label class="option" onclick="selectOption(this, 'c5', 1)">
+          <input type="radio" name="c5" value="1" />
+          <div class="opt-letter">A</div>
+          <div class="opt-text">Solo los ingresos totales — o no medimos nada</div>
+        </label>
+        <label class="option" onclick="selectOption(this, 'c5', 2)">
+          <input type="radio" name="c5" value="2" />
+          <div class="opt-letter">B</div>
+          <div class="opt-text">Seguimos el pipeline y algunos indicadores, pero sin dashboard integrado</div>
+        </label>
+        <label class="option" onclick="selectOption(this, 'c5', 3)">
+          <input type="radio" name="c5" value="3" />
+          <div class="opt-letter">C</div>
+          <div class="opt-text">Dashboard comercial completo: conversión, CAC, LTV, tiempo de cierre, por canal</div>
+        </label>
+      </div>
+    </div>
+
+  </div><!-- /com-questions -->
+
     <button id="btn-submit" onclick="mostrarResultado()" disabled>
       Responde las 5 preguntas para ver tu resultado
     </button>
 
     <div class="quiz-checklist" id="quiz-checklist">
-      <span class="qc-item" id="chk-q1"><span class="qc-icon">○</span> Datos</span>
-      <span class="qc-item" id="chk-q2"><span class="qc-icon">○</span> Reportes</span>
-      <span class="qc-item" id="chk-q3"><span class="qc-icon">○</span> Operación</span>
-      <span class="qc-item" id="chk-q4"><span class="qc-icon">○</span> Clientes</span>
-      <span class="qc-item" id="chk-q5"><span class="qc-icon">○</span> Decisiones</span>
+      <!-- Op chips -->
+      <span class="qc-item qc-op" id="chk-q1"><span class="qc-icon">○</span> Datos</span>
+      <span class="qc-item qc-op" id="chk-q2"><span class="qc-icon">○</span> Reportes</span>
+      <span class="qc-item qc-op" id="chk-q3"><span class="qc-icon">○</span> Operación</span>
+      <span class="qc-item qc-op" id="chk-q4"><span class="qc-icon">○</span> Clientes</span>
+      <span class="qc-item qc-op" id="chk-q5"><span class="qc-icon">○</span> Decisiones</span>
+      <!-- Com chips (ocultos por defecto) -->
+      <span class="qc-item qc-com" id="chk-c1" style="display:none"><span class="qc-icon">○</span> Generación</span>
+      <span class="qc-item qc-com" id="chk-c2" style="display:none"><span class="qc-icon">○</span> Ventas</span>
+      <span class="qc-item qc-com" id="chk-c3" style="display:none"><span class="qc-icon">○</span> Retención</span>
+      <span class="qc-item qc-com" id="chk-c4" style="display:none"><span class="qc-icon">○</span> Visibilidad</span>
+      <span class="qc-item qc-com" id="chk-c5" style="display:none"><span class="qc-icon">○</span> Métricas</span>
     </div>
 
   </div><!-- /quiz -->
@@ -679,8 +899,12 @@
 </footer>
 
 <script>
-  const answers = { q1: 0, q2: 0, q3: 0, q4: 0, q5: 0 };
-  const qOrder  = ['q1','q2','q3','q4','q5'];
+  // ── Estado global ──────────────────────────────────────────
+  let mode = 'operacional'; // 'operacional' | 'comercial' | 'ambas'
+  const opAnswers  = { q1: 0, q2: 0, q3: 0, q4: 0, q5: 0 };
+  const comAnswers = { c1: 0, c2: 0, c3: 0, c4: 0, c5: 0 };
+  const allOpKeys  = ['q1','q2','q3','q4','q5'];
+  const allComKeys = ['c1','c2','c3','c4','c5'];
 
   // ── Contador dinámico (intenta obtener el real, usa fallback) ──
   const BASE_COUNT = 80;
@@ -695,71 +919,106 @@
     })
     .catch(() => {});
 
+  // ── Cambio de modo ────────────────────────────────────────
+  function setMode(newMode) {
+    mode = newMode;
+    // Tabs
+    document.querySelectorAll('.era-tab').forEach(t => t.classList.remove('active'));
+    document.querySelector(`.era-tab[data-mode="${newMode}"]`).classList.add('active');
+    // Secciones
+    const showOp  = newMode === 'operacional' || newMode === 'ambas';
+    const showCom = newMode === 'comercial'   || newMode === 'ambas';
+    document.getElementById('op-questions').style.display  = showOp  ? 'block' : 'none';
+    document.getElementById('com-questions').style.display = showCom ? 'block' : 'none';
+    const divider = document.getElementById('com-divider');
+    if (newMode === 'ambas') divider.classList.add('visible');
+    else                     divider.classList.remove('visible');
+    // Chips
+    document.querySelectorAll('.qc-op').forEach(c => c.style.display = showOp  ? 'inline-flex' : 'none');
+    document.querySelectorAll('.qc-com').forEach(c => c.style.display = showCom ? 'inline-flex' : 'none');
+    // Resetear respuestas del bloque que se oculta
+    if (!showOp)  allOpKeys.forEach(k => { opAnswers[k]  = 0; });
+    if (!showCom) allComKeys.forEach(k => { comAnswers[k] = 0; });
+    // Re-deselect hidden options
+    if (!showOp)  document.querySelectorAll('#op-questions .option').forEach(o => o.classList.remove('selected'));
+    if (!showCom) document.querySelectorAll('#com-questions .option').forEach(o => o.classList.remove('selected'));
+    updateProgress();
+    checkReady();
+  }
+
   function selectOption(el, qName, val) {
     el.closest('.options').querySelectorAll('.option').forEach(o => o.classList.remove('selected'));
     el.classList.add('selected');
-    answers[qName] = val;
+    if (qName.startsWith('c')) comAnswers[qName] = val;
+    else                        opAnswers[qName]  = val;
     updateProgress();
     checkReady();
     mobileScrollNext(qName);
   }
 
-  // ── Auto-scroll mobile: avanza a la siguiente pregunta sin responder ──
+  // ── Auto-scroll mobile ────────────────────────────────────
   function mobileScrollNext(qName) {
     if (window.innerWidth > 640) return;
-    const idx = qOrder.indexOf(qName);
-    if (idx < 0 || idx >= qOrder.length - 1) return;
-    const nextQ = document.querySelectorAll('.question')[idx + 1];
-    if (nextQ) {
-      setTimeout(() => nextQ.scrollIntoView({ behavior: 'smooth', block: 'start' }), 180);
-    }
+    const isOp  = qName.startsWith('q');
+    const keys  = isOp ? allOpKeys : allComKeys;
+    const allQs = isOp
+      ? document.querySelectorAll('#op-questions .question')
+      : document.querySelectorAll('#com-questions .question');
+    const idx = keys.indexOf(qName);
+    if (idx < 0 || idx >= allQs.length - 1) return;
+    setTimeout(() => allQs[idx + 1].scrollIntoView({ behavior: 'smooth', block: 'start' }), 180);
   }
 
   function updateProgress() {
-    const answered = Object.values(answers).filter(v => v > 0).length;
-    const pct = Math.round((answered / 5) * 100);
+    const opDone  = Object.values(opAnswers).filter(v => v > 0).length;
+    const comDone = Object.values(comAnswers).filter(v => v > 0).length;
+    const total   = mode === 'ambas' ? 10 : 5;
+    const done    = mode === 'operacional' ? opDone : mode === 'comercial' ? comDone : opDone + comDone;
+    const pct = Math.round((done / total) * 100);
     document.getElementById('progress-fill').style.width = pct + '%';
     document.getElementById('progress-pct').textContent = pct + '%';
     document.getElementById('progress-text').textContent =
-      answered < 5 ? `Pregunta ${answered + 1} de 5` : '5 de 5 respondidas';
+      done < total ? `Pregunta ${done + 1} de ${total}` : `${total} de ${total} respondidas`;
   }
 
   function checkReady() {
-    const answered = Object.values(answers).filter(v => v > 0).length;
-    const remaining = 5 - answered;
+    const opDone  = Object.values(opAnswers).filter(v => v > 0).length;
+    const comDone = Object.values(comAnswers).filter(v => v > 0).length;
+    const needed  = mode === 'ambas' ? 10 : 5;
+    const done    = mode === 'operacional' ? opDone : mode === 'comercial' ? comDone : opDone + comDone;
+    const remaining = needed - done;
+    const allDone   = remaining === 0;
     const btn = document.getElementById('btn-submit');
-    const allDone = answered === 5;
-
-    btn.disabled = !allDone;
-    btn.textContent = allDone
-      ? 'Ver mi diagnóstico →'
-      : remaining === 1
-        ? 'Falta 1 pregunta para ver tu resultado'
-        : `Faltan ${remaining} preguntas para ver tu resultado`;
-
-    // Actualizar chips del checklist
-    const labels = { q1: 'Datos', q2: 'Reportes', q3: 'Operación', q4: 'Clientes', q5: 'Decisiones' };
-    Object.keys(labels).forEach(q => {
-      const el = document.getElementById('chk-' + q);
+    btn.disabled  = !allDone;
+    btn.textContent = allDone ? 'Ver mi diagnóstico →'
+      : remaining === 1 ? 'Falta 1 pregunta para ver tu resultado'
+      : `Faltan ${remaining} preguntas para ver tu resultado`;
+    // Chips op
+    const opLabels  = { q1:'Datos', q2:'Reportes', q3:'Operación', q4:'Clientes', q5:'Decisiones' };
+    const comLabels = { c1:'Generación', c2:'Ventas', c3:'Retención', c4:'Visibilidad', c5:'Métricas' };
+    Object.entries(opLabels).forEach(([k, label]) => {
+      const el = document.getElementById('chk-' + k);
       if (!el) return;
-      if (answers[q] > 0) {
-        el.classList.add('done');
-        el.innerHTML = '<span class="qc-icon">✓</span> ' + labels[q];
-      } else {
-        el.classList.remove('done');
-        el.innerHTML = '<span class="qc-icon">○</span> ' + labels[q];
-      }
+      const done = opAnswers[k] > 0;
+      el.classList.toggle('done', done);
+      el.innerHTML = `<span class="qc-icon">${done ? '✓' : '○'}</span> ${label}`;
+    });
+    Object.entries(comLabels).forEach(([k, label]) => {
+      const el = document.getElementById('chk-' + k);
+      if (!el) return;
+      const done = comAnswers[k] > 0;
+      el.classList.toggle('done', done);
+      el.innerHTML = `<span class="qc-icon">${done ? '✓' : '○'}</span> ${label}`;
     });
   }
 
-  function calcEra() {
-    const vals = Object.values(answers);
-    const sum  = vals.reduce((a, b) => a + b, 0);
-    const avg  = sum / 5;
-    // 1.0-1.8 → ERA 1 · 1.9-2.6 → ERA 2 · 2.7-3.0 → ERA 3
-    if (avg <= 1.8) return 1;
-    if (avg <= 2.6) return 2;
-    return 3;
+  function calcEraOp() {
+    const avg = Object.values(opAnswers).reduce((a,b) => a+b, 0) / 5;
+    if (avg <= 1.8) return 1; if (avg <= 2.6) return 2; return 3;
+  }
+  function calcEraCom() {
+    const avg = Object.values(comAnswers).reduce((a,b) => a+b, 0) / 5;
+    if (avg <= 1.8) return 1; if (avg <= 2.6) return 2; return 3;
   }
 
   const ERAS = {
@@ -816,6 +1075,88 @@
     },
   };
 
+  // ── Datos ERA Comercial ───────────────────────────────────
+  const ERAS_COM = {
+    1: {
+      color: '#F87171', bg: 'rgba(248,113,113,0.06)', border: '#F87171',
+      label: 'ERA Comercial 1', name: 'Todo depende del dueño',
+      msg: 'Tu empresa vende, pero solo cuando el dueño empuja. No hay sistema que genere demanda de forma independiente. Cada cliente nuevo requiere esfuerzo personal — eso no escala.',
+      insight: '"Sin un motor comercial sistematizado, el crecimiento tiene techo — y ese techo eres tú."',
+      cta_sub: 'Te mostramos cómo construir un sistema de generación de demanda que funcione sin ti.',
+      calendly_note: 'ERA Comercial 1 — dependencia del dueño · necesita sistema comercial',
+      plan: [
+        'Define un proceso de ventas en 3 pasos escritos — aunque sea básico. Sin proceso documentado, no hay sistema.',
+        'Crea un registro simple de todos tus prospectos y en qué etapa están. Una planilla es suficiente para empezar.',
+        'Agenda el diagnóstico gratuito — te ayudamos a identificar el primer canal de generación que puedes sistematizar.',
+      ],
+      tool: { name: 'CRM simple (HubSpot gratuito)', desc: 'Para registrar prospectos, hacer seguimiento y no depender de la memoria del dueño.' },
+    },
+    2: {
+      color: '#FBBF24', bg: 'rgba(251,191,36,0.06)', border: '#FBBF24',
+      label: 'ERA Comercial 2', name: 'Proceso en construcción',
+      msg: 'Tienes las bases comerciales pero el proceso es inconsistente. Algunos meses van bien, otros no — y no sabes exactamente por qué. La demanda todavía depende demasiado de esfuerzo manual.',
+      insight: '"Tienes los ladrillos. Lo que falta es el cemento — un sistema que conecte todo y lo haga predecible."',
+      cta_sub: 'Identificamos los 2 cuellos de botella comerciales que más te están costando y cómo resolverlos.',
+      calendly_note: 'ERA Comercial 2 — proceso en construcción · lista para sistematizar',
+      plan: [
+        'Mide tu tasa de conversión por etapa del funnel — ¿dónde se pierden más prospectos? Ahí está el problema.',
+        'Automatiza el seguimiento post-reunión o post-cotización. Ese paso solo puede subir el cierre 20–30%.',
+        'Agenda el diagnóstico gratuito — diseñamos juntos el sistema de generación de demanda para tu tipo de negocio.',
+      ],
+      tool: { name: 'Automatización de seguimiento (Zapier o n8n)', desc: 'Para que el sistema haga el seguimiento comercial sin que nadie tenga que recordarlo.' },
+    },
+    3: {
+      color: '#00E891', bg: 'rgba(0,232,145,0.06)', border: '#00E891',
+      label: 'ERA Comercial 3', name: 'Generación sistematizada',
+      msg: 'Tu empresa genera y retiene demanda de forma predecible. El motor comercial funciona con o sin el dueño. El desafío ahora es optimizar y escalar lo que ya funciona.',
+      insight: '"La empresa que domina la generación de demanda sistematizada no compite en precio — compite en categoría."',
+      cta_sub: 'Te ayudamos a identificar las siguientes palancas de crecimiento y cómo la IA puede potenciarlas.',
+      calendly_note: 'ERA Comercial 3 — generación sistematizada · busca escalar',
+      plan: [
+        'Analiza qué canal de adquisición tiene el mejor ratio CAC/LTV y concentra recursos ahí.',
+        'Implementa un programa de referidos estructurado — tus clientes satisfechos son tu mejor fuente de crecimiento.',
+        'Agenda el diagnóstico gratuito — revisamos cómo la IA puede escalar tu motor comercial sin agregar equipo.',
+      ],
+      tool: { name: 'Sistema de referidos automatizado', desc: 'Para que cada cliente satisfecho genere activamente nuevos prospectos de forma sistematizada.' },
+    },
+  };
+
+  // ── Cuadrantes (modo Ambas) ───────────────────────────────
+  const QUADRANTS = {
+    'low-low': {
+      color: '#F87171', bg: 'rgba(248,113,113,0.06)',
+      archetype: 'ERA 1 en ambas dimensiones',
+      name: 'La base primero',
+      msg: 'Tu empresa tiene desafíos tanto en operaciones como en generación de demanda. La buena noticia: el primer paso en ambas dimensiones es el mismo — centralizar la información y definir procesos básicos. Resolver eso desbloquea las dos.',
+      insight: '"El caos operativo y comercial se alimentan mutuamente. Un paso en la base mueve las dos dimensiones."',
+      calendly_note: 'ERA 1 op + ERA 1 com — necesita base operacional y comercial',
+    },
+    'high-low': {
+      color: '#60A5FA', bg: 'rgba(96,165,250,0.06)',
+      archetype: 'La empresa invisible',
+      name: 'Opera bien. No crece.',
+      msg: 'Tus operaciones funcionan. Los clientes que tienes están contentos. Pero el mercado no te encuentra. Tu empresa no tiene un problema de calidad — tiene un problema de visibilidad y generación de demanda.',
+      insight: '"Operas perfecto. Nadie lo sabe. Eso no es un problema operacional — es un problema de ERA Comercial."',
+      calendly_note: 'Op alta + Com baja — La empresa invisible · necesita motor comercial',
+    },
+    'low-high': {
+      color: '#F97316', bg: 'rgba(249,115,22,0.06)',
+      archetype: 'La trampa del éxito',
+      name: 'Vende bien. No aguanta.',
+      msg: 'Vendes bien. Demasiado bien. Pero el backend operacional no aguanta la demanda que generas. Cada nuevo cliente presiona más un sistema que ya cruje. Si no resuelves esto antes, el crecimiento se convierte en el problema.',
+      insight: '"El éxito comercial sin base operacional es una bomba de tiempo. El reloj ya está corriendo."',
+      calendly_note: 'Op baja + Com alta — La trampa del éxito · necesita base operacional urgente',
+    },
+    'high-high': {
+      color: '#00E891', bg: 'rgba(0,232,145,0.06)',
+      archetype: 'En camino a ERA 3',
+      name: 'Las dos dimensiones funcionan.',
+      msg: 'Tienes operaciones sólidas y un motor comercial que funciona. La brecha ahora es de integración — hacer que ambas dimensiones se potencien mutuamente con datos e IA.',
+      insight: '"La empresa que domina las dos dimensiones no solo crece — crea una ventaja que es muy difícil de copiar."',
+      calendly_note: 'Op alta + Com alta — en camino a ERA 3 · listo para integración IA',
+    },
+  };
+
   const TRACK_URL = 'https://pre-scan.3g-ia-agents.com/track';
 
   function trackEvent(payload) {
@@ -827,87 +1168,131 @@
   }
 
   function mostrarResultado() {
-    const era  = calcEra();
-    const data = ERAS[era];
-
-    // ── Registrar completion (sin email) ─────────────────────
-    trackEvent({ tipo: 'completion', era });
+    const eraOp  = calcEraOp();
+    const eraCom = calcEraCom();
+    // Compatibilidad con track: usar el era relevante
+    const eraForTrack = mode === 'comercial' ? `ERA${eraCom}C` : `ERA${eraOp}`;
+    trackEvent({ tipo: 'completion', era: eraForTrack, modo: mode });
 
     document.getElementById('quiz').style.display          = 'none';
     document.querySelector('.progress-wrap').style.display  = 'none';
-    document.getElementById('intro').style.display   = 'none';
+    document.getElementById('era-selector').style.display  = 'none';
+    document.getElementById('intro').style.display         = 'none';
 
-    const calendlyUrl = `https://calendly.com/escribeme-3g-ia-agents/diagnostico-base-en-30-min?a1=${encodeURIComponent(data.calendly_note)}`;
-    const waUrl = `https://wa.me/56988974898?text=${encodeURIComponent('Hola, hice el diagnóstico de Madurez IA y quedé en ' + data.label + ' — ' + data.name + '. Me gustaría saber más.')}`;
-
-    document.getElementById('resultado').style.display = 'block';
     const waIcon = `<svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>`;
 
-    document.getElementById('resultado').innerHTML = `
-      <div class="eyebrow" style="color:${data.color}">Tu resultado</div>
+    function planHtml(data, color) {
+      return `
+        <div class="plan-card">
+          <div class="plan-eyebrow">Plan de acción — 3 pasos concretos</div>
+          <ul class="plan-steps">
+            ${data.plan.map((p, i) => `<li><div class="plan-step-num">${i+1}</div><div>${p}</div></li>`).join('')}
+          </ul>
+          <div class="plan-tool">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="${color}" stroke-width="2.5"><polyline points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+            <span class="plan-tool-label">Primera herramienta:</span>
+            <span class="plan-tool-name">${data.tool.name}</span>
+            <span style="color:var(--muted);font-size:12px;">— ${data.tool.desc}</span>
+          </div>
+        </div>`;
+    }
 
-      <div class="result-card" style="background:${data.bg}; border-color:${data.border};">
-        <div class="result-era-label" style="color:${data.color}">${data.label} — Diagnóstico 3G Intelligence</div>
-        <div class="result-era-name" style="color:${data.color}">${data.name}</div>
-        <p class="result-msg">${data.msg}</p>
-        <div style="margin-top:12px; padding:10px 14px; background:rgba(255,255,255,0.04); border-radius:8px; font-size:12px; color:rgba(238,241,246,0.45); border-left:2px solid rgba(238,241,246,0.1); line-height:1.6;">
-          Esta es tu ERA de referencia (1 de 3). El Diagnóstico 3GI identifica tu <strong style="color:rgba(238,241,246,0.65);">sub-nivel exacto</strong> dentro del espectro de 9 posiciones — y construye el roadmap específico para donde estás hoy. <a href="/metodologia#espectro" style="color:rgba(0,232,145,0.6); text-decoration:underline; text-underline-offset:2px;">Ver el espectro completo →</a>
+    function leadAndCtaHtml(data, eraLabel) {
+      const calendlyUrl = `https://calendly.com/escribeme-3g-ia-agents/diagnostico-base-en-30-min?a1=${encodeURIComponent(data.calendly_note)}`;
+      const waUrl = `https://wa.me/56988974898?text=${encodeURIComponent('Hola, hice el diagnóstico 3GI y quedé en ' + eraLabel + '. Me gustaría saber más.')}`;
+      return `
+        <div class="lead-capture" id="lead-capture-box">
+          <div class="lead-capture-title">Recibe tu resultado por email</div>
+          <div class="lead-capture-sub">Te enviamos tu ERA, el plan de acción y un recordatorio para la llamada gratuita. Sin spam.</div>
+          <div class="lead-form" id="lead-form">
+            <input class="lead-input" id="lead-nombre" type="text" placeholder="Tu nombre (opcional)" />
+            <input class="lead-input" id="lead-email" type="email" placeholder="Tu email *" required />
+            <button class="lead-submit" id="lead-submit-btn" onclick="enviarLead('${eraLabel}')">Enviar mi diagnóstico →</button>
+          </div>
+          <div class="lead-success" id="lead-success" style="display:none;">✓ Enviado. Revisa tu bandeja.</div>
         </div>
-        <div class="result-insight" style="border-color:${data.color}; color:#CBD5E1; margin-top:12px;">
-          ${data.insight}
-        </div>
-      </div>
+        <div class="next-step">
+          <div class="next-step-eyebrow">¿Quieres ir más rápido?</div>
+          <h2>Agenda tu diagnóstico gratuito</h2>
+          <p>${data.cta_sub}<br>30 minutos · Sin costo · Sin compromiso.</p>
+          <a href="${calendlyUrl}" target="_blank" class="btn-calendly">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+            Agendar llamada gratuita
+          </a>
+          <div class="divider-or">o</div>
+          <a href="${waUrl}" target="_blank" class="btn-wa">${waIcon} Escribir por WhatsApp</a>
+          <button class="retry-link" onclick="reiniciar()">Volver a hacer el test</button>
+        </div>`;
+    }
 
-      <div class="plan-card">
-        <div class="plan-eyebrow">Tu plan de acción — 3 pasos concretos</div>
-        <ul class="plan-steps">
-          ${data.plan.map((p, i) => `
-            <li>
-              <div class="plan-step-num">${i + 1}</div>
-              <div>${p}</div>
-            </li>`).join('')}
-        </ul>
-        <div class="plan-tool">
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="${data.color}" stroke-width="2.5"><polyline points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
-          <span class="plan-tool-label">Primera herramienta recomendada:</span>
-          <span class="plan-tool-name">${data.tool.name}</span>
-          <span style="color:var(--muted);font-size:12px;">— ${data.tool.desc}</span>
-        </div>
-      </div>
+    document.getElementById('resultado').style.display = 'block';
 
-      <div class="lead-capture" id="lead-capture-box">
-        <div class="lead-capture-title">Recibe tu resultado por email</div>
-        <div class="lead-capture-sub">Te enviamos tu ERA, el plan de acción y un recordatorio para la llamada gratuita. Sin spam.</div>
-        <div class="lead-form" id="lead-form">
-          <input class="lead-input" id="lead-nombre" type="text" placeholder="Tu nombre (opcional)" />
-          <input class="lead-input" id="lead-email" type="email" placeholder="Tu email *" required />
-          <button class="lead-submit" id="lead-submit-btn" onclick="enviarLead('${era}')">Enviar mi diagnóstico →</button>
+    if (mode === 'operacional') {
+      const data = ERAS[eraOp];
+      document.getElementById('resultado').innerHTML = `
+        <div class="eyebrow" style="color:${data.color}">Tu ERA Operacional</div>
+        <div class="result-card" style="background:${data.bg}; border-color:${data.border};">
+          <div class="result-era-label" style="color:${data.color}">${data.label} — Diagnóstico 3G Intelligence</div>
+          <div class="result-era-name" style="color:${data.color}">${data.name}</div>
+          <p class="result-msg">${data.msg}</p>
+          <div style="margin-top:12px;padding:10px 14px;background:rgba(255,255,255,0.04);border-radius:8px;font-size:12px;color:rgba(238,241,246,0.45);border-left:2px solid rgba(238,241,246,0.1);line-height:1.6;">
+            Esta es tu ERA de referencia (1 de 3). El Diagnóstico 3GI identifica tu <strong style="color:rgba(238,241,246,0.65);">sub-nivel exacto</strong> dentro del espectro de 9 posiciones. <a href="/metodologia#espectro" style="color:rgba(0,232,145,0.6);text-decoration:underline;text-underline-offset:2px;">Ver el espectro completo →</a>
+          </div>
+          <div class="result-insight" style="border-color:${data.color};color:#CBD5E1;margin-top:12px;">${data.insight}</div>
         </div>
-        <div class="lead-success" id="lead-success" style="display:none;">
-          ✓ Enviado. Revisa tu bandeja — y si quieres agenda la llamada gratuita abajo.
-        </div>
-      </div>
+        ${planHtml(data, data.color)}
+        ${leadAndCtaHtml(data, data.label)}`;
 
-      <div class="next-step">
-        <div class="next-step-eyebrow">¿Quieres ir más rápido?</div>
-        <h2>Agenda tu diagnóstico gratuito</h2>
-        <p>${data.cta_sub}<br>30 minutos · Sin costo · Sin compromiso.</p>
-        <a href="${calendlyUrl}" target="_blank" class="btn-calendly">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
-          Agendar llamada gratuita
-        </a>
-        <div class="divider-or">o</div>
-        <a href="${waUrl}" target="_blank" class="btn-wa">
-          ${waIcon} Escribir por WhatsApp
-        </a>
-        <button class="retry-link" onclick="reiniciar()">Volver a hacer el test</button>
-      </div>
-    `;
+    } else if (mode === 'comercial') {
+      const data = ERAS_COM[eraCom];
+      document.getElementById('resultado').innerHTML = `
+        <div class="eyebrow" style="color:${data.color}">Tu ERA Comercial</div>
+        <div class="result-card" style="background:${data.bg}; border-color:${data.border};">
+          <div class="result-era-label" style="color:${data.color}">${data.label} — Diagnóstico 3G Intelligence</div>
+          <div class="result-era-name" style="color:${data.color}">${data.name}</div>
+          <p class="result-msg">${data.msg}</p>
+          <div class="result-insight" style="border-color:${data.color};color:#CBD5E1;margin-top:12px;">${data.insight}</div>
+        </div>
+        ${planHtml(data, data.color)}
+        ${leadAndCtaHtml(data, data.label)}`;
+
+    } else {
+      // Modo AMBAS — resultado con cuadrante
+      const opData  = ERAS[eraOp];
+      const comData = ERAS_COM[eraCom];
+      const quadKey = (eraOp >= 2 ? 'high' : 'low') + '-' + (eraCom >= 2 ? 'high' : 'low');
+      const quad    = QUADRANTS[quadKey];
+      const leadLabel = `${opData.label} + ${comData.label}`;
+      document.getElementById('resultado').innerHTML = `
+        <div class="eyebrow" style="color:${quad.color}">Tu diagnóstico completo</div>
+
+        <div class="dual-scores">
+          <div class="score-mini">
+            <div class="score-mini-label">Operacional</div>
+            <div class="score-mini-era" style="color:${opData.color}">${opData.label}</div>
+            <div class="score-mini-name">${opData.name}</div>
+          </div>
+          <div class="score-mini">
+            <div class="score-mini-label">Comercial</div>
+            <div class="score-mini-era" style="color:${comData.color}">${comData.label}</div>
+            <div class="score-mini-name">${comData.name}</div>
+          </div>
+        </div>
+
+        <div class="result-card" style="background:${quad.bg}; border-color:${quad.color};">
+          <div class="result-era-label" style="color:${quad.color}">Tu arquetipo</div>
+          <div class="result-era-name" style="color:${quad.color}">${quad.name}</div>
+          <p class="result-msg">${quad.msg}</p>
+          <div class="result-insight" style="border-color:${quad.color};color:#CBD5E1;margin-top:12px;">${quad.insight}</div>
+        </div>
+
+        ${leadAndCtaHtml({ ...quad, cta_sub: 'En 30 minutos diseñamos el plan para las dos dimensiones.', calendly_note: quad.calendly_note }, leadLabel)}`;
+    }
 
     document.getElementById('resultado').scrollIntoView({ behavior: 'smooth', block: 'start' });
   }
 
-  async function enviarLead(era) {
+  async function enviarLead(eraLabel) {
     const email  = document.getElementById('lead-email')?.value?.trim();
     const nombre = document.getElementById('lead-nombre')?.value?.trim();
     if (!email || !email.includes('@')) {
@@ -921,7 +1306,7 @@
       await fetch(TRACK_URL, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ tipo: 'lead', era, email, nombre }),
+        body: JSON.stringify({ tipo: 'lead', era: eraLabel, email, nombre }),
       });
     } catch (_) {}
     document.getElementById('lead-form').style.display   = 'none';
@@ -929,23 +1314,29 @@
   }
 
   function reiniciar() {
-    Object.keys(answers).forEach(k => answers[k] = 0);
-    document.getElementById('quiz').style.display = 'block';
-    document.querySelector('.progress-wrap').style.display = 'block';
-    document.getElementById('intro').style.display = 'block';
-    document.getElementById('resultado').style.display = 'none';
+    allOpKeys.forEach(k  => opAnswers[k]  = 0);
+    allComKeys.forEach(k => comAnswers[k] = 0);
+    // Limpiar selecciones antes de llamar setMode
     document.querySelectorAll('.option').forEach(o => o.classList.remove('selected'));
     document.querySelectorAll('input[type="radio"]').forEach(r => r.checked = false);
-    document.getElementById('progress-fill').style.width = '0%';
-    document.getElementById('progress-pct').textContent = '0%';
-    document.getElementById('progress-text').textContent = 'Pregunta 1 de 5';
-    // Resetear botón y checklist
-    const btn = document.getElementById('btn-submit');
-    btn.disabled = true;
-    btn.textContent = 'Responde las 5 preguntas para ver tu resultado';
-    checkReady();
+    // Restaurar elementos de UI
+    document.getElementById('quiz').style.display          = 'block';
+    document.querySelector('.progress-wrap').style.display = 'block';
+    document.getElementById('intro').style.display         = 'block';
+    document.getElementById('era-selector').style.display  = 'flex';
+    document.getElementById('resultado').style.display     = 'none';
+    // Reset completo de modo (maneja tabs, visibilidad de preguntas, chips, progreso y botón)
+    setMode('operacional');
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }
+
+  // ── URL param ?modo= (para campañas de LinkedIn) ──────────
+  (function() {
+    const urlModo = new URLSearchParams(window.location.search).get('modo');
+    if (urlModo && ['operacional', 'comercial', 'ambas'].includes(urlModo)) {
+      setMode(urlModo);
+    }
+  })();
 </script>
 
 </body>
