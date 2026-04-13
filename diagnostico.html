@@ -409,6 +409,44 @@
     .plan-tool-label { color: var(--muted); font-size: 11px; margin-right: 4px; }
     .plan-tool-name { color: var(--green); font-weight: 700; }
 
+    /* ── SOCIAL BADGE ───────────────────── */
+    .social-badge {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: rgba(0,232,145,0.07);
+      border: 1px solid rgba(0,232,145,0.2);
+      border-radius: 20px; padding: 6px 14px;
+      font-size: 12px; color: var(--green); font-weight: 600;
+      margin-bottom: 20px;
+    }
+    .social-badge-dot {
+      width: 6px; height: 6px; border-radius: 50%;
+      background: var(--green);
+      animation: pulse 2s infinite;
+    }
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: .35; }
+    }
+
+    /* ── QUÉ VAS A OBTENER ───────────────── */
+    .preview-box {
+      display: flex; flex-direction: column; gap: 10px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 20px 24px;
+      margin-bottom: 36px;
+    }
+    .preview-title {
+      font-size: 11px; font-weight: 700; letter-spacing: 0.12em;
+      text-transform: uppercase; color: var(--muted); margin-bottom: 4px;
+    }
+    .preview-item {
+      display: flex; align-items: flex-start; gap: 10px;
+      font-size: 13px; color: #CBD5E1; line-height: 1.5;
+    }
+    .preview-icon { color: var(--green); flex-shrink: 0; margin-top: 1px; }
+
     /* ── FOOTER ──────────────────────────── */
     footer {
       text-align: center; padding: 24px;
@@ -455,12 +493,32 @@
 
   <!-- INTRO -->
   <div id="intro">
+    <div class="social-badge">
+      <span class="social-badge-dot"></span>
+      <span id="social-count">Más de 80 empresas ya conocen su ERA</span>
+    </div>
     <div class="eyebrow">Diagnóstico de Madurez IA</div>
     <h1>¿En qué <span>Era</span> está<br>tu empresa?</h1>
     <p class="intro-sub">
       5 preguntas · menos de 5 minutos · Sin registro.<br>
-      Descubre tu posición exacta en el espectro 3GI — no solo la ERA, sino tu sub-nivel dentro de los 9.
+      Descubre en qué punto exacto está tu empresa — y qué te está costando no avanzar.
     </p>
+
+    <div class="preview-box">
+      <div class="preview-title">Al terminar vas a tener</div>
+      <div class="preview-item">
+        <span class="preview-icon">→</span>
+        <span>Tu ERA exacta — no solo ERA 1, 2 o 3, sino tu sub-nivel dentro de los 9 posibles</span>
+      </div>
+      <div class="preview-item">
+        <span class="preview-icon">→</span>
+        <span>Los 3 puntos donde tu empresa está perdiendo dinero ahora mismo</span>
+      </div>
+      <div class="preview-item">
+        <span class="preview-icon">→</span>
+        <span>El primer paso concreto para pasar a la siguiente ERA</span>
+      </div>
+    </div>
   </div>
 
   <!-- QUIZ SECTION H2 -->
@@ -622,14 +680,39 @@
 
 <script>
   const answers = { q1: 0, q2: 0, q3: 0, q4: 0, q5: 0 };
+  const qOrder  = ['q1','q2','q3','q4','q5'];
+
+  // ── Contador dinámico (intenta obtener el real, usa fallback) ──
+  const BASE_COUNT = 80;
+  fetch('https://pre-scan.3g-ia-agents.com/diagnostico-count')
+    .then(r => r.ok ? r.json() : null)
+    .then(d => {
+      if (d && d.total > 0) {
+        const total = d.total + BASE_COUNT;
+        const el = document.getElementById('social-count');
+        if (el) el.textContent = `Más de ${total} empresas ya conocen su ERA`;
+      }
+    })
+    .catch(() => {});
 
   function selectOption(el, qName, val) {
-    // Deselect siblings
     el.closest('.options').querySelectorAll('.option').forEach(o => o.classList.remove('selected'));
     el.classList.add('selected');
     answers[qName] = val;
     updateProgress();
     checkReady();
+    mobileScrollNext(qName);
+  }
+
+  // ── Auto-scroll mobile: avanza a la siguiente pregunta sin responder ──
+  function mobileScrollNext(qName) {
+    if (window.innerWidth > 640) return;
+    const idx = qOrder.indexOf(qName);
+    if (idx < 0 || idx >= qOrder.length - 1) return;
+    const nextQ = document.querySelectorAll('.question')[idx + 1];
+    if (nextQ) {
+      setTimeout(() => nextQ.scrollIntoView({ behavior: 'smooth', block: 'start' }), 180);
+    }
   }
 
   function updateProgress() {
