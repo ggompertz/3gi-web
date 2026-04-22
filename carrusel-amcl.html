@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Carrusel Instagram AMCL — 3G Intelligence</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet" />
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      background: #0a0a0f;
+      font-family: 'DM Sans', sans-serif;
+      padding: 40px 20px;
+    }
+    .container {
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    .slide {
+      width: 100%;
+      aspect-ratio: 1080 / 1350;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 60px 40px;
+      border-radius: 16px;
+      margin-bottom: 30px;
+      position: relative;
+      overflow: hidden;
+      font-size: 18px;
+      line-height: 1.6;
+      color: #EEF1F6;
+    }
+
+    /* SLIDE 1 - Portada */
+    .slide-1 {
+      background: linear-gradient(135deg, #06060D 0%, #00E891 100%);
+    }
+    .slide-1 h1 {
+      font-family: 'Syne', sans-serif;
+      font-weight: 800;
+      font-size: 52px;
+      color: #06060D;
+      margin-bottom: 24px;
+      line-height: 1.1;
+    }
+    .slide-1 p {
+      font-size: 18px;
+      color: rgba(6,6,13,0.8);
+      margin-bottom: 40px;
+      max-width: 90%;
+    }
+    .slide-1 .arrow {
+      font-size: 28px;
+      animation: bounce 2s infinite;
+    }
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(10px); }
+    }
+
+    /* SLIDE 2 - La empresa */
+    .slide-2 {
+      background: #06060D;
+      border: 2px solid #00E891;
+      justify-content: flex-start;
+      padding-top: 80px;
+    }
+    .slide-2 h2 {
+      font-family: 'Syne', sans-serif;
+      font-weight: 800;
+      font-size: 48px;
+      color: #00E891;
+      margin-bottom: 40px;
+    }
+    .slide-2 p {
+      font-size: 20px;
+      line-height: 1.8;
+      margin-bottom: 8px;
+    }
+    .slide-2 .checkmark {
+      margin-bottom: 20px;
+      font-size: 18px;
+    }
+
+    /* SLIDE 3 - Presupuestos manuales */
+    .slide-3 {
+      background: linear-gradient(135deg, #DC2626 0%, #991B1B 100%);
+    }
+    .slide-3 .emoji {
+      font-size: 60px;
+      margin-bottom: 20px;
+    }
+    .slide-3 h2 {
+      font-family: 'Syne', sans-serif;
+      font-weight: 800;
+      font-size: 44px;
+      margin-bottom: 30px;
+    }
+    .slide-3 .big-number {
+      font-family: 'Syne', sans-serif;
+      font-weight: 800;
+      font-size: 72px;
+      color: #fff;
+      margin: 20px 0;
+    }
+    .slide-3 p {
+      font-size: 18px;
+      margin: 10px 0;
+    }
+
+    /* SLIDE 4 - Dinero atrapado */
+    .slide-4 {
+      background: linear-gradient(135deg, #F97316 0%, #DC2626 100%);
+    }
+    .slide-4 .emoji {
+      font-size: 60px;
+      margin-bottom: 20px;
+    }
+    .slide-4 h2 {
+      font-family: 'Syne', sans-serif;
+      font-weight: 800;
+      font-size: 44px;
+      margin-bottom: 30px;
+    }
+    .slide-4 .big-number {
+      font-family: 'Syne', sans-serif;
+      font-weight: 800;
+      font-size: 72px;
+      color: #fff;
+      margin: 20px 0;
+    }
+    .slide-4 p {
+      font-size: 18px;
+      margin: 10px 0;
+    }
+
+    /* SLIDE 5 - La solución */
+    .slide-5 {
+      background: linear-gradient(135deg, rgba(0,232,145,0.15) 0%, #06060D 100%);
+      border: 2px solid rgba(0,232,145,0.3);
+    }
+    .slide-5 .emoji {
+      font-size: 60px;
+      margin-bottom: 20px;
+    }
+    .slide-5 h2 {
+      font-family: 'Syne', sans-serif;
+      font-weight: 800;
+      font-size: 44px;
+      color: #00E891;
+      margin-bottom: 30px;
+    }
+    .slide-5 .solution-item {
+      font-size: 18px;
+      margin: 14px 0;
+      line-height: 1.5;
+    }
+
+    /* SLIDE 6 - El resultado */
+    .slide-6 {
+      background: linear-gradient(135deg, rgba(0,232,145,0.2) 0%, #06060D 100%);
+      border: 2px solid rgba(0,232,145,0.3);
+    }
+    .slide-6 .emoji {
+      font-size: 60px;
+      margin-bottom: 20px;
+    }
+    .slide-6 h2 {
+      font-family: 'Syne', sans-serif;
+      font-weight: 800;
+      font-size: 44px;
+      color: #00E891;
+      margin-bottom: 30px;
+    }
+    .slide-6 .result-item {
+      font-size: 17px;
+      margin: 12px 0;
+      line-height: 1.5;
+    }
+    .slide-6 .highlight {
+      color: #00E891;
+      font-weight: 600;
+      margin-top: 20px;
+      font-size: 18px;
+    }
+
+    /* SLIDE 7 - CTA */
+    .slide-7 {
+      background: linear-gradient(135deg, #00E891 0%, #06060D 100%);
+    }
+    .slide-7 .emoji {
+      font-size: 60px;
+      margin-bottom: 20px;
+    }
+    .slide-7 h2 {
+      font-family: 'Syne', sans-serif;
+      font-weight: 800;
+      font-size: 44px;
+      color: #06060D;
+      margin-bottom: 30px;
+    }
+    .slide-7 p {
+      font-size: 18px;
+      color: rgba(6,6,13,0.85);
+      margin: 12px 0;
+    }
+    .slide-7 .cta-buttons {
+      margin-top: 40px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .slide-7 .cta-btn {
+      background: #06060D;
+      color: #00E891;
+      padding: 12px 24px;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: 16px;
+      border: 2px solid #00E891;
+    }
+
+    .slide-label {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      background: rgba(0,232,145,0.2);
+      color: #00E891;
+      padding: 4px 12px;
+      border-radius: 20px;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <h1 style="color:#00E891; text-align:center; margin-bottom:40px; font-family:'Syne',sans-serif; font-size:32px;">
+    Carrusel Instagram — AMCL
+  </h1>
+
+  <!-- SLIDE 1 -->
+  <div class="slide slide-1">
+    <div class="slide-label">Slide 1/7</div>
+    <h1>Perdimos<br>$250k<br>buscando plata<br>que ya teníamos</h1>
+    <p>Cómo una empresa recuperó tiempo<br>y dinero con diagnóstico + automatización</p>
+    <div class="arrow">➜</div>
+  </div>
+
+  <!-- SLIDE 2 -->
+  <div class="slide slide-2">
+    <div class="slide-label">Slide 2/7</div>
+    <h2>¿Quién?</h2>
+    <p style="font-size:24px; font-weight:600; margin-bottom:30px;">Empresa de inspecciones y certificaciones de transporte vertical</p>
+    <div class="checkmark">✓ ISO certificada</div>
+    <div class="checkmark">✓ 10 empleados</div>
+    <div class="checkmark">✓ Chile</div>
+    <p style="margin-top:30px; font-size:18px; color:rgba(238,241,246,0.6);">Pero sin sistema de gestión de datos</p>
+  </div>
+
+  <!-- SLIDE 3 -->
+  <div class="slide slide-3">
+    <div class="slide-label">Slide 3/7</div>
+    <div class="emoji">📋</div>
+    <h2>Presupuestos manuales</h2>
+    <div class="big-number">35 MIN</div>
+    <p>por cada presupuesto</p>
+    <p style="margin-top:20px;">Datos dispersos en Excel<br>Proceso repetido constantemente<br>Tiempo que no se recuperaba nunca</p>
+  </div>
+
+  <!-- SLIDE 4 -->
+  <div class="slide slide-4">
+    <div class="slide-label">Slide 4/7</div>
+    <div class="emoji">💸</div>
+    <h2>Dinero atrapado</h2>
+    <div class="big-number">$250K</div>
+    <p>en un solo mes</p>
+    <p style="margin-top:20px;">Procesos terminados pero sin cerrar<br>Sin facturar<br>Sin recuperar<br><br>Información perdida en múltiples sistemas</p>
+  </div>
+
+  <!-- SLIDE 5 -->
+  <div class="slide slide-5">
+    <div class="slide-label">Slide 5/7</div>
+    <div class="emoji">⚙️</div>
+    <h2>¿Qué hicimos?</h2>
+    <div class="solution-item">✓ Data Foundation<br><span style="font-size:16px;">(Sistema de gestión de expedientes)</span></div>
+    <div class="solution-item">✓ Automatizaciones con n8n<br><span style="font-size:16px;">(Facturas, recordatorios, alertas)</span></div>
+    <div class="solution-item" style="margin-top:25px;">45 días: primer sistema<br>90 días: Fase 1 completa (todos usándolo)</div>
+  </div>
+
+  <!-- SLIDE 6 -->
+  <div class="slide slide-6">
+    <div class="slide-label">Slide 6/7</div>
+    <div class="emoji">✅</div>
+    <h2>Hoy</h2>
+    <div class="result-item">Presupuestos: <span style="color:#00E891;">35 min → 3 min</span> ⚡</div>
+    <div class="result-item">Facturas: <span style="color:#00E891;">Manual → Automática</span></div>
+    <div class="result-item">Expedientes: <span style="color:#00E891;">Sin control → Alertas reales</span></div>
+    <div class="result-item">Tiempo del equipo: <span style="color:#00E891;">Recuperado</span></div>
+    <div class="highlight">Pero lo más importante:<br>El equipo tiene TIEMPO para crecer.<br>Vender más. Atender mejor. Decidir.</div>
+  </div>
+
+  <!-- SLIDE 7 -->
+  <div class="slide slide-7">
+    <div class="slide-label">Slide 7/7</div>
+    <div class="emoji">🚀</div>
+    <h2>¿Tu empresa?</h2>
+    <p>¿Tienes información atrapada<br>que no estás usando<br>para decidir?</p>
+    <p style="margin-top:20px; font-size:17px;">Tenemos un diagnóstico gratuito<br>que tarda 5 minutos.<br>Sin compromiso. Sin costo.</p>
+    <div class="cta-buttons">
+      <div class="cta-btn">💬 ENVÍA DM</div>
+      <div class="cta-btn">🔗 3g-ia-agents.com</div>
+    </div>
+  </div>
+
+</div>
+
+</body>
+</html>
