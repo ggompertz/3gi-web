@@ -1,24 +1,34 @@
+---
+interface Props {
+  title: string;
+  description?: string;
+}
+const { 
+  title = "Consultoría IA para PyMEs - LATAM, Chile · 3G Intelligence", 
+  description = "Diagnóstico de inteligencia artificial para PyMEs en Chile y LATAM. Identificamos qué automatizar, cuánto vale cada oportunidad y te entregamos el roadmap listo para ejecutar." 
+} = Astro.props;
+---
 <!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Movemos tu empresa de ERA 1 a ERA 3 · Diagnóstico gratis · 3G Intelligence</title>
-  <meta name="description" content="ERA 1: Caos. ERA 2: Datos sin usar. ERA 3: IA trabajando por ti. No vendemos IA — movemos empresas de una ERA a otra. Diagnóstico gratuito en 5 minutos." />
-  <link rel="canonical" href="https://3g-ia-agents.com" />
+  <title>{title}</title>
+  <meta name="description" content={description} />
+  
   <meta name="robots" content="index, follow" />
 
   <!-- Open Graph -->
   <meta property="og:type"        content="website" />
   <meta property="og:url"         content="https://3g-ia-agents.com" />
   <meta property="og:title"       content="Movemos tu empresa de ERA 1 a ERA 3 · Diagnóstico gratis · 3G Intelligence" />
-  <meta property="og:description" content="ERA 1: Caos. ERA 2: Datos sin usar. ERA 3: IA trabajando por ti. No vendemos IA — movemos empresas de una ERA a otra." />
+  <meta property="og:description" content={description} />
   <meta property="og:image"       content="https://3g-ia-agents.com/3GI -Facebook1.1.png" />
   <meta property="og:locale"      content="es_CL" />
   <meta property="og:site_name"   content="3G Intelligence" />
   <meta name="twitter:card"       content="summary_large_image" />
-  <meta name="twitter:title"      content="Movemos tu empresa de ERA 1 a ERA 3 · Diagnóstico gratis · 3G Intelligence" />
-  <meta name="twitter:description" content="ERA 1: Caos. ERA 2: Datos sin usar. ERA 3: IA trabajando por ti. Diagnóstico gratuito en 5 minutos." />
+  <meta name="twitter:title" content={title} />
+  <meta name="twitter:description" content={description} />
   <meta name="twitter:image"      content="https://3g-ia-agents.com/3GI -Facebook1.1.png" />
 
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%2306060D'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-family='Arial Black,sans-serif' font-weight='900' font-size='13' fill='%2300E891'%3E3G%3C/text%3E%3C/svg%3E" />
@@ -273,285 +283,8 @@
     </div>
   </div>
 </nav>
-
-<!-- HERO -->
-<section id="hero">
-  <div class="container">
-    <div class="hero-tag" data-i18n="hero-tag">Diagnóstico de IA para pequeñas y medianas empresas</div>
-    <h1 class="hero-title" data-i18n="hero-title">
-      Sabemos exactamente qué IA<br>
-      implementar en tu empresa.<br>
-      <em>Y cuánto vale.</em>
-    </h1>
-    <p class="hero-sub" data-i18n="hero-sub">
-      En 3 semanas identificamos las oportunidades de automatización
-      con mayor ROI de tu negocio — y te entregamos el roadmap
-      concreto para ejecutarlas.
-    </p>
-    <div class="hero-ctas">
-      <a href="/diagnostico" class="btn btn-primary btn-lg">
-        <span data-i18n="hero-btn-calendar">Hacer el diagnóstico gratuito</span>
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-      </a>
-      <a href="https://wa.me/56988974898?text=Hola,%20me%20interesa%20conocer%20más%20sobre%20el%20diagnóstico%20de%20IA" target="_blank" class="btn btn-whatsapp btn-lg">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-        <span data-i18n="hero-btn-wa">Escribir por WhatsApp</span>
-      </a>
-    </div>
-    <div class="hero-proof">
-      <div class="proof-item">
-        <div class="proof-num">3</div>
-        <div class="proof-label" data-i18n="proof-1">semanas de diagnóstico</div>
-      </div>
-      <div class="proof-divider"></div>
-      <div class="proof-item">
-        <div class="proof-num">+260%</div>
-        <div class="proof-label" data-i18n="proof-2">ROI promedio identificado</div>
-      </div>
-      <div class="proof-divider"></div>
-      <div class="proof-item">
-        <div class="proof-num">100%</div>
-        <div class="proof-label" data-i18n="proof-3">oportunidades cuantificadas</div>
-      </div>
-      <div class="proof-divider"></div>
-      <div class="proof-item">
-        <div class="proof-num">6</div>
-        <div class="proof-label" data-i18n="proof-4">fases de metodología</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- DOLOR -->
-<section id="dolor">
-  <div class="container">
-    <div class="section-tag" data-i18n="dolor-tag">¿Te suena familiar?</div>
-    <h2 class="section-title" data-i18n="dolor-title">El problema no es la IA.<br>Es saber por dónde empezar.</h2>
-    <p class="section-sub" data-i18n="dolor-sub">
-      La mayoría de las pequeñas y medianas empresas tiene el potencial para automatizar con IA,
-      pero no cuenta con el diagnóstico para hacerlo bien.
-    </p>
-    <div class="pain-grid">
-      <div class="pain-card fade-up">
-        <div class="pain-icon">💸</div>
-        <div class="pain-title" data-i18n="pain1-title">Compraste herramientas que el equipo no usa</div>
-        <div class="pain-desc" data-i18n="pain1-desc">CRMs sin adopción, software de BI que nadie consulta, licencias de automatización sin implementar. La inversión se hizo, el resultado no llegó.</div>
-      </div>
-      <div class="pain-card fade-up">
-        <div class="pain-icon">🔍</div>
-        <div class="pain-title" data-i18n="pain2-title">Sabes que hay ineficiencias pero no cuánto cuestan</div>
-        <div class="pain-desc" data-i18n="pain2-desc">El equipo de ventas pierde horas en tareas administrativas. Los reportes gerenciales tardan días en prepararse. Sabes que pasa. No sabes cuánto vale arreglarlo.</div>
-      </div>
-      <div class="pain-card fade-up">
-        <div class="pain-icon">🎯</div>
-        <div class="pain-title" data-i18n="pain3-title">No quieres invertir en la solución incorrecta</div>
-        <div class="pain-desc" data-i18n="pain3-desc">Implementar IA sin diagnóstico es adivinar. Las empresas que fallan en transformación digital no fallan por falta de tecnología — fallan por implementar sin entender el problema.</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ERAS -->
-<section id="eras">
-  <div class="container">
-    <div class="eras-intro">
-      <div>
-        <div class="section-tag" data-i18n="eras-tag">El punto de partida</div>
-        <h2 class="section-title" data-i18n="eras-title">¿En qué ERA<br>está tu empresa?</h2>
-        <p style="font-size:16px; font-weight:300; color:rgba(238,241,246,0.6); line-height:1.7; margin-top:16px;" data-i18n="eras-sub">
-          Antes de implementar cualquier solución de IA, es fundamental saber dónde estás.
-          Nuestro diagnóstico mide dónde está tu empresa en dos dimensiones: operacional y comercial — y define el camino exacto para avanzar.
-        </p>
-        <a href="/diagnostico" class="btn btn-primary" style="margin-top:28px;" data-i18n="eras-cta">
-          Descubre tu ERA — es gratis
-        </a>
-      </div>
-      <div>
-        <div class="era-grid">
-          <div class="era-card">
-            <div class="era-num">ERA 1</div>
-            <div class="era-name" data-i18n="era1-name">Caos Operativo</div>
-            <div class="era-desc" data-i18n="era1-desc">El negocio corre en tu cabeza. Decisiones por intuición. La información vive en correos, Excel o en la memoria de una persona.</div>
-          </div>
-          <div class="era-card current" data-label="Mayoría de las PyMEs">
-            <div class="era-num">ERA 2</div>
-            <div class="era-name" data-i18n="era2-name">Datos Organizados</div>
-            <div class="era-desc" data-i18n="era2-desc">El negocio corre en sistemas. Pero los reportes igual se arman a mano y los datos están ahí — nadie los usa para decidir.</div>
-          </div>
-          <div class="era-card" style="border-color:rgba(0,232,145,0.5); background:rgba(0,232,145,0.05);">
-            <div class="era-num" style="color:var(--green);">ERA 3</div>
-            <div class="era-name" style="color:var(--green);" data-i18n="era3-name">Empresa con IA</div>
-            <div class="era-desc" data-i18n="era3-desc">El negocio corre solo. La IA maneja el volumen. Las personas manejan la estrategia.</div>
-          </div>
-        </div>
-        <div style="margin-top:20px; text-align:center;">
-          <p style="font-size:13px; color:var(--muted);" data-i18n="eras-caption">Llevamos a tu empresa de donde está → ERA 3</p>
-          <p style="margin-top:8px; font-size:12px; color:rgba(238,241,246,0.3);" data-i18n="eras-precision">Cada ERA incluye 3 posiciones de precisión. Tu diagnóstico identifica exactamente dónde estás — y qué viene primero. <a href="/metodologia#espectro" style="color:rgba(0,232,145,0.6); text-decoration:underline; text-underline-offset:3px;" data-i18n="eras-precision-link">Ver el espectro completo →</a></p>
-          <!-- LAUNCH 14/04 — cambiar display:none por display:block -->
-          <div id="era-dos-dimensiones-teaser" style="display:block; margin-top:20px; padding:16px 20px; background:rgba(0,232,145,0.05); border:1px solid rgba(0,232,145,0.15); border-radius:12px; text-align:left;">
-            <p style="font-size:13px; font-weight:700; color:var(--green); letter-spacing:0.08em; text-transform:uppercase; margin-bottom:8px;">ERA tiene dos dimensiones</p>
-            <p style="font-size:14px; color:rgba(238,241,246,0.65); line-height:1.6; margin-bottom:14px;">ERA Operacional mide si tu empresa <em>aguanta</em> la demanda. ERA Comercial mide si la <em>genera</em>. El diagnóstico mide las dos.</p>
-            <a href="/diagnostico?modo=ambas" style="font-size:13px; font-weight:700; color:var(--green); text-decoration:underline; text-underline-offset:3px;">Ver mi diagnóstico completo →</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- METODOLOGÍA (resumen) -->
-<section id="metodologia">
-  <div class="container">
-    <div class="section-tag" data-i18n="met-tag">Cómo trabajamos</div>
-    <h2 class="section-title" data-i18n="met-title">Tres pasos. Sin consultores<br>que toman notas genéricas.</h2>
-    <div class="met-intro">
-      <p class="section-sub" data-i18n="met-sub">
-        Metodología estructurada, entregables concretos, plazos definidos.
-        Sabes exactamente qué vas a recibir — y cuándo.
-      </p>
-    </div>
-    <div class="met-steps">
-      <div class="met-step">
-        <div class="step-num">01</div>
-        <span class="step-tag" data-i18n="step1-tag">Diagnóstico · Semana 1</span>
-        <div class="step-title" data-i18n="step1-title">Scan IA</div>
-        <div class="step-desc" data-i18n="step1-desc">Sesión de 2 horas. Score de Madurez en 5 dimensiones. Clasificación de ERA. Identificación de oportunidades preliminares.</div>
-        <div class="step-deliverable" data-i18n="step1-del">📄 Reporte de Diagnóstico</div>
-      </div>
-      <div class="met-step">
-        <div class="step-num">02</div>
-        <span class="step-tag" data-i18n="step2-tag">Fase 1–2 · Semanas 2–3</span>
-        <div class="step-title" data-i18n="step2-title">Diagnóstico profundo</div>
-        <div class="step-desc" data-i18n="step2-desc">Análisis proceso a proceso. Scoring cuantificado por oportunidad. ROI proyectado a 12 meses por iniciativa.</div>
-        <div class="step-deliverable" data-i18n="step2-del">📄 Informe Fase 1+2</div>
-      </div>
-      <div class="met-step">
-        <div class="step-num">03</div>
-        <span class="step-tag" data-i18n="step3-tag">Propuesta · Semana 3–4</span>
-        <div class="step-title" data-i18n="step3-title">Roadmap de implementación</div>
-        <div class="step-desc" data-i18n="step3-desc">Top 3 oportunidades por ROI convertidas en plan ejecutable: qué, con qué tecnología, en qué plazo, con qué inversión.</div>
-        <div class="step-deliverable" data-i18n="step3-del">📄 Propuesta Comercial + PRD</div>
-      </div>
-    </div>
-    <div class="met-note" data-i18n="met-note">
-      <strong data-i18n="met-note-title">📋 Esto es el diagnóstico.</strong> Después de 3–4 semanas tienes el roadmap concreto, cuantificado y listo para ejecutar. La <strong>implementación</strong> depende de ti y tu equipo — podemos acompañarte en Fase 4 y 5 si lo necesitas.
-    </div>
-    <div class="met-more">
-      <a href="/metodologia" class="btn btn-outline" data-i18n="met-more-btn">
-        Ver metodología completa
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-      </a>
-    </div>
-  </div>
-</section>
-
-<!-- CASO (compacto) -->
-<section id="caso">
-  <div class="container">
-    <div class="section-tag" data-i18n="caso-tag">Resultado real</div>
-    <h2 class="section-title" style="margin-bottom:36px;" data-i18n="caso-title">De $250k perdidos<br>a sistema de gestión total.</h2>
-    <div class="case-compact fade-up">
-      <div class="case-compact-header">
-        <div>
-          <div class="case-company" data-i18n="caso-company">Empresa de inspecciones y certificaciones · Transporte vertical</div>
-          <div class="case-meta-txt" data-i18n="caso-meta">Empresa certificada ISO · 25+ empleados · Chile</div>
-        </div>
-        <span class="case-badge" data-i18n="caso-badge">Caso real · Datos anonimizados</span>
-      </div>
-      <div class="case-compact-body">
-        <div class="case-metrics">
-          <div class="metric">
-            <div class="metric-before">35 min</div>
-            <div class="metric-after">3 min</div>
-            <div class="metric-label" data-i18n="res1-label">por presupuesto</div>
-          </div>
-          <div class="metric">
-            <div class="metric-before">Manual</div>
-            <div class="metric-after">Automático</div>
-            <div class="metric-label" data-i18n="res2-label">solicitud de facturas</div>
-          </div>
-          <div class="metric">
-            <div class="metric-before">Sin control</div>
-            <div class="metric-after">Alertas reales</div>
-            <div class="metric-label" data-i18n="res3-label">expedientes atascados</div>
-          </div>
-          <div class="metric">
-            <div class="metric-before">$250k</div>
-            <div class="metric-after">Recuperado</div>
-            <div class="metric-label" data-i18n="res4-label">en procesos sin facturar</div>
-          </div>
-        </div>
-        <div class="case-quote-compact">
-          <p data-i18n="caso-quote">"Nunca más perder horas buscando información. Ahora tenemos visibilidad total de nuestros expedientes, indicadores en tiempo real, y podemos escalar el negocio sin contratar más gente. Lo siguiente es automatizar los informes en terreno para nuestros inspectores."</p>
-          <cite data-i18n="caso-cite">— Gerente, empresa de inspecciones y certificaciones</cite>
-        </div>
-        <a href="/casos" class="btn btn-outline" data-i18n="caso-more">
-          Ver caso completo
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-        </a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- TRUST SIGNALS -->
-<section id="trust">
-  <div class="container">
-    <div class="section-tag" data-i18n="trust-tag">Seguridad y privacidad</div>
-    <h2 class="section-title" data-i18n="trust-title">Tus datos están<br>completamente seguros.</h2>
-    <p class="section-sub" data-i18n="trust-sub">
-      En 3G Intelligence, la privacidad y seguridad de tu información es prioridad absoluta.
-      Cumplimos con las regulaciones más estrictas y nunca usamos tus datos para entrenar modelos de IA.
-    </p>
-    <div class="trust-grid">
-      <div class="trust-card">
-        <div class="trust-icon">🔒</div>
-        <div class="trust-title" data-i18n="trust1-title">Sin acceso a datos externos</div>
-        <div class="trust-desc" data-i18n="trust1-desc">Tus datos de diagnóstico no se usan para entrenar modelos de IA. No alimentan sistemas de terceros. Son tuyos.</div>
-      </div>
-      <div class="trust-card">
-        <div class="trust-icon">⚖️</div>
-        <div class="trust-title" data-i18n="trust2-title">Cumplimiento normativo</div>
-        <div class="trust-desc" data-i18n="trust2-desc">Respetamos RGPD, normativas de privacidad de Chile y regulaciones locales de cada país donde operamos.</div>
-      </div>
-      <div class="trust-card">
-        <div class="trust-icon">🔑</div>
-        <div class="trust-title" data-i18n="trust3-title">Tu información es confidencial</div>
-        <div class="trust-desc" data-i18n="trust3-desc">Los casos y datos de tu empresa permanecen bajo confidencialidad estricta. No publicamos detalles sin tu aprobación.</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- CTA FINAL -->
-<section id="cta-final">
-  <div class="container">
-    <div class="cta-eyebrow" data-i18n="cta-eyebrow">Menos de 5 minutos · Sin costo · Sin compromiso</div>
-    <h2 class="cta-title" data-i18n="cta-title">
-      ¿En qué ERA está<br><span>tu empresa?</span>
-    </h2>
-    <p class="cta-sub" data-i18n="cta-sub">
-      Responde el diagnóstico. En menos de 5 minutos te decimos
-      dónde estás y qué oportunidades tiene tu negocio.
-    </p>
-    <div class="cta-buttons">
-      <a href="/diagnostico" class="btn btn-primary btn-lg">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-        <span data-i18n="cta-btn-calendar">Hacer el diagnóstico gratuito</span>
-      </a>
-      <a href="https://wa.me/56988974898?text=Hola,%20quiero%20saber%20más%20sobre%20el%20diagnóstico%20de%20IA%20para%20mi%20empresa" target="_blank" class="btn btn-whatsapp btn-lg">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-        <span data-i18n="cta-btn-wa">Escribir por WhatsApp</span>
-      </a>
-    </div>
-    <p class="cta-fine" data-i18n="cta-fine">
-      O escríbenos a <a href="mailto:chat@3g-ia-agents.com" style="color:var(--green);">chat@3g-ia-agents.com</a>
-    </p>
-  </div>
-</section>
-
-<!-- FOOTER -->
-<footer>
+  <slot />
+  <footer>
   <div class="container">
     <div class="footer-inner">
       <a href="/" class="logo">
@@ -571,7 +304,7 @@
   </div>
 </footer>
 
-<script>
+<script is:inline>
 const observer = new IntersectionObserver((entries) => {
   entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
 }, { threshold: 0.1 });
@@ -706,8 +439,10 @@ const T = {
   }
 };
 
-let currentLang = 'es';
+let currentLang = localStorage.getItem('lang') || 'es';
+  setTimeout(() => setLang(currentLang), 0);
 function setLang(lang) {
+  localStorage.setItem('lang', lang);
   currentLang = lang;
   const dict = T[lang];
   document.documentElement.lang = lang;

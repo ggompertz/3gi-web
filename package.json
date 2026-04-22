@@ -1,0 +1,25 @@
+{
+  "name": "3gi-web",
+  "version": "1.0.0",
+  "description": "",
+  "main": "migrate.js",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ggompertz/3gi-web.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ggompertz/3gi-web/issues"
+  },
+  "homepage": "https://github.com/ggompertz/3gi-web#readme",
+  "dependencies": {
+    "astro": "^6.1.9"
+  }
+}

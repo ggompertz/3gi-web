@@ -1,0 +1,345 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Radiografía IA gratis · Test IA gratis en 5 min · 3G Intelligence" description="ERA 1: Caos. ERA 2: Datos sin usar. ERA 3: IA trabajando por ti. Descubre en qué ERA estás — gratis, sin registro, resultado inmediato.">
+  <!-- ── MAIN ─────────────────────────────── -->
+<main>
+
+  <!-- INTRO -->
+  <div id="intro">
+    <div class="social-badge">
+      <span class="social-badge-dot"></span>
+      <span id="social-count">Más de 80 empresas ya conocen su ERA</span>
+    </div>
+    <div class="eyebrow">Diagnóstico de Madurez IA</div>
+    <h1>¿En qué <span>ERA</span> está<br>tu empresa?</h1>
+    <p class="intro-sub">
+      5 preguntas · menos de 5 minutos · Sin registro.<br>
+      Descubre en qué punto exacto está tu empresa — y qué te está costando no avanzar.
+    </p>
+
+    <div class="preview-box">
+      <div class="preview-title">Al terminar vas a tener</div>
+      <div class="preview-item">
+        <span class="preview-icon">→</span>
+        <span>Tu ERA exacta — no solo ERA 1, 2 o 3, sino tu sub-nivel dentro de los 9 posibles</span>
+      </div>
+      <div class="preview-item">
+        <span class="preview-icon">→</span>
+        <span>Los 3 puntos donde tu empresa está perdiendo dinero ahora mismo</span>
+      </div>
+      <div class="preview-item">
+        <span class="preview-icon">→</span>
+        <span>El primer paso concreto para pasar a la siguiente ERA</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ERA SELECTOR -->
+  <div class="era-selector" id="era-selector">
+    <button class="era-tab active" data-mode="operacional" onclick="setMode('operacional')">
+      Operacional<span class="era-tab-sub">¿Aguanta la demanda?</span>
+    </button>
+    <button class="era-tab" data-mode="comercial" onclick="setMode('comercial')">
+      Comercial<span class="era-tab-sub">¿Genera la demanda?</span>
+    </button>
+    <button class="era-tab" data-mode="ambas" onclick="setMode('ambas')">
+      Ambas<span class="era-tab-sub">Mapa completo</span>
+    </button>
+  </div>
+
+  <!-- QUIZ SECTION H2 -->
+  <h2 class="visually-hidden">Test de diagnóstico: ¿en qué ERA está tu empresa?</h2>
+
+  <!-- PROGRESS -->
+  <div class="progress-wrap">
+    <div class="progress-label">
+      <span id="progress-text">Pregunta 1 de 5</span>
+      <span id="progress-pct">0%</span>
+    </div>
+    <div class="progress-bar"><div class="progress-fill" id="progress-fill"></div></div>
+  </div>
+
+  <!-- QUIZ -->
+  <div id="quiz">
+  <div id="op-questions">
+
+    <!-- P1 -->
+    <div class="question" style="animation-delay:.05s">
+      <div class="q-num">Pregunta 1 — Datos</div>
+      <div class="q-text">¿Dónde vive la información crítica de tu empresa?</div>
+      <div class="options">
+        <label class="option" onclick="selectOption(this, 'q1', 1)">
+          <input type="radio" name="q1" value="1" />
+          <div class="opt-letter">A</div>
+          <div class="opt-text">Dispersa — Excel, WhatsApp, correos, carpetas sin orden</div>
+        </label>
+        <label class="option" onclick="selectOption(this, 'q1', 2)">
+          <input type="radio" name="q1" value="2" />
+          <div class="opt-letter">B</div>
+          <div class="opt-text">Centralizada en un sistema de gestión — CRM (clientes), ERP (operaciones) u otro software</div>
+        </label>
+        <label class="option" onclick="selectOption(this, 'q1', 3)">
+          <input type="radio" name="q1" value="3" />
+          <div class="opt-letter">C</div>
+          <div class="opt-text">Conectada automáticamente entre varios sistemas — los datos se actualizan solos sin que nadie los copie</div>
+        </label>
+      </div>
+    </div>
+    <hr class="q-divider" />
+
+    <!-- P2 -->
+    <div class="question" style="animation-delay:.1s">
+      <div class="q-num">Pregunta 2 — Reportes</div>
+      <div class="q-text">¿Cómo obtienes información sobre el desempeño del negocio?</div>
+      <div class="options">
+        <label class="option" onclick="selectOption(this, 'q2', 1)">
+          <input type="radio" name="q2" value="1" />
+          <div class="opt-letter">A</div>
+          <div class="opt-text">Armo reportes a mano cuando los necesito · o no tengo</div>
+        </label>
+        <label class="option" onclick="selectOption(this, 'q2', 2)">
+          <input type="radio" name="q2" value="2" />
+          <div class="opt-letter">B</div>
+          <div class="opt-text">Tengo pantallas o informes automáticos que me muestran cómo va el negocio en tiempo real</div>
+        </label>
+        <label class="option" onclick="selectOption(this, 'q2', 3)">
+          <input type="radio" name="q2" value="3" />
+          <div class="opt-letter">C</div>
+          <div class="opt-text">Tengo informes que no solo muestran lo que pasó, sino que anticipan lo que va a pasar usando IA</div>
+        </label>
+      </div>
+    </div>
+    <hr class="q-divider" />
+
+    <!-- P3 -->
+    <div class="question" style="animation-delay:.15s">
+      <div class="q-num">Pregunta 3 — Operación</div>
+      <div class="q-text">¿Cómo se ejecutan los procesos del día a día en tu empresa?</div>
+      <div class="options">
+        <label class="option" onclick="selectOption(this, 'q3', 1)">
+          <input type="radio" name="q3" value="1" />
+          <div class="opt-letter">A</div>
+          <div class="opt-text">Manualmente · depende de personas específicas para no detenerse</div>
+        </label>
+        <label class="option" onclick="selectOption(this, 'q3', 2)">
+          <input type="radio" name="q3" value="2" />
+          <div class="opt-letter">B</div>
+          <div class="opt-text">Parcialmente automatizados · algunas tareas corren solas</div>
+        </label>
+        <label class="option" onclick="selectOption(this, 'q3', 3)">
+          <input type="radio" name="q3" value="3" />
+          <div class="opt-letter">C</div>
+          <div class="opt-text">La IA ejecuta tareas por sí sola — sin que una persona tenga que intervenir cada vez</div>
+        </label>
+      </div>
+    </div>
+    <hr class="q-divider" />
+
+    <!-- P4 -->
+    <div class="question" style="animation-delay:.2s">
+      <div class="q-num">Pregunta 4 — Clientes y ventas</div>
+      <div class="q-text">¿Cómo gestionas los clientes potenciales o nuevos contactos?</div>
+      <div class="options">
+        <label class="option" onclick="selectOption(this, 'q4', 1)">
+          <input type="radio" name="q4" value="1" />
+          <div class="opt-letter">A</div>
+          <div class="opt-text">Sin sistema · en la cabeza, WhatsApp o una planilla</div>
+        </label>
+        <label class="option" onclick="selectOption(this, 'q4', 2)">
+          <input type="radio" name="q4" value="2" />
+          <div class="opt-letter">B</div>
+          <div class="opt-text">Con un software de gestión de clientes (CRM) y seguimiento manual por parte del equipo</div>
+        </label>
+        <label class="option" onclick="selectOption(this, 'q4', 3)">
+          <input type="radio" name="q4" value="3" />
+          <div class="opt-letter">C</div>
+          <div class="opt-text">Con automatización — el sistema envía recordatorios, hace seguimiento y avisa al equipo sin que nadie lo active manualmente</div>
+        </label>
+      </div>
+    </div>
+    <hr class="q-divider" />
+
+    <!-- P5 -->
+    <div class="question" style="animation-delay:.25s">
+      <div class="q-num">Pregunta 5 — Decisiones</div>
+      <div class="q-text">¿Cómo toma decisiones importantes tu empresa?</div>
+      <div class="options">
+        <label class="option" onclick="selectOption(this, 'q5', 1)">
+          <input type="radio" name="q5" value="1" />
+          <div class="opt-letter">A</div>
+          <div class="opt-text">Por intuición y experiencia · con poca información objetiva</div>
+        </label>
+        <label class="option" onclick="selectOption(this, 'q5', 2)">
+          <input type="radio" name="q5" value="2" />
+          <div class="opt-letter">B</div>
+          <div class="opt-text">Con datos históricos disponibles · análisis manual del equipo</div>
+        </label>
+        <label class="option" onclick="selectOption(this, 'q5', 3)">
+          <input type="radio" name="q5" value="3" />
+          <div class="opt-letter">C</div>
+          <div class="opt-text">Con datos y proyecciones — la IA ayuda a anticipar escenarios antes de que ocurran</div>
+        </label>
+      </div>
+    </div>
+
+  </div><!-- /op-questions -->
+
+  <!-- DIVISOR ERA COMERCIAL (solo visible en modo "ambas") -->
+  <div class="dim-divider" id="com-divider">
+    <div class="dim-divider-line"></div>
+    <span class="dim-divider-label">ERA Comercial</span>
+    <div class="dim-divider-line"></div>
+  </div>
+
+  <!-- PREGUNTAS COMERCIALES -->
+  <div id="com-questions" style="display:none">
+
+    <!-- C1 -->
+    <div class="question" style="animation-delay:.05s">
+      <div class="q-num">Pregunta 1 — Generación de demanda</div>
+      <div class="q-text">¿Cómo llegan nuevos clientes a tu empresa?</div>
+      <div class="options">
+        <label class="option" onclick="selectOption(this, 'c1', 1)">
+          <input type="radio" name="c1" value="1" />
+          <div class="opt-letter">A</div>
+          <div class="opt-text">Por el esfuerzo personal del dueño — contactos directos o referidos sin proceso definido</div>
+        </label>
+        <label class="option" onclick="selectOption(this, 'c1', 2)">
+          <input type="radio" name="c1" value="2" />
+          <div class="opt-letter">B</div>
+          <div class="opt-text">Algunos canales activos (redes, web, publicidad), pero sin sistema consistente de generación</div>
+        </label>
+        <label class="option" onclick="selectOption(this, 'c1', 3)">
+          <input type="radio" name="c1" value="3" />
+          <div class="opt-letter">C</div>
+          <div class="opt-text">Canal de adquisición predecible — genera prospectos de forma sistemática sin que el dueño intervenga</div>
+        </label>
+      </div>
+    </div>
+    <hr class="q-divider" />
+
+    <!-- C2 -->
+    <div class="question" style="animation-delay:.1s">
+      <div class="q-num">Pregunta 2 — Proceso de ventas</div>
+      <div class="q-text">¿Cómo es el proceso desde que aparece un prospecto hasta que cierra?</div>
+      <div class="options">
+        <label class="option" onclick="selectOption(this, 'c2', 1)">
+          <input type="radio" name="c2" value="1" />
+          <div class="opt-letter">A</div>
+          <div class="opt-text">Informal — el dueño o cada vendedor lo maneja a su manera, sin etapas definidas</div>
+        </label>
+        <label class="option" onclick="selectOption(this, 'c2', 2)">
+          <input type="radio" name="c2" value="2" />
+          <div class="opt-letter">B</div>
+          <div class="opt-text">Hay etapas definidas, pero el seguimiento es manual e inconsistente</div>
+        </label>
+        <label class="option" onclick="selectOption(this, 'c2', 3)">
+          <input type="radio" name="c2" value="3" />
+          <div class="opt-letter">C</div>
+          <div class="opt-text">Proceso documentado, seguimiento automatizado y métricas de conversión por etapa</div>
+        </label>
+      </div>
+    </div>
+    <hr class="q-divider" />
+
+    <!-- C3 -->
+    <div class="question" style="animation-delay:.15s">
+      <div class="q-num">Pregunta 3 — Retención y recurrencia</div>
+      <div class="q-text">¿Cómo mantienes a tus clientes activos y recurrentes?</div>
+      <div class="options">
+        <label class="option" onclick="selectOption(this, 'c3', 1)">
+          <input type="radio" name="c3" value="1" />
+          <div class="opt-letter">A</div>
+          <div class="opt-text">No hay sistema — los clientes vuelven solos o no vuelven</div>
+        </label>
+        <label class="option" onclick="selectOption(this, 'c3', 2)">
+          <input type="radio" name="c3" value="2" />
+          <div class="opt-letter">B</div>
+          <div class="opt-text">Seguimiento ocasional y algunas acciones de fidelización, pero sin regularidad ni métricas</div>
+        </label>
+        <label class="option" onclick="selectOption(this, 'c3', 3)">
+          <input type="radio" name="c3" value="3" />
+          <div class="opt-letter">C</div>
+          <div class="opt-text">Programa activo: comunicación sistemática, alertas de churn y métricas de recurrencia</div>
+        </label>
+      </div>
+    </div>
+    <hr class="q-divider" />
+
+    <!-- C4 -->
+    <div class="question" style="animation-delay:.2s">
+      <div class="q-num">Pregunta 4 — Presencia y visibilidad</div>
+      <div class="q-text">¿Cómo te encuentra un cliente que no te conoce?</div>
+      <div class="options">
+        <label class="option" onclick="selectOption(this, 'c4', 1)">
+          <input type="radio" name="c4" value="1" />
+          <div class="opt-letter">A</div>
+          <div class="opt-text">Difícilmente — no tenemos presencia digital real ni posicionamiento claro</div>
+        </label>
+        <label class="option" onclick="selectOption(this, 'c4', 2)">
+          <input type="radio" name="c4" value="2" />
+          <div class="opt-letter">B</div>
+          <div class="opt-text">Tenemos presencia en redes o web, pero no genera leads de forma consistente</div>
+        </label>
+        <label class="option" onclick="selectOption(this, 'c4', 3)">
+          <input type="radio" name="c4" value="3" />
+          <div class="opt-letter">C</div>
+          <div class="opt-text">Posicionamiento activo que trae prospectos calificados de forma predecible</div>
+        </label>
+      </div>
+    </div>
+    <hr class="q-divider" />
+
+    <!-- C5 -->
+    <div class="question" style="animation-delay:.25s">
+      <div class="q-num">Pregunta 5 — Métricas comerciales</div>
+      <div class="q-text">¿Qué métricas de ventas mides regularmente?</div>
+      <div class="options">
+        <label class="option" onclick="selectOption(this, 'c5', 1)">
+          <input type="radio" name="c5" value="1" />
+          <div class="opt-letter">A</div>
+          <div class="opt-text">Solo los ingresos totales — o no medimos nada</div>
+        </label>
+        <label class="option" onclick="selectOption(this, 'c5', 2)">
+          <input type="radio" name="c5" value="2" />
+          <div class="opt-letter">B</div>
+          <div class="opt-text">Seguimos el pipeline y algunos indicadores, pero sin dashboard integrado</div>
+        </label>
+        <label class="option" onclick="selectOption(this, 'c5', 3)">
+          <input type="radio" name="c5" value="3" />
+          <div class="opt-letter">C</div>
+          <div class="opt-text">Dashboard comercial completo: conversión, CAC, LTV, tiempo de cierre, por canal</div>
+        </label>
+      </div>
+    </div>
+
+  </div><!-- /com-questions -->
+
+    <button id="btn-submit" onclick="mostrarResultado()" disabled>
+      Responde las 5 preguntas para ver tu resultado
+    </button>
+
+    <div class="quiz-checklist" id="quiz-checklist">
+      <!-- Op chips -->
+      <span class="qc-item qc-op" id="chk-q1"><span class="qc-icon">○</span> Datos</span>
+      <span class="qc-item qc-op" id="chk-q2"><span class="qc-icon">○</span> Reportes</span>
+      <span class="qc-item qc-op" id="chk-q3"><span class="qc-icon">○</span> Operación</span>
+      <span class="qc-item qc-op" id="chk-q4"><span class="qc-icon">○</span> Clientes</span>
+      <span class="qc-item qc-op" id="chk-q5"><span class="qc-icon">○</span> Decisiones</span>
+      <!-- Com chips (ocultos por defecto) -->
+      <span class="qc-item qc-com" id="chk-c1" style="display:none"><span class="qc-icon">○</span> Generación</span>
+      <span class="qc-item qc-com" id="chk-c2" style="display:none"><span class="qc-icon">○</span> Ventas</span>
+      <span class="qc-item qc-com" id="chk-c3" style="display:none"><span class="qc-icon">○</span> Retención</span>
+      <span class="qc-item qc-com" id="chk-c4" style="display:none"><span class="qc-icon">○</span> Visibilidad</span>
+      <span class="qc-item qc-com" id="chk-c5" style="display:none"><span class="qc-icon">○</span> Métricas</span>
+    </div>
+
+  </div><!-- /quiz -->
+
+  <!-- RESULTADO -->
+  <div id="resultado"></div>
+
+</main>
+</Layout>
