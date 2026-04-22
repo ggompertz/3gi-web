@@ -161,6 +161,7 @@
 
     /* METODOLOGÍA (resumen) */
     #metodologia { background: var(--night-2); }
+    .met-intro { max-width: 680px; margin-bottom: 48px; }
     .met-steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; margin-top: 48px; }
     .met-step { background: var(--night-3); padding: 32px 28px; border: 1px solid var(--border); }
     .met-step:first-child { border-radius: 12px 0 0 12px; }
@@ -171,6 +172,7 @@
     .step-desc { font-size: 13px; color: var(--muted); line-height: 1.65; }
     .step-deliverable { display: inline-flex; align-items: center; gap: 6px; margin-top: 14px; padding: 5px 10px; border-radius: 6px; background: rgba(0,232,145,0.08); font-size: 11px; font-weight: 500; color: var(--green); }
     .met-more { margin-top: 36px; text-align: center; }
+    .met-note { margin-top: 40px; padding: 20px 24px; border-left: 3px solid rgba(0,232,145,0.3); background: rgba(0,232,145,0.04); border-radius: 0 8px 8px 0; font-size: 14px; color: rgba(238,241,246,0.75); line-height: 1.65; }
 
     /* PRUEBA SOCIAL (caso) */
     #caso { background: var(--night); }
@@ -188,6 +190,15 @@
     .case-quote-compact { padding: 20px 24px; border-left: 3px solid var(--green); background: rgba(0,232,145,0.04); border-radius: 0 8px 8px 0; margin-bottom: 20px; }
     .case-quote-compact p { font-size: 15px; font-style: italic; font-weight: 300; color: rgba(238,241,246,0.8); line-height: 1.7; margin-bottom: 8px; }
     .case-quote-compact cite { font-size: 12px; color: var(--muted); font-style: normal; }
+
+    /* TRUST SIGNALS */
+    #trust { background: var(--night-2); }
+    .trust-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; }
+    .trust-card { background: var(--night-3); border: 1px solid var(--border); border-radius: 12px; padding: 28px 24px; text-align: center; transition: border-color 0.2s; }
+    .trust-card:hover { border-color: rgba(0,232,145,0.2); }
+    .trust-icon { font-size: 36px; margin-bottom: 14px; }
+    .trust-title { font-family: 'Syne', sans-serif; font-weight: 800; font-size: 16px; margin-bottom: 10px; line-height: 1.2; }
+    .trust-desc { font-size: 14px; color: var(--muted); line-height: 1.65; }
 
     /* CTA FINAL */
     #cta-final { background: linear-gradient(135deg, #0D1A12 0%, #06060D 50%, #0A0D1A 100%); text-align: center; padding: 120px 0; position: relative; overflow: hidden; }
@@ -393,10 +404,12 @@
   <div class="container">
     <div class="section-tag" data-i18n="met-tag">Cómo trabajamos</div>
     <h2 class="section-title" data-i18n="met-title">Tres pasos. Sin consultores<br>que toman notas genéricas.</h2>
-    <p class="section-sub" data-i18n="met-sub">
-      Metodología estructurada, entregables concretos, plazos definidos.
-      Sabes exactamente qué vas a recibir — y cuándo.
-    </p>
+    <div class="met-intro">
+      <p class="section-sub" data-i18n="met-sub">
+        Metodología estructurada, entregables concretos, plazos definidos.
+        Sabes exactamente qué vas a recibir — y cuándo.
+      </p>
+    </div>
     <div class="met-steps">
       <div class="met-step">
         <div class="step-num">01</div>
@@ -419,6 +432,9 @@
         <div class="step-desc" data-i18n="step3-desc">Top 3 oportunidades por ROI convertidas en plan ejecutable: qué, con qué tecnología, en qué plazo, con qué inversión.</div>
         <div class="step-deliverable" data-i18n="step3-del">📄 Propuesta Comercial + PRD</div>
       </div>
+    </div>
+    <div class="met-note" data-i18n="met-note">
+      <strong data-i18n="met-note-title">📋 Esto es el diagnóstico.</strong> Después de 3–4 semanas tienes el roadmap concreto, cuantificado y listo para ejecutar. La <strong>implementación</strong> depende de ti y tu equipo — podemos acompañarte en Fase 4 y 5 si lo necesitas.
     </div>
     <div class="met-more">
       <a href="/metodologia" class="btn btn-outline" data-i18n="met-more-btn">
@@ -473,6 +489,35 @@
           Ver caso completo
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
         </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TRUST SIGNALS -->
+<section id="trust">
+  <div class="container">
+    <div class="section-tag" data-i18n="trust-tag">Seguridad y privacidad</div>
+    <h2 class="section-title" data-i18n="trust-title">Tus datos están<br>completamente seguros.</h2>
+    <p class="section-sub" data-i18n="trust-sub">
+      En 3G Intelligence, la privacidad y seguridad de tu información es prioridad absoluta.
+      Cumplimos con las regulaciones más estrictas y nunca usamos tus datos para entrenar modelos de IA.
+    </p>
+    <div class="trust-grid">
+      <div class="trust-card">
+        <div class="trust-icon">🔒</div>
+        <div class="trust-title" data-i18n="trust1-title">Sin acceso a datos externos</div>
+        <div class="trust-desc" data-i18n="trust1-desc">Tus datos de diagnóstico no se usan para entrenar modelos de IA. No alimentan sistemas de terceros. Son tuyos.</div>
+      </div>
+      <div class="trust-card">
+        <div class="trust-icon">⚖️</div>
+        <div class="trust-title" data-i18n="trust2-title">Cumplimiento normativo</div>
+        <div class="trust-desc" data-i18n="trust2-desc">Respetamos RGPD, normativas de privacidad de Chile y regulaciones locales de cada país donde operamos.</div>
+      </div>
+      <div class="trust-card">
+        <div class="trust-icon">🔑</div>
+        <div class="trust-title" data-i18n="trust3-title">Tu información es confidencial</div>
+        <div class="trust-desc" data-i18n="trust3-desc">Los casos y datos de tu empresa permanecen bajo confidencialidad estricta. No publicamos detalles sin tu aprobación.</div>
       </div>
     </div>
   </div>
@@ -573,7 +618,15 @@ const T = {
     'step3-tag': 'Propuesta · Semana 3–4', 'step3-title': 'Roadmap de implementación',
     'step3-desc': 'Top 3 oportunidades por ROI convertidas en plan ejecutable: qué, con qué tecnología, en qué plazo, con qué inversión.',
     'step3-del': '📄 Propuesta Comercial + PRD',
+    'met-note-title': '📋 Esto es el diagnóstico.',
+    'met-note': '📋 Esto es el diagnóstico. Después de 3–4 semanas tienes el roadmap concreto, cuantificado y listo para ejecutar. La <strong>implementación</strong> depende de ti y tu equipo — podemos acompañarte en Fase 4 y 5 si lo necesitas.',
     'met-more-btn': 'Ver metodología completa',
+    'trust-tag': 'Seguridad y privacidad',
+    'trust-title': 'Tus datos están<br>completamente seguros.',
+    'trust-sub': 'En 3G Intelligence, la privacidad y seguridad de tu información es prioridad absoluta. Cumplimos con las regulaciones más estrictas y nunca usamos tus datos para entrenar modelos de IA.',
+    'trust1-title': 'Sin acceso a datos externos', 'trust1-desc': 'Tus datos de diagnóstico no se usan para entrenar modelos de IA. No alimentan sistemas de terceros. Son tuyos.',
+    'trust2-title': 'Cumplimiento normativo', 'trust2-desc': 'Respetamos RGPD, normativas de privacidad de Chile y regulaciones locales de cada país donde operamos.',
+    'trust3-title': 'Tu información es confidencial', 'trust3-desc': 'Los casos y datos de tu empresa permanecen bajo confidencialidad estricta. No publicamos detalles sin tu aprobación.',
     'caso-tag': 'Resultado real', 'caso-title': 'De 45 minutos por cotización<br>a 5 minutos.',
     'caso-company': 'Empresa distribuidora · Sector comercial', 'caso-meta': 'Pequeña empresa · 10–15 empleados · Chile',
     'caso-badge': 'Caso real · Datos anonimizados',
@@ -628,7 +681,15 @@ const T = {
     'step3-tag': 'Proposal · Weeks 3–4', 'step3-title': 'Implementation Roadmap',
     'step3-desc': 'Top 3 ROI opportunities turned into an actionable plan: what, with what technology, in what timeframe, with what investment.',
     'step3-del': '📄 Commercial Proposal + PRD',
+    'met-note-title': '📋 This is the diagnosis.',
+    'met-note': '📋 This is the diagnosis. After 3–4 weeks you\'ll have the concrete, quantified roadmap ready to execute. The <strong>implementation</strong> is up to you and your team — we can support you in Phase 4 and 5 if needed.',
     'met-more-btn': 'View full methodology',
+    'trust-tag': 'Security and privacy',
+    'trust-title': 'Your data is<br>completely safe.',
+    'trust-sub': 'At 3G Intelligence, the privacy and security of your information is our absolute priority. We comply with the strictest regulations and never use your data to train AI models.',
+    'trust1-title': 'No external data access', 'trust1-desc': 'Your diagnosis data is not used to train AI models. It does not feed third-party systems. It\'s yours.',
+    'trust2-title': 'Regulatory compliance', 'trust2-desc': 'We respect GDPR, Chile\'s privacy regulations, and local compliance requirements in every country where we operate.',
+    'trust3-title': 'Your information is confidential', 'trust3-desc': 'Your company\'s cases and data remain under strict confidentiality. We do not publish details without your approval.',
     'caso-tag': 'Real result', 'caso-title': 'From 45 minutes per quote<br>to 5 minutes.',
     'caso-company': 'Distribution company · Commercial sector', 'caso-meta': 'Small company · 10–15 employees · Chile',
     'caso-badge': 'Real case · Anonymized data',
