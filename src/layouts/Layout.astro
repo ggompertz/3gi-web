@@ -471,6 +471,7 @@ function setLang(lang) {
   document.querySelectorAll('.lang-btn').forEach(btn => {
     btn.classList.toggle('active', btn.textContent === lang.toUpperCase());
   });
+  window.dispatchEvent(new CustomEvent('langchange', { detail: lang }));
 }
 </script>
 </body>

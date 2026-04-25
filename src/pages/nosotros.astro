@@ -154,4 +154,97 @@ import Layout from '../layouts/Layout.astro';
     </div>
   </div>
 </section>
+
+<script is:inline>
+const T_nosotros = {
+  es: {
+    'nos-tag': 'Nosotros',
+    'nos-title': 'La IA no es magia.<br/>Es método.',
+    'nos-sub': '3G Intelligence nació de la convicción de que las PyMEs latinoamericanas pueden competir con herramientas de clase mundial. Solo necesitan el diagnóstico correcto y un equipo que sepa implementar.',
+    'nos-bio1': 'Llevo <strong>más de 20 años trabajando con empresas medianas</strong> en Chile y Latinoamérica. Vendí, gestioné equipos, implementé ERP, sobreviví transformaciones digitales que no terminaron bien y algunas que sí. Eso me dio una perspectiva que pocos consultores de IA tienen: entiendo el negocio antes de hablar de tecnología.',
+    'nos-bio2': 'Cuando el ciclo de LLMs maduró en 2023, vi algo claro: <strong>la brecha entre las grandes empresas y las PyMEs iba a ensancharse brutalmente</strong>, a menos que alguien se dedicara específicamente a cerrarla. Fundé 3G Intelligence para hacer eso.',
+    'nos-bio3': 'El nombre viene de las tres "G" que creo que definen un negocio sano: <strong>Gestión, Generación y Gente</strong>. La IA tiene que servir a esas tres cosas, no reemplazarlas.',
+    'nos-founder-title': 'Fundador y Director · 3G Intelligence',
+    'nos-stats-title': 'Trayectoria en números',
+    'nos-stats-sub': 'Experiencia acumulada que ponemos al servicio de tu empresa.',
+    'nos-stat1': 'Años trabajando con empresas medianas en Chile y LATAM',
+    'nos-stat2': 'Industrias distintas en las que hemos trabajado directamente',
+    'nos-stat3': 'Proyectos de transformación digital liderados',
+    'nos-stat4': 'Automatizaciones de IA activas en producción hoy',
+    'nos-origin-title': 'Por qué existe 3G Intelligence',
+    'nos-origin-p1': 'En 2023 empecé a experimentar con LLMs en serio. No como hobbyist, sino conectando modelos a flujos de negocio reales: CRMs, ERPs, correos, cotizaciones, reportes. Lo que vi me convenció de que <strong>estábamos frente al cambio de productividad más grande desde la llegada del ERP</strong>.',
+    'nos-origin-p2': 'Pero también vi el otro lado: consultoras grandes vendiendo proyectos de IA que terminaban en PowerPoints. Startups de IA sin noción de cómo funciona un negocio real. Y PyMEs que escuchaban "inteligencia artificial" y pensaban que era para las grandes.',
+    'nos-origin-quote': '"Las PyMEs no necesitan una estrategia de IA. Necesitan saber qué proceso automatizar primero, cuánto les va a costar y cuánto les va a rendir. Eso es lo que hacemos."',
+    'nos-origin-p3': '3G Intelligence nació para ser la consultora que yo hubiera querido contratar cuando era gerente de una empresa mediana: <strong>práctica, directa, con foco en el retorno</strong> y sin promesas de transformación digital que no se materializan.',
+    'nos-origin-p4': 'Operamos 100% en remoto, trabajamos con empresas de toda Latinoamérica, y tenemos un proceso estructurado — la metodología Diagnóstico + F1→F5 — para que cada cliente sepa exactamente en qué fase está y qué viene después.',
+    'nos-values-title': 'Cómo trabajamos',
+    'nos-values-sub': 'Los principios que guían cada proyecto.',
+    'nos-v1-title': 'Diagnóstico antes que solución',
+    'nos-v1-desc': 'Nunca recomendamos tecnología antes de entender el problema. El Diagnóstico y el Scan IA existen para que el roadmap esté basado en datos de tu operación, no en supuestos.',
+    'nos-v2-title': 'ROI medible desde el día 1',
+    'nos-v2-desc': 'Cada iniciativa del roadmap tiene un ROI proyectado antes de aprobarse. No trabajamos con "mejoras de eficiencia" sin cuantificar: ponemos números a cada oportunidad.',
+    'nos-v3-title': 'Quick Wins primero',
+    'nos-v3-desc': 'Priorizamos las automatizaciones que recuperan la inversión más rápido. En la mayoría de los casos, el cliente ya tiene retorno antes de terminar la primera fase de implementación.',
+    'nos-v4-title': 'Implementación real, no consultoría de papel',
+    'nos-v4-desc': 'Nosotros construimos las soluciones. Código, workflows, integraciones. El entregable no es un informe: es un proceso automatizado funcionando en producción.',
+    'nos-v5-title': 'Transferencia de conocimiento',
+    'nos-v5-desc': 'No creamos dependencia. Capacitamos a tu equipo para operar, monitorear y evolucionar las soluciones. El objetivo es que en F5 no nos necesites para el día a día.',
+    'nos-v6-title': 'Foco en LATAM',
+    'nos-v6-desc': 'Entendemos el contexto: informalidad en datos, equipos pequeños, presupuestos acotados, regulaciones locales. Diseñamos soluciones que funcionan en la realidad de las PyMEs latinoamericanas.',
+    'nos-cta-title': '¿Quieres conocer<br/><span style="color:var(--green)">el potencial de IA</span><br/>en tu empresa?',
+    'nos-cta-sub': 'El diagnóstico tarda 15 minutos y te entregamos el reporte en 24 horas. Sin costo, sin compromiso.',
+    'nos-cta-btn1': 'Hacer el diagnóstico gratuito →',
+    'nos-cta-btn2': 'Ver metodología',
+  },
+  en: {
+    'nos-tag': 'About us',
+    'nos-title': 'AI isn\'t magic.<br/>It\'s method.',
+    'nos-sub': '3G Intelligence was born from the conviction that Latin American SMBs can compete with world-class tools. They just need the right diagnosis and a team that knows how to implement.',
+    'nos-bio1': 'I\'ve spent <strong>over 20 years working with mid-sized companies</strong> in Chile and Latin America. I sold, managed teams, implemented ERPs, survived digital transformations that didn\'t go well — and some that did. That gave me a perspective few AI consultants have: I understand the business before talking about technology.',
+    'nos-bio2': 'When the LLM cycle matured in 2023, I saw something clearly: <strong>the gap between large companies and SMBs was going to widen brutally</strong>, unless someone specifically dedicated themselves to closing it. I founded 3G Intelligence to do exactly that.',
+    'nos-bio3': 'The name comes from the three "G"s I believe define a healthy business: <strong>Management, Growth, and People</strong> (Gestión, Generación y Gente). AI must serve those three things, not replace them.',
+    'nos-founder-title': 'Founder & Director · 3G Intelligence',
+    'nos-stats-title': 'Track record in numbers',
+    'nos-stats-sub': 'Accumulated experience we put to work for your company.',
+    'nos-stat1': 'Years working with mid-sized companies in Chile and LATAM',
+    'nos-stat2': 'Different industries we\'ve worked in directly',
+    'nos-stat3': 'Digital transformation projects led',
+    'nos-stat4': 'Active AI automations running in production today',
+    'nos-origin-title': 'Why 3G Intelligence exists',
+    'nos-origin-p1': 'In 2023 I started seriously experimenting with LLMs — not as a hobbyist, but by connecting models to real business workflows: CRMs, ERPs, emails, quotes, reports. What I saw convinced me that <strong>we were facing the biggest productivity shift since the arrival of ERP</strong>.',
+    'nos-origin-p2': 'But I also saw the other side: large consultancies selling AI projects that ended in PowerPoints. AI startups with no idea how a real business works. And SMBs that heard "artificial intelligence" and thought it was for big companies only.',
+    'nos-origin-quote': '"SMBs don\'t need an AI strategy. They need to know which process to automate first, how much it will cost, and what the return will be. That\'s what we do."',
+    'nos-origin-p3': '3G Intelligence was born to be the consultancy I would have wanted to hire when I was a manager at a mid-sized company: <strong>practical, direct, focused on ROI</strong> — without digital transformation promises that never materialize.',
+    'nos-origin-p4': 'We operate 100% remotely, work with companies across Latin America, and have a structured process — the Diagnosis + F1→F5 methodology — so every client knows exactly which phase they\'re in and what comes next.',
+    'nos-values-title': 'How we work',
+    'nos-values-sub': 'The principles that guide every project.',
+    'nos-v1-title': 'Diagnosis before solution',
+    'nos-v1-desc': 'We never recommend technology before understanding the problem. The Diagnosis and AI Scan exist so that the roadmap is based on your actual operations data, not assumptions.',
+    'nos-v2-title': 'Measurable ROI from day 1',
+    'nos-v2-desc': 'Every roadmap initiative has a projected ROI before it\'s approved. We don\'t work with vague "efficiency improvements" — we put numbers to every opportunity.',
+    'nos-v3-title': 'Quick Wins first',
+    'nos-v3-desc': 'We prioritize the automations that recover the investment fastest. In most cases, the client already sees a return before finishing the first implementation phase.',
+    'nos-v4-title': 'Real implementation, not paper consulting',
+    'nos-v4-desc': 'We build the solutions ourselves. Code, workflows, integrations. The deliverable is not a report — it\'s an automated process running in production.',
+    'nos-v5-title': 'Knowledge transfer',
+    'nos-v5-desc': 'We don\'t create dependency. We train your team to operate, monitor, and evolve the solutions. The goal is that by F5 you don\'t need us for day-to-day operations.',
+    'nos-v6-title': 'LATAM focus',
+    'nos-v6-desc': 'We understand the context: informal data, small teams, tight budgets, local regulations. We design solutions that work in the reality of Latin American SMBs.',
+    'nos-cta-title': 'Want to discover<br/><span style="color:var(--green)">AI\'s potential</span><br/>in your company?',
+    'nos-cta-sub': 'The diagnosis takes 15 minutes and we deliver the report within 24 hours. No cost, no commitment.',
+    'nos-cta-btn1': 'Get the free diagnosis →',
+    'nos-cta-btn2': 'See methodology',
+  }
+};
+
+let _langNos = localStorage.getItem('lang') || 'es';
+function applyLangNos() {
+  document.querySelectorAll('[data-i18n]').forEach(el => {
+    const v = (T_nosotros[_langNos] || T_nosotros['es'])[el.getAttribute('data-i18n')];
+    if (v) el.innerHTML = v;
+  });
+}
+document.addEventListener('DOMContentLoaded', () => { _langNos = localStorage.getItem('lang') || 'es'; applyLangNos(); });
+window.addEventListener('langchange', e => { _langNos = e.detail; applyLangNos(); });
+</script>
 </Layout>

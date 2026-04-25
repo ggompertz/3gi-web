@@ -114,4 +114,81 @@ import Layout from '../layouts/Layout.astro';
 </div>
 
 <!-- FOOTER -->
+
+<script is:inline>
+const T_casos = {
+  es: {
+    'casos-tag': 'Casos de éxito',
+    'casos-title': 'Resultados reales.<br>Datos concretos.',
+    'casos-sub': 'No mostramos promesas. Mostramos lo que pasó — con números reales, aunque los nombres sean confidenciales.',
+    'casos-company': 'Empresa distribuidora · Sector comercial',
+    'casos-meta': 'Pequeña empresa · 10–15 empleados · Chile · 2025',
+    'casos-badge': 'Caso real · Datos anonimizados',
+    'casos-situation': 'Empresa distribuidora con equipo comercial de 3 vendedores que destinaban el 60% de su jornada a tareas administrativas: generar cotizaciones en Word, consultar stock por teléfono interno y preparar reportes semanales manualmente. Sin datos en tiempo real, las decisiones gerenciales se basaban en información con hasta 7 días de antigüedad.<br><br>La empresa sabía que había ineficiencias pero no tenía claridad sobre qué automatizar primero, ni cuánto valía cada oportunidad. Tras el Diagnóstico y la F1, identificamos 3 oportunidades de automatización con IA. El Scoring Agent proyectó un ROI combinado de 263% sobre la inversión total en diagnóstico e implementación.',
+    'casos-r1-label': 'Tiempo por cotización',
+    'casos-r1-unit': '−89% tiempo comercial administrativo',
+    'casos-r2-label': 'Atención a clientes',
+    'casos-r2-before': 'Solo horario laboral',
+    'casos-r2-unit': 'Agente WhatsApp sin intervención humana',
+    'casos-r3-label': 'Latencia de datos',
+    'casos-r3-unit': 'Dashboard KPIs operacionales en tiempo real',
+    'casos-r4-label': 'ROI proyectado',
+    'casos-r4-unit': 'Sobre la inversión total a 12 meses',
+    'casos-quote': '"Antes de este diagnóstico no teníamos claridad sobre qué automatizar primero. Salimos con tres proyectos priorizados, el ROI de cada uno calculado, y la certeza de que íbamos a implementar en el lugar correcto."',
+    'casos-cite': '— Gerente General, empresa distribuidora (nombre reservado por confidencialidad)',
+    'casos-context-title': 'Qué se implementó',
+    'casos-impl1': '<strong style="color:var(--offwh);">1. Automatización de cotizaciones.</strong> Se conectó el sistema de stock con una herramienta de generación automática de cotizaciones. El vendedor selecciona productos, el sistema genera el PDF en 30 segundos y lo envía por email. Eliminó el 89% del tiempo administrativo del equipo comercial.',
+    'casos-impl2': '<strong style="color:var(--offwh);">2. Agente WhatsApp con IA.</strong> Los clientes consultan disponibilidad, precios y estado de pedidos por WhatsApp en cualquier horario. El agente responde con información en tiempo real del sistema. Solo escala al equipo cuando hay una solicitud de compra nueva.',
+    'casos-impl3': '<strong style="color:var(--offwh);">3. Dashboard operacional en tiempo real.</strong> Integración de ventas, stock e inventario en un dashboard gerencial actualizado cada hora. Las decisiones de compra y proyección ahora se basan en datos frescos, no en reportes de la semana anterior.',
+    'casos-more-tag': 'En camino',
+    'casos-more-title': 'Más casos próximamente',
+    'casos-more-sub': 'Cada diagnóstico genera un caso. A medida que autorizamos publicarlos, los agregamos aquí.',
+    'casos-cta-title': '¿Tu empresa podría ser el próximo caso?',
+    'casos-cta-sub': 'Agenda una llamada de 30 minutos — sin costo, sin compromiso.',
+    'casos-btn-calendar': 'Agendar llamada gratuita',
+    'casos-btn-whatsapp': 'Escribir por WhatsApp',
+  },
+  en: {
+    'casos-tag': 'Success Stories',
+    'casos-title': 'Real results.<br>Concrete data.',
+    'casos-sub': 'We don\'t show promises. We show what happened — with real numbers, even if the names are confidential.',
+    'casos-company': 'Distribution company · Commercial sector',
+    'casos-meta': 'Small business · 10–15 employees · Chile · 2025',
+    'casos-badge': 'Real case · Anonymized data',
+    'casos-situation': 'A distribution company with a 3-person sales team spending 60% of their workday on administrative tasks: generating quotes in Word, checking stock by internal phone, and manually preparing weekly reports. Without real-time data, management decisions were based on information up to 7 days old.<br><br>The company knew there were inefficiencies but had no clarity on what to automate first, or how much each opportunity was worth. After the Diagnosis and F1, we identified 3 AI automation opportunities. The Scoring Agent projected a combined ROI of 263% on the total investment in diagnosis and implementation.',
+    'casos-r1-label': 'Time per quote',
+    'casos-r1-unit': '−89% administrative sales time',
+    'casos-r2-label': 'Customer service',
+    'casos-r2-before': 'Business hours only',
+    'casos-r2-unit': 'WhatsApp agent with no human intervention',
+    'casos-r3-label': 'Data latency',
+    'casos-r3-unit': 'Real-time operational KPI dashboard',
+    'casos-r4-label': 'Projected ROI',
+    'casos-r4-unit': 'On total investment over 12 months',
+    'casos-quote': '"Before this diagnosis we had no clarity on what to automate first. We left with three prioritized projects, the ROI of each calculated, and the certainty that we were going to implement in the right place."',
+    'casos-cite': '— General Manager, distribution company (name withheld for confidentiality)',
+    'casos-context-title': 'What was implemented',
+    'casos-impl1': '<strong style="color:var(--offwh);">1. Quote automation.</strong> The stock system was connected to an automatic quote generation tool. The salesperson selects products, the system generates the PDF in 30 seconds and sends it by email. Eliminated 89% of the commercial team\'s administrative time.',
+    'casos-impl2': '<strong style="color:var(--offwh);">2. AI WhatsApp agent.</strong> Customers check availability, prices, and order status via WhatsApp at any time. The agent responds with real-time data from the system. It only escalates to the team when there\'s a new purchase request.',
+    'casos-impl3': '<strong style="color:var(--offwh);">3. Real-time operational dashboard.</strong> Integration of sales, stock, and inventory in a management dashboard updated every hour. Purchasing and forecasting decisions are now based on fresh data, not last week\'s reports.',
+    'casos-more-tag': 'Coming soon',
+    'casos-more-title': 'More cases on the way',
+    'casos-more-sub': 'Every diagnosis generates a case. As we get authorization to publish them, we add them here.',
+    'casos-cta-title': 'Could your company be the next case?',
+    'casos-cta-sub': 'Schedule a 30-minute call — no cost, no commitment.',
+    'casos-btn-calendar': 'Schedule free call',
+    'casos-btn-whatsapp': 'Message on WhatsApp',
+  }
+};
+
+let _langCasos = localStorage.getItem('lang') || 'es';
+function applyLangCasos() {
+  document.querySelectorAll('[data-i18n]').forEach(el => {
+    const v = (T_casos[_langCasos] || T_casos['es'])[el.getAttribute('data-i18n')];
+    if (v) el.innerHTML = v;
+  });
+}
+document.addEventListener('DOMContentLoaded', () => { _langCasos = localStorage.getItem('lang') || 'es'; applyLangCasos(); });
+window.addEventListener('langchange', e => { _langCasos = e.detail; applyLangCasos(); });
+</script>
 </Layout>

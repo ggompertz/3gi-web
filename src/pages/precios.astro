@@ -135,4 +135,124 @@ import Layout from '../layouts/Layout.astro';
 </div>
 
 <!-- FOOTER -->
+
+<script is:inline>
+const T_precios = {
+  es: {
+    'prec-tag': 'Inversión',
+    'prec-title': 'El diagnóstico cuesta menos<br>que un error de implementación.',
+    'prec-sub': 'Sin diagnóstico, las empresas arriesgan USD 30.000–100.000 en implementaciones incorrectas. El costo de saber es una fracción de eso.',
+    'prec-diag-tag': 'Diagnóstico',
+    'prec-diag-title': 'Elige tu punto de entrada',
+    'prec-diag-sub': 'Ambas opciones incluyen entregables concretos — informes ejecutivos que son tuyos sin importar qué decidas hacer después.',
+    'prec-scan-name': 'Scan IA',
+    'prec-scan-desc': 'Diagnóstico inicial completo. Ideal para empresas que quieren entender su punto de partida antes de comprometerse con un proyecto mayor.',
+    'prec-scan-priceSub': 'pago único · entrega en 1 semana',
+    'prec-scan-li1': 'Sesión de 2 horas con la dirección',
+    'prec-scan-li2': 'Score de Madurez IA en 5 dimensiones',
+    'prec-scan-li3': 'Clasificación de ERA (1, 2 o 3)',
+    'prec-scan-li4': 'Identificación de 3–7 oportunidades preliminares',
+    'prec-scan-li5': 'Informe ejecutivo para el directorio',
+    'prec-scan-li6': 'Decisión: ¿avanzar directo o construir Data Foundation?',
+    'prec-scan-btn': 'Agendar Scan IA',
+    'prec-full-name': 'Diagnóstico Completo',
+    'prec-full-desc': 'Scan IA + análisis profundo de procesos + scoring de oportunidades + roadmap de implementación con propuesta comercial lista para ejecutar.',
+    'prec-full-priceSub': '50% inicio / 50% entrega · 3 semanas',
+    'prec-full-li1': 'Todo lo incluido en el Scan IA',
+    'prec-full-li2': 'Mapeo detallado de procesos críticos',
+    'prec-full-li3': 'Scoring cuantificado de cada oportunidad',
+    'prec-full-li4': 'ROI proyectado a 12 meses por iniciativa',
+    'prec-full-li5': 'Identificación de Quick Wins (≤4 semanas)',
+    'prec-full-li6': 'Propuesta comercial con 3 opciones de inversión',
+    'prec-full-li7': 'PRD técnico para las 3 oportunidades top',
+    'prec-full-btn': 'Iniciar diagnóstico completo',
+    'prec-note': '<strong>Nota sobre el valor del diagnóstico:</strong> Si el primer proyecto de implementación identificado tiene un ROI de USD 40.000 anuales, el costo del diagnóstico representa menos del 20% del retorno del primer año. Además, el costo del diagnóstico se descuenta de la implementación si se contrata dentro de los <strong>90 días</strong> siguientes a la entrega del informe.',
+    'prec-df-tag': 'Opcional · Antes de implementar IA',
+    'prec-df-title': 'Data Foundation',
+    'prec-df-sub': 'Si el Scan IA detecta brechas de datos, proponemos un proyecto previo que limpia, centraliza e integra tus datos. Precio según complejidad detectada.',
+    'prec-df1-name': 'Básico',
+    'prec-df1-desc': 'Problemas básicos de organización de datos. Estructuración de archivos, limpieza de registros, estandarización de formatos.',
+    'prec-df2-name': 'Integración',
+    'prec-df2-desc': 'Integración de fuentes dispersas y mejora de calidad de datos. Consolidación de sistemas, pipelines básicos, dashboard integrado.',
+    'prec-df3-name': 'Arquitectura',
+    'prec-df3-desc': 'Arquitectura de datos compleja. Data warehouse, data lake, integración de múltiples sistemas críticos de negocio.',
+    'prec-ret-tag': 'Continuo',
+    'prec-ret-title': 'Retainer mensual',
+    'prec-ret-sub': 'Acompañamiento continuo post-implementación. Para empresas que quieren mantener y escalar sus soluciones de IA con soporte permanente.',
+    'prec-ret-per': '/mes',
+    'prec-ret-h3': 'Soporte y evolución continua',
+    'prec-ret-p': 'El rango depende del alcance: número de soluciones activas, complejidad de integraciones, horas de consultoría mensual incluidas y nivel de soporte requerido. Se cotiza a medida después de la implementación.',
+    'prec-ret-btn': 'Consultar',
+    'prec-cta-title': '¿Con cuál empezamos?',
+    'prec-cta-sub': 'Agenda una llamada de 30 minutos y te recomendamos la opción correcta para tu empresa.',
+    'prec-btn-calendar': 'Agendar llamada gratuita',
+    'prec-btn-whatsapp': 'WhatsApp',
+  },
+  en: {
+    'prec-tag': 'Investment',
+    'prec-title': 'The diagnosis costs less<br>than an implementation mistake.',
+    'prec-sub': 'Without a diagnosis, companies risk USD 30,000–100,000 on the wrong implementations. The cost of knowing is a fraction of that.',
+    'prec-diag-tag': 'Diagnosis',
+    'prec-diag-title': 'Choose your entry point',
+    'prec-diag-sub': 'Both options include concrete deliverables — executive reports that are yours regardless of what you decide to do next.',
+    'prec-scan-name': 'AI Scan',
+    'prec-scan-desc': 'Complete initial diagnosis. Ideal for companies that want to understand their starting point before committing to a larger project.',
+    'prec-scan-priceSub': 'one-time payment · delivered in 1 week',
+    'prec-scan-li1': '2-hour session with leadership',
+    'prec-scan-li2': 'AI Maturity Score across 5 dimensions',
+    'prec-scan-li3': 'ERA classification (1, 2, or 3)',
+    'prec-scan-li4': 'Identification of 3–7 preliminary opportunities',
+    'prec-scan-li5': 'Executive report for the board',
+    'prec-scan-li6': 'Decision: move forward directly or build Data Foundation?',
+    'prec-scan-btn': 'Schedule AI Scan',
+    'prec-full-name': 'Full Diagnosis',
+    'prec-full-desc': 'AI Scan + deep process analysis + opportunity scoring + implementation roadmap with a commercial proposal ready to execute.',
+    'prec-full-priceSub': '50% upfront / 50% on delivery · 3 weeks',
+    'prec-full-li1': 'Everything included in the AI Scan',
+    'prec-full-li2': 'Detailed mapping of critical processes',
+    'prec-full-li3': 'Quantified scoring of each opportunity',
+    'prec-full-li4': '12-month projected ROI per initiative',
+    'prec-full-li5': 'Quick Wins identification (≤4 weeks)',
+    'prec-full-li6': 'Commercial proposal with 3 investment options',
+    'prec-full-li7': 'Technical PRD for the top 3 opportunities',
+    'prec-full-btn': 'Start full diagnosis',
+    'prec-note': '<strong>Note on the value of the diagnosis:</strong> If the first identified implementation project has an ROI of USD 40,000 annually, the diagnosis cost represents less than 20% of the first year\'s return. The diagnosis cost is also deducted from the implementation if contracted within <strong>90 days</strong> of the report delivery.',
+    'prec-df-tag': 'Optional · Before implementing AI',
+    'prec-df-title': 'Data Foundation',
+    'prec-df-sub': 'If the AI Scan detects data gaps, we propose a prior project that cleans, centralizes, and integrates your data. Price based on detected complexity.',
+    'prec-df1-name': 'Basic',
+    'prec-df1-desc': 'Basic data organization issues. File structuring, record cleanup, format standardization.',
+    'prec-df2-name': 'Integration',
+    'prec-df2-desc': 'Integration of dispersed sources and data quality improvement. System consolidation, basic pipelines, integrated dashboard.',
+    'prec-df3-name': 'Architecture',
+    'prec-df3-desc': 'Complex data architecture. Data warehouse, data lake, integration of multiple critical business systems.',
+    'prec-ret-tag': 'Ongoing',
+    'prec-ret-title': 'Monthly retainer',
+    'prec-ret-sub': 'Continuous post-implementation support. For companies that want to maintain and scale their AI solutions with permanent support.',
+    'prec-ret-per': '/month',
+    'prec-ret-h3': 'Ongoing support and evolution',
+    'prec-ret-p': 'The range depends on scope: number of active solutions, integration complexity, monthly consulting hours included, and required support level. Quoted after implementation.',
+    'prec-ret-btn': 'Inquire',
+    'prec-cta-title': 'Which one should we start with?',
+    'prec-cta-sub': 'Schedule a 30-minute call and we\'ll recommend the right option for your company.',
+    'prec-btn-calendar': 'Schedule free call',
+    'prec-btn-whatsapp': 'WhatsApp',
+  }
+};
+
+let _langPrec = localStorage.getItem('lang') || 'es';
+function applyLangPrec() {
+  // Update "Más popular" badge text on the featured card
+  const featuredCard = document.querySelector('.inv-card.featured');
+  if (featuredCard) {
+    featuredCard.setAttribute('data-popular', _langPrec === 'en' ? 'Most popular' : 'Más popular');
+  }
+  document.querySelectorAll('[data-i18n]').forEach(el => {
+    const v = (T_precios[_langPrec] || T_precios['es'])[el.getAttribute('data-i18n')];
+    if (v) el.innerHTML = v;
+  });
+}
+document.addEventListener('DOMContentLoaded', () => { _langPrec = localStorage.getItem('lang') || 'es'; applyLangPrec(); });
+window.addEventListener('langchange', e => { _langPrec = e.detail; applyLangPrec(); });
+</script>
 </Layout>

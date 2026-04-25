@@ -540,9 +540,133 @@ import Layout from '../layouts/Layout.astro';
       <p class="cta-sub">15 minutos para saber dónde está la mayor oportunidad de IA en tu empresa. Sin costo, sin compromiso.</p>
       <div class="cta-actions">
         <a href="/diagnostico" class="btn btn-primary">Hacer el diagnóstico gratuito →</a>
-        <a href="/precios" class="btn btn-outline">Ver precios</a>
+        <a href="/precios" class="btn btn-outline" data-i18n="met-cta-btn2">Ver precios</a>
       </div>
     </div>
   </div>
 </section>
+
+<script is:inline>
+const T_met = {
+  es: {
+    'met-tag': 'Metodología',
+    'met-title': 'De cero a IA operativa<br/>en 5 fases.',
+    'met-sub': 'Un proceso estructurado para que las PyMEs adopten inteligencia artificial de forma ordenada, sin riesgo y con retorno medible desde el primer sprint.',
+    'met-fw-tag': 'Framework 3GI',
+    'met-fw-title': 'ERA tiene dos dimensiones',
+    'met-fw-sub': 'No son dos frameworks distintos — es el mismo ERA visto desde dos ejes. Una empresa puede operar perfecto y no crecer. O vender muy bien y no aguantar el crecimiento. Las dos cosas importan.',
+    'met-op-label': 'ERA Operacional',
+    'met-op-q': '¿Puede aguantar<br>la demanda?',
+    'met-op-desc': 'Datos, procesos, tecnología, automatización. Lo que hace que la empresa funcione cuando crece.',
+    'met-com-label': 'ERA Comercial',
+    'met-com-q': '¿Puede generar<br>la demanda?',
+    'met-com-desc': 'Cómo llegan nuevos clientes, cómo se retienen, cómo la empresa crece sin depender solo del dueño.',
+    'met-archetypes-label': 'Los 4 arquetipos',
+    'met-a1-badge': 'Op baja · Com alta', 'met-a1-title': 'La trampa del éxito', 'met-a1-desc': 'Vende bien. No aguanta. Cada nuevo cliente presiona un sistema que ya cruje.',
+    'met-a2-badge': 'Op alta · Com baja', 'met-a2-title': 'La empresa invisible', 'met-a2-desc': 'Opera perfecto. El mercado no la encuentra. No es un problema de calidad — es de visibilidad.',
+    'met-a3-badge': 'Op baja · Com baja', 'met-a3-title': 'La base primero', 'met-a3-desc': 'Desafíos en ambas dimensiones. El primer paso desbloquea las dos.',
+    'met-a4-badge': 'Op alta · Com alta', 'met-a4-title': 'En camino a ERA 3', 'met-a4-desc': 'Las dos dimensiones funcionan. El siguiente paso: integración con IA para potenciarlas.',
+    'met-fw-note': 'El diagnóstico ahora mide <strong>las dos dimensiones</strong> — operacional y comercial. En menos de 5 minutos sabes exactamente en qué cuadrante está tu empresa.',
+    'met-fw-cta': 'Ver mi diagnóstico completo →',
+    'met-spec-tag': 'Framework 3GI', 'met-spec-title': 'Tu posición exacta en el espectro',
+    'met-spec-sub': 'Dentro del eje operacional, hay 9 posiciones de precisión. No todas las ERA 2 son iguales — una empresa con score 2.5 y una con 3.4 necesitan roadmaps completamente distintos. El Diagnóstico 3GI te ubica exactamente.',
+    'met-era1-header': 'ERA 1 — Caos Operativo', 'met-era1m-desc': 'Todo en la cabeza del dueño. Sin procesos escritos ni herramientas. Cero documentación.', 'met-era1-desc': 'Hay Excel pero cada uno tiene el suyo. La información existe — nadie la comparte ni la usa para decidir.', 'met-era1p-desc': 'Herramientas adoptadas, pero no se hablan entre sí. Datos atrapados en silos sin integración.',
+    'met-era2-header': 'ERA 2 — Datos Organizados', 'met-era2-badge': 'Mayoría PyMEs', 'met-era2m-desc': 'Sistema centralizado, pero nadie lo usa para decidir. Los reportes se siguen armando a mano.', 'met-era2-desc': 'Datos fluyen. Reportes existen. La IA no está en el radar — pero el terreno está listo.', 'met-era2p-desc': 'Experimentan con IA puntual, sin estrategia. Resultados inconsistentes, difíciles de escalar.',
+    'met-era3-header': 'ERA 3 — Empresa con IA', 'met-era3m-desc': 'IA corriendo en 1–2 procesos. ROI visible. El equipo empieza a adaptarse al nuevo ritmo operativo.', 'met-era3-desc': 'IA integrada en la operación core. Decisiones basadas en datos en tiempo real, sin fricción manual.', 'met-era3p-desc': 'IA como ventaja competitiva estructural. El sistema aprende y mejora sin intervención manual.',
+    'met-spec-note': '<strong>El Diagnóstico 3GI identifica tu sub-nivel exacto</strong> — no solo la ERA. Esa precisión define el roadmap correcto desde el primer día.', 'met-spec-cta': 'Descubrir mi sub-nivel →',
+    'met-stages-intro': 'Cada empresa parte en un punto diferente. La metodología permite entrar en la fase correcta: algunas empresas hacen todo el recorrido, otras empiezan en la Fase 2 o la Fase 3. Lo importante es nunca saltarse el diagnóstico.',
+    'met-diag-name': 'Diagnóstico · Reporte de Diagnóstico', 'met-diag-badge': 'Gratuito', 'met-diag-desc': 'Formulario de 15 minutos donde identificamos los 3 mayores dolores operativos de tu empresa y el potencial de IA. Dentro de 24–48 horas recibes un Reporte de Diagnóstico con la brecha actual vs. estado ideal, los procesos con mayor oportunidad y el siguiente paso recomendado.', 'met-diag-deliverable': '<strong>Entregable:</strong> Reporte de Diagnóstico PDF + recomendación de fase siguiente.', 'met-diag-time': '⏱ 15 min tu tiempo · 24–48 h para el reporte',
+    'met-f1-name': 'Scan IA · Diagnóstico Completo', 'met-f1-desc': 'Análisis profundo de tu operación: entrevistas con el equipo clave, mapeo de todos los procesos y flujos de datos, e identificación exhaustiva de oportunidades de IA con ROI proyectado para cada una.', 'met-f1-deliverable': '<strong>Entregable:</strong> PRD con roadmap priorizado, estimación de ROI por iniciativa, y recomendación de arquitectura técnica.', 'met-f1-time': '⏱ 1–2 semanas · 3–5 sesiones de trabajo conjunto',
+    'met-f2-name': 'Data Foundation', 'met-f2-badge': 'Según alcance', 'met-f2-desc': 'La IA solo funciona bien con datos de calidad. En esta fase limpiamos, estructuramos e integramos tus fuentes de datos: ERP, CRM, Excel, correos, PDFs.', 'met-f2-deliverable': '<strong>Entregable:</strong> Base de datos estructurada, pipelines de datos activos, certificado DRC nivel 1 o 2.', 'met-f2-time': '⏱ 2–8 semanas según madurez de datos de la empresa',
+    'met-f3-name': 'Quick Wins · Primeras Automatizaciones', 'met-f3-badge': 'Según alcance', 'met-f3-desc': 'Implementamos 2–3 automatizaciones de alto impacto y bajo riesgo, seleccionadas del roadmap de la F1.', 'met-f3-deliverable': '<strong>Entregable:</strong> 2–3 automatizaciones productivas, documentación de operación, capacitación del equipo.', 'met-f3-time': '⏱ 4–8 semanas',
+    'met-f4-name': 'Escala · Expansión de la Plataforma IA', 'met-f4-badge': 'Retainer mensual', 'met-f4-desc': 'Con los Quick Wins validados y el equipo adaptado, expandimos la plataforma de IA a más áreas de la empresa.', 'met-f4-deliverable': '<strong>Entregable:</strong> Plataforma IA expandida, integraciones adicionales, dashboard de métricas.', 'met-f4-time': '⏱ 3–6 meses de evolución',
+    'met-f5-name': 'Autonomía · IA Operando Sola', 'met-f5-badge': 'Retainer opcional', 'met-f5-desc': 'La empresa opera con IA de forma autónoma. Tu equipo ya sabe gestionar, monitorear y evolucionar las soluciones implementadas.', 'met-f5-deliverable': '<strong>Resultado:</strong> Empresa con ventaja competitiva estructural basada en IA.', 'met-f5-time': '⏱ Estado continuo · retainer evolutivo opcional',
+    'met-table-title': 'Resumen de fases', 'met-table-sub': 'Referencia rápida de tiempos e inversión por fase.', 'met-th-phase': 'Fase', 'met-th-name': 'Nombre', 'met-th-duration': 'Duración estimada', 'met-th-investment': 'Inversión referencial',
+    'met-row-diag-name': 'Diagnóstico', 'met-row-diag-time': '15 min + 24–48 h reporte', 'met-row-diag-cost': 'Gratuito', 'met-row-f1-name': 'Scan IA', 'met-row-f1-time': '1–2 semanas', 'met-row-f1p-name': 'Diagnóstico Completo', 'met-row-f1p-time': '2–4 semanas', 'met-row-f2-name': 'Data Foundation', 'met-row-f2-time': '2–8 semanas', 'met-row-f3-name': 'Quick Wins', 'met-row-f3-time': '4–8 semanas', 'met-row-f3-cost': 'Incluido en Diagnóstico Completo', 'met-row-f45-name': 'Escala y Autonomía', 'met-row-f45-time': '3–12 meses',
+    'met-faq-title': 'Preguntas frecuentes', 'met-faq-sub': 'Las dudas más comunes antes de empezar.',
+    'met-faq1-q': '¿Cuánto tiempo toma el diagnóstico inicial?', 'met-faq1-a': 'El Diagnóstico es un formulario de 15 minutos y el reporte se entrega en 24–48 horas.',
+    'met-faq2-q': '¿Necesito tener datos ordenados antes de empezar?', 'met-faq2-a': 'No. La F2 (Data Foundation) existe precisamente para ordenar y estructurar tus datos antes de implementar IA.',
+    'met-faq3-q': '¿Cuánto ROI puedo esperar?', 'met-faq3-a': 'Depende del proceso y la empresa. En nuestros casos documentados, una distribuidora logró +263% ROI proyectado en el primer año.',
+    'met-faq4-q': '¿Cuál es el mínimo para empezar a trabajar con 3GI?', 'met-faq4-a': 'El Diagnóstico es gratuito. Si decides avanzar, el Scan IA (F1) comienza en USD 2.500.',
+    'met-faq5-q': '¿Trabajan con empresas fuera de Chile?', 'met-faq5-a': 'Sí. Trabajamos con PyMEs en toda Latinoamérica. El proceso es 100% remoto.',
+    'met-faq6-q': '¿Qué pasa si mi empresa no tiene equipo técnico?', 'met-faq6-a': 'No es necesario. 3GI se encarga de la implementación técnica completa.',
+    'met-choose-title': '¿Cómo elegir el partner de IA correcto?', 'met-choose-sub': 'Cinco preguntas que deberías hacerle a cualquier consultora antes de contratar.',
+    'met-c1-q': '¿Empieza con diagnóstico o ya trae la solución?', 'met-c1-a': 'Una consultora seria no puede recomendarte qué implementar sin antes entender tu operación.',
+    'met-c2-q': '¿Tiene casos con ROI medible documentado?', 'met-c2-a': 'No "mejoras de eficiencia". Números reales: cuánto costó, cuánto rindió, en qué plazo.',
+    'met-c3-q': '¿Implementan o solo entregan informes?', 'met-c3-a': 'Muchas consultoras terminan en un PowerPoint. El valor real está en tener la automatización corriendo en producción.',
+    'met-c4-q': '¿El proyecto termina con tu equipo capacitado o dependiente?', 'met-c4-a': 'Si al terminar necesitas seguir pagando al mismo proveedor, compraste una suscripción encubierta.',
+    'met-c5-q': '¿Entiende el negocio o solo la tecnología?', 'met-c5-a': 'La IA bien aplicada resuelve problemas de negocio. Tu partner debería hablar de procesos y ROI antes de hablar de modelos.',
+    'met-cmp-title': '3GI vs. otras alternativas', 'met-cmp-sub': 'Cómo se compara trabajar con 3G Intelligence frente a las opciones más comunes.',
+    'met-cmp-th2': 'Consultoras grandes<br/><span>(Accenture, Deloitte)</span>', 'met-cmp-th3': 'Agencias digitales', 'met-cmp-th4': 'Equipo interno', 'met-cmp-th5': 'Herramientas DIY<br/><span>(Zapier, Make)</span>',
+    'met-cmp-r1': 'Foco en PyMEs', 'met-cmp-r1-3gi': 'Especializado', 'met-cmp-r1-big': 'Mínimo $50k+', 'met-cmp-r1-dig': 'Marketing digital', 'met-cmp-r1-int': 'Solo si tienes equipo', 'met-cmp-r1-diy': 'Requiere conocimiento técnico',
+    'met-cmp-r2': 'Empieza con diagnóstico', 'met-cmp-r2-3gi': 'Siempre', 'met-cmp-r2-big': 'A veces, caro', 'met-cmp-r2-dig': 'Propuesta directa', 'met-cmp-r2-int': 'Depende del equipo', 'met-cmp-r2-diy': 'Tú debes saber qué hacer',
+    'met-cmp-r3': 'ROI proyectado por iniciativa', 'met-cmp-r3-3gi': 'En cada proyecto', 'met-cmp-r3-big': 'Estimaciones generales', 'met-cmp-r3-dig': 'No es su foco', 'met-cmp-r3-int': 'Depende del equipo', 'met-cmp-r3-diy': 'No incluido',
+    'met-cmp-r4': 'Implementación incluida', 'met-cmp-r4-3gi': 'Desde F3', 'met-cmp-r4-big': 'Equipo separado', 'met-cmp-r4-dig': 'Solo herramientas web', 'met-cmp-r4-int': 'Sí', 'met-cmp-r4-diy': 'Tú la haces',
+    'met-cmp-r5': 'Precio de entrada', 'met-cmp-r5-3gi': 'Gratis (Diagnóstico)', 'met-cmp-r5-big': 'USD 50.000+', 'met-cmp-r5-dig': 'Variable', 'met-cmp-r5-int': 'Costo de contratación', 'met-cmp-r5-diy': 'Bajo',
+    'met-cmp-r6': 'Transferencia de conocimiento', 'met-cmp-r6-3gi': 'Objetivo del proyecto', 'met-cmp-r6-big': 'Dependencia alta', 'met-cmp-r6-dig': 'Dependencia alta', 'met-cmp-r6-int': 'Sí', 'met-cmp-r6-diy': 'Autodidacta',
+    'met-fit-yes-title': '3GI es ideal si…', 'met-fit-yes-1': 'Tu empresa tiene entre 5 y 100 empleados', 'met-fit-yes-2': 'Sabes que hay ineficiencias pero no sabes por dónde empezar', 'met-fit-yes-3': 'Quieres un ROI claro antes de comprometer presupuesto', 'met-fit-yes-4': 'No tienes equipo técnico interno de IA', 'met-fit-yes-5': 'Operás en Latinoamérica y necesitas alguien que entienda el contexto',
+    'met-fit-no-title': '3GI probablemente no es para ti si…', 'met-fit-no-1': 'Tu empresa tiene más de 200 empleados (necesitas escala corporativa)', 'met-fit-no-2': 'Buscas solo un chatbot de atención al cliente sin cambiar procesos internos', 'met-fit-no-3': 'No tienes ningún proceso mínimamente definido todavía', 'met-fit-no-4': 'Esperas resultados sin involucramiento de tu parte',
+    'met-cta-title': 'Empieza con el<br/><span style="color:var(--green)">Diagnóstico gratuito.</span>', 'met-cta-sub': '15 minutos para saber dónde está la mayor oportunidad de IA en tu empresa. Sin costo, sin compromiso.', 'met-cta-btn1': 'Hacer el diagnóstico gratuito →', 'met-cta-btn2': 'Ver precios',
+  },
+  en: {
+    'met-tag': 'Methodology', 'met-title': 'From zero to operational AI<br/>in 5 phases.', 'met-sub': 'A structured process for SMBs to adopt artificial intelligence in an orderly way, without risk and with measurable returns from the first sprint.',
+    'met-fw-tag': '3GI Framework', 'met-fw-title': 'ERA has two dimensions', 'met-fw-sub': "These aren't two separate frameworks — it's the same ERA viewed from two axes.",
+    'met-op-label': 'Operational ERA', 'met-op-q': 'Can it handle<br>the demand?', 'met-op-desc': 'Data, processes, technology, automation. What makes the company work when it grows.',
+    'met-com-label': 'Commercial ERA', 'met-com-q': 'Can it generate<br>the demand?', 'met-com-desc': "How new clients arrive, how they're retained, how the company grows without depending solely on the owner.",
+    'met-archetypes-label': 'The 4 archetypes',
+    'met-a1-badge': 'Low Ops · High Sales', 'met-a1-title': 'The success trap', 'met-a1-desc': "Sells well. Can't keep up. Every new client pressures a system that's already creaking.",
+    'met-a2-badge': 'High Ops · Low Sales', 'met-a2-title': 'The invisible company', 'met-a2-desc': "Operates perfectly. The market can't find it. It's not a quality problem — it's a visibility problem.",
+    'met-a3-badge': 'Low Ops · Low Sales', 'met-a3-title': 'Foundation first', 'met-a3-desc': 'Challenges on both dimensions. The first step unlocks both.',
+    'met-a4-badge': 'High Ops · High Sales', 'met-a4-title': 'On the way to ERA 3', 'met-a4-desc': 'Both dimensions work. The next step: AI integration to amplify them.',
+    'met-fw-note': 'The diagnosis now measures <strong>both dimensions</strong> — operational and commercial. In less than 5 minutes you know exactly which quadrant your company is in.', 'met-fw-cta': 'See my full diagnosis →',
+    'met-spec-tag': '3GI Framework', 'met-spec-title': 'Your exact position in the spectrum', 'met-spec-sub': 'Within the operational axis, there are 9 precision positions. Not all ERA 2s are equal — a company with a score of 2.5 and one with 3.4 need completely different roadmaps.',
+    'met-era1-header': 'ERA 1 — Operational Chaos', 'met-era1m-desc': "Everything in the owner's head. No written processes or tools.", 'met-era1-desc': "There's Excel but each person has their own. The information exists — nobody shares or uses it.", 'met-era1p-desc': "Tools adopted, but they don't talk to each other. Data trapped in silos.",
+    'met-era2-header': 'ERA 2 — Organized Data', 'met-era2-badge': 'Most SMBs', 'met-era2m-desc': 'Centralized system, but nobody uses it to decide. Reports are still built manually.', 'met-era2-desc': 'Data flows. Reports exist. AI is not on the radar — but the ground is ready.', 'met-era2p-desc': 'Experimenting with AI on a case-by-case basis, without strategy.',
+    'met-era3-header': 'ERA 3 — AI-Powered Company', 'met-era3m-desc': 'AI running in 1–2 processes. Visible ROI.', 'met-era3-desc': 'AI integrated into core operations. Real-time data-based decisions.', 'met-era3p-desc': 'AI as a structural competitive advantage. The system learns and improves without manual intervention.',
+    'met-spec-note': '<strong>The 3GI Diagnosis identifies your exact sub-level</strong> — not just the ERA.', 'met-spec-cta': 'Discover my sub-level →',
+    'met-stages-intro': 'Every company starts from a different point. The methodology allows entry at the right phase.',
+    'met-diag-name': 'Diagnosis · Diagnosis Report', 'met-diag-badge': 'Free', 'met-diag-desc': "A 15-minute form where we identify your company's 3 biggest operational pain points.", 'met-diag-deliverable': '<strong>Deliverable:</strong> PDF Diagnosis Report + recommended next phase.', 'met-diag-time': '⏱ 15 min your time · 24–48 h for the report',
+    'met-f1-name': 'AI Scan · Full Diagnosis', 'met-f1-desc': 'Deep analysis of your operations: interviews, process mapping, and comprehensive AI opportunity identification.', 'met-f1-deliverable': '<strong>Deliverable:</strong> PRD with prioritized roadmap, ROI estimate per initiative.', 'met-f1-time': '⏱ 1–2 weeks · 3–5 joint working sessions',
+    'met-f2-name': 'Data Foundation', 'met-f2-badge': 'By scope', 'met-f2-desc': 'AI only works well with quality data. We clean, structure and integrate your data sources.', 'met-f2-deliverable': '<strong>Deliverable:</strong> Structured database, active data pipelines, DRC certificate.', 'met-f2-time': "⏱ 2–8 weeks depending on the company's data maturity",
+    'met-f3-name': 'Quick Wins · First Automations', 'met-f3-badge': 'By scope', 'met-f3-desc': 'We implement 2–3 high-impact, low-risk automations selected from the F1 roadmap.', 'met-f3-deliverable': '<strong>Deliverable:</strong> 2–3 production automations, documentation, team training.', 'met-f3-time': '⏱ 4–8 weeks',
+    'met-f4-name': 'Scale · AI Platform Expansion', 'met-f4-badge': 'Monthly retainer', 'met-f4-desc': 'With Quick Wins validated, we expand the AI platform to more areas of the company.', 'met-f4-deliverable': '<strong>Deliverable:</strong> Expanded AI platform, additional integrations, metrics dashboard.', 'met-f4-time': '⏱ 3–6 months of evolution',
+    'met-f5-name': 'Autonomy · AI Running Independently', 'met-f5-badge': 'Optional retainer', 'met-f5-desc': 'The company operates with AI autonomously. Your team manages and evolves the solutions.', 'met-f5-deliverable': '<strong>Result:</strong> Company with structural competitive advantage based on AI.', 'met-f5-time': '⏱ Ongoing state · optional evolutionary retainer',
+    'met-table-title': 'Phase summary', 'met-table-sub': 'Quick reference for timelines and investment per phase.', 'met-th-phase': 'Phase', 'met-th-name': 'Name', 'met-th-duration': 'Estimated duration', 'met-th-investment': 'Reference investment',
+    'met-row-diag-name': 'Diagnosis', 'met-row-diag-time': '15 min + 24–48 h report', 'met-row-diag-cost': 'Free', 'met-row-f1-name': 'AI Scan', 'met-row-f1-time': '1–2 weeks', 'met-row-f1p-name': 'Full Diagnosis', 'met-row-f1p-time': '2–4 weeks', 'met-row-f2-name': 'Data Foundation', 'met-row-f2-time': '2–8 weeks', 'met-row-f3-name': 'Quick Wins', 'met-row-f3-time': '4–8 weeks', 'met-row-f3-cost': 'Included in Full Diagnosis', 'met-row-f45-name': 'Scale and Autonomy', 'met-row-f45-time': '3–12 months',
+    'met-faq-title': 'Frequently asked questions', 'met-faq-sub': 'The most common doubts before getting started.',
+    'met-faq1-q': 'How long does the initial diagnosis take?', 'met-faq1-a': 'The Diagnosis is a 15-minute form and the report is delivered within 24–48 hours.',
+    'met-faq2-q': 'Do I need to have my data in order before starting?', 'met-faq2-a': 'No. F2 (Data Foundation) exists precisely to organize your data before implementing AI.',
+    'met-faq3-q': 'How much ROI can I expect?', 'met-faq3-a': 'In our documented cases, a distributor achieved +263% projected ROI in the first year.',
+    'met-faq4-q': "What's the minimum to start working with 3GI?", 'met-faq4-a': 'The Diagnosis is free. The AI Scan (F1) starts at USD 2,500.',
+    'met-faq5-q': 'Do you work with companies outside Chile?', 'met-faq5-a': 'Yes. We work with SMBs across Latin America. The process is 100% remote.',
+    'met-faq6-q': "What if my company doesn't have a technical team?", 'met-faq6-a': "That's not necessary. 3GI handles the complete technical implementation.",
+    'met-choose-title': 'How to choose the right AI partner?', 'met-choose-sub': 'Five questions you should ask any consultancy before hiring.',
+    'met-c1-q': 'Does it start with a diagnosis or does it already have the solution?', 'met-c1-a': "A serious consultancy can't recommend what to implement without first understanding your operations.",
+    'met-c2-q': 'Does it have cases with documented measurable ROI?', 'met-c2-a': "Not 'efficiency improvements.' Real numbers: what it cost, what it returned, in what timeframe.",
+    'met-c3-q': 'Do they implement or just deliver reports?', 'met-c3-a': 'Many consultancies end up with a PowerPoint. The real value is having the automation running in production.',
+    'met-c4-q': 'Does the project end with your team trained or dependent?', "met-c4-a": "If after the project you still need to pay the same provider, you bought a hidden subscription.",
+    'met-c5-q': 'Does it understand the business or just the technology?', 'met-c5-a': 'Your partner should be talking about processes and ROI before talking about models and APIs.',
+    'met-cmp-title': '3GI vs. other alternatives', 'met-cmp-sub': 'How working with 3G Intelligence compares to the most common options.',
+    'met-cmp-th2': 'Large consultancies<br/><span>(Accenture, Deloitte)</span>', 'met-cmp-th3': 'Digital agencies', 'met-cmp-th4': 'Internal team', 'met-cmp-th5': 'DIY tools<br/><span>(Zapier, Make)</span>',
+    'met-cmp-r1': 'SMB focus', 'met-cmp-r1-3gi': 'Specialized', 'met-cmp-r1-big': 'Min $50k+', 'met-cmp-r1-dig': 'Digital marketing', 'met-cmp-r1-int': 'Only if you have a team', 'met-cmp-r1-diy': 'Requires technical knowledge',
+    'met-cmp-r2': 'Starts with diagnosis', 'met-cmp-r2-3gi': 'Always', 'met-cmp-r2-big': 'Sometimes, expensive', 'met-cmp-r2-dig': 'Direct proposal', 'met-cmp-r2-int': 'Depends on team', 'met-cmp-r2-diy': 'You must know what to do',
+    'met-cmp-r3': 'Projected ROI per initiative', 'met-cmp-r3-3gi': 'On every project', 'met-cmp-r3-big': 'General estimates', 'met-cmp-r3-dig': 'Not their focus', 'met-cmp-r3-int': 'Depends on team', 'met-cmp-r3-diy': 'Not included',
+    'met-cmp-r4': 'Implementation included', 'met-cmp-r4-3gi': 'From F3', 'met-cmp-r4-big': 'Separate team', 'met-cmp-r4-dig': 'Web tools only', 'met-cmp-r4-int': 'Yes', 'met-cmp-r4-diy': 'You do it yourself',
+    'met-cmp-r5': 'Entry price', 'met-cmp-r5-3gi': 'Free (Diagnosis)', 'met-cmp-r5-big': 'USD 50,000+', 'met-cmp-r5-dig': 'Variable', 'met-cmp-r5-int': 'Hiring cost', 'met-cmp-r5-diy': 'Low',
+    'met-cmp-r6': 'Knowledge transfer', 'met-cmp-r6-3gi': 'Project goal', 'met-cmp-r6-big': 'High dependency', 'met-cmp-r6-dig': 'High dependency', 'met-cmp-r6-int': 'Yes', 'met-cmp-r6-diy': 'Self-taught',
+    'met-fit-yes-title': '3GI is ideal if…', 'met-fit-yes-1': 'Your company has between 5 and 100 employees', 'met-fit-yes-2': "You know there are inefficiencies but don't know where to start", 'met-fit-yes-3': 'You want a clear ROI before committing budget', 'met-fit-yes-4': "You don't have an internal AI technical team", 'met-fit-yes-5': 'You operate in Latin America and need someone who understands the context',
+    'met-fit-no-title': '3GI is probably not for you if…', 'met-fit-no-1': 'Your company has more than 200 employees (you need corporate scale)', 'met-fit-no-2': "You're looking only for a customer service chatbot without changing internal processes", 'met-fit-no-3': "You don't have any minimally defined processes yet", 'met-fit-no-4': 'You expect results without your own involvement',
+    'met-cta-title': 'Start with the<br/><span style="color:var(--green)">free Diagnosis.</span>', 'met-cta-sub': '15 minutes to know where the biggest AI opportunity is in your company. No cost, no commitment.', 'met-cta-btn1': 'Get the free diagnosis →', 'met-cta-btn2': 'See pricing',
+  }
+};
+let _langMet = localStorage.getItem('lang') || 'es';
+function applyLangMet() {
+  document.querySelectorAll('[data-i18n]').forEach(el => {
+    const v = (T_met[_langMet] || T_met['es'])[el.getAttribute('data-i18n')];
+    if (v) el.innerHTML = v;
+  });
+}
+document.addEventListener('DOMContentLoaded', () => { _langMet = localStorage.getItem('lang') || 'es'; applyLangMet(); });
+window.addEventListener('langchange', e => { _langMet = e.detail; applyLangMet(); });
+</script>
 </Layout>
