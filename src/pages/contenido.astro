@@ -15,9 +15,9 @@ import Layout from '../layouts/Layout.astro';
   .content-section { padding: 80px 0; }
   .content-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 24px; margin-bottom: 64px; }
 
-  .content-card { background: var(--night-2); border: 1px solid var(--border); border-radius: 16px; overflow: hidden; transition: border-color 0.25s, transform 0.25s; display: flex; flex-direction: column; }
-  .content-card:hover { border-color: rgba(0,232,145,0.3); transform: translateY(-4px); }
-  .card-thumb { width: 100%; aspect-ratio: 1/1; object-fit: cover; display: block; background: #111; }
+  .content-card { background: var(--night-2); border: 1px solid rgba(255,255,255,0.12); border-radius: 16px; overflow: hidden; transition: border-color 0.25s, transform 0.25s; display: flex; flex-direction: column; }
+  .content-card:hover { border-color: rgba(0,232,145,0.4); transform: translateY(-4px); }
+  .card-thumb { width: 100%; aspect-ratio: 1/1; object-fit: cover; display: block; background: #111; border-radius: 12px 12px 0 0; }
   .card-meta { padding: 18px 20px 0; display: flex; align-items: center; gap: 10px; }
   .card-week { font-size: 10px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--green); background: rgba(0,232,145,0.08); border: 1px solid rgba(0,232,145,0.2); border-radius: 100px; padding: 3px 10px; }
   .card-date { font-size: 11px; color: rgba(238,241,246,0.3); }
