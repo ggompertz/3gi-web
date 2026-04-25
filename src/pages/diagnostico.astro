@@ -2,344 +2,894 @@
 import Layout from '../layouts/Layout.astro';
 ---
 
+<style>
+:root{--night: #06060D;--surface: #0E0E1A;--border: #1C1C2E;--green: #00E891;--green-dk:#009E60;--offwh: #EEF1F6;--muted: #6B7280;--era1: #F87171;--era2: #FBBF24;--era3: #00E891}*{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}body{background:var(--night);color:var(--offwh);font-family:Inter,sans-serif;font-size:15px;line-height:1.6;min-height:100vh}.nav-back{font-size:13px;color:var(--muted);text-decoration:none;display:flex;align-items:center;gap:6px;transition:color .2s}.nav-back:hover{color:var(--offwh)}main{max-width:680px;margin:0 auto;padding:56px 24px 80px}.visually-hidden{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}.eyebrow{font-size:11px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--green);margin-bottom:14px}h1{font-family:Syne,sans-serif;font-size:clamp(28px,5vw,40px);font-weight:900;line-height:1.1;letter-spacing:-.03em;margin-bottom:14px}h1 span{color:var(--green)}.intro-sub{font-size:16px;color:var(--muted);line-height:1.65;margin-bottom:48px}.progress-wrap{margin-bottom:40px}.progress-label{display:flex;justify-content:space-between;font-size:12px;color:var(--muted);margin-bottom:8px}.progress-bar{height:3px;background:var(--border);border-radius:2px;overflow:hidden}.progress-fill{height:100%;background:var(--green);border-radius:2px;transition:width .4s ease;width:0%}.question{margin-bottom:36px;opacity:0;transform:translateY(10px);animation:fadeUp .35s ease forwards}@keyframes fadeUp{to{opacity:1;transform:translateY(0)}}.q-num{font-size:11px;font-weight:700;letter-spacing:.1em;color:var(--green);text-transform:uppercase;margin-bottom:8px}.q-text{font-family:Syne,sans-serif;font-size:18px;font-weight:700;color:var(--offwh);margin-bottom:16px;line-height:1.3}.options{display:flex;flex-direction:column;gap:10px}.option{display:flex;align-items:flex-start;gap:14px;background:var(--surface);border:1.5px solid var(--border);border-radius:10px;padding:14px 18px;cursor:pointer;transition:border-color .2s,background .2s;user-select:none}.option:hover{border-color:#00e89159;background:#112}.option.selected{border-color:var(--green);background:#00e89112}.option input[type=radio]{display:none}.opt-letter{width:26px;height:26px;flex-shrink:0;border-radius:50%;border:1.5px solid var(--border);display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;color:var(--muted);transition:all .2s}.option.selected .opt-letter{background:var(--green);border-color:var(--green);color:var(--night)}.opt-text{font-size:14px;color:#cbd5e1;line-height:1.5;padding-top:2px}.option.selected .opt-text{color:var(--offwh)}.q-divider{border:none;border-top:1px solid var(--border);margin:8px 0 36px}#btn-submit{display:block;width:100%;background:var(--green);color:var(--night);font-family:Syne,sans-serif;font-weight:800;font-size:16px;border:1.5px solid transparent;border-radius:10px;padding:18px 32px;cursor:pointer;transition:opacity .2s,transform .15s,background .25s,color .25s,border-color .25s;margin-top:24px}#btn-submit:hover:not(:disabled){opacity:.88;transform:translateY(-1px)}#btn-submit:disabled{background:var(--surface);color:var(--muted);border-color:var(--border);cursor:not-allowed;opacity:1}.quiz-checklist{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px;justify-content:center}.qc-item{display:inline-flex;align-items:center;gap:5px;font-size:12px;font-weight:600;padding:5px 11px;border-radius:20px;border:1px solid var(--border);color:var(--muted);transition:all .25s}.qc-item.done{border-color:#00e89173;color:var(--green);background:#00e89112}.qc-icon{font-size:10px}#resultado{display:none}.result-card{border-radius:16px;padding:40px 36px;border:2px solid;margin-bottom:28px;animation:fadeUp .4s ease forwards}.result-era-label{font-size:11px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;margin-bottom:10px}.result-era-name{font-family:Syne,sans-serif;font-size:32px;font-weight:900;line-height:1.1;margin-bottom:18px}.result-msg{font-size:16px;line-height:1.65;color:var(--offwh);margin-bottom:24px}.result-insight{font-size:14px;font-style:italic;padding:14px 18px;border-radius:8px;background:#ffffff0d;border-left:3px solid;margin-bottom:0;line-height:1.6}.next-step{background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:32px;text-align:center}.next-step-eyebrow{font-size:11px;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--muted);margin-bottom:12px}.next-step h2{font-family:Syne,sans-serif;font-size:22px;font-weight:800;margin-bottom:10px;letter-spacing:-.02em}.next-step p{font-size:14px;color:var(--muted);margin-bottom:24px;line-height:1.6}.btn-calendly{display:inline-flex;align-items:center;gap:10px;background:var(--green);color:var(--night);font-family:Syne,sans-serif;font-weight:800;font-size:15px;text-decoration:none;border-radius:10px;padding:16px 28px;transition:opacity .2s,transform .15s;margin-bottom:16px}.btn-calendly:hover{opacity:.88;transform:translateY(-1px)}.btn-wa{display:inline-flex;align-items:center;gap:8px;color:#4ade80;font-size:14px;font-weight:600;text-decoration:none;padding:8px 0}.btn-wa:hover{opacity:.8}.divider-or{font-size:12px;color:var(--muted);margin:4px 0}.retry-link{display:block;margin-top:20px;font-size:13px;cursor:pointer;text-decoration:underline;background:none;border:none;color:var(--muted)}.retry-link:hover{color:var(--offwh)}.lead-capture{border-radius:14px;border:1px solid rgba(0,232,145,.2);background:#00e8910a;padding:28px 32px;margin-bottom:20px}.lead-capture-title{font-family:Syne,sans-serif;font-size:17px;font-weight:800;letter-spacing:-.02em;margin-bottom:6px}.lead-capture-sub{font-size:13px;color:var(--muted);margin-bottom:20px;line-height:1.6}.lead-form{display:flex;flex-direction:column;gap:10px}.lead-input{background:#ffffff0f;border:1px solid rgba(255,255,255,.1);border-radius:8px;padding:12px 16px;color:var(--offwh);font-size:14px;font-family:DM Sans,sans-serif;outline:none;transition:border-color .2s}.lead-input:focus{border-color:#00e89166}.lead-input::placeholder{color:var(--muted)}.lead-submit{background:var(--green);color:var(--night);border:none;border-radius:8px;padding:13px 24px;font-size:14px;font-weight:700;cursor:pointer;transition:opacity .2s,transform .15s;font-family:DM Sans,sans-serif}.lead-submit:hover{opacity:.88;transform:translateY(-1px)}.lead-submit:disabled{opacity:.5;cursor:default;transform:none}.lead-success{text-align:center;padding:16px;font-size:14px;color:var(--green);background:#00e8910f;border-radius:8px}.plan-card{border-radius:14px;border:1px solid var(--border);background:var(--surface);padding:28px 32px;margin-bottom:20px;text-align:left}.plan-eyebrow{font-size:11px;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--muted);margin-bottom:14px}.plan-steps{list-style:none;margin-bottom:20px}.plan-steps li{display:flex;gap:14px;align-items:flex-start;padding:10px 0;border-bottom:1px solid var(--border);font-size:14px;line-height:1.55}.plan-steps li:last-child{border-bottom:none}.plan-step-num{width:24px;height:24px;flex-shrink:0;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:800;background:#ffffff12;color:var(--offwh);margin-top:1px}.plan-tool{display:flex;align-items:center;gap:10px;background:#00e89112;border:1px solid rgba(0,232,145,.2);border-radius:8px;padding:10px 14px;font-size:13px}.plan-tool-label{color:var(--muted);font-size:11px;margin-right:4px}.plan-tool-name{color:var(--green);font-weight:700}.era-selector{display:flex;gap:4px;background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:4px;margin-bottom:32px}.era-tab{flex:1;padding:11px 10px;background:none;border:none;border-radius:9px;font-family:Syne,sans-serif;font-size:13px;font-weight:700;color:var(--muted);cursor:pointer;transition:all .2s;text-align:center;line-height:1.35}.era-tab:hover:not(.active){color:var(--offwh)}.era-tab.active{background:var(--night);color:var(--offwh);box-shadow:0 1px 4px #00000080}.era-tab-sub{display:block;font-family:Inter,sans-serif;font-size:10px;font-weight:500;opacity:.55;margin-top:2px}.era-tab[data-mode=operacional].active{box-shadow:0 1px 4px #00000080,inset 0 -2px #fbbf24}.era-tab[data-mode=comercial].active{box-shadow:0 1px 4px #00000080,inset 0 -2px #f97316}.era-tab[data-mode=ambas].active{box-shadow:0 1px 4px #00000080,inset 0 -2px 0 var(--green)}.dim-divider{display:none;align-items:center;gap:16px;margin:8px 0 36px}.dim-divider.visible{display:flex}.dim-divider-line{flex:1;height:1px;background:#f973164d}.dim-divider-label{font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#f97316;white-space:nowrap}.dual-scores{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:20px}.score-mini{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:16px 20px;text-align:center}.score-mini-label{font-size:10px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-bottom:8px}.score-mini-era{font-family:Syne,sans-serif;font-size:20px;font-weight:900;line-height:1.1}.score-mini-name{font-size:11px;color:var(--muted);margin-top:4px;line-height:1.4}.social-badge{display:inline-flex;align-items:center;gap:8px;background:#00e89112;border:1px solid rgba(0,232,145,.2);border-radius:20px;padding:6px 14px;font-size:12px;color:var(--green);font-weight:600;margin-bottom:20px}.social-badge-dot{width:6px;height:6px;border-radius:50%;background:var(--green);animation:pulse 2s infinite}@keyframes pulse{0%,to{opacity:1}50%{opacity:.35}}.preview-box{display:flex;flex-direction:column;gap:10px;background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:20px 24px;margin-bottom:36px}.preview-title{font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-bottom:4px}.preview-item{display:flex;align-items:flex-start;gap:10px;font-size:13px;color:#cbd5e1;line-height:1.5}.preview-icon{color:var(--green);flex-shrink:0;margin-top:1px}footer{text-align:center;padding:24px;border-top:1px solid var(--border);font-size:12px;color:var(--muted)}footer a{color:var(--muted);text-decoration:none}footer a:hover{color:var(--offwh)}@media(max-width:600px){nav{padding:16px 20px}main{padding:40px 20px 64px}.result-card{padding:28px 22px}.next-step{padding:24px 20px}}
+
+</style>
+
 <Layout title="Radiografía IA gratis · Test IA gratis en 5 min · 3G Intelligence" description="ERA 1: Caos. ERA 2: Datos sin usar. ERA 3: IA trabajando por ti. Descubre en qué ERA estás — gratis, sin registro, resultado inmediato.">
-  <!-- ── MAIN ─────────────────────────────── -->
-<main>
+<main><!-- INTRO --><div id="intro"><div class="social-badge"><span class="social-badge-dot"></span><span id="social-count" data-i18n="d-social">Más de 80 empresas ya conocen su ERA</span></div><div class="eyebrow" data-i18n="d-eyebrow">Diagnóstico de Madurez IA</div><h1 data-i18n="d-h1">¿En qué <span>ERA</span> está<br>tu empresa?</h1><p class="intro-sub" data-i18n="d-sub">
+5 preguntas · menos de 5 minutos · Sin registro.<br>
+Descubre en qué punto exacto está tu empresa — y qué te está costando no avanzar.
+</p><div class="preview-box"><div class="preview-title" data-i18n="d-preview-title">Al terminar vas a tener</div><div class="preview-item"><span class="preview-icon">→</span><span data-i18n="d-preview-1">Tu ERA exacta — no solo ERA 1, 2 o 3, sino tu sub-nivel dentro de los 9 posibles</span></div><div class="preview-item"><span class="preview-icon">→</span><span data-i18n="d-preview-2">Los 3 puntos donde tu empresa está perdiendo dinero ahora mismo</span></div><div class="preview-item"><span class="preview-icon">→</span><span data-i18n="d-preview-3">El primer paso concreto para pasar a la siguiente ERA</span></div></div></div><!-- ERA SELECTOR --><div class="era-selector" id="era-selector"><button class="era-tab active" data-mode="operacional" onclick="setMode('operacional')"><span data-i18n="d-tab-op">Operacional</span><span class="era-tab-sub" data-i18n="d-tab-op-sub">¿Aguanta la demanda?</span></button><button class="era-tab" data-mode="comercial" onclick="setMode('comercial')"><span data-i18n="d-tab-com">Comercial</span><span class="era-tab-sub" data-i18n="d-tab-com-sub">¿Genera la demanda?</span></button><button class="era-tab" data-mode="ambas" onclick="setMode('ambas')"><span data-i18n="d-tab-ambas">Ambas</span><span class="era-tab-sub" data-i18n="d-tab-ambas-sub">Mapa completo</span></button></div><!-- QUIZ SECTION H2 --><h2 class="visually-hidden" data-i18n="d-h2-hidden">Test de diagnóstico: ¿en qué ERA está tu empresa?</h2><!-- PROGRESS --><div class="progress-wrap"><div class="progress-label"><span id="progress-text"></span><span id="progress-pct">0%</span></div><div class="progress-bar"><div class="progress-fill" id="progress-fill"></div></div></div><!-- QUIZ --><div id="quiz"><div id="op-questions"><!-- P1 --><div class="question" style="animation-delay:.05s"><div class="q-num">Pregunta 1 — Datos</div><div class="q-text">¿Dónde vive la información crítica de tu empresa?</div><div class="options"><label class="option" onclick="selectOption(this, 'q1', 1)"><input type="radio" name="q1" value="1"><div class="opt-letter">A</div><div class="opt-text">Dispersa — Excel, WhatsApp, correos, carpetas sin orden</div></label><label class="option" onclick="selectOption(this, 'q1', 2)"><input type="radio" name="q1" value="2"><div class="opt-letter">B</div><div class="opt-text">Centralizada en un sistema de gestión — CRM (clientes), ERP (operaciones) u otro software</div></label><label class="option" onclick="selectOption(this, 'q1', 3)"><input type="radio" name="q1" value="3"><div class="opt-letter">C</div><div class="opt-text">Conectada automáticamente entre varios sistemas — los datos se actualizan solos sin que nadie los copie</div></label></div></div><hr class="q-divider"><!-- P2 --><div class="question" style="animation-delay:.1s"><div class="q-num">Pregunta 2 — Reportes</div><div class="q-text">¿Cómo obtienes información sobre el desempeño del negocio?</div><div class="options"><label class="option" onclick="selectOption(this, 'q2', 1)"><input type="radio" name="q2" value="1"><div class="opt-letter">A</div><div class="opt-text">Armo reportes a mano cuando los necesito · o no tengo</div></label><label class="option" onclick="selectOption(this, 'q2', 2)"><input type="radio" name="q2" value="2"><div class="opt-letter">B</div><div class="opt-text">Tengo pantallas o informes automáticos que me muestran cómo va el negocio en tiempo real</div></label><label class="option" onclick="selectOption(this, 'q2', 3)"><input type="radio" name="q2" value="3"><div class="opt-letter">C</div><div class="opt-text">Tengo informes que no solo muestran lo que pasó, sino que anticipan lo que va a pasar usando IA</div></label></div></div><hr class="q-divider"><!-- P3 --><div class="question" style="animation-delay:.15s"><div class="q-num">Pregunta 3 — Operación</div><div class="q-text">¿Cómo se ejecutan los procesos del día a día en tu empresa?</div><div class="options"><label class="option" onclick="selectOption(this, 'q3', 1)"><input type="radio" name="q3" value="1"><div class="opt-letter">A</div><div class="opt-text">Manualmente · depende de personas específicas para no detenerse</div></label><label class="option" onclick="selectOption(this, 'q3', 2)"><input type="radio" name="q3" value="2"><div class="opt-letter">B</div><div class="opt-text">Parcialmente automatizados · algunas tareas corren solas</div></label><label class="option" onclick="selectOption(this, 'q3', 3)"><input type="radio" name="q3" value="3"><div class="opt-letter">C</div><div class="opt-text">La IA ejecuta tareas por sí sola — sin que una persona tenga que intervenir cada vez</div></label></div></div><hr class="q-divider"><!-- P4 --><div class="question" style="animation-delay:.2s"><div class="q-num">Pregunta 4 — Clientes y ventas</div><div class="q-text">¿Cómo gestionas los clientes potenciales o nuevos contactos?</div><div class="options"><label class="option" onclick="selectOption(this, 'q4', 1)"><input type="radio" name="q4" value="1"><div class="opt-letter">A</div><div class="opt-text">Sin sistema · en la cabeza, WhatsApp o una planilla</div></label><label class="option" onclick="selectOption(this, 'q4', 2)"><input type="radio" name="q4" value="2"><div class="opt-letter">B</div><div class="opt-text">Con un software de gestión de clientes (CRM) y seguimiento manual por parte del equipo</div></label><label class="option" onclick="selectOption(this, 'q4', 3)"><input type="radio" name="q4" value="3"><div class="opt-letter">C</div><div class="opt-text">Con automatización — el sistema envía recordatorios, hace seguimiento y avisa al equipo sin que nadie lo active manualmente</div></label></div></div><hr class="q-divider"><!-- P5 --><div class="question" style="animation-delay:.25s"><div class="q-num">Pregunta 5 — Decisiones</div><div class="q-text">¿Cómo toma decisiones importantes tu empresa?</div><div class="options"><label class="option" onclick="selectOption(this, 'q5', 1)"><input type="radio" name="q5" value="1"><div class="opt-letter">A</div><div class="opt-text">Por intuición y experiencia · con poca información objetiva</div></label><label class="option" onclick="selectOption(this, 'q5', 2)"><input type="radio" name="q5" value="2"><div class="opt-letter">B</div><div class="opt-text">Con datos históricos disponibles · análisis manual del equipo</div></label><label class="option" onclick="selectOption(this, 'q5', 3)"><input type="radio" name="q5" value="3"><div class="opt-letter">C</div><div class="opt-text">Con datos y proyecciones — la IA ayuda a anticipar escenarios antes de que ocurran</div></label></div></div></div><!-- /op-questions --><!-- DIVISOR ERA COMERCIAL (solo visible en modo "ambas") --><div class="dim-divider" id="com-divider"><div class="dim-divider-line"></div><span class="dim-divider-label">ERA Comercial</span><div class="dim-divider-line"></div></div><!-- PREGUNTAS COMERCIALES --><div id="com-questions" style="display:none"><!-- C1 --><div class="question" style="animation-delay:.05s"><div class="q-num">Pregunta 1 — Generación de demanda</div><div class="q-text">¿Cómo llegan nuevos clientes a tu empresa?</div><div class="options"><label class="option" onclick="selectOption(this, 'c1', 1)"><input type="radio" name="c1" value="1"><div class="opt-letter">A</div><div class="opt-text">Por el esfuerzo personal del dueño — contactos directos o referidos sin proceso definido</div></label><label class="option" onclick="selectOption(this, 'c1', 2)"><input type="radio" name="c1" value="2"><div class="opt-letter">B</div><div class="opt-text">Algunos canales activos (redes, web, publicidad), pero sin sistema consistente de generación</div></label><label class="option" onclick="selectOption(this, 'c1', 3)"><input type="radio" name="c1" value="3"><div class="opt-letter">C</div><div class="opt-text">Canal de adquisición predecible — genera prospectos de forma sistemática sin que el dueño intervenga</div></label></div></div><hr class="q-divider"><!-- C2 --><div class="question" style="animation-delay:.1s"><div class="q-num">Pregunta 2 — Proceso de ventas</div><div class="q-text">¿Cómo es el proceso desde que aparece un prospecto hasta que cierra?</div><div class="options"><label class="option" onclick="selectOption(this, 'c2', 1)"><input type="radio" name="c2" value="1"><div class="opt-letter">A</div><div class="opt-text">Informal — el dueño o cada vendedor lo maneja a su manera, sin etapas definidas</div></label><label class="option" onclick="selectOption(this, 'c2', 2)"><input type="radio" name="c2" value="2"><div class="opt-letter">B</div><div class="opt-text">Hay etapas definidas, pero el seguimiento es manual e inconsistente</div></label><label class="option" onclick="selectOption(this, 'c2', 3)"><input type="radio" name="c2" value="3"><div class="opt-letter">C</div><div class="opt-text">Proceso documentado, seguimiento automatizado y métricas de conversión por etapa</div></label></div></div><hr class="q-divider"><!-- C3 --><div class="question" style="animation-delay:.15s"><div class="q-num">Pregunta 3 — Retención y recurrencia</div><div class="q-text">¿Cómo mantienes a tus clientes activos y recurrentes?</div><div class="options"><label class="option" onclick="selectOption(this, 'c3', 1)"><input type="radio" name="c3" value="1"><div class="opt-letter">A</div><div class="opt-text">No hay sistema — los clientes vuelven solos o no vuelven</div></label><label class="option" onclick="selectOption(this, 'c3', 2)"><input type="radio" name="c3" value="2"><div class="opt-letter">B</div><div class="opt-text">Seguimiento ocasional y algunas acciones de fidelización, pero sin regularidad ni métricas</div></label><label class="option" onclick="selectOption(this, 'c3', 3)"><input type="radio" name="c3" value="3"><div class="opt-letter">C</div><div class="opt-text">Programa activo: comunicación sistemática, alertas de churn y métricas de recurrencia</div></label></div></div><hr class="q-divider"><!-- C4 --><div class="question" style="animation-delay:.2s"><div class="q-num">Pregunta 4 — Presencia y visibilidad</div><div class="q-text">¿Cómo te encuentra un cliente que no te conoce?</div><div class="options"><label class="option" onclick="selectOption(this, 'c4', 1)"><input type="radio" name="c4" value="1"><div class="opt-letter">A</div><div class="opt-text">Difícilmente — no tenemos presencia digital real ni posicionamiento claro</div></label><label class="option" onclick="selectOption(this, 'c4', 2)"><input type="radio" name="c4" value="2"><div class="opt-letter">B</div><div class="opt-text">Tenemos presencia en redes o web, pero no genera leads de forma consistente</div></label><label class="option" onclick="selectOption(this, 'c4', 3)"><input type="radio" name="c4" value="3"><div class="opt-letter">C</div><div class="opt-text">Posicionamiento activo que trae prospectos calificados de forma predecible</div></label></div></div><hr class="q-divider"><!-- C5 --><div class="question" style="animation-delay:.25s"><div class="q-num">Pregunta 5 — Métricas comerciales</div><div class="q-text">¿Qué métricas de ventas mides regularmente?</div><div class="options"><label class="option" onclick="selectOption(this, 'c5', 1)"><input type="radio" name="c5" value="1"><div class="opt-letter">A</div><div class="opt-text">Solo los ingresos totales — o no medimos nada</div></label><label class="option" onclick="selectOption(this, 'c5', 2)"><input type="radio" name="c5" value="2"><div class="opt-letter">B</div><div class="opt-text">Seguimos el pipeline y algunos indicadores, pero sin dashboard integrado</div></label><label class="option" onclick="selectOption(this, 'c5', 3)"><input type="radio" name="c5" value="3"><div class="opt-letter">C</div><div class="opt-text">Dashboard comercial completo: conversión, CAC, LTV, tiempo de cierre, por canal</div></label></div></div></div><!-- /com-questions --><button id="btn-submit" onclick="mostrarResultado()" disabled data-i18n="d-btn-pending">
+Responde las 5 preguntas para ver tu resultado
+</button><div class="quiz-checklist" id="quiz-checklist"><!-- Op chips --><span class="qc-item qc-op" id="chk-q1"><span class="qc-icon">○</span><span data-i18n="d-chk-q1">Datos</span></span><span class="qc-item qc-op" id="chk-q2"><span class="qc-icon">○</span><span data-i18n="d-chk-q2">Reportes</span></span><span class="qc-item qc-op" id="chk-q3"><span class="qc-icon">○</span><span data-i18n="d-chk-q3">Operación</span></span><span class="qc-item qc-op" id="chk-q4"><span class="qc-icon">○</span><span data-i18n="d-chk-q4">Clientes</span></span><span class="qc-item qc-op" id="chk-q5"><span class="qc-icon">○</span><span data-i18n="d-chk-q5">Decisiones</span></span><!-- Com chips (ocultos por defecto) --><span class="qc-item qc-com" id="chk-c1" style="display:none"><span class="qc-icon">○</span><span data-i18n="d-chk-c1">Generación</span></span><span class="qc-item qc-com" id="chk-c2" style="display:none"><span class="qc-icon">○</span><span data-i18n="d-chk-c2">Ventas</span></span><span class="qc-item qc-com" id="chk-c3" style="display:none"><span class="qc-icon">○</span><span data-i18n="d-chk-c3">Retención</span></span><span class="qc-item qc-com" id="chk-c4" style="display:none"><span class="qc-icon">○</span><span data-i18n="d-chk-c4">Visibilidad</span></span><span class="qc-item qc-com" id="chk-c5" style="display:none"><span class="qc-icon">○</span><span data-i18n="d-chk-c5">Métricas</span></span></div></div><!-- /quiz --><!-- RESULTADO --><div id="resultado"></div></main><script>
+// ── TRANSLATIONS ─────────────────────────────────────────────────────────
+const D = {
+  es: {
+    'lang': 'es',
+    'd-social': 'Más de 80 empresas ya conocen su ERA',
+    'd-eyebrow': 'Diagnóstico de Madurez IA',
+    'd-h1': '¿En qué <span>ERA</span> está<br>tu empresa?',
+    'd-sub': '5 preguntas · menos de 5 minutos · Sin registro.<br>Descubre en qué punto exacto está tu empresa — y qué te está costando no avanzar.',
+    'd-preview-title': 'Al terminar vas a tener',
+    'd-preview-1': 'Tu ERA exacta — no solo ERA 1, 2 o 3, sino tu sub-nivel dentro de los 9 posibles',
+    'd-preview-2': 'Los 3 puntos donde tu empresa está perdiendo dinero ahora mismo',
+    'd-preview-3': 'El primer paso concreto para pasar a la siguiente ERA',
+    'd-tab-op': 'Operacional', 'd-tab-op-sub': '¿Aguanta la demanda?',
+    'd-tab-com': 'Comercial', 'd-tab-com-sub': '¿Genera la demanda?',
+    'd-tab-ambas': 'Ambas', 'd-tab-ambas-sub': 'Mapa completo',
+    'd-h2-hidden': 'Test de diagnóstico: ¿en qué ERA está tu empresa?',
+    'd-progress': 'Pregunta {done} de {total}',
+    'd-btn-pending': 'Responde las {n} preguntas para ver tu resultado',
+    'd-btn-ready': 'Ver mi resultado →',
+    'd-chk-q1': 'Datos', 'd-chk-q2': 'Reportes', 'd-chk-q3': 'Operación',
+    'd-chk-q4': 'Clientes', 'd-chk-q5': 'Decisiones',
+    'd-chk-c1': 'Generación', 'd-chk-c2': 'Ventas', 'd-chk-c3': 'Retención',
+    'd-chk-c4': 'Visibilidad', 'd-chk-c5': 'Métricas',
+    'd-com-divider': 'ERA Comercial',
+    // Questions
+    'q1-num': 'Pregunta 1 — Datos', 'q1-text': '¿Dónde vive la información crítica de tu empresa?',
+    'q1-a': 'Dispersa — Excel, WhatsApp, correos, carpetas sin orden',
+    'q1-b': 'Centralizada en un sistema de gestión — CRM (clientes), ERP (operaciones) u otro software',
+    'q1-c': 'Conectada automáticamente entre varios sistemas — los datos se actualizan solos sin que nadie los copie',
+    'q2-num': 'Pregunta 2 — Reportes', 'q2-text': '¿Cómo obtienes información sobre el desempeño del negocio?',
+    'q2-a': 'Armo reportes a mano cuando los necesito · o no tengo',
+    'q2-b': 'Tengo pantallas o informes automáticos que me muestran cómo va el negocio en tiempo real',
+    'q2-c': 'Tengo informes que no solo muestran lo que pasó, sino que anticipan lo que va a pasar usando IA',
+    'q3-num': 'Pregunta 3 — Operación', 'q3-text': '¿Cómo se ejecutan los procesos del día a día en tu empresa?',
+    'q3-a': 'Manualmente · depende de personas específicas para no detenerse',
+    'q3-b': 'Parcialmente automatizados · algunas tareas corren solas',
+    'q3-c': 'La IA ejecuta tareas por sí sola — sin que una persona tenga que intervenir cada vez',
+    'q4-num': 'Pregunta 4 — Clientes y ventas', 'q4-text': '¿Cómo gestionas los clientes potenciales o nuevos contactos?',
+    'q4-a': 'Sin sistema · en la cabeza, WhatsApp o una planilla',
+    'q4-b': 'Con un software de gestión de clientes (CRM) y seguimiento manual por parte del equipo',
+    'q4-c': 'Con automatización — el sistema envía recordatorios, hace seguimiento y avisa al equipo sin que nadie lo active manualmente',
+    'q5-num': 'Pregunta 5 — Decisiones', 'q5-text': '¿Cómo toma decisiones importantes tu empresa?',
+    'q5-a': 'Por intuición y experiencia · con poca información objetiva',
+    'q5-b': 'Con datos históricos disponibles · análisis manual del equipo',
+    'q5-c': 'Con datos y proyecciones — la IA ayuda a anticipar escenarios antes de que ocurran',
+    'c1-num': 'Pregunta 1 — Generación de demanda', 'c1-text': '¿Cómo llegan nuevos clientes a tu empresa?',
+    'c1-a': 'Por el esfuerzo personal del dueño — contactos directos o referidos sin proceso definido',
+    'c1-b': 'Algunos canales activos (redes, web, publicidad), pero sin sistema consistente de generación',
+    'c1-c': 'Canal de adquisición predecible — genera prospectos de forma sistemática sin que el dueño intervenga',
+    'c2-num': 'Pregunta 2 — Proceso de ventas', 'c2-text': '¿Cómo es el proceso desde que aparece un prospecto hasta que cierra?',
+    'c2-a': 'Informal — el dueño o cada vendedor lo maneja a su manera, sin etapas definidas',
+    'c2-b': 'Hay etapas definidas, pero el seguimiento es manual e inconsistente',
+    'c2-c': 'Proceso documentado, seguimiento automatizado y métricas de conversión por etapa',
+    'c3-num': 'Pregunta 3 — Retención y recurrencia', 'c3-text': '¿Cómo mantienes a tus clientes activos y recurrentes?',
+    'c3-a': 'No hay sistema — los clientes vuelven solos o no vuelven',
+    'c3-b': 'Seguimiento ocasional y algunas acciones de fidelización, pero sin regularidad ni métricas',
+    'c3-c': 'Programa activo: comunicación sistemática, alertas de churn y métricas de recurrencia',
+    'c4-num': 'Pregunta 4 — Presencia y visibilidad', 'c4-text': '¿Cómo te encuentra un cliente que no te conoce?',
+    'c4-a': 'Difícilmente — no tenemos presencia digital real ni posicionamiento claro',
+    'c4-b': 'Tenemos presencia en redes o web, pero no genera leads de forma consistente',
+    'c4-c': 'Posicionamiento activo que trae prospectos calificados de forma predecible',
+    'c5-num': 'Pregunta 5 — Métricas comerciales', 'c5-text': '¿Qué métricas de ventas mides regularmente?',
+    'c5-a': 'Solo los ingresos totales — o no medimos nada',
+    'c5-b': 'Seguimos el pipeline y algunos indicadores, pero sin dashboard integrado',
+    'c5-c': 'Dashboard comercial completo: conversión, CAC, LTV, tiempo de cierre, por canal',
+    // Results
+    'r-next-eyebrow': 'Tu siguiente paso',
+    'r-next-p': 'Agenda una llamada de 30 minutos. Te mostramos qué automatizar primero y cuánto vale.',
+    'r-btn-cal': 'Agendar llamada gratuita',
+    'r-btn-wa': 'Escribir por WhatsApp',
+    'r-retry': 'Volver a hacer el diagnóstico',
+    'r-era1-label': 'ERA 1 — Caos Operativo',
+    'r-era1-h2': 'Tu empresa funciona,<br>pero depende de ti.',
+    'r-era1-msg': 'La información vive en tu cabeza, en WhatsApp o en planillas. Cuando tú no estás, el negocio frena. La buena noticia: hay oportunidades claras y de alto impacto para ordenar todo antes de automatizar.',
+    'r-era1-insight': '"Las empresas en ERA 1 tienen el mayor potencial de mejora. El problema no es la tecnología — es que nadie ha mapeado los procesos todavía."',
+    'r-era2-label': 'ERA 2 — Datos Organizados',
+    'r-era2-h2': 'Tienes sistemas.<br>Pero no los estás usando.',
+    'r-era2-msg': 'Invertiste en tecnología y parte de la operación corre sola. Sin embargo, los reportes se arman a mano, los datos están fragmentados y las decisiones todavía dependen de intuición. Estás a pasos de ERA 3.',
+    'r-era2-insight': '"ERA 2 es la ERA más frustrante: ya gastaste en sistemas pero el ROI no llegó. La solución no es más software — es conectar lo que ya tienes."',
+    'r-era3-label': 'ERA 3 — Empresa con IA',
+    'r-era3-h2': 'Tu empresa opera<br>con inteligencia real.',
+    'r-era3-msg': 'Tienes procesos automatizados, datos conectados y la IA apoya decisiones clave. Estás en el grupo pequeño de empresas que ya opera en ERA 3. El foco ahora es escalar y profundizar.',
+    'r-era3-insight': '"Las empresas en ERA 3 no compiten en precio — compiten en velocidad y precisión. La IA les da ventaja estructural sobre el mercado."',
+  },
+  en: {
+    'lang': 'en',
+    'd-social': 'Over 80 companies already know their ERA',
+    'd-eyebrow': 'AI Maturity Diagnosis',
+    'd-h1': 'What <span>ERA</span> is<br>your company in?',
+    'd-sub': '5 questions · less than 5 minutes · No sign-up required.<br>Discover exactly where your company stands — and what it\'s costing you to stay there.',
+    'd-preview-title': 'When you finish you\'ll have',
+    'd-preview-1': 'Your exact ERA — not just ERA 1, 2 or 3, but your sub-level within the 9 possible',
+    'd-preview-2': 'The 3 areas where your company is losing money right now',
+    'd-preview-3': 'The first concrete step to move to the next ERA',
+    'd-tab-op': 'Operational', 'd-tab-op-sub': 'Can it handle demand?',
+    'd-tab-com': 'Commercial', 'd-tab-com-sub': 'Does it generate demand?',
+    'd-tab-ambas': 'Both', 'd-tab-ambas-sub': 'Full map',
+    'd-h2-hidden': 'Diagnosis test: what ERA is your company in?',
+    'd-progress': 'Question {done} of {total}',
+    'd-btn-pending': 'Answer all {n} questions to see your result',
+    'd-btn-ready': 'See my result →',
+    'd-chk-q1': 'Data', 'd-chk-q2': 'Reports', 'd-chk-q3': 'Operations',
+    'd-chk-q4': 'Clients', 'd-chk-q5': 'Decisions',
+    'd-chk-c1': 'Generation', 'd-chk-c2': 'Sales', 'd-chk-c3': 'Retention',
+    'd-chk-c4': 'Visibility', 'd-chk-c5': 'Metrics',
+    'd-com-divider': 'Commercial ERA',
+    // Questions
+    'q1-num': 'Question 1 — Data', 'q1-text': 'Where does your company\'s critical information live?',
+    'q1-a': 'Scattered — Excel, WhatsApp, emails, unorganized folders',
+    'q1-b': 'Centralized in a management system — CRM (clients), ERP (operations) or other software',
+    'q1-c': 'Automatically connected across multiple systems — data updates itself without anyone copying it',
+    'q2-num': 'Question 2 — Reports', 'q2-text': 'How do you get information about your business performance?',
+    'q2-a': 'I build reports manually when I need them · or I don\'t have them',
+    'q2-b': 'I have dashboards or automatic reports that show me how the business is doing in real time',
+    'q2-c': 'I have reports that not only show what happened, but anticipate what will happen using AI',
+    'q3-num': 'Question 3 — Operations', 'q3-text': 'How are day-to-day processes executed in your company?',
+    'q3-a': 'Manually · depends on specific people to keep running',
+    'q3-b': 'Partially automated · some tasks run on their own',
+    'q3-c': 'AI executes tasks on its own — without a person having to intervene each time',
+    'q4-num': 'Question 4 — Clients & Sales', 'q4-text': 'How do you manage potential clients or new contacts?',
+    'q4-a': 'No system · in someone\'s head, WhatsApp or a spreadsheet',
+    'q4-b': 'With a CRM and manual follow-up by the team',
+    'q4-c': 'With automation — the system sends reminders, follows up and alerts the team without anyone activating it manually',
+    'q5-num': 'Question 5 — Decisions', 'q5-text': 'How does your company make important decisions?',
+    'q5-a': 'By intuition and experience · with little objective information',
+    'q5-b': 'With available historical data · manual team analysis',
+    'q5-c': 'With data and projections — AI helps anticipate scenarios before they occur',
+    'c1-num': 'Question 1 — Demand Generation', 'c1-text': 'How do new clients reach your company?',
+    'c1-a': 'Through the owner\'s personal effort — direct contacts or referrals without a defined process',
+    'c1-b': 'Some active channels (social, web, ads), but no consistent generation system',
+    'c1-c': 'Predictable acquisition channel — generates prospects systematically without the owner\'s involvement',
+    'c2-num': 'Question 2 — Sales Process', 'c2-text': 'What\'s the process from when a prospect appears to when they close?',
+    'c2-a': 'Informal — the owner or each salesperson handles it their own way, without defined stages',
+    'c2-b': 'Defined stages exist, but follow-up is manual and inconsistent',
+    'c2-c': 'Documented process, automated follow-up and conversion metrics per stage',
+    'c3-num': 'Question 3 — Retention & Recurrence', 'c3-text': 'How do you keep your clients active and recurring?',
+    'c3-a': 'No system — clients come back on their own or don\'t come back',
+    'c3-b': 'Occasional follow-up and some loyalty actions, but without regularity or metrics',
+    'c3-c': 'Active program: systematic communication, churn alerts and recurrence metrics',
+    'c4-num': 'Question 4 — Presence & Visibility', 'c4-text': 'How does a client who doesn\'t know you find you?',
+    'c4-a': 'Hardly — we have no real digital presence or clear positioning',
+    'c4-b': 'We have a social or web presence, but it doesn\'t generate leads consistently',
+    'c4-c': 'Active positioning that brings qualified prospects predictably',
+    'c5-num': 'Question 5 — Commercial Metrics', 'c5-text': 'What sales metrics do you track regularly?',
+    'c5-a': 'Only total revenue — or we don\'t measure anything',
+    'c5-b': 'We track the pipeline and some indicators, but without an integrated dashboard',
+    'c5-c': 'Full commercial dashboard: conversion, CAC, LTV, close time, by channel',
+    // Results
+    'r-next-eyebrow': 'Your next step',
+    'r-next-p': 'Schedule a 30-minute call. We\'ll show you what to automate first and how much it\'s worth.',
+    'r-btn-cal': 'Schedule free call',
+    'r-btn-wa': 'Write on WhatsApp',
+    'r-retry': 'Take the diagnosis again',
+    'r-era1-label': 'ERA 1 — Operational Chaos',
+    'r-era1-h2': 'Your business works,<br>but it depends on you.',
+    'r-era1-msg': 'Information lives in your head, WhatsApp or spreadsheets. When you\'re not around, the business stalls. The good news: there are clear, high-impact opportunities to organize everything before automating.',
+    'r-era1-insight': '"Companies in ERA 1 have the greatest improvement potential. The problem isn\'t technology — it\'s that nobody has mapped the processes yet."',
+    'r-era2-label': 'ERA 2 — Organized Data',
+    'r-era2-h2': 'You have systems.<br>But you\'re not using them.',
+    'r-era2-msg': 'You invested in technology and part of the operation runs on its own. However, reports are still built manually, data is fragmented and decisions still depend on intuition. You\'re steps away from ERA 3.',
+    'r-era2-insight': '"ERA 2 is the most frustrating ERA: you\'ve already spent on systems but the ROI never came. The solution isn\'t more software — it\'s connecting what you already have."',
+    'r-era3-label': 'ERA 3 — AI-Powered Business',
+    'r-era3-h2': 'Your company operates<br>with real intelligence.',
+    'r-era3-msg': 'You have automated processes, connected data and AI supporting key decisions. You\'re in the small group of companies already operating in ERA 3. The focus now is to scale and deepen.',
+    'r-era3-insight': '"ERA 3 companies don\'t compete on price — they compete on speed and precision. AI gives them a structural advantage over the market."',
+  }
+};
 
-  <!-- INTRO -->
-  <div id="intro">
-    <div class="social-badge">
-      <span class="social-badge-dot"></span>
-      <span id="social-count">Más de 80 empresas ya conocen su ERA</span>
-    </div>
-    <div class="eyebrow">Diagnóstico de Madurez IA</div>
-    <h1>¿En qué <span>ERA</span> está<br>tu empresa?</h1>
-    <p class="intro-sub">
-      5 preguntas · menos de 5 minutos · Sin registro.<br>
-      Descubre en qué punto exacto está tu empresa — y qué te está costando no avanzar.
-    </p>
+// ── STATE ─────────────────────────────────────────────────────────────────
+let answers = {};
+let currentMode = 'operacional';
+let lang = localStorage.getItem('lang') || 'es';
 
-    <div class="preview-box">
-      <div class="preview-title">Al terminar vas a tener</div>
-      <div class="preview-item">
-        <span class="preview-icon">→</span>
-        <span>Tu ERA exacta — no solo ERA 1, 2 o 3, sino tu sub-nivel dentro de los 9 posibles</span>
+// ── HELPERS ───────────────────────────────────────────────────────────────
+function t(key) { return D[lang][key] || D['es'][key]; }
+
+function applyDiagLang() {
+  document.querySelectorAll('[data-i18n]').forEach(el => {
+    const key = el.getAttribute('data-i18n');
+    const val = t(key);
+    if (val) el.innerHTML = val;
+  });
+  updateProgressText();
+  updateButtonText();
+  updateQuestions();
+  // sync com-divider label
+  const divLabel = document.querySelector('.dim-divider-label');
+  if (divLabel) divLabel.textContent = t('d-com-divider');
+}
+
+function updateProgressText() {
+  const required = getRequired();
+  const done = required.filter(k => answers[k] !== undefined).length;
+  const total = required.length;
+  const txt = t('d-progress').replace('{done}', done + 1 <= total ? done + 1 : total).replace('{total}', total);
+  const el = document.getElementById('progress-text');
+  if (el) el.textContent = txt;
+}
+
+function updateButtonText() {
+  const required = getRequired();
+  const done = required.filter(k => answers[k] !== undefined).length;
+  const btn = document.getElementById('btn-submit');
+  if (!btn) return;
+  if (done >= required.length) {
+    btn.textContent = t('d-btn-ready');
+    btn.disabled = false;
+  } else {
+    btn.textContent = t('d-btn-pending').replace('{n}', required.length);
+    btn.disabled = true;
+  }
+}
+
+function updateQuestions() {
+  const opKeys = ['q1','q2','q3','q4','q5'];
+  const comKeys = ['c1','c2','c3','c4','c5'];
+  [...opKeys, ...comKeys].forEach(k => {
+    const numEl = document.querySelector(`[data-qnum="${k}"]`);
+    const txtEl = document.querySelector(`[data-qtxt="${k}"]`);
+    if (numEl) numEl.textContent = t(k + '-num');
+    if (txtEl) txtEl.textContent = t(k + '-text');
+    ['a','b','c'].forEach((letter, idx) => {
+      const optEl = document.querySelector(`[data-qopt="${k}-${letter}"]`);
+      if (optEl) optEl.textContent = t(k + '-' + letter);
+    });
+  });
+}
+
+// ── QUESTION DATA-ATTRS ───────────────────────────────────────────────────
+// We need to set data attributes on existing elements on init
+function initDataAttrs() {
+  const opKeys = ['q1','q2','q3','q4','q5'];
+  const comKeys = ['c1','c2','c3','c4','c5'];
+  const allKeys = [...opKeys, ...comKeys];
+
+  const opQDivs = document.querySelectorAll('#op-questions .question');
+  const comQDivs = document.querySelectorAll('#com-questions .question');
+
+  opKeys.forEach((k, i) => {
+    const q = opQDivs[i];
+    if (!q) return;
+    const numEl = q.querySelector('.q-num');
+    const txtEl = q.querySelector('.q-text');
+    if (numEl) numEl.setAttribute('data-qnum', k);
+    if (txtEl) txtEl.setAttribute('data-qtxt', k);
+    const opts = q.querySelectorAll('.opt-text');
+    ['a','b','c'].forEach((letter, j) => {
+      if (opts[j]) opts[j].setAttribute('data-qopt', k + '-' + letter);
+    });
+  });
+
+  comKeys.forEach((k, i) => {
+    const q = comQDivs[i];
+    if (!q) return;
+    const numEl = q.querySelector('.q-num');
+    const txtEl = q.querySelector('.q-text');
+    if (numEl) numEl.setAttribute('data-qnum', k);
+    if (txtEl) txtEl.setAttribute('data-qtxt', k);
+    const opts = q.querySelectorAll('.opt-text');
+    ['a','b','c'].forEach((letter, j) => {
+      if (opts[j]) opts[j].setAttribute('data-qopt', k + '-' + letter);
+    });
+  });
+}
+
+// ── CORE FUNCTIONS ────────────────────────────────────────────────────────
+function getRequired() {
+  return currentMode === 'ambas'
+    ? ['q1','q2','q3','q4','q5','c1','c2','c3','c4','c5']
+    : ['q1','q2','q3','q4','q5'];
+}
+
+function setMode(mode) {
+  currentMode = mode;
+  document.querySelectorAll('.era-tab').forEach(btn => {
+    btn.classList.toggle('active', btn.dataset.mode === mode);
+  });
+  const comQ = document.getElementById('com-questions');
+  const comDiv = document.getElementById('com-divider');
+  const comChips = document.querySelectorAll('.qc-com');
+  if (mode === 'ambas') {
+    comQ.style.display = 'block';
+    comDiv.classList.add('visible');
+    comChips.forEach(c => c.style.display = 'inline-flex');
+  } else {
+    comQ.style.display = 'none';
+    comDiv.classList.remove('visible');
+    comChips.forEach(c => c.style.display = 'none');
+    ['c1','c2','c3','c4','c5'].forEach(k => delete answers[k]);
+  }
+  if (mode === 'comercial') {
+    ['q1','q2','q3','q4','q5'].forEach(k => {});
+  }
+  updateProgressText();
+  updateButtonText();
+}
+
+function selectOption(el, name, value) {
+  el.closest('.options').querySelectorAll('.option').forEach(o => o.classList.remove('selected'));
+  el.classList.add('selected');
+  answers[name] = value;
+  const chk = document.getElementById('chk-' + name);
+  if (chk) {
+    chk.classList.add('done');
+    chk.querySelector('.qc-icon').textContent = '✓';
+  }
+  updateProgressText();
+  updateButtonText();
+}
+
+function calcEra(score, n) {
+  const max = n * 3, min = n;
+  const pct = (score - min) / (max - min);
+  if (pct < 0.334) return 1;
+  if (pct < 0.667) return 2;
+  return 3;
+}
+
+function calcSubLabel(score, n) {
+  const max = n * 3, min = n;
+  const pct = (score - min) / (max - min);
+  if (pct < 0.167) return '−';
+  if (pct < 0.334) return '';
+  if (pct < 0.5)   return '+';
+  if (pct < 0.667) return '−';
+  if (pct < 0.833) return '';
+  if (pct < 1.0)   return '+';
+  return '+';
+}
+
+function eraColor(era) {
+  return era === 1 ? '#F87171' : era === 2 ? '#FBBF24' : '#00E891';
+}
+
+function buildResultCard(eraNum, score, n, prefix) {
+  const color = eraColor(eraNum);
+  const sub = calcSubLabel(score, n);
+  const label = t('r-era' + eraNum + '-label');
+  const h2 = t('r-era' + eraNum + '-h2');
+  const msg = t('r-era' + eraNum + '-msg');
+  const insight = t('r-era' + eraNum + '-insight');
+  return `
+    <div class="result-card" style="border-color:${color}; background:${color}18;">
+      <div class="result-era-label" style="color:${color}">${label}${sub}</div>
+      <div class="result-era-name" style="color:${color}">${h2.replace('<br>', ' ')}</div>
+      <p class="result-msg">${msg}</p>
+      <p class="result-insight" style="border-color:${color}">${insight}</p>
+    </div>`;
+}
+
+function mostrarResultado() {
+  const opKeys = ['q1','q2','q3','q4','q5'];
+  const comKeys = ['c1','c2','c3','c4','c5'];
+
+  let html = '';
+
+  if (currentMode === 'ambas') {
+    const opScore = opKeys.reduce((s,k) => s + (answers[k]||0), 0);
+    const comScore = comKeys.reduce((s,k) => s + (answers[k]||0), 0);
+    const opEra = calcEra(opScore, 5);
+    const comEra = calcEra(comScore, 5);
+
+    html += `<div class="dual-scores">
+      <div class="score-mini">
+        <div class="score-mini-label">${t('d-tab-op')}</div>
+        <div class="score-mini-era" style="color:${eraColor(opEra)}">ERA ${opEra}${calcSubLabel(opScore,5)}</div>
+        <div class="score-mini-name">${t('r-era'+opEra+'-label').split('—')[1]?.trim()||''}</div>
       </div>
-      <div class="preview-item">
-        <span class="preview-icon">→</span>
-        <span>Los 3 puntos donde tu empresa está perdiendo dinero ahora mismo</span>
+      <div class="score-mini">
+        <div class="score-mini-label">${t('d-tab-com')}</div>
+        <div class="score-mini-era" style="color:${eraColor(comEra)}">ERA ${comEra}${calcSubLabel(comScore,5)}</div>
+        <div class="score-mini-name">${t('r-era'+comEra+'-label').split('—')[1]?.trim()||''}</div>
       </div>
-      <div class="preview-item">
-        <span class="preview-icon">→</span>
-        <span>El primer paso concreto para pasar a la siguiente ERA</span>
+    </div>`;
+
+    const dominantEra = Math.round((opEra + comEra) / 2);
+    html += buildResultCard(dominantEra, Math.round((opScore+comScore)/2), 5, 'both');
+  } else {
+    const keys = currentMode === 'comercial' ? comKeys : opKeys;
+    const score = keys.reduce((s,k) => s + (answers[k]||0), 0);
+    const era = calcEra(score, 5);
+    html += buildResultCard(era, score, 5, currentMode);
+  }
+
+  html += `
+    <div class="next-step">
+      <div class="next-step-eyebrow">${t('r-next-eyebrow')}</div>
+      <h2>${t('r-era' + (calcEra(Object.values(answers).reduce((s,v)=>s+v,0), Object.keys(answers).length)) + '-h2')}</h2>
+      <p>${t('r-next-p')}</p>
+      <div style="display:flex;flex-direction:column;align-items:center;gap:10px;">
+        <a href="https://calendly.com/escribeme-3g-ia-agents/diagnostico-base-en-30-min" target="_blank" class="btn-calendly">${t('r-btn-cal')}</a>
+        <div class="divider-or">o</div>
+        <a href="https://wa.me/56988974898" target="_blank" class="btn-wa">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          ${t('r-btn-wa')}
+        </a>
       </div>
-    </div>
-  </div>
+      <button class="retry-link" onclick="resetDiag()">${t('r-retry')}</button>
+    </div>`;
 
-  <!-- ERA SELECTOR -->
-  <div class="era-selector" id="era-selector">
-    <button class="era-tab active" data-mode="operacional" onclick="setMode('operacional')">
-      Operacional<span class="era-tab-sub">¿Aguanta la demanda?</span>
-    </button>
-    <button class="era-tab" data-mode="comercial" onclick="setMode('comercial')">
-      Comercial<span class="era-tab-sub">¿Genera la demanda?</span>
-    </button>
-    <button class="era-tab" data-mode="ambas" onclick="setMode('ambas')">
-      Ambas<span class="era-tab-sub">Mapa completo</span>
-    </button>
-  </div>
+  const resEl = document.getElementById('resultado');
+  resEl.innerHTML = html;
+  resEl.style.display = 'block';
+  document.getElementById('quiz').style.display = 'none';
+  document.getElementById('era-selector').style.display = 'none';
+  document.getElementById('intro').style.display = 'none';
+  document.querySelector('.progress-wrap').style.display = 'none';
+  resEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
 
-  <!-- QUIZ SECTION H2 -->
-  <h2 class="visually-hidden">Test de diagnóstico: ¿en qué ERA está tu empresa?</h2>
+function resetDiag() {
+  answers = {};
+  document.getElementById('resultado').style.display = 'none';
+  document.getElementById('resultado').innerHTML = '';
+  document.getElementById('quiz').style.display = 'block';
+  document.getElementById('era-selector').style.display = 'flex';
+  document.getElementById('intro').style.display = 'block';
+  document.querySelector('.progress-wrap').style.display = 'block';
+  document.querySelectorAll('.option').forEach(o => o.classList.remove('selected'));
+  document.querySelectorAll('.qc-item').forEach(c => {
+    c.classList.remove('done');
+    c.querySelector('.qc-icon').textContent = '○';
+  });
+  setMode('operacional');
+}
 
-  <!-- PROGRESS -->
-  <div class="progress-wrap">
-    <div class="progress-label">
-      <span id="progress-text">Pregunta 1 de 5</span>
-      <span id="progress-pct">0%</span>
-    </div>
-    <div class="progress-bar"><div class="progress-fill" id="progress-fill"></div></div>
-  </div>
+// ── INIT ──────────────────────────────────────────────────────────────────
+document.addEventListener('DOMContentLoaded', () => {
+  initDataAttrs();
+  lang = localStorage.getItem('lang') || 'es';
+  applyDiagLang();
+  updateProgressText();
+  updateButtonText();
+});
 
-  <!-- QUIZ -->
-  <div id="quiz">
-  <div id="op-questions">
+// Listen for lang changes from Layout.astro's setLang
+window.addEventListener('langchange', e => { lang = e.detail; applyDiagLang(); });
+</script>
 
-    <!-- P1 -->
-    <div class="question" style="animation-delay:.05s">
-      <div class="q-num">Pregunta 1 — Datos</div>
-      <div class="q-text">¿Dónde vive la información crítica de tu empresa?</div>
-      <div class="options">
-        <label class="option" onclick="selectOption(this, 'q1', 1)">
-          <input type="radio" name="q1" value="1" />
-          <div class="opt-letter">A</div>
-          <div class="opt-text">Dispersa — Excel, WhatsApp, correos, carpetas sin orden</div>
-        </label>
-        <label class="option" onclick="selectOption(this, 'q1', 2)">
-          <input type="radio" name="q1" value="2" />
-          <div class="opt-letter">B</div>
-          <div class="opt-text">Centralizada en un sistema de gestión — CRM (clientes), ERP (operaciones) u otro software</div>
-        </label>
-        <label class="option" onclick="selectOption(this, 'q1', 3)">
-          <input type="radio" name="q1" value="3" />
-          <div class="opt-letter">C</div>
-          <div class="opt-text">Conectada automáticamente entre varios sistemas — los datos se actualizan solos sin que nadie los copie</div>
-        </label>
+<script is:inline>
+// ── TRANSLATIONS ─────────────────────────────────────────────────────────
+const D = {
+  es: {
+    'lang': 'es',
+    'd-social': 'Más de 80 empresas ya conocen su ERA',
+    'd-eyebrow': 'Diagnóstico de Madurez IA',
+    'd-h1': '¿En qué <span>ERA</span> está<br>tu empresa?',
+    'd-sub': '5 preguntas · menos de 5 minutos · Sin registro.<br>Descubre en qué punto exacto está tu empresa — y qué te está costando no avanzar.',
+    'd-preview-title': 'Al terminar vas a tener',
+    'd-preview-1': 'Tu ERA exacta — no solo ERA 1, 2 o 3, sino tu sub-nivel dentro de los 9 posibles',
+    'd-preview-2': 'Los 3 puntos donde tu empresa está perdiendo dinero ahora mismo',
+    'd-preview-3': 'El primer paso concreto para pasar a la siguiente ERA',
+    'd-tab-op': 'Operacional', 'd-tab-op-sub': '¿Aguanta la demanda?',
+    'd-tab-com': 'Comercial', 'd-tab-com-sub': '¿Genera la demanda?',
+    'd-tab-ambas': 'Ambas', 'd-tab-ambas-sub': 'Mapa completo',
+    'd-h2-hidden': 'Test de diagnóstico: ¿en qué ERA está tu empresa?',
+    'd-progress': 'Pregunta {done} de {total}',
+    'd-btn-pending': 'Responde las {n} preguntas para ver tu resultado',
+    'd-btn-ready': 'Ver mi resultado →',
+    'd-chk-q1': 'Datos', 'd-chk-q2': 'Reportes', 'd-chk-q3': 'Operación',
+    'd-chk-q4': 'Clientes', 'd-chk-q5': 'Decisiones',
+    'd-chk-c1': 'Generación', 'd-chk-c2': 'Ventas', 'd-chk-c3': 'Retención',
+    'd-chk-c4': 'Visibilidad', 'd-chk-c5': 'Métricas',
+    'd-com-divider': 'ERA Comercial',
+    // Questions
+    'q1-num': 'Pregunta 1 — Datos', 'q1-text': '¿Dónde vive la información crítica de tu empresa?',
+    'q1-a': 'Dispersa — Excel, WhatsApp, correos, carpetas sin orden',
+    'q1-b': 'Centralizada en un sistema de gestión — CRM (clientes), ERP (operaciones) u otro software',
+    'q1-c': 'Conectada automáticamente entre varios sistemas — los datos se actualizan solos sin que nadie los copie',
+    'q2-num': 'Pregunta 2 — Reportes', 'q2-text': '¿Cómo obtienes información sobre el desempeño del negocio?',
+    'q2-a': 'Armo reportes a mano cuando los necesito · o no tengo',
+    'q2-b': 'Tengo pantallas o informes automáticos que me muestran cómo va el negocio en tiempo real',
+    'q2-c': 'Tengo informes que no solo muestran lo que pasó, sino que anticipan lo que va a pasar usando IA',
+    'q3-num': 'Pregunta 3 — Operación', 'q3-text': '¿Cómo se ejecutan los procesos del día a día en tu empresa?',
+    'q3-a': 'Manualmente · depende de personas específicas para no detenerse',
+    'q3-b': 'Parcialmente automatizados · algunas tareas corren solas',
+    'q3-c': 'La IA ejecuta tareas por sí sola — sin que una persona tenga que intervenir cada vez',
+    'q4-num': 'Pregunta 4 — Clientes y ventas', 'q4-text': '¿Cómo gestionas los clientes potenciales o nuevos contactos?',
+    'q4-a': 'Sin sistema · en la cabeza, WhatsApp o una planilla',
+    'q4-b': 'Con un software de gestión de clientes (CRM) y seguimiento manual por parte del equipo',
+    'q4-c': 'Con automatización — el sistema envía recordatorios, hace seguimiento y avisa al equipo sin que nadie lo active manualmente',
+    'q5-num': 'Pregunta 5 — Decisiones', 'q5-text': '¿Cómo toma decisiones importantes tu empresa?',
+    'q5-a': 'Por intuición y experiencia · con poca información objetiva',
+    'q5-b': 'Con datos históricos disponibles · análisis manual del equipo',
+    'q5-c': 'Con datos y proyecciones — la IA ayuda a anticipar escenarios antes de que ocurran',
+    'c1-num': 'Pregunta 1 — Generación de demanda', 'c1-text': '¿Cómo llegan nuevos clientes a tu empresa?',
+    'c1-a': 'Por el esfuerzo personal del dueño — contactos directos o referidos sin proceso definido',
+    'c1-b': 'Algunos canales activos (redes, web, publicidad), pero sin sistema consistente de generación',
+    'c1-c': 'Canal de adquisición predecible — genera prospectos de forma sistemática sin que el dueño intervenga',
+    'c2-num': 'Pregunta 2 — Proceso de ventas', 'c2-text': '¿Cómo es el proceso desde que aparece un prospecto hasta que cierra?',
+    'c2-a': 'Informal — el dueño o cada vendedor lo maneja a su manera, sin etapas definidas',
+    'c2-b': 'Hay etapas definidas, pero el seguimiento es manual e inconsistente',
+    'c2-c': 'Proceso documentado, seguimiento automatizado y métricas de conversión por etapa',
+    'c3-num': 'Pregunta 3 — Retención y recurrencia', 'c3-text': '¿Cómo mantienes a tus clientes activos y recurrentes?',
+    'c3-a': 'No hay sistema — los clientes vuelven solos o no vuelven',
+    'c3-b': 'Seguimiento ocasional y algunas acciones de fidelización, pero sin regularidad ni métricas',
+    'c3-c': 'Programa activo: comunicación sistemática, alertas de churn y métricas de recurrencia',
+    'c4-num': 'Pregunta 4 — Presencia y visibilidad', 'c4-text': '¿Cómo te encuentra un cliente que no te conoce?',
+    'c4-a': 'Difícilmente — no tenemos presencia digital real ni posicionamiento claro',
+    'c4-b': 'Tenemos presencia en redes o web, pero no genera leads de forma consistente',
+    'c4-c': 'Posicionamiento activo que trae prospectos calificados de forma predecible',
+    'c5-num': 'Pregunta 5 — Métricas comerciales', 'c5-text': '¿Qué métricas de ventas mides regularmente?',
+    'c5-a': 'Solo los ingresos totales — o no medimos nada',
+    'c5-b': 'Seguimos el pipeline y algunos indicadores, pero sin dashboard integrado',
+    'c5-c': 'Dashboard comercial completo: conversión, CAC, LTV, tiempo de cierre, por canal',
+    // Results
+    'r-next-eyebrow': 'Tu siguiente paso',
+    'r-next-p': 'Agenda una llamada de 30 minutos. Te mostramos qué automatizar primero y cuánto vale.',
+    'r-btn-cal': 'Agendar llamada gratuita',
+    'r-btn-wa': 'Escribir por WhatsApp',
+    'r-retry': 'Volver a hacer el diagnóstico',
+    'r-era1-label': 'ERA 1 — Caos Operativo',
+    'r-era1-h2': 'Tu empresa funciona,<br>pero depende de ti.',
+    'r-era1-msg': 'La información vive en tu cabeza, en WhatsApp o en planillas. Cuando tú no estás, el negocio frena. La buena noticia: hay oportunidades claras y de alto impacto para ordenar todo antes de automatizar.',
+    'r-era1-insight': '"Las empresas en ERA 1 tienen el mayor potencial de mejora. El problema no es la tecnología — es que nadie ha mapeado los procesos todavía."',
+    'r-era2-label': 'ERA 2 — Datos Organizados',
+    'r-era2-h2': 'Tienes sistemas.<br>Pero no los estás usando.',
+    'r-era2-msg': 'Invertiste en tecnología y parte de la operación corre sola. Sin embargo, los reportes se arman a mano, los datos están fragmentados y las decisiones todavía dependen de intuición. Estás a pasos de ERA 3.',
+    'r-era2-insight': '"ERA 2 es la ERA más frustrante: ya gastaste en sistemas pero el ROI no llegó. La solución no es más software — es conectar lo que ya tienes."',
+    'r-era3-label': 'ERA 3 — Empresa con IA',
+    'r-era3-h2': 'Tu empresa opera<br>con inteligencia real.',
+    'r-era3-msg': 'Tienes procesos automatizados, datos conectados y la IA apoya decisiones clave. Estás en el grupo pequeño de empresas que ya opera en ERA 3. El foco ahora es escalar y profundizar.',
+    'r-era3-insight': '"Las empresas en ERA 3 no compiten en precio — compiten en velocidad y precisión. La IA les da ventaja estructural sobre el mercado."',
+  },
+  en: {
+    'lang': 'en',
+    'd-social': 'Over 80 companies already know their ERA',
+    'd-eyebrow': 'AI Maturity Diagnosis',
+    'd-h1': 'What <span>ERA</span> is<br>your company in?',
+    'd-sub': '5 questions · less than 5 minutes · No sign-up required.<br>Discover exactly where your company stands — and what it\'s costing you to stay there.',
+    'd-preview-title': 'When you finish you\'ll have',
+    'd-preview-1': 'Your exact ERA — not just ERA 1, 2 or 3, but your sub-level within the 9 possible',
+    'd-preview-2': 'The 3 areas where your company is losing money right now',
+    'd-preview-3': 'The first concrete step to move to the next ERA',
+    'd-tab-op': 'Operational', 'd-tab-op-sub': 'Can it handle demand?',
+    'd-tab-com': 'Commercial', 'd-tab-com-sub': 'Does it generate demand?',
+    'd-tab-ambas': 'Both', 'd-tab-ambas-sub': 'Full map',
+    'd-h2-hidden': 'Diagnosis test: what ERA is your company in?',
+    'd-progress': 'Question {done} of {total}',
+    'd-btn-pending': 'Answer all {n} questions to see your result',
+    'd-btn-ready': 'See my result →',
+    'd-chk-q1': 'Data', 'd-chk-q2': 'Reports', 'd-chk-q3': 'Operations',
+    'd-chk-q4': 'Clients', 'd-chk-q5': 'Decisions',
+    'd-chk-c1': 'Generation', 'd-chk-c2': 'Sales', 'd-chk-c3': 'Retention',
+    'd-chk-c4': 'Visibility', 'd-chk-c5': 'Metrics',
+    'd-com-divider': 'Commercial ERA',
+    // Questions
+    'q1-num': 'Question 1 — Data', 'q1-text': 'Where does your company\'s critical information live?',
+    'q1-a': 'Scattered — Excel, WhatsApp, emails, unorganized folders',
+    'q1-b': 'Centralized in a management system — CRM (clients), ERP (operations) or other software',
+    'q1-c': 'Automatically connected across multiple systems — data updates itself without anyone copying it',
+    'q2-num': 'Question 2 — Reports', 'q2-text': 'How do you get information about your business performance?',
+    'q2-a': 'I build reports manually when I need them · or I don\'t have them',
+    'q2-b': 'I have dashboards or automatic reports that show me how the business is doing in real time',
+    'q2-c': 'I have reports that not only show what happened, but anticipate what will happen using AI',
+    'q3-num': 'Question 3 — Operations', 'q3-text': 'How are day-to-day processes executed in your company?',
+    'q3-a': 'Manually · depends on specific people to keep running',
+    'q3-b': 'Partially automated · some tasks run on their own',
+    'q3-c': 'AI executes tasks on its own — without a person having to intervene each time',
+    'q4-num': 'Question 4 — Clients & Sales', 'q4-text': 'How do you manage potential clients or new contacts?',
+    'q4-a': 'No system · in someone\'s head, WhatsApp or a spreadsheet',
+    'q4-b': 'With a CRM and manual follow-up by the team',
+    'q4-c': 'With automation — the system sends reminders, follows up and alerts the team without anyone activating it manually',
+    'q5-num': 'Question 5 — Decisions', 'q5-text': 'How does your company make important decisions?',
+    'q5-a': 'By intuition and experience · with little objective information',
+    'q5-b': 'With available historical data · manual team analysis',
+    'q5-c': 'With data and projections — AI helps anticipate scenarios before they occur',
+    'c1-num': 'Question 1 — Demand Generation', 'c1-text': 'How do new clients reach your company?',
+    'c1-a': 'Through the owner\'s personal effort — direct contacts or referrals without a defined process',
+    'c1-b': 'Some active channels (social, web, ads), but no consistent generation system',
+    'c1-c': 'Predictable acquisition channel — generates prospects systematically without the owner\'s involvement',
+    'c2-num': 'Question 2 — Sales Process', 'c2-text': 'What\'s the process from when a prospect appears to when they close?',
+    'c2-a': 'Informal — the owner or each salesperson handles it their own way, without defined stages',
+    'c2-b': 'Defined stages exist, but follow-up is manual and inconsistent',
+    'c2-c': 'Documented process, automated follow-up and conversion metrics per stage',
+    'c3-num': 'Question 3 — Retention & Recurrence', 'c3-text': 'How do you keep your clients active and recurring?',
+    'c3-a': 'No system — clients come back on their own or don\'t come back',
+    'c3-b': 'Occasional follow-up and some loyalty actions, but without regularity or metrics',
+    'c3-c': 'Active program: systematic communication, churn alerts and recurrence metrics',
+    'c4-num': 'Question 4 — Presence & Visibility', 'c4-text': 'How does a client who doesn\'t know you find you?',
+    'c4-a': 'Hardly — we have no real digital presence or clear positioning',
+    'c4-b': 'We have a social or web presence, but it doesn\'t generate leads consistently',
+    'c4-c': 'Active positioning that brings qualified prospects predictably',
+    'c5-num': 'Question 5 — Commercial Metrics', 'c5-text': 'What sales metrics do you track regularly?',
+    'c5-a': 'Only total revenue — or we don\'t measure anything',
+    'c5-b': 'We track the pipeline and some indicators, but without an integrated dashboard',
+    'c5-c': 'Full commercial dashboard: conversion, CAC, LTV, close time, by channel',
+    // Results
+    'r-next-eyebrow': 'Your next step',
+    'r-next-p': 'Schedule a 30-minute call. We\'ll show you what to automate first and how much it\'s worth.',
+    'r-btn-cal': 'Schedule free call',
+    'r-btn-wa': 'Write on WhatsApp',
+    'r-retry': 'Take the diagnosis again',
+    'r-era1-label': 'ERA 1 — Operational Chaos',
+    'r-era1-h2': 'Your business works,<br>but it depends on you.',
+    'r-era1-msg': 'Information lives in your head, WhatsApp or spreadsheets. When you\'re not around, the business stalls. The good news: there are clear, high-impact opportunities to organize everything before automating.',
+    'r-era1-insight': '"Companies in ERA 1 have the greatest improvement potential. The problem isn\'t technology — it\'s that nobody has mapped the processes yet."',
+    'r-era2-label': 'ERA 2 — Organized Data',
+    'r-era2-h2': 'You have systems.<br>But you\'re not using them.',
+    'r-era2-msg': 'You invested in technology and part of the operation runs on its own. However, reports are still built manually, data is fragmented and decisions still depend on intuition. You\'re steps away from ERA 3.',
+    'r-era2-insight': '"ERA 2 is the most frustrating ERA: you\'ve already spent on systems but the ROI never came. The solution isn\'t more software — it\'s connecting what you already have."',
+    'r-era3-label': 'ERA 3 — AI-Powered Business',
+    'r-era3-h2': 'Your company operates<br>with real intelligence.',
+    'r-era3-msg': 'You have automated processes, connected data and AI supporting key decisions. You\'re in the small group of companies already operating in ERA 3. The focus now is to scale and deepen.',
+    'r-era3-insight': '"ERA 3 companies don\'t compete on price — they compete on speed and precision. AI gives them a structural advantage over the market."',
+  }
+};
+
+// ── STATE ─────────────────────────────────────────────────────────────────
+let answers = {};
+let currentMode = 'operacional';
+let lang = localStorage.getItem('lang') || 'es';
+
+// ── HELPERS ───────────────────────────────────────────────────────────────
+function t(key) { return D[lang][key] || D['es'][key]; }
+
+function applyDiagLang() {
+  document.querySelectorAll('[data-i18n]').forEach(el => {
+    const key = el.getAttribute('data-i18n');
+    const val = t(key);
+    if (val) el.innerHTML = val;
+  });
+  updateProgressText();
+  updateButtonText();
+  updateQuestions();
+  // sync com-divider label
+  const divLabel = document.querySelector('.dim-divider-label');
+  if (divLabel) divLabel.textContent = t('d-com-divider');
+}
+
+function updateProgressText() {
+  const required = getRequired();
+  const done = required.filter(k => answers[k] !== undefined).length;
+  const total = required.length;
+  const txt = t('d-progress').replace('{done}', done + 1 <= total ? done + 1 : total).replace('{total}', total);
+  const el = document.getElementById('progress-text');
+  if (el) el.textContent = txt;
+}
+
+function updateButtonText() {
+  const required = getRequired();
+  const done = required.filter(k => answers[k] !== undefined).length;
+  const btn = document.getElementById('btn-submit');
+  if (!btn) return;
+  if (done >= required.length) {
+    btn.textContent = t('d-btn-ready');
+    btn.disabled = false;
+  } else {
+    btn.textContent = t('d-btn-pending').replace('{n}', required.length);
+    btn.disabled = true;
+  }
+}
+
+function updateQuestions() {
+  const opKeys = ['q1','q2','q3','q4','q5'];
+  const comKeys = ['c1','c2','c3','c4','c5'];
+  [...opKeys, ...comKeys].forEach(k => {
+    const numEl = document.querySelector(`[data-qnum="${k}"]`);
+    const txtEl = document.querySelector(`[data-qtxt="${k}"]`);
+    if (numEl) numEl.textContent = t(k + '-num');
+    if (txtEl) txtEl.textContent = t(k + '-text');
+    ['a','b','c'].forEach((letter, idx) => {
+      const optEl = document.querySelector(`[data-qopt="${k}-${letter}"]`);
+      if (optEl) optEl.textContent = t(k + '-' + letter);
+    });
+  });
+}
+
+// ── QUESTION DATA-ATTRS ───────────────────────────────────────────────────
+// We need to set data attributes on existing elements on init
+function initDataAttrs() {
+  const opKeys = ['q1','q2','q3','q4','q5'];
+  const comKeys = ['c1','c2','c3','c4','c5'];
+  const allKeys = [...opKeys, ...comKeys];
+
+  const opQDivs = document.querySelectorAll('#op-questions .question');
+  const comQDivs = document.querySelectorAll('#com-questions .question');
+
+  opKeys.forEach((k, i) => {
+    const q = opQDivs[i];
+    if (!q) return;
+    const numEl = q.querySelector('.q-num');
+    const txtEl = q.querySelector('.q-text');
+    if (numEl) numEl.setAttribute('data-qnum', k);
+    if (txtEl) txtEl.setAttribute('data-qtxt', k);
+    const opts = q.querySelectorAll('.opt-text');
+    ['a','b','c'].forEach((letter, j) => {
+      if (opts[j]) opts[j].setAttribute('data-qopt', k + '-' + letter);
+    });
+  });
+
+  comKeys.forEach((k, i) => {
+    const q = comQDivs[i];
+    if (!q) return;
+    const numEl = q.querySelector('.q-num');
+    const txtEl = q.querySelector('.q-text');
+    if (numEl) numEl.setAttribute('data-qnum', k);
+    if (txtEl) txtEl.setAttribute('data-qtxt', k);
+    const opts = q.querySelectorAll('.opt-text');
+    ['a','b','c'].forEach((letter, j) => {
+      if (opts[j]) opts[j].setAttribute('data-qopt', k + '-' + letter);
+    });
+  });
+}
+
+// ── CORE FUNCTIONS ────────────────────────────────────────────────────────
+function getRequired() {
+  return currentMode === 'ambas'
+    ? ['q1','q2','q3','q4','q5','c1','c2','c3','c4','c5']
+    : ['q1','q2','q3','q4','q5'];
+}
+
+function setMode(mode) {
+  currentMode = mode;
+  document.querySelectorAll('.era-tab').forEach(btn => {
+    btn.classList.toggle('active', btn.dataset.mode === mode);
+  });
+  const comQ = document.getElementById('com-questions');
+  const comDiv = document.getElementById('com-divider');
+  const comChips = document.querySelectorAll('.qc-com');
+  if (mode === 'ambas') {
+    comQ.style.display = 'block';
+    comDiv.classList.add('visible');
+    comChips.forEach(c => c.style.display = 'inline-flex');
+  } else {
+    comQ.style.display = 'none';
+    comDiv.classList.remove('visible');
+    comChips.forEach(c => c.style.display = 'none');
+    ['c1','c2','c3','c4','c5'].forEach(k => delete answers[k]);
+  }
+  if (mode === 'comercial') {
+    ['q1','q2','q3','q4','q5'].forEach(k => {});
+  }
+  updateProgressText();
+  updateButtonText();
+}
+
+function selectOption(el, name, value) {
+  el.closest('.options').querySelectorAll('.option').forEach(o => o.classList.remove('selected'));
+  el.classList.add('selected');
+  answers[name] = value;
+  const chk = document.getElementById('chk-' + name);
+  if (chk) {
+    chk.classList.add('done');
+    chk.querySelector('.qc-icon').textContent = '✓';
+  }
+  updateProgressText();
+  updateButtonText();
+}
+
+function calcEra(score, n) {
+  const max = n * 3, min = n;
+  const pct = (score - min) / (max - min);
+  if (pct < 0.334) return 1;
+  if (pct < 0.667) return 2;
+  return 3;
+}
+
+function calcSubLabel(score, n) {
+  const max = n * 3, min = n;
+  const pct = (score - min) / (max - min);
+  if (pct < 0.167) return '−';
+  if (pct < 0.334) return '';
+  if (pct < 0.5)   return '+';
+  if (pct < 0.667) return '−';
+  if (pct < 0.833) return '';
+  if (pct < 1.0)   return '+';
+  return '+';
+}
+
+function eraColor(era) {
+  return era === 1 ? '#F87171' : era === 2 ? '#FBBF24' : '#00E891';
+}
+
+function buildResultCard(eraNum, score, n, prefix) {
+  const color = eraColor(eraNum);
+  const sub = calcSubLabel(score, n);
+  const label = t('r-era' + eraNum + '-label');
+  const h2 = t('r-era' + eraNum + '-h2');
+  const msg = t('r-era' + eraNum + '-msg');
+  const insight = t('r-era' + eraNum + '-insight');
+  return `
+    <div class="result-card" style="border-color:${color}; background:${color}18;">
+      <div class="result-era-label" style="color:${color}">${label}${sub}</div>
+      <div class="result-era-name" style="color:${color}">${h2.replace('<br>', ' ')}</div>
+      <p class="result-msg">${msg}</p>
+      <p class="result-insight" style="border-color:${color}">${insight}</p>
+    </div>`;
+}
+
+function mostrarResultado() {
+  const opKeys = ['q1','q2','q3','q4','q5'];
+  const comKeys = ['c1','c2','c3','c4','c5'];
+
+  let html = '';
+
+  if (currentMode === 'ambas') {
+    const opScore = opKeys.reduce((s,k) => s + (answers[k]||0), 0);
+    const comScore = comKeys.reduce((s,k) => s + (answers[k]||0), 0);
+    const opEra = calcEra(opScore, 5);
+    const comEra = calcEra(comScore, 5);
+
+    html += `<div class="dual-scores">
+      <div class="score-mini">
+        <div class="score-mini-label">${t('d-tab-op')}</div>
+        <div class="score-mini-era" style="color:${eraColor(opEra)}">ERA ${opEra}${calcSubLabel(opScore,5)}</div>
+        <div class="score-mini-name">${t('r-era'+opEra+'-label').split('—')[1]?.trim()||''}</div>
       </div>
-    </div>
-    <hr class="q-divider" />
-
-    <!-- P2 -->
-    <div class="question" style="animation-delay:.1s">
-      <div class="q-num">Pregunta 2 — Reportes</div>
-      <div class="q-text">¿Cómo obtienes información sobre el desempeño del negocio?</div>
-      <div class="options">
-        <label class="option" onclick="selectOption(this, 'q2', 1)">
-          <input type="radio" name="q2" value="1" />
-          <div class="opt-letter">A</div>
-          <div class="opt-text">Armo reportes a mano cuando los necesito · o no tengo</div>
-        </label>
-        <label class="option" onclick="selectOption(this, 'q2', 2)">
-          <input type="radio" name="q2" value="2" />
-          <div class="opt-letter">B</div>
-          <div class="opt-text">Tengo pantallas o informes automáticos que me muestran cómo va el negocio en tiempo real</div>
-        </label>
-        <label class="option" onclick="selectOption(this, 'q2', 3)">
-          <input type="radio" name="q2" value="3" />
-          <div class="opt-letter">C</div>
-          <div class="opt-text">Tengo informes que no solo muestran lo que pasó, sino que anticipan lo que va a pasar usando IA</div>
-        </label>
+      <div class="score-mini">
+        <div class="score-mini-label">${t('d-tab-com')}</div>
+        <div class="score-mini-era" style="color:${eraColor(comEra)}">ERA ${comEra}${calcSubLabel(comScore,5)}</div>
+        <div class="score-mini-name">${t('r-era'+comEra+'-label').split('—')[1]?.trim()||''}</div>
       </div>
-    </div>
-    <hr class="q-divider" />
+    </div>`;
 
-    <!-- P3 -->
-    <div class="question" style="animation-delay:.15s">
-      <div class="q-num">Pregunta 3 — Operación</div>
-      <div class="q-text">¿Cómo se ejecutan los procesos del día a día en tu empresa?</div>
-      <div class="options">
-        <label class="option" onclick="selectOption(this, 'q3', 1)">
-          <input type="radio" name="q3" value="1" />
-          <div class="opt-letter">A</div>
-          <div class="opt-text">Manualmente · depende de personas específicas para no detenerse</div>
-        </label>
-        <label class="option" onclick="selectOption(this, 'q3', 2)">
-          <input type="radio" name="q3" value="2" />
-          <div class="opt-letter">B</div>
-          <div class="opt-text">Parcialmente automatizados · algunas tareas corren solas</div>
-        </label>
-        <label class="option" onclick="selectOption(this, 'q3', 3)">
-          <input type="radio" name="q3" value="3" />
-          <div class="opt-letter">C</div>
-          <div class="opt-text">La IA ejecuta tareas por sí sola — sin que una persona tenga que intervenir cada vez</div>
-        </label>
+    const dominantEra = Math.round((opEra + comEra) / 2);
+    html += buildResultCard(dominantEra, Math.round((opScore+comScore)/2), 5, 'both');
+  } else {
+    const keys = currentMode === 'comercial' ? comKeys : opKeys;
+    const score = keys.reduce((s,k) => s + (answers[k]||0), 0);
+    const era = calcEra(score, 5);
+    html += buildResultCard(era, score, 5, currentMode);
+  }
+
+  html += `
+    <div class="next-step">
+      <div class="next-step-eyebrow">${t('r-next-eyebrow')}</div>
+      <h2>${t('r-era' + (calcEra(Object.values(answers).reduce((s,v)=>s+v,0), Object.keys(answers).length)) + '-h2')}</h2>
+      <p>${t('r-next-p')}</p>
+      <div style="display:flex;flex-direction:column;align-items:center;gap:10px;">
+        <a href="https://calendly.com/escribeme-3g-ia-agents/diagnostico-base-en-30-min" target="_blank" class="btn-calendly">${t('r-btn-cal')}</a>
+        <div class="divider-or">o</div>
+        <a href="https://wa.me/56988974898" target="_blank" class="btn-wa">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          ${t('r-btn-wa')}
+        </a>
       </div>
-    </div>
-    <hr class="q-divider" />
+      <button class="retry-link" onclick="resetDiag()">${t('r-retry')}</button>
+    </div>`;
 
-    <!-- P4 -->
-    <div class="question" style="animation-delay:.2s">
-      <div class="q-num">Pregunta 4 — Clientes y ventas</div>
-      <div class="q-text">¿Cómo gestionas los clientes potenciales o nuevos contactos?</div>
-      <div class="options">
-        <label class="option" onclick="selectOption(this, 'q4', 1)">
-          <input type="radio" name="q4" value="1" />
-          <div class="opt-letter">A</div>
-          <div class="opt-text">Sin sistema · en la cabeza, WhatsApp o una planilla</div>
-        </label>
-        <label class="option" onclick="selectOption(this, 'q4', 2)">
-          <input type="radio" name="q4" value="2" />
-          <div class="opt-letter">B</div>
-          <div class="opt-text">Con un software de gestión de clientes (CRM) y seguimiento manual por parte del equipo</div>
-        </label>
-        <label class="option" onclick="selectOption(this, 'q4', 3)">
-          <input type="radio" name="q4" value="3" />
-          <div class="opt-letter">C</div>
-          <div class="opt-text">Con automatización — el sistema envía recordatorios, hace seguimiento y avisa al equipo sin que nadie lo active manualmente</div>
-        </label>
-      </div>
-    </div>
-    <hr class="q-divider" />
+  const resEl = document.getElementById('resultado');
+  resEl.innerHTML = html;
+  resEl.style.display = 'block';
+  document.getElementById('quiz').style.display = 'none';
+  document.getElementById('era-selector').style.display = 'none';
+  document.getElementById('intro').style.display = 'none';
+  document.querySelector('.progress-wrap').style.display = 'none';
+  resEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
 
-    <!-- P5 -->
-    <div class="question" style="animation-delay:.25s">
-      <div class="q-num">Pregunta 5 — Decisiones</div>
-      <div class="q-text">¿Cómo toma decisiones importantes tu empresa?</div>
-      <div class="options">
-        <label class="option" onclick="selectOption(this, 'q5', 1)">
-          <input type="radio" name="q5" value="1" />
-          <div class="opt-letter">A</div>
-          <div class="opt-text">Por intuición y experiencia · con poca información objetiva</div>
-        </label>
-        <label class="option" onclick="selectOption(this, 'q5', 2)">
-          <input type="radio" name="q5" value="2" />
-          <div class="opt-letter">B</div>
-          <div class="opt-text">Con datos históricos disponibles · análisis manual del equipo</div>
-        </label>
-        <label class="option" onclick="selectOption(this, 'q5', 3)">
-          <input type="radio" name="q5" value="3" />
-          <div class="opt-letter">C</div>
-          <div class="opt-text">Con datos y proyecciones — la IA ayuda a anticipar escenarios antes de que ocurran</div>
-        </label>
-      </div>
-    </div>
+function resetDiag() {
+  answers = {};
+  document.getElementById('resultado').style.display = 'none';
+  document.getElementById('resultado').innerHTML = '';
+  document.getElementById('quiz').style.display = 'block';
+  document.getElementById('era-selector').style.display = 'flex';
+  document.getElementById('intro').style.display = 'block';
+  document.querySelector('.progress-wrap').style.display = 'block';
+  document.querySelectorAll('.option').forEach(o => o.classList.remove('selected'));
+  document.querySelectorAll('.qc-item').forEach(c => {
+    c.classList.remove('done');
+    c.querySelector('.qc-icon').textContent = '○';
+  });
+  setMode('operacional');
+}
 
-  </div><!-- /op-questions -->
+// ── INIT ──────────────────────────────────────────────────────────────────
+document.addEventListener('DOMContentLoaded', () => {
+  initDataAttrs();
+  lang = localStorage.getItem('lang') || 'es';
+  applyDiagLang();
+  updateProgressText();
+  updateButtonText();
+});
 
-  <!-- DIVISOR ERA COMERCIAL (solo visible en modo "ambas") -->
-  <div class="dim-divider" id="com-divider">
-    <div class="dim-divider-line"></div>
-    <span class="dim-divider-label">ERA Comercial</span>
-    <div class="dim-divider-line"></div>
-  </div>
-
-  <!-- PREGUNTAS COMERCIALES -->
-  <div id="com-questions" style="display:none">
-
-    <!-- C1 -->
-    <div class="question" style="animation-delay:.05s">
-      <div class="q-num">Pregunta 1 — Generación de demanda</div>
-      <div class="q-text">¿Cómo llegan nuevos clientes a tu empresa?</div>
-      <div class="options">
-        <label class="option" onclick="selectOption(this, 'c1', 1)">
-          <input type="radio" name="c1" value="1" />
-          <div class="opt-letter">A</div>
-          <div class="opt-text">Por el esfuerzo personal del dueño — contactos directos o referidos sin proceso definido</div>
-        </label>
-        <label class="option" onclick="selectOption(this, 'c1', 2)">
-          <input type="radio" name="c1" value="2" />
-          <div class="opt-letter">B</div>
-          <div class="opt-text">Algunos canales activos (redes, web, publicidad), pero sin sistema consistente de generación</div>
-        </label>
-        <label class="option" onclick="selectOption(this, 'c1', 3)">
-          <input type="radio" name="c1" value="3" />
-          <div class="opt-letter">C</div>
-          <div class="opt-text">Canal de adquisición predecible — genera prospectos de forma sistemática sin que el dueño intervenga</div>
-        </label>
-      </div>
-    </div>
-    <hr class="q-divider" />
-
-    <!-- C2 -->
-    <div class="question" style="animation-delay:.1s">
-      <div class="q-num">Pregunta 2 — Proceso de ventas</div>
-      <div class="q-text">¿Cómo es el proceso desde que aparece un prospecto hasta que cierra?</div>
-      <div class="options">
-        <label class="option" onclick="selectOption(this, 'c2', 1)">
-          <input type="radio" name="c2" value="1" />
-          <div class="opt-letter">A</div>
-          <div class="opt-text">Informal — el dueño o cada vendedor lo maneja a su manera, sin etapas definidas</div>
-        </label>
-        <label class="option" onclick="selectOption(this, 'c2', 2)">
-          <input type="radio" name="c2" value="2" />
-          <div class="opt-letter">B</div>
-          <div class="opt-text">Hay etapas definidas, pero el seguimiento es manual e inconsistente</div>
-        </label>
-        <label class="option" onclick="selectOption(this, 'c2', 3)">
-          <input type="radio" name="c2" value="3" />
-          <div class="opt-letter">C</div>
-          <div class="opt-text">Proceso documentado, seguimiento automatizado y métricas de conversión por etapa</div>
-        </label>
-      </div>
-    </div>
-    <hr class="q-divider" />
-
-    <!-- C3 -->
-    <div class="question" style="animation-delay:.15s">
-      <div class="q-num">Pregunta 3 — Retención y recurrencia</div>
-      <div class="q-text">¿Cómo mantienes a tus clientes activos y recurrentes?</div>
-      <div class="options">
-        <label class="option" onclick="selectOption(this, 'c3', 1)">
-          <input type="radio" name="c3" value="1" />
-          <div class="opt-letter">A</div>
-          <div class="opt-text">No hay sistema — los clientes vuelven solos o no vuelven</div>
-        </label>
-        <label class="option" onclick="selectOption(this, 'c3', 2)">
-          <input type="radio" name="c3" value="2" />
-          <div class="opt-letter">B</div>
-          <div class="opt-text">Seguimiento ocasional y algunas acciones de fidelización, pero sin regularidad ni métricas</div>
-        </label>
-        <label class="option" onclick="selectOption(this, 'c3', 3)">
-          <input type="radio" name="c3" value="3" />
-          <div class="opt-letter">C</div>
-          <div class="opt-text">Programa activo: comunicación sistemática, alertas de churn y métricas de recurrencia</div>
-        </label>
-      </div>
-    </div>
-    <hr class="q-divider" />
-
-    <!-- C4 -->
-    <div class="question" style="animation-delay:.2s">
-      <div class="q-num">Pregunta 4 — Presencia y visibilidad</div>
-      <div class="q-text">¿Cómo te encuentra un cliente que no te conoce?</div>
-      <div class="options">
-        <label class="option" onclick="selectOption(this, 'c4', 1)">
-          <input type="radio" name="c4" value="1" />
-          <div class="opt-letter">A</div>
-          <div class="opt-text">Difícilmente — no tenemos presencia digital real ni posicionamiento claro</div>
-        </label>
-        <label class="option" onclick="selectOption(this, 'c4', 2)">
-          <input type="radio" name="c4" value="2" />
-          <div class="opt-letter">B</div>
-          <div class="opt-text">Tenemos presencia en redes o web, pero no genera leads de forma consistente</div>
-        </label>
-        <label class="option" onclick="selectOption(this, 'c4', 3)">
-          <input type="radio" name="c4" value="3" />
-          <div class="opt-letter">C</div>
-          <div class="opt-text">Posicionamiento activo que trae prospectos calificados de forma predecible</div>
-        </label>
-      </div>
-    </div>
-    <hr class="q-divider" />
-
-    <!-- C5 -->
-    <div class="question" style="animation-delay:.25s">
-      <div class="q-num">Pregunta 5 — Métricas comerciales</div>
-      <div class="q-text">¿Qué métricas de ventas mides regularmente?</div>
-      <div class="options">
-        <label class="option" onclick="selectOption(this, 'c5', 1)">
-          <input type="radio" name="c5" value="1" />
-          <div class="opt-letter">A</div>
-          <div class="opt-text">Solo los ingresos totales — o no medimos nada</div>
-        </label>
-        <label class="option" onclick="selectOption(this, 'c5', 2)">
-          <input type="radio" name="c5" value="2" />
-          <div class="opt-letter">B</div>
-          <div class="opt-text">Seguimos el pipeline y algunos indicadores, pero sin dashboard integrado</div>
-        </label>
-        <label class="option" onclick="selectOption(this, 'c5', 3)">
-          <input type="radio" name="c5" value="3" />
-          <div class="opt-letter">C</div>
-          <div class="opt-text">Dashboard comercial completo: conversión, CAC, LTV, tiempo de cierre, por canal</div>
-        </label>
-      </div>
-    </div>
-
-  </div><!-- /com-questions -->
-
-    <button id="btn-submit" onclick="mostrarResultado()" disabled>
-      Responde las 5 preguntas para ver tu resultado
-    </button>
-
-    <div class="quiz-checklist" id="quiz-checklist">
-      <!-- Op chips -->
-      <span class="qc-item qc-op" id="chk-q1"><span class="qc-icon">○</span> Datos</span>
-      <span class="qc-item qc-op" id="chk-q2"><span class="qc-icon">○</span> Reportes</span>
-      <span class="qc-item qc-op" id="chk-q3"><span class="qc-icon">○</span> Operación</span>
-      <span class="qc-item qc-op" id="chk-q4"><span class="qc-icon">○</span> Clientes</span>
-      <span class="qc-item qc-op" id="chk-q5"><span class="qc-icon">○</span> Decisiones</span>
-      <!-- Com chips (ocultos por defecto) -->
-      <span class="qc-item qc-com" id="chk-c1" style="display:none"><span class="qc-icon">○</span> Generación</span>
-      <span class="qc-item qc-com" id="chk-c2" style="display:none"><span class="qc-icon">○</span> Ventas</span>
-      <span class="qc-item qc-com" id="chk-c3" style="display:none"><span class="qc-icon">○</span> Retención</span>
-      <span class="qc-item qc-com" id="chk-c4" style="display:none"><span class="qc-icon">○</span> Visibilidad</span>
-      <span class="qc-item qc-com" id="chk-c5" style="display:none"><span class="qc-icon">○</span> Métricas</span>
-    </div>
-
-  </div><!-- /quiz -->
-
-  <!-- RESULTADO -->
-  <div id="resultado"></div>
-
-</main>
+// Listen for lang changes from Layout.astro's setLang
+window.addEventListener('langchange', e => { lang = e.detail; applyDiagLang(); });
+</script>
 </Layout>
