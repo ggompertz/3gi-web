@@ -3,101 +3,258 @@ import Layout from '../layouts/Layout.astro';
 ---
 
 <style>
-*,*:before,*:after{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}body{background:#06060d;color:#eef1f6;font-family:DM Sans,sans-serif;font-weight:400;line-height:1.6;-webkit-font-smoothing:antialiased}a{text-decoration:none;color:inherit}:root{--green: #00E891;--night: #06060D;--night-2: #0D0D1A;--night-3: #141422;--offwh: #EEF1F6;--muted: rgba(238,241,246,.45);--amber: #F59E0B;--border: rgba(255,255,255,.07);--max: 1160px}.container{max-width:var(--max);margin:0 auto;padding:0 24px}.logo{display:inline-flex;flex-direction:column;font-family:Syne,sans-serif;font-weight:800;line-height:1}.logo-name{font-size:22px;letter-spacing:-.03em}.logo-name span{color:var(--green)}.logo-sub{font-size:7.5px;letter-spacing:.2em;text-transform:uppercase;color:#eef1f64d;margin-top:4px}.btn{display:inline-flex;align-items:center;gap:8px;padding:14px 28px;border-radius:8px;border:none;font-family:DM Sans,sans-serif;font-weight:500;font-size:15px;cursor:pointer;transition:all .2s;white-space:nowrap}.btn-primary{background:var(--green);color:var(--night)}.btn-primary:hover{background:#00ffa0;transform:translateY(-1px)}.btn-outline{background:transparent;color:var(--offwh);border:1px solid rgba(238,241,246,.2)}.btn-outline:hover{border-color:var(--green);color:var(--green)}.btn-whatsapp{background:#25d366;color:#fff}.btn-whatsapp:hover{background:#20bc5a;transform:translateY(-1px)}nav{position:fixed;top:0;left:0;right:0;z-index:100;background:#06060de6;backdrop-filter:blur(16px);border-bottom:1px solid var(--border)}.nav-inner{max-width:var(--max);margin:0 auto;padding:0 24px;height:68px;display:flex;align-items:center;justify-content:space-between}.nav-links{display:flex;align-items:center;gap:32px;list-style:none}.nav-links a{font-size:14px;color:var(--muted);transition:color .2s}.nav-links a:hover,.nav-links a.active{color:var(--offwh)}.nav-cta{display:flex;gap:10px;align-items:center}.page-hero{padding:140px 0 72px;background:var(--night-2);border-bottom:1px solid var(--border)}.page-tag{font-family:Syne,sans-serif;font-size:11px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--green);margin-bottom:16px}.page-title{font-family:Syne,sans-serif;font-weight:800;font-size:clamp(32px,5vw,56px);letter-spacing:-.03em;line-height:1.05;margin-bottom:16px}.page-sub{font-size:18px;font-weight:300;color:#eef1f699;max-width:600px;line-height:1.65}.case-section{padding:80px 0}.case-wrapper{background:var(--night-3);border:1px solid var(--border);border-radius:16px;overflow:hidden;max-width:900px}.case-header{padding:32px 40px 28px;border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px}.case-badge{font-size:10px;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--amber);background:#f59e0b1a;border:1px solid rgba(245,158,11,.2);padding:5px 12px;border-radius:20px}.case-company{font-family:Syne,sans-serif;font-weight:800;font-size:22px;letter-spacing:-.02em}.case-meta{font-size:13px;color:var(--muted);margin-top:4px}.case-body{padding:40px}.case-situation{font-size:16px;font-weight:300;color:#eef1f6bf;line-height:1.75;margin-bottom:40px}.case-results{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-bottom:40px}.result-card{background:var(--night-2);border-radius:10px;padding:20px 16px;border:1px solid var(--border);text-align:center}.result-label{font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:.08em;font-weight:600;margin-bottom:10px}.result-before{font-size:14px;color:#eef1f659;text-decoration:line-through;margin-bottom:4px}.result-after{font-family:Syne,sans-serif;font-weight:800;font-size:22px;color:var(--green);line-height:1}.result-unit{font-size:11px;color:var(--muted);margin-top:6px;line-height:1.4}.case-quote{padding:24px 28px;border-left:3px solid var(--green);background:#00e8910a;border-radius:0 8px 8px 0;margin-bottom:32px}.case-quote p{font-size:16px;font-style:italic;font-weight:300;color:#eef1f6cc;line-height:1.7;margin-bottom:12px}.case-quote cite{font-size:13px;color:var(--muted);font-style:normal}.case-context{margin-top:48px;padding-top:40px;border-top:1px solid var(--border)}.context-title{font-family:Syne,sans-serif;font-weight:800;font-size:20px;margin-bottom:16px}.context-p{font-size:15px;color:#eef1f6a6;line-height:1.8;margin-bottom:16px}.more-cases{margin-top:64px;text-align:center}.more-tag{font-family:Syne,sans-serif;font-size:11px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--green);margin-bottom:16px}.more-title{font-family:Syne,sans-serif;font-weight:800;font-size:28px;letter-spacing:-.02em;margin-bottom:12px}.more-sub{font-size:16px;color:var(--muted);margin-bottom:28px}.cta-band{background:var(--night-2);border-top:1px solid var(--border);padding:72px 0;text-align:center}.cta-band h2{font-family:Syne,sans-serif;font-weight:800;font-size:clamp(24px,4vw,40px);letter-spacing:-.03em;margin-bottom:12px}.cta-band p{font-size:16px;color:var(--muted);margin-bottom:32px}.cta-buttons{display:flex;align-items:center;justify-content:center;gap:14px;flex-wrap:wrap}footer{background:var(--night-2);border-top:1px solid var(--border);padding:40px 0}.footer-inner{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:24px}.footer-links{display:flex;gap:24px;list-style:none;flex-wrap:wrap}.footer-links a{font-size:13px;color:var(--muted);transition:color .2s}.footer-links a:hover{color:var(--offwh)}.footer-copy{font-size:13px;color:var(--muted)}@media(max-width:900px){.nav-links{display:none}.case-results{grid-template-columns:repeat(2,1fr)}}@media(max-width:600px){.case-body,.case-header{padding:24px 20px}}
+*,*:before,*:after{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}body{background:#06060d;color:#eef1f6;font-family:DM Sans,sans-serif;font-weight:400;line-height:1.6;-webkit-font-smoothing:antialiased}a{text-decoration:none;color:inherit}:root{--green: #00E891;--night: #06060D;--night-2: #0D0D1A;--night-3: #141422;--offwh: #EEF1F6;--muted: rgba(238,241,246,.45);--amber: #F59E0B;--blue: #60a5fa;--border: rgba(255,255,255,.07);--max: 1160px}.container{max-width:var(--max);margin:0 auto;padding:0 24px}.logo{display:inline-flex;flex-direction:column;font-family:Syne,sans-serif;font-weight:800;line-height:1}.logo-name{font-size:22px;letter-spacing:-.03em}.logo-name span{color:var(--green)}.logo-sub{font-size:7.5px;letter-spacing:.2em;text-transform:uppercase;color:#eef1f64d;margin-top:4px}.btn{display:inline-flex;align-items:center;gap:8px;padding:14px 28px;border-radius:8px;border:none;font-family:DM Sans,sans-serif;font-weight:500;font-size:15px;cursor:pointer;transition:all .2s;white-space:nowrap}.btn-primary{background:var(--green);color:var(--night)}.btn-primary:hover{background:#00ffa0;transform:translateY(-1px)}.btn-outline{background:transparent;color:var(--offwh);border:1px solid rgba(238,241,246,.2)}.btn-outline:hover{border-color:var(--green);color:var(--green)}.btn-whatsapp{background:#25d366;color:#fff}.btn-whatsapp:hover{background:#20bc5a;transform:translateY(-1px)}nav{position:fixed;top:0;left:0;right:0;z-index:100;background:#06060de6;backdrop-filter:blur(16px);border-bottom:1px solid var(--border)}.nav-inner{max-width:var(--max);margin:0 auto;padding:0 24px;height:68px;display:flex;align-items:center;justify-content:space-between}.nav-links{display:flex;align-items:center;gap:32px;list-style:none}.nav-links a{font-size:14px;color:var(--muted);transition:color .2s}.nav-links a:hover,.nav-links a.active{color:var(--offwh)}.nav-cta{display:flex;gap:10px;align-items:center}.page-hero{padding:140px 0 72px;background:var(--night-2);border-bottom:1px solid var(--border)}.page-tag{font-family:Syne,sans-serif;font-size:11px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--green);margin-bottom:16px}.page-title{font-family:Syne,sans-serif;font-weight:800;font-size:clamp(32px,5vw,56px);letter-spacing:-.03em;line-height:1.05;margin-bottom:16px}.page-sub{font-size:18px;font-weight:300;color:#eef1f699;max-width:600px;line-height:1.65}
+.cases-nav{padding:32px 0;background:var(--night);border-bottom:1px solid var(--border);position:sticky;top:68px;z-index:50}.cases-nav-inner{display:flex;gap:12px;flex-wrap:wrap}.cases-nav-btn{font-size:13px;font-weight:500;padding:7px 16px;border-radius:20px;border:1px solid var(--border);color:var(--muted);background:transparent;cursor:pointer;transition:all .2s;font-family:DM Sans,sans-serif}.cases-nav-btn:hover{color:var(--offwh);border-color:rgba(238,241,246,.2)}.cases-nav-btn.active{background:rgba(0,232,145,.1);border-color:rgba(0,232,145,.3);color:var(--green)}
+.case-section{padding:72px 0}.case-section:nth-child(even){background:var(--night-2)}.case-section:nth-child(odd){background:var(--night)}.case-wrapper{background:var(--night-3);border:1px solid var(--border);border-radius:16px;overflow:hidden;max-width:900px}.case-header{padding:32px 40px 28px;border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px}.case-badge{font-size:10px;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--amber);background:#f59e0b1a;border:1px solid rgba(245,158,11,.2);padding:5px 12px;border-radius:20px}.case-badge-composite{font-size:10px;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--blue);background:rgba(96,165,250,.1);border:1px solid rgba(96,165,250,.2);padding:5px 12px;border-radius:20px}.case-company{font-family:Syne,sans-serif;font-weight:800;font-size:22px;letter-spacing:-.02em}.case-meta{font-size:13px;color:var(--muted);margin-top:4px}.case-body{padding:40px}.case-situation{font-size:16px;font-weight:300;color:#eef1f6bf;line-height:1.75;margin-bottom:40px}.case-results{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-bottom:40px}.result-card{background:var(--night-2);border-radius:10px;padding:20px 16px;border:1px solid var(--border);text-align:center}.result-label{font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:.08em;font-weight:600;margin-bottom:10px}.result-before{font-size:14px;color:#eef1f659;text-decoration:line-through;margin-bottom:4px}.result-after{font-family:Syne,sans-serif;font-weight:800;font-size:22px;color:var(--green);line-height:1}.result-unit{font-size:11px;color:var(--muted);margin-top:6px;line-height:1.4}.case-quote{padding:24px 28px;border-left:3px solid var(--green);background:#00e8910a;border-radius:0 8px 8px 0;margin-bottom:32px}.case-quote p{font-size:16px;font-style:italic;font-weight:300;color:#eef1f6cc;line-height:1.7;margin-bottom:12px}.case-quote cite{font-size:13px;color:var(--muted);font-style:normal}.case-context{margin-top:48px;padding-top:40px;border-top:1px solid var(--border)}.context-title{font-family:Syne,sans-serif;font-weight:800;font-size:20px;margin-bottom:16px}.context-p{font-size:15px;color:#eef1f6a6;line-height:1.8;margin-bottom:16px}.composite-note{margin-top:16px;padding:12px 16px;background:rgba(96,165,250,.06);border:1px solid rgba(96,165,250,.15);border-radius:8px;font-size:12px;color:rgba(238,241,246,.45);line-height:1.6}.cta-band{background:var(--night-2);border-top:1px solid var(--border);padding:72px 0;text-align:center}.cta-band h2{font-family:Syne,sans-serif;font-weight:800;font-size:clamp(24px,4vw,40px);letter-spacing:-.03em;margin-bottom:12px}.cta-band p{font-size:16px;color:var(--muted);margin-bottom:32px}.cta-buttons{display:flex;align-items:center;justify-content:center;gap:14px;flex-wrap:wrap}footer{background:var(--night-2);border-top:1px solid var(--border);padding:40px 0}.footer-inner{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:24px}.footer-links{display:flex;gap:24px;list-style:none;flex-wrap:wrap}.footer-links a{font-size:13px;color:var(--muted);transition:color .2s}.footer-links a:hover{color:var(--offwh)}.footer-copy{font-size:13px;color:var(--muted)}@media(max-width:900px){.nav-links{display:none}.case-results{grid-template-columns:repeat(2,1fr)}.cases-nav{top:68px}}@media(max-width:600px){.case-body,.case-header{padding:24px 20px}.cases-nav{position:relative;top:0}}
 </style>
 
-<Layout title="De $250k perdidos a sistema de gestión total · Caso real · 3G Intelligence" description="Caso real de implementación IA en PyME chilena. De caos operativo a visibilidad total con Data Foundation + automatizaciones.">
-<div class="page-hero"><div class="container"><div class="page-tag" data-i18n="casos-tag">Casos de éxito</div><h1 class="page-title" data-i18n="casos-title">Resultados reales.<br>Datos concretos.</h1><p class="page-sub" data-i18n="casos-sub">No mostramos promesas. Mostramos lo que pasó — con números reales, aunque los nombres sean confidenciales.</p></div></div><section class="case-section"><div class="container"><div class="case-wrapper"><div class="case-header"><div><div class="case-company" data-i18n="casos-company">Empresa distribuidora · Sector comercial</div><div class="case-meta" data-i18n="casos-meta">Pequeña empresa · 10–15 empleados · Chile · 2025</div></div><span class="case-badge" data-i18n="casos-badge">Caso real · Datos anonimizados</span></div><div class="case-body"><p class="case-situation" data-i18n="casos-situation">
-Empresa distribuidora con equipo comercial de 3 vendedores que destinaban el 60% de su
-          jornada a tareas administrativas: generar cotizaciones en Word, consultar stock por teléfono
-          interno y preparar reportes semanales manualmente. Sin datos en tiempo real, las decisiones
-          gerenciales se basaban en información con hasta 7 días de antigüedad.
-<br><br>
-La empresa sabía que había ineficiencias pero no tenía claridad sobre qué automatizar
-          primero, ni cuánto valía cada oportunidad. Tras el Diagnóstico y la F1, identificamos 3
-          oportunidades de automatización con IA. El Scoring Agent proyectó un ROI combinado de
-          263% sobre la inversión total en diagnóstico e implementación.
-</p><div class="case-results"><div class="result-card"><div class="result-label" data-i18n="casos-r1-label">Tiempo por cotización</div><div class="result-before">45 min</div><div class="result-after">5 min</div><div class="result-unit" data-i18n="casos-r1-unit">−89% tiempo comercial administrativo</div></div><div class="result-card"><div class="result-label" data-i18n="casos-r2-label">Atención a clientes</div><div class="result-before" data-i18n="casos-r2-before">Solo horario laboral</div><div class="result-after">24/7</div><div class="result-unit" data-i18n="casos-r2-unit">Agente WhatsApp sin intervención humana</div></div><div class="result-card"><div class="result-label" data-i18n="casos-r3-label">Latencia de datos</div><div class="result-before">7 días</div><div class="result-after">&lt; 1h</div><div class="result-unit" data-i18n="casos-r3-unit">Dashboard KPIs operacionales en tiempo real</div></div><div class="result-card"><div class="result-label" data-i18n="casos-r4-label">ROI proyectado</div><div class="result-before">0%</div><div class="result-after">+263%</div><div class="result-unit" data-i18n="casos-r4-unit">Sobre la inversión total a 12 meses</div></div></div><div class="case-quote"><p data-i18n="casos-quote">"Antes de este diagnóstico no teníamos claridad sobre qué automatizar primero. Salimos
-          con tres proyectos priorizados, el ROI de cada uno calculado, y la certeza de que íbamos
-          a implementar en el lugar correcto."</p><cite data-i18n="casos-cite">— Gerente General, empresa distribuidora (nombre reservado por confidencialidad)</cite></div><div class="case-context"><div class="context-title" data-i18n="casos-context-title">Qué se implementó</div><p class="context-p" data-i18n="casos-impl1"><strong style="color:var(--offwh);">1. Automatización de cotizaciones.</strong> Se conectó el sistema de stock con una herramienta de generación automática de cotizaciones. El vendedor selecciona productos, el sistema genera el PDF en 30 segundos y lo envía por email. Eliminó el 89% del tiempo administrativo del equipo comercial.
-</p><p class="context-p" data-i18n="casos-impl2"><strong style="color:var(--offwh);">2. Agente WhatsApp con IA.</strong> Los clientes consultan disponibilidad, precios y estado de pedidos por WhatsApp en cualquier horario. El agente responde con información en tiempo real del sistema. Solo escala al equipo cuando hay una solicitud de compra nueva.
-</p><p class="context-p" data-i18n="casos-impl3"><strong style="color:var(--offwh);">3. Dashboard operacional en tiempo real.</strong> Integración de ventas, stock e inventario en un dashboard gerencial actualizado cada hora. Las decisiones de compra y proyección ahora se basan en datos frescos, no en reportes de la semana anterior.
-</p></div></div></div><!-- MÁS CASOS (próximamente) --><div class="more-cases"><div class="more-tag" data-i18n="casos-more-tag">En camino</div><div class="more-title" data-i18n="casos-more-title">Más casos próximamente</div><p class="more-sub" data-i18n="casos-more-sub">Cada diagnóstico genera un caso. A medida que autorizamos publicarlos, los agregamos aquí.</p></div></div></section><div class="cta-band"><div class="container"><h2 data-i18n="casos-cta-title">¿Tu empresa podría ser el próximo caso?</h2><p data-i18n="casos-cta-sub">Agenda una llamada de 30 minutos — sin costo, sin compromiso.</p><div class="cta-buttons"><a href="https://calendly.com/escribeme-3g-ia-agents/diagnostico-base-en-30-min" target="_blank" class="btn btn-primary"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg><span data-i18n="casos-btn-calendar">Agendar llamada gratuita</span></a><a href="https://wa.me/56988974898" target="_blank" class="btn btn-whatsapp"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"></path></svg><span data-i18n="casos-btn-whatsapp">Escribir por WhatsApp</span></a></div></div></div><script>
-const T_casos = {
-  es: {
-    'casos-tag': 'Casos de éxito',
-    'casos-title': 'Resultados reales.<br>Datos concretos.',
-    'casos-sub': 'No mostramos promesas. Mostramos lo que pasó — con números reales, aunque los nombres sean confidenciales.',
-    'casos-company': 'Empresa distribuidora · Sector comercial',
-    'casos-meta': 'Pequeña empresa · 10–15 empleados · Chile · 2025',
-    'casos-badge': 'Caso real · Datos anonimizados',
-    'casos-situation': 'Empresa distribuidora con equipo comercial de 3 vendedores que destinaban el 60% de su jornada a tareas administrativas: generar cotizaciones en Word, consultar stock por teléfono interno y preparar reportes semanales manualmente. Sin datos en tiempo real, las decisiones gerenciales se basaban en información con hasta 7 días de antigüedad.<br><br>La empresa sabía que había ineficiencias pero no tenía claridad sobre qué automatizar primero, ni cuánto valía cada oportunidad. Tras el Diagnóstico y la F1, identificamos 3 oportunidades de automatización con IA. El Scoring Agent proyectó un ROI combinado de 263% sobre la inversión total en diagnóstico e implementación.',
-    'casos-r1-label': 'Tiempo por cotización',
-    'casos-r1-unit': '−89% tiempo comercial administrativo',
-    'casos-r2-label': 'Atención a clientes',
-    'casos-r2-before': 'Solo horario laboral',
-    'casos-r2-unit': 'Agente WhatsApp sin intervención humana',
-    'casos-r3-label': 'Latencia de datos',
-    'casos-r3-unit': 'Dashboard KPIs operacionales en tiempo real',
-    'casos-r4-label': 'ROI proyectado',
-    'casos-r4-unit': 'Sobre la inversión total a 12 meses',
-    'casos-quote': '"Antes de este diagnóstico no teníamos claridad sobre qué automatizar primero. Salimos con tres proyectos priorizados, el ROI de cada uno calculado, y la certeza de que íbamos a implementar en el lugar correcto."',
-    'casos-cite': '— Gerente General, empresa distribuidora (nombre reservado por confidencialidad)',
-    'casos-context-title': 'Qué se implementó',
-    'casos-impl1': '<strong style="color:var(--offwh);">1. Automatización de cotizaciones.</strong> Se conectó el sistema de stock con una herramienta de generación automática de cotizaciones. El vendedor selecciona productos, el sistema genera el PDF en 30 segundos y lo envía por email. Eliminó el 89% del tiempo administrativo del equipo comercial.',
-    'casos-impl2': '<strong style="color:var(--offwh);">2. Agente WhatsApp con IA.</strong> Los clientes consultan disponibilidad, precios y estado de pedidos por WhatsApp en cualquier horario. El agente responde con información en tiempo real del sistema. Solo escala al equipo cuando hay una solicitud de compra nueva.',
-    'casos-impl3': '<strong style="color:var(--offwh);">3. Dashboard operacional en tiempo real.</strong> Integración de ventas, stock e inventario en un dashboard gerencial actualizado cada hora. Las decisiones de compra y proyección ahora se basan en datos frescos, no en reportes de la semana anterior.',
-    'casos-more-tag': 'En camino',
-    'casos-more-title': 'Más casos próximamente',
-    'casos-more-sub': 'Cada diagnóstico genera un caso. A medida que autorizamos publicarlos, los agregamos aquí.',
-    'casos-cta-title': '¿Tu empresa podría ser el próximo caso?',
-    'casos-cta-sub': 'Agenda una llamada de 30 minutos — sin costo, sin compromiso.',
-    'casos-btn-calendar': 'Agendar llamada gratuita',
-    'casos-btn-whatsapp': 'Escribir por WhatsApp',
-  },
-  en: {
-    'casos-tag': 'Success Stories',
-    'casos-title': 'Real results.<br>Concrete data.',
-    'casos-sub': 'We don\'t show promises. We show what happened — with real numbers, even if the names are confidential.',
-    'casos-company': 'Distribution company · Commercial sector',
-    'casos-meta': 'Small business · 10–15 employees · Chile · 2025',
-    'casos-badge': 'Real case · Anonymized data',
-    'casos-situation': 'A distribution company with a 3-person sales team spending 60% of their workday on administrative tasks: generating quotes in Word, checking stock by internal phone, and manually preparing weekly reports. Without real-time data, management decisions were based on information up to 7 days old.<br><br>The company knew there were inefficiencies but had no clarity on what to automate first, or how much each opportunity was worth. After the Diagnosis and F1, we identified 3 AI automation opportunities. The Scoring Agent projected a combined ROI of 263% on the total investment in diagnosis and implementation.',
-    'casos-r1-label': 'Time per quote',
-    'casos-r1-unit': '−89% administrative sales time',
-    'casos-r2-label': 'Customer service',
-    'casos-r2-before': 'Business hours only',
-    'casos-r2-unit': 'WhatsApp agent with no human intervention',
-    'casos-r3-label': 'Data latency',
-    'casos-r3-unit': 'Real-time operational KPI dashboard',
-    'casos-r4-label': 'Projected ROI',
-    'casos-r4-unit': 'On total investment over 12 months',
-    'casos-quote': '"Before this diagnosis we had no clarity on what to automate first. We left with three prioritized projects, the ROI of each calculated, and the certainty that we were going to implement in the right place."',
-    'casos-cite': '— General Manager, distribution company (name withheld for confidentiality)',
-    'casos-context-title': 'What was implemented',
-    'casos-impl1': '<strong style="color:var(--offwh);">1. Quote automation.</strong> The stock system was connected to an automatic quote generation tool. The salesperson selects products, the system generates the PDF in 30 seconds and sends it by email. Eliminated 89% of the commercial team\'s administrative time.',
-    'casos-impl2': '<strong style="color:var(--offwh);">2. AI WhatsApp agent.</strong> Customers check availability, prices, and order status via WhatsApp at any time. The agent responds with real-time data from the system. It only escalates to the team when there\'s a new purchase request.',
-    'casos-impl3': '<strong style="color:var(--offwh);">3. Real-time operational dashboard.</strong> Integration of sales, stock, and inventory in a management dashboard updated every hour. Purchasing and forecasting decisions are now based on fresh data, not last week\'s reports.',
-    'casos-more-tag': 'Coming soon',
-    'casos-more-title': 'More cases on the way',
-    'casos-more-sub': 'Every diagnosis generates a case. As we get authorization to publish them, we add them here.',
-    'casos-cta-title': 'Could your company be the next case?',
-    'casos-cta-sub': 'Schedule a 30-minute call — no cost, no commitment.',
-    'casos-btn-calendar': 'Schedule free call',
-    'casos-btn-whatsapp': 'Message on WhatsApp',
-  }
-};
+<Layout title="Casos de éxito · IA en PyMEs reales · 3G Intelligence" description="Resultados reales de implementación de IA en PyMEs. Inspecciones, logística de perecederos, exportación agrícola y distribución. Datos concretos, nombres confidenciales.">
 
-let _langCasos = localStorage.getItem('lang') || 'es';
-function applyLangCasos() {
-  document.querySelectorAll('[data-i18n]').forEach(el => {
-    const v = (T_casos[_langCasos] || T_casos['es'])[el.getAttribute('data-i18n')];
-    if (v) el.innerHTML = v;
-  });
-}
-document.addEventListener('DOMContentLoaded', () => { _langCasos = localStorage.getItem('lang') || 'es'; applyLangCasos(); });
-window.addEventListener('langchange', e => { _langCasos = e.detail; applyLangCasos(); });
-</script>
+<div class="page-hero">
+  <div class="container">
+    <div class="page-tag" data-i18n="casos-tag">Casos de éxito</div>
+    <h1 class="page-title" data-i18n="casos-title">Resultados reales.<br>Datos concretos.</h1>
+    <p class="page-sub" data-i18n="casos-sub">No mostramos promesas. Mostramos lo que pasó — con números reales, aunque los nombres sean confidenciales.</p>
+  </div>
+</div>
+
+<div class="cases-nav">
+  <div class="container">
+    <div class="cases-nav-inner">
+      <a href="#certificaciones" class="cases-nav-btn" data-i18n="nav-cert">Inspecciones y Certificaciones</a>
+      <a href="#logistica" class="cases-nav-btn" data-i18n="nav-log">Logística de Perecederos</a>
+      <a href="#agro" class="cases-nav-btn" data-i18n="nav-agro">Exportación Agrícola</a>
+      <a href="#distribuidora" class="cases-nav-btn" data-i18n="nav-dist">Distribuidora Comercial</a>
+    </div>
+  </div>
+</div>
+
+<!-- CASO 1: CERTIFICACIONES -->
+<section class="case-section" id="certificaciones">
+  <div class="container">
+    <div class="case-wrapper">
+      <div class="case-header">
+        <div>
+          <div class="case-company" data-i18n="cert-company">Empresa de inspecciones y certificaciones · Transporte vertical</div>
+          <div class="case-meta" data-i18n="cert-meta">Empresa certificada ISO · 25+ empleados · Chile · 2025</div>
+        </div>
+        <span class="case-badge" data-i18n="cert-badge">Caso real · Datos anonimizados</span>
+      </div>
+      <div class="case-body">
+        <p class="case-situation" data-i18n="cert-situation">Empresa de inspecciones técnicas que gestiona decenas de expedientes mensuales — cada uno con visitas a terreno, informes, aprobaciones y facturación. El problema: todo se coordinaba por correo y WhatsApp. El inspector llegaba a terreno sin saber si el cliente había pagado el servicio anterior. El gerente descubría trabajos completados y no facturados semanas después. Sin visibilidad centralizada, el negocio perdía ingresos de forma silenciosa.<br><br>Tras el Diagnóstico y F1, identificamos tres focos críticos: trazabilidad de expedientes, automatización de cobros y alertas de expedientes atascados. El ROI proyectado fue de 263% sobre la inversión total a 12 meses.</p>
+        <div class="case-results">
+          <div class="result-card">
+            <div class="result-label" data-i18n="cert-r1-label">por presupuesto</div>
+            <div class="result-before">35 min</div>
+            <div class="result-after">3 min</div>
+            <div class="result-unit" data-i18n="cert-r1-unit">−91% tiempo administrativo</div>
+          </div>
+          <div class="result-card">
+            <div class="result-label" data-i18n="cert-r2-label">solicitud de facturas</div>
+            <div class="result-before" data-i18n="cert-r2-before">Manual</div>
+            <div class="result-after" data-i18n="cert-r2-after">Automático</div>
+            <div class="result-unit" data-i18n="cert-r2-unit">Activada al cerrar expediente</div>
+          </div>
+          <div class="result-card">
+            <div class="result-label" data-i18n="cert-r3-label">expedientes atascados</div>
+            <div class="result-before" data-i18n="cert-r3-before">Sin control</div>
+            <div class="result-after" data-i18n="cert-r3-after">Alertas reales</div>
+            <div class="result-unit" data-i18n="cert-r3-unit">Notificación automática al responsable</div>
+          </div>
+          <div class="result-card">
+            <div class="result-label" data-i18n="cert-r4-label">procesos sin facturar</div>
+            <div class="result-before">$0</div>
+            <div class="result-after">$250k</div>
+            <div class="result-unit" data-i18n="cert-r4-unit">Recuperados en primer trimestre</div>
+          </div>
+        </div>
+        <div class="case-quote">
+          <p data-i18n="cert-quote">"Nunca más perder horas buscando información. Ahora tenemos visibilidad total de nuestros expedientes, indicadores en tiempo real, y podemos escalar el negocio sin contratar más gente. Lo siguiente es automatizar los informes en terreno para nuestros inspectores."</p>
+          <cite data-i18n="cert-cite">— Gerente, empresa de inspecciones y certificaciones (nombre reservado por confidencialidad)</cite>
+        </div>
+        <div class="case-context">
+          <div class="context-title" data-i18n="cert-impl-title">Qué se implementó</div>
+          <p class="context-p" data-i18n="cert-impl1"><strong style="color:var(--offwh);">1. Sistema de trazabilidad de expedientes.</strong> Cada expediente tiene un estado visible en tiempo real: pendiente, en ejecución, aprobado, facturado. El inspector actualiza desde terreno. El gerente ve el cuadro completo sin preguntar a nadie.</p>
+          <p class="context-p" data-i18n="cert-impl2"><strong style="color:var(--offwh);">2. Automatización de cobros.</strong> Al marcar un expediente como completado, el sistema envía automáticamente la solicitud de factura al cliente. Sin intervención manual. Sin olvidos.</p>
+          <p class="context-p" data-i18n="cert-impl3"><strong style="color:var(--offwh);">3. Alertas de expedientes sin movimiento.</strong> Si un expediente lleva más de N días sin actualización, el sistema alerta al responsable. Los cuellos de botella se detectan antes de convertirse en problemas de cobro.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CASO 2: LOGÍSTICA PERECEDEROS -->
+<section class="case-section" id="logistica">
+  <div class="container">
+    <div class="case-wrapper">
+      <div class="case-header">
+        <div>
+          <div class="case-company" data-i18n="log-company">Empresa de transporte refrigerado · Ruta packing-puerto</div>
+          <div class="case-meta" data-i18n="log-meta">12 camiones · Maule y O'Higgins → San Antonio · Chile</div>
+        </div>
+        <span class="case-badge-composite" data-i18n="log-badge">Escenario compuesto · Basado en casos reales del sector</span>
+      </div>
+      <div class="case-body">
+        <p class="case-situation" data-i18n="log-situation">Empresa de 12 camiones refrigerados que transporta fruta fresca desde packings del Maule y O'Higgins al puerto de San Antonio. El coordinador de operaciones trabaja de noche durante temporada porque los camiones salen a las 2am. Cualquier desviación de ruta, parada no programada o alarma de temperatura la gestiona por teléfono — dormido o no. En la última temporada: un camión detenido por falla mecánica sin aviso al cliente, una alarma de temperatura ignorada 40 minutos, y una multa de $4.2 millones CLP por llegar fuera de ventana horaria al puerto.<br><br>La exportadora amenazó con cambiar de transportista. Contratar otro coordinador nocturno no era viable.</p>
+        <div class="case-results">
+          <div class="result-card">
+            <div class="result-label" data-i18n="log-r1-label">Respuesta a incidencias</div>
+            <div class="result-before">40 min</div>
+            <div class="result-after">&lt; 10 min</div>
+            <div class="result-unit" data-i18n="log-r1-unit">Promedio en temporada</div>
+          </div>
+          <div class="result-card">
+            <div class="result-label" data-i18n="log-r2-label">Multas por ventana horaria</div>
+            <div class="result-before">3</div>
+            <div class="result-after">0</div>
+            <div class="result-unit" data-i18n="log-r2-unit">Temporada siguiente</div>
+          </div>
+          <div class="result-card">
+            <div class="result-label" data-i18n="log-r3-label">Gestión nocturna</div>
+            <div class="result-before" data-i18n="log-r3-before">Manual · Coordinador despierto</div>
+            <div class="result-after" data-i18n="log-r3-after">Agente autónomo</div>
+            <div class="result-unit" data-i18n="log-r3-unit">Escala solo si no hay respuesta</div>
+          </div>
+          <div class="result-card">
+            <div class="result-label" data-i18n="log-r4-label">Contrato exportadora</div>
+            <div class="result-before" data-i18n="log-r4-before">En riesgo</div>
+            <div class="result-after" data-i18n="log-r4-after">Renovado</div>
+            <div class="result-unit" data-i18n="log-r4-unit">Con aumento de volumen</div>
+          </div>
+        </div>
+        <div class="case-context">
+          <div class="context-title" data-i18n="log-impl-title">Qué se implementó</div>
+          <p class="context-p" data-i18n="log-impl1"><strong style="color:var(--offwh);">1. Agente de respuesta a incidencias.</strong> Monitoreo en tiempo real de flota: detecta paradas no programadas, desviaciones de ruta y alarmas de temperatura. Ante cualquier evento, contacta al conductor por WhatsApp con el protocolo definido. Si no hay respuesta en 8 minutos, notifica al cliente y propone solución.</p>
+          <p class="context-p" data-i18n="log-impl2"><strong style="color:var(--offwh);">2. Control de ventanas horarias.</strong> El agente monitorea los tiempos estimados de llegada al puerto en tiempo real. Si proyecta un retraso, alerta al coordinador y al cliente con anticipación — no después de que ocurre el problema.</p>
+          <p class="context-p" data-i18n="log-impl3"><strong style="color:var(--offwh);">3. Dashboard de operaciones nocturnas.</strong> El coordinador revisa el estado de toda la flota en un panel simple antes de dormir y al levantarse. Solo lo llaman si el agente no pudo resolver.</p>
+          <div class="composite-note" data-i18n="log-composite-note">Este escenario es compuesto: combina patrones observados en múltiples operaciones logísticas de perecederos en Chile. Los números son representativos del sector, no de una empresa específica.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CASO 3: EXPORTACIÓN AGRÍCOLA -->
+<section class="case-section" id="agro">
+  <div class="container">
+    <div class="case-wrapper">
+      <div class="case-header">
+        <div>
+          <div class="case-company" data-i18n="agro-company">Exportadora de cerezas · Valle del Maule</div>
+          <div class="case-meta" data-i18n="agro-meta">80 hectáreas · Exportación a China · Chile</div>
+        </div>
+        <span class="case-badge-composite" data-i18n="agro-badge">Escenario compuesto · Basado en casos reales del sector</span>
+      </div>
+      <div class="case-body">
+        <p class="case-situation" data-i18n="agro-situation">Fundo familiar de 80 hectáreas exportando cerezas a China. El jefe de campo decide el riego por experiencia y por cómo se ve el suelo. Los registros fitosanitarios están en un cuaderno y en WhatsApp. En temporada alta — octubre a enero — hay 4 semanas donde cada decisión define la calidad de exportación. El año anterior, un bloque completo llegó al packing con calibre bajo mínimo por estrés hídrico no detectado a tiempo. El packing rechazó el 18% de la fruta de ese bloque. La exportadora descontó el diferencial de precio.<br><br>El dueño calculó que habría pagado cualquier cosa por saberlo 10 días antes.</p>
+        <div class="case-results">
+          <div class="result-card">
+            <div class="result-label" data-i18n="agro-r1-label">Rechazo por estrés hídrico</div>
+            <div class="result-before">18%</div>
+            <div class="result-after">0%</div>
+            <div class="result-unit" data-i18n="agro-r1-unit">Temporada siguiente</div>
+          </div>
+          <div class="result-card">
+            <div class="result-label" data-i18n="agro-r2-label">Consumo hídrico</div>
+            <div class="result-before" data-i18n="agro-r2-before">Sin control bloque a bloque</div>
+            <div class="result-after">−30%</div>
+            <div class="result-unit" data-i18n="agro-r2-unit">Reducción en toda la temporada</div>
+          </div>
+          <div class="result-card">
+            <div class="result-label" data-i18n="agro-r3-label">Prescripción de riego</div>
+            <div class="result-before" data-i18n="agro-r3-before">Por experiencia</div>
+            <div class="result-after" data-i18n="agro-r3-after">Por datos · Diario</div>
+            <div class="result-unit" data-i18n="agro-r3-unit">WhatsApp cada mañana por bloque</div>
+          </div>
+          <div class="result-card">
+            <div class="result-label" data-i18n="agro-r4-label">Presencia del dueño en temporada</div>
+            <div class="result-before" data-i18n="agro-r4-before">24/7 en el fundo</div>
+            <div class="result-after" data-i18n="agro-r4-after">Solo en decisiones</div>
+            <div class="result-unit" data-i18n="agro-r4-unit">El agente monitorea. Él dirige.</div>
+          </div>
+        </div>
+        <div class="case-context">
+          <div class="context-title" data-i18n="agro-impl-title">Qué se implementó</div>
+          <p class="context-p" data-i18n="agro-impl1"><strong style="color:var(--offwh);">1. Agente de prescripción agronómica.</strong> Conectado a sensores de humedad de suelo, datos satelitales y forecast climático. Cada mañana el jefe de campo recibe en WhatsApp una instrucción de riego por bloque: sector, duración y fundamento. No un dashboard que hay que interpretar — una acción concreta.</p>
+          <p class="context-p" data-i18n="agro-impl2"><strong style="color:var(--offwh);">2. Alerta de déficit hídrico proyectado.</strong> El agente proyecta el estado hídrico de cada bloque a 3 días. Si detecta déficit inminente, alerta al jefe de campo con anticipación suficiente para actuar antes de que afecte la fruta.</p>
+          <p class="context-p" data-i18n="agro-impl3"><strong style="color:var(--offwh);">3. Registro fitosanitario automatizado.</strong> Las acciones ejecutadas quedan registradas automáticamente. El cuaderno y el WhatsApp dejan de ser la única memoria del fundo. El historial está disponible para auditorías de exportación.</p>
+          <div class="composite-note" data-i18n="agro-composite-note">Este escenario es compuesto: combina datos de plataformas como Instacrops y Kilimo (que operan en Chile y LATAM) con patrones de exportación de cerezas del Maule. Los números de reducción hídrica (30%) y rechazo de calidad están alineados con estudios del sector en condiciones similares.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CASO 4: DISTRIBUIDORA -->
+<section class="case-section" id="distribuidora">
+  <div class="container">
+    <div class="case-wrapper">
+      <div class="case-header">
+        <div>
+          <div class="case-company" data-i18n="dist-company">Empresa distribuidora · Sector comercial</div>
+          <div class="case-meta" data-i18n="dist-meta">Pequeña empresa · 10–15 empleados · Chile · 2025</div>
+        </div>
+        <span class="case-badge" data-i18n="dist-badge">Caso real · Datos anonimizados</span>
+      </div>
+      <div class="case-body">
+        <p class="case-situation" data-i18n="dist-situation">Empresa distribuidora con equipo comercial de 3 vendedores que destinaban el 60% de su jornada a tareas administrativas: generar cotizaciones en Word, consultar stock por teléfono interno y preparar reportes semanales manualmente. Sin datos en tiempo real, las decisiones gerenciales se basaban en información con hasta 7 días de antigüedad.<br><br>La empresa sabía que había ineficiencias pero no tenía claridad sobre qué automatizar primero, ni cuánto valía cada oportunidad. Tras el Diagnóstico y la F1, identificamos 3 oportunidades de automatización con IA. El Scoring Agent proyectó un ROI combinado de 263% sobre la inversión total en diagnóstico e implementación.</p>
+        <div class="case-results">
+          <div class="result-card">
+            <div class="result-label" data-i18n="dist-r1-label">Tiempo por cotización</div>
+            <div class="result-before">45 min</div>
+            <div class="result-after">5 min</div>
+            <div class="result-unit" data-i18n="dist-r1-unit">−89% tiempo comercial administrativo</div>
+          </div>
+          <div class="result-card">
+            <div class="result-label" data-i18n="dist-r2-label">Atención a clientes</div>
+            <div class="result-before" data-i18n="dist-r2-before">Solo horario laboral</div>
+            <div class="result-after">24/7</div>
+            <div class="result-unit" data-i18n="dist-r2-unit">Agente WhatsApp sin intervención humana</div>
+          </div>
+          <div class="result-card">
+            <div class="result-label" data-i18n="dist-r3-label">Latencia de datos</div>
+            <div class="result-before">7 días</div>
+            <div class="result-after">&lt; 1h</div>
+            <div class="result-unit" data-i18n="dist-r3-unit">Dashboard KPIs operacionales en tiempo real</div>
+          </div>
+          <div class="result-card">
+            <div class="result-label" data-i18n="dist-r4-label">ROI proyectado</div>
+            <div class="result-before">0%</div>
+            <div class="result-after">+263%</div>
+            <div class="result-unit" data-i18n="dist-r4-unit">Sobre la inversión total a 12 meses</div>
+          </div>
+        </div>
+        <div class="case-quote">
+          <p data-i18n="dist-quote">"Antes de este diagnóstico no teníamos claridad sobre qué automatizar primero. Salimos con tres proyectos priorizados, el ROI de cada uno calculado, y la certeza de que íbamos a implementar en el lugar correcto."</p>
+          <cite data-i18n="dist-cite">— Gerente General, empresa distribuidora (nombre reservado por confidencialidad)</cite>
+        </div>
+        <div class="case-context">
+          <div class="context-title" data-i18n="dist-impl-title">Qué se implementó</div>
+          <p class="context-p" data-i18n="dist-impl1"><strong style="color:var(--offwh);">1. Automatización de cotizaciones.</strong> Se conectó el sistema de stock con una herramienta de generación automática de cotizaciones. El vendedor selecciona productos, el sistema genera el PDF en 30 segundos y lo envía por email. Eliminó el 89% del tiempo administrativo del equipo comercial.</p>
+          <p class="context-p" data-i18n="dist-impl2"><strong style="color:var(--offwh);">2. Agente WhatsApp con IA.</strong> Los clientes consultan disponibilidad, precios y estado de pedidos por WhatsApp en cualquier horario. El agente responde con información en tiempo real del sistema. Solo escala al equipo cuando hay una solicitud de compra nueva.</p>
+          <p class="context-p" data-i18n="dist-impl3"><strong style="color:var(--offwh);">3. Dashboard operacional en tiempo real.</strong> Integración de ventas, stock e inventario en un dashboard gerencial actualizado cada hora. Las decisiones de compra y proyección ahora se basan en datos frescos, no en reportes de la semana anterior.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="cta-band">
+  <div class="container">
+    <h2 data-i18n="casos-cta-title">¿Tu empresa podría ser el próximo caso?</h2>
+    <p data-i18n="casos-cta-sub">Agenda una llamada de 30 minutos — sin costo, sin compromiso.</p>
+    <div class="cta-buttons">
+      <a href="/diagnostico" class="btn btn-primary">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        <span data-i18n="casos-btn-diag">Hacer el diagnóstico gratuito</span>
+      </a>
+      <a href="https://wa.me/56988974898" target="_blank" class="btn btn-whatsapp">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        <span data-i18n="casos-btn-whatsapp">Escribir por WhatsApp</span>
+      </a>
+    </div>
+  </div>
+</div>
 
 <script is:inline>
 const T_casos = {
@@ -105,74 +262,158 @@ const T_casos = {
     'casos-tag': 'Casos de éxito',
     'casos-title': 'Resultados reales.<br>Datos concretos.',
     'casos-sub': 'No mostramos promesas. Mostramos lo que pasó — con números reales, aunque los nombres sean confidenciales.',
-    'casos-company': 'Empresa distribuidora · Sector comercial',
-    'casos-meta': 'Pequeña empresa · 10–15 empleados · Chile · 2025',
-    'casos-badge': 'Caso real · Datos anonimizados',
-    'casos-situation': 'Empresa distribuidora con equipo comercial de 3 vendedores que destinaban el 60% de su jornada a tareas administrativas: generar cotizaciones en Word, consultar stock por teléfono interno y preparar reportes semanales manualmente. Sin datos en tiempo real, las decisiones gerenciales se basaban en información con hasta 7 días de antigüedad.<br><br>La empresa sabía que había ineficiencias pero no tenía claridad sobre qué automatizar primero, ni cuánto valía cada oportunidad. Tras el Diagnóstico y la F1, identificamos 3 oportunidades de automatización con IA. El Scoring Agent proyectó un ROI combinado de 263% sobre la inversión total en diagnóstico e implementación.',
-    'casos-r1-label': 'Tiempo por cotización',
-    'casos-r1-unit': '−89% tiempo comercial administrativo',
-    'casos-r2-label': 'Atención a clientes',
-    'casos-r2-before': 'Solo horario laboral',
-    'casos-r2-unit': 'Agente WhatsApp sin intervención humana',
-    'casos-r3-label': 'Latencia de datos',
-    'casos-r3-unit': 'Dashboard KPIs operacionales en tiempo real',
-    'casos-r4-label': 'ROI proyectado',
-    'casos-r4-unit': 'Sobre la inversión total a 12 meses',
-    'casos-quote': '"Antes de este diagnóstico no teníamos claridad sobre qué automatizar primero. Salimos con tres proyectos priorizados, el ROI de cada uno calculado, y la certeza de que íbamos a implementar en el lugar correcto."',
-    'casos-cite': '— Gerente General, empresa distribuidora (nombre reservado por confidencialidad)',
-    'casos-context-title': 'Qué se implementó',
-    'casos-impl1': '<strong style="color:var(--offwh);">1. Automatización de cotizaciones.</strong> Se conectó el sistema de stock con una herramienta de generación automática de cotizaciones. El vendedor selecciona productos, el sistema genera el PDF en 30 segundos y lo envía por email. Eliminó el 89% del tiempo administrativo del equipo comercial.',
-    'casos-impl2': '<strong style="color:var(--offwh);">2. Agente WhatsApp con IA.</strong> Los clientes consultan disponibilidad, precios y estado de pedidos por WhatsApp en cualquier horario. El agente responde con información en tiempo real del sistema. Solo escala al equipo cuando hay una solicitud de compra nueva.',
-    'casos-impl3': '<strong style="color:var(--offwh);">3. Dashboard operacional en tiempo real.</strong> Integración de ventas, stock e inventario en un dashboard gerencial actualizado cada hora. Las decisiones de compra y proyección ahora se basan en datos frescos, no en reportes de la semana anterior.',
-    'casos-more-tag': 'En camino',
-    'casos-more-title': 'Más casos próximamente',
-    'casos-more-sub': 'Cada diagnóstico genera un caso. A medida que autorizamos publicarlos, los agregamos aquí.',
+    'nav-cert': 'Inspecciones y Certificaciones',
+    'nav-log': 'Logística de Perecederos',
+    'nav-agro': 'Exportación Agrícola',
+    'nav-dist': 'Distribuidora Comercial',
+    // Caso 1: Certificaciones
+    'cert-company': 'Empresa de inspecciones y certificaciones · Transporte vertical',
+    'cert-meta': 'Empresa certificada ISO · 25+ empleados · Chile · 2025',
+    'cert-badge': 'Caso real · Datos anonimizados',
+    'cert-situation': 'Empresa de inspecciones técnicas que gestiona decenas de expedientes mensuales — cada uno con visitas a terreno, informes, aprobaciones y facturación. El problema: todo se coordinaba por correo y WhatsApp. El inspector llegaba a terreno sin saber si el cliente había pagado el servicio anterior. El gerente descubría trabajos completados y no facturados semanas después. Sin visibilidad centralizada, el negocio perdía ingresos de forma silenciosa.<br><br>Tras el Diagnóstico y F1, identificamos tres focos críticos: trazabilidad de expedientes, automatización de cobros y alertas de expedientes atascados. El ROI proyectado fue de 263% sobre la inversión total a 12 meses.',
+    'cert-r1-label': 'por presupuesto', 'cert-r1-unit': '−91% tiempo administrativo',
+    'cert-r2-label': 'solicitud de facturas', 'cert-r2-before': 'Manual', 'cert-r2-after': 'Automático', 'cert-r2-unit': 'Activada al cerrar expediente',
+    'cert-r3-label': 'expedientes atascados', 'cert-r3-before': 'Sin control', 'cert-r3-after': 'Alertas reales', 'cert-r3-unit': 'Notificación automática al responsable',
+    'cert-r4-label': 'procesos sin facturar', 'cert-r4-unit': 'Recuperados en primer trimestre',
+    'cert-quote': '"Nunca más perder horas buscando información. Ahora tenemos visibilidad total de nuestros expedientes, indicadores en tiempo real, y podemos escalar el negocio sin contratar más gente. Lo siguiente es automatizar los informes en terreno para nuestros inspectores."',
+    'cert-cite': '— Gerente, empresa de inspecciones y certificaciones (nombre reservado por confidencialidad)',
+    'cert-impl-title': 'Qué se implementó',
+    'cert-impl1': '<strong style="color:var(--offwh);">1. Sistema de trazabilidad de expedientes.</strong> Cada expediente tiene un estado visible en tiempo real: pendiente, en ejecución, aprobado, facturado. El inspector actualiza desde terreno. El gerente ve el cuadro completo sin preguntar a nadie.',
+    'cert-impl2': '<strong style="color:var(--offwh);">2. Automatización de cobros.</strong> Al marcar un expediente como completado, el sistema envía automáticamente la solicitud de factura al cliente. Sin intervención manual. Sin olvidos.',
+    'cert-impl3': '<strong style="color:var(--offwh);">3. Alertas de expedientes sin movimiento.</strong> Si un expediente lleva más de N días sin actualización, el sistema alerta al responsable. Los cuellos de botella se detectan antes de convertirse en problemas de cobro.',
+    // Caso 2: Logística
+    'log-company': 'Empresa de transporte refrigerado · Ruta packing-puerto',
+    'log-meta': '12 camiones · Maule y O\'Higgins → San Antonio · Chile',
+    'log-badge': 'Escenario compuesto · Basado en casos reales del sector',
+    'log-situation': 'Empresa de 12 camiones refrigerados que transporta fruta fresca desde packings del Maule y O\'Higgins al puerto de San Antonio. El coordinador de operaciones trabaja de noche durante temporada porque los camiones salen a las 2am. Cualquier desviación de ruta, parada no programada o alarma de temperatura la gestiona por teléfono — dormido o no. En la última temporada: un camión detenido por falla mecánica sin aviso al cliente, una alarma de temperatura ignorada 40 minutos, y una multa de $4.2 millones CLP por llegar fuera de ventana horaria al puerto.<br><br>La exportadora amenazó con cambiar de transportista. Contratar otro coordinador nocturno no era viable.',
+    'log-r1-label': 'Respuesta a incidencias', 'log-r1-unit': 'Promedio en temporada',
+    'log-r2-label': 'Multas por ventana horaria', 'log-r2-unit': 'Temporada siguiente',
+    'log-r3-label': 'Gestión nocturna', 'log-r3-before': 'Manual · Coordinador despierto', 'log-r3-after': 'Agente autónomo', 'log-r3-unit': 'Escala solo si no hay respuesta',
+    'log-r4-label': 'Contrato exportadora', 'log-r4-before': 'En riesgo', 'log-r4-after': 'Renovado', 'log-r4-unit': 'Con aumento de volumen',
+    'log-impl-title': 'Qué se implementó',
+    'log-impl1': '<strong style="color:var(--offwh);">1. Agente de respuesta a incidencias.</strong> Monitoreo en tiempo real de flota: detecta paradas no programadas, desviaciones de ruta y alarmas de temperatura. Ante cualquier evento, contacta al conductor por WhatsApp con el protocolo definido. Si no hay respuesta en 8 minutos, notifica al cliente y propone solución.',
+    'log-impl2': '<strong style="color:var(--offwh);">2. Control de ventanas horarias.</strong> El agente monitorea los tiempos estimados de llegada al puerto en tiempo real. Si proyecta un retraso, alerta al coordinador y al cliente con anticipación — no después de que ocurre el problema.',
+    'log-impl3': '<strong style="color:var(--offwh);">3. Dashboard de operaciones nocturnas.</strong> El coordinador revisa el estado de toda la flota en un panel simple antes de dormir y al levantarse. Solo lo llaman si el agente no pudo resolver.',
+    'log-composite-note': 'Este escenario es compuesto: combina patrones observados en múltiples operaciones logísticas de perecederos en Chile. Los números son representativos del sector, no de una empresa específica.',
+    // Caso 3: Agro
+    'agro-company': 'Exportadora de cerezas · Valle del Maule',
+    'agro-meta': '80 hectáreas · Exportación a China · Chile',
+    'agro-badge': 'Escenario compuesto · Basado en casos reales del sector',
+    'agro-situation': 'Fundo familiar de 80 hectáreas exportando cerezas a China. El jefe de campo decide el riego por experiencia y por cómo se ve el suelo. Los registros fitosanitarios están en un cuaderno y en WhatsApp. En temporada alta — octubre a enero — hay 4 semanas donde cada decisión define la calidad de exportación. El año anterior, un bloque completo llegó al packing con calibre bajo mínimo por estrés hídrico no detectado a tiempo. El packing rechazó el 18% de la fruta de ese bloque. La exportadora descontó el diferencial de precio.<br><br>El dueño calculó que habría pagado cualquier cosa por saberlo 10 días antes.',
+    'agro-r1-label': 'Rechazo por estrés hídrico', 'agro-r1-unit': 'Temporada siguiente',
+    'agro-r2-label': 'Consumo hídrico', 'agro-r2-before': 'Sin control bloque a bloque', 'agro-r2-unit': 'Reducción en toda la temporada',
+    'agro-r3-label': 'Prescripción de riego', 'agro-r3-before': 'Por experiencia', 'agro-r3-after': 'Por datos · Diario', 'agro-r3-unit': 'WhatsApp cada mañana por bloque',
+    'agro-r4-label': 'Presencia del dueño en temporada', 'agro-r4-before': '24/7 en el fundo', 'agro-r4-after': 'Solo en decisiones', 'agro-r4-unit': 'El agente monitorea. Él dirige.',
+    'agro-impl-title': 'Qué se implementó',
+    'agro-impl1': '<strong style="color:var(--offwh);">1. Agente de prescripción agronómica.</strong> Conectado a sensores de humedad de suelo, datos satelitales y forecast climático. Cada mañana el jefe de campo recibe en WhatsApp una instrucción de riego por bloque: sector, duración y fundamento. No un dashboard que hay que interpretar — una acción concreta.',
+    'agro-impl2': '<strong style="color:var(--offwh);">2. Alerta de déficit hídrico proyectado.</strong> El agente proyecta el estado hídrico de cada bloque a 3 días. Si detecta déficit inminente, alerta al jefe de campo con anticipación suficiente para actuar antes de que afecte la fruta.',
+    'agro-impl3': '<strong style="color:var(--offwh);">3. Registro fitosanitario automatizado.</strong> Las acciones ejecutadas quedan registradas automáticamente. El cuaderno y el WhatsApp dejan de ser la única memoria del fundo. El historial está disponible para auditorías de exportación.',
+    'agro-composite-note': 'Este escenario es compuesto: combina datos de plataformas como Instacrops y Kilimo (que operan en Chile y LATAM) con patrones de exportación de cerezas del Maule. Los números de reducción hídrica (30%) y rechazo de calidad están alineados con estudios del sector en condiciones similares.',
+    // Caso 4: Distribuidora
+    'dist-company': 'Empresa distribuidora · Sector comercial',
+    'dist-meta': 'Pequeña empresa · 10–15 empleados · Chile · 2025',
+    'dist-badge': 'Caso real · Datos anonimizados',
+    'dist-situation': 'Empresa distribuidora con equipo comercial de 3 vendedores que destinaban el 60% de su jornada a tareas administrativas: generar cotizaciones en Word, consultar stock por teléfono interno y preparar reportes semanales manualmente. Sin datos en tiempo real, las decisiones gerenciales se basaban en información con hasta 7 días de antigüedad.<br><br>La empresa sabía que había ineficiencias pero no tenía claridad sobre qué automatizar primero, ni cuánto valía cada oportunidad. Tras el Diagnóstico y la F1, identificamos 3 oportunidades de automatización con IA. El Scoring Agent proyectó un ROI combinado de 263% sobre la inversión total en diagnóstico e implementación.',
+    'dist-r1-label': 'Tiempo por cotización', 'dist-r1-unit': '−89% tiempo comercial administrativo',
+    'dist-r2-label': 'Atención a clientes', 'dist-r2-before': 'Solo horario laboral', 'dist-r2-unit': 'Agente WhatsApp sin intervención humana',
+    'dist-r3-label': 'Latencia de datos', 'dist-r3-unit': 'Dashboard KPIs operacionales en tiempo real',
+    'dist-r4-label': 'ROI proyectado', 'dist-r4-unit': 'Sobre la inversión total a 12 meses',
+    'dist-quote': '"Antes de este diagnóstico no teníamos claridad sobre qué automatizar primero. Salimos con tres proyectos priorizados, el ROI de cada uno calculado, y la certeza de que íbamos a implementar en el lugar correcto."',
+    'dist-cite': '— Gerente General, empresa distribuidora (nombre reservado por confidencialidad)',
+    'dist-impl-title': 'Qué se implementó',
+    'dist-impl1': '<strong style="color:var(--offwh);">1. Automatización de cotizaciones.</strong> Se conectó el sistema de stock con una herramienta de generación automática de cotizaciones. El vendedor selecciona productos, el sistema genera el PDF en 30 segundos y lo envía por email. Eliminó el 89% del tiempo administrativo del equipo comercial.',
+    'dist-impl2': '<strong style="color:var(--offwh);">2. Agente WhatsApp con IA.</strong> Los clientes consultan disponibilidad, precios y estado de pedidos por WhatsApp en cualquier horario. El agente responde con información en tiempo real del sistema. Solo escala al equipo cuando hay una solicitud de compra nueva.',
+    'dist-impl3': '<strong style="color:var(--offwh);">3. Dashboard operacional en tiempo real.</strong> Integración de ventas, stock e inventario en un dashboard gerencial actualizado cada hora. Las decisiones de compra y proyección ahora se basan en datos frescos, no en reportes de la semana anterior.',
+    // CTA
     'casos-cta-title': '¿Tu empresa podría ser el próximo caso?',
     'casos-cta-sub': 'Agenda una llamada de 30 minutos — sin costo, sin compromiso.',
-    'casos-btn-calendar': 'Agendar llamada gratuita',
+    'casos-btn-diag': 'Hacer el diagnóstico gratuito',
     'casos-btn-whatsapp': 'Escribir por WhatsApp',
   },
   en: {
     'casos-tag': 'Success Stories',
     'casos-title': 'Real results.<br>Concrete data.',
     'casos-sub': 'We don\'t show promises. We show what happened — with real numbers, even if the names are confidential.',
-    'casos-company': 'Distribution company · Commercial sector',
-    'casos-meta': 'Small business · 10–15 employees · Chile · 2025',
-    'casos-badge': 'Real case · Anonymized data',
-    'casos-situation': 'A distribution company with a 3-person sales team spending 60% of their workday on administrative tasks: generating quotes in Word, checking stock by internal phone, and manually preparing weekly reports. Without real-time data, management decisions were based on information up to 7 days old.<br><br>The company knew there were inefficiencies but had no clarity on what to automate first, or how much each opportunity was worth. After the Diagnosis and F1, we identified 3 AI automation opportunities. The Scoring Agent projected a combined ROI of 263% on the total investment in diagnosis and implementation.',
-    'casos-r1-label': 'Time per quote',
-    'casos-r1-unit': '−89% administrative sales time',
-    'casos-r2-label': 'Customer service',
-    'casos-r2-before': 'Business hours only',
-    'casos-r2-unit': 'WhatsApp agent with no human intervention',
-    'casos-r3-label': 'Data latency',
-    'casos-r3-unit': 'Real-time operational KPI dashboard',
-    'casos-r4-label': 'Projected ROI',
-    'casos-r4-unit': 'On total investment over 12 months',
-    'casos-quote': '"Before this diagnosis we had no clarity on what to automate first. We left with three prioritized projects, the ROI of each calculated, and the certainty that we were going to implement in the right place."',
-    'casos-cite': '— General Manager, distribution company (name withheld for confidentiality)',
-    'casos-context-title': 'What was implemented',
-    'casos-impl1': '<strong style="color:var(--offwh);">1. Quote automation.</strong> The stock system was connected to an automatic quote generation tool. The salesperson selects products, the system generates the PDF in 30 seconds and sends it by email. Eliminated 89% of the commercial team\'s administrative time.',
-    'casos-impl2': '<strong style="color:var(--offwh);">2. AI WhatsApp agent.</strong> Customers check availability, prices, and order status via WhatsApp at any time. The agent responds with real-time data from the system. It only escalates to the team when there\'s a new purchase request.',
-    'casos-impl3': '<strong style="color:var(--offwh);">3. Real-time operational dashboard.</strong> Integration of sales, stock, and inventory in a management dashboard updated every hour. Purchasing and forecasting decisions are now based on fresh data, not last week\'s reports.',
-    'casos-more-tag': 'Coming soon',
-    'casos-more-title': 'More cases on the way',
-    'casos-more-sub': 'Every diagnosis generates a case. As we get authorization to publish them, we add them here.',
+    'nav-cert': 'Inspections & Certifications',
+    'nav-log': 'Perishables Logistics',
+    'nav-agro': 'Agricultural Export',
+    'nav-dist': 'Commercial Distributor',
+    // Case 1: Certifications
+    'cert-company': 'Technical inspections & certifications · Vertical transport',
+    'cert-meta': 'ISO certified company · 25+ employees · Chile · 2025',
+    'cert-badge': 'Real case · Anonymized data',
+    'cert-situation': 'A technical inspections company managing dozens of monthly files — each with on-site visits, reports, approvals, and invoicing. The problem: everything was coordinated via email and WhatsApp. The inspector arrived on-site not knowing if the client had paid for the previous service. The manager discovered completed but unbilled work weeks later. Without centralized visibility, the business was silently losing revenue.<br><br>After the Diagnosis and F1, we identified three critical focus areas: file traceability, billing automation, and stuck-file alerts. Projected ROI was 263% on total investment over 12 months.',
+    'cert-r1-label': 'per budget proposal', 'cert-r1-unit': '−91% administrative time',
+    'cert-r2-label': 'invoice requests', 'cert-r2-before': 'Manual', 'cert-r2-after': 'Automatic', 'cert-r2-unit': 'Triggered when file is closed',
+    'cert-r3-label': 'stuck files', 'cert-r3-before': 'No visibility', 'cert-r3-after': 'Real alerts', 'cert-r3-unit': 'Automatic notification to owner',
+    'cert-r4-label': 'unbilled processes', 'cert-r4-unit': 'Recovered in first quarter',
+    'cert-quote': '"Never again spending hours searching for information. Now we have complete visibility of our files, real-time indicators, and can scale the business without hiring more people. Next is automating field reports for our inspectors."',
+    'cert-cite': '— Manager, inspections and certifications company (name withheld for confidentiality)',
+    'cert-impl-title': 'What was implemented',
+    'cert-impl1': '<strong style="color:var(--offwh);">1. File traceability system.</strong> Each file has a real-time visible status: pending, in progress, approved, invoiced. The inspector updates from the field. The manager sees the full picture without asking anyone.',
+    'cert-impl2': '<strong style="color:var(--offwh);">2. Billing automation.</strong> When a file is marked as completed, the system automatically sends the invoice request to the client. No manual intervention. No forgotten billings.',
+    'cert-impl3': '<strong style="color:var(--offwh);">3. Stuck file alerts.</strong> If a file goes N days without an update, the system alerts the responsible party. Bottlenecks are detected before they become billing problems.',
+    // Case 2: Logistics
+    'log-company': 'Refrigerated transport company · Packing-to-port route',
+    'log-meta': '12 trucks · Maule and O\'Higgins → San Antonio · Chile',
+    'log-badge': 'Composite scenario · Based on real sector cases',
+    'log-situation': 'A company with 12 refrigerated trucks transporting fresh fruit from packhouses in Maule and O\'Higgins to the port of San Antonio. The operations coordinator works nights during peak season because trucks depart at 2am. Every route deviation, unscheduled stop, or temperature alarm gets handled by phone — asleep or not. Last season: one truck stopped by mechanical failure with no client notification, a temperature alarm ignored for 40 minutes, and a $4.2 million CLP fine for missing the port\'s time window.<br><br>The exporter threatened to switch carriers. Hiring another night coordinator wasn\'t viable.',
+    'log-r1-label': 'Incident response time', 'log-r1-unit': 'Season average',
+    'log-r2-label': 'Time-window fines', 'log-r2-unit': 'Following season',
+    'log-r3-label': 'Night operations', 'log-r3-before': 'Manual · Coordinator awake', 'log-r3-after': 'Autonomous agent', 'log-r3-unit': 'Escalates only if no response',
+    'log-r4-label': 'Exporter contract', 'log-r4-before': 'At risk', 'log-r4-after': 'Renewed', 'log-r4-unit': 'With increased volume',
+    'log-impl-title': 'What was implemented',
+    'log-impl1': '<strong style="color:var(--offwh);">1. Incident response agent.</strong> Real-time fleet monitoring: detects unscheduled stops, route deviations, and temperature alarms. On any event, contacts the driver via WhatsApp with a defined protocol. If no response in 8 minutes, notifies the client and proposes a solution.',
+    'log-impl2': '<strong style="color:var(--offwh);">2. Time-window control.</strong> The agent monitors estimated arrival times at the port in real time. If a delay is projected, it alerts the coordinator and client in advance — not after the problem occurs.',
+    'log-impl3': '<strong style="color:var(--offwh);">3. Night operations dashboard.</strong> The coordinator checks the full fleet status on a simple panel before sleeping and upon waking. They\'re only called if the agent couldn\'t resolve something.',
+    'log-composite-note': 'This is a composite scenario: it combines patterns observed across multiple perishables logistics operations in Chile. Numbers are representative of the sector, not a specific company.',
+    // Case 3: Agro
+    'agro-company': 'Cherry exporter · Maule Valley',
+    'agro-meta': '80 hectares · Export to China · Chile',
+    'agro-badge': 'Composite scenario · Based on real sector cases',
+    'agro-situation': 'A family farm of 80 hectares exporting cherries to China. The field manager makes irrigation decisions by experience and by how the soil looks. Phytosanitary records are kept in a notebook and WhatsApp. During peak season — October to January — there are 4 weeks where every decision defines export quality. The previous year, a full block arrived at the packhouse below minimum caliber due to undetected water stress. The packhouse rejected 18% of that block\'s fruit. The exporter deducted the price differential.<br><br>The owner calculated he would have paid anything to know 10 days earlier.',
+    'agro-r1-label': 'Rejection from water stress', 'agro-r1-unit': 'Following season',
+    'agro-r2-label': 'Water consumption', 'agro-r2-before': 'No block-by-block control', 'agro-r2-unit': 'Reduction over full season',
+    'agro-r3-label': 'Irrigation prescription', 'agro-r3-before': 'By experience', 'agro-r3-after': 'Data-driven · Daily', 'agro-r3-unit': 'WhatsApp each morning by block',
+    'agro-r4-label': 'Owner on-farm during season', 'agro-r4-before': '24/7 on the farm', 'agro-r4-after': 'Only for decisions', 'agro-r4-unit': 'Agent monitors. He directs.',
+    'agro-impl-title': 'What was implemented',
+    'agro-impl1': '<strong style="color:var(--offwh);">1. Agronomic prescription agent.</strong> Connected to soil moisture sensors, satellite data, and weather forecasts. Each morning the field manager receives a WhatsApp irrigation instruction per block: sector, duration, and rationale. Not a dashboard to interpret — a concrete action.',
+    'agro-impl2': '<strong style="color:var(--offwh);">2. Projected water deficit alert.</strong> The agent projects each block\'s water status 3 days out. If it detects imminent deficit, it alerts the field manager with enough lead time to act before the fruit is affected.',
+    'agro-impl3': '<strong style="color:var(--offwh);">3. Automated phytosanitary records.</strong> Executed actions are logged automatically. The notebook and WhatsApp stop being the farm\'s only memory. The history is available for export audits.',
+    'agro-composite-note': 'This is a composite scenario: it combines data from platforms like Instacrops and Kilimo (operating in Chile and LATAM) with Maule cherry export patterns. Water reduction (30%) and quality rejection numbers are aligned with sector studies under similar conditions.',
+    // Case 4: Distribuidora
+    'dist-company': 'Distribution company · Commercial sector',
+    'dist-meta': 'Small business · 10–15 employees · Chile · 2025',
+    'dist-badge': 'Real case · Anonymized data',
+    'dist-situation': 'A distribution company with a 3-person sales team spending 60% of their workday on administrative tasks: generating quotes in Word, checking stock by internal phone, and manually preparing weekly reports. Without real-time data, management decisions were based on information up to 7 days old.<br><br>The company knew there were inefficiencies but had no clarity on what to automate first, or how much each opportunity was worth. After the Diagnosis and F1, we identified 3 AI automation opportunities. The Scoring Agent projected a combined ROI of 263% on total investment in diagnosis and implementation.',
+    'dist-r1-label': 'Time per quote', 'dist-r1-unit': '−89% administrative sales time',
+    'dist-r2-label': 'Customer service', 'dist-r2-before': 'Business hours only', 'dist-r2-unit': 'WhatsApp agent with no human intervention',
+    'dist-r3-label': 'Data latency', 'dist-r3-unit': 'Real-time operational KPI dashboard',
+    'dist-r4-label': 'Projected ROI', 'dist-r4-unit': 'On total investment over 12 months',
+    'dist-quote': '"Before this diagnosis we had no clarity on what to automate first. We left with three prioritized projects, the ROI of each calculated, and the certainty that we were going to implement in the right place."',
+    'dist-cite': '— General Manager, distribution company (name withheld for confidentiality)',
+    'dist-impl-title': 'What was implemented',
+    'dist-impl1': '<strong style="color:var(--offwh);">1. Quote automation.</strong> The stock system was connected to an automatic quote generation tool. The salesperson selects products, the system generates the PDF in 30 seconds and sends it by email. Eliminated 89% of the commercial team\'s administrative time.',
+    'dist-impl2': '<strong style="color:var(--offwh);">2. AI WhatsApp agent.</strong> Customers check availability, prices, and order status via WhatsApp at any time. The agent responds with real-time data from the system. It only escalates to the team when there\'s a new purchase request.',
+    'dist-impl3': '<strong style="color:var(--offwh);">3. Real-time operational dashboard.</strong> Integration of sales, stock, and inventory in a management dashboard updated every hour. Purchasing and forecasting decisions are now based on fresh data, not last week\'s reports.',
+    // CTA
     'casos-cta-title': 'Could your company be the next case?',
     'casos-cta-sub': 'Schedule a 30-minute call — no cost, no commitment.',
-    'casos-btn-calendar': 'Schedule free call',
+    'casos-btn-diag': 'Take the free diagnosis',
     'casos-btn-whatsapp': 'Message on WhatsApp',
   }
 };
 
 let _langCasos = localStorage.getItem('lang') || 'es';
 function applyLangCasos() {
+  const dict = T_casos[_langCasos] || T_casos['es'];
   document.querySelectorAll('[data-i18n]').forEach(el => {
-    const v = (T_casos[_langCasos] || T_casos['es'])[el.getAttribute('data-i18n')];
-    if (v) el.innerHTML = v;
+    const v = dict[el.getAttribute('data-i18n')];
+    if (v !== undefined) el.innerHTML = v;
   });
 }
 document.addEventListener('DOMContentLoaded', () => { _langCasos = localStorage.getItem('lang') || 'es'; applyLangCasos(); });
 window.addEventListener('langchange', e => { _langCasos = e.detail; applyLangCasos(); });
 </script>
+
 </Layout>

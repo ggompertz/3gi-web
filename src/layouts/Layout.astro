@@ -208,6 +208,22 @@ const canonicalUrl = new URL(Astro.url.pathname, 'https://3g-ia-agents.com').hre
     .case-quote-compact p { font-size: 15px; font-style: italic; font-weight: 300; color: rgba(238,241,246,0.8); line-height: 1.7; margin-bottom: 8px; }
     .case-quote-compact cite { font-size: 12px; color: var(--muted); font-style: normal; }
 
+    /* SECTORES */
+    #sectores { background: var(--night-3); }
+    .sect-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-top: 40px; }
+    .sect-card { background: var(--night-2); border: 1px solid var(--border); border-radius: 14px; padding: 28px 24px; display: flex; flex-direction: column; gap: 14px; transition: border-color 0.2s; }
+    .sect-card:hover { border-color: rgba(0,232,145,0.2); }
+    .sect-sector { font-size: 10px; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: var(--green); }
+    .sect-before-tag { font-size: 10px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(238,241,246,0.3); margin-bottom: 6px; }
+    .sect-after-tag { font-size: 10px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--green); margin-bottom: 6px; }
+    .sect-txt { font-size: 14px; line-height: 1.65; }
+    .sect-txt-before { color: rgba(238,241,246,0.45); }
+    .sect-txt-after { color: rgba(238,241,246,0.85); }
+    .sect-divider { height: 1px; background: var(--border); margin: 2px 0; }
+    .sect-cta-link { font-size: 13px; font-weight: 500; color: rgba(0,232,145,0.65); text-decoration: underline; text-underline-offset: 3px; margin-top: auto; padding-top: 8px; transition: color 0.2s; display: inline-block; }
+    .sect-cta-link:hover { color: var(--green); }
+    .sect-footer { text-align: center; margin-top: 40px; }
+
     /* TRUST SIGNALS */
     #trust { background: var(--night-2); }
     .trust-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; }
@@ -248,6 +264,7 @@ const canonicalUrl = new URL(Astro.url.pathname, 'https://3g-ia-agents.com').hre
     /* RESPONSIVE */
     @media (max-width: 900px) {
       section { padding: 72px 0; }
+      .sect-grid { grid-template-columns: 1fr; }
       .era-grid { grid-template-columns: 1fr; }
       .met-steps { grid-template-columns: 1fr; gap: 2px; }
       .met-step:first-child { border-radius: 12px 12px 0 0; }
@@ -377,6 +394,22 @@ const T = {
     'trust1-title': 'Sin acceso a datos externos', 'trust1-desc': 'Tus datos de diagnóstico no se usan para entrenar modelos de IA. No alimentan sistemas de terceros. Son tuyos.',
     'trust2-title': 'Cumplimiento normativo', 'trust2-desc': 'Respetamos RGPD, normativas de privacidad de Chile y regulaciones locales de cada país donde operamos.',
     'trust3-title': 'Tu información es confidencial', 'trust3-desc': 'Los casos y datos de tu empresa permanecen bajo confidencialidad estricta. No publicamos detalles sin tu aprobación.',
+    'sect-tag': '¿Te reconoces aquí?',
+    'sect-title': 'El problema tiene cara.<br>Según tu sector.',
+    'sect-sub': 'No todas las ineficiencias se ven igual. Estas son las situaciones que más vemos — y lo que cambia cuando se resuelven.',
+    'sect-before-tag': 'Hoy',
+    'sect-after-tag': 'Con 3GI',
+    'sect1-sector': 'Inspecciones · Certificaciones',
+    'sect1-before': 'Cada expediente se mueve por correo y WhatsApp. El inspector llega a terreno sin saber si el cliente pagó. El gerente descubre trabajos sin facturar semanas después.',
+    'sect1-after': 'Visibilidad total de expedientes. Alertas automáticas de cobro. $250k recuperados en procesos que se estaban facturando tarde o nunca.',
+    'sect2-sector': 'Logística de Perecederos',
+    'sect2-before': 'El coordinador trabaja de noche porque los camiones salen a las 2am. Cualquier incidente lo resuelve él por teléfono. Una multa por fuera de ventana horaria cuesta $4 millones.',
+    'sect2-after': 'Agente que monitorea la flota, contacta al conductor y escala solo si no hay respuesta. El coordinador duerme. Cero multas en temporada.',
+    'sect3-sector': 'Exportación Agrícola',
+    'sect3-before': 'El jefe de campo decide el riego por experiencia. Un bloque con estrés hídrico no detectado puede costar el 30–40% del valor del lote en rechazo de calidad.',
+    'sect3-after': 'Prescripciones de riego por bloque en WhatsApp cada mañana. 30% menos agua. Cero rechazos por estrés hídrico.',
+    'sect-case-link': 'Ver caso →',
+    'sect-more-btn': 'Ver todos los casos',
     'caso-tag': 'Resultado real', 'caso-title': 'De $250k perdidos<br>a sistema de gestión total.',
     'caso-company': 'Empresa de inspecciones y certificaciones · Transporte vertical', 'caso-meta': 'Empresa certificada ISO · 10 empleados · Chile',
     'caso-badge': 'Caso real · Datos anonimizados',
@@ -440,6 +473,22 @@ const T = {
     'trust1-title': 'No external data access', 'trust1-desc': 'Your diagnosis data is not used to train AI models. It does not feed third-party systems. It\'s yours.',
     'trust2-title': 'Regulatory compliance', 'trust2-desc': 'We respect GDPR, Chile\'s privacy regulations, and local compliance requirements in every country where we operate.',
     'trust3-title': 'Your information is confidential', 'trust3-desc': 'Your company\'s cases and data remain under strict confidentiality. We do not publish details without your approval.',
+    'sect-tag': 'Do you recognize yourself here?',
+    'sect-title': 'The problem has a face.<br>Depending on your sector.',
+    'sect-sub': 'Not all inefficiencies look the same. These are the situations we see most — and what changes when they\'re solved.',
+    'sect-before-tag': 'Today',
+    'sect-after-tag': 'With 3GI',
+    'sect1-sector': 'Inspections · Certifications',
+    'sect1-before': 'Every file moves by email and WhatsApp. The inspector arrives on-site not knowing if the client paid. The manager finds unbilled work weeks later.',
+    'sect1-after': 'Full visibility of all files. Automatic billing alerts. $250k recovered from processes invoiced late — or never.',
+    'sect2-sector': 'Perishables Logistics',
+    'sect2-before': 'The coordinator works nights because trucks leave at 2am. Every incident gets resolved by phone. One late-delivery fine costs $4 million.',
+    'sect2-after': 'An agent monitors the fleet, contacts drivers on incidents, and escalates only if there\'s no response. The coordinator sleeps. Zero fines per season.',
+    'sect3-sector': 'Agricultural Export',
+    'sect3-before': 'The field manager makes irrigation decisions by experience. One undetected water-stressed block can cost 30–40% of the lot\'s value in quality rejection.',
+    'sect3-after': 'Block-by-block irrigation prescriptions delivered each morning via WhatsApp. 30% less water. Zero quality rejections from water stress.',
+    'sect-case-link': 'See case →',
+    'sect-more-btn': 'View all cases',
     'caso-tag': 'Real result', 'caso-title': 'From $250k lost<br>to complete management system.',
     'caso-company': 'Inspection and certification company · Vertical transportation', 'caso-meta': 'ISO certified company · 10 employees · Chile',
     'caso-badge': 'Real case · Anonymized data',
