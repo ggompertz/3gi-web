@@ -224,6 +224,33 @@ const canonicalUrl = new URL(Astro.url.pathname, 'https://3g-ia-agents.com').hre
     .sect-cta-link:hover { color: var(--green); }
     .sect-footer { text-align: center; margin-top: 40px; }
 
+    /* IA HOY — TABS */
+    #ia-hoy { background: var(--night-2); }
+    .iahoy-tabs { display: flex; gap: 6px; margin: 36px 0 28px; flex-wrap: wrap; }
+    .iahoy-tab { font-family: 'DM Sans', sans-serif; font-size: 14px; font-weight: 500; padding: 9px 22px; border-radius: 8px; border: 1px solid var(--border); background: transparent; color: var(--muted); cursor: pointer; transition: all 0.18s; white-space: nowrap; }
+    .iahoy-tab:hover { color: var(--offwh); border-color: rgba(238,241,246,0.2); }
+    .iahoy-tab.active { background: rgba(0,232,145,0.1); border-color: rgba(0,232,145,0.35); color: var(--green); font-weight: 700; }
+    .iahoy-panels { min-height: 220px; }
+    .iahoy-panel { display: none; }
+    .iahoy-panel.active { display: block; }
+    .iahoy-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+    .iahoy-card { background: var(--night-3); border: 1px solid var(--border); border-radius: 12px; padding: 24px 22px; transition: border-color 0.2s; }
+    .iahoy-card:hover { border-color: rgba(0,232,145,0.2); }
+    .iahoy-icon { font-size: 24px; margin-bottom: 12px; line-height: 1; }
+    .iahoy-card-title { font-family: 'Syne', sans-serif; font-weight: 800; font-size: 15px; letter-spacing: -0.01em; margin-bottom: 8px; line-height: 1.2; }
+    .iahoy-card-desc { font-size: 13px; color: var(--muted); line-height: 1.65; }
+    .iahoy-cta { margin-top: 40px; padding: 28px 32px; background: rgba(0,232,145,0.04); border: 1px solid rgba(0,232,145,0.12); border-radius: 14px; display: flex; align-items: center; justify-content: space-between; gap: 20px; flex-wrap: wrap; }
+    .iahoy-cta-question { font-family: 'Syne', sans-serif; font-weight: 800; font-size: clamp(16px, 2.2vw, 20px); letter-spacing: -0.02em; }
+    @media (max-width: 900px) {
+      .iahoy-grid { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 600px) {
+      .iahoy-tabs { gap: 8px; }
+      .iahoy-tab { width: 100%; text-align: center; }
+      .iahoy-cta { flex-direction: column; text-align: center; }
+      .iahoy-cta .btn { width: 100%; justify-content: center; }
+    }
+
     /* TRUST SIGNALS */
     #trust { background: var(--night-2); }
     .trust-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; }
@@ -339,6 +366,18 @@ const canonicalUrl = new URL(Astro.url.pathname, 'https://3g-ia-agents.com').hre
 </footer>
 
 <script is:inline>
+// IA HOY tabs
+document.querySelectorAll('.iahoy-tab').forEach(tab => {
+  tab.addEventListener('click', () => {
+    const n = tab.dataset.tab;
+    document.querySelectorAll('.iahoy-tab').forEach(t => { t.classList.remove('active'); t.setAttribute('aria-selected', 'false'); });
+    document.querySelectorAll('.iahoy-panel').forEach(p => p.classList.remove('active'));
+    tab.classList.add('active');
+    tab.setAttribute('aria-selected', 'true');
+    document.getElementById('iahoy-panel-' + n)?.classList.add('active');
+  });
+});
+
 const observer = new IntersectionObserver((entries) => {
   entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
 }, { threshold: 0.1 });
@@ -410,6 +449,29 @@ const T = {
     'sect3-after': 'Prescripciones de riego por bloque en WhatsApp cada mañana. 30% menos agua. Cero rechazos por estrés hídrico.',
     'sect-case-link': 'Ver caso →',
     'sect-more-btn': 'Ver todos los casos',
+    'iahoy-tag': 'Resultados concretos',
+    'iahoy-title': 'Lo que la IA puede hacer<br>por tu negocio hoy',
+    'iahoy-tab1': 'Comercial', 'iahoy-tab2': 'Marketing', 'iahoy-tab3': 'Operaciones',
+    'iahoy-c1-1-title': 'Califica leads mientras duermes',
+    'iahoy-c1-1-desc': 'Un chatbot IA filtra consultas entrantes y solo te muestra los clientes listos para comprar.',
+    'iahoy-c1-2-title': 'Seguimiento automático de oportunidades',
+    'iahoy-c1-2-desc': 'Recordatorios, resúmenes de conversación y próximos pasos, sin abrir el CRM.',
+    'iahoy-c1-3-title': 'Propuestas personalizadas en minutos',
+    'iahoy-c1-3-desc': 'La IA analiza cada cliente y genera una oferta única. Sin templates genéricos.',
+    'iahoy-c2-1-title': 'Contenido para redes listo cada semana',
+    'iahoy-c2-1-desc': 'Posts para LinkedIn, Instagram y Facebook generados y agendados. Tú solo apruebas.',
+    'iahoy-c2-2-title': 'Respuestas inteligentes en DM',
+    'iahoy-c2-2-desc': 'Clientes que escriben en Instagram, WhatsApp o LinkedIn reciben respuesta inmediata con tu tono y contexto.',
+    'iahoy-c2-3-title': 'Análisis semanal de qué funciona',
+    'iahoy-c2-3-desc': 'Reporte automático de engagement, qué temas resonaron y a quién apuntar la próxima semana.',
+    'iahoy-c3-1-title': 'Reportes ejecutivos sin escribirlos',
+    'iahoy-c3-1-desc': 'Dashboard que extrae datos de tus herramientas y genera el reporte cada lunes. PDF listo.',
+    'iahoy-c3-2-title': 'WhatsApp que atiende 24/7',
+    'iahoy-c3-2-desc': 'Clientes resuelven dudas comunes sin esperar. Tú solo entras cuando se necesita un humano.',
+    'iahoy-c3-3-title': 'Procesos manuales convertidos en flujos',
+    'iahoy-c3-3-desc': 'Pedidos, facturas, asignación de tareas — la IA los procesa y alerta cuando algo necesita tu atención.',
+    'iahoy-cta-question': '¿Cuál es el cuello de botella en tu negocio?',
+    'iahoy-cta-btn': 'Descúbrelo en 5 minutos',
     'caso-tag': 'Resultado real', 'caso-title': 'De $250k perdidos<br>a sistema de gestión total.',
     'caso-company': 'Empresa de inspecciones y certificaciones · Transporte vertical', 'caso-meta': 'Empresa certificada ISO · 10 empleados · Chile',
     'caso-badge': 'Caso real · Datos anonimizados',
@@ -489,6 +551,29 @@ const T = {
     'sect3-after': 'Block-by-block irrigation prescriptions delivered each morning via WhatsApp. 30% less water. Zero quality rejections from water stress.',
     'sect-case-link': 'See case →',
     'sect-more-btn': 'View all cases',
+    'iahoy-tag': 'Concrete results',
+    'iahoy-title': 'What AI can do<br>for your business today',
+    'iahoy-tab1': 'Commercial', 'iahoy-tab2': 'Marketing', 'iahoy-tab3': 'Operations',
+    'iahoy-c1-1-title': 'Qualify leads while you sleep',
+    'iahoy-c1-1-desc': 'An AI chatbot filters incoming inquiries and only shows you clients ready to buy.',
+    'iahoy-c1-2-title': 'Automatic opportunity follow-up',
+    'iahoy-c1-2-desc': 'Reminders, conversation summaries and next steps, without opening your CRM.',
+    'iahoy-c1-3-title': 'Personalized proposals in minutes',
+    'iahoy-c1-3-desc': 'AI analyzes each client and generates a unique offer. No generic templates.',
+    'iahoy-c2-1-title': 'Social content ready every week',
+    'iahoy-c2-1-desc': 'Posts for LinkedIn, Instagram and Facebook generated and scheduled. You just approve.',
+    'iahoy-c2-2-title': 'Smart DM responses',
+    'iahoy-c2-2-desc': 'Clients who write on Instagram, WhatsApp or LinkedIn get an immediate response with your tone and context.',
+    'iahoy-c2-3-title': 'Weekly analysis of what works',
+    'iahoy-c2-3-desc': 'Automatic engagement report, what topics resonated, and who to target next week.',
+    'iahoy-c3-1-title': 'Executive reports without writing them',
+    'iahoy-c3-1-desc': 'Dashboard that extracts data from your tools and generates the report every Monday. PDF ready.',
+    'iahoy-c3-2-title': 'WhatsApp that attends 24/7',
+    'iahoy-c3-2-desc': 'Clients resolve common questions without waiting. You only step in when a human is needed.',
+    'iahoy-c3-3-title': 'Manual processes converted to flows',
+    'iahoy-c3-3-desc': 'Orders, invoices, task assignment — AI processes them and alerts when something needs your attention.',
+    'iahoy-cta-question': 'What\'s the bottleneck in your business?',
+    'iahoy-cta-btn': 'Find out in 5 minutes',
     'caso-tag': 'Real result', 'caso-title': 'From $250k lost<br>to complete management system.',
     'caso-company': 'Inspection and certification company · Vertical transportation', 'caso-meta': 'ISO certified company · 10 employees · Chile',
     'caso-badge': 'Real case · Anonymized data',
