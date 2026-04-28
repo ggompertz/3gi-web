@@ -423,6 +423,29 @@ function mostrarResultado() {
   document.getElementById('intro').style.display = 'none';
   document.querySelector('.progress-wrap').style.display = 'none';
   resEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
+
+  // Registrar diagnóstico en Supabase siempre, independiente del lead capture
+  try {
+    let eraOp = null, eraCom = null;
+    if (currentMode === 'ambas') {
+      eraOp  = 'ERA' + calcEra(['q1','q2','q3','q4','q5'].reduce((s,k)=>s+(answers[k]||0),0), 5);
+      eraCom = 'ERA' + calcEra(['c1','c2','c3','c4','c5'].reduce((s,k)=>s+(answers[k]||0),0), 5);
+    } else if (currentMode === 'comercial') {
+      eraCom = 'ERA' + calcEra(['c1','c2','c3','c4','c5'].reduce((s,k)=>s+(answers[k]||0),0), 5);
+    } else {
+      eraOp  = 'ERA' + calcEra(['q1','q2','q3','q4','q5'].reduce((s,k)=>s+(answers[k]||0),0), 5);
+    }
+    fetch('https://rfvhiuyqtfpqzjwpumav.supabase.co/rest/v1/diagnostico_completions', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'apikey': 'sb_publishable_66TA3gV_f_5N9vtZaF4t3A_Ymc18Kam',
+        'Authorization': 'Bearer sb_publishable_66TA3gV_f_5N9vtZaF4t3A_Ymc18Kam',
+        'Prefer': 'return=minimal'
+      },
+      body: JSON.stringify({ tipo: 'completion', era: eraOp || eraCom, era_operacional: eraOp, era_comercial: eraCom, modo: currentMode, idioma: lang })
+    });
+  } catch(e) {}
 }
 
 function resetDiag() {
