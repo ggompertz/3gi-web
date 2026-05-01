@@ -1,0 +1,466 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout
+  title="Diagnóstico IA gratuito para tu empresa · 5 preguntas · 3G Intelligence"
+  description="Descubre en qué ERA está tu empresa en menos de 3 minutos. Diagnóstico de madurez en IA: ERA 1 Caos Operativo, ERA 2 Datos Organizados, ERA 3 Empresa con IA. Gratis, sin registro previo."
+>
+
+<style>
+:root{--night:#06060D;--surface:#0E0E1A;--border:#1C1C2E;--green:#00E891;--green-dk:#009E60;--offwh:#EEF1F6;--muted:#6B7280}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--night);color:var(--offwh);font-family:'DM Sans',sans-serif;font-size:15px;line-height:1.6;min-height:100vh}
+main{max-width:660px;margin:0 auto;padding:80px 24px 80px}
+
+/* Eyebrow / heading */
+.eyebrow{font-size:11px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--green);margin-bottom:14px}
+h1{font-family:'Syne',sans-serif;font-size:clamp(26px,5vw,38px);font-weight:900;line-height:1.1;letter-spacing:-.03em;margin-bottom:12px}
+h1 span{color:var(--green)}
+.intro-sub{font-size:15px;color:var(--muted);line-height:1.65;margin-bottom:36px}
+
+/* Promesa visual */
+.preview-box{display:flex;flex-direction:column;gap:8px;background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:18px 22px;margin-bottom:32px}
+.preview-title{font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-bottom:4px}
+.preview-item{display:flex;align-items:flex-start;gap:10px;font-size:13px;color:#cbd5e1;line-height:1.5}
+.preview-icon{color:var(--green);flex-shrink:0;font-weight:700}
+
+/* Progress */
+.progress-wrap{margin-bottom:32px}
+.progress-label{display:flex;justify-content:space-between;font-size:12px;color:var(--muted);margin-bottom:8px}
+.progress-bar{height:3px;background:var(--border);border-radius:2px;overflow:hidden}
+.progress-fill{height:100%;background:var(--green);border-radius:2px;transition:width .4s ease;width:0%}
+
+/* Preguntas */
+.question{margin-bottom:32px;animation:fadeUp .3s ease forwards}
+@keyframes fadeUp{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
+.q-dim{font-size:10px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--green);margin-bottom:6px}
+.q-text{font-family:'Syne',sans-serif;font-size:17px;font-weight:700;color:var(--offwh);margin-bottom:14px;line-height:1.3}
+.options{display:flex;flex-direction:column;gap:8px}
+.option{display:flex;align-items:flex-start;gap:12px;background:var(--surface);border:1.5px solid var(--border);border-radius:10px;padding:13px 16px;cursor:pointer;transition:border-color .2s,background .2s;user-select:none}
+.option:hover{border-color:#00e89140;background:#0a1a12}
+.option.selected{border-color:var(--green);background:#00e89110}
+.option input{display:none}
+.opt-letter{width:24px;height:24px;flex-shrink:0;border-radius:50%;border:1.5px solid var(--border);display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;color:var(--muted);transition:all .2s}
+.option.selected .opt-letter{background:var(--green);border-color:var(--green);color:var(--night)}
+.opt-text{font-size:13px;color:#cbd5e1;line-height:1.5;padding-top:2px}
+.option.selected .opt-text{color:var(--offwh)}
+.q-divider{border:none;border-top:1px solid var(--border);margin:6px 0 32px}
+.dim-divider{display:flex;align-items:center;gap:12px;margin:8px 0 28px}
+.dim-divider-line{flex:1;height:1px;background:#f973164d}
+.dim-divider-label{font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#f97316;white-space:nowrap}
+
+/* Email capture (paso 2) */
+#email-step{display:none}
+.email-card{background:var(--surface);border:1px solid rgba(0,232,145,.2);border-radius:14px;padding:28px 28px;margin-bottom:20px}
+.email-card-title{font-family:'Syne',sans-serif;font-size:18px;font-weight:800;margin-bottom:8px}
+.email-card-sub{font-size:13px;color:var(--muted);margin-bottom:20px;line-height:1.6}
+.email-form{display:flex;flex-direction:column;gap:10px}
+.email-input{background:#ffffff0f;border:1px solid rgba(255,255,255,.1);border-radius:8px;padding:12px 16px;color:var(--offwh);font-size:14px;font-family:'DM Sans',sans-serif;outline:none;transition:border-color .2s}
+.email-input:focus{border-color:#00e89166}
+.email-input::placeholder{color:var(--muted)}
+.btn-primary{background:var(--green);color:var(--night);border:none;border-radius:10px;padding:15px 28px;font-size:15px;font-weight:700;cursor:pointer;font-family:'Syne',sans-serif;transition:opacity .2s,transform .15s;width:100%}
+.btn-primary:hover:not(:disabled){opacity:.88;transform:translateY(-1px)}
+.btn-primary:disabled{opacity:.5;cursor:default;transform:none}
+.skip-email{display:block;text-align:center;margin-top:12px;font-size:12px;color:var(--muted);cursor:pointer;background:none;border:none;text-decoration:underline}
+.skip-email:hover{color:var(--offwh)}
+
+/* Resultado */
+#result-step{display:none}
+.result-era{display:flex;gap:12px;margin-bottom:20px}
+.era-badge{flex:1;background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:16px;text-align:center}
+.era-badge-dim{font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:6px}
+.era-badge-val{font-family:'Syne',sans-serif;font-size:22px;font-weight:900}
+.era-badge-name{font-size:11px;color:var(--muted);margin-top:3px}
+
+.result-section{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:20px 22px;margin-bottom:12px}
+.result-section-label{font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-bottom:8px}
+.result-section-text{font-size:14px;color:var(--offwh);line-height:1.65}
+.signal-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:12px}
+.signal-card{border-radius:10px;padding:16px 18px}
+.signal-card.pos{background:#00e89108;border:1px solid rgba(0,232,145,.2)}
+.signal-card.neg{background:#f8717108;border:1px solid rgba(248,113,113,.2)}
+.signal-card-label{font-size:10px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;margin-bottom:8px}
+.signal-card.pos .signal-card-label{color:var(--green)}
+.signal-card.neg .signal-card-label{color:#f87171}
+.signal-card-text{font-size:13px;color:#cbd5e1;line-height:1.55}
+
+/* Locked sections */
+.locked-section{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:20px 22px;margin-bottom:12px;position:relative;overflow:hidden}
+.locked-section::after{content:'';position:absolute;inset:0;background:linear-gradient(to bottom,transparent 20%,var(--surface) 80%)}
+.locked-content{filter:blur(3px);pointer-events:none;user-select:none;opacity:.4}
+.locked-label{position:relative;z-index:2;display:flex;align-items:center;gap:8px;margin-top:12px;font-size:12px;font-weight:700;color:var(--muted)}
+.locked-icon{font-size:14px}
+
+/* CTA final */
+.cta-box{background:linear-gradient(135deg,#00e89112,#00e89106);border:1px solid rgba(0,232,145,.25);border-radius:16px;padding:28px;text-align:center;margin-top:20px}
+.cta-box-eyebrow{font-size:11px;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--green);margin-bottom:10px}
+.cta-box-title{font-family:'Syne',sans-serif;font-size:20px;font-weight:800;margin-bottom:8px;letter-spacing:-.02em}
+.cta-box-sub{font-size:13px;color:var(--muted);margin-bottom:20px;line-height:1.6}
+.btn-calendly{display:inline-flex;align-items:center;gap:10px;background:var(--green);color:var(--night);font-family:'Syne',sans-serif;font-weight:800;font-size:15px;text-decoration:none;border-radius:10px;padding:16px 28px;transition:opacity .2s,transform .15s}
+.btn-calendly:hover{opacity:.88;transform:translateY(-1px)}
+.retry-btn{display:block;margin-top:16px;font-size:12px;color:var(--muted);cursor:pointer;background:none;border:none;text-decoration:underline}
+.retry-btn:hover{color:var(--offwh)}
+
+/* Loading */
+#loading-step{display:none;text-align:center;padding:48px 0}
+.loading-spinner{width:36px;height:36px;border:3px solid var(--border);border-top-color:var(--green);border-radius:50%;animation:spin .8s linear infinite;margin:0 auto 16px}
+@keyframes spin{to{transform:rotate(360deg)}}
+.loading-text{font-size:14px;color:var(--muted)}
+
+@media(max-width:600px){
+  main{padding:64px 20px 64px}
+  .signal-grid{grid-template-columns:1fr}
+  .result-era{flex-direction:column}
+}
+</style>
+
+<main>
+  <!-- INTRO -->
+  <div id="intro-step">
+    <div class="eyebrow">Diagnóstico gratuito · 3 minutos</div>
+    <h1>¿En qué <span>ERA de IA</span><br>está tu empresa?</h1>
+    <p class="intro-sub">5 preguntas. Sin registro previo. Resultado inmediato con el análisis generado por IA de tu situación real.</p>
+
+    <div class="preview-box">
+      <div class="preview-title">Al terminar vas a ver</div>
+      <div class="preview-item"><span class="preview-icon">→</span>Tu ERA exacta (Operacional + Comercial)</div>
+      <div class="preview-item"><span class="preview-icon">→</span>Interpretación de lo que significa para tu negocio</div>
+      <div class="preview-item"><span class="preview-icon">→</span>El dolor principal que te está costando dinero hoy</div>
+      <div class="preview-item"><span class="preview-icon">→</span>1 señal positiva y 1 alerta crítica</div>
+    </div>
+
+    <button class="btn-primary" onclick="startQuiz()" style="margin-bottom:0">
+      Hacer el diagnóstico gratis →
+    </button>
+  </div>
+
+  <!-- QUIZ -->
+  <div id="quiz-step" style="display:none">
+    <div class="progress-wrap">
+      <div class="progress-label">
+        <span id="progress-text">Pregunta 1 de 5</span>
+        <span id="progress-pct">0%</span>
+      </div>
+      <div class="progress-bar"><div class="progress-fill" id="progress-fill"></div></div>
+    </div>
+
+    <div id="questions-container"></div>
+
+    <button id="btn-next" class="btn-primary" onclick="nextStep()" disabled style="margin-top:8px">
+      Siguiente →
+    </button>
+  </div>
+
+  <!-- EMAIL CAPTURE -->
+  <div id="email-step">
+    <div class="email-card">
+      <div class="email-card-title">¿A dónde enviamos tu resultado?</div>
+      <div class="email-card-sub">Recibirás el análisis completo en tu correo. Sin spam — solo tu diagnóstico.</div>
+      <div class="email-form">
+        <input type="text" id="input-nombre" class="email-input" placeholder="Tu nombre (opcional)" autocomplete="name" />
+        <input type="email" id="input-email" class="email-input" placeholder="tu@empresa.com" autocomplete="email" required />
+        <button class="btn-primary" id="btn-submit" onclick="submitDiagnostico()">Ver mi diagnóstico →</button>
+      </div>
+      <button class="skip-email" onclick="submitDiagnostico(true)">Prefiero no recibir el reporte por email</button>
+    </div>
+  </div>
+
+  <!-- LOADING -->
+  <div id="loading-step">
+    <div class="loading-spinner"></div>
+    <p class="loading-text">Analizando tus respuestas con IA…</p>
+  </div>
+
+  <!-- RESULTADO -->
+  <div id="result-step"></div>
+</main>
+
+<script is:inline>
+// ── Preguntas ──────────────────────────────────────────────────────────────
+
+const PREGUNTAS = [
+  {
+    id: 'q1', dim: 'Operacional — Datos',
+    texto: '¿Dónde vive la información crítica de tu empresa?',
+    opciones: [
+      'Dispersa — Excel, WhatsApp, correos y carpetas sin orden',
+      'Centralizada en un sistema (CRM, ERP u otro software)',
+      'Conectada automáticamente entre sistemas — los datos se actualizan solos',
+    ]
+  },
+  {
+    id: 'q2', dim: 'Operacional — Procesos',
+    texto: '¿Cómo se ejecutan las tareas del día a día en tu empresa?',
+    opciones: [
+      'Manualmente — depende de personas específicas para no detenerse',
+      'Parcialmente automatizadas — algunas tareas corren solas',
+      'La IA ejecuta tareas por sí sola sin intervención humana cada vez',
+    ]
+  },
+  {
+    id: 'q3', dim: 'Operacional — Decisiones',
+    texto: '¿Cómo toma decisiones importantes tu empresa?',
+    opciones: [
+      'Por intuición y experiencia, con poca información objetiva',
+      'Con datos históricos disponibles y análisis manual del equipo',
+      'Con datos y proyecciones — la IA ayuda a anticipar escenarios',
+    ]
+  },
+  {
+    id: 'c1', dim: 'Comercial — Demanda',
+    texto: '¿Cómo llegan nuevos clientes a tu empresa?',
+    opciones: [
+      'Por el esfuerzo personal del dueño — contactos y referidos sin proceso',
+      'Algunos canales activos (redes, web), pero sin sistema consistente',
+      'Canal predecible que genera prospectos sin que el dueño intervenga',
+    ]
+  },
+  {
+    id: 'c2', dim: 'Comercial — Ventas',
+    texto: '¿Cómo es el proceso desde que aparece un prospecto hasta que cierra?',
+    opciones: [
+      'Informal — cada uno lo maneja a su manera, sin etapas definidas',
+      'Hay etapas definidas, pero el seguimiento es manual e inconsistente',
+      'Proceso documentado, seguimiento automatizado y métricas de conversión',
+    ]
+  },
+];
+
+// ── Estado ─────────────────────────────────────────────────────────────────
+
+let currentQ = 0;
+let answers = {};
+
+// ── ERA utils ──────────────────────────────────────────────────────────────
+
+function calcEra(score, total) {
+  const pct = score / (total * 3);
+  if (pct <= 0.45) return 1;
+  if (pct <= 0.72) return 2;
+  return 3;
+}
+
+function calcSub(score, total) {
+  const pct = score / (total * 3);
+  if (pct <= 0.33) return '-';
+  if (pct <= 0.50) return '';
+  if (pct <= 0.60) return '+';
+  if (pct <= 0.66) return '-';
+  if (pct <= 0.72) return '';
+  if (pct <= 0.78) return '+';
+  if (pct <= 0.83) return '-';
+  if (pct <= 0.91) return '';
+  return '+';
+}
+
+function eraColor(n) {
+  return n === 1 ? '#f87171' : n === 2 ? '#fbbf24' : '#00E891';
+}
+
+function eraName(n) {
+  return ['', 'Caos Operativo', 'Datos Organizados', 'Empresa con IA'][n];
+}
+
+// ── Quiz navigation ────────────────────────────────────────────────────────
+
+function startQuiz() {
+  document.getElementById('intro-step').style.display = 'none';
+  document.getElementById('quiz-step').style.display = 'block';
+  renderQuestion(0);
+}
+
+function renderQuestion(idx) {
+  const q = PREGUNTAS[idx];
+  const letters = ['A', 'B', 'C'];
+  const prevDim = idx > 0 ? PREGUNTAS[idx - 1].dim.split(' — ')[0] : null;
+  const curDim = q.dim.split(' — ')[0];
+  const showDivider = prevDim && prevDim !== curDim;
+
+  let html = '';
+  if (showDivider) {
+    html += `<div class="dim-divider"><div class="dim-divider-line"></div><span class="dim-divider-label">ERA Comercial</span><div class="dim-divider-line"></div></div>`;
+  }
+  html += `<div class="question">
+    <div class="q-dim">${q.dim}</div>
+    <div class="q-text">${q.texto}</div>
+    <div class="options">
+      ${q.opciones.map((txt, i) => `
+        <label class="option${answers[q.id] === i + 1 ? ' selected' : ''}" onclick="selectOpt(this, '${q.id}', ${i + 1})">
+          <input type="radio" name="${q.id}" value="${i + 1}">
+          <div class="opt-letter">${letters[i]}</div>
+          <div class="opt-text">${txt}</div>
+        </label>`).join('')}
+    </div>
+  </div>`;
+
+  document.getElementById('questions-container').innerHTML = html;
+  document.getElementById('btn-next').disabled = !answers[q.id];
+  updateProgress(idx);
+}
+
+function selectOpt(el, key, val) {
+  document.querySelectorAll(`.option`).forEach(o => o.classList.remove('selected'));
+  el.classList.add('selected');
+  answers[key] = val;
+  document.getElementById('btn-next').disabled = false;
+}
+
+function nextStep() {
+  if (currentQ < PREGUNTAS.length - 1) {
+    currentQ++;
+    renderQuestion(currentQ);
+  } else {
+    // Última pregunta → ir a email capture
+    document.getElementById('quiz-step').style.display = 'none';
+    document.getElementById('email-step').style.display = 'block';
+    document.getElementById('btn-next').textContent = 'Ver mi diagnóstico →';
+  }
+}
+
+function updateProgress(idx) {
+  const pct = Math.round(((idx) / PREGUNTAS.length) * 100);
+  document.getElementById('progress-fill').style.width = pct + '%';
+  document.getElementById('progress-text').textContent = `Pregunta ${idx + 1} de ${PREGUNTAS.length}`;
+  document.getElementById('progress-pct').textContent = pct + '%';
+  if (idx === PREGUNTAS.length - 1) {
+    document.getElementById('btn-next').textContent = 'Ver mi resultado →';
+  } else {
+    document.getElementById('btn-next').textContent = 'Siguiente →';
+  }
+}
+
+// ── Submit ─────────────────────────────────────────────────────────────────
+
+async function submitDiagnostico(skipEmail = false) {
+  const email = skipEmail ? null : document.getElementById('input-email').value.trim();
+  const nombre = document.getElementById('input-nombre')?.value.trim() || null;
+
+  if (!skipEmail && !email) {
+    document.getElementById('input-email').focus();
+    return;
+  }
+
+  // Mostrar loading
+  document.getElementById('email-step').style.display = 'none';
+  document.getElementById('loading-step').style.display = 'block';
+
+  try {
+    const res = await fetch('https://diagnostico-api.3g-ia-agents.com/', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ nombre, email, answers, idioma: 'es' }),
+    });
+    const data = await res.json();
+    if (!data.ok) throw new Error(data.error || 'Error desconocido');
+    renderResult(data);
+  } catch (err) {
+    // Fallback: calcular localmente si el Worker falla
+    const opScore = (answers.q1 || 2) + (answers.q2 || 2) + (answers.q3 || 2);
+    const comScore = (answers.c1 || 2) + (answers.c2 || 2);
+    renderResult({
+      era_operacional: `ERA${calcEra(opScore, 3)}${calcSub(opScore, 3)}`,
+      era_comercial: `ERA${calcEra(comScore, 2)}${calcSub(comScore, 2)}`,
+      interpretacion: 'Tu empresa muestra un perfil mixto de madurez. Las respuestas indican oportunidades concretas de mejora tanto en la gestión operativa como en la generación de demanda.',
+      dolor_principal: 'Los procesos clave dependen de intervención manual, lo que limita la capacidad de escalar sin agregar personas.',
+      fortaleza: 'Existe consciencia del problema — el primer paso para resolverlo.',
+      alerta: 'Sin un sistema de seguimiento comercial, los prospectos se pierden antes de cerrar.',
+    });
+  }
+}
+
+// ── Render resultado ───────────────────────────────────────────────────────
+
+function renderResult(data) {
+  document.getElementById('loading-step').style.display = 'none';
+
+  const eraOpNum = parseInt(data.era_operacional.replace('ERA', ''));
+  const eraComNum = parseInt(data.era_comercial.replace('ERA', ''));
+
+  const html = `
+    <div class="eyebrow">Tu diagnóstico</div>
+    <h1 style="font-size:clamp(22px,4vw,30px);margin-bottom:24px">Así está tu empresa hoy</h1>
+
+    <div class="result-era">
+      <div class="era-badge">
+        <div class="era-badge-dim">Operacional</div>
+        <div class="era-badge-val" style="color:${eraColor(eraOpNum)}">${data.era_operacional}</div>
+        <div class="era-badge-name">${eraName(eraOpNum)}</div>
+      </div>
+      <div class="era-badge">
+        <div class="era-badge-dim">Comercial</div>
+        <div class="era-badge-val" style="color:${eraColor(eraComNum)}">${data.era_comercial}</div>
+        <div class="era-badge-name">${eraName(eraComNum)}</div>
+      </div>
+    </div>
+
+    <div class="result-section">
+      <div class="result-section-label">¿Qué significa esto?</div>
+      <div class="result-section-text">${data.interpretacion}</div>
+    </div>
+
+    <div class="result-section">
+      <div class="result-section-label">Dolor principal identificado</div>
+      <div class="result-section-text">${data.dolor_principal}</div>
+    </div>
+
+    <div class="signal-grid">
+      <div class="signal-card pos">
+        <div class="signal-card-label">✓ Señal positiva</div>
+        <div class="signal-card-text">${data.fortaleza}</div>
+      </div>
+      <div class="signal-card neg">
+        <div class="signal-card-label">⚠ Alerta crítica</div>
+        <div class="signal-card-text">${data.alerta}</div>
+      </div>
+    </div>
+
+    <!-- Secciones bloqueadas -->
+    <div class="locked-section">
+      <div class="result-section-label">Brechas críticas detalladas</div>
+      <div class="locked-content result-section-text">
+        Los principales cuellos de botella están en la gestión de información y el proceso de seguimiento comercial. El equipo invierte tiempo en tareas que podrían automatizarse en las próximas 4 semanas...
+      </div>
+      <div class="locked-label"><span class="locked-icon">🔒</span> Disponible en el diagnóstico completo F1</div>
+    </div>
+
+    <div class="locked-section">
+      <div class="result-section-label">Próximos pasos con responsables</div>
+      <div class="locked-content result-section-text">
+        Paso 1: Centralizar datos de clientes en una herramienta única. Responsable: Gerente Comercial. Plazo: 2 semanas...
+      </div>
+      <div class="locked-label"><span class="locked-icon">🔒</span> Disponible en el diagnóstico completo F1</div>
+    </div>
+
+    <!-- CTA -->
+    <div class="cta-box">
+      <div class="cta-box-eyebrow">Tu plan de acción está listo</div>
+      <div class="cta-box-title">¿Qué hacer con esto?</div>
+      <div class="cta-box-sub">En 30 minutos te mostramos las brechas críticas, los próximos pasos concretos y el ROI estimado de resolverlas. Sin costo.</div>
+      <a href="https://calendly.com/escribeme-3g-ia-agents/diagnostico-base-en-30-min" target="_blank" class="btn-calendly">
+        Agenda tu sesión de 30 min gratis
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+      <button class="retry-btn" onclick="resetDiag()">Hacer el diagnóstico de nuevo</button>
+    </div>
+  `;
+
+  const el = document.getElementById('result-step');
+  el.innerHTML = html;
+  el.style.display = 'block';
+  el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+
+// ── Reset ──────────────────────────────────────────────────────────────────
+
+function resetDiag() {
+  answers = {};
+  currentQ = 0;
+  document.getElementById('result-step').style.display = 'none';
+  document.getElementById('result-step').innerHTML = '';
+  document.getElementById('intro-step').style.display = 'block';
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+</script>
+
+</Layout>
