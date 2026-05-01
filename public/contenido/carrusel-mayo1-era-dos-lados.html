@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Carrusel IG — ERA siempre tuvo dos lados · 14 Abr 2026</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: #111;
+      font-family: 'DM Sans', sans-serif;
+      padding: 40px 24px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 32px;
+    }
+    .meta {
+      color: rgba(255,255,255,0.35);
+      font-size: 13px;
+      text-align: center;
+      max-width: 540px;
+      line-height: 1.7;
+    }
+    .meta strong { color: rgba(255,255,255,0.7); }
+    .slides-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      justify-content: center;
+      max-width: 1200px;
+    }
+
+    /* ─── SLIDE BASE ─────────────────────────────── */
+    .slide {
+      width: 540px;
+      height: 540px;
+      background: #06060D;
+      border-radius: 4px;
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 48px 52px;
+      flex-shrink: 0;
+    }
+
+    /* Noise texture */
+    .slide::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.035'/%3E%3C/svg%3E");
+      pointer-events: none;
+      opacity: 0.6;
+    }
+
+    .slide-number {
+      font-family: 'Syne', sans-serif;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: rgba(0,232,145,0.5);
+      position: absolute;
+      top: 28px;
+      right: 36px;
+    }
+
+    .brand-footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .brand-name {
+      font-family: 'Syne', sans-serif;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: rgba(238,241,246,0.25);
+    }
+    .brand-name span { color: #00E891; }
+    .brand-handle {
+      font-size: 11px;
+      color: rgba(238,241,246,0.2);
+      letter-spacing: 0.05em;
+    }
+
+    /* ─── SLIDE 1 — PORTADA ──────────────────────── */
+    .s1 { background: #06060D; }
+    .s1-accent {
+      position: absolute;
+      top: -80px; right: -80px;
+      width: 320px; height: 320px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(0,232,145,0.12) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .s1-tag {
+      font-family: 'Syne', sans-serif;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: #00E891;
+      margin-bottom: 20px;
+    }
+    .s1-headline {
+      font-family: 'Syne', sans-serif;
+      font-weight: 800;
+      font-size: 46px;
+      line-height: 1.0;
+      letter-spacing: -0.03em;
+      color: #EEF1F6;
+      margin-bottom: 20px;
+    }
+    .s1-headline em {
+      font-style: normal;
+      color: #00E891;
+    }
+    .s1-sub {
+      font-size: 16px;
+      font-weight: 300;
+      color: rgba(238,241,246,0.45);
+      line-height: 1.5;
+    }
+    .s1-arrow {
+      font-size: 13px;
+      color: rgba(0,232,145,0.5);
+      letter-spacing: 0.1em;
+    }
+
+    /* ─── SLIDE 2 — CONTEXTO ─────────────────────── */
+    .s2-label {
+      font-family: 'Syne', sans-serif;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: rgba(238,241,246,0.3);
+      margin-bottom: 28px;
+    }
+    .s2-body {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .s2-headline {
+      font-family: 'Syne', sans-serif;
+      font-weight: 800;
+      font-size: 32px;
+      line-height: 1.15;
+      letter-spacing: -0.02em;
+      color: #EEF1F6;
+      margin-bottom: 24px;
+    }
+    .s2-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .s2-list li {
+      font-size: 16px;
+      font-weight: 400;
+      color: rgba(238,241,246,0.55);
+      padding-left: 20px;
+      position: relative;
+      line-height: 1.4;
+    }
+    .s2-list li::before {
+      content: '→';
+      position: absolute;
+      left: 0;
+      color: rgba(0,232,145,0.5);
+      font-size: 13px;
+      top: 2px;
+    }
+    .s2-reveal {
+      margin-top: 28px;
+      padding: 16px 20px;
+      background: rgba(0,232,145,0.05);
+      border-left: 3px solid #00E891;
+      border-radius: 0 6px 6px 0;
+    }
+    .s2-reveal p {
+      font-family: 'Syne', sans-serif;
+      font-size: 15px;
+      font-weight: 700;
+      color: #EEF1F6;
+      line-height: 1.35;
+    }
+    .s2-reveal span {
+      color: #00E891;
+    }
+
+    /* ─── SLIDE 3 — LADO OPERACIONAL ────────────── */
+    .s3-eje-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-family: 'Syne', sans-serif;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: #00E891;
+      margin-bottom: 24px;
+    }
+    .s3-dot {
+      width: 8px; height: 8px;
+      border-radius: 50%;
+      background: #00E891;
+      flex-shrink: 0;
+    }
+    .s3-headline {
+      font-family: 'Syne', sans-serif;
+      font-weight: 800;
+      font-size: 38px;
+      line-height: 1.05;
+      letter-spacing: -0.025em;
+      color: #EEF1F6;
+      margin-bottom: 12px;
+    }
+    .s3-question {
+      font-size: 18px;
+      font-weight: 300;
+      color: rgba(238,241,246,0.6);
+      line-height: 1.45;
+      margin-bottom: 32px;
+      font-style: italic;
+    }
+    .s3-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    .pill {
+      font-size: 12px;
+      font-weight: 500;
+      color: rgba(238,241,246,0.65);
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 100px;
+      padding: 6px 14px;
+    }
+    .pill-green {
+      color: #00E891;
+      background: rgba(0,232,145,0.07);
+      border-color: rgba(0,232,145,0.25);
+    }
+
+    /* ─── SLIDE 4 — LADO COMERCIAL ───────────────── */
+
+    /* ─── SLIDE 5 — EL PROBLEMA ──────────────────── */
+    .s5-big {
+      font-family: 'Syne', sans-serif;
+      font-weight: 800;
+      font-size: 52px;
+      line-height: 1.0;
+      letter-spacing: -0.04em;
+      color: rgba(238,241,246,0.08);
+      margin-bottom: -8px;
+    }
+    .s5-headline {
+      font-family: 'Syne', sans-serif;
+      font-weight: 800;
+      font-size: 30px;
+      line-height: 1.15;
+      letter-spacing: -0.02em;
+      color: #EEF1F6;
+      margin-bottom: 20px;
+    }
+    .s5-body {
+      font-size: 17px;
+      font-weight: 400;
+      color: rgba(238,241,246,0.55);
+      line-height: 1.6;
+      margin-bottom: 24px;
+    }
+    .s5-body strong {
+      color: #EEF1F6;
+      font-weight: 500;
+    }
+
+    /* ─── SLIDE 6 — LOS DOS ARQUETIPOS ──────────── */
+    .archetype-card {
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 10px;
+      padding: 20px 22px;
+      margin-bottom: 14px;
+    }
+    .archetype-card:last-child { margin-bottom: 0; }
+    .arch-scores {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 12px;
+    }
+    .arch-score {
+      font-family: 'Syne', sans-serif;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      padding: 4px 10px;
+      border-radius: 100px;
+    }
+    .arch-score-op {
+      color: #00E891;
+      background: rgba(0,232,145,0.1);
+      border: 1px solid rgba(0,232,145,0.25);
+    }
+    .arch-score-com {
+      color: rgba(238,241,246,0.4);
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.1);
+    }
+    .arch-score-com-high {
+      color: #00E891;
+      background: rgba(0,232,145,0.1);
+      border: 1px solid rgba(0,232,145,0.25);
+    }
+    .arch-score-op-low {
+      color: rgba(238,241,246,0.4);
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.1);
+    }
+    .arch-name {
+      font-family: 'Syne', sans-serif;
+      font-size: 15px;
+      font-weight: 800;
+      color: #EEF1F6;
+      margin-bottom: 4px;
+    }
+    .arch-desc {
+      font-size: 13px;
+      color: rgba(238,241,246,0.45);
+      line-height: 1.5;
+    }
+    .s6-intro {
+      font-family: 'Syne', sans-serif;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: rgba(238,241,246,0.3);
+      margin-bottom: 18px;
+    }
+
+    /* ─── SLIDE 7 — CTA ──────────────────────────── */
+    .s7-pre {
+      font-size: 14px;
+      color: rgba(238,241,246,0.35);
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      font-weight: 500;
+      margin-bottom: 20px;
+    }
+    .s7-headline {
+      font-family: 'Syne', sans-serif;
+      font-weight: 800;
+      font-size: 34px;
+      line-height: 1.1;
+      letter-spacing: -0.025em;
+      color: #EEF1F6;
+      margin-bottom: 24px;
+    }
+    .s7-headline em {
+      font-style: normal;
+      color: #00E891;
+    }
+    .s7-cta-block {
+      background: rgba(0,232,145,0.06);
+      border: 1px solid rgba(0,232,145,0.2);
+      border-radius: 10px;
+      padding: 18px 22px;
+      margin-bottom: 20px;
+    }
+    .s7-cta-label {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: rgba(0,232,145,0.6);
+      margin-bottom: 6px;
+    }
+    .s7-cta-url {
+      font-family: 'Syne', sans-serif;
+      font-size: 16px;
+      font-weight: 700;
+      color: #00E891;
+    }
+    .s7-question {
+      font-size: 15px;
+      color: rgba(238,241,246,0.45);
+      line-height: 1.55;
+    }
+    .s7-question strong {
+      color: rgba(238,241,246,0.8);
+    }
+
+    /* ─── PRINT GUIDE ────────────────────────────── */
+    .print-guide {
+      max-width: 540px;
+      text-align: center;
+      color: rgba(255,255,255,0.3);
+      font-size: 12px;
+      line-height: 1.7;
+      border: 1px dashed rgba(255,255,255,0.1);
+      border-radius: 8px;
+      padding: 20px 24px;
+    }
+    .print-guide strong { color: rgba(255,255,255,0.6); }
+
+    /* slide counter */
+    .slide-label {
+      font-size: 11px;
+      color: rgba(255,255,255,0.25);
+      text-align: center;
+      margin-top: -20px;
+      margin-bottom: 8px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="print-guide">
+    <strong>Carrusel Instagram — Post 9 · 14 Abr 2026</strong><br>
+    "ERA siempre tuvo dos lados" — Revelación de ERA Comercial<br><br>
+    <strong>Instrucciones:</strong> Zoom 100% · F12 → Device Toolbar → 540×540px · Screenshot de cada slide
+  </div>
+
+  <div class="slides-row">
+
+    <!-- ── SLIDE 1 — PORTADA ── -->
+    <div>
+      <div class="slide-label">Slide 1 — Portada</div>
+      <div class="slide s1">
+        <div class="s1-accent"></div>
+        <span class="slide-number">1 / 7</span>
+        <div>
+          <div class="s1-tag">Framework ERA · 3G Intelligence</div>
+          <h1 class="s1-headline">ERA siempre<br>tuvo <em>dos</em><br>lados.</h1>
+          <p class="s1-sub">Lo que no dijimos hasta hoy.</p>
+        </div>
+        <div class="brand-footer">
+          <span class="brand-name"><span>3G</span> Intelligence</span>
+          <span class="s1-arrow">desliza →</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── SLIDE 2 — CONTEXTO ── -->
+    <div>
+      <div class="slide-label">Slide 2 — Contexto</div>
+      <div class="slide">
+        <span class="slide-number">2 / 7</span>
+        <div class="s2-label">Llevamos meses hablando de ERA.</div>
+        <div class="s2-body">
+          <h2 class="s2-headline">ERA 1. ERA 2. ERA 3.<br>Dónde está tu empresa.<br>Cuánto te cuesta no avanzar.</h2>
+          <div class="s2-reveal">
+            <p>Lo que <span>no</span> dijimos hasta hoy:<br>ERA siempre tuvo <span>dos lados.</span></p>
+          </div>
+        </div>
+        <div class="brand-footer">
+          <span class="brand-name"><span>3G</span> Intelligence</span>
+          <span class="brand-handle">@3gintelligence</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── SLIDE 3 — LADO OPERACIONAL ── -->
+    <div>
+      <div class="slide-label">Slide 3 — Lado Operacional</div>
+      <div class="slide">
+        <span class="slide-number">3 / 7</span>
+        <div>
+          <div class="s3-eje-tag">
+            <span class="s3-dot"></span>
+            Eje 1 — ERA Operacional
+          </div>
+          <h2 class="s3-headline">¿Puede tu empresa<br>aguantar la<br>demanda?</h2>
+          <p class="s3-question">Si los pedidos se duplicaran mañana, ¿tu empresa puede responder?</p>
+          <div class="s3-pills">
+            <span class="pill pill-green">Datos</span>
+            <span class="pill pill-green">Procesos</span>
+            <span class="pill pill-green">Tecnología</span>
+            <span class="pill pill-green">Automatización</span>
+          </div>
+        </div>
+        <div class="brand-footer">
+          <span class="brand-name"><span>3G</span> Intelligence</span>
+          <span class="brand-handle">@3gintelligence</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── SLIDE 4 — LADO COMERCIAL ── -->
+    <div>
+      <div class="slide-label">Slide 4 — Lado Comercial</div>
+      <div class="slide">
+        <span class="slide-number">4 / 7</span>
+        <div>
+          <div class="s3-eje-tag">
+            <span class="s3-dot" style="background:rgba(0,232,145,0.45)"></span>
+            Eje 2 — ERA Comercial
+          </div>
+          <h2 class="s3-headline">¿Puede tu empresa<br><em style="font-style:normal;color:#00E891;">generar</em><br>esa demanda?</h2>
+          <p class="s3-question">Si tu mejor vendedor no estuviera mañana, ¿cuánto caerían las ventas?</p>
+          <div class="s3-pills">
+            <span class="pill">Nuevos clientes</span>
+            <span class="pill">Retención</span>
+            <span class="pill">Referidos</span>
+            <span class="pill">Crecimiento</span>
+          </div>
+        </div>
+        <div class="brand-footer">
+          <span class="brand-name"><span>3G</span> Intelligence</span>
+          <span class="brand-handle">@3gintelligence</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── SLIDE 5 — EL PROBLEMA ── -->
+    <div>
+      <div class="slide-label">Slide 5 — El problema</div>
+      <div class="slide">
+        <span class="slide-number">5 / 7</span>
+        <div style="flex:1; display:flex; flex-direction:column; justify-content:center;">
+          <p class="s5-big">EL</p>
+          <h2 class="s5-headline">El problema:<br>casi todas las empresas<br>desarrollan <em style="font-style:normal;color:#00E891;">un lado.</em></h2>
+          <p class="s5-body">Y descuidan el otro.<br><br>Ese desbalance es <strong>costoso.</strong><br>Y casi nunca es visible desde adentro.</p>
+        </div>
+        <div class="brand-footer">
+          <span class="brand-name"><span>3G</span> Intelligence</span>
+          <span class="brand-handle">@3gintelligence</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── SLIDE 6 — LOS DOS ARQUETIPOS ── -->
+    <div>
+      <div class="slide-label">Slide 6 — Los dos arquetipos</div>
+      <div class="slide">
+        <span class="slide-number">6 / 7</span>
+        <p class="s6-intro">Los dos patrones más comunes</p>
+        <div style="flex:1; display:flex; flex-direction:column; justify-content:center; gap:0;">
+          <div class="archetype-card">
+            <div class="arch-scores">
+              <span class="arch-score arch-score-op">ERA Op. alta</span>
+              <span class="arch-score arch-score-com">ERA Com. baja</span>
+            </div>
+            <div class="arch-name">La empresa invisible</div>
+            <div class="arch-desc">Opera perfecto. Nadie la encuentra.<br>Procesos impecables. Sin clientes nuevos.</div>
+          </div>
+          <div class="archetype-card">
+            <div class="arch-scores">
+              <span class="arch-score arch-score-com-high">ERA Com. alta</span>
+              <span class="arch-score arch-score-op-low">ERA Op. baja</span>
+            </div>
+            <div class="arch-name">La trampa del éxito</div>
+            <div class="arch-desc">Vende muy bien. Hasta que no puede cumplir.<br>Crece rápido. Colapsa igual de rápido.</div>
+          </div>
+        </div>
+        <div class="brand-footer">
+          <span class="brand-name"><span>3G</span> Intelligence</span>
+          <span class="brand-handle">@3gintelligence</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── SLIDE 7 — CTA ── -->
+    <div>
+      <div class="slide-label">Slide 7 — CTA</div>
+      <div class="slide">
+        <span class="slide-number">7 / 7</span>
+        <div style="flex:1; display:flex; flex-direction:column; justify-content:center;">
+          <p class="s7-pre">Por eso —</p>
+          <h2 class="s7-headline">El diagnóstico<br>mide <em>las dos</em><br>dimensiones.</h2>
+          <div class="s7-cta-block">
+            <div class="s7-cta-label">Link en bio</div>
+            <div class="s7-cta-url">3g-ia-agents.com/diagnostico</div>
+          </div>
+          <p class="s7-question"><strong>¿Cuál crees que tiene tu empresa<br>más desarrollada?</strong><br>Escríbelo en los comentarios 👇</p>
+        </div>
+        <div class="brand-footer">
+          <span class="brand-name"><span>3G</span> Intelligence</span>
+          <span class="brand-handle">@3gintelligence</span>
+        </div>
+      </div>
+    </div>
+
+  </div><!-- /slides-row -->
+
+  <div class="print-guide">
+    <strong>Adaptación del caption para Instagram:</strong><br><br>
+    ERA siempre tuvo dos lados.<br><br>
+    El operacional: ¿aguanta la demanda?<br>
+    El comercial: ¿la genera?<br><br>
+    La mayoría desarrolla uno. Descuida el otro.<br>
+    El diagnóstico ahora mide los dos — link en bio.<br><br>
+    ¿Cuál tiene más desarrollada tu empresa? 👇<br><br>
+    <strong>Hashtags:</strong> #InteligenciaArtificial #PyMEs #TransformacionDigital #GestionEmpresarial #ERAframework
+  </div>
+
+</body>
+</html>
