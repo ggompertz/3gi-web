@@ -371,7 +371,7 @@ function buildResultCard(eraNum, score, n, prefix) {
     </div>`;
 }
 
-async function mostrarResultado() {
+function mostrarResultado() {
   const opKeys = ['q1','q2','q3','q4','q5'];
   const comKeys = ['c1','c2','c3','c4','c5'];
 
@@ -455,7 +455,12 @@ async function mostrarResultado() {
   document.querySelector('.progress-wrap').style.display = 'none';
   resEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
 
-  // Registrar diagnóstico en Supabase y guardar ID para OTP
+  // Registrar en Supabase en background (no bloquea el resultado)
+  registrarDiagnostico();
+}
+
+// ── Supabase registro (fire-and-forget) ───────────────────────────────────
+async function registrarDiagnostico() {
   try {
     let eraOp = null, eraCom = null;
     if (currentMode === 'ambas') {
