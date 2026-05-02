@@ -133,8 +133,14 @@ for a in alertas:
     key = (a["dvr_label"], a["canal"])
     por_canal[key].append(a)
 
-total_alertas = len([a for a in alertas if a["tipo"] == "alerta"])
-total_detecciones = len([a for a in alertas if a["tipo"] == "deteccion"])
+# "alerta" = lo que llegó a Telegram: nivel_riesgo alto/medio+persona, o fallback (null)
+def fue_enviado_telegram(a):
+    nr = a.get("nivel_riesgo")
+    ep = a.get("es_persona")
+    return nr is None or (ep and nr in ("alto", "medio"))
+
+total_alertas = len([a for a in alertas if fue_enviado_telegram(a)])
+total_detecciones = len([a for a in alertas if not fue_enviado_telegram(a)])
 total_enviadas = len(alertas)
 
 # ── Estado de DVRs via FTP ────────────────────────────────────────────────────
@@ -182,10 +188,11 @@ for dvr, info in estado_dvrs.items():
         tipos = set(a["tipo"] for a in alertas_ch)
         if ch_status[ch] == "offline":
             ch_parts.append("ch%d📵" % ch)
-        elif n > 0 and "alerta" in tipos:
-            hora_pico = min(a["hora_chile"] for a in alertas_ch)
+        elif n > 0 and any(fue_enviado_telegram(a) for a in alertas_ch):
+            tg_events = [a for a in alertas_ch if fue_enviado_telegram(a)]
+            hora_pico = min(a["hora_chile"] for a in tg_events)
             ch_parts.append("ch%d🚨×%d(%s)" % (ch, n, hora_pico))
-        elif n > 0 and "deteccion" in tipos:
+        elif n > 0:
             hora_pico = min(a["hora_chile"] for a in alertas_ch)
             ch_parts.append("ch%d🔔×%d(%s)" % (ch, n, hora_pico))
         else:
