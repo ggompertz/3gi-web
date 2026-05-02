@@ -532,7 +532,7 @@ async function otpVerify() {
   const code = (document.getElementById('otp-code-input')?.value || '').trim();
   const emailEl = document.getElementById('otp-email-input');
   const nombreEl = document.getElementById('otp-nombre-input');
-  if (!code || code.length !== 6) { alert('Ingresá el código de 6 dígitos.'); return; }
+  if (!code || code.length !== 6) { alert('Ingresa el código de 6 dígitos.'); return; }
   if (!_otpDiagId) { otpShow('email'); return; }
   otpShow('loading');
   try {
@@ -543,12 +543,23 @@ async function otpVerify() {
     });
     const data = await res.json();
     if (!res.ok) throw new Error(data.error || 'Código incorrecto');
+    const opKeys = ['q1','q2','q3','q4','q5'];
+    const comKeys = ['c1','c2','c3','c4','c5'];
+    const opScore = opKeys.reduce((s,k)=>s+(answers[k]||0),0);
+    const comScore = comKeys.reduce((s,k)=>s+(answers[k]||0),0);
+    let eraOpStr = null, eraComStr = null;
+    if (currentMode !== 'comercial') eraOpStr = 'ERA' + calcEra(opScore, 5) + calcSubLabel(opScore, 5);
+    if (currentMode !== 'operacional') eraComStr = 'ERA' + calcEra(comScore, 5) + calcSubLabel(comScore, 5);
     const params = new URLSearchParams({
       token: data.access_token,
       email: data.email || (emailEl ? emailEl.value.trim() : ''),
       nombre: data.nombre || (nombreEl ? nombreEl.value.trim() : ''),
-      diag_id: _otpDiagId
+      diag_id: _otpDiagId,
+      era_mode: currentMode,
+      era_answers: JSON.stringify(answers),
     });
+    if (eraOpStr) params.set('era_op', eraOpStr);
+    if (eraComStr) params.set('era_com', eraComStr);
     window.location.href = '/diagnostico-ia?' + params.toString();
   } catch(err) {
     document.getElementById('otp-error-text').textContent = err.message;
