@@ -376,12 +376,14 @@ function mostrarResultado() {
   const comKeys = ['c1','c2','c3','c4','c5'];
 
   let html = '';
+  let dominantEra = 1;
 
   if (currentMode === 'ambas') {
     const opScore = opKeys.reduce((s,k) => s + (answers[k]||0), 0);
     const comScore = comKeys.reduce((s,k) => s + (answers[k]||0), 0);
     const opEra = calcEra(opScore, 5);
     const comEra = calcEra(comScore, 5);
+    dominantEra = Math.round((opEra + comEra) / 2);
 
     html += `<div class="dual-scores">
       <div class="score-mini">
@@ -396,19 +398,18 @@ function mostrarResultado() {
       </div>
     </div>`;
 
-    const dominantEra = Math.round((opEra + comEra) / 2);
     html += buildResultCard(dominantEra, Math.round((opScore+comScore)/2), 5, 'both');
   } else {
     const keys = currentMode === 'comercial' ? comKeys : opKeys;
     const score = keys.reduce((s,k) => s + (answers[k]||0), 0);
-    const era = calcEra(score, 5);
-    html += buildResultCard(era, score, 5, currentMode);
+    dominantEra = calcEra(score, 5);
+    html += buildResultCard(dominantEra, score, 5, currentMode);
   }
 
   html += `
     <div class="next-step">
       <div class="next-step-eyebrow">${t('r-next-eyebrow')}</div>
-      <h2>${t('r-era' + (calcEra(Object.values(answers).reduce((s,v)=>s+v,0), Object.keys(answers).length)) + '-h2')}</h2>
+      <h2>${t('r-era' + dominantEra + '-h2')}</h2>
       <p>${t('r-next-p')}</p>
       <div style="display:flex;flex-direction:column;align-items:center;gap:10px;">
         <a href="https://calendly.com/escribeme-3g-ia-agents/diagnostico-base-en-30-min" target="_blank" class="btn-calendly">${t('r-btn-cal')}</a>
