@@ -10,7 +10,8 @@
    - Fondo `#06060D`
    - Texto principal blanco `#FFFFFF`
    - Números y datos clave en verde `#00E891`
-   - Fuente bold para títulos
+   - Fuente títulos: **Syne** (bold)
+   - Fuente cuerpo: **DM Sans**
 
 ---
 
