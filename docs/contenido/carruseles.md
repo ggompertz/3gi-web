@@ -11,7 +11,7 @@ Base URL imágenes: `https://pub-afec22bc076746d1804ccf623d884c82.r2.dev/carruse
 
 | Post | Tema | Slides | Estado | Fecha |
 |---|---|---|---|---|
-| [Post 0A](#post-0a) | Lo que no puedes ver, no lo puedes gestionar | 7 | ⏳ pendiente | — |
+| [Post 0A](#post-0a) | Lo que no puedes ver, no lo puedes gestionar | 7 | ✅ publicado | 2026-05-06 |
 | [Post 0B](#post-0b) | Los negocios no quiebran por falta de ventas | 7 | ⏳ pendiente | — |
 | [Post 0C](#post-0c) | Tu equipo trabaja duro. ¿Pero sabes hacia dónde? | 7 | ⏳ pendiente | — |
 | [Post 01](#post-01) | Caso AMCL — El profesional de USD 3.000 | 6 | ⏳ pendiente | — |
