@@ -188,12 +188,12 @@ Estás apostando."
 **[CIERRE — 0:32–0:50]**  
 *Pantalla: lista de 3 ítems*
 
-"Lo mínimo que necesitás ver:
+"Lo mínimo que necesitas ver:
 Uno — margen real por proyecto, no solo ingresos.
 Dos — flujo de caja a 60 días.
 Tres — costo real de cada tipo de servicio.
 
-Si no tenés esto claro hoy,
+Si no tienes esto claro hoy,
 el problema no es de ventas.
 Es de sistema."
 
@@ -214,14 +214,14 @@ Es de sistema."
 ```
 Tu equipo trabaja duro. Eso no lo dudo.
 
-Pero si el único que sabe el estado real de cada proyecto sos vos —
-tenés un problema de sistema, no de personas.
+Pero si el único que sabe el estado real de cada proyecto eres tú —
+tienes un problema de sistema, no de personas.
 
 El 67% de los colaboradores de PyMEs en LATAM no tiene claridad sobre las prioridades de la semana.
 
 👉 Desliza para ver qué separa una empresa que escala de una que depende de sus personas clave.
 
-¿Cuántos proyectos tenés corriendo hoy sin visibilidad real?
+¿Cuántos proyectos tienes corriendo hoy sin visibilidad real?
 
 👇 Diagnóstico gratuito → 3g-ia-agents.com/diagnostico
 
@@ -253,7 +253,7 @@ El 67% de los colaboradores de PyMEs en LATAM no tiene claridad sobre las priori
 *Pantalla: pregunta en grande*
 
 "¿Si mañana te vas de vacaciones dos semanas,
-tu empresa sigue funcionando sin vos?"
+tu empresa sigue funcionando sin ti?"
 
 ---
 
@@ -262,7 +262,7 @@ tu empresa sigue funcionando sin vos?"
 
 "Si la respuesta honesta es 'probablemente no' —
 el cuello de botella no son tus empleados.
-Sos vos.
+Eres tú.
 
 O más precisamente: el sistema.
 
