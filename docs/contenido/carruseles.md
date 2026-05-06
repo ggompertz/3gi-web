@@ -113,6 +113,31 @@ ERA 3: los datos generan decisiones automáticas.
 
 ---
 
+### Descripción YouTube — Short 0A
+
+**Título:** El dato que mata negocios (y el 72% de los dueños lo ignora)
+
+**Descripción:**
+```
+El 72% de los dueños de PyME toma decisiones sin datos reales.
+
+No porque no tengan información — tienen WhatsApp, Excel, correos y reportes.
+El problema es que esa información llega cuando ya no sirve.
+
+En este video te explico por qué eso no es gestión, es reacción,
+y qué separa a las empresas que escalan de las que siempre están apagando incendios.
+
+🔍 Descubre en qué ERA opera tu empresa → 3g-ia-agents.com/diagnostico
+
+---
+3G Intelligence ayuda a PyMEs latinoamericanas a pasar del caos operativo
+a tomar decisiones con datos reales.
+
+#GestiónEmpresarial #PyME #DecisionesConDatos #InteligenciaArtificial #3GIntelligence
+```
+
+---
+
 ---
 
 ## Post 0B
@@ -200,6 +225,32 @@ Es de sistema."
 *Pantalla: 3g-ia-agents.com/diagnostico*
 
 "Diagnóstico gratuito. Menos de 5 minutos."
+
+---
+
+### Descripción YouTube — Short 0B
+
+**Título:** Por qué las PyMEs quiebran aunque vendan bien
+
+**Descripción:**
+```
+El 82% de las PyMEs que cierran no quiebran por falta de ventas.
+Quiebran porque nadie controlaba los números que realmente importaban.
+
+Tenían clientes. Tenían proyectos. Tenían ingresos.
+Pero no sabían cuánto les costaba ejecutar cada uno.
+
+En este video te explico las 3 métricas mínimas que toda PyME necesita
+tener claras antes de cerrar el próximo proyecto.
+
+🔍 Descubre en qué ERA opera tu empresa → 3g-ia-agents.com/diagnostico
+
+---
+3G Intelligence ayuda a PyMEs latinoamericanas a pasar del caos operativo
+a tomar decisiones con datos reales.
+
+#FlujoDeCaja #GestiónFinanciera #PyME #NegociosLATAM #3GIntelligence
+```
 
 ---
 
@@ -293,6 +344,34 @@ ERA 3: el sistema detecta el desvío antes de que explote.
 *Pantalla: 3g-ia-agents.com/diagnostico*
 
 "Averígualo gratis en 5 minutos."
+
+---
+
+### Descripción YouTube — Short 0C
+
+**Título:** El cuello de botella que frena tu empresa (y probablemente eres tú)
+
+**Descripción:**
+```
+¿Si te vas de vacaciones dos semanas, tu empresa sigue funcionando sin ti?
+
+Si la respuesta honesta es "probablemente no" — el problema no son tus empleados.
+Es que el conocimiento operativo vive en tu cabeza, no en un sistema.
+
+El 67% de los colaboradores de PyMEs en LATAM no tiene claridad
+sobre las prioridades de la semana.
+
+En este video te explico qué separa una empresa que escala
+de una que depende de sus personas clave.
+
+🔍 Descubre en qué ERA opera tu empresa → 3g-ia-agents.com/diagnostico
+
+---
+3G Intelligence ayuda a PyMEs latinoamericanas a pasar del caos operativo
+a tomar decisiones con datos reales.
+
+#Operaciones #GestiónDeEquipos #EscalarNegocio #PyME #3GIntelligence
+```
 
 ---
 
