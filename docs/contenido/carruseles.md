@@ -143,7 +143,7 @@ a tomar decisiones con datos reales.
 ## Post 0B
 **Tema:** Los negocios no quiebran por falta de ventas  
 **Tipo:** Educativo / Financiero | **CTA:** Link /diagnostico  
-**YouTube Short:** [Ver guión](#short-0b)
+**YouTube Short:** https://youtube.com/shorts/cmC6-2oIZmk
 
 **Caption LinkedIn/Instagram:**
 ```
