@@ -1,12 +1,12 @@
 # Seguimiento — M. Eugenia · recursoanimalsrl@gmail.com
 
-**Fecha de contacto:** 2026-05-08
-**Prospecto:** M. Eugenia · Recurso Animal SRL (Argentina)
+**Fecha de contacto:** 2026-05-08  
+**Prospecto:** M. Eugenia · Recurso Animal SRL (Argentina)  
 **Contexto:** Inició el diagnóstico el 07/05/2026 a las 03:53 pero no completó la verificación OTP. Nunca llegó al quiz.
 
 ---
 
-**Para:** recursoanimalsrl@gmail.com
+**Para:** recursoanimalsrl@gmail.com  
 **Asunto:** Tu diagnóstico en 3G Intelligence — ¿Te ayudamos a completarlo?
 
 ---
@@ -26,6 +26,15 @@ Y si prefieres conversarlo primero, con gusto agendamos una llamada de 20 minuto
 
 Quedo atento,
 
-Gonzalo Gompertz
-Fundador · 3G Intelligence
+Gonzalo Gompertz  
+Fundador · 3G Intelligence  
 gonzalo@3g-ia-agents.com
+
+---
+
+## Seguimiento
+
+| Fecha | Acción | Estado |
+|---|---|---|
+| 07/05/2026 | Inició diagnóstico, no completó OTP | Pendiente |
+| 08/05/2026 | Email de seguimiento enviado | Enviado |
