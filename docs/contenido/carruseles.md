@@ -178,6 +178,13 @@ Vendían. Pero no sabían cuánto les costaba vender.
 }
 ```
 
+**Links publicados:**
+- YouTube Short: https://youtube.com/shorts/cmC6-2oIZmk
+- Instagram carrusel: https://www.instagram.com/p/DYDI7foDVar/
+- Instagram Reel: https://www.instagram.com/reel/DYDI5PnixYK/
+- LinkedIn: https://www.linkedin.com/feed/update/urn:li:activity:7458297008278261760
+- Facebook: https://web.facebook.com/share/p/1Dp1xzWwV8/
+
 ### Short 0B
 **Título:** "Vendían bien. Y igual quebraron."  
 **Duración objetivo:** 45–55 seg  
