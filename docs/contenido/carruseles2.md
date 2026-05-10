@@ -1,6 +1,6 @@
 # Calendario de Publicaciones — Contenido 17 en adelante
 
-Frecuencia: cada 3 días · Inicio: 13 May 2026
+Frecuencia: cada 3 días · Inicio: 12 May 2026
 
 ---
 
@@ -8,25 +8,25 @@ Frecuencia: cada 3 días · Inicio: 13 May 2026
 
 | # | Fecha | Post | Tema | Short/Reel |
 |---|---|---|---|---|
-| 17 | 13 May 2026 | Post 0C | Tu equipo trabaja duro. ¿Pero sabes hacia dónde? | Short 0C |
-| 18 | 16 May 2026 | Post 01 | Caso AMCL — El profesional de USD 3.000 | Short 01 |
-| 19 | 19 May 2026 | Post 02 | 5 señales de apagaincendios | Short 02 |
-| 20 | 22 May 2026 | Post 03 | Caso AMCL — De 30 min a 5 min | Short 03 |
-| 21 | 25 May 2026 | Post 04 | El costo invisible | Short 04 |
-| 22 | 28 May 2026 | Post 05 | Caso COVES — De reactivo a proactivo | Short 05 |
-| 23 | 31 May 2026 | Post 06 | 7 procesos a automatizar primero | Short 06 |
-| 24 | 03 Jun 2026 | Post 07 | ERA 1 / ERA 2 / ERA 3 explicadas | Short 07 |
-| 25 | 06 Jun 2026 | Post 08 | Caso AMCL — +40% capacidad | Short 08 |
-| 26 | 09 Jun 2026 | Post 09 | El Excel como sistema | Short 09 |
-| 27 | 12 Jun 2026 | Post 10 | Caso COVES — Reactiva vs proactiva | Short 10 |
-| 28 | 15 Jun 2026 | Post 11 | Los 9 sub-niveles ERA | Short 11 |
-| 29 | 18 Jun 2026 | Post 12 | CTA — El diagnóstico gratuito | Short 12 |
+| 17 | 12 May 2026 | Post 0C | Tu equipo trabaja duro. ¿Pero sabes hacia dónde? | Short 0C |
+| 18 | 15 May 2026 | Post 01 | Caso AMCL — El profesional de USD 3.000 | Short 01 |
+| 19 | 18 May 2026 | Post 02 | 5 señales de apagaincendios | Short 02 |
+| 20 | 21 May 2026 | Post 03 | Caso AMCL — De 30 min a 5 min | Short 03 |
+| 21 | 24 May 2026 | Post 04 | El costo invisible | Short 04 |
+| 22 | 27 May 2026 | Post 05 | Caso COVES — De reactivo a proactivo | Short 05 |
+| 23 | 30 May 2026 | Post 06 | 7 procesos a automatizar primero | Short 06 |
+| 24 | 02 Jun 2026 | Post 07 | ERA 1 / ERA 2 / ERA 3 explicadas | Short 07 |
+| 25 | 05 Jun 2026 | Post 08 | Caso AMCL — +40% capacidad | Short 08 |
+| 26 | 08 Jun 2026 | Post 09 | El Excel como sistema | Short 09 |
+| 27 | 11 Jun 2026 | Post 10 | Caso COVES — Reactiva vs proactiva | Short 10 |
+| 28 | 14 Jun 2026 | Post 11 | Los 9 sub-niveles ERA | Short 11 |
+| 29 | 17 Jun 2026 | Post 12 | CTA — El diagnóstico gratuito | Short 12 |
 
 ---
 
 ## Detalle por publicación
 
-### Contenido 17 — 13 May 2026
+### Contenido 17 — 12 May 2026
 **Post:** 0C · **Tema:** Tu equipo trabaja duro. ¿Pero sabes hacia dónde?  
 **Short:** 0C — "El cuello de botella eres tú"
 
@@ -65,7 +65,7 @@ El 67% de los colaboradores de PyMEs en LATAM no tiene claridad sobre las priori
 
 ---
 
-### Contenido 18 — 16 May 2026
+### Contenido 18 — 15 May 2026
 **Post:** 01 · **Tema:** Caso AMCL — El profesional de USD 3.000  
 **Short:** 01 — "El profesional de USD 3.000"
 
@@ -103,7 +103,7 @@ USD 864 al mes. Tirados.
 
 ---
 
-### Contenido 19 — 19 May 2026
+### Contenido 19 — 18 May 2026
 **Post:** 02 · **Tema:** 5 señales de apagaincendios  
 **Short:** 02 — "5 señales de apagaincendios"
 
@@ -147,7 +147,7 @@ Tienes un problema de sistema.
 
 ---
 
-### Contenido 20 — 22 May 2026
+### Contenido 20 — 21 May 2026
 **Post:** 03 · **Tema:** Caso AMCL — De 30 min a 5 min  
 **Short:** 03 — "De 30 min a 5 min"
 
@@ -183,7 +183,7 @@ No cambiaron el sistema. Cambiaron cómo lo usaban.
 
 ---
 
-### Contenido 21 — 25 May 2026
+### Contenido 21 — 24 May 2026
 **Post:** 04 · **Tema:** El costo invisible  
 **Short:** 04 — "El costo invisible"
 
@@ -222,7 +222,7 @@ El costo del tiempo perdido en tareas manuales repetibles.
 
 ---
 
-### Contenido 22 — 28 May 2026
+### Contenido 22 — 27 May 2026
 **Post:** 05 · **Tema:** Caso COVES — De reactivo a proactivo  
 **Short:** 05 — "De reactivo a proactivo"
 
@@ -262,7 +262,7 @@ Fue usar la que ya tenían, bien.
 
 ---
 
-### Contenido 23 — 31 May 2026
+### Contenido 23 — 30 May 2026
 **Post:** 06 · **Tema:** 7 procesos a automatizar primero  
 **Short:** 06 — "7 procesos a automatizar primero"
 
@@ -306,7 +306,7 @@ Si no sabes por dónde empezar a automatizar, empieza por estos 7.
 
 ---
 
-### Contenido 24 — 03 Jun 2026
+### Contenido 24 — 02 Jun 2026
 **Post:** 07 · **Tema:** ERA 1 / ERA 2 / ERA 3 explicadas  
 **Short:** 07 — "ERA 1, ERA 2, ERA 3"
 
@@ -349,7 +349,7 @@ La IA maneja el volumen. Las personas manejan la estrategia.
 
 ---
 
-### Contenido 25 — 06 Jun 2026
+### Contenido 25 — 05 Jun 2026
 **Post:** 08 · **Tema:** Caso AMCL — +40% capacidad  
 **Short:** 08 — "+40% capacidad sin contratar"
 
@@ -388,7 +388,7 @@ El equipo no se reemplazó. Se liberó para lo que importa.
 
 ---
 
-### Contenido 26 — 09 Jun 2026
+### Contenido 26 — 08 Jun 2026
 **Post:** 09 · **Tema:** El Excel como sistema  
 **Short:** 09 — "El Excel como sistema"
 
@@ -429,7 +429,7 @@ Y nadie lo sabe hasta que ya pasó.
 
 ---
 
-### Contenido 27 — 12 Jun 2026
+### Contenido 27 — 11 Jun 2026
 **Post:** 10 · **Tema:** Caso COVES — Reactiva vs proactiva  
 **Short:** 10 — "Reactiva vs proactiva"
 
@@ -470,7 +470,7 @@ antes de que el problema explotara.
 
 ---
 
-### Contenido 28 — 15 Jun 2026
+### Contenido 28 — 14 Jun 2026
 **Post:** 11 · **Tema:** Los 9 sub-niveles ERA  
 **Short:** 11 — "Los 9 sub-niveles ERA"
 
@@ -511,7 +511,7 @@ La mayoría se auto-evalúa 2 niveles más arriba de donde realmente está.
 
 ---
 
-### Contenido 29 — 18 Jun 2026
+### Contenido 29 — 17 Jun 2026
 **Post:** 12 · **Tema:** CTA — El diagnóstico gratuito  
 **Short:** 12 — "El diagnóstico gratuito"
 
@@ -555,16 +555,16 @@ y cuánto te está costando no avanzar.
 
 | # | Fecha | Post | Estado | Links |
 |---|---|---|---|---|
-| 17 | 13 May 2026 | 0C | ⏳ pendiente | — |
-| 18 | 16 May 2026 | 01 | ⏳ pendiente | — |
-| 19 | 19 May 2026 | 02 | ⏳ pendiente | — |
-| 20 | 22 May 2026 | 03 | ⏳ pendiente | — |
-| 21 | 25 May 2026 | 04 | ⏳ pendiente | — |
-| 22 | 28 May 2026 | 05 | ⏳ pendiente | — |
-| 23 | 31 May 2026 | 06 | ⏳ pendiente | — |
-| 24 | 03 Jun 2026 | 07 | ⏳ pendiente | — |
-| 25 | 06 Jun 2026 | 08 | ⏳ pendiente | — |
-| 26 | 09 Jun 2026 | 09 | ⏳ pendiente | — |
-| 27 | 12 Jun 2026 | 10 | ⏳ pendiente | — |
-| 28 | 15 Jun 2026 | 11 | ⏳ pendiente | — |
-| 29 | 18 Jun 2026 | 12 | ⏳ pendiente | — |
+| 17 | 12 May 2026 | 0C | ⏳ pendiente | — |
+| 18 | 15 May 2026 | 01 | ⏳ pendiente | — |
+| 19 | 18 May 2026 | 02 | ⏳ pendiente | — |
+| 20 | 21 May 2026 | 03 | ⏳ pendiente | — |
+| 21 | 24 May 2026 | 04 | ⏳ pendiente | — |
+| 22 | 27 May 2026 | 05 | ⏳ pendiente | — |
+| 23 | 30 May 2026 | 06 | ⏳ pendiente | — |
+| 24 | 02 Jun 2026 | 07 | ⏳ pendiente | — |
+| 25 | 05 Jun 2026 | 08 | ⏳ pendiente | — |
+| 26 | 08 Jun 2026 | 09 | ⏳ pendiente | — |
+| 27 | 11 Jun 2026 | 10 | ⏳ pendiente | — |
+| 28 | 14 Jun 2026 | 11 | ⏳ pendiente | — |
+| 29 | 17 Jun 2026 | 12 | ⏳ pendiente | — |
