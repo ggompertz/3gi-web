@@ -615,3 +615,263 @@ a tomar decisiones con datos reales.
   ]
 }
 ```
+
+---
+
+## Guiones Shorts/Reels — Formato nuevo (máx 30 seg, CTA antes del seg 20)
+
+> **Regla:** Hook → desarrollo → CTA en `/diagnostico` antes del seg 20 → cierre.
+
+---
+
+### Short 0C — "El cuello de botella eres tú"
+
+**[0–5s]** *Pantalla: pregunta grande*
+"¿Si te vas una semana, tu empresa sigue funcionando?"
+
+**[5–15s]**
+"El 67% de los equipos en PyMEs LATAM no sabe cuáles son las prioridades de la semana.
+No por falta de ganas. Por falta de sistema."
+
+**[15–20s]** *Pantalla: 3g-ia-agents.com/diagnostico*
+"Descubre en qué ERA opera tu empresa — gratis, en 5 minutos."
+
+**[20–30s]**
+"ERA 1: el estado del proyecto lo sabe solo el dueño.
+ERA 3: el sistema detecta el desvío antes de que explote.
+¿En cuál estás?"
+
+---
+
+### Short 01 — "El profesional de USD 3.000"
+
+**[0–5s]**
+"Un profesional que cobra USD 3.000 al mes pasaba 12 horas semanales en tareas administrativas."
+
+**[5–15s]**
+"No era ineficiente. Era el sistema.
+Cada hora administrativa era USD 18 que no generaban valor.
+USD 864 al mes. Tirados."
+
+**[15–20s]** *Pantalla: 3g-ia-agents.com/diagnostico*
+"¿Cuánto está costando el desorden en tu empresa? Calcúlalo gratis."
+
+**[20–30s]**
+"El diagnóstico mide exactamente dónde está la fuga.
+Menos de 5 minutos. Sin costo."
+
+---
+
+### Short 02 — "5 señales de apagaincendios"
+
+**[0–5s]**
+"Si tu semana se ve así: urgente, urgente, urgente — no tienes un problema de agenda."
+
+**[5–15s]**
+"Tienes un problema de sistema.
+5 señales: sin KPIs claros, decisiones por WhatsApp, reuniones para informar en vez de decidir, el dueño resuelve todo, nadie anticipa problemas."
+
+**[15–20s]** *Pantalla: 3g-ia-agents.com/diagnostico*
+"Descubre en qué ERA está tu empresa — gratis en 5 minutos."
+
+**[20–30s]**
+"Si te reconociste en 3 o más — estás en ERA 1.
+Y eso tiene solución concreta."
+
+---
+
+### Short 03 — "De 30 min a 5 min"
+
+**[0–5s]**
+"Un proceso que tardaba 30 minutos pasó a tardar 5. Sin contratar a nadie."
+
+**[5–15s]**
+"No cambiaron el sistema. Cambiaron cómo lo usaban.
+Automatizaron el primer reporte semanal.
+El equipo recuperó 2 horas por semana cada uno."
+
+**[15–20s]** *Pantalla: 3g-ia-agents.com/diagnostico*
+"¿Cuánto tiempo pierde tu equipo en tareas que podrían automatizarse? Mídelo gratis."
+
+**[20–30s]**
+"El primer paso no es más tecnología.
+Es saber exactamente dónde está la fuga."
+
+---
+
+### Short 04 — "El costo invisible"
+
+**[0–5s]**
+"Hay un costo en tu empresa que no aparece en ningún reporte."
+
+**[5–15s]**
+"El costo del tiempo perdido en tareas manuales repetibles.
+Si tienes 5 personas haciendo 4 horas semanales de tareas automatizables:
+son 20 horas. Cada semana. Que no generan valor."
+
+**[15–20s]** *Pantalla: 3g-ia-agents.com/diagnostico*
+"Calcula tu costo invisible — diagnóstico gratis en 5 minutos."
+
+**[20–30s]**
+"No es un problema de personas.
+Es un problema de ERA."
+
+---
+
+### Short 05 — "De reactivo a proactivo"
+
+**[0–5s]**
+"Antes respondían al problema. Ahora lo ven venir."
+
+**[5–15s]**
+"Una organización pasó de detectar fallas después de que ocurrían
+a anticiparlas con datos en tiempo real.
+El cambio no fue tecnología nueva. Fue usar la que ya tenían, bien."
+
+**[15–20s]** *Pantalla: 3g-ia-agents.com/diagnostico*
+"¿Tu empresa reacciona o anticipa? Descúbrelo gratis."
+
+**[20–30s]**
+"ERA 1 reacciona. ERA 3 anticipa.
+¿Dónde está la tuya?"
+
+---
+
+### Short 06 — "7 procesos a automatizar primero"
+
+**[0–5s]**
+"Si no sabes por dónde empezar a automatizar, empieza por estos 7."
+
+**[5–15s]**
+"Uno: reportes semanales.
+Dos: seguimiento de clientes.
+Tres: clasificación de documentos.
+Cuatro: respuestas a consultas repetidas.
+Cinco: conciliación de facturas.
+Seis: alertas de vencimiento.
+Siete: registro de actividades del equipo."
+
+**[15–20s]** *Pantalla: 3g-ia-agents.com/diagnostico*
+"¿Cuáles tienes sin automatizar? El diagnóstico te lo dice — gratis."
+
+**[20–30s]**
+"No necesitas automatizar todo.
+Solo los que más te están costando hoy."
+
+---
+
+### Short 07 — "ERA 1, ERA 2, ERA 3"
+
+**[0–5s]**
+"Hay 3 niveles de madurez empresarial. La mayoría cree estar en uno y está en otro."
+
+**[5–15s]**
+"ERA 1: el negocio corre en tu cabeza.
+ERA 2: corre en sistemas, pero nadie usa los datos para decidir.
+ERA 3: la IA maneja el volumen, las personas manejan la estrategia."
+
+**[15–20s]** *Pantalla: 3g-ia-agents.com/diagnostico*
+"¿En cuál ERA opera tu empresa? Descúbrelo gratis en 5 minutos."
+
+**[20–30s]**
+"No hay ERA buena o mala.
+Hay ERA actual y ERA siguiente.
+El trabajo es saber cuál es cada una."
+
+---
+
+### Short 08 — "+40% capacidad sin contratar"
+
+**[0–5s]**
+"Una empresa aumentó su capacidad operativa en 40% sin sumar una sola persona."
+
+**[5–15s]**
+"No fue magia. Fue estructura.
+Automatizaron 3 procesos que consumían el 30% del tiempo del equipo.
+El equipo no se reemplazó. Se liberó para lo que importa."
+
+**[15–20s]** *Pantalla: 3g-ia-agents.com/diagnostico*
+"¿Cuánta capacidad está atrapada en tareas manuales en tu empresa? Mídelo gratis."
+
+**[20–30s]**
+"El límite de crecimiento no siempre es ventas.
+A veces es operación."
+
+---
+
+### Short 09 — "El Excel como sistema"
+
+**[0–5s]**
+"Si tu sistema de gestión es un Excel compartido por WhatsApp — tienes un riesgo que no ves."
+
+**[5–15s]**
+"No es el Excel el problema.
+Es que cuando el Excel es el sistema,
+una sola celda editada por error puede costar horas o clientes.
+Y nadie lo sabe hasta que ya pasó."
+
+**[15–20s]** *Pantalla: 3g-ia-agents.com/diagnostico*
+"¿En qué ERA opera tu empresa? Diagnóstico gratis — 5 minutos."
+
+**[20–30s]**
+"ERA 1 vive en Excel.
+ERA 2 tiene sistema pero no lo usa.
+ERA 3 toma decisiones en tiempo real."
+
+---
+
+### Short 10 — "Reactiva vs proactiva"
+
+**[0–5s]**
+"Dos organizaciones del mismo sector. Una siempre apagando incendios. La otra, anticipándolos."
+
+**[5–15s]**
+"La diferencia no era el presupuesto ni el equipo.
+Era el sistema.
+Una tenía datos. La otra los usaba para decidir antes de que el problema explotara."
+
+**[15–20s]** *Pantalla: 3g-ia-agents.com/diagnostico*
+"¿Tu empresa reacciona o anticipa? Descúbrelo gratis."
+
+**[20–30s]**
+"Pasar de reactivo a proactivo no requiere más tecnología.
+Requiere usar la que ya tienes."
+
+---
+
+### Short 11 — "Los 9 sub-niveles ERA"
+
+**[0–5s]**
+"No hay 3 Eras. Hay 9 posiciones exactas. Y cada una tiene un costo distinto."
+
+**[5–15s]**
+"ERA 1-, ERA 1, ERA 1+.
+ERA 2-, ERA 2, ERA 2+.
+ERA 3-, ERA 3, ERA 3+.
+La mayoría se auto-evalúa 2 niveles más arriba de donde realmente está."
+
+**[15–20s]** *Pantalla: 3g-ia-agents.com/diagnostico*
+"¿En qué posición exacta está tu empresa? Descúbrelo gratis."
+
+**[20–30s]**
+"Saber tu posición exacta es el primer paso para moverse en la dirección correcta."
+
+---
+
+### Short 12 — "El diagnóstico gratuito"
+
+**[0–5s]**
+"Hay una pregunta que le hago a cada dueño de empresa antes de hablar de IA."
+
+**[5–15s]**
+"¿Sabes exactamente en qué ERA está tu empresa hoy?
+No lo que crees. Lo que dicen los datos."
+
+**[15–20s]** *Pantalla: 3g-ia-agents.com/diagnostico*
+"El diagnóstico es gratuito. Tarda menos de 5 minutos.
+Entra ahora: 3g-ia-agents.com/diagnostico"
+
+**[20–30s]**
+"Te dice tu ERA exacta, dónde está la brecha,
+y cuánto te está costando no avanzar."
+
