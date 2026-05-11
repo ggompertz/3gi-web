@@ -10,9 +10,7 @@ Base URL imágenes: `https://pub-afec22bc076746d1804ccf623d884c82.r2.dev/carruse
 ### TikTok — @3gintelligence
 **Descripción (bio):**
 ```
-¿Tu empresa está en ERA 1, 2 o 3?
-Descúbrelo gratis en 5 minutos.
-3g-ia-agents.com/diagnostico
+¿En que ERA opera tu empresa?Diagnóstico gratis -> 3g-ia-agents.com/diagnostico
 ```
 
 ---
