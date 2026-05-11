@@ -5,6 +5,16 @@ Base URL imágenes: `https://pub-afec22bc076746d1804ccf623d884c82.r2.dev/carruse
 > **Para publicar en Instagram:** llamar al webhook n8n con `POST { "caption": "...", "image_urls": ["url1", "url2", ...] }`  
 > **Webhook:** `https://n8n.3g-ia-agents.com/webhook/instagram-publish`
 
+## Perfiles en redes sociales
+
+### TikTok — @3gintelligence
+**Descripción (bio):**
+```
+¿Tu empresa está en ERA 1, 2 o 3?
+Descúbrelo gratis en 5 minutos.
+3g-ia-agents.com/diagnostico
+```
+
 ---
 
 ## Estado de publicaciones
