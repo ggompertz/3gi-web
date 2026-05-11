@@ -704,6 +704,32 @@ ERA 3: el sistema lo detecta antes de que explote.
 > Punto de riesgo: seg 8–16, mostrar el cálculo en texto mientras habla para no perder al espectador.
 > Variante A/B hook: "¿Sabes cuánto le cuesta a tu empresa el desorden? Nosotros lo calculamos."
 
+### Descripción YouTube — Short 01
+
+**Título:** USD 864 al mes tirados — el costo oculto del desorden en tu empresa
+
+**Descripción:**
+```
+¿Cuánto le cuesta realmente el desorden a tu empresa?
+
+Un profesional que cobra USD 3.000 al mes
+pasaba 12 horas semanales en tareas administrativas.
+No era ineficiente. Era el sistema.
+
+12 horas × USD 18/hora = USD 864 al mes que no generaban ningún valor.
+
+El problema no es la persona. Es que en ERA 1,
+el costo del desorden es invisible — nadie lo mide porque nadie lo ve.
+
+🔍 Descubre en qué ERA opera tu empresa → 3g-ia-agents.com/diagnostico
+
+---
+3G Intelligence ayuda a PyMEs latinoamericanas a pasar del caos operativo
+a tomar decisiones con datos reales.
+
+#GestiónEmpresarial #Productividad #PyME #CostosOcultos #3GIntelligence
+```
+
 ---
 
 ### Short 02 — "5 señales de apagaincendios"
