@@ -626,18 +626,24 @@ a tomar decisiones con datos reales.
 
 ### Short 0C — "El cuello de botella eres tú"
 
-**[0–5s]** *Pantalla: pregunta grande*
-"¿Si te vas una semana, tu empresa sigue funcionando?"
+**[0–3s]** *Texto en pantalla, sin música, pausa de impacto*
+"El cuello de botella de tu empresa... eres tú."
 
-**[5–15s]**
-"El 67% de los equipos en PyMEs LATAM no sabe cuáles son las prioridades de la semana.
-No por falta de ganas. Por falta de sistema."
+**[3–8s]** *Voz + texto*
+"¿Si te vas una semana, qué pasa?
+Si la respuesta es 'todo se frena' — no tienes un problema de equipo."
 
-**[15–20s]** *Pantalla: 3g-ia-agents.com/diagnostico*
-"Descubre en qué ERA opera tu empresa — gratis, en 5 minutos."
+**[8–16s]** *Voz + texto*
+"Tienes un problema de sistema.
+El 67% de los equipos en PyMEs LATAM no sabe cuáles son las prioridades de la semana.
+No por falta de ganas. Por falta de estructura."
 
-**[20–30s]**
-"ERA 1: el estado del proyecto lo sabe solo el dueño.
+**[16–20s]** *Pantalla: URL grande, fondo negro*
+"Descubre en qué ERA opera tu empresa.
+Gratis. 5 minutos. 3g-ia-agents.com/diagnostico"
+
+**[20–30s]** *Voz suave, contraste visual ERA 1 vs ERA 3*
+"ERA 1: el estado del negocio lo sabe solo el dueño.
 ERA 3: el sistema detecta el desvío antes de que explote.
 ¿En cuál estás?"
 
