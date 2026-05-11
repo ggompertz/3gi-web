@@ -555,7 +555,7 @@ y cuánto te está costando no avanzar.
 
 | # | Fecha | Post | Estado | Links |
 |---|---|---|---|---|
-| 17 | 12 May 2026 | 0C | ✅ publicado | [LinkedIn](https://www.linkedin.com/posts/gonzalo-gompertz-geldres_share-7459737789350379522-xK0M) · [YT](https://youtube.com/shorts/KtFsrF0GauA) · [IG](https://www.instagram.com/reels/DYNzZqbCl4f/) · [FB](https://web.facebook.com/share/p/1FUVsQ3yhb/) |
+| 17 | 10-11 May 2026 | 0C | ✅ publicado | [LinkedIn](https://www.linkedin.com/posts/gonzalo-gompertz-geldres_share-7459737789350379522-xK0M) · [YT](https://youtube.com/shorts/KtFsrF0GauA) · [IG](https://www.instagram.com/reels/DYNzZqbCl4f/) · [FB](https://web.facebook.com/share/p/1FUVsQ3yhb/) · YT: 22 vistas, 2 likes, 100% me gusta (10 May) |
 | 18 | 15 May 2026 | 01 | ⏳ pendiente | — |
 | 19 | 18 May 2026 | 02 | ⏳ pendiente | — |
 | 20 | 21 May 2026 | 03 | ⏳ pendiente | — |
