@@ -647,6 +647,35 @@ Gratis. 5 minutos. 3g-ia-agents.com/diagnostico"
 ERA 3: el sistema detecta el desvío antes de que explote.
 ¿En cuál estás?"
 
+#### Opción B — generada con skill 3gi-short-script
+
+**[0–3s]** *Pantalla negra. Texto verde. Sin música. Pausa antes de hablar.*
+"El cuello de botella de tu empresa... eres tú."
+
+**[3–8s]**
+"¿Si te vas una semana, qué pasa?
+Si la respuesta es 'todo se frena'...
+no tienes un problema de equipo."
+
+**[8–16s]**
+"Tienes un problema de sistema.
+El 67% de los equipos en PyMEs LATAM
+no sabe cuáles son las prioridades de esta semana.
+No por falta de ganas. Por falta de estructura."
+
+**[16–20s]** *Pantalla: URL grande, fondo negro, texto verde*
+"Descubre en qué ERA opera tu empresa.
+Gratis. 5 minutos.
+3g-ia-agents.com/diagnostico"
+
+**[20–28s]** *Contraste visual: dos pantallas rápidas*
+"ERA 1: el estado del negocio lo sabe solo el dueño.
+ERA 3: el sistema detecta el desvío antes de que explote.
+¿En cuál estás?"
+
+> Punto de riesgo: seg 8–16 denso si se habla rápido — 1 frase por pantalla.
+> Variante A/B hook: "Hay un problema en tu empresa que no aparece en ningún reporte. Eres tú."
+
 ---
 
 ### Short 01 — "El profesional de USD 3.000"
