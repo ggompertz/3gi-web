@@ -680,20 +680,29 @@ ERA 3: el sistema detecta el desvío antes de que explote.
 
 ### Short 01 — "El profesional de USD 3.000"
 
-**[0–5s]**
-"Un profesional que cobra USD 3.000 al mes pasaba 12 horas semanales en tareas administrativas."
+**[0–3s]** *Texto grande, parte superior. Avatar habla.*
+"USD 864 al mes. Tirados."
 
-**[5–15s]**
+**[3–8s]**
+"Un profesional que cobra USD 3.000 al mes
+pasaba 12 horas semanales en tareas administrativas."
+
+**[8–16s]** *Mostrar cálculo en texto mientras habla*
 "No era ineficiente. Era el sistema.
-Cada hora administrativa era USD 18 que no generaban valor.
-USD 864 al mes. Tirados."
+Cada hora administrativa vale USD 18.
+12 horas a la semana. Cada semana."
 
-**[15–20s]** *Pantalla: 3g-ia-agents.com/diagnostico*
-"¿Cuánto está costando el desorden en tu empresa? Calcúlalo gratis."
+**[16–20s]** *Texto grande centrado, parte superior*
+"¿Cuánto te está costando el desorden?
+3g-ia-agents.com/diagnostico — gratis."
 
-**[20–30s]**
-"El diagnóstico mide exactamente dónde está la fuga.
-Menos de 5 minutos. Sin costo."
+**[20–29s]**
+"ERA 1: el problema existe pero nadie lo ve.
+ERA 3: el sistema lo detecta antes de que explote.
+¿Cuánto llevas sin verlo?"
+
+> Punto de riesgo: seg 8–16, mostrar el cálculo en texto mientras habla para no perder al espectador.
+> Variante A/B hook: "¿Sabes cuánto le cuesta a tu empresa el desorden? Nosotros lo calculamos."
 
 ---
 
