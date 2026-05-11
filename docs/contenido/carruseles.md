@@ -356,20 +356,21 @@ ERA 3: el sistema detecta el desvío antes de que explote.
 
 ### Descripción YouTube — Short 0C
 
-**Título:** El cuello de botella que frena tu empresa (y probablemente eres tú)
+**Título:** El cuello de botella de tu empresa... eres tú
 
 **Descripción:**
 ```
-¿Si te vas de vacaciones dos semanas, tu empresa sigue funcionando sin ti?
+¿Si te vas una semana, qué pasa en tu empresa?
 
-Si la respuesta honesta es "probablemente no" — el problema no son tus empleados.
-Es que el conocimiento operativo vive en tu cabeza, no en un sistema.
+Si la respuesta es "todo se frena" — no tienes un problema de equipo.
+Tienes un problema de sistema.
 
-El 67% de los colaboradores de PyMEs en LATAM no tiene claridad
-sobre las prioridades de la semana.
+El 67% de los equipos en PyMEs LATAM no sabe cuáles son
+las prioridades de la semana. No por falta de ganas. Por falta de estructura.
 
-En este video te explico qué separa una empresa que escala
-de una que depende de sus personas clave.
+ERA 1: el estado del negocio lo sabe solo el dueño.
+ERA 3: el sistema detecta el desvío antes de que explote.
+¿En cuál estás?
 
 🔍 Descubre en qué ERA opera tu empresa → 3g-ia-agents.com/diagnostico
 
