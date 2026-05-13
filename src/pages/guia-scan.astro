@@ -231,6 +231,39 @@ import Layout from '../layouts/Layout.astro';
       a { color: inherit; text-decoration: none; }
     }
 
+    /* ── SONDEO ─────────────────────────────── */
+    .sondeo-block {
+      border: 1px solid #BFDBFE;
+      border-radius: 8px;
+      margin-bottom: 14px;
+      overflow: hidden;
+    }
+    .sondeo-head {
+      background: #EFF6FF;
+      border-bottom: 1px solid #BFDBFE;
+      padding: 9px 16px;
+      display: flex; align-items: center; gap: 10px;
+    }
+    .sondeo-code {
+      background: #1D4ED8; color: white;
+      font-size: 10px; font-weight: 700;
+      padding: 2px 7px; border-radius: 4px;
+      letter-spacing: 0.05em;
+    }
+    .sondeo-label { font-size: 13px; font-weight: 700; color: #1E3A5F; }
+    .sondeo-meta { margin-left: auto; font-size: 11px; color: #3B82F6; font-style: italic; }
+    .sondeo-body { padding: 12px 16px; }
+    .sondeo-body ol { padding-left: 16px; }
+    .sondeo-body li { margin-bottom: 7px; font-size: 12px; color: #1E3A5F; line-height: 1.5; }
+    .sondeo-body li em { color: var(--muted); font-style: italic; }
+    .sondeo-body li b { color: #1D4ED8; }
+    .signal-box {
+      background: #EFF6FF; border: 1px solid #BFDBFE;
+      border-radius: 6px; padding: 8px 12px;
+      margin-top: 10px; font-size: 11px; color: #1E3A5F;
+    }
+    .signal-box strong { color: #1D4ED8; }
+
     /* ── PRINT BUTTON ───────────────────────── */
     .print-btn {
       position: fixed; bottom: 24px; right: 24px;
@@ -318,6 +351,134 @@ import Layout from '../layouts/Layout.astro';
       </ul>
       <div class="tip-box" style="margin-top:10px;">
         <strong>Resultado esperado:</strong> Brief de Inteligencia con hipótesis de ERA, oportunidades típicas del sector, flags de riesgo y pregunta de apertura recomendada. Léelo antes de entrar a la reunión.
+      </div>
+    </div>
+  </div>
+
+  <!-- ════════════════════════════════════════════
+       FASE 0.5 — CALIFICACIÓN POST-OTP
+  ══════════════════════════════════════════════ -->
+  <div class="phase">
+    <div class="phase-num" style="background:#1D4ED8;">Q</div>
+    <div class="phase-title">Calificación — Preguntas post-acceso OTP</div>
+    <div class="phase-meta">Antes o al inicio de la reunión · ~10 min</div>
+  </div>
+
+  <div class="intro" style="border-color:#BFDBFE;background:#EFF6FF;color:#1E3A5F;margin-bottom:16px;">
+    <b>¿Para qué sirve esta fase?</b>
+    Muchos clientes no articulan espontáneamente su situación real. Estas preguntas ayudan al consultor a <b>sacar con tirabuzón</b> la información que el diagnóstico necesita para ser preciso. Úsalas cuando el cliente responde de forma vaga, corta o demasiado optimista.
+  </div>
+
+  <!-- Q1 URGENCIA -->
+  <div class="sondeo-block">
+    <div class="sondeo-head">
+      <div class="sondeo-code">Q1</div>
+      <div class="sondeo-label">Urgencia y dolor real</div>
+      <div class="sondeo-meta">¿Hay un problema genuino o solo curiosidad?</div>
+    </div>
+    <div class="sondeo-body">
+      <ol>
+        <li>"¿Qué los llevó a agendar esta reunión justo ahora? ¿Hubo algo concreto que los hizo decir 'necesitamos hacer algo'?"</li>
+        <li>"¿Este problema que mencionan les está costando clientes, tiempo o dinero de forma visible? ¿Pueden darme un ejemplo reciente?"</li>
+        <li>"Si no resuelven esto en los próximos 6 meses, ¿qué pasa? ¿Cuál sería el peor escenario?"</li>
+        <li><em>"¿Hay algo que los haya hecho postergar resolver esto hasta ahora?"</em></li>
+      </ol>
+      <div class="signal-box">
+        <strong>Señal de urgencia baja:</strong> "Estamos bien, solo queremos explorar opciones" → profundizar con Q1.3. Sin urgencia real, el cierre será difícil independiente del diagnóstico.
+      </div>
+    </div>
+  </div>
+
+  <!-- Q2 CONTEXTO -->
+  <div class="sondeo-block">
+    <div class="sondeo-head">
+      <div class="sondeo-code">Q2</div>
+      <div class="sondeo-label">Contexto y momento</div>
+      <div class="sondeo-meta">¿Por qué ahora? ¿Qué cambió?</div>
+    </div>
+    <div class="sondeo-body">
+      <ol>
+        <li>"¿Hubo algún evento reciente que los llevó a buscar soluciones de IA — un competidor, un cambio en el mercado, algo interno?"</li>
+        <li>"¿Están en un momento de crecimiento, de consolidación, o enfrentando alguna presión del negocio?"</li>
+        <li>"¿Hay algún proyecto o decisión importante que dependa de resolver esto primero?"</li>
+        <li><em>"¿Cómo están viendo sus competidores el tema de la IA? ¿Sienten que se están quedando atrás?"</em></li>
+      </ol>
+    </div>
+  </div>
+
+  <!-- Q3 SPONSOR -->
+  <div class="sondeo-block">
+    <div class="sondeo-head">
+      <div class="sondeo-code">Q3</div>
+      <div class="sondeo-label">Autoridad y sponsor interno</div>
+      <div class="sondeo-meta">¿Quién decide? ¿Quién lo va a impulsar?</div>
+    </div>
+    <div class="sondeo-body">
+      <ol>
+        <li>"Si después de esta reunión decidimos avanzar, ¿quién sería la persona que lidera el proyecto del lado de ustedes?"</li>
+        <li>"¿La gerencia general está involucrada en esta conversación, o es una iniciativa de un área específica?"</li>
+        <li>"¿Ya han conversado internamente sobre esto? ¿Hay consenso o hay personas que podrían resistirse?"</li>
+        <li><em>"¿Hay alguien en la empresa que sea especialmente entusiasta con la tecnología y que podría ser un 'campeón' interno del proyecto?"</em></li>
+      </ol>
+      <div class="signal-box">
+        <strong>Señal de riesgo:</strong> Si la persona en la reunión no tiene poder de decisión y no hay un sponsor nombrado, el proyecto tiene alta probabilidad de morir en el comité. Identificar esto temprano es clave.
+      </div>
+    </div>
+  </div>
+
+  <!-- Q4 PRESUPUESTO -->
+  <div class="sondeo-block">
+    <div class="sondeo-head">
+      <div class="sondeo-code">Q4</div>
+      <div class="sondeo-label">Presupuesto y disposición a invertir</div>
+      <div class="sondeo-meta">¿Hay capacidad real de avanzar?</div>
+    </div>
+    <div class="sondeo-body">
+      <ol>
+        <li>"¿Han destinado algún presupuesto para proyectos de tecnología o transformación este año?"</li>
+        <li>"¿Han trabajado con consultores externos antes? ¿Cómo fue esa experiencia?"</li>
+        <li>"Si encontramos una oportunidad clara de mejora, ¿están en condiciones de tomar una decisión en las próximas semanas?"</li>
+        <li><em>"¿Tienen alguna referencia de cuánto están dispuestos a invertir, o prefieren escuchar primero la propuesta?"</em></li>
+      </ol>
+      <div class="signal-box">
+        <strong>Consejo:</strong> No presionar en presupuesto antes del diagnóstico. El objetivo es solo detectar si hay capacidad de avanzar o si hay un bloqueo estructural (ej: "necesitamos aprobación del directorio en diciembre").
+      </div>
+    </div>
+  </div>
+
+  <!-- Q5 EXPERIENCIA PREVIA -->
+  <div class="sondeo-block">
+    <div class="sondeo-head">
+      <div class="sondeo-code">Q5</div>
+      <div class="sondeo-label">Experiencia previa con proyectos</div>
+      <div class="sondeo-meta">¿Qué los quemó antes? ¿Qué esperan esta vez?</div>
+    </div>
+    <div class="sondeo-body">
+      <ol>
+        <li>"¿Han intentado implementar algo parecido antes — con otro proveedor o internamente? ¿Qué resultó y qué no?"</li>
+        <li>"¿Hay alguna experiencia negativa con proyectos de tecnología que quieran que tengamos en cuenta?"</li>
+        <li>"¿Qué sería para ustedes una señal clara de que este proyecto está funcionando? ¿Cómo lo medirían?"</li>
+        <li><em>"¿Qué los haría decir en 6 meses que fue una buena decisión haber trabajado con nosotros?"</em></li>
+      </ol>
+    </div>
+  </div>
+
+  <!-- Q6 RESISTENCIA -->
+  <div class="sondeo-block">
+    <div class="sondeo-head">
+      <div class="sondeo-code">Q6</div>
+      <div class="sondeo-label">Resistencia al cambio y cultura</div>
+      <div class="sondeo-meta">¿El equipo va a adoptar o a sabotear?</div>
+    </div>
+    <div class="sondeo-body">
+      <ol>
+        <li>"Cuando la empresa ha implementado cambios en el pasado — nuevos sistemas, nuevas formas de trabajo — ¿cómo ha reaccionado el equipo?"</li>
+        <li>"¿Hay personas clave que podrían sentir que la IA amenaza su rol o forma de trabajar?"</li>
+        <li>"¿El equipo sabe que están explorando esto, o es algo que están evaluando primero desde la dirección?"</li>
+        <li><em>"¿Cómo describiría la cultura de la empresa frente a los cambios: más bien conservadora, o abierta a probar cosas nuevas?"</em></li>
+      </ol>
+      <div class="signal-box">
+        <strong>Señal de riesgo alto:</strong> "El equipo ya tuvo una mala experiencia con un sistema que nunca usaron" + "no saben que estamos viendo esto" → incluir plan de gestión del cambio en la propuesta si avanza.
       </div>
     </div>
   </div>
