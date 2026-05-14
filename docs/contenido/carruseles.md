@@ -410,6 +410,12 @@ a tomar decisiones con datos reales.
 }
 ```
 
+**Links publicados:**
+- YouTube Short: https://youtube.com/shorts/1KIY-nlTImQ
+- Instagram Reel: https://www.instagram.com/reel/DYU4LJGCQm2/
+- LinkedIn: https://www.linkedin.com/feed/update/urn:li:activity:7460735388765270016
+- Facebook: https://web.facebook.com/share/p/1AyAVggpd3/
+
 ---
 
 ## Post 02
@@ -953,5 +959,6 @@ Entra ahora: 3g-ia-agents.com/diagnostico"
 **[20–30s]**
 "Te dice tu ERA exacta, dónde está la brecha,
 y cuánto te está costando no avanzar."
+
 
 
