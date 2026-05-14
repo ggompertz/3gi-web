@@ -22,7 +22,7 @@ Base URL imágenes: `https://pub-afec22bc076746d1804ccf623d884c82.r2.dev/carruse
 | [Post 0A](#post-0a) | Lo que no puedes ver, no lo puedes gestionar | 7 | ✅ publicado | 2026-05-06 |
 | [Post 0B](#post-0b) | Los negocios no quiebran por falta de ventas | 7 | ⏳ pendiente | — |
 | [Post 0C](#post-0c) | Tu equipo trabaja duro. ¿Pero sabes hacia dónde? | 7 | ✅ publicado (Short) | 2026-05-11 · [YT](https://youtube.com/shorts/KtFsrF0GauA) |
-| [Post 01](#post-01) | Caso AMCL — El profesional de USD 3.000 | 6 | ⏳ pendiente | — |
+| [Post 01](#post-01) | Caso AMCL — El profesional de USD 3.000 | 6 | ✅ publicado (Short) | 2026-05-15 · [YT](https://youtube.com/shorts/1KIY-nlTImQ) |
 | [Post 02](#post-02) | 5 señales de "apagaincendios" | 7 | ⏳ pendiente | — |
 | [Post 03](#post-03) | Caso AMCL — De 30 min a 5 min | 6 | ⏳ pendiente | — |
 | [Post 04](#post-04) | Insight — El costo invisible | 7 | ⏳ pendiente | — |
@@ -953,4 +953,5 @@ Entra ahora: 3g-ia-agents.com/diagnostico"
 **[20–30s]**
 "Te dice tu ERA exacta, dónde está la brecha,
 y cuánto te está costando no avanzar."
+
 
