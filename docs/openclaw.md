@@ -101,10 +101,10 @@ Telegram → @openclaw_3g_bot
 
 | # | Cambio | Ahorro estimado | Estado |
 |---|---|---|---|
-| 1 | **Heartbeat: 1x/día** (de 48x/día a 1x/día) | ~98% del gasto en heartbeats | Pendiente |
-| 2 | **Activar compactación** de sesión | Evita crecimiento infinito del contexto | Pendiente |
-| 3 | **Activar memory-core** (memoria semántica) | Contexto por turno: 55k → ~3k tokens | Pendiente |
-| 4 | **Haiku para tareas simples** vía OpenRouter | ~94% ahorro en consultas de status/pipeline | Pendiente |
+| 1 | **Heartbeat: 1x/día** (de 48x/día a 1x/día) | ~98% del gasto en heartbeats | ✅ Aplicado |
+| 2 | **Activar compactación** de sesión | Evita crecimiento infinito del contexto | ✅ Aplicado |
+| 3 | **Activar memory-core** (memoria semántica) | Contexto por turno: 55k → ~3k tokens | ✅ Aplicado |
+| 4 | **Haiku para tareas simples** vía OpenRouter | ~94% ahorro en consultas de status/pipeline | ✅ Aplicado |
 
 Aplicar estas 4 optimizaciones reduce el costo estimado de ~$300/mes a **menos de $5/mes** para uso conversacional normal.
 
