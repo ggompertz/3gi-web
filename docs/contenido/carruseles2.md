@@ -1,570 +1,617 @@
-# Calendario de Publicaciones — Contenido 17 en adelante
+# Contenido desde Post 02 — Shorts + LinkedIn/Facebook
 
-Frecuencia: cada 3 días · Inicio: 12 May 2026
-
----
-
-## Calendario
-
-| # | Fecha | Post | Tema | Short/Reel |
-|---|---|---|---|---|
-| 17 | 12 May 2026 | Post 0C | Tu equipo trabaja duro. ¿Pero sabes hacia dónde? | Short 0C |
-| 18 | 15 May 2026 | Post 01 | Caso AMCL — El profesional de USD 3.000 | Short 01 |
-| 19 | 18 May 2026 | Post 02 | 5 señales de apagaincendios | Short 02 |
-| 20 | 21 May 2026 | Post 03 | Caso AMCL — De 30 min a 5 min | Short 03 |
-| 21 | 24 May 2026 | Post 04 | El costo invisible | Short 04 |
-| 22 | 27 May 2026 | Post 05 | Caso COVES — De reactivo a proactivo | Short 05 |
-| 23 | 30 May 2026 | Post 06 | 7 procesos a automatizar primero | Short 06 |
-| 24 | 02 Jun 2026 | Post 07 | ERA 1 / ERA 2 / ERA 3 explicadas | Short 07 |
-| 25 | 05 Jun 2026 | Post 08 | Caso AMCL — +40% capacidad | Short 08 |
-| 26 | 08 Jun 2026 | Post 09 | El Excel como sistema | Short 09 |
-| 27 | 11 Jun 2026 | Post 10 | Caso COVES — Reactiva vs proactiva | Short 10 |
-| 28 | 14 Jun 2026 | Post 11 | Los 9 sub-niveles ERA | Short 11 |
-| 29 | 17 Jun 2026 | Post 12 | CTA — El diagnóstico gratuito | Short 12 |
+Frecuencia: cada 3 días desde 18 May 2026  
+Formato: Short/Reel (30s) + texto LinkedIn/Facebook
 
 ---
 
-## Detalle por publicación
+## Estado
 
-### Contenido 17 — 12 May 2026
-**Post:** 0C · **Tema:** Tu equipo trabaja duro. ¿Pero sabes hacia dónde?  
-**Short:** 0C — "El cuello de botella eres tú"
-
-**Caption Instagram/Facebook:**
-```
-Tu equipo trabaja duro. Eso no lo dudo.
-
-Pero si el único que sabe el estado real de cada proyecto eres tú —
-tienes un problema de sistema, no de personas.
-
-El 67% de los colaboradores de PyMEs en LATAM no tiene claridad sobre las prioridades de la semana.
-
-👉 Desliza para ver qué separa una empresa que escala de una que depende de sus personas clave.
-
-¿Cuántos proyectos tienes corriendo hoy sin visibilidad real?
-
-👇 Diagnóstico gratuito → 3g-ia-agents.com/diagnostico
-
-#Operaciones #GestiónDeEquipos #PyME #EscalarNegocio #3GIntelligence
-```
-
-**Image URLs:**
-```json
-{
-  "image_urls": [
-    "https://pub-afec22bc076746d1804ccf623d884c82.r2.dev/carruseles/post-0C/slide-1.png",
-    "https://pub-afec22bc076746d1804ccf623d884c82.r2.dev/carruseles/post-0C/slide-2.png",
-    "https://pub-afec22bc076746d1804ccf623d884c82.r2.dev/carruseles/post-0C/slide-3.png",
-    "https://pub-afec22bc076746d1804ccf623d884c82.r2.dev/carruseles/post-0C/slide-4.png",
-    "https://pub-afec22bc076746d1804ccf623d884c82.r2.dev/carruseles/post-0C/slide-5.png",
-    "https://pub-afec22bc076746d1804ccf623d884c82.r2.dev/carruseles/post-0C/slide-6.png",
-    "https://pub-afec22bc076746d1804ccf623d884c82.r2.dev/carruseles/post-0C/slide-7.png"
-  ]
-}
-```
+| Post | Fecha | Tema | Short | LinkedIn | Estado |
+|---|---|---|---|---|---|
+| 02 | 18 May | 5 señales de apagaincendios | ✅ | ✅ | ⏳ pendiente |
+| 03 | 21 May | Caso AMCL — De 30 min a 5 min | ✅ | ✅ | ⏳ pendiente |
+| 04 | 24 May | El costo invisible | ✅ | ✅ | ⏳ pendiente |
+| 05 | 27 May | Caso COVES — De reactivo a proactivo | ✅ | ✅ | ⏳ pendiente |
+| 06 | 30 May | 7 procesos a automatizar primero | ✅ | ✅ | ⏳ pendiente |
+| 07 | 02 Jun | ERA 1 / ERA 2 / ERA 3 explicadas | ✅ | ✅ | ⏳ pendiente |
+| 08 | 05 Jun | Caso AMCL — +40% capacidad | ✅ | ✅ | ⏳ pendiente |
+| 09 | 08 Jun | El Excel como sistema | ✅ | ✅ | ⏳ pendiente |
+| 10 | 11 Jun | Caso COVES — Reactiva vs proactiva | ✅ | ✅ | ⏳ pendiente |
+| 11 | 14 Jun | Los 9 sub-niveles ERA | ✅ | ✅ | ⏳ pendiente |
+| 12 | 17 Jun | CTA — El diagnóstico gratuito | ✅ | ✅ | ⏳ pendiente |
 
 ---
 
-### Contenido 18 — 15 May 2026
-**Post:** 01 · **Tema:** Caso AMCL — El profesional de USD 3.000  
-**Short:** 01 — "El profesional de USD 3.000"
+## Post 02 — 5 señales de apagaincendios
 
-**Caption Instagram/Facebook:**
+**Fecha:** 18 May 2026
+
+### Short 02
+
+**[0–5s]**
+"Antes de hablar de IA con un cliente, siempre busco una señal específica.
+La mayoría la tiene. Y no lo saben."
+
+**[5–15s]**
+"Se llama modo apagaincendios.
+5 señales: sin KPIs claros, decisiones por WhatsApp, reuniones para informar en vez de decidir, el dueño resuelve todo, nadie anticipa problemas."
+
+**[15–20s]** *Pantalla: 3g-ia-agents.com/diagnostico*
+"Descubre en qué ERA está tu empresa — gratis en 5 minutos."
+
+**[20–30s]**
+"Si te reconociste en 3 o más — estás en ERA 1.
+La solución no es más herramientas. Es cambiar el sistema."
+
+### Texto LinkedIn/Facebook
+
 ```
-Un profesional que cobra USD 3.000 al mes pasaba 12 horas semanales en tareas administrativas.
+Antes de hablar de IA con un cliente, siempre busco una señal específica.
 
-No era ineficiente. Era el sistema.
+La mayoría la tiene. Y no lo saben.
 
-Cada hora administrativa era USD 18 que no generaban valor.
-USD 864 al mes. Tirados.
+Se llama modo apagaincendios.
 
-👉 Desliza y ve cómo se resolvió — sin contratar a nadie más.
+No es un problema de agenda.
+No es falta de gente.
+Es un problema de sistema.
 
-¿Te reconoces en esto?
-
-👇 Diagnóstico gratuito → 3g-ia-agents.com/diagnostico
-
-#CasoReal #PyME #Automatización #GestiónEmpresarial #3GIntelligence
-```
-
-**Image URLs:**
-```json
-{
-  "image_urls": [
-    "https://pub-afec22bc076746d1804ccf623d884c82.r2.dev/carruseles/post-01/slide-1.png",
-    "https://pub-afec22bc076746d1804ccf623d884c82.r2.dev/carruseles/post-01/slide-2.png",
-    "https://pub-afec22bc076746d1804ccf623d884c82.r2.dev/carruseles/post-01/slide-3.png",
-    "https://pub-afec22bc076746d1804ccf623d884c82.r2.dev/carruseles/post-01/slide-4.png",
-    "https://pub-afec22bc076746d1804ccf623d884c82.r2.dev/carruseles/post-01/slide-5.png",
-    "https://pub-afec22bc076746d1804ccf623d884c82.r2.dev/carruseles/post-01/slide-6.png"
-  ]
-}
-```
-
----
-
-### Contenido 19 — 18 May 2026
-**Post:** 02 · **Tema:** 5 señales de apagaincendios  
-**Short:** 02 — "5 señales de apagaincendios"
-
-**Caption Instagram/Facebook:**
-```
-Si tu semana se ve así: urgente, urgente, urgente —
-no tienes un problema de agenda.
-
-Tienes un problema de sistema.
-
-5 señales de que tu empresa opera en modo apagaincendios:
+5 señales para reconocerlo:
 → Sin KPIs claros
 → Decisiones por WhatsApp
 → Reuniones para informar, no para decidir
 → El dueño resuelve todo
 → Nadie anticipa problemas
 
-👉 Desliza y descubre en qué ERA opera tu empresa.
+Si te reconociste en 3 o más — estás en ERA 1.
 
-¿Te reconociste en 3 o más?
+En ERA 1 el equipo trabaja. Pero sin dirección clara.
+La energía que debería ir al crecimiento se va en apagar lo de hoy.
 
-👇 Diagnóstico gratuito → 3g-ia-agents.com/diagnostico
+La solución no es más herramientas.
+Es cambiar el sistema que genera los incendios.
 
-#GestiónEmpresarial #PyME #ERA #Operaciones #3GIntelligence
-```
+¿En cuántas te reconociste?
 
-**Image URLs:**
-```json
-{
-  "image_urls": [
-    "https://pub-afec22bc076746d1804ccf623d884c82.r2.dev/carruseles/post-02/slide-1.png",
-    "https://pub-afec22bc076746d1804ccf623d884c82.r2.dev/carruseles/post-02/slide-2.png",
-    "https://pub-afec22bc076746d1804ccf623d884c82.r2.dev/carruseles/post-02/slide-3.png",
-    "https://pub-afec22bc076746d1804ccf623d884c82.r2.dev/carruseles/post-02/slide-4.png",
-    "https://pub-afec22bc076746d1804ccf623d884c82.r2.dev/carruseles/post-02/slide-5.png",
-    "https://pub-afec22bc076746d1804ccf623d884c82.r2.dev/carruseles/post-02/slide-6.png",
-    "https://pub-afec22bc076746d1804ccf623d884c82.r2.dev/carruseles/post-02/slide-7.png"
-  ]
-}
+#GestiónEmpresarial #PyME #ERA #EficienciaOperacional #3GIntelligence
 ```
 
 ---
 
-### Contenido 20 — 21 May 2026
-**Post:** 03 · **Tema:** Caso AMCL — De 30 min a 5 min  
-**Short:** 03 — "De 30 min a 5 min"
+## Post 03 — Caso AMCL: De 30 min a 5 min
 
-**Caption Instagram/Facebook:**
+**Fecha:** 21 May 2026
+
+### Short 03
+
+**[0–5s]**
+"La mayoría cree que necesita contratar más gente para crecer.
+Casi siempre necesita esto primero."
+
+**[5–15s]**
+"Un proceso que tardaba 30 minutos pasó a tardar 5.
+Sin contratar a nadie.
+No cambiaron el sistema. Cambiaron cómo lo usaban."
+
+**[15–20s]** *Pantalla: 3g-ia-agents.com/diagnostico*
+"¿Cuánto tiempo pierde tu equipo en tareas que podrían automatizarse? Mídelo gratis."
+
+**[20–30s]**
+"El primer paso no es más tecnología.
+Es saber exactamente dónde está la fuga."
+
+### Texto LinkedIn/Facebook
+
 ```
+La mayoría cree que necesita contratar más gente para crecer.
+
+Casi siempre necesita esto primero.
+
 Un proceso que tardaba 30 minutos pasó a tardar 5.
 Sin contratar a nadie.
+Sin cambiar el sistema.
+Cambiando cómo lo usaban.
 
-No cambiaron el sistema. Cambiaron cómo lo usaban.
+El equipo recuperó 2 horas por persona por semana.
+Multiplicado por el equipo, multiplicado por el año — es tiempo real que vuelve al negocio.
 
-👉 Desliza y ve exactamente qué hicieron — paso a paso.
+Lo que parecía un problema de capacidad era un problema de proceso.
 
-¿Cuánto tiempo pierde tu equipo en tareas que podrían automatizarse?
+En ERA 1 se contrata para resolver lo que el sistema debería resolver solo.
+En ERA 2 se mide antes de contratar.
+En ERA 3 el sistema anticipa cuándo va a necesitar más capacidad.
 
-👇 Diagnóstico gratuito → 3g-ia-agents.com/diagnostico
+¿Cuánto tiempo pierde tu equipo en tareas que ya podrían automatizarse?
 
-#CasoReal #Automatización #PyME #Productividad #3GIntelligence
-```
-
-**Image URLs:**
-```json
-{
-  "image_urls": [
-    "https://pub-afec22bc076746d1804ccf623d884c82.r2.dev/carruseles/post-03/slide-1.png",
-    "https://pub-afec22bc076746d1804ccf623d884c82.r2.dev/carruseles/post-03/slide-2.png",
-    "https://pub-afec22bc076746d1804ccf623d884c82.r2.dev/carruseles/post-03/slide-3.png",
-    "https://pub-afec22bc076746d1804ccf623d884c82.r2.dev/carruseles/post-03/slide-4.png",
-    "https://pub-afec22bc076746d1804ccf623d884c82.r2.dev/carruseles/post-03/slide-5.png",
-    "https://pub-afec22bc076746d1804ccf623d884c82.r2.dev/carruseles/post-03/slide-6.png"
-  ]
-}
+#Automatización #PyME #EficienciaOperacional #CasoReal #3GIntelligence
 ```
 
 ---
 
-### Contenido 21 — 24 May 2026
-**Post:** 04 · **Tema:** El costo invisible  
-**Short:** 04 — "El costo invisible"
+## Post 04 — El costo invisible
 
-**Caption Instagram/Facebook:**
+**Fecha:** 24 May 2026
+
+### Short 04
+
+**[0–5s]**
+"Las empresas tienen un número que nunca aparece en ningún reporte.
+Y casi siempre es de los más altos."
+
+**[5–15s]**
+"El costo del tiempo perdido en tareas manuales repetibles.
+Si tienes 5 personas haciendo 4 horas semanales de tareas automatizables:
+son 20 horas. Cada semana. Que no generan valor."
+
+**[15–20s]** *Pantalla: 3g-ia-agents.com/diagnostico*
+"Calcula tu costo invisible — diagnóstico gratis en 5 minutos."
+
+**[20–30s]**
+"No es un problema de personas.
+Es un problema de ERA."
+
+### Texto LinkedIn/Facebook
+
 ```
-Hay un costo en tu empresa que no aparece en ningún reporte.
+Las empresas tienen un número que nunca aparece en ningún reporte.
 
-El costo del tiempo perdido en tareas manuales repetibles.
+Y casi siempre es de los más altos.
 
+Se llama el costo invisible.
+
+No es lo que pagás de sueldo.
+Es lo que pagás por el tiempo que se va en tareas manuales, repetibles, automatizables.
+
+Un ejemplo simple:
 5 personas × 4 horas semanales de tareas automatizables =
-20 horas cada semana que no generan valor.
+20 horas cada semana que no generan ningún valor.
 
-👉 Desliza y calcula cuánto te está costando el desorden.
+Nadie lo reporta porque nadie lo mide.
+Nadie lo mide porque no aparece en ningún estado de resultados.
+Pero está ahí, todos los meses, sin excepción.
 
-¿Sabes cuánto es ese número en tu empresa?
+En ERA 1, el costo invisible crece silencioso.
+En ERA 3, el sistema lo detecta y lo elimina antes de que acumule.
 
-👇 Diagnóstico gratuito → 3g-ia-agents.com/diagnostico
+¿Sabes cuánto es ese número en tu empresa hoy?
 
 #CostoOculto #PyME #Automatización #GestiónEmpresarial #3GIntelligence
 ```
 
-**Image URLs:**
-```json
-{
-  "image_urls": [
-    "https://pub-afec22bc076746d1804ccf623d884c82.r2.dev/carruseles/post-04/slide-1.png",
-    "https://pub-afec22bc076746d1804ccf623d884c82.r2.dev/carruseles/post-04/slide-2.png",
-    "https://pub-afec22bc076746d1804ccf623d884c82.r2.dev/carruseles/post-04/slide-3.png",
-    "https://pub-afec22bc076746d1804ccf623d884c82.r2.dev/carruseles/post-04/slide-4.png",
-    "https://pub-afec22bc076746d1804ccf623d884c82.r2.dev/carruseles/post-04/slide-5.png",
-    "https://pub-afec22bc076746d1804ccf623d884c82.r2.dev/carruseles/post-04/slide-6.png",
-    "https://pub-afec22bc076746d1804ccf623d884c82.r2.dev/carruseles/post-04/slide-7.png"
-  ]
-}
-```
-
 ---
 
-### Contenido 22 — 27 May 2026
-**Post:** 05 · **Tema:** Caso COVES — De reactivo a proactivo  
-**Short:** 05 — "De reactivo a proactivo"
+## Post 05 — Caso COVES: De reactivo a proactivo
 
-**Caption Instagram/Facebook:**
+**Fecha:** 27 May 2026
+
+### Short 05
+
+**[0–5s]**
+"La mayoría de empresas NO necesita más tecnología.
+Necesita usar bien la que ya tiene."
+
+**[5–15s]**
+"Una organización pasó de detectar fallas después de que ocurrían
+a anticiparlas con datos en tiempo real.
+El cambio no fue tecnología nueva. Fue usar la que ya tenían, bien."
+
+**[15–20s]** *Pantalla: 3g-ia-agents.com/diagnostico*
+"¿Tu empresa reacciona o anticipa? Descúbrelo gratis."
+
+**[20–30s]**
+"ERA 1 reacciona. ERA 3 anticipa.
+¿Dónde está la tuya?"
+
+### Texto LinkedIn/Facebook
+
 ```
-Antes respondían al problema.
-Ahora lo ven venir.
+La mayoría de empresas NO necesita más tecnología.
+
+Necesita usar bien la que ya tiene.
 
 Una organización pasó de detectar fallas después de que ocurrían
 a anticiparlas con datos en tiempo real.
 
-El cambio no fue tecnología nueva.
-Fue usar la que ya tenían, bien.
+No compraron nada nuevo.
+No contrataron a nadie.
+Reorganizaron cómo fluía la información que ya existía.
 
-👉 Desliza y ve cómo lo hicieron.
+Antes: el problema aparecía, generaba daño, se resolvía.
+Después: el sistema detecta la señal antes de que el problema explote.
+
+Eso no es magia. Es ERA 3.
+
+Y el camino no empieza con tecnología.
+Empieza con saber exactamente en qué ERA estás hoy.
 
 ¿Tu empresa reacciona o anticipa?
 
-👇 Diagnóstico gratuito → 3g-ia-agents.com/diagnostico
-
-#CasoReal #Operaciones #PyME #ERA #3GIntelligence
-```
-
-**Image URLs:**
-```json
-{
-  "image_urls": [
-    "https://pub-afec22bc076746d1804ccf623d884c82.r2.dev/carruseles/post-05/slide-1.png",
-    "https://pub-afec22bc076746d1804ccf623d884c82.r2.dev/carruseles/post-05/slide-2.png",
-    "https://pub-afec22bc076746d1804ccf623d884c82.r2.dev/carruseles/post-05/slide-3.png",
-    "https://pub-afec22bc076746d1804ccf623d884c82.r2.dev/carruseles/post-05/slide-4.png",
-    "https://pub-afec22bc076746d1804ccf623d884c82.r2.dev/carruseles/post-05/slide-5.png",
-    "https://pub-afec22bc076746d1804ccf623d884c82.r2.dev/carruseles/post-05/slide-6.png"
-  ]
-}
+#Operaciones #PyME #ERA #CasoReal #3GIntelligence
 ```
 
 ---
 
-### Contenido 23 — 30 May 2026
-**Post:** 06 · **Tema:** 7 procesos a automatizar primero  
-**Short:** 06 — "7 procesos a automatizar primero"
+## Post 06 — 7 procesos a automatizar primero
 
-**Caption Instagram/Facebook:**
+**Fecha:** 30 May 2026
+
+### Short 06
+
+**[0–5s]**
+"Las empresas pierden miles automatizando los procesos equivocados.
+Estos son los 7 que van primero."
+
+**[5–15s]**
+"Uno: reportes semanales.
+Dos: seguimiento de clientes.
+Tres: clasificación de documentos.
+Cuatro: respuestas a consultas repetidas.
+Cinco: conciliación de facturas.
+Seis: alertas de vencimiento.
+Siete: registro de actividades del equipo."
+
+**[15–20s]** *Pantalla: 3g-ia-agents.com/diagnostico*
+"¿Cuáles tienes sin automatizar? El diagnóstico te lo dice — gratis."
+
+**[20–30s]**
+"No necesitas automatizar todo.
+Solo los que más te están costando hoy."
+
+### Texto LinkedIn/Facebook
+
 ```
-Si no sabes por dónde empezar a automatizar, empieza por estos 7.
+Las empresas pierden miles automatizando los procesos equivocados.
 
-1️⃣ Reportes semanales
-2️⃣ Seguimiento de clientes
-3️⃣ Clasificación de documentos
-4️⃣ Respuestas a consultas repetidas
-5️⃣ Conciliación de facturas
-6️⃣ Alertas de vencimiento
-7️⃣ Registro de actividades del equipo
+El error no es automatizar.
+Es automatizar sin saber por dónde empezar.
 
-👉 Desliza y ve cómo implementar cada uno.
+Después de trabajar con decenas de PyMEs, estos son los 7 procesos que generan el mayor retorno cuando se automatizan primero:
 
-¿Cuáles tienes sin automatizar?
+1. Reportes semanales
+2. Seguimiento de clientes
+3. Clasificación de documentos
+4. Respuestas a consultas repetidas
+5. Conciliación de facturas
+6. Alertas de vencimiento
+7. Registro de actividades del equipo
 
-👇 Diagnóstico gratuito → 3g-ia-agents.com/diagnostico
+No son los más sofisticados.
+Son los que más tiempo consumen y menos valor agregan en ERA 1 y ERA 2.
 
-#Automatización #PyME #IA #Productividad #3GIntelligence
-```
+El criterio no es "¿qué podemos automatizar?"
+Es "¿qué nos está costando más no automatizar?"
 
-**Image URLs:**
-```json
-{
-  "image_urls": [
-    "https://pub-afec22bc076746d1804ccf623d884c82.r2.dev/carruseles/post-06/slide-1.png",
-    "https://pub-afec22bc076746d1804ccf623d884c82.r2.dev/carruseles/post-06/slide-2.png",
-    "https://pub-afec22bc076746d1804ccf623d884c82.r2.dev/carruseles/post-06/slide-3.png",
-    "https://pub-afec22bc076746d1804ccf623d884c82.r2.dev/carruseles/post-06/slide-4.png",
-    "https://pub-afec22bc076746d1804ccf623d884c82.r2.dev/carruseles/post-06/slide-5.png",
-    "https://pub-afec22bc076746d1804ccf623d884c82.r2.dev/carruseles/post-06/slide-6.png",
-    "https://pub-afec22bc076746d1804ccf623d884c82.r2.dev/carruseles/post-06/slide-7.png",
-    "https://pub-afec22bc076746d1804ccf623d884c82.r2.dev/carruseles/post-06/slide-8.png",
-    "https://pub-afec22bc076746d1804ccf623d884c82.r2.dev/carruseles/post-06/slide-9.png"
-  ]
-}
+¿Cuáles de estos 7 tienes sin resolver hoy?
+
+#Automatización #PyME #Productividad #IA #3GIntelligence
 ```
 
 ---
 
-### Contenido 24 — 02 Jun 2026
-**Post:** 07 · **Tema:** ERA 1 / ERA 2 / ERA 3 explicadas  
-**Short:** 07 — "ERA 1, ERA 2, ERA 3"
+## Post 07 — ERA 1 / ERA 2 / ERA 3 explicadas
 
-**Caption Instagram/Facebook:**
+**Fecha:** 02 Jun 2026
+
+### Short 07
+
+**[0–5s]**
+"La mayoría de dueños cree que está en ERA 2.
+Cuando hacemos el diagnóstico, casi siempre están en ERA 1."
+
+**[5–15s]**
+"ERA 1: el negocio corre en tu cabeza.
+ERA 2: corre en sistemas, pero nadie usa los datos para decidir.
+ERA 3: la IA maneja el volumen, las personas manejan la estrategia."
+
+**[15–20s]** *Pantalla: 3g-ia-agents.com/diagnostico*
+"¿En cuál ERA opera tu empresa? Descúbrelo gratis en 5 minutos."
+
+**[20–30s]**
+"No hay ERA buena o mala.
+Hay ERA actual y ERA siguiente.
+El trabajo es saber cuál es cada una."
+
+### Texto LinkedIn/Facebook
+
 ```
-Hay 3 niveles de madurez empresarial.
-La mayoría cree estar en uno y está en otro.
+La mayoría de dueños cree que está en ERA 2.
+
+Cuando hacemos el diagnóstico, casi siempre están en ERA 1.
+
+No porque sean menos capaces.
+Porque ERA 1 se siente normal cuando llevás años en ella.
 
 ERA 1 — Caos Operativo:
-El negocio corre en tu cabeza. Decisiones por intuición.
+El negocio corre en tu cabeza. Las decisiones se toman por intuición.
+Si te vas una semana, algo falla.
 
 ERA 2 — Datos Organizados:
 Tienes sistemas. Pero los datos no se usan para decidir.
+Tienes CRM, Excel, reportes. Nadie los lee antes de la reunión de emergencia.
 
 ERA 3 — Empresa con IA:
 La IA maneja el volumen. Las personas manejan la estrategia.
+El sistema detecta el problema antes de que explote.
 
-👉 Desliza y descubre en cuál opera tu empresa.
+No hay ERA buena o mala.
+Hay ERA actual y ERA siguiente.
 
-¿En cuál ERA estás?
+El trabajo de 3GI es mover empresas de una ERA a la siguiente.
+Pero el primer paso siempre es el mismo: saber exactamente dónde estás.
 
-👇 Diagnóstico gratuito → 3g-ia-agents.com/diagnostico
+¿En cuál ERA opera tu empresa hoy?
 
 #ERA #TransformaciónDigital #PyME #IA #3GIntelligence
 ```
 
-**Image URLs:**
-```json
-{
-  "image_urls": [
-    "https://pub-afec22bc076746d1804ccf623d884c82.r2.dev/carruseles/post-07/slide-1.png",
-    "https://pub-afec22bc076746d1804ccf623d884c82.r2.dev/carruseles/post-07/slide-2.png",
-    "https://pub-afec22bc076746d1804ccf623d884c82.r2.dev/carruseles/post-07/slide-3.png",
-    "https://pub-afec22bc076746d1804ccf623d884c82.r2.dev/carruseles/post-07/slide-4.png",
-    "https://pub-afec22bc076746d1804ccf623d884c82.r2.dev/carruseles/post-07/slide-5.png",
-    "https://pub-afec22bc076746d1804ccf623d884c82.r2.dev/carruseles/post-07/slide-6.png"
-  ]
-}
-```
-
 ---
 
-### Contenido 25 — 05 Jun 2026
-**Post:** 08 · **Tema:** Caso AMCL — +40% capacidad  
-**Short:** 08 — "+40% capacidad sin contratar"
+## Post 08 — Caso AMCL: +40% capacidad sin contratar
 
-**Caption Instagram/Facebook:**
-```
-Una empresa aumentó su capacidad operativa en 40%
-sin sumar una sola persona.
+**Fecha:** 05 Jun 2026
 
-No fue magia. Fue estructura.
+### Short 08
 
+**[0–5s]**
+"Una empresa puede crecer 40% en capacidad sin contratar a nadie.
+Así es como lo hicimos."
+
+**[5–15s]**
+"No fue magia. Fue estructura.
 Automatizaron 3 procesos que consumían el 30% del tiempo del equipo.
-El equipo no se reemplazó. Se liberó para lo que importa.
+El equipo no se reemplazó. Se liberó para lo que importa."
 
-👉 Desliza y ve exactamente qué hicieron.
+**[15–20s]** *Pantalla: 3g-ia-agents.com/diagnostico*
+"¿Cuánta capacidad está atrapada en tareas manuales en tu empresa? Mídelo gratis."
 
-¿Te reconoces en este caso?
+**[20–30s]**
+"El límite de crecimiento no siempre es ventas.
+A veces es operación."
 
-👇 Diagnóstico gratuito → 3g-ia-agents.com/diagnostico
+### Texto LinkedIn/Facebook
 
-#CasoReal #Automatización #PyME #Crecimiento #3GIntelligence
 ```
+Una empresa puede crecer 40% en capacidad sin contratar a nadie.
 
-**Image URLs:**
-```json
-{
-  "image_urls": [
-    "https://pub-afec22bc076746d1804ccf623d884c82.r2.dev/carruseles/post-08/slide-1.png",
-    "https://pub-afec22bc076746d1804ccf623d884c82.r2.dev/carruseles/post-08/slide-2.png",
-    "https://pub-afec22bc076746d1804ccf623d884c82.r2.dev/carruseles/post-08/slide-3.png",
-    "https://pub-afec22bc076746d1804ccf623d884c82.r2.dev/carruseles/post-08/slide-4.png",
-    "https://pub-afec22bc076746d1804ccf623d884c82.r2.dev/carruseles/post-08/slide-5.png",
-    "https://pub-afec22bc076746d1804ccf623d884c82.r2.dev/carruseles/post-08/slide-6.png"
-  ]
-}
+Así es como lo hicimos.
+
+El equipo estaba al límite.
+No por falta de ganas. Por exceso de tareas manuales.
+
+3 procesos consumían el 30% del tiempo del equipo cada semana.
+No eran procesos estratégicos.
+Eran tareas repetibles que nadie había cuestionado porque "siempre se hicieron así".
+
+Los automatizamos.
+El equipo no se reemplazó. Se liberó para lo que realmente importa.
+
+Resultado: 40% más de capacidad operativa.
+Sin una sola contratación nueva.
+
+El límite de crecimiento de una empresa no siempre es ventas.
+A veces es operación.
+Y el desorden operativo es invisible hasta que alguien lo mide.
+
+¿Sabes dónde está el límite de capacidad de tu equipo hoy?
+
+#Automatización #PyME #Crecimiento #CasoReal #3GIntelligence
 ```
 
 ---
 
-### Contenido 26 — 08 Jun 2026
-**Post:** 09 · **Tema:** El Excel como sistema  
-**Short:** 09 — "El Excel como sistema"
+## Post 09 — El Excel como sistema
 
-**Caption Instagram/Facebook:**
+**Fecha:** 08 Jun 2026
+
+### Short 09
+
+**[0–5s]**
+"Hay una señal que siempre busco cuando entro a una empresa.
+Si la veo, sé que tienen un riesgo que no están viendo."
+
+**[5–15s]**
+"Es el Excel compartido por WhatsApp.
+No es el Excel el problema.
+Es que cuando el Excel es el sistema, una sola celda editada por error puede costar horas o clientes."
+
+**[15–20s]** *Pantalla: 3g-ia-agents.com/diagnostico*
+"¿En qué ERA opera tu empresa? Diagnóstico gratis — 5 minutos."
+
+**[20–30s]**
+"ERA 1 vive en Excel.
+ERA 2 tiene sistema pero no lo usa.
+ERA 3 toma decisiones en tiempo real."
+
+### Texto LinkedIn/Facebook
+
 ```
-Si tu sistema de gestión es un Excel compartido por WhatsApp —
-tienes un riesgo que no ves.
+Hay una señal que siempre busco cuando entro a una empresa.
+
+Si la veo, sé que tienen un riesgo que no están viendo.
+
+Es el Excel compartido por WhatsApp.
 
 No es el Excel el problema.
+El Excel es una herramienta poderosa.
 
-Es que cuando el Excel ES el sistema,
-una sola celda editada por error puede costar horas o clientes.
-Y nadie lo sabe hasta que ya pasó.
+El problema es cuando el Excel es el sistema.
 
-👉 Desliza y ve qué señales indican que ya es hora de dar el salto.
+Cuando el Excel es el sistema:
+— Una celda editada por error puede costar horas o clientes
+— Nadie sabe cuál es la versión correcta
+— La información crítica depende de que alguien recuerde actualizarlo
+— Y cuando esa persona no está, el sistema se detiene
+
+Eso es ERA 1.
+
+No es un problema de disciplina del equipo.
+Es un problema de arquitectura de información.
+
+ERA 1 vive en Excel.
+ERA 2 tiene sistema pero no lo usa para decidir.
+ERA 3 toma decisiones en tiempo real con datos confiables.
 
 ¿En cuántos Excel críticos depende tu operación hoy?
 
-👇 Diagnóstico gratuito → 3g-ia-agents.com/diagnostico
-
-#Excel #GestiónEmpresarial #PyME #ERA #3GIntelligence
-```
-
-**Image URLs:**
-```json
-{
-  "image_urls": [
-    "https://pub-afec22bc076746d1804ccf623d884c82.r2.dev/carruseles/post-09/slide-1.png",
-    "https://pub-afec22bc076746d1804ccf623d884c82.r2.dev/carruseles/post-09/slide-2.png",
-    "https://pub-afec22bc076746d1804ccf623d884c82.r2.dev/carruseles/post-09/slide-3.png",
-    "https://pub-afec22bc076746d1804ccf623d884c82.r2.dev/carruseles/post-09/slide-4.png",
-    "https://pub-afec22bc076746d1804ccf623d884c82.r2.dev/carruseles/post-09/slide-5.png",
-    "https://pub-afec22bc076746d1804ccf623d884c82.r2.dev/carruseles/post-09/slide-6.png",
-    "https://pub-afec22bc076746d1804ccf623d884c82.r2.dev/carruseles/post-09/slide-7.png"
-  ]
-}
+#GestiónEmpresarial #PyME #ERA #Operaciones #3GIntelligence
 ```
 
 ---
 
-### Contenido 27 — 11 Jun 2026
-**Post:** 10 · **Tema:** Caso COVES — Reactiva vs proactiva  
-**Short:** 10 — "Reactiva vs proactiva"
+## Post 10 — Caso COVES: Reactiva vs proactiva
 
-**Caption Instagram/Facebook:**
+**Fecha:** 11 Jun 2026
+
+### Short 10
+
+**[0–5s]**
+"Dos empresas. Mismo sector. Mismo presupuesto.
+Una anticipaba problemas. La otra los apagaba. La diferencia no era tecnología."
+
+**[5–15s]**
+"Una tenía datos. La otra los usaba para decidir antes de que el problema explotara.
+Pasar de reactivo a proactivo no requiere más tecnología.
+Requiere usar la que ya tienes."
+
+**[15–20s]** *Pantalla: 3g-ia-agents.com/diagnostico*
+"¿Tu empresa reacciona o anticipa? Descúbrelo gratis."
+
+**[20–30s]**
+"Pasar de reactivo a proactivo no requiere más tecnología.
+Requiere usar la que ya tienes."
+
+### Texto LinkedIn/Facebook
+
 ```
-Dos organizaciones del mismo sector.
-Una siempre apagando incendios.
-La otra, anticipándolos.
+Dos empresas. Mismo sector. Mismo presupuesto.
 
-La diferencia no era el presupuesto ni el equipo.
-Era el sistema.
+Una anticipaba problemas. La otra los apagaba.
 
-Una tenía datos. La otra los usaba para decidir
-antes de que el problema explotara.
+La diferencia no era tecnología.
 
-👉 Desliza y ve cómo se hizo el cambio.
+La primera tenía datos.
+La segunda los usaba para tomar decisiones antes de que el problema explotara.
 
-¿Tu empresa reacciona o anticipa?
+Una pequeña diferencia en el sistema genera una diferencia enorme en el resultado.
 
-👇 Diagnóstico gratuito → 3g-ia-agents.com/diagnostico
+La empresa reactiva vivía en modo urgencia.
+Cada semana, un nuevo incendio. Cada mes, un costo inesperado.
 
-#CasoReal #Operaciones #PyME #IA #3GIntelligence
-```
+La empresa proactiva detectaba la señal antes de que se convirtiera en problema.
+Menos emergencias. Menos costos imprevistos. Más tiempo para lo que importa.
 
-**Image URLs:**
-```json
-{
-  "image_urls": [
-    "https://pub-afec22bc076746d1804ccf623d884c82.r2.dev/carruseles/post-10/slide-1.png",
-    "https://pub-afec22bc076746d1804ccf623d884c82.r2.dev/carruseles/post-10/slide-2.png",
-    "https://pub-afec22bc076746d1804ccf623d884c82.r2.dev/carruseles/post-10/slide-3.png",
-    "https://pub-afec22bc076746d1804ccf623d884c82.r2.dev/carruseles/post-10/slide-4.png",
-    "https://pub-afec22bc076746d1804ccf623d884c82.r2.dev/carruseles/post-10/slide-5.png",
-    "https://pub-afec22bc076746d1804ccf623d884c82.r2.dev/carruseles/post-10/slide-6.png"
-  ]
-}
+El cambio no fue comprar más tecnología.
+Fue reorganizar cómo fluía la información que ya existían.
+
+¿Tu empresa hoy reacciona o anticipa?
+
+#Operaciones #PyME #CasoReal #ERA #3GIntelligence
 ```
 
 ---
 
-### Contenido 28 — 14 Jun 2026
-**Post:** 11 · **Tema:** Los 9 sub-niveles ERA  
-**Short:** 11 — "Los 9 sub-niveles ERA"
+## Post 11 — Los 9 sub-niveles ERA
 
-**Caption Instagram/Facebook:**
+**Fecha:** 14 Jun 2026
+
+### Short 11
+
+**[0–5s]**
+"La mayoría de empresas se auto-evalúa dos niveles más arriba de donde realmente está.
+Así es como lo medimos."
+
+**[5–15s]**
+"No hay 3 Eras. Hay 9 posiciones exactas.
+ERA 1-, ERA 1, ERA 1+.
+ERA 2-, ERA 2, ERA 2+.
+ERA 3-, ERA 3, ERA 3+."
+
+**[15–20s]** *Pantalla: 3g-ia-agents.com/diagnostico*
+"¿En qué posición exacta está tu empresa? Descúbrelo gratis."
+
+**[20–30s]**
+"Saber tu posición exacta es el primer paso para moverse en la dirección correcta."
+
+### Texto LinkedIn/Facebook
+
 ```
+La mayoría de empresas se auto-evalúa dos niveles más arriba de donde realmente está.
+
+Así es como lo medimos.
+
 No hay 3 Eras. Hay 9 posiciones exactas.
-Y cada una tiene un costo distinto.
 
-ERA 1- / ERA 1 / ERA 1+
-ERA 2- / ERA 2 / ERA 2+
-ERA 3- / ERA 3 / ERA 3+
+ERA 1-  · ERA 1 · ERA 1+
+ERA 2-  · ERA 2 · ERA 2+
+ERA 3-  · ERA 3 · ERA 3+
 
-La mayoría se auto-evalúa 2 niveles más arriba de donde realmente está.
+Cada posición tiene un perfil distinto, costos distintos y un siguiente paso distinto.
 
-👉 Desliza y descubre en qué posición exacta está tu empresa.
+Una empresa en ERA 1+ no tiene el mismo problema que una en ERA 1-.
+Una empresa en ERA 2+ está mucho más cerca de ERA 3 que una en ERA 2-.
 
-¿En cuál de las 9 estás tú?
+El diagnóstico no solo te dice en qué ERA estás.
+Te dice en qué sub-nivel exacto operás — y cuánto te está costando no avanzar al siguiente.
 
-👇 Escribe tu ERA en los comentarios o diagnostícate gratis:
-3g-ia-agents.com/diagnostico
+La mayoría se cree ERA 2 porque tiene sistemas.
+Pero tener sistemas no es lo mismo que usarlos para decidir.
 
-#ERA #TransformaciónDigital #PyME #MadurezEmpresarial #3GIntelligence
-```
+¿En cuál de los 9 sub-niveles está tu empresa hoy?
 
-**Image URLs:**
-```json
-{
-  "image_urls": [
-    "https://pub-afec22bc076746d1804ccf623d884c82.r2.dev/carruseles/post-11/slide-1.png",
-    "https://pub-afec22bc076746d1804ccf623d884c82.r2.dev/carruseles/post-11/slide-2.png",
-    "https://pub-afec22bc076746d1804ccf623d884c82.r2.dev/carruseles/post-11/slide-3.png",
-    "https://pub-afec22bc076746d1804ccf623d884c82.r2.dev/carruseles/post-11/slide-4.png",
-    "https://pub-afec22bc076746d1804ccf623d884c82.r2.dev/carruseles/post-11/slide-5.png",
-    "https://pub-afec22bc076746d1804ccf623d884c82.r2.dev/carruseles/post-11/slide-6.png"
-  ]
-}
+#ERA #MadurezEmpresarial #PyME #TransformaciónDigital #3GIntelligence
 ```
 
 ---
 
-### Contenido 29 — 17 Jun 2026
-**Post:** 12 · **Tema:** CTA — El diagnóstico gratuito  
-**Short:** 12 — "El diagnóstico gratuito"
+## Post 12 — CTA: El diagnóstico gratuito
 
-**Caption Instagram/Facebook:**
+**Fecha:** 17 Jun 2026
+
+### Short 12
+
+**[0–5s]**
+"Antes de hablar de IA con cualquier dueño de empresa, siempre hago la misma pregunta.
+Y casi nadie la puede responder con datos."
+
+**[5–15s]**
+"¿Sabes exactamente en qué ERA está tu empresa hoy?
+No lo que crees. Lo que dicen los datos."
+
+**[15–20s]** *Pantalla: 3g-ia-agents.com/diagnostico*
+"El diagnóstico es gratuito. Tarda menos de 5 minutos.
+Entra ahora: 3g-ia-agents.com/diagnostico"
+
+**[20–30s]**
+"Te dice tu ERA exacta, dónde está la brecha,
+y cuánto te está costando no avanzar."
+
+### Texto LinkedIn/Facebook
+
 ```
-Hay una pregunta que le hago a cada dueño de empresa antes de hablar de IA.
+Antes de hablar de IA con cualquier dueño de empresa, siempre hago la misma pregunta.
+
+Y casi nadie la puede responder con datos.
 
 ¿Sabes exactamente en qué ERA está tu empresa hoy?
 
-No lo que crees. Lo que dicen los datos.
+No lo que crees. No lo que sentís. Lo que dicen los datos.
 
-El diagnóstico es gratuito.
+Llevamos meses hablando de ERA 1, ERA 2, ERA 3.
+De costos invisibles. De procesos que frenan el crecimiento. De sistemas que no se usan.
+
+El diagnóstico es el primer paso concreto.
+
+Es gratuito.
 Tarda menos de 5 minutos.
-Te dice tu ERA exacta, dónde está la brecha,
-y cuánto te está costando no avanzar.
+Te dice tu ERA exacta, dónde está la brecha, y cuánto te está costando no avanzar.
 
-👉 Desliza y ve qué incluye.
+Sin llamada de ventas. Sin compromiso.
+Solo claridad sobre dónde estás y qué sigue.
 
-👇 3g-ia-agents.com/diagnostico
+3g-ia-agents.com/diagnostico
 
-#Diagnóstico #ERA #PyME #IA #3GIntelligence
+¿Cuánto tiempo llevas tomando decisiones sin ese dato?
+
+#ERA #Diagnóstico #PyME #IA #3GIntelligence
 ```
-
-**Image URLs:**
-```json
-{
-  "image_urls": [
-    "https://pub-afec22bc076746d1804ccf623d884c82.r2.dev/carruseles/post-12/slide-1.png",
-    "https://pub-afec22bc076746d1804ccf623d884c82.r2.dev/carruseles/post-12/slide-2.png",
-    "https://pub-afec22bc076746d1804ccf623d884c82.r2.dev/carruseles/post-12/slide-3.png",
-    "https://pub-afec22bc076746d1804ccf623d884c82.r2.dev/carruseles/post-12/slide-4.png",
-    "https://pub-afec22bc076746d1804ccf623d884c82.r2.dev/carruseles/post-12/slide-5.png",
-    "https://pub-afec22bc076746d1804ccf623d884c82.r2.dev/carruseles/post-12/slide-6.png"
-  ]
-}
-```
-
----
-
-## Estado de publicaciones
-
-| # | Fecha | Post | Estado | Links |
-|---|---|---|---|---|
-| 17 | 10-11 May 2026 | 0C | ✅ publicado | [LinkedIn](https://www.linkedin.com/posts/gonzalo-gompertz-geldres_share-7459737789350379522-xK0M) · [YT](https://youtube.com/shorts/KtFsrF0GauA) · [IG](https://www.instagram.com/reels/DYNzZqbCl4f/) · [FB](https://web.facebook.com/share/p/1FUVsQ3yhb/) · YT: 22 vistas, 2 likes, 100% me gusta (10 May) |
-| 18 | 15 May 2026 | 01 | ⏳ pendiente | — |
-| 19 | 18 May 2026 | 02 | ⏳ pendiente | — |
-| 20 | 21 May 2026 | 03 | ⏳ pendiente | — |
-| 21 | 24 May 2026 | 04 | ⏳ pendiente | — |
-| 22 | 27 May 2026 | 05 | ⏳ pendiente | — |
-| 23 | 30 May 2026 | 06 | ⏳ pendiente | — |
-| 24 | 02 Jun 2026 | 07 | ⏳ pendiente | — |
-| 25 | 05 Jun 2026 | 08 | ⏳ pendiente | — |
-| 26 | 08 Jun 2026 | 09 | ⏳ pendiente | — |
-| 27 | 11 Jun 2026 | 10 | ⏳ pendiente | — |
-| 28 | 14 Jun 2026 | 11 | ⏳ pendiente | — |
-| 29 | 17 Jun 2026 | 12 | ⏳ pendiente | — |
