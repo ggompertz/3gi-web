@@ -806,10 +806,11 @@ a tomar decisiones con datos reales.
 ### Short 02 — "5 señales de apagaincendios"
 
 **[0–5s]**
-"Si tu semana se ve así: urgente, urgente, urgente — no tienes un problema de agenda."
+"Antes de hablar de IA con un cliente, siempre busco una señal específica.
+La mayoría la tiene. Y no lo saben."
 
 **[5–15s]**
-"Tienes un problema de sistema.
+"Se llama modo apagaincendios.
 5 señales: sin KPIs claros, decisiones por WhatsApp, reuniones para informar en vez de decidir, el dueño resuelve todo, nadie anticipa problemas."
 
 **[15–20s]** *Pantalla: 3g-ia-agents.com/diagnostico*
@@ -817,7 +818,7 @@ a tomar decisiones con datos reales.
 
 **[20–30s]**
 "Si te reconociste en 3 o más — estás en ERA 1.
-Y eso tiene solución concreta."
+La solución no es más herramientas. Es cambiar el sistema."
 
 ---
 
