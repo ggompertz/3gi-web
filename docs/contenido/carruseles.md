@@ -309,56 +309,25 @@ El 67% de los colaboradores de PyMEs en LATAM no tiene claridad sobre las priori
 ```
 
 ### Short 0C
-**Título:** "El cuello de botella que no ves"  
-**Duración objetivo:** 45–55 seg  
-**Tono:** empático, pregunta directa, escalabilidad
 
----
+**[0–5s] Gancho**
+"¿Si te vas una semana, qué pasa en tu empresa?
+Si la respuesta es 'todo se frena'... el cuello de botella no es tu equipo. Eres tú."
 
-**[APERTURA — 0:00–0:06]**  
-*Pantalla: pregunta en grande*
+**[5–15s] Desarrollo**
+"El 67% de los equipos en PyMEs LATAM no sabe cuáles son las prioridades de la semana.
+No por falta de ganas.
+Porque la información vive en WhatsApp, en la cabeza del responsable, o en un Excel que nadie actualiza."
 
-"¿Si mañana te vas de vacaciones dos semanas,
-tu empresa sigue funcionando sin ti?"
-
----
-
-**[DESARROLLO — 0:06–0:32]**  
-*Pantalla: íconos whatsapp / personas / proyectos*
-
-"Si la respuesta honesta es 'probablemente no' —
-el cuello de botella no son tus empleados.
-Eres tú.
-
-O más precisamente: el sistema.
-
-El 67% de los colaboradores en PyMEs latinoamericanas
-dicen que no tienen claridad sobre las prioridades de la semana.
-
-Trabajan mucho. Pero no en lo que más importa.
-
-¿Por qué?
-Porque la información de los proyectos vive en WhatsApp,
-en la cabeza del responsable,
-o en un Excel que nadie actualiza."
-
----
-
-**[CIERRE — 0:32–0:50]**  
-*Pantalla: ERA 1 → ERA 2 → ERA 3*
-
-"Una empresa que escala necesita que el conocimiento operativo
-esté en el sistema, no en las personas.
-
-ERA 1: el estado del proyecto lo sabe solo el dueño.
-ERA 2: cualquiera puede ver el estado en tiempo real.
+**[15–23s] Conclusión**
+"ERA 1: el estado del negocio lo sabe solo el dueño.
 ERA 3: el sistema detecta el desvío antes de que explote.
+Y ojo, el salto no es contratar a alguien que 'lo maneje todo'.
+Es cambiar el sistema que te hace indispensable."
 
-¿En cuál ERA opera tu equipo?"
-
+**[23–30s] CTA**
+"Ve al enlace de mi perfil y haz el test gratuito de 5 minutos para descubrir en qué ERA opera tu empresa."
 *Pantalla: 3g-ia-agents.com/diagnostico*
-
-"Averígualo gratis en 5 minutos."
 
 ---
 
@@ -751,29 +720,24 @@ ERA 3: el sistema detecta el desvío antes de que explote.
 
 ### Short 01 — "El profesional de USD 3.000"
 
-**[0–3s]** *Texto grande, parte superior. Avatar habla.*
-"USD 864 al mes. Tirados."
+**[0–5s] Gancho**
+"USD 864 al mes. Tirados.
+Y nadie lo veía."
 
-**[3–8s]**
-"Un profesional que cobra USD 3.000 al mes
-pasaba 12 horas semanales en tareas administrativas."
+**[5–15s] Desarrollo**
+"Un profesional de USD 3.000 al mes pasaba 12 horas semanales en tareas administrativas.
+No era ineficiente. Era el sistema.
+Cada hora administrativa vale USD 18. 12 horas a la semana. Cada semana."
 
-**[8–16s]** *Mostrar cálculo en texto mientras habla*
-"No era ineficiente. Era el sistema.
-Cada hora administrativa vale USD 18.
-12 horas a la semana. Cada semana."
+**[15–23s] Conclusión**
+"En ERA 1, el desorden no duele — es invisible.
+Nadie lo mide porque no aparece en ningún reporte.
+Y ojo, el problema no era la persona.
+Era el sistema que hacía que la buena gente perdiera tiempo."
 
-**[16–20s]** *Texto grande centrado, parte superior*
-"¿Cuánto te está costando el desorden?
-3g-ia-agents.com/diagnostico — gratis."
-
-**[20–29s]**
-"ERA 1: el problema existe pero nadie lo ve.
-ERA 3: el sistema lo detecta antes de que explote.
-¿Cuánto llevas sin verlo?"
-
-> Punto de riesgo: seg 8–16, mostrar el cálculo en texto mientras habla para no perder al espectador.
-> Variante A/B hook: "¿Sabes cuánto le cuesta a tu empresa el desorden? Nosotros lo calculamos."
+**[23–30s] CTA**
+"Ve al enlace de mi perfil y haz el test gratuito de 5 minutos para descubrir cuánto te está costando el desorden en tu empresa."
+*Pantalla: 3g-ia-agents.com/diagnostico*
 
 ### Descripción YouTube — Short 01
 
@@ -805,227 +769,246 @@ a tomar decisiones con datos reales.
 
 ### Short 02 — "5 señales de apagaincendios"
 
-**[0–5s]**
+**[0–5s] Gancho**
 "Antes de hablar de IA con un cliente, siempre busco una señal específica.
 La mayoría la tiene. Y no lo saben."
 
-**[5–15s]**
+**[5–15s] Desarrollo**
 "Se llama modo apagaincendios.
 5 señales: sin KPIs claros, decisiones por WhatsApp, reuniones para informar en vez de decidir, el dueño resuelve todo, nadie anticipa problemas."
 
-**[15–20s]** *Pantalla: 3g-ia-agents.com/diagnostico*
-"Descubre en qué ERA está tu empresa — gratis en 5 minutos."
+**[15–23s] Conclusión**
+"Si te reconociste en 3 o más de estas... estás atrapado en ERA 1.
+Y ojo, la solución no es comprar más herramientas.
+Es cambiar tu sistema operativo."
 
-**[20–30s]**
-"Si te reconociste en 3 o más — estás en ERA 1.
-La solución no es más herramientas. Es cambiar el sistema."
+**[23–30s] CTA**
+"Ve al enlace de mi perfil y haz el test gratuito de 5 minutos para descubrir en qué ERA está tu empresa y cómo salir de ahí."
+*Pantalla: 3g-ia-agents.com/diagnostico*
 
 ---
 
 ### Short 03 — "De 30 min a 5 min"
 
-**[0–5s]**
+**[0–5s] Gancho**
 "La mayoría cree que necesita contratar más gente para crecer.
 Casi siempre necesita esto primero."
 
-**[5–15s]**
-"No cambiaron el sistema. Cambiaron cómo lo usaban.
-Automatizaron el primer reporte semanal.
-El equipo recuperó 2 horas por semana cada uno."
+**[5–15s] Desarrollo**
+"Un proceso que tardaba 30 minutos pasó a tardar 5.
+Sin contratar a nadie.
+No cambiaron el sistema. Cambiaron cómo lo usaban.
+El equipo recuperó 2 horas por persona por semana."
 
-**[15–20s]** *Pantalla: 3g-ia-agents.com/diagnostico*
-"¿Cuánto tiempo pierde tu equipo en tareas que podrían automatizarse? Mídelo gratis."
+**[15–23s] Conclusión**
+"Si tu respuesta al límite de capacidad siempre es contratar...
+estás resolviendo en ERA 1 lo que tiene solución en ERA 2.
+Y ojo, el primer paso no es más gente. Es saber exactamente dónde está la fuga."
 
-**[20–30s]**
-"El primer paso no es más tecnología.
-Es saber exactamente dónde está la fuga."
+**[23–30s] CTA**
+"Ve al enlace de mi perfil y haz el test gratuito de 5 minutos para descubrir en qué ERA está tu empresa y cómo salir de ahí."
+*Pantalla: 3g-ia-agents.com/diagnostico*
 
 ---
 
 ### Short 04 — "El costo invisible"
 
-**[0–5s]**
+**[0–5s] Gancho**
 "Las empresas tienen un número que nunca aparece en ningún reporte.
 Y casi siempre es de los más altos."
 
-**[5–15s]**
-"El costo del tiempo perdido en tareas manuales repetibles.
-Si tienes 5 personas haciendo 4 horas semanales de tareas automatizables:
-son 20 horas. Cada semana. Que no generan valor."
+**[5–15s] Desarrollo**
+"Se llama el costo invisible.
+5 personas × 4 horas semanales de tareas automatizables =
+20 horas cada semana que no generan ningún valor.
+Nadie lo mide porque no aparece en ningún estado de resultados."
 
-**[15–20s]** *Pantalla: 3g-ia-agents.com/diagnostico*
-"Calcula tu costo invisible — diagnóstico gratis en 5 minutos."
+**[15–23s] Conclusión**
+"Pero está ahí, todos los meses, sin excepción.
+Y ojo, no es un problema de personas.
+Es que en ERA 1 el desorden tiene costo real — solo que nadie lo ve."
 
-**[20–30s]**
-"No es un problema de personas.
-Es un problema de ERA."
+**[23–30s] CTA**
+"Ve al enlace de mi perfil y haz el test gratuito de 5 minutos para descubrir en qué ERA está tu empresa y cuánto te está costando."
+*Pantalla: 3g-ia-agents.com/diagnostico*
 
 ---
 
 ### Short 05 — "De reactivo a proactivo"
 
-**[0–5s]**
+**[0–5s] Gancho**
 "La mayoría de empresas NO necesita más tecnología.
 Necesita usar bien la que ya tiene."
 
-**[5–15s]**
+**[5–15s] Desarrollo**
 "Una organización pasó de detectar fallas después de que ocurrían
 a anticiparlas con datos en tiempo real.
-El cambio no fue tecnología nueva. Fue usar la que ya tenían, bien."
+No compraron nada nuevo. Reorganizaron cómo fluía la información que ya existía."
 
-**[15–20s]** *Pantalla: 3g-ia-agents.com/diagnostico*
-"¿Tu empresa reacciona o anticipa? Descúbrelo gratis."
+**[15–23s] Conclusión**
+"Antes: el problema aparecía, generaba daño, se resolvía.
+Después: el sistema detecta la señal antes de que explote.
+Y ojo, eso no es magia — es lo que pasa cuando salís de ERA 1."
 
-**[20–30s]**
-"ERA 1 reacciona. ERA 3 anticipa.
-¿Dónde está la tuya?"
+**[23–30s] CTA**
+"Ve al enlace de mi perfil y haz el test gratuito de 5 minutos para descubrir en qué ERA está tu empresa y cómo salir de ahí."
+*Pantalla: 3g-ia-agents.com/diagnostico*
 
 ---
 
 ### Short 06 — "7 procesos a automatizar primero"
 
-**[0–5s]**
+**[0–5s] Gancho**
 "Las empresas pierden miles automatizando los procesos equivocados.
 Estos son los 7 que van primero."
 
-**[5–15s]**
-"Uno: reportes semanales.
-Dos: seguimiento de clientes.
-Tres: clasificación de documentos.
-Cuatro: respuestas a consultas repetidas.
-Cinco: conciliación de facturas.
-Seis: alertas de vencimiento.
+**[5–15s] Desarrollo**
+"Uno: reportes semanales. Dos: seguimiento de clientes.
+Tres: clasificación de documentos. Cuatro: respuestas a consultas repetidas.
+Cinco: conciliación de facturas. Seis: alertas de vencimiento.
 Siete: registro de actividades del equipo."
 
-**[15–20s]** *Pantalla: 3g-ia-agents.com/diagnostico*
-"¿Cuáles tienes sin automatizar? El diagnóstico te lo dice — gratis."
+**[15–23s] Conclusión**
+"Si tenés alguno de estos sin automatizar, no es falta de tecnología.
+Y ojo, el criterio no es qué podés automatizar.
+Es qué te está costando más no automatizar hoy."
 
-**[20–30s]**
-"No necesitas automatizar todo.
-Solo los que más te están costando hoy."
+**[23–30s] CTA**
+"Ve al enlace de mi perfil y haz el test gratuito de 5 minutos para descubrir en qué ERA está tu empresa y por dónde empezar."
+*Pantalla: 3g-ia-agents.com/diagnostico*
 
 ---
 
 ### Short 07 — "ERA 1, ERA 2, ERA 3"
 
-**[0–5s]**
+**[0–5s] Gancho**
 "La mayoría de dueños cree que está en ERA 2.
 Cuando hacemos el diagnóstico, casi siempre están en ERA 1."
 
-**[5–15s]**
-"ERA 1: el negocio corre en tu cabeza.
-ERA 2: corre en sistemas, pero nadie usa los datos para decidir.
+**[5–15s] Desarrollo**
+"ERA 1: el negocio corre en tu cabeza. Decisiones por intuición.
+ERA 2: tenés sistemas, pero los datos no se usan para decidir.
 ERA 3: la IA maneja el volumen, las personas manejan la estrategia."
 
-**[15–20s]** *Pantalla: 3g-ia-agents.com/diagnostico*
-"¿En cuál ERA opera tu empresa? Descúbrelo gratis en 5 minutos."
-
-**[20–30s]**
+**[15–23s] Conclusión**
 "No hay ERA buena o mala.
-Hay ERA actual y ERA siguiente.
-El trabajo es saber cuál es cada una."
+Y ojo, tener un CRM no te pone en ERA 2 si no lo usás para decidir.
+Lo que importa es saber exactamente dónde estás hoy — no dónde creés estar."
+
+**[23–30s] CTA**
+"Ve al enlace de mi perfil y haz el test gratuito de 5 minutos para descubrir en qué ERA opera tu empresa."
+*Pantalla: 3g-ia-agents.com/diagnostico*
 
 ---
 
 ### Short 08 — "+40% capacidad sin contratar"
 
-**[0–5s]**
+**[0–5s] Gancho**
 "Una empresa puede crecer 40% en capacidad sin contratar a nadie.
 Así es como lo hicimos."
 
-**[5–15s]**
+**[5–15s] Desarrollo**
 "No fue magia. Fue estructura.
-Automatizaron 3 procesos que consumían el 30% del tiempo del equipo.
-El equipo no se reemplazó. Se liberó para lo que importa."
+3 procesos consumían el 30% del tiempo del equipo cada semana.
+Los automatizamos. El equipo no se reemplazó — se liberó para lo que importa."
 
-**[15–20s]** *Pantalla: 3g-ia-agents.com/diagnostico*
-"¿Cuánta capacidad está atrapada en tareas manuales en tu empresa? Mídelo gratis."
-
-**[20–30s]**
+**[15–23s] Conclusión**
 "El límite de crecimiento no siempre es ventas.
-A veces es operación."
+Y ojo, si cada vez que crecés necesitás contratar...
+es porque hay capacidad atrapada en tareas manuales que nadie está midiendo."
+
+**[23–30s] CTA**
+"Ve al enlace de mi perfil y haz el test gratuito de 5 minutos para descubrir cuánta capacidad está atrapada en tu empresa."
+*Pantalla: 3g-ia-agents.com/diagnostico*
 
 ---
 
 ### Short 09 — "El Excel como sistema"
 
-**[0–5s]**
+**[0–5s] Gancho**
 "Hay una señal que siempre busco cuando entro a una empresa.
 Si la veo, sé que tienen un riesgo que no están viendo."
 
-**[5–15s]**
-"No es el Excel el problema.
-Es que cuando el Excel es el sistema,
-una sola celda editada por error puede costar horas o clientes.
-Y nadie lo sabe hasta que ya pasó."
+**[5–15s] Desarrollo**
+"Es el Excel compartido por WhatsApp.
+No es el Excel el problema — es una herramienta poderosa.
+El problema es cuando el Excel es el sistema.
+Una celda editada por error puede costar horas o clientes. Y nadie lo sabe hasta que ya pasó."
 
-**[15–20s]** *Pantalla: 3g-ia-agents.com/diagnostico*
-"¿En qué ERA opera tu empresa? Diagnóstico gratis — 5 minutos."
+**[15–23s] Conclusión**
+"ERA 1 vive en Excel. ERA 2 tiene sistema pero no lo usa para decidir.
+Y ojo, el salto no es comprar software.
+Es cambiar cómo fluye la información dentro de tu empresa."
 
-**[20–30s]**
-"ERA 1 vive en Excel.
-ERA 2 tiene sistema pero no lo usa.
-ERA 3 toma decisiones en tiempo real."
+**[23–30s] CTA**
+"Ve al enlace de mi perfil y haz el test gratuito de 5 minutos para descubrir en qué ERA está tu empresa y cómo salir de ahí."
+*Pantalla: 3g-ia-agents.com/diagnostico*
 
 ---
 
 ### Short 10 — "Reactiva vs proactiva"
 
-**[0–5s]**
+**[0–5s] Gancho**
 "Dos empresas. Mismo sector. Mismo presupuesto.
 Una anticipaba problemas. La otra los apagaba. La diferencia no era tecnología."
 
-**[5–15s]**
-"La diferencia no era el presupuesto ni el equipo.
-Era el sistema.
-Una tenía datos. La otra los usaba para decidir antes de que el problema explotara."
+**[5–15s] Desarrollo**
+"Las dos tenían datos.
+Una los usaba para decidir antes de que el problema explotara.
+La otra los miraba después de que el daño ya estaba hecho."
 
-**[15–20s]** *Pantalla: 3g-ia-agents.com/diagnostico*
-"¿Tu empresa reacciona o anticipa? Descúbrelo gratis."
+**[15–23s] Conclusión**
+"Eso no es suerte ni presupuesto.
+Y ojo, pasar de reactivo a proactivo no requiere más tecnología.
+Requiere cambiar el sistema operativo de tu empresa."
 
-**[20–30s]**
-"Pasar de reactivo a proactivo no requiere más tecnología.
-Requiere usar la que ya tienes."
+**[23–30s] CTA**
+"Ve al enlace de mi perfil y haz el test gratuito de 5 minutos para descubrir en qué ERA está tu empresa y cómo salir de ahí."
+*Pantalla: 3g-ia-agents.com/diagnostico*
 
 ---
 
 ### Short 11 — "Los 9 sub-niveles ERA"
 
-**[0–5s]**
+**[0–5s] Gancho**
 "La mayoría de empresas se auto-evalúa dos niveles más arriba de donde realmente está.
 Así es como lo medimos."
 
-**[5–15s]**
-"ERA 1-, ERA 1, ERA 1+.
-ERA 2-, ERA 2, ERA 2+.
-ERA 3-, ERA 3, ERA 3+.
-La mayoría se auto-evalúa 2 niveles más arriba de donde realmente está."
+**[5–15s] Desarrollo**
+"No hay 3 Eras. Hay 9 posiciones exactas.
+ERA 1-, ERA 1, ERA 1+. ERA 2-, ERA 2, ERA 2+. ERA 3-, ERA 3, ERA 3+.
+Cada una tiene costos distintos y un siguiente paso distinto."
 
-**[15–20s]** *Pantalla: 3g-ia-agents.com/diagnostico*
-"¿En qué posición exacta está tu empresa? Descúbrelo gratis."
+**[15–23s] Conclusión**
+"Una empresa en ERA 1+ no tiene el mismo problema que una en ERA 1-.
+Y ojo, la mayoría se cree ERA 2 porque tiene sistemas.
+Pero tener sistemas no es lo mismo que usarlos para decidir."
 
-**[20–30s]**
-"Saber tu posición exacta es el primer paso para moverse en la dirección correcta."
+**[23–30s] CTA**
+"Ve al enlace de mi perfil y haz el test gratuito de 5 minutos para descubrir en qué sub-nivel exacto está tu empresa."
+*Pantalla: 3g-ia-agents.com/diagnostico*
 
 ---
 
 ### Short 12 — "El diagnóstico gratuito"
 
-**[0–5s]**
+**[0–5s] Gancho**
 "Antes de hablar de IA con cualquier dueño de empresa, siempre hago la misma pregunta.
 Y casi nadie la puede responder con datos."
 
-**[5–15s]**
+**[5–15s] Desarrollo**
 "¿Sabes exactamente en qué ERA está tu empresa hoy?
-No lo que crees. Lo que dicen los datos."
+No lo que creés. No lo que sentís. Lo que dicen los datos.
+Tu ERA exacta, dónde está la brecha, y cuánto te está costando no avanzar."
 
-**[15–20s]** *Pantalla: 3g-ia-agents.com/diagnostico*
-"El diagnóstico es gratuito. Tarda menos de 5 minutos.
-Entra ahora: 3g-ia-agents.com/diagnostico"
+**[15–23s] Conclusión**
+"Llevamos meses hablando de costos invisibles, sistemas que frenan el crecimiento, equipos sin dirección.
+Y ojo, todo eso tiene solución concreta.
+Pero el primer paso siempre es el mismo: saber exactamente dónde estás."
 
-**[20–30s]**
-"Te dice tu ERA exacta, dónde está la brecha,
-y cuánto te está costando no avanzar."
+**[23–30s] CTA**
+"Ve al enlace de mi perfil y haz el test gratuito de 5 minutos. Sin llamada de ventas. Sin compromiso. Solo claridad."
+*Pantalla: 3g-ia-agents.com/diagnostico*
 
 
 
