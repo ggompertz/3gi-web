@@ -9,7 +9,7 @@ Formato: Short/Reel (30s) + texto LinkedIn/Facebook
 
 | Post | Fecha | Tema | Short | LinkedIn | Estado |
 |---|---|---|---|---|---|
-| 02 | 18 May | 5 señales de apagaincendios | ✅ | ✅ | ✅ publicado |
+| 02 | 18 May | 5 señales de apagaincendios | ✅ | ✅ | ✅ completo |
 | 03 | 21 May | Caso AMCL — De 30 min a 5 min | ✅ | ✅ | ⏳ pendiente |
 | 04 | 24 May | El costo invisible | ✅ | ✅ | ⏳ pendiente |
 | 05 | 27 May | Caso COVES — De reactivo a proactivo | ✅ | ✅ | ⏳ pendiente |
@@ -26,8 +26,7 @@ Formato: Short/Reel (30s) + texto LinkedIn/Facebook
 ## Post 02 — 5 señales de apagaincendios
 
 **Fecha:** 18 May 2026  
-**Links:** [YouTube Short](https://youtube.com/shorts/vjYfnF5C5LA) · [Instagram Reel](https://www.instagram.com/reel/DYdEmC0ivxG/)  
-**Imagen LinkedIn/Facebook:** https://pub-afec22bc076746d1804ccf623d884c82.r2.dev/carruseles/post-02/slide-1.png *(borrar al completar)*
+**Links:** [YouTube Short](https://youtube.com/shorts/vjYfnF5C5LA) · [Instagram Reel](https://www.instagram.com/reel/DYdEmC0ivxG/) · [LinkedIn](https://www.linkedin.com/feed/update/urn:li:activity:7461889065026772992) · [Facebook](https://web.facebook.com/share/p/18dBjm5WAJ/)
 
 ### Short 02
 
