@@ -825,7 +825,8 @@ La solución no es más herramientas. Es cambiar el sistema."
 ### Short 03 — "De 30 min a 5 min"
 
 **[0–5s]**
-"Un proceso que tardaba 30 minutos pasó a tardar 5. Sin contratar a nadie."
+"La mayoría cree que necesita contratar más gente para crecer.
+Casi siempre necesita esto primero."
 
 **[5–15s]**
 "No cambiaron el sistema. Cambiaron cómo lo usaban.
@@ -844,7 +845,8 @@ Es saber exactamente dónde está la fuga."
 ### Short 04 — "El costo invisible"
 
 **[0–5s]**
-"Hay un costo en tu empresa que no aparece en ningún reporte."
+"Las empresas tienen un número que nunca aparece en ningún reporte.
+Y casi siempre es de los más altos."
 
 **[5–15s]**
 "El costo del tiempo perdido en tareas manuales repetibles.
@@ -863,7 +865,8 @@ Es un problema de ERA."
 ### Short 05 — "De reactivo a proactivo"
 
 **[0–5s]**
-"Antes respondían al problema. Ahora lo ven venir."
+"La mayoría de empresas NO necesita más tecnología.
+Necesita usar bien la que ya tiene."
 
 **[5–15s]**
 "Una organización pasó de detectar fallas después de que ocurrían
@@ -882,7 +885,8 @@ El cambio no fue tecnología nueva. Fue usar la que ya tenían, bien."
 ### Short 06 — "7 procesos a automatizar primero"
 
 **[0–5s]**
-"Si no sabes por dónde empezar a automatizar, empieza por estos 7."
+"Las empresas pierden miles automatizando los procesos equivocados.
+Estos son los 7 que van primero."
 
 **[5–15s]**
 "Uno: reportes semanales.
@@ -905,7 +909,8 @@ Solo los que más te están costando hoy."
 ### Short 07 — "ERA 1, ERA 2, ERA 3"
 
 **[0–5s]**
-"Hay 3 niveles de madurez empresarial. La mayoría cree estar en uno y está en otro."
+"La mayoría de dueños cree que está en ERA 2.
+Cuando hacemos el diagnóstico, casi siempre están en ERA 1."
 
 **[5–15s]**
 "ERA 1: el negocio corre en tu cabeza.
@@ -925,7 +930,8 @@ El trabajo es saber cuál es cada una."
 ### Short 08 — "+40% capacidad sin contratar"
 
 **[0–5s]**
-"Una empresa aumentó su capacidad operativa en 40% sin sumar una sola persona."
+"Una empresa puede crecer 40% en capacidad sin contratar a nadie.
+Así es como lo hicimos."
 
 **[5–15s]**
 "No fue magia. Fue estructura.
@@ -944,7 +950,8 @@ A veces es operación."
 ### Short 09 — "El Excel como sistema"
 
 **[0–5s]**
-"Si tu sistema de gestión es un Excel compartido por WhatsApp — tienes un riesgo que no ves."
+"Hay una señal que siempre busco cuando entro a una empresa.
+Si la veo, sé que tienen un riesgo que no están viendo."
 
 **[5–15s]**
 "No es el Excel el problema.
@@ -965,7 +972,8 @@ ERA 3 toma decisiones en tiempo real."
 ### Short 10 — "Reactiva vs proactiva"
 
 **[0–5s]**
-"Dos organizaciones del mismo sector. Una siempre apagando incendios. La otra, anticipándolos."
+"Dos empresas. Mismo sector. Mismo presupuesto.
+Una anticipaba problemas. La otra los apagaba. La diferencia no era tecnología."
 
 **[5–15s]**
 "La diferencia no era el presupuesto ni el equipo.
@@ -984,7 +992,8 @@ Requiere usar la que ya tienes."
 ### Short 11 — "Los 9 sub-niveles ERA"
 
 **[0–5s]**
-"No hay 3 Eras. Hay 9 posiciones exactas. Y cada una tiene un costo distinto."
+"La mayoría de empresas se auto-evalúa dos niveles más arriba de donde realmente está.
+Así es como lo medimos."
 
 **[5–15s]**
 "ERA 1-, ERA 1, ERA 1+.
@@ -1003,7 +1012,8 @@ La mayoría se auto-evalúa 2 niveles más arriba de donde realmente está."
 ### Short 12 — "El diagnóstico gratuito"
 
 **[0–5s]**
-"Hay una pregunta que le hago a cada dueño de empresa antes de hablar de IA."
+"Antes de hablar de IA con cualquier dueño de empresa, siempre hago la misma pregunta.
+Y casi nadie la puede responder con datos."
 
 **[5–15s]**
 "¿Sabes exactamente en qué ERA está tu empresa hoy?
