@@ -397,6 +397,30 @@ a tomar decisiones con datos reales.
 **Tema:** Caso AMCL — El profesional de USD 3.000  
 **Tipo:** Caso real | **CTA:** ¿Te reconoces?
 
+**Texto LinkedIn publicado:**
+```
+Tu mejor profesional te está costando el doble.
+
+No por su sueldo. Por el sistema que lo rodea.
+
+Un profesional de USD 3.000 al mes.
+12 horas semanales en tareas administrativas.
+USD 864 mensuales que no generaron ningún resultado.
+
+No era ineficiente. Era ERA 1.
+
+En ERA 1, el desorden no duele — es invisible.
+Nadie lo mide porque nadie lo ve en los reportes.
+Pero está ahí, todos los meses, sin excepción.
+
+La solución no es contratar mejor gente.
+Es cambiar el sistema que hace que la buena gente pierda tiempo.
+
+¿Sabes exactamente cuánto tiempo pierde tu equipo en tareas que no generan valor?
+
+#GestiónEmpresarial #PyME #EficienciaOperacional #InteligenciaArtificial #3GIntelligence
+```
+
 ```json
 {
   "image_urls": [
@@ -420,7 +444,39 @@ a tomar decisiones con datos reales.
 
 ## Post 02
 **Tema:** 5 señales de "apagaincendios"  
-**Tipo:** Diagnóstico | **CTA:** Escribe ERA
+**Tipo:** Diagnóstico | **CTA:** ¿En cuántas te reconociste?
+
+**Texto LinkedIn:**
+```
+Antes de hablar de IA con un cliente, siempre busco una señal específica.
+
+La mayoría la tiene. Y no lo saben.
+
+Se llama modo apagaincendios.
+
+No es un problema de agenda.
+No es falta de gente.
+Es un problema de sistema.
+
+5 señales para reconocerlo:
+→ Sin KPIs claros
+→ Decisiones por WhatsApp
+→ Reuniones para informar, no para decidir
+→ El dueño resuelve todo
+→ Nadie anticipa problemas
+
+Si te reconociste en 3 o más — estás en ERA 1.
+
+En ERA 1 el equipo trabaja. Pero sin dirección clara.
+La energía que debería ir al crecimiento se va en apagar lo de hoy.
+
+La solución no es más herramientas.
+Es cambiar el sistema que genera los incendios.
+
+¿En cuántas te reconociste?
+
+#GestiónEmpresarial #PyME #ERA #EficienciaOperacional #3GIntelligence
+```
 
 ```json
 {
