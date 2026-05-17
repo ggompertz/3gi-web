@@ -26,7 +26,7 @@ Formato: Short/Reel (30s) + texto LinkedIn/Facebook
 ## Post 02 — 5 señales de apagaincendios
 
 **Fecha:** 18 May 2026  
-**Links:** [YouTube Short](https://youtube.com/shorts/vjYfnF5C5LA)
+**Links:** [YouTube Short](https://youtube.com/shorts/vjYfnF5C5LA) · [Instagram Reel](https://www.instagram.com/reel/DYdEmC0ivxG/)
 
 ### Short 02
 
