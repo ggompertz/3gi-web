@@ -233,8 +233,8 @@ estás resolviendo en ERA 1 lo que tiene solución en ERA 2.
 ### Short 04
 
 **[0–5s] Gancho**
-"Las empresas tienen un número que nunca aparece en ningún reporte.
-Y casi siempre es de los más altos."
+"Tus procesos ya te están costando dinero.
+El problema es que todavía no sabes cuánto."
 
 **[5–15s] Desarrollo**
 "Se llama el costo invisible.
@@ -254,9 +254,9 @@ Es que en ERA 1 el desorden tiene costo real — solo que nadie lo ve."
 ### Texto LinkedIn/Facebook
 
 ```
-Las empresas tienen un número que nunca aparece en ningún reporte.
+Tus procesos ya te están costando dinero.
 
-Y casi siempre es de los más altos.
+El problema es que todavía no sabes cuánto.
 
 Se llama el costo invisible.
 
@@ -281,12 +281,12 @@ En ERA 3, el sistema lo detecta y lo elimina antes de que acumule.
 
 ### Descripción YouTube — Short 04
 
-**Título:** El número más alto de tu empresa que no aparece en ningún reporte
+**Título:** Tus procesos ya te están costando dinero (y todavía no sabés cuánto)
 
 **Descripción:**
 ```
-Las empresas tienen un número que nunca aparece en ningún reporte.
-Y casi siempre es de los más altos.
+Tus procesos ya te están costando dinero.
+El problema es que todavía no sabes cuánto.
 
 Se llama el costo invisible: el tiempo perdido en tareas manuales repetibles
 que nadie mide porque no aparece en ningún estado de resultados.
@@ -306,9 +306,9 @@ a tomar decisiones con datos reales.
 ### Caption Instagram Reel — Post 04
 
 ```
-Las empresas tienen un número que nunca aparece en ningún reporte.
+Tus procesos ya te están costando dinero.
 
-Y casi siempre es de los más altos.
+El problema es que todavía no sabes cuánto.
 
 5 personas × 4 horas semanales de tareas automatizables =
 20 horas cada semana que no generan ningún valor.
@@ -432,33 +432,36 @@ Eso no es magia. Es lo que pasa cuando salís de ERA 1.
 ### Short 06
 
 **[0–5s] Gancho**
-"Las empresas pierden miles automatizando los procesos equivocados.
-Estos son los 7 que van primero."
+"La mayoría de las empresas NO necesita más herramientas de IA.
+Necesita descubrir dónde está perdiendo dinero primero."
 
 **[5–15s] Desarrollo**
-"Uno: reportes semanales. Dos: seguimiento de clientes.
-Tres: clasificación de documentos. Cuatro: respuestas a consultas repetidas.
-Cinco: conciliación de facturas. Seis: alertas de vencimiento.
-Siete: registro de actividades del equipo."
+"Después de trabajar con decenas de PyMEs, estos son los 7 procesos
+donde casi siempre está la fuga:
+reportes manuales, seguimiento de clientes, clasificación de documentos,
+respuestas repetidas, conciliación de facturas, alertas de vencimiento,
+registro de actividades."
 
 **[15–23s] Conclusión**
-"Si tenés alguno de estos sin automatizar, no es falta de tecnología.
-Y ojo, el criterio no es qué podés automatizar.
-Es qué te está costando más no automatizar hoy."
+"No son los más sofisticados. Son los que más dinero te cuestan hoy.
+Y ojo, el error no es no automatizar.
+Es automatizar sin saber dónde está la pérdida."
 
 **[23–30s] CTA**
-"Ve al enlace de mi perfil y haz el test gratuito de 5 minutos para descubrir en qué ERA está tu empresa y por dónde empezar."
+"Ve al enlace de mi perfil y haz el test gratuito de 5 minutos para descubrir dónde está perdiendo dinero tu empresa y por dónde empezar."
 *Pantalla: 3g-ia-agents.com/diagnostico*
 
 ### Texto LinkedIn/Facebook
 
 ```
-Las empresas pierden miles automatizando los procesos equivocados.
+La mayoría de las empresas NO necesita más herramientas de IA.
+
+Necesita descubrir dónde está perdiendo dinero primero.
 
 El error no es automatizar.
-Es automatizar sin saber por dónde empezar.
+Es automatizar sin saber dónde está la fuga.
 
-Después de trabajar con decenas de PyMEs, estos son los 7 procesos que generan el mayor retorno cuando se automatizan primero:
+Después de trabajar con decenas de PyMEs, estos son los 7 procesos donde casi siempre está la pérdida:
 
 1. Reportes semanales
 2. Seguimiento de clientes
@@ -471,8 +474,8 @@ Después de trabajar con decenas de PyMEs, estos son los 7 procesos que generan 
 No son los más sofisticados.
 Son los que más tiempo consumen y menos valor agregan en ERA 1 y ERA 2.
 
-El criterio no es "¿qué podemos automatizar?"
-Es "¿qué nos está costando más no automatizar?"
+Automatizar el proceso equivocado no resuelve nada.
+Automatizar el correcto puede cambiar cómo opera toda tu empresa.
 
 ¿Cuáles de estos 7 tienes sin resolver hoy?
 
@@ -481,17 +484,19 @@ Es "¿qué nos está costando más no automatizar?"
 
 ### Descripción YouTube — Short 06
 
-**Título:** Los 7 procesos que automatizan primero las empresas que escalan
+**Título:** Tu empresa no necesita más IA — necesita saber dónde está perdiendo dinero primero
 
 **Descripción:**
 ```
-Las empresas pierden miles automatizando los procesos equivocados.
+La mayoría de las empresas NO necesita más herramientas de IA.
+Necesita descubrir dónde está perdiendo dinero primero.
 
-Después de trabajar con decenas de PyMEs, estos son los 7 que generan
-el mayor retorno cuando se automatizan primero.
+Después de trabajar con decenas de PyMEs, estos son los 7 procesos
+que generan el mayor retorno cuando se automatizan primero —
+porque ahí es donde casi siempre está la fuga.
 
-El criterio no es "qué podés automatizar" —
-es "qué te está costando más no automatizar hoy."
+El criterio no es "qué podés automatizar."
+Es "dónde está la pérdida real hoy."
 
 🔍 Descubre en qué ERA opera tu empresa → 3g-ia-agents.com/diagnostico
 
@@ -505,9 +510,11 @@ a tomar decisiones con datos reales.
 ### Caption Instagram Reel — Post 06
 
 ```
-Las empresas pierden miles automatizando los procesos equivocados.
+La mayoría de las empresas NO necesita más herramientas de IA.
 
-Estos son los 7 que van primero:
+Necesita descubrir dónde está perdiendo dinero primero.
+
+Los 7 procesos donde casi siempre está la fuga:
 
 1. Reportes semanales
 2. Seguimiento de clientes
@@ -517,8 +524,8 @@ Estos son los 7 que van primero:
 6. Alertas de vencimiento
 7. Registro de actividades del equipo
 
-El criterio no es qué podés automatizar.
-Es qué te está costando más no automatizar hoy.
+El error no es no automatizar.
+Es automatizar sin saber dónde está la pérdida.
 
 🔗 Test gratuito en el link de mi perfil
 

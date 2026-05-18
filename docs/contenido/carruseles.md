@@ -814,8 +814,8 @@ Y ojo, el primer paso no es más gente. Es saber exactamente dónde está la fug
 ### Short 04 — "El costo invisible"
 
 **[0–5s] Gancho**
-"Las empresas tienen un número que nunca aparece en ningún reporte.
-Y casi siempre es de los más altos."
+"Tus procesos ya te están costando dinero.
+El problema es que todavía no sabes cuánto."
 
 **[5–15s] Desarrollo**
 "Se llama el costo invisible.
@@ -859,8 +859,8 @@ Y ojo, eso no es magia — es lo que pasa cuando salís de ERA 1."
 ### Short 06 — "7 procesos a automatizar primero"
 
 **[0–5s] Gancho**
-"Las empresas pierden miles automatizando los procesos equivocados.
-Estos son los 7 que van primero."
+"La mayoría de las empresas NO necesita más herramientas de IA.
+Necesita descubrir dónde está perdiendo dinero primero."
 
 **[5–15s] Desarrollo**
 "Uno: reportes semanales. Dos: seguimiento de clientes.
