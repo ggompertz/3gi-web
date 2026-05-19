@@ -1,0 +1,313 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<style>
+/* PAGE HERO */
+.faq-hero { padding: 140px 0 72px; background: var(--night-2); border-bottom: 1px solid var(--border); }
+.faq-hero .page-tag { font-family: 'Syne', sans-serif; font-size: 11px; font-weight: 700; letter-spacing: .2em; text-transform: uppercase; color: var(--green); margin-bottom: 16px; }
+.faq-hero h1 { font-family: 'Syne', sans-serif; font-weight: 800; font-size: clamp(32px, 5vw, 52px); letter-spacing: -.03em; line-height: 1.05; margin-bottom: 16px; }
+.faq-hero h1 em { color: var(--green); font-style: normal; }
+.faq-hero p { font-size: 18px; font-weight: 300; color: rgba(238,241,246,0.6); max-width: 560px; line-height: 1.65; }
+
+/* ESPEJO */
+#espejo { background: var(--night); padding: 96px 0; }
+.espejo-intro { font-family: 'Syne', sans-serif; font-weight: 800; font-size: clamp(20px, 3vw, 28px); letter-spacing: -.02em; line-height: 1.2; max-width: 640px; margin-bottom: 48px; }
+.espejo-intro span { color: var(--green); }
+.espejo-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; margin-bottom: 48px; }
+.espejo-q { background: var(--night-3); border: 1px solid var(--border); border-radius: 12px; padding: 24px 24px 24px 20px; border-left: 3px solid rgba(0,232,145,0.3); transition: border-color .2s, border-left-color .2s; }
+.espejo-q:hover { border-color: rgba(0,232,145,0.25); border-left-color: var(--green); }
+.espejo-q p { font-family: 'Syne', sans-serif; font-weight: 700; font-size: clamp(14px, 1.6vw, 16px); line-height: 1.35; color: rgba(238,241,246,0.85); }
+.espejo-cta-strip { display: flex; align-items: center; gap: 20px; padding: 24px 28px; background: rgba(0,232,145,0.04); border: 1px solid rgba(0,232,145,0.15); border-radius: 12px; flex-wrap: wrap; }
+.espejo-cta-txt { font-family: 'Syne', sans-serif; font-weight: 800; font-size: clamp(15px, 2vw, 18px); flex: 1; min-width: 220px; }
+.espejo-cta-txt span { color: var(--green); }
+
+/* FAQ SECTIONS */
+#faq-page { background: var(--night-2); padding: 96px 0; }
+.faq-cats { display: flex; flex-direction: column; gap: 64px; }
+.faq-cat-title { font-family: 'Syne', sans-serif; font-weight: 800; font-size: clamp(18px, 2.5vw, 24px); letter-spacing: -.02em; margin-bottom: 4px; }
+.faq-cat-sub { font-size: 14px; color: var(--muted); margin-bottom: 24px; }
+.faq-list { display: flex; flex-direction: column; gap: 2px; }
+.faq-item { border: 1px solid var(--border); border-radius: 10px; overflow: hidden; transition: border-color .2s; }
+.faq-item.open { border-color: rgba(0,232,145,.25); }
+.faq-q-btn { width: 100%; background: var(--night-3); border: none; text-align: left; padding: 20px 24px; display: flex; align-items: center; justify-content: space-between; gap: 16px; cursor: pointer; font-family: 'Syne', sans-serif; font-weight: 800; font-size: clamp(14px, 1.8vw, 16px); color: var(--offwh); letter-spacing: -.01em; line-height: 1.3; transition: background .15s; }
+.faq-q-btn:hover { background: rgba(255,255,255,.03); }
+.faq-ico { flex-shrink: 0; width: 22px; height: 22px; border-radius: 50%; border: 1px solid rgba(0,232,145,.3); display: flex; align-items: center; justify-content: center; color: var(--green); transition: transform .25s; font-size: 16px; line-height: 1; }
+.faq-item.open .faq-ico { transform: rotate(45deg); }
+.faq-ans { max-height: 0; overflow: hidden; transition: max-height .32s ease; }
+.faq-item.open .faq-ans { max-height: 400px; }
+.faq-ans-inner { padding: 0 24px 22px; font-size: 15px; color: rgba(238,241,246,0.7); line-height: 1.75; }
+.faq-ans-inner strong { color: var(--green); font-weight: 600; }
+.faq-ans-inner a { color: var(--green); text-decoration: underline; text-underline-offset: 3px; }
+
+/* CTA FINAL */
+.faq-cta-band { background: var(--night); border-top: 1px solid var(--border); padding: 80px 0; text-align: center; }
+.faq-cta-band h2 { font-family: 'Syne', sans-serif; font-weight: 800; font-size: clamp(24px, 4vw, 40px); letter-spacing: -.03em; margin-bottom: 12px; }
+.faq-cta-band h2 span { color: var(--green); }
+.faq-cta-band p { font-size: 16px; color: var(--muted); margin-bottom: 32px; max-width: 480px; margin-left: auto; margin-right: auto; }
+.cta-buttons { display: flex; align-items: center; justify-content: center; gap: 14px; flex-wrap: wrap; }
+
+@media (max-width: 700px) {
+  .espejo-grid { grid-template-columns: 1fr; }
+  .espejo-cta-strip { flex-direction: column; text-align: center; }
+  .espejo-cta-strip .btn { width: 100%; justify-content: center; }
+}
+</style>
+
+<Layout
+  title="Preguntas frecuentes sobre consultoría de IA para PyMEs · 3G Intelligence"
+  description="¿Cuánto cuesta implementar IA? ¿Cuánto tiempo toma? ¿Sirve para mi empresa? Respondemos las preguntas reales que hacen los dueños de PyMEs antes de dar el paso."
+>
+
+<!-- HERO -->
+<div class="faq-hero">
+  <div class="container">
+    <div class="page-tag">Preguntas frecuentes</div>
+    <h1>Las preguntas que hacen<br>los dueños de empresa<br><em>antes de dar el paso.</em></h1>
+    <p>Sin filtros. Sin marketing. Las respuestas que realmente necesitas para decidir si la IA tiene sentido para tu negocio hoy.</p>
+  </div>
+</div>
+
+<!-- ESPEJO DE DOLOR -->
+<section id="espejo">
+  <div class="container">
+    <p class="espejo-intro">Si alguna de estas preguntas <span>resuena contigo</span>, ya tienes la respuesta que necesitas.</p>
+    <div class="espejo-grid">
+      <div class="espejo-q"><p>¿Tu equipo trabaja todo el día... o apaga incendios todo el día?</p></div>
+      <div class="espejo-q"><p>¿Cuánto dinero pierde tu empresa en tareas que alguien repite manualmente cada semana?</p></div>
+      <div class="espejo-q"><p>¿Qué proceso colapsa primero cuando aumenta la demanda?</p></div>
+      <div class="espejo-q"><p>¿Cuántas decisiones importantes sigues tomando sin datos reales?</p></div>
+      <div class="espejo-q"><p>¿Tu empresa está creciendo... o solo acumulando caos operativo?</p></div>
+      <div class="espejo-q"><p>¿Qué parte de tu operación depende demasiado de una sola persona?</p></div>
+      <div class="espejo-q"><p>¿Qué pasará cuando tu competencia sí implemente IA y tú no?</p></div>
+      <div class="espejo-q"><p>¿Dónde se pierde más tiempo hoy en tu empresa — y nadie lo mide?</p></div>
+    </div>
+    <div class="espejo-cta-strip">
+      <p class="espejo-cta-txt">El diagnóstico responde <span>exactamente</span> eso — en menos de 5 minutos.</p>
+      <a href="/diagnostico" class="btn btn-primary">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        Hacer el diagnóstico gratuito
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ POR CATEGORÍA -->
+<section id="faq-page">
+  <div class="container">
+    <div class="faq-cats">
+
+      <!-- CATEGORÍA 1: DINERO Y ROI -->
+      <div>
+        <div class="section-tag">Dinero y ROI</div>
+        <h2 class="faq-cat-title">¿Cuánto cuesta y cuánto se recupera?</h2>
+        <p class="faq-cat-sub">Las preguntas reales sobre inversión, retorno y riesgo.</p>
+        <div class="faq-list">
+          <div class="faq-item">
+            <button class="faq-q-btn" aria-expanded="false">¿Cuánto cuesta implementar IA en una PyME?<span class="faq-ico">+</span></button>
+            <div class="faq-ans"><div class="faq-ans-inner">Depende del alcance. El <strong>diagnóstico inicial es gratuito</strong>. Las fases de consultoría van de <strong>USD 1.500 a USD 7.000</strong> con precio fijo y entregables definidos antes de comenzar — sin cobros por hora. Si el diagnóstico muestra oportunidades reales, el costo se descuenta de la implementación si se contrata dentro de los 90 días.</div></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q-btn" aria-expanded="false">¿En cuánto tiempo se recupera la inversión?<span class="faq-ico">+</span></button>
+            <div class="faq-ans"><div class="faq-ans-inner">El caso promedio que trabajamos muestra retorno en <strong>4–8 meses</strong>. El caso que publicamos en esta web recuperó USD 250K en procesos sin facturar en el primer trimestre post-implementación. El diagnóstico proyecta el ROI a 12 meses por cada oportunidad antes de que decidas si invertir.</div></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q-btn" aria-expanded="false">¿Cuánto dinero pierde mi empresa en tareas repetitivas hoy?<span class="faq-ico">+</span></button>
+            <div class="faq-ans"><div class="faq-ans-inner">Eso es precisamente lo que mide el diagnóstico. En promedio, una PyME de 20–50 personas pierde <strong>entre USD 30.000 y USD 80.000 anuales</strong> en trabajo manual que podría automatizarse — cotizaciones, reportes, seguimientos, carga de datos. La mayoría no lo sabe porque nunca lo midió.</div></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q-btn" aria-expanded="false">¿Qué pasa si el diagnóstico muestra que no vale la pena?<span class="faq-ico">+</span></button>
+            <div class="faq-ans"><div class="faq-ans-inner">Te lo decimos directamente. No vamos a crear un proyecto donde no hay oportunidad real. Si el diagnóstico muestra que tu empresa no está lista o que el ROI no justifica la inversión, recibes ese informe igual — y es tuyo para usar como quieras. Preferimos clientes que avanzan con convicción.</div></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CATEGORÍA 2: TIEMPO Y PROCESO -->
+      <div>
+        <div class="section-tag">Tiempo y proceso</div>
+        <h2 class="faq-cat-title">¿Cuándo empiezo a ver resultados?</h2>
+        <p class="faq-cat-sub">Plazos reales, sin promesas de "implementación en 24 horas".</p>
+        <div class="faq-list">
+          <div class="faq-item">
+            <button class="faq-q-btn" aria-expanded="false">¿Cuánto tiempo toma implementar IA en mi empresa?<span class="faq-ico">+</span></button>
+            <div class="faq-ans"><div class="faq-ans-inner">El diagnóstico completo toma <strong>3–4 semanas</strong>. Las implementaciones de Quick Wins (procesos simples) se ejecutan en <strong>4–8 semanas</strong>. Proyectos más complejos de automatización toman 2–4 meses. El diagnóstico te dice exactamente qué esperar antes de comprometer tiempo o presupuesto.</div></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q-btn" aria-expanded="false">¿Cómo implemento IA sin romper la operación actual?<span class="faq-ico">+</span></button>
+            <div class="faq-ans"><div class="faq-ans-inner">Es la pregunta correcta. Nunca empezamos por el proceso crítico — empezamos por los <strong>Quick Wins</strong>: tareas repetitivas de bajo riesgo donde una falla no afecta la operación central. Una vez que el equipo gana confianza y el proceso demuestra resultados, escalamos. El orden importa más que la tecnología.</div></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q-btn" aria-expanded="false">¿Qué procesos conviene automatizar primero?<span class="faq-ico">+</span></button>
+            <div class="faq-ans"><div class="faq-ans-inner">Los que combinan tres cosas: <strong>alto volumen, mucho tiempo manual, y bajo riesgo si se equivocan</strong>. Generalmente: cotizaciones, reportes periódicos, carga de datos entre sistemas, seguimientos de clientes y proveedores. El diagnóstico los identifica y los ordena por ROI.</div></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q-btn" aria-expanded="false">¿Necesito tener mis datos ordenados antes de empezar?<span class="faq-ico">+</span></button>
+            <div class="faq-ans"><div class="faq-ans-inner">No necesariamente. Si el diagnóstico detecta brechas de datos, ofrecemos un proyecto de <strong>Data Foundation</strong> previo que organiza, limpia e integra tus datos. Es un paso opcional entre el diagnóstico y la implementación de IA — y tiene precio fijo según complejidad.</div></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CATEGORÍA 3: ¿ES PARA MI EMPRESA? -->
+      <div>
+        <div class="section-tag">¿Es para mi empresa?</div>
+        <h2 class="faq-cat-title">¿La IA sirve para una PyME?</h2>
+        <p class="faq-cat-sub">El mito más grande que frena a los dueños de empresa.</p>
+        <div class="faq-list">
+          <div class="faq-item">
+            <button class="faq-q-btn" aria-expanded="false">¿La IA es solo para empresas grandes con presupuesto de tecnología?<span class="faq-ico">+</span></button>
+            <div class="faq-ans"><div class="faq-ans-inner">No. Las herramientas de IA más efectivas para operaciones cotidianas son accesibles desde <strong>USD 50–200 al mes</strong>. El problema no es el costo de la herramienta — es saber qué automatizar, en qué orden y cómo integrarlo sin romper lo que ya funciona. Eso es exactamente lo que hace 3GI.</div></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q-btn" aria-expanded="false">¿Para qué rubros funciona mejor?<span class="faq-ico">+</span></button>
+            <div class="faq-ans"><div class="faq-ans-inner">Servicios profesionales (estudios, consultoras, salud), manufactura, logística y transporte, construcción y certificaciones, comercio y distribución. Si tu empresa tiene <strong>procesos repetibles con 10–200 personas</strong>, el método funciona — independiente del rubro. Lo que importa es que haya procesos, no que el rubro sea "tech".</div></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q-btn" aria-expanded="false">¿Mi equipo actual puede usar IA o necesito contratar especialistas?<span class="faq-ico">+</span></button>
+            <div class="faq-ans"><div class="faq-ans-inner">Tu equipo actual puede usar IA — ese es el objetivo. No implementamos soluciones que requieran un equipo técnico nuevo. La arquitectura que entregamos está diseñada para que <strong>personas sin conocimiento técnico</strong> puedan operar y escalar las soluciones después de un onboarding de 1–2 horas.</div></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q-btn" aria-expanded="false">¿Funciona para empresas fuera de Chile?<span class="faq-ico">+</span></button>
+            <div class="faq-ans"><div class="faq-ans-inner">Sí. Trabajamos con empresas en <strong>Chile, México, Colombia, Argentina y Perú</strong>. El diagnóstico y todas las fases se realizan de forma remota — sin costo de traslado. Lo único que varía entre países es el contexto regulatorio, que consideramos en el análisis.</div></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CATEGORÍA 4: MIEDO A QUEDARSE ATRÁS -->
+      <div>
+        <div class="section-tag">El momento de actuar</div>
+        <h2 class="faq-cat-title">¿Qué pasa si espero?</h2>
+        <p class="faq-cat-sub">Las preguntas que nadie hace en voz alta pero todos piensan.</p>
+        <div class="faq-list">
+          <div class="faq-item">
+            <button class="faq-q-btn" aria-expanded="false">¿Qué pasará cuando mi competencia sí implemente IA?<span class="faq-ico">+</span></button>
+            <div class="faq-ans"><div class="faq-ans-inner">Las empresas que implementan IA primero ganan en <strong>velocidad, costo y calidad</strong> simultáneamente. Una empresa que cotiza en 3 minutos compite diferente a una que tarda 35. Una que factura automático no pierde ingresos por descuido. La ventaja no es gradual — es estructural. Y una vez que se instala, es difícil de alcanzar.</div></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q-btn" aria-expanded="false">¿La IA va a reemplazar a mis trabajadores?<span class="faq-ico">+</span></button>
+            <div class="faq-ans"><div class="faq-ans-inner">No en el sentido que te preocupa. Lo que reemplaza la IA son <strong>tareas</strong>, no personas. El trabajador que pasaba 35 minutos haciendo una cotización ahora cierra más ventas en el mismo tiempo. El que controlaba expedientes manualmente ahora supervisa excepciones. El objetivo no es reducir gente — es multiplicar lo que hace cada uno.</div></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q-btn" aria-expanded="false">¿Qué riesgos tiene usar IA? ¿Errores, privacidad, dependencia?<span class="faq-ico">+</span></button>
+            <div class="faq-ans"><div class="faq-ans-inner">Son riesgos reales — y por eso el diagnóstico los mapea antes de implementar. Los mitigamos con tres principios: <strong>empezar en procesos de bajo riesgo</strong>, mantener los datos en tu infraestructura (sin lock-in), y no automatizar decisiones críticas sin revisión humana. El riesgo cero no existe — pero el riesgo calculado es manejable.</div></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q-btn" aria-expanded="false">¿Cuál es la diferencia entre contratar 3GI y comprar una herramienta de IA?<span class="faq-ico">+</span></button>
+            <div class="faq-ans"><div class="faq-ans-inner">Una herramienta es genérica. El problema es saber cuál usar, para qué proceso, cómo integrarla con lo que ya tienes, y cómo hacer que tu equipo la adopte. Sin eso, la herramienta se convierte en otra licencia sin usar. 3GI no te vende herramientas — te entrega el <strong>diagnóstico, el roadmap y el acompañamiento</strong> para que el cambio sea real y medible.</div></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CATEGORÍA 5: CÓMO TRABAJAMOS -->
+      <div>
+        <div class="section-tag">Cómo trabajamos</div>
+        <h2 class="faq-cat-title">¿Quién hace el trabajo y cómo?</h2>
+        <p class="faq-cat-sub">Sin letra chica. Así es el proceso real.</p>
+        <div class="faq-list">
+          <div class="faq-item">
+            <button class="faq-q-btn" aria-expanded="false">¿Quién hace el trabajo — ustedes o me dejan con una herramienta?<span class="faq-ico">+</span></button>
+            <div class="faq-ans"><div class="faq-ans-inner">Nosotros hacemos el diagnóstico, el análisis y el roadmap. En F4 y F5 acompañamos la implementación con un consultor dedicado. <strong>No es un curso ni software</strong> que te dejamos solo. El objetivo es que al terminar, tu equipo opere de forma autónoma — sin depender de 3GI.</div></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q-btn" aria-expanded="false">¿Cómo integran IA con WhatsApp, Excel, CRM o mi sistema actual?<span class="faq-ico">+</span></button>
+            <div class="faq-ans"><div class="faq-ans-inner">Trabajamos con las herramientas que ya usas, no en contra de ellas. Integramos con <strong>WhatsApp Business, Excel/Google Sheets, ERPs, CRMs</strong> y sistemas propios. El diagnóstico mapea exactamente qué sistemas tienes y diseña el roadmap sobre esa base — no sobre un stack ideal que no existe en tu empresa.</div></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q-btn" aria-expanded="false">¿Qué herramientas de IA recomiendan y cuáles son puro humo?<span class="faq-ico">+</span></button>
+            <div class="faq-ans"><div class="faq-ans-inner">Las herramientas que recomendamos dependen del proceso — no hay una respuesta universal. Lo que sí podemos decir: <strong>las herramientas genéricas sin implementación específica son casi siempre humo</strong>. Un chatbot sin integración a tus sistemas solo responde preguntas frecuentes. La IA que mueve la aguja está conectada a tus datos y flujos reales.</div></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q-btn" aria-expanded="false">¿Cómo sé si mi empresa está lista para usar IA?<span class="faq-ico">+</span></button>
+            <div class="faq-ans"><div class="faq-ans-inner">No necesitas estar "lista" para empezar — necesitas saber dónde estás. El diagnóstico mide exactamente eso: 5 dimensiones de madurez operacional que determinan tu ERA actual y qué nivel de IA puedes absorber hoy. Hay empresas en ERA 1 que pueden implementar Quick Wins en semanas. No esperes la perfección para empezar.</div></div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- CTA FINAL -->
+<div class="faq-cta-band">
+  <div class="container">
+    <h2>¿Sigues con dudas?<br><span>El diagnóstico las responde todas.</span></h2>
+    <p>En menos de 5 minutos sabes en qué ERA está tu empresa y qué oportunidades concretas tiene hoy.</p>
+    <div class="cta-buttons">
+      <a href="/diagnostico" class="btn btn-primary btn-lg">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        Hacer el diagnóstico gratuito
+      </a>
+      <a href="https://wa.me/56978780575?text=Hola,%20tengo%20preguntas%20sobre%20implementar%20IA%20en%20mi%20empresa" target="_blank" class="btn btn-outline btn-lg" aria-label="WhatsApp">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        Escribir por WhatsApp
+      </a>
+    </div>
+  </div>
+</div>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "¿Cuánto cuesta implementar IA en una PyME?",
+      "acceptedAnswer": { "@type": "Answer", "text": "El diagnóstico inicial es gratuito. Las fases de consultoría van de USD 1.500 a USD 7.000 con precio fijo y entregables definidos antes de comenzar. Si el diagnóstico muestra oportunidades reales, el costo se descuenta de la implementación si se contrata dentro de los 90 días." }
+    },
+    {
+      "@type": "Question",
+      "name": "¿En cuánto tiempo se recupera la inversión en IA?",
+      "acceptedAnswer": { "@type": "Answer", "text": "El caso promedio muestra retorno en 4–8 meses. El diagnóstico proyecta el ROI a 12 meses por cada oportunidad antes de que decidas si invertir." }
+    },
+    {
+      "@type": "Question",
+      "name": "¿La IA es solo para empresas grandes?",
+      "acceptedAnswer": { "@type": "Answer", "text": "No. Las herramientas de IA más efectivas para operaciones cotidianas son accesibles desde USD 50–200 al mes. El problema no es el costo — es saber qué automatizar, en qué orden y cómo integrarlo. Eso es lo que hace 3GI." }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Cuánto tiempo toma implementar IA en mi empresa?",
+      "acceptedAnswer": { "@type": "Answer", "text": "El diagnóstico completo toma 3–4 semanas. Las implementaciones de Quick Wins se ejecutan en 4–8 semanas. Proyectos más complejos toman 2–4 meses." }
+    },
+    {
+      "@type": "Question",
+      "name": "¿La IA va a reemplazar a mis trabajadores?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Lo que reemplaza la IA son tareas, no personas. El objetivo no es reducir gente — es multiplicar lo que hace cada uno eliminando el trabajo repetitivo de bajo valor." }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Cómo sé si mi empresa está lista para usar IA?",
+      "acceptedAnswer": { "@type": "Answer", "text": "No necesitas estar lista para empezar — necesitas saber dónde estás. El diagnóstico mide 5 dimensiones de madurez operacional que determinan tu ERA actual y qué nivel de IA puedes absorber hoy." }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Mi equipo actual puede usar IA o necesito contratar especialistas?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Tu equipo actual puede usar IA. La arquitectura que entregamos está diseñada para personas sin conocimiento técnico, con onboarding de 1–2 horas." }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Qué procesos conviene automatizar primero?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Los que combinan alto volumen, mucho tiempo manual y bajo riesgo: cotizaciones, reportes periódicos, carga de datos entre sistemas, seguimientos de clientes. El diagnóstico los identifica y ordena por ROI." }
+    }
+  ]
+}
+</script>
+
+<script>
+  document.querySelectorAll('.faq-q-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const item = btn.closest('.faq-item');
+      const isOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item.open').forEach(i => {
+        i.classList.remove('open');
+        i.querySelector('.faq-q-btn').setAttribute('aria-expanded', 'false');
+      });
+      if (!isOpen) {
+        item.classList.add('open');
+        btn.setAttribute('aria-expanded', 'true');
+      }
+    });
+  });
+</script>
+
+</Layout>

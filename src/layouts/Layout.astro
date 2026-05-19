@@ -56,7 +56,10 @@ const canonicalUrl = new URL(Astro.url.pathname, 'https://3g-ia-agents.com').hre
     "email": "chat@3g-ia-agents.com",
     "telephone": "+56978780575",
     "areaServed": "Latinoamérica",
-    "serviceType": "Consultoría de Inteligencia Artificial",
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Consultoría de Inteligencia Artificial para PyMEs"
+    },
     "priceRange": "USD 1500 - USD 7000",
     "knowsAbout": ["Inteligencia Artificial", "Automatización", "PyMEs", "Diagnóstico IA", "Transformación Digital"],
     "founder": {
@@ -70,6 +73,56 @@ const canonicalUrl = new URL(Astro.url.pathname, 'https://3g-ia-agents.com').hre
       "https://www.instagram.com/3gintelligence/",
       "https://www.youtube.com/@3gintelligence",
       "https://www.facebook.com/3gintelligence/"
+    ]
+  }
+  </script>
+
+  <!-- FAQ Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "¿Cuánto cuesta el diagnóstico de IA y qué incluye?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "El diagnóstico inicial es completamente gratuito. Las fases de consultoría F1–F5 van de USD 1.500 a USD 7.000 según el alcance, con precio fijo y entregables definidos antes de comenzar. No hay cobros por hora ni sorpresas al final."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Cómo sé si la IA realmente le va a servir a mi negocio?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Eso es exactamente lo que mide el Diagnóstico: 5 dimensiones de madurez operacional. En menos de 5 minutos sabes en qué ERA estás y qué oportunidades concretas tiene tu empresa — antes de comprometer un peso."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Han trabajado con empresas de mi rubro o tamaño?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Sí. Servicios profesionales, certificaciones, manufactura, logística, comercio. Si tu empresa tiene procesos repetibles con 10–200 personas y facturación entre USD 500K y USD 10M, el método funciona — independiente del rubro."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Cuánto tiempo toma ver resultados?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "El primer entregable concreto (Informe F1 con Score de Madurez) llega en 2–3 semanas. El roadmap ejecutable con ROI proyectado a 12 meses en 4 semanas. Los resultados operacionales reales comienzan en la Fase F4 de implementación."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Quién hace el trabajo — ustedes o me dejan solo con una herramienta?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Nosotros hacemos el diagnóstico, el análisis y el roadmap. No es un curso ni software que te dejamos solo. En F4 y F5 acompañamos la implementación con un consultor dedicado. El objetivo es que al terminar, tu equipo opere de forma autónoma — sin depender de 3GI."
+        }
+      }
     ]
   }
   </script>
@@ -129,8 +182,8 @@ const canonicalUrl = new URL(Astro.url.pathname, 'https://3g-ia-agents.com').hre
     /* NAV */
     nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: rgba(6,6,13,0.85); backdrop-filter: blur(16px); border-bottom: 1px solid var(--border); transition: all 0.3s; }
     .nav-inner { max-width: var(--max); margin: 0 auto; padding: 0 24px; height: 68px; display: flex; align-items: center; justify-content: space-between; }
-    .nav-links { display: flex; align-items: center; gap: 32px; list-style: none; }
-    .nav-links a { font-size: 14px; color: var(--muted); transition: color 0.2s; }
+    .nav-links { display: flex; align-items: center; gap: 30px; list-style: none; }
+    .nav-links a { font-size: 13px; color: var(--muted); transition: color 0.2s; }
     .nav-links a:hover { color: var(--offwh); }
     .nav-cta { display: flex; gap: 10px; align-items: center; }
 
@@ -260,6 +313,36 @@ const canonicalUrl = new URL(Astro.url.pathname, 'https://3g-ia-agents.com').hre
     .trust-title { font-family: 'Syne', sans-serif; font-weight: 800; font-size: 16px; margin-bottom: 10px; line-height: 1.2; }
     .trust-desc { font-size: 14px; color: var(--muted); line-height: 1.65; }
 
+    /* PARA QUIÉN */
+    #para-quien { background: var(--night); }
+    .pq-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; margin-top: 40px; }
+    .pq-card { background: var(--night-3); border: 1px solid var(--border); border-radius: 12px; padding: 22px 20px; transition: border-color 0.2s; }
+    .pq-card:hover { border-color: rgba(0,232,145,0.25); }
+    .pq-icon { font-size: 26px; margin-bottom: 10px; }
+    .pq-label { font-family: 'Syne', sans-serif; font-weight: 800; font-size: 15px; margin-bottom: 6px; line-height: 1.2; }
+    .pq-desc { font-size: 13px; color: var(--muted); line-height: 1.6; }
+    .pq-size-strip { margin-top: 32px; padding: 18px 24px; background: rgba(0,232,145,0.04); border: 1px solid rgba(0,232,145,0.12); border-radius: 10px; display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
+    .pq-size-label { font-size: 12px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--green); flex-shrink: 0; }
+    .pq-size-items { display: flex; gap: 12px; flex-wrap: wrap; }
+    .pq-size-item { font-size: 13px; color: rgba(238,241,246,0.7); padding: 4px 12px; border-radius: 20px; border: 1px solid var(--border); background: var(--night-3); }
+
+    /* FAQ */
+    #faq { background: var(--night-2); }
+    .faq-list { margin-top: 40px; display: flex; flex-direction: column; gap: 2px; }
+    .faq-item { border: 1px solid var(--border); border-radius: 10px; overflow: hidden; transition: border-color 0.2s; }
+    .faq-item.open { border-color: rgba(0,232,145,0.25); }
+    .faq-q { width: 100%; background: var(--night-3); border: none; text-align: left; padding: 20px 24px; display: flex; align-items: center; justify-content: space-between; gap: 16px; cursor: pointer; font-family: 'Syne', sans-serif; font-weight: 800; font-size: clamp(15px, 1.8vw, 17px); color: var(--offwh); letter-spacing: -0.01em; line-height: 1.3; transition: background 0.15s; }
+    .faq-q:hover { background: rgba(255,255,255,0.03); }
+    .faq-icon { flex-shrink: 0; width: 22px; height: 22px; border-radius: 50%; border: 1px solid rgba(0,232,145,0.3); display: flex; align-items: center; justify-content: center; color: var(--green); transition: transform 0.25s; font-style: normal; font-family: 'DM Sans', sans-serif; font-size: 16px; font-weight: 400; }
+    .faq-item.open .faq-icon { transform: rotate(45deg); }
+    .faq-a { max-height: 0; overflow: hidden; transition: max-height 0.3s ease, padding 0.3s ease; }
+    .faq-item.open .faq-a { max-height: 300px; }
+    .faq-a-inner { padding: 0 24px 20px; font-size: 15px; color: rgba(238,241,246,0.7); line-height: 1.7; }
+    .faq-a-inner strong { color: var(--green); font-weight: 600; }
+    @media (max-width: 700px) {
+      .pq-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+
     /* CTA FINAL */
     #cta-final { background: linear-gradient(135deg, #0D1A12 0%, #06060D 50%, #0A0D1A 100%); text-align: center; padding: 120px 0; position: relative; overflow: hidden; }
     #cta-final::before { content: ''; position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); width: 600px; height: 600px; border-radius: 50%; background: radial-gradient(circle, rgba(0,232,145,0.07) 0%, transparent 70%); pointer-events: none; }
@@ -328,6 +411,7 @@ const canonicalUrl = new URL(Astro.url.pathname, 'https://3g-ia-agents.com').hre
       <li><a href="/metodologia" data-i18n="nav-met">Metodología</a></li>
       <li><a href="/precios" data-i18n="nav-precios">Precios</a></li>
       <li><a href="/casos" data-i18n="nav-casos">Casos</a></li>
+      <li><a href="/faq">FAQ</a></li>
       <li><a href="/nosotros" data-i18n="nav-nosotros">Nosotros</a></li>
       <li><a href="/contenido" data-i18n="nav-contenido">Contenido</a></li>
     </ul>
@@ -356,6 +440,7 @@ const canonicalUrl = new URL(Astro.url.pathname, 'https://3g-ia-agents.com').hre
         <li><a href="/metodologia">Metodología</a></li>
         <li><a href="/precios">Precios</a></li>
         <li><a href="/casos">Casos</a></li>
+        <li><a href="/faq">FAQ</a></li>
         <li><a href="/nosotros">Nosotros</a></li>
         <li><a href="/contenido">Contenido</a></li>
         <li><a href="/privacidad">Privacidad</a></li>
