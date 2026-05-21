@@ -414,6 +414,7 @@ const canonicalUrl = new URL(Astro.url.pathname, 'https://3g-ia-agents.com').hre
       <li><a href="/faq">FAQ</a></li>
       <li><a href="/nosotros" data-i18n="nav-nosotros">Nosotros</a></li>
       <li><a href="/contenido" data-i18n="nav-contenido">Contenido</a></li>
+      <li><a href="https://www.linkedin.com/in/gonzalo-gompertz-geldres" target="_blank" rel="noopener" aria-label="LinkedIn" style="display:flex;align-items:center;gap:5px;"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>LinkedIn</a></li>
     </ul>
     <div class="nav-cta">
       <div class="lang-toggle">
@@ -444,6 +445,7 @@ const canonicalUrl = new URL(Astro.url.pathname, 'https://3g-ia-agents.com').hre
         <li><a href="/nosotros">Nosotros</a></li>
         <li><a href="/contenido">Contenido</a></li>
         <li><a href="/privacidad">Privacidad</a></li>
+        <li><a href="https://www.linkedin.com/in/gonzalo-gompertz-geldres" target="_blank" rel="noopener">LinkedIn</a></li>
       </ul>
       <div class="footer-copy">© 2026 3G Intelligence</div>
     </div>
@@ -501,13 +503,13 @@ const T = {
     'met-tag': 'Cómo trabajamos', 'met-title': 'Tres pasos. Sin consultores<br>que toman notas genéricas.',
     'met-sub': 'Metodología estructurada, entregables concretos, plazos definidos. Sabes exactamente qué vas a recibir — y cuándo.',
     'step1-tag': 'Diagnóstico · Semana 1', 'step1-title': 'Scan IA',
-    'step1-desc': 'Sesión de 2 horas. Score de Madurez en 5 dimensiones. Clasificación de ERA. Identificación de oportunidades preliminares.',
+    'step1-desc': 'Score de Madurez en 5 dimensiones. Clasificación de ERA. Primeras oportunidades identificadas.',
     'step1-del': '📄 Reporte de Diagnóstico',
     'step2-tag': 'Fase 1–2 · Semanas 2–3', 'step2-title': 'Diagnóstico profundo',
-    'step2-desc': 'Análisis proceso a proceso. Scoring cuantificado por oportunidad. ROI proyectado a 12 meses por iniciativa.',
+    'step2-desc': 'Análisis proceso a proceso. Oportunidades priorizadas por impacto. Proyección cuantificada por iniciativa.',
     'step2-del': '📄 Informe Fase 1+2',
     'step3-tag': 'Propuesta · Semana 3–4', 'step3-title': 'Roadmap de implementación',
-    'step3-desc': 'Top 3 oportunidades por ROI convertidas en plan ejecutable: qué, con qué tecnología, en qué plazo, con qué inversión.',
+    'step3-desc': 'Las 3 mejores oportunidades convertidas en plan ejecutable: qué automatizar, con qué tecnología, en qué plazo y con qué inversión.',
     'step3-del': '📄 Propuesta Comercial + PRD',
     'met-note-title': '📋 Esto es el diagnóstico.',
     'met-note': '📋 Esto es el diagnóstico. Después de 3–4 semanas tienes el roadmap concreto, cuantificado y listo para ejecutar. La <strong>implementación</strong> depende de ti y tu equipo — podemos acompañarte en Fase 4 y 5 si lo necesitas.',
@@ -518,6 +520,7 @@ const T = {
     'trust1-title': 'Sin acceso a datos externos', 'trust1-desc': 'Tus datos de diagnóstico no se usan para entrenar modelos de IA. No alimentan sistemas de terceros. Son tuyos.',
     'trust2-title': 'GDPR · Ley 19.628 · Cumplimiento regional', 'trust2-desc': 'Arquitectura compatible con GDPR europeo y Ley 19.628 de Chile. Si tus clientes o socios son europeos, tus datos de operación cumplen con sus exigencias de privacidad.',
     'trust3-title': 'Tus datos bajo tu control', 'trust3-desc': 'Sin lock-in. La arquitectura implementada queda en tu infraestructura. No dependes de 3GI para operar — ese es el punto.',
+    'trust4-title': 'Consultor dedicado, no software', 'trust4-desc': 'En cada fase hay una persona detrás del proceso. No compras una herramienta — trabajas con un equipo que entiende tu negocio y acompaña cada fase hasta que tu equipo opere de forma autónoma.',
     'sect-tag': '¿Te reconoces aquí?',
     'sect-title': 'El problema tiene cara.<br>Según tu sector.',
     'sect-sub': 'No todas las ineficiencias se ven igual. Estas son las situaciones que más vemos — y lo que cambia cuando se resuelven.',
@@ -570,6 +573,28 @@ const T = {
     'cta-sub': 'Responde el diagnóstico. En menos de 5 minutos te decimos dónde está la mayor oportunidad de IA en tu negocio.',
     'cta-btn-calendar': 'Hacer el diagnóstico gratuito', 'cta-btn-wa': 'Escribir por WhatsApp',
     'cta-fine': 'O escríbenos a <a href="mailto:chat@3g-ia-agents.com" style="color:var(--green);">chat@3g-ia-agents.com</a>',
+    'pq-tag': 'Empresas que movemos',
+    'pq-title': '¿Tiene sentido para<br>mi empresa?',
+    'pq-sub': 'Trabajamos con PyMEs de distintos rubros en LATAM. Si tu empresa tiene procesos repetibles y quieres decidir con datos, el método funciona.',
+    'pq1-label': 'Servicios Profesionales', 'pq1-desc': 'Estudios jurídicos, consultoras, ingeniería, salud. Procesos de cotización, expedientes y facturación que se gestionan a mano.',
+    'pq2-label': 'Manufactura', 'pq2-desc': 'Producción, control de calidad, inventario. Datos de planta que nadie consolida para tomar decisiones.',
+    'pq3-label': 'Logística y Transporte', 'pq3-desc': 'Rutas, despachos, gestión de flota. Operaciones que hoy dependen de planillas y llamadas telefónicas.',
+    'pq4-label': 'Construcción y Certificaciones', 'pq4-desc': 'Proyectos, inspecciones, certificaciones técnicas. Expedientes dispersos y seguimiento manual de vencimientos.',
+    'pq5-label': 'Comercio y Distribución', 'pq5-desc': 'Punto de venta, proveedores, reposición de stock. Decisiones comerciales que hoy se toman por intuición.',
+    'pq-size-label': 'Tamaño ideal',
+    'pq-size1': '10–200 empleados', 'pq-size2': 'USD 500K – USD 10M facturación anual', 'pq-size3': 'Chile · México · Colombia · Argentina · Perú',
+    'faq-tag': 'Preguntas frecuentes',
+    'faq-title': 'Lo que nos preguntan<br>antes de contratar.',
+    'faq1-q': '¿Cuánto cuesta el diagnóstico y qué incluye?',
+    'faq1-a': 'El <strong>diagnóstico inicial es gratuito</strong>. En menos de 5 minutos recibes tu Score de Madurez IA y clasificación de ERA. Las fases de consultoría F1–F5 van de <strong>USD 1.500 a USD 7.000</strong> según el alcance, con precio fijo y entregables definidos antes de comenzar. No hay cobros por hora ni sorpresas al final.',
+    'faq2-q': '¿Cómo sé si la IA realmente le va a servir a mi negocio?',
+    'faq2-a': 'Eso es exactamente lo que mide el Diagnóstico: <strong>5 dimensiones de madurez operacional</strong>. En menos de 5 minutos sabes en qué ERA estás y qué oportunidades concretas tiene tu empresa — antes de comprometer un peso. Si el diagnóstico muestra que no hay oportunidades reales, te lo decimos.',
+    'faq3-q': '¿Han trabajado con empresas de mi rubro o tamaño?',
+    'faq3-a': 'Sí. Servicios profesionales, certificaciones, manufactura, logística, comercio. Si tu empresa tiene <strong>procesos repetibles con 10–200 personas</strong> y facturación entre USD 500K y USD 10M, el método funciona — independiente del rubro. Consulta el caso real en esta página.',
+    'faq4-q': '¿Cuánto tiempo toma ver resultados?',
+    'faq4-a': 'El <strong>primer entregable concreto</strong> (Informe F1 con Score de Madurez) llega en 2–3 semanas. El roadmap ejecutable con ROI proyectado a 12 meses está listo en 4 semanas. Los resultados operacionales reales — procesos más rápidos, menos errores, ahorro medible — comienzan en la <strong>Fase F4 de implementación</strong>.',
+    'faq5-q': '¿Quién hace el trabajo — ustedes o me dejan solo con una herramienta?',
+    'faq5-a': 'Nosotros hacemos el diagnóstico, el análisis y el roadmap. <strong>No es un curso ni software</strong> que te dejamos solo. En F4 y F5 acompañamos la implementación con un consultor dedicado. El objetivo es que al terminar, tu equipo opere de forma autónoma — sin depender de 3GI.',
   },
   en: {
     'logo-sub': 'AI applied to real business',
@@ -603,13 +628,13 @@ const T = {
     'met-tag': 'How we work', 'met-title': 'Three steps. No consultants<br>taking generic notes.',
     'met-sub': 'Structured methodology, concrete deliverables, defined timelines. You know exactly what you\'ll receive — and when.',
     'step1-tag': 'Diagnosis · Week 1', 'step1-title': 'AI Scan',
-    'step1-desc': '2-hour session. Maturity Score across 5 dimensions. ERA classification. Identification of preliminary opportunities.',
+    'step1-desc': 'Maturity Score across 5 dimensions. ERA classification. First opportunities identified.',
     'step1-del': '📄 Diagnostic Report',
     'step2-tag': 'Phase 1–2 · Weeks 2–3', 'step2-title': 'Deep Diagnosis',
-    'step2-desc': 'Process-by-process analysis. Quantified scoring per opportunity. Projected ROI per initiative at 12 months.',
+    'step2-desc': 'Process-by-process analysis. Opportunities prioritized by impact. Quantified projection per initiative.',
     'step2-del': '📄 Phase 1+2 Report',
     'step3-tag': 'Proposal · Weeks 3–4', 'step3-title': 'Implementation Roadmap',
-    'step3-desc': 'Top 3 ROI opportunities turned into an actionable plan: what, with what technology, in what timeframe, with what investment.',
+    'step3-desc': 'The 3 best opportunities turned into an actionable plan: what to automate, with what technology, in what timeframe, and with what investment.',
     'step3-del': '📄 Commercial Proposal + PRD',
     'met-note-title': '📋 This is the diagnosis.',
     'met-note': '📋 This is the diagnosis. After 3–4 weeks you\'ll have the concrete, quantified roadmap ready to execute. The <strong>implementation</strong> is up to you and your team — we can support you in Phase 4 and 5 if needed.',
@@ -620,6 +645,7 @@ const T = {
     'trust1-title': 'No external data access', 'trust1-desc': 'Your diagnosis data is not used to train AI models. It does not feed third-party systems. It\'s yours.',
     'trust2-title': 'GDPR · Law 19.628 · Regional compliance', 'trust2-desc': 'Architecture compatible with European GDPR and Chile\'s Law 19.628. If your clients or partners are European, your operational data meets their privacy requirements.',
     'trust3-title': 'Your data under your control', 'trust3-desc': 'No lock-in. The implemented architecture lives in your infrastructure. You don\'t depend on 3GI to operate — that\'s the point.',
+    'trust4-title': 'Dedicated consultant, not software', 'trust4-desc': 'In every phase there\'s a person behind the process. You\'re not buying a tool — you\'re working with a team that understands your business and accompanies each phase until your team operates autonomously.',
     'sect-tag': 'Do you recognize yourself here?',
     'sect-title': 'The problem has a face.<br>Depending on your sector.',
     'sect-sub': 'Not all inefficiencies look the same. These are the situations we see most — and what changes when they\'re solved.',
@@ -672,6 +698,28 @@ const T = {
     'cta-sub': 'Take the diagnosis. In less than 5 minutes we\'ll tell you where the biggest AI opportunity in your business is.',
     'cta-btn-calendar': 'Take the free diagnosis', 'cta-btn-wa': 'Write on WhatsApp',
     'cta-fine': 'Or write to us at <a href="mailto:chat@3g-ia-agents.com" style="color:var(--green);">chat@3g-ia-agents.com</a>',
+    'pq-tag': 'Companies we move',
+    'pq-title': 'Does this make sense<br>for my company?',
+    'pq-sub': 'We work with SMEs across different industries in LATAM. If your company has repeatable processes and you want to make data-driven decisions, the method works.',
+    'pq1-label': 'Professional Services', 'pq1-desc': 'Law firms, consultancies, engineering, healthcare. Quoting, file management and billing processes handled manually.',
+    'pq2-label': 'Manufacturing', 'pq2-desc': 'Production, quality control, inventory. Plant data nobody consolidates to make decisions.',
+    'pq3-label': 'Logistics & Transportation', 'pq3-desc': 'Routes, dispatches, fleet management. Operations that today depend on spreadsheets and phone calls.',
+    'pq4-label': 'Construction & Certifications', 'pq4-desc': 'Projects, inspections, technical certifications. Scattered files and manual tracking of deadlines.',
+    'pq5-label': 'Trade & Distribution', 'pq5-desc': 'Point of sale, suppliers, stock replenishment. Commercial decisions made by intuition today.',
+    'pq-size-label': 'Ideal size',
+    'pq-size1': '10–200 employees', 'pq-size2': 'USD 500K – USD 10M annual revenue', 'pq-size3': 'Chile · Mexico · Colombia · Argentina · Peru',
+    'faq-tag': 'Frequently asked questions',
+    'faq-title': 'What people ask us<br>before hiring.',
+    'faq1-q': 'How much does the diagnosis cost and what does it include?',
+    'faq1-a': 'The <strong>initial diagnosis is free</strong>. In less than 5 minutes you get your AI Maturity Score and ERA classification. The F1–F5 consulting phases range from <strong>USD 1,500 to USD 7,000</strong> depending on scope, with fixed pricing and defined deliverables before you start. No hourly fees, no surprises at the end.',
+    'faq2-q': 'How do I know if AI will actually work for my business?',
+    'faq2-a': 'That\'s exactly what the Diagnosis measures: <strong>5 dimensions of operational maturity</strong>. In less than 5 minutes you know what ERA you\'re in and what concrete opportunities your company has — before committing a single dollar. If the diagnosis shows there are no real opportunities, we\'ll tell you.',
+    'faq3-q': 'Have you worked with companies in my industry or size?',
+    'faq3-a': 'Yes. Professional services, certifications, manufacturing, logistics, commerce. If your company has <strong>repeatable processes with 10–200 people</strong> and revenue between USD 500K and USD 10M, the method works — regardless of industry. Check the real case on this page.',
+    'faq4-q': 'How long does it take to see results?',
+    'faq4-a': 'The <strong>first concrete deliverable</strong> (F1 Report with Maturity Score) arrives in 2–3 weeks. The executable roadmap with 12-month projected ROI is ready in 4 weeks. Real operational results — faster processes, fewer errors, measurable savings — begin in <strong>Phase F4 of implementation</strong>.',
+    'faq5-q': 'Who does the work — you or do you leave me alone with a tool?',
+    'faq5-a': 'We do the diagnosis, analysis and roadmap. <strong>This is not a course or software</strong> we hand off to you. In F4 and F5 we accompany implementation with a dedicated consultant. The goal is that when we\'re done, your team operates autonomously — without depending on 3GI.',
   }
 };
 
