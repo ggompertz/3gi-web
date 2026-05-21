@@ -35,13 +35,22 @@ import Layout from '../layouts/Layout.astro';
     <div class="case-wrapper">
       <div class="case-header">
         <div>
-          <div class="case-company" data-i18n="cert-company">Empresa de inspecciones y certificaciones · Transporte vertical</div>
-          <div class="case-meta" data-i18n="cert-meta">Empresa certificada ISO · 25+ empleados · Chile · 2025</div>
+          <div class="case-company" data-i18n="cert-company">Inspecciones y certificaciones · Transporte vertical · Chile</div>
+          <div class="case-meta" data-i18n="cert-meta">ISO certificada · 25+ empleados · 365 clientes · 837 expedientes históricos</div>
+          <div style="display:flex;flex-wrap:wrap;gap:8px;margin-top:14px;">
+            <span style="font-size:11px;font-weight:600;letter-spacing:.06em;background:rgba(0,232,145,0.08);border:1px solid rgba(0,232,145,0.2);color:rgba(0,232,145,0.8);padding:3px 10px;border-radius:20px;">Next.js</span>
+            <span style="font-size:11px;font-weight:600;letter-spacing:.06em;background:rgba(0,232,145,0.08);border:1px solid rgba(0,232,145,0.2);color:rgba(0,232,145,0.8);padding:3px 10px;border-radius:20px;">TypeScript</span>
+            <span style="font-size:11px;font-weight:600;letter-spacing:.06em;background:rgba(0,232,145,0.08);border:1px solid rgba(0,232,145,0.2);color:rgba(0,232,145,0.8);padding:3px 10px;border-radius:20px;">Supabase</span>
+            <span style="font-size:11px;font-weight:600;letter-spacing:.06em;background:rgba(0,232,145,0.08);border:1px solid rgba(0,232,145,0.2);color:rgba(0,232,145,0.8);padding:3px 10px;border-radius:20px;">n8n</span>
+            <span style="font-size:11px;font-weight:600;letter-spacing:.06em;background:rgba(0,232,145,0.08);border:1px solid rgba(0,232,145,0.2);color:rgba(0,232,145,0.8);padding:3px 10px;border-radius:20px;">WhatsApp API</span>
+            <span style="font-size:11px;font-weight:600;letter-spacing:.06em;background:rgba(0,232,145,0.08);border:1px solid rgba(0,232,145,0.2);color:rgba(0,232,145,0.8);padding:3px 10px;border-radius:20px;">Gmail OAuth2</span>
+            <span style="font-size:11px;font-weight:600;letter-spacing:.06em;background:rgba(0,232,145,0.08);border:1px solid rgba(0,232,145,0.2);color:rgba(0,232,145,0.8);padding:3px 10px;border-radius:20px;">Vercel CRON</span>
+          </div>
         </div>
         <span class="case-badge" data-i18n="cert-badge">Caso real · Datos anonimizados</span>
       </div>
       <div class="case-body">
-        <p class="case-situation" data-i18n="cert-situation">Empresa de inspecciones técnicas que gestiona decenas de expedientes mensuales — cada uno con visitas a terreno, informes, aprobaciones y facturación. El problema: todo se coordinaba por correo y WhatsApp. El inspector llegaba a terreno sin saber si el cliente había pagado el servicio anterior. El gerente descubría trabajos completados y no facturados semanas después. Sin visibilidad centralizada, el negocio perdía ingresos de forma silenciosa.<br><br>Tras el Diagnóstico y F1, identificamos tres focos críticos: trazabilidad de expedientes, automatización de cobros y alertas de expedientes atascados. El ROI proyectado fue de 263% sobre la inversión total a 12 meses.</p>
+        <p class="case-situation" data-i18n="cert-situation">Durante años, la empresa funcionó con un sistema que nadie había diseñado: el gerente y su mano derecha tenían todo en la cabeza. Cuántos trabajos estaban en curso, cuáles esperaban aprobación, cuáles pendientes de cobro. Habían operado décadas sin problemas graves — y tenían una razón válida para no querer sistemas: antes habían trabajado con ERP complejos como SAP y Oracle, y guardaban un mal recuerdo de meses de implementación, datos que nadie consultaba, y un equipo ingresando información solo para cumplir con el software.<br><br>Lo que cambió todo fue una revisión interna. Alguien encontró trabajos completados que nunca se habían facturado. No era un error puntual — era una fuga silenciosa que llevaba meses. El diagnóstico 3GI cuantificó el problema: USD 250.000 en servicios entregados sin cobrar. El ROI proyectado de resolverlo fue de 263% sobre la inversión total a 12 meses.</p>
         <div class="case-results">
           <div class="result-card">
             <div class="result-label" data-i18n="cert-r1-label">por presupuesto</div>
@@ -62,7 +71,7 @@ import Layout from '../layouts/Layout.astro';
             <div class="result-unit" data-i18n="cert-r3-unit">Notificación automática al responsable</div>
           </div>
           <div class="result-card">
-            <div class="result-label" data-i18n="cert-r4-label">procesos sin facturar</div>
+            <div class="result-label" data-i18n="cert-r4-label">cobros perdidos</div>
             <div class="result-before">$0</div>
             <div class="result-after">$250k</div>
             <div class="result-unit" data-i18n="cert-r4-unit">Recuperados en primer trimestre</div>
@@ -73,10 +82,18 @@ import Layout from '../layouts/Layout.astro';
           <cite data-i18n="cert-cite">— Gerente, empresa de inspecciones y certificaciones (nombre reservado por confidencialidad)</cite>
         </div>
         <div class="case-context">
-          <div class="context-title" data-i18n="cert-impl-title">Qué se implementó</div>
-          <p class="context-p" data-i18n="cert-impl1"><strong style="color:var(--offwh);">1. Sistema de trazabilidad de expedientes.</strong> Cada expediente tiene un estado visible en tiempo real: pendiente, en ejecución, aprobado, facturado. El inspector actualiza desde terreno. El gerente ve el cuadro completo sin preguntar a nadie.</p>
-          <p class="context-p" data-i18n="cert-impl2"><strong style="color:var(--offwh);">2. Automatización de cobros.</strong> Al marcar un expediente como completado, el sistema envía automáticamente la solicitud de factura al cliente. Sin intervención manual. Sin olvidos.</p>
-          <p class="context-p" data-i18n="cert-impl3"><strong style="color:var(--offwh);">3. Alertas de expedientes sin movimiento.</strong> Si un expediente lleva más de N días sin actualización, el sistema alerta al responsable. Los cuellos de botella se detectan antes de convertirse en problemas de cobro.</p>
+          <div class="context-title" data-i18n="cert-impl-title">El sistema operativo completo que se construyó</div>
+          <p class="context-p" data-i18n="cert-impl0" style="color:rgba(238,241,246,0.5);font-style:italic;">La clave del proyecto fue no replicar un ERP. Se construyó alrededor de cómo el equipo ya trabajaba — no al revés.</p>
+          <p class="context-p" data-i18n="cert-impl1"><strong style="color:var(--offwh);">1. Dashboard de expedientes en tiempo real.</strong> Cada uno de los 365 clientes y 837 expedientes históricos tiene estado visible: cotizado, aprobado, en inspección, certificable, facturable, cerrado. El gerente ve el cuadro completo sin preguntar a nadie. El inspector actualiza desde terreno.</p>
+          <p class="context-p" data-i18n="cert-impl2"><strong style="color:var(--offwh);">2. Cotizaciones y cobros automáticos vía Gmail.</strong> Al enviar un presupuesto, el sistema genera y entrega la cotización al cliente por email automáticamente. Al marcar un expediente como completado, solicita la factura sin intervención manual. El paso que antes se olvidaba ahora no puede olvidarse.</p>
+          <p class="context-p" data-i18n="cert-impl3"><strong style="color:var(--offwh);">3. WhatsApp Bot operacional.</strong> Cada cambio de etapa de un expediente dispara una notificación por WhatsApp al equipo correspondiente. El inspector sabe cuándo está asignado a un trabajo. El encargado sabe cuándo se completó la inspección. Sin emails que se pierden, sin llamadas de coordinación.</p>
+          <p class="context-p" data-i18n="cert-impl4"><strong style="color:var(--offwh);">4. Bot de normativa para el equipo en terreno.</strong> Los inspectores consultan la normativa técnica vigente directamente por WhatsApp y obtienen la respuesta en segundos. Sin buscar en PDFs, sin llamar a la oficina. La IA trabaja donde el trabajo ocurre.</p>
+          <p class="context-p" data-i18n="cert-impl5"><strong style="color:var(--offwh);">5. Alertas MINVU automáticas.</strong> Un CRON corre cada mañana a las 8am y notifica a los clientes con certificados MINVU próximos a vencer. 207 certificados MINVU y 71 electromecánicos bajo control automático — sin que nadie tenga que recordarlo.</p>
+          <div style="margin-top:24px;padding:16px 20px;background:rgba(0,232,145,0.04);border:1px solid rgba(0,232,145,0.12);border-radius:10px;">
+            <p style="font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:rgba(0,232,145,0.6);margin-bottom:6px;">ROI proyectado a 12 meses</p>
+            <p style="font-family:Syne,sans-serif;font-size:28px;font-weight:800;color:var(--green);">263%</p>
+            <p style="font-size:13px;color:var(--muted);margin-top:4px;">Sobre la inversión total en diagnóstico e implementación</p>
+          </div>
         </div>
       </div>
     </div>
@@ -267,20 +284,23 @@ const T_casos = {
     'nav-agro': 'Exportación Agrícola',
     'nav-dist': 'Distribuidora Comercial',
     // Caso 1: Certificaciones
-    'cert-company': 'Empresa de inspecciones y certificaciones · Transporte vertical',
-    'cert-meta': 'Empresa certificada ISO · 25+ empleados · Chile · 2025',
+    'cert-company': 'Inspecciones y certificaciones · Transporte vertical · Chile',
+    'cert-meta': 'ISO certificada · 25+ empleados · 365 clientes · 837 expedientes históricos',
     'cert-badge': 'Caso real · Datos anonimizados',
-    'cert-situation': 'Empresa de inspecciones técnicas que gestiona decenas de expedientes mensuales — cada uno con visitas a terreno, informes, aprobaciones y facturación. El problema: todo se coordinaba por correo y WhatsApp. El inspector llegaba a terreno sin saber si el cliente había pagado el servicio anterior. El gerente descubría trabajos completados y no facturados semanas después. Sin visibilidad centralizada, el negocio perdía ingresos de forma silenciosa.<br><br>Tras el Diagnóstico y F1, identificamos tres focos críticos: trazabilidad de expedientes, automatización de cobros y alertas de expedientes atascados. El ROI proyectado fue de 263% sobre la inversión total a 12 meses.',
+    'cert-situation': 'Durante años, la empresa funcionó con un sistema que nadie había diseñado: el gerente y su mano derecha tenían todo en la cabeza. Cuántos trabajos estaban en curso, cuáles esperaban aprobación, cuáles pendientes de cobro. Habían operado décadas sin problemas graves — y tenían una razón válida para no querer sistemas: antes habían trabajado con ERP complejos como SAP y Oracle, y guardaban un mal recuerdo de meses de implementación, datos que nadie consultaba, y un equipo ingresando información solo para cumplir con el software.<br><br>Lo que cambió todo fue una revisión interna. Alguien encontró trabajos completados que nunca se habían facturado. No era un error puntual — era una fuga silenciosa que llevaba meses. El diagnóstico 3GI cuantificó el problema: USD 250.000 en servicios entregados sin cobrar. El ROI proyectado de resolverlo fue de 263% sobre la inversión total a 12 meses.',
     'cert-r1-label': 'por presupuesto', 'cert-r1-unit': '−91% tiempo administrativo',
     'cert-r2-label': 'solicitud de facturas', 'cert-r2-before': 'Manual', 'cert-r2-after': 'Automático', 'cert-r2-unit': 'Activada al cerrar expediente',
     'cert-r3-label': 'expedientes atascados', 'cert-r3-before': 'Sin control', 'cert-r3-after': 'Alertas reales', 'cert-r3-unit': 'Notificación automática al responsable',
-    'cert-r4-label': 'procesos sin facturar', 'cert-r4-unit': 'Recuperados en primer trimestre',
+    'cert-r4-label': 'cobros perdidos', 'cert-r4-unit': 'Recuperados en primer trimestre',
     'cert-quote': '"Nunca más perder horas buscando información. Ahora tenemos visibilidad total de nuestros expedientes, indicadores en tiempo real, y podemos escalar el negocio sin contratar más gente. Lo siguiente es automatizar los informes en terreno para nuestros inspectores."',
     'cert-cite': '— Gerente, empresa de inspecciones y certificaciones (nombre reservado por confidencialidad)',
-    'cert-impl-title': 'Qué se implementó',
-    'cert-impl1': '<strong style="color:var(--offwh);">1. Sistema de trazabilidad de expedientes.</strong> Cada expediente tiene un estado visible en tiempo real: pendiente, en ejecución, aprobado, facturado. El inspector actualiza desde terreno. El gerente ve el cuadro completo sin preguntar a nadie.',
-    'cert-impl2': '<strong style="color:var(--offwh);">2. Automatización de cobros.</strong> Al marcar un expediente como completado, el sistema envía automáticamente la solicitud de factura al cliente. Sin intervención manual. Sin olvidos.',
-    'cert-impl3': '<strong style="color:var(--offwh);">3. Alertas de expedientes sin movimiento.</strong> Si un expediente lleva más de N días sin actualización, el sistema alerta al responsable. Los cuellos de botella se detectan antes de convertirse en problemas de cobro.',
+    'cert-impl-title': 'El sistema operativo completo que se construyó',
+    'cert-impl0': 'La clave del proyecto fue no replicar un ERP. Se construyó alrededor de cómo el equipo ya trabajaba — no al revés.',
+    'cert-impl1': '<strong style="color:var(--offwh);">1. Dashboard de expedientes en tiempo real.</strong> Cada uno de los 365 clientes y 837 expedientes históricos tiene estado visible: cotizado, aprobado, en inspección, certificable, facturable, cerrado. El gerente ve el cuadro completo sin preguntar a nadie. El inspector actualiza desde terreno.',
+    'cert-impl2': '<strong style="color:var(--offwh);">2. Cotizaciones y cobros automáticos vía Gmail.</strong> Al enviar un presupuesto, el sistema genera y entrega la cotización al cliente por email automáticamente. Al marcar un expediente como completado, solicita la factura sin intervención manual. El paso que antes se olvidaba ahora no puede olvidarse.',
+    'cert-impl3': '<strong style="color:var(--offwh);">3. WhatsApp Bot operacional.</strong> Cada cambio de etapa de un expediente dispara una notificación por WhatsApp al equipo correspondiente. El inspector sabe cuándo está asignado a un trabajo. El encargado sabe cuándo se completó la inspección. Sin emails que se pierden, sin llamadas de coordinación.',
+    'cert-impl4': '<strong style="color:var(--offwh);">4. Bot de normativa para el equipo en terreno.</strong> Los inspectores consultan la normativa técnica vigente directamente por WhatsApp y obtienen la respuesta en segundos. Sin buscar en PDFs, sin llamar a la oficina. La IA trabaja donde el trabajo ocurre.',
+    'cert-impl5': '<strong style="color:var(--offwh);">5. Alertas MINVU automáticas.</strong> Un CRON corre cada mañana a las 8am y notifica a los clientes con certificados MINVU próximos a vencer. 207 certificados MINVU y 71 electromecánicos bajo control automático — sin que nadie tenga que recordarlo.',
     // Caso 2: Logística
     'log-company': 'Empresa de transporte refrigerado · Ruta packing-puerto',
     'log-meta': '12 camiones · Maule y O\'Higgins → San Antonio · Chile',
@@ -339,20 +359,23 @@ const T_casos = {
     'nav-agro': 'Agricultural Export',
     'nav-dist': 'Commercial Distributor',
     // Case 1: Certifications
-    'cert-company': 'Technical inspections & certifications · Vertical transport',
-    'cert-meta': 'ISO certified company · 25+ employees · Chile · 2025',
+    'cert-company': 'Inspections & certifications · Vertical transportation · Chile',
+    'cert-meta': 'ISO certified · 25+ employees · 365 clients · 837 historical files',
     'cert-badge': 'Real case · Anonymized data',
-    'cert-situation': 'A technical inspections company managing dozens of monthly files — each with on-site visits, reports, approvals, and invoicing. The problem: everything was coordinated via email and WhatsApp. The inspector arrived on-site not knowing if the client had paid for the previous service. The manager discovered completed but unbilled work weeks later. Without centralized visibility, the business was silently losing revenue.<br><br>After the Diagnosis and F1, we identified three critical focus areas: file traceability, billing automation, and stuck-file alerts. Projected ROI was 263% on total investment over 12 months.',
+    'cert-situation': 'For years, the company ran on a system nobody had designed: the manager and his right-hand person kept everything in their heads. Which jobs were in progress, which were waiting for approval, which were pending payment. They had operated for decades without serious problems — and had a valid reason for not wanting systems: they had previously worked with complex ERPs like SAP and Oracle, and held a bad memory of months of implementation, data nobody used, and a team entering information just to satisfy the software.<br><br>What changed everything was an internal review. Someone found completed jobs that had never been invoiced. It wasn\'t an isolated error — it was a silent leak that had been going on for months. The 3GI diagnosis quantified the problem: USD 250,000 in services delivered without billing. The projected ROI of solving it was 263% on total investment over 12 months.',
     'cert-r1-label': 'per budget proposal', 'cert-r1-unit': '−91% administrative time',
     'cert-r2-label': 'invoice requests', 'cert-r2-before': 'Manual', 'cert-r2-after': 'Automatic', 'cert-r2-unit': 'Triggered when file is closed',
     'cert-r3-label': 'stuck files', 'cert-r3-before': 'No visibility', 'cert-r3-after': 'Real alerts', 'cert-r3-unit': 'Automatic notification to owner',
-    'cert-r4-label': 'unbilled processes', 'cert-r4-unit': 'Recovered in first quarter',
-    'cert-quote': '"Never again spending hours searching for information. Now we have complete visibility of our files, real-time indicators, and can scale the business without hiring more people. Next is automating field reports for our inspectors."',
+    'cert-r4-label': 'lost billing', 'cert-r4-unit': 'Recovered in first quarter',
+    'cert-quote': '"Never again losing hours searching for information. Now we have complete visibility of our files, real-time indicators, and can scale the business without hiring more people. Next is automating field reports for our inspectors."',
     'cert-cite': '— Manager, inspections and certifications company (name withheld for confidentiality)',
-    'cert-impl-title': 'What was implemented',
-    'cert-impl1': '<strong style="color:var(--offwh);">1. File traceability system.</strong> Each file has a real-time visible status: pending, in progress, approved, invoiced. The inspector updates from the field. The manager sees the full picture without asking anyone.',
-    'cert-impl2': '<strong style="color:var(--offwh);">2. Billing automation.</strong> When a file is marked as completed, the system automatically sends the invoice request to the client. No manual intervention. No forgotten billings.',
-    'cert-impl3': '<strong style="color:var(--offwh);">3. Stuck file alerts.</strong> If a file goes N days without an update, the system alerts the responsible party. Bottlenecks are detected before they become billing problems.',
+    'cert-impl-title': 'The complete operating system that was built',
+    'cert-impl0': 'The key was not replicating an ERP. It was built around how the team already worked — not the other way around.',
+    'cert-impl1': '<strong style="color:var(--offwh);">1. Real-time file dashboard.</strong> All 365 clients and 837 historical files have visible status: quoted, approved, under inspection, certifiable, billable, closed. The manager sees the full picture without asking anyone. The inspector updates from the field.',
+    'cert-impl2': '<strong style="color:var(--offwh);">2. Automated quotes and billing via Gmail.</strong> When sending a proposal, the system generates and delivers the quote to the client by email automatically. When a file is marked as completed, it requests the invoice without manual intervention. The step that used to be forgotten can no longer be forgotten.',
+    'cert-impl3': '<strong style="color:var(--offwh);">3. Operational WhatsApp Bot.</strong> Every stage change in a file triggers a WhatsApp notification to the relevant team member. The inspector knows when they\'re assigned to a job. The coordinator knows when an inspection is completed. No lost emails, no coordination calls.',
+    'cert-impl4': '<strong style="color:var(--offwh);">4. Regulatory knowledge bot for field teams.</strong> Inspectors consult current technical regulations directly via WhatsApp and get answers in seconds. No searching through PDFs, no calling the office. The AI works where the work happens.',
+    'cert-impl5': '<strong style="color:var(--offwh);">5. Automatic MINVU alerts.</strong> A CRON runs every morning at 8am and notifies clients with MINVU certificates nearing expiration. 207 MINVU certificates and 71 electromechanical certificates under automatic control — without anyone having to remember.',
     // Case 2: Logistics
     'log-company': 'Refrigerated transport company · Packing-to-port route',
     'log-meta': '12 trucks · Maule and O\'Higgins → San Antonio · Chile',
