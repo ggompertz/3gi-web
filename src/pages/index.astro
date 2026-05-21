@@ -81,45 +81,87 @@ import Layout from '../layouts/Layout.astro';
 <!-- ERAS -->
 <section id="eras">
   <div class="container">
-    <div class="eras-intro">
-      <div>
-        <div class="section-tag" data-i18n="eras-tag">El punto de partida</div>
-        <h2 class="section-title" data-i18n="eras-title">¿En qué ERA<br>está tu empresa?</h2>
-        <p style="font-size:16px; font-weight:300; color:rgba(238,241,246,0.6); line-height:1.7; margin-top:16px;" data-i18n="eras-sub">
-          Antes de implementar cualquier solución de IA, hay que saber dónde estás.
-          Nuestro diagnóstico mide tu empresa en dos dimensiones — operacional y comercial — y define el camino para avanzar.
-        </p>
-        <a href="/diagnostico" class="btn btn-primary" style="margin-top:28px;" data-i18n="eras-cta">
-          Descubre tu ERA — es gratis
-        </a>
+    <div style="text-align:center; margin-bottom:40px;">
+      <div class="section-tag" data-i18n="eras-tag">El punto de partida</div>
+      <h2 class="section-title" data-i18n="eras-title">¿En qué ERA<br>está tu empresa?</h2>
+      <p style="font-size:16px; font-weight:300; color:rgba(238,241,246,0.6); line-height:1.7; margin-top:16px; max-width:600px; margin-left:auto; margin-right:auto;" data-i18n="eras-sub">
+        Antes de implementar cualquier solución de IA, hay que saber dónde estás.
+        Nuestro diagnóstico mide tu empresa en dos dimensiones — operacional y comercial — y define el camino para avanzar.
+      </p>
+    </div>
+
+    <!-- Grid ERA -->
+    <div class="era-framework-grid">
+      <!-- Cabecera -->
+      <div class="efg-dim-header"><span>Dimensión</span></div>
+      <div class="efg-era-header efg-h1">
+        <div class="efg-badge">ERA 1</div>
+        <div class="efg-icon">🔥</div>
+        <div class="efg-name" data-i18n="era1-name">Caos Operativo</div>
+        <div class="efg-pills">
+          <span class="efg-pill">Decisiones por intuición</span>
+          <span class="efg-pill">Sin datos</span>
+          <span class="efg-pill">Todo depende de ti</span>
+        </div>
       </div>
-      <div>
-        <div class="era-grid">
-          <div class="era-card">
-            <div class="era-num">ERA 1</div>
-            <div class="era-name" data-i18n="era1-name">Caos Operativo</div>
-            <div class="era-desc" data-i18n="era1-desc">El negocio corre en tu cabeza. Decisiones por intuición. La información vive en correos, Excel o en la memoria de una persona.</div>
-          </div>
-          <div class="era-card current" data-label="Mayoría de las PyMEs">
-            <div class="era-num">ERA 2</div>
-            <div class="era-name" data-i18n="era2-name">Datos Organizados</div>
-            <div class="era-desc" data-i18n="era2-desc">Los sistemas existen. Pero los reportes se arman a mano y los datos están ahí — nadie los usa para decidir.</div>
-          </div>
-          <div class="era-card" style="border-color:rgba(0,232,145,0.5); background:rgba(0,232,145,0.05);">
-            <div class="era-num" style="color:var(--green);">ERA 3</div>
-            <div class="era-name" style="color:var(--green);" data-i18n="era3-name">Empresa con IA</div>
-            <div class="era-desc" data-i18n="era3-desc">El negocio corre solo. La IA maneja el volumen. Las personas manejan la estrategia.</div>
-          </div>
+      <div class="efg-era-header efg-h2">
+        <div class="efg-badge">ERA 2</div>
+        <div class="efg-icon">📊</div>
+        <div class="efg-name" data-i18n="era2-name">Datos Organizados</div>
+        <div class="efg-pills">
+          <span class="efg-pill">Sistemas existen</span>
+          <span class="efg-pill">Datos en silos</span>
+          <span class="efg-pill">Reportes manuales</span>
         </div>
-        <div style="margin-top:20px; text-align:center;">
-          <p style="font-size:13px; color:var(--muted);" data-i18n="eras-caption">Llevamos a tu empresa de donde está → ERA 3</p>
-          <p style="margin-top:8px; font-size:12px; color:rgba(238,241,246,0.3);" data-i18n="eras-precision">Cada ERA incluye 3 posiciones de precisión. Tu diagnóstico identifica exactamente dónde estás. <a href="/metodologia#espectro" style="color:rgba(0,232,145,0.6); text-decoration:underline; text-underline-offset:3px;" data-i18n="eras-precision-link">Ver el espectro completo →</a></p>
-          <div id="era-dos-dimensiones-teaser" style="display:block; margin-top:20px; padding:16px 20px; background:rgba(0,232,145,0.05); border:1px solid rgba(0,232,145,0.15); border-radius:12px; text-align:left;">
-            <p style="font-size:13px; font-weight:700; color:var(--green); letter-spacing:0.08em; text-transform:uppercase; margin-bottom:8px;">ERA tiene dos dimensiones</p>
-            <p style="font-size:14px; color:rgba(238,241,246,0.65); line-height:1.6; margin-bottom:14px;">ERA Operacional mide si tu empresa <em>aguanta</em> la demanda. ERA Comercial mide si la <em>genera</em>. El diagnóstico mide las dos.</p>
-            <a href="/diagnostico?modo=ambas" style="font-size:13px; font-weight:700; color:var(--green); text-decoration:underline; text-underline-offset:3px;">Ver mi diagnóstico completo →</a>
-          </div>
+      </div>
+      <div class="efg-era-header efg-h3">
+        <div class="efg-badge">ERA 3</div>
+        <div class="efg-icon">⚡</div>
+        <div class="efg-name" data-i18n="era3-name">Empresa con IA</div>
+        <div class="efg-pills">
+          <span class="efg-pill">IA maneja el volumen</span>
+          <span class="efg-pill">Decisiones en tiempo real</span>
+          <span class="efg-pill">Tú en la estrategia</span>
         </div>
+      </div>
+
+      <!-- Fila: Decisiones -->
+      <div class="efg-dim"><span data-i18n="efg-dim1">Decisiones</span></div>
+      <div class="efg-cell efg-c1" data-i18n="efg-d1-e1">Por intuición y experiencia del dueño</div>
+      <div class="efg-cell efg-c2" data-i18n="efg-d1-e2">Con datos históricos, análisis manual</div>
+      <div class="efg-cell efg-c3" data-i18n="efg-d1-e3">Con datos + IA que anticipa escenarios</div>
+
+      <!-- Fila: Operación -->
+      <div class="efg-dim"><span data-i18n="efg-dim2">Operación</span></div>
+      <div class="efg-cell efg-c1" data-i18n="efg-d2-e1">Manual. Depende de personas clave</div>
+      <div class="efg-cell efg-c2" data-i18n="efg-d2-e2">Parcial. Algunas tareas automatizadas</div>
+      <div class="efg-cell efg-c3" data-i18n="efg-d2-e3">Flujos automáticos. La IA ejecuta sin intervención</div>
+
+      <!-- Fila: Información -->
+      <div class="efg-dim"><span data-i18n="efg-dim3">Información</span></div>
+      <div class="efg-cell efg-c1" data-i18n="efg-d3-e1">En correos, Excel o en la memoria de alguien</div>
+      <div class="efg-cell efg-c2" data-i18n="efg-d3-e2">En sistemas, pero en silos sin conectar</div>
+      <div class="efg-cell efg-c3" data-i18n="efg-d3-e3">Centralizada, conectada y en tiempo real</div>
+
+      <!-- Fila: Tiempo del dueño -->
+      <div class="efg-dim"><span data-i18n="efg-dim4">Tiempo del dueño</span></div>
+      <div class="efg-cell efg-c1" data-i18n="efg-d4-e1">En el día a día y apagar incendios</div>
+      <div class="efg-cell efg-c2" data-i18n="efg-d4-e2">En gestión y reportes manuales</div>
+      <div class="efg-cell efg-c3" data-i18n="efg-d4-e3">En estrategia, clientes y crecimiento</div>
+
+      <!-- Fila: Para crecer -->
+      <div class="efg-dim efg-last"><span data-i18n="efg-dim5">Para crecer</span></div>
+      <div class="efg-cell efg-c1 efg-last" data-i18n="efg-d5-e1">Hay que contratar más gente</div>
+      <div class="efg-cell efg-c2 efg-last" data-i18n="efg-d5-e2">Limitado por procesos manuales</div>
+      <div class="efg-cell efg-c3 efg-last" data-i18n="efg-d5-e3">La IA absorbe el volumen sin agregar costos</div>
+
+      <!-- CTA -->
+      <div class="efg-cta-row">
+        <div>
+          <div class="efg-cta-text" data-i18n="eras-caption">Movemos tu empresa a ERA 3</div>
+          <div class="efg-cta-sub" data-i18n="eras-precision"><a href="/metodologia#espectro" style="color:rgba(0,232,145,0.5); text-decoration:underline; text-underline-offset:3px;" data-i18n="eras-precision-link">Cada ERA tiene 3 posiciones de precisión → ver espectro completo</a></div>
+        </div>
+        <a href="/diagnostico" class="btn btn-primary" data-i18n="eras-cta">Descubre tu ERA — es gratis</a>
       </div>
     </div>
   </div>
@@ -128,7 +170,7 @@ import Layout from '../layouts/Layout.astro';
 <!-- POR QUÉ 3GI -->
 <section id="por-que-3gi" style="background:var(--night-2); border-top:1px solid var(--border); border-bottom:1px solid var(--border);">
   <div class="container" style="padding-top:80px; padding-bottom:80px;">
-    <div class="section-tag">Por qué 3GI</div>
+    <div class="section-tag">Por qué 3G Intelligence</div>
     <h2 class="section-title" style="margin-bottom:12px;">No somos una agencia de IA.<br>Somos consultores que entienden tu negocio.</h2>
     <p class="section-sub" style="margin-bottom:48px;">La diferencia está en el diagnóstico. Antes de proponer cualquier herramienta, entendemos cómo opera tu empresa — y si la IA realmente tiene retorno ahí.</p>
     <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:20px; margin-bottom:40px;">

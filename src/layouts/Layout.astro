@@ -219,15 +219,32 @@ const canonicalUrl = new URL(Astro.url.pathname, 'https://3g-ia-agents.com').hre
 
     /* ERAS */
     #eras { background: var(--night); }
-    .eras-intro { display: flex; flex-direction: column; gap: 48px; margin-bottom: 64px; }
-    .eras-intro > div:first-child { max-width: 640px; }
-    .era-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
-    .era-card { border-radius: 12px; padding: 28px 24px; border: 1px solid var(--border); position: relative; overflow: hidden; }
-    .era-card.current { border-color: rgba(0,232,145,0.3); background: rgba(0,232,145,0.04); }
-    .era-card.current::after { content: attr(data-label); position: absolute; top: 14px; right: 14px; font-size: 9px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--green); background: rgba(0,232,145,0.12); padding: 3px 8px; border-radius: 10px; }
-    .era-num { font-family: 'Syne', sans-serif; font-size: 11px; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: var(--muted); margin-bottom: 10px; }
-    .era-name { font-family: 'Syne', sans-serif; font-weight: 800; font-size: 18px; margin-bottom: 8px; line-height: 1.1; }
-    .era-desc { font-size: 13px; color: var(--muted); line-height: 1.6; }
+    /* ERA framework grid */
+    .era-framework-grid { display: grid; grid-template-columns: 140px 1fr 1fr 1fr; border: 1px solid rgba(255,255,255,0.08); border-radius: 16px; overflow: hidden; margin-bottom: 32px; }
+    .efg-dim-header { background: transparent; border-right: 1px solid rgba(255,255,255,0.06); padding: 20px 20px; display: flex; align-items: flex-end; }
+    .efg-dim-header span { font-size: 10px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: rgba(238,241,246,0.25); }
+    .efg-era-header { padding: 22px 20px 18px; border-bottom: 2px solid; border-right: 1px solid rgba(255,255,255,0.06); display: flex; flex-direction: column; gap: 7px; }
+    .efg-era-header:last-of-type { border-right: none; }
+    .efg-h1 { background: rgba(220,38,38,0.1); border-bottom-color: #EF4444; }
+    .efg-h2 { background: rgba(234,179,8,0.1); border-bottom-color: #EAB308; }
+    .efg-h3 { background: rgba(0,232,145,0.1); border-bottom-color: #00E891; }
+    .efg-badge { font-size: 10px; font-weight: 700; letter-spacing: .15em; text-transform: uppercase; }
+    .efg-h1 .efg-badge { color: #EF4444; }
+    .efg-h2 .efg-badge { color: #EAB308; }
+    .efg-h3 .efg-badge { color: #00E891; }
+    .efg-icon { font-size: 26px; line-height: 1; }
+    .efg-name { font-family: 'Syne', sans-serif; font-size: 15px; font-weight: 800; letter-spacing: -.01em; line-height: 1.2; }
+    .efg-pills { display: flex; flex-wrap: wrap; gap: 4px; margin-top: 4px; }
+    .efg-pill { font-size: 11px; color: rgba(238,241,246,0.5); background: rgba(255,255,255,0.05); padding: 2px 7px; border-radius: 20px; line-height: 1.5; }
+    .efg-dim { background: rgba(255,255,255,0.02); border-right: 1px solid rgba(255,255,255,0.06); border-bottom: 1px solid rgba(255,255,255,0.06); padding: 14px 20px; display: flex; align-items: center; }
+    .efg-dim span { font-size: 10px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: rgba(238,241,246,0.3); }
+    .efg-cell { padding: 14px 20px; border-right: 1px solid rgba(255,255,255,0.06); border-bottom: 1px solid rgba(255,255,255,0.06); font-size: 13px; color: rgba(238,241,246,0.62); line-height: 1.5; }
+    .efg-cell:last-of-type { border-right: none; }
+    .efg-c3 { color: rgba(238,241,246,0.88); background: rgba(0,232,145,0.04); }
+    .efg-last, .efg-last.efg-dim, .efg-last.efg-cell { border-bottom: none; }
+    .efg-cta-row { grid-column: 1 / -1; background: rgba(0,232,145,0.07); border-top: 1px solid rgba(0,232,145,0.18); padding: 20px 24px; display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+    .efg-cta-text { font-size: 14px; font-weight: 700; color: var(--green); margin-bottom: 4px; }
+    .efg-cta-sub { font-size: 12px; color: rgba(238,241,246,0.35); }
 
     /* METODOLOGÍA (resumen) */
     #metodologia { background: var(--night-2); }
@@ -375,7 +392,8 @@ const canonicalUrl = new URL(Astro.url.pathname, 'https://3g-ia-agents.com').hre
     @media (max-width: 900px) {
       section { padding: 72px 0; }
       .sect-grid { grid-template-columns: 1fr; }
-      .era-grid { grid-template-columns: 1fr; }
+      .era-framework-grid { grid-template-columns: 100px 1fr 1fr 1fr; }
+      .efg-pill { display: none; }
       .met-steps { grid-template-columns: 1fr; gap: 2px; }
       .met-step:first-child { border-radius: 12px 12px 0 0; }
       .met-step:last-child  { border-radius: 0 0 12px 12px; }
@@ -414,7 +432,6 @@ const canonicalUrl = new URL(Astro.url.pathname, 'https://3g-ia-agents.com').hre
       <li><a href="/faq">FAQ</a></li>
       <li><a href="/nosotros" data-i18n="nav-nosotros">Nosotros</a></li>
       <li><a href="/contenido" data-i18n="nav-contenido">Contenido</a></li>
-      <li><a href="https://www.linkedin.com/in/gonzalo-gompertz-geldres" target="_blank" rel="noopener" aria-label="LinkedIn" style="display:flex;align-items:center;gap:5px;"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>LinkedIn</a></li>
     </ul>
     <div class="nav-cta">
       <div class="lang-toggle">
@@ -730,7 +747,6 @@ function setLang(lang) {
   currentLang = lang;
   const dict = T[lang];
   document.documentElement.lang = lang;
-  document.querySelector('.era-card.current')?.setAttribute('data-label', lang === 'es' ? 'Mayoría de las PyMEs' : 'Most SMEs');
   document.querySelectorAll('[data-i18n]').forEach(el => {
     const key = el.getAttribute('data-i18n');
     if (dict[key] !== undefined) el.innerHTML = dict[key];
