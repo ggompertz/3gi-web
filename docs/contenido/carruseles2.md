@@ -10,12 +10,12 @@ Formato: Short/Reel (30s) + texto LinkedIn/Facebook
 | Post | Fecha | Tema | Short | LinkedIn | Estado |
 |---|---|---|---|---|---|
 | 02 | 18 May | 5 señales de apagaincendios | ✅ | ✅ | ✅ completo |
-| 03 | 21 May | Caso AMCL — De 30 min a 5 min | ✅ | ✅ | ✅ completo |
+| 03 | 21 May | Caso real — De 30 min a 5 min | ✅ | ✅ | ✅ completo |
 | 04 | 24 May | El costo invisible | ✅ | ✅ | ⏳ pendiente |
 | 05 | 27 May | Caso COVES — De reactivo a proactivo | ✅ | ✅ | ⏳ pendiente |
 | 06 | 30 May | 7 procesos a automatizar primero | ✅ | ✅ | ⏳ pendiente |
 | 07 | 02 Jun | ERA 1 / ERA 2 / ERA 3 explicadas | ✅ | ✅ | ⏳ pendiente |
-| 08 | 05 Jun | Caso AMCL — +40% capacidad | ✅ | ✅ | ⏳ pendiente |
+| 08 | 05 Jun | Caso real — +40% capacidad | ✅ | ✅ | ⏳ pendiente |
 | 09 | 08 Jun | El Excel como sistema | ✅ | ✅ | ⏳ pendiente |
 | 10 | 11 Jun | Caso COVES — Reactiva vs proactiva | ✅ | ✅ | ⏳ pendiente |
 | 11 | 14 Jun | Los 9 sub-niveles ERA | ✅ | ✅ | ⏳ pendiente |
@@ -129,10 +129,10 @@ La solución no es más herramientas. Es cambiar el sistema.
 
 ---
 
-## Post 03 — Caso AMCL: De 30 min a 5 min
+## Post 03 — Caso real: De 30 min a 5 min
 
 **Fecha:** 21 May 2026  
-**Links:** [YouTube Short](https://youtube.com/shorts/Szd4nCXqlaY) · [Instagram Reel](https://www.instagram.com/reel/DYmyBiCCuEo/) · [LinkedIn](https://www.linkedin.com/feed/update/urn:li:share:7463252173536186370) · [Facebook](https://web.facebook.com/1029297336932482/posts/122112522609074258)
+**Links:** [YouTube Short](https://youtube.com/shorts/Szd4nCXqlaY) · [Instagram Reel](https://www.instagram.com/reel/DYmyBiCCuEo/) · [LinkedIn](https://www.linkedin.com/feed/update/urn:li:activity:7463261755872346112) · [Facebook](https://web.facebook.com/share/p/18UGajeCcR/)
 
 ### Short 03
 
@@ -638,7 +638,7 @@ Lo que importa es saber exactamente dónde estás hoy.
 
 ---
 
-## Post 08 — Caso AMCL: +40% capacidad sin contratar
+## Post 08 — Caso real: +40% capacidad sin contratar
 
 **Fecha:** 05 Jun 2026
 
