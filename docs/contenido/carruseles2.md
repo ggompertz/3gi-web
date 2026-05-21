@@ -10,7 +10,7 @@ Formato: Short/Reel (30s) + texto LinkedIn/Facebook
 | Post | Fecha | Tema | Short | LinkedIn | Estado |
 |---|---|---|---|---|---|
 | 02 | 18 May | 5 señales de apagaincendios | ✅ | ✅ | ✅ completo |
-| 03 | 21 May | Caso AMCL — De 30 min a 5 min | ✅ | ✅ | ⏳ pendiente |
+| 03 | 21 May | Caso AMCL — De 30 min a 5 min | ✅ | ✅ | ✅ completo |
 | 04 | 24 May | El costo invisible | ✅ | ✅ | ⏳ pendiente |
 | 05 | 27 May | Caso COVES — De reactivo a proactivo | ✅ | ✅ | ⏳ pendiente |
 | 06 | 30 May | 7 procesos a automatizar primero | ✅ | ✅ | ⏳ pendiente |
@@ -131,7 +131,8 @@ La solución no es más herramientas. Es cambiar el sistema.
 
 ## Post 03 — Caso AMCL: De 30 min a 5 min
 
-**Fecha:** 21 May 2026
+**Fecha:** 21 May 2026  
+**Links:** [YouTube Short](https://youtube.com/shorts/Szd4nCXqlaY) · [Instagram Reel](https://www.instagram.com/reel/DYmyBiCCuEo/) · [LinkedIn](https://www.linkedin.com/feed/update/urn:li:share:7463252173536186370) · [Facebook](https://web.facebook.com/1029297336932482/posts/122112522609074258)
 
 ### Short 03
 
