@@ -6,7 +6,7 @@
 
 **URL pública:**
 ```
-https://pub-afec22bc076746d1804ccf623d884c82.r2.dev/carruseles/post-03/linkedin.png
+https://3g-ia-agents.com/contenido/post03-linkedin.png
 ```
 
 **Dimensiones:** 1200×628px  
