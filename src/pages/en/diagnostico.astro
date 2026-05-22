@@ -192,7 +192,7 @@ const D = {
 // ── STATE ─────────────────────────────────────────────────────────────────
 let answers = {};
 let currentMode = 'operacional';
-let lang = localStorage.getItem('lang') || 'es';
+let lang = (window.location.pathname.startsWith('/en/') || window.location.pathname === '/en') ? 'en' : 'es';
 
 // ── HELPERS ───────────────────────────────────────────────────────────────
 function t(key) { return D[lang][key] || D['es'][key]; }
@@ -605,7 +605,7 @@ function resetDiag() {
 // ── INIT ──────────────────────────────────────────────────────────────────
 document.addEventListener('DOMContentLoaded', () => {
   initDataAttrs();
-  lang = localStorage.getItem('lang') || 'es';
+  lang = (window.location.pathname.startsWith('/en/') || window.location.pathname === '/en') ? 'en' : 'es';
   // Restaurar respuestas guardadas
   try {
     const saved = localStorage.getItem('diag_answers');

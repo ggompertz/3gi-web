@@ -111,7 +111,7 @@ const T_precios = {
   }
 };
 
-let _langPrec = localStorage.getItem('lang') || 'es';
+let _langPrec = (window.location.pathname.startsWith('/en/') || window.location.pathname === '/en') ? 'en' : 'es';
 function applyLangPrec() {
   // Update "Más popular" badge text on the featured card
   const featuredCard = document.querySelector('.inv-card.featured');
@@ -123,7 +123,7 @@ function applyLangPrec() {
     if (v) el.innerHTML = v;
   });
 }
-document.addEventListener('DOMContentLoaded', () => { _langPrec = localStorage.getItem('lang') || 'es'; applyLangPrec(); });
+document.addEventListener('DOMContentLoaded', () => { _langPrec = (window.location.pathname.startsWith('/en/') || window.location.pathname === '/en') ? 'en' : 'es'; applyLangPrec(); });
 window.addEventListener('langchange', e => { _langPrec = e.detail; applyLangPrec(); });
 </script>
 
@@ -231,7 +231,7 @@ const T_precios = {
   }
 };
 
-let _langPrec = localStorage.getItem('lang') || 'es';
+let _langPrec = (window.location.pathname.startsWith('/en/') || window.location.pathname === '/en') ? 'en' : 'es';
 function applyLangPrec() {
   // Update "Más popular" badge text on the featured card
   const featuredCard = document.querySelector('.inv-card.featured');
@@ -243,7 +243,7 @@ function applyLangPrec() {
     if (v) el.innerHTML = v;
   });
 }
-document.addEventListener('DOMContentLoaded', () => { _langPrec = localStorage.getItem('lang') || 'es'; applyLangPrec(); });
+document.addEventListener('DOMContentLoaded', () => { _langPrec = (window.location.pathname.startsWith('/en/') || window.location.pathname === '/en') ? 'en' : 'es'; applyLangPrec(); });
 window.addEventListener('langchange', e => { _langPrec = e.detail; applyLangPrec(); });
 </script>
 </Layout>

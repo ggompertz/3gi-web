@@ -131,14 +131,14 @@ const T_nosotros = {
   }
 };
 
-let _langNos = localStorage.getItem('lang') || 'es';
+let _langNos = (window.location.pathname.startsWith('/en/') || window.location.pathname === '/en') ? 'en' : 'es';
 function applyLangNos() {
   document.querySelectorAll('[data-i18n]').forEach(el => {
     const v = (T_nosotros[_langNos] || T_nosotros['es'])[el.getAttribute('data-i18n')];
     if (v) el.innerHTML = v;
   });
 }
-document.addEventListener('DOMContentLoaded', () => { _langNos = localStorage.getItem('lang') || 'es'; applyLangNos(); });
+document.addEventListener('DOMContentLoaded', () => { _langNos = (window.location.pathname.startsWith('/en/') || window.location.pathname === '/en') ? 'en' : 'es'; applyLangNos(); });
 window.addEventListener('langchange', e => { _langNos = e.detail; applyLangNos(); });
 </script>
 
@@ -254,14 +254,14 @@ const T_nosotros = {
   }
 };
 
-let _langNos = localStorage.getItem('lang') || 'es';
+let _langNos = (window.location.pathname.startsWith('/en/') || window.location.pathname === '/en') ? 'en' : 'es';
 function applyLangNos() {
   document.querySelectorAll('[data-i18n]').forEach(el => {
     const v = (T_nosotros[_langNos] || T_nosotros['es'])[el.getAttribute('data-i18n')];
     if (v) el.innerHTML = v;
   });
 }
-document.addEventListener('DOMContentLoaded', () => { _langNos = localStorage.getItem('lang') || 'es'; applyLangNos(); });
+document.addEventListener('DOMContentLoaded', () => { _langNos = (window.location.pathname.startsWith('/en/') || window.location.pathname === '/en') ? 'en' : 'es'; applyLangNos(); });
 window.addEventListener('langchange', e => { _langNos = e.detail; applyLangNos(); });
 </script>
 </Layout>
