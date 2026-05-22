@@ -1,0 +1,516 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout
+  title="Diagnóstico ERA gratuito · 3G Intelligence"
+  description="Descubre en qué ERA está tu empresa: Caos Operativo, Datos Organizados o Empresa con IA. 10 preguntas, resultado inmediato, sin registro."
+>
+
+<style is:global>
+:root{--night:#06060D;--surface:#0E0E1A;--border:#1C1C2E;--green:#00E891;--offwh:#EEF1F6;--muted:#6B7280}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--night);color:var(--offwh);font-family:'DM Sans',sans-serif;font-size:15px;line-height:1.6;min-height:100vh}
+main{max-width:660px;margin:0 auto;padding:80px 24px 100px}
+.eyebrow{font-size:11px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--green);margin-bottom:14px}
+h1{font-family:'Syne',sans-serif;font-size:clamp(24px,5vw,34px);font-weight:900;line-height:1.1;letter-spacing:-.03em;margin-bottom:12px}
+.intro-sub{font-size:14px;color:var(--muted);line-height:1.65;margin-bottom:32px}
+
+/* Progress */
+.progress-wrap{margin-bottom:32px}
+.progress-label{display:flex;justify-content:space-between;font-size:12px;color:var(--muted);margin-bottom:8px}
+.progress-bar{height:3px;background:var(--border);border-radius:2px;overflow:hidden}
+.progress-fill{height:100%;background:var(--green);border-radius:2px;transition:width .4s ease;width:0%}
+
+/* Dimension label */
+.dim-label{font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-bottom:6px}
+
+/* Question */
+.question-text{font-family:'Syne',sans-serif;font-size:clamp(17px,3vw,20px);font-weight:800;color:var(--offwh);line-height:1.3;margin-bottom:24px}
+
+/* Options */
+.options{display:flex;flex-direction:column;gap:10px;margin-bottom:32px}
+.opt{background:var(--surface);border:1.5px solid var(--border);border-radius:12px;padding:16px 20px;cursor:pointer;transition:border-color .2s,background .2s;animation:fadeUp .25s ease forwards}
+@keyframes fadeUp{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:translateY(0)}}
+.opt:hover{border-color:#00e89155}
+.opt.selected{border-color:var(--green);background:#00e89109}
+.opt-num{font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--green);margin-bottom:4px}
+.opt-text{font-size:14px;color:var(--offwh);line-height:1.5}
+
+/* Buttons */
+.btn-primary{background:var(--green);color:var(--night);border:none;border-radius:10px;padding:14px 28px;font-size:15px;font-weight:700;cursor:pointer;font-family:'Syne',sans-serif;transition:opacity .2s;width:100%}
+.btn-primary:hover:not(:disabled){opacity:.88}
+.btn-primary:disabled{opacity:.4;cursor:default}
+.btn-ghost{background:transparent;color:var(--muted);border:1.5px solid var(--border);border-radius:10px;padding:12px 28px;font-size:14px;font-weight:600;cursor:pointer;font-family:'DM Sans',sans-serif;transition:color .2s,border-color .2s}
+.btn-ghost:hover{color:var(--offwh);border-color:#4b5563}
+
+/* Section divider */
+.section-sep{display:flex;align-items:center;gap:12px;margin:4px 0 28px}
+.section-sep-line{flex:1;height:1px;background:var(--border)}
+.section-sep-label{font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+
+/* Loading */
+#loading-step{display:none;text-align:center;padding:80px 0}
+.spinner{width:36px;height:36px;border:3px solid var(--border);border-top-color:var(--green);border-radius:50%;animation:spin .8s linear infinite;margin:0 auto 16px}
+@keyframes spin{to{transform:rotate(360deg)}}
+.loading-text{font-size:14px;color:var(--muted)}
+
+/* Result */
+#result-step{display:none}
+.era-grid{display:flex;gap:12px;margin-bottom:24px}
+.era-card{flex:1;background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:18px;text-align:center}
+.era-card-dim{font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:4px}
+.era-card-val{font-family:'Syne',sans-serif;font-size:22px;font-weight:900;margin-bottom:2px}
+.era-card-name{font-size:11px;color:var(--muted)}
+.result-section{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:20px 22px;margin-bottom:12px}
+.result-section-label{font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-bottom:8px}
+.result-section-text{font-size:14px;color:var(--offwh);line-height:1.65}
+
+/* CTA upgrade */
+.upgrade-box{background:linear-gradient(135deg,#00e89112,#00e89106);border:1px solid rgba(0,232,145,.25);border-radius:16px;padding:28px;margin-top:24px}
+.upgrade-eyebrow{font-size:11px;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--green);margin-bottom:10px}
+.upgrade-title{font-family:'Syne',sans-serif;font-size:20px;font-weight:800;margin-bottom:8px;letter-spacing:-.02em}
+.upgrade-sub{font-size:13px;color:var(--muted);margin-bottom:20px;line-height:1.6}
+.upgrade-features{list-style:none;margin-bottom:20px;display:flex;flex-direction:column;gap:6px}
+.upgrade-features li{font-size:13px;color:#cbd5e1;display:flex;gap:8px}
+.upgrade-features li::before{content:"→";color:var(--green);flex-shrink:0}
+
+/* Email gate */
+#email-step{display:none;margin-top:4px}
+.f-row{display:flex;flex-direction:column;gap:12px;margin-bottom:16px}
+.f-label{font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--green);margin-bottom:5px;display:block}
+input.f-input{width:100%;background:#ffffff0d;border:1.5px solid var(--border);border-radius:10px;padding:12px 16px;color:var(--offwh);font-size:14px;font-family:'DM Sans',sans-serif;outline:none;transition:border-color .2s}
+input.f-input:focus{border-color:#00e89166}
+input.f-input::placeholder{color:#4b5563}
+.f-error{font-size:12px;color:#f87171;margin-top:6px;display:none}
+
+/* OTP */
+#otp-step{display:none;margin-top:4px}
+.otp-info{font-size:13px;color:var(--muted);margin-bottom:16px;line-height:1.6}
+input.otp-input{width:100%;background:#ffffff0d;border:1.5px solid var(--border);border-radius:10px;padding:14px 16px;color:var(--offwh);font-size:22px;font-family:'Syne',sans-serif;font-weight:700;letter-spacing:.2em;text-align:center;outline:none;transition:border-color .2s}
+input.otp-input:focus{border-color:#00e89166}
+.otp-resend{font-size:12px;color:var(--muted);margin-top:10px;text-align:center}
+.otp-resend button{background:none;border:none;color:var(--green);cursor:pointer;font-size:12px;text-decoration:underline}
+
+@media(max-width:600px){
+  main{padding:60px 20px 80px}
+  .era-grid{flex-direction:column}
+}
+</style>
+
+<!-- INTRO -->
+<main>
+<div id="intro-step">
+  <div class="eyebrow">Diagnóstico ERA · gratuito</div>
+  <h1>¿En qué ERA está<br>tu empresa?</h1>
+  <p class="intro-sub">10 preguntas · resultado inmediato · sin registro<br>El diagnóstico es el producto. El informe es tuyo.</p>
+  <button class="btn-primary" onclick="startQuiz()">Empezar diagnóstico →</button>
+</div>
+
+<!-- QUIZ -->
+<div id="quiz-step" style="display:none">
+  <div class="progress-wrap">
+    <div class="progress-label">
+      <span id="progress-text">Pregunta 1 de 10</span>
+      <span id="progress-pct">0%</span>
+    </div>
+    <div class="progress-bar"><div class="progress-fill" id="progress-fill"></div></div>
+  </div>
+  <div id="question-container"></div>
+</div>
+
+<!-- LOADING -->
+<div id="loading-step">
+  <div class="spinner"></div>
+  <p class="loading-text">Calculando tu ERA…</p>
+</div>
+
+<!-- RESULT -->
+<div id="result-step">
+  <div class="eyebrow">Tu diagnóstico ERA</div>
+  <h1 id="result-headline">Así está tu empresa hoy</h1>
+  <div class="era-grid" id="era-grid"></div>
+  <div class="result-section" id="result-interpretation"></div>
+  <div class="result-section" id="result-gap"></div>
+
+  <div class="upgrade-box">
+    <div class="upgrade-eyebrow">Análisis IA completo</div>
+    <div class="upgrade-title">¿Qué hacer con esto?</div>
+    <div class="upgrade-sub">Con tu ERA como base, generamos un análisis personalizado con Claude: qué automatizar, en qué orden, inversión estimada y ROI proyectado.</div>
+    <ul class="upgrade-features">
+      <li>Dolor principal identificado en tu negocio específico</li>
+      <li>Oportunidad concreta de IA para tu proceso clave</li>
+      <li>Alerta crítica que debes atender primero</li>
+      <li>El informe llega a tu email — es tuyo para siempre</li>
+    </ul>
+
+    <!-- Email capture -->
+    <div id="email-step">
+      <div class="f-row">
+        <div>
+          <label class="f-label" for="inp-nombre">Tu nombre</label>
+          <input id="inp-nombre" class="f-input" type="text" placeholder="Ej: María González" autocomplete="given-name">
+        </div>
+        <div>
+          <label class="f-label" for="inp-email">Tu email</label>
+          <input id="inp-email" class="f-input" type="email" placeholder="tu@empresa.com" autocomplete="email">
+          <div class="f-error" id="email-error">Ingresa un email válido</div>
+        </div>
+      </div>
+      <button class="btn-primary" id="btn-send-otp" onclick="sendOtp()">Generar mi análisis IA →</button>
+    </div>
+
+    <!-- OTP -->
+    <div id="otp-step">
+      <p class="otp-info" id="otp-info">Te enviamos un código de 6 dígitos a <strong id="otp-email-display"></strong>. Ingrésalo para continuar.</p>
+      <input id="inp-otp" class="otp-input" type="text" inputmode="numeric" maxlength="6" placeholder="000000" oninput="onOtpInput()">
+      <div class="f-error" id="otp-error">Código incorrecto o expirado</div>
+      <p class="otp-resend">¿No llegó? <button onclick="resendOtp()">Reenviar código</button></p>
+    </div>
+
+    <div id="upgrade-cta">
+      <button class="btn-primary" onclick="showEmailStep()">Quiero el análisis completo →</button>
+    </div>
+  </div>
+</div>
+</main>
+
+<script is:inline>
+const WORKER = 'https://diagnostico-api.3g-ia-agents.com';
+
+const PREGUNTAS = [
+  // Operacional
+  {
+    id: 'q1', dim: 'Operacional · Datos e información',
+    texto: '¿Cómo gestionas la información clave del negocio?',
+    opciones: [
+      { val: 1, texto: 'En papel, memoria o WhatsApp — sin sistema formal' },
+      { val: 2, texto: 'En planillas Excel o Google Sheets — funciona, pero manual' },
+      { val: 3, texto: 'En sistemas integrados con acceso en tiempo real' },
+    ]
+  },
+  {
+    id: 'q2', dim: 'Operacional · Reportes y visibilidad',
+    texto: '¿Cómo conoces el estado real de tu negocio?',
+    opciones: [
+      { val: 1, texto: 'Preguntando a las personas — no hay reporte formal' },
+      { val: 2, texto: 'Armando reportes manuales periódicamente' },
+      { val: 3, texto: 'Dashboards automáticos actualizados — veo el negocio en tiempo real' },
+    ]
+  },
+  {
+    id: 'q3', dim: 'Operacional · Automatización',
+    texto: '¿Cuántos procesos operativos están automatizados?',
+    opciones: [
+      { val: 1, texto: 'Casi ninguno — todo requiere intervención humana' },
+      { val: 2, texto: 'Algunos puntuales (facturación, emails básicos)' },
+      { val: 3, texto: 'La mayoría — flujos automáticos encadenados sin intervención' },
+    ]
+  },
+  {
+    id: 'q4', dim: 'Operacional · Gestión de clientes',
+    texto: '¿Cómo gestionas la relación con tus clientes?',
+    opciones: [
+      { val: 1, texto: 'Sin sistema — por memoria, WhatsApp o cuaderno' },
+      { val: 2, texto: 'CRM básico o planilla de seguimiento' },
+      { val: 3, texto: 'CRM integrado con seguimiento automático y alertas' },
+    ]
+  },
+  {
+    id: 'q5', dim: 'Operacional · Toma de decisiones',
+    texto: '¿En qué te basas para tomar decisiones importantes?',
+    opciones: [
+      { val: 1, texto: 'Intuición y experiencia — no hay datos disponibles' },
+      { val: 2, texto: 'Datos históricos cuando los encuentro y proceso' },
+      { val: 3, texto: 'Datos en tiempo real y proyecciones automáticas' },
+    ]
+  },
+  // Comercial
+  {
+    id: 'c1', dim: 'Comercial · Generación de demanda',
+    texto: '¿Cómo consigues nuevos clientes?',
+    opciones: [
+      { val: 1, texto: 'Referencias y red de contactos — sin sistema de adquisición' },
+      { val: 2, texto: 'Acciones puntuales de marketing (redes, eventos, campañas)' },
+      { val: 3, texto: 'Sistema predecible: inbound + outbound con métricas claras' },
+    ]
+  },
+  {
+    id: 'c2', dim: 'Comercial · Proceso de ventas',
+    texto: '¿Cómo es tu proceso de ventas?',
+    opciones: [
+      { val: 1, texto: 'Sin proceso definido — depende del vendedor o del momento' },
+      { val: 2, texto: 'Proceso básico documentado, pero poco seguimiento' },
+      { val: 3, texto: 'Pipeline gestionado con etapas, métricas y seguimiento automático' },
+    ]
+  },
+  {
+    id: 'c3', dim: 'Comercial · Retención y recurrencia',
+    texto: '¿Cómo fidelizas a tus clientes actuales?',
+    opciones: [
+      { val: 1, texto: 'Sin sistema — reaccionamos cuando hay problemas' },
+      { val: 2, texto: 'Algunos seguimientos manuales (llamadas, emails puntuales)' },
+      { val: 3, texto: 'Programa activo de retención con métricas de churn y NPS' },
+    ]
+  },
+  {
+    id: 'c4', dim: 'Comercial · Presencia digital',
+    texto: '¿Cómo te encuentran tus clientes potenciales?',
+    opciones: [
+      { val: 1, texto: 'Solo boca a boca — sin presencia digital real' },
+      { val: 2, texto: 'Web y redes sociales básicas, contenido ocasional' },
+      { val: 3, texto: 'Presencia digital activa con contenido regular y SEO' },
+    ]
+  },
+  {
+    id: 'c5', dim: 'Comercial · Métricas comerciales',
+    texto: '¿Qué métricas comerciales monitoreas activamente?',
+    opciones: [
+      { val: 1, texto: 'Solo ventas totales — poco más' },
+      { val: 2, texto: 'Algunas métricas (tasa de cierre, ticket promedio)' },
+      { val: 3, texto: 'Métricas completas: CAC, LTV, ciclo de venta, churn' },
+    ]
+  },
+];
+
+const ERA_NAMES = ['', 'Caos Operativo', 'Datos Organizados', 'Empresa con IA'];
+const ERA_COLORS = ['', '#f87171', '#fbbf24', '#00E891'];
+
+const ERA_DESC = {
+  1: 'El negocio depende de personas clave, las decisiones se toman por intuición y los procesos son difíciles de escalar.',
+  2: 'Hay sistemas funcionando, pero los datos aún no se usan para decidir ni automatizar. El potencial está ahí, sin aprovechar.',
+  3: 'La IA maneja el volumen operativo. Las personas manejan la estrategia. El negocio escala sin agregar fricción.',
+};
+
+const GAP_TEXTS = {
+  '1-1': 'Estás en ERA 1 en ambas dimensiones. La prioridad es salir del caos operativo antes de escalar comercialmente.',
+  '1-2': 'Lo comercial está más maduro que lo operativo. El crecimiento en ventas se topará con un piso operativo débil.',
+  '1-3': 'Hay una brecha crítica: vendes bien pero no puedes sostener el crecimiento con la operación actual.',
+  '2-1': 'Lo operativo está más organizado. El próximo paso es llevar esa estructura al área comercial.',
+  '2-2': 'Estás en ERA 2 en ambas dimensiones. El paso siguiente es usar esos datos para automatizar decisiones.',
+  '2-3': 'Tienes un motor comercial avanzado. Automatizar la operación permitirá escalar sin perder calidad.',
+  '3-1': 'La operación está optimizada con IA, pero lo comercial necesita ponerse al mismo nivel.',
+  '3-2': 'La operación es eficiente. El foco ahora es llevar esa misma lógica de datos al área comercial.',
+  '3-3': 'Estás en ERA 3 en ambas dimensiones. El trabajo es profundizar y mantenerse en la frontera de lo que la IA permite.',
+};
+
+let current = 0;
+let answers = {};
+let diagId = null;
+
+function calcEra(score, total) {
+  const pct = score / (total * 3);
+  if (pct <= 0.45) return 1;
+  if (pct <= 0.72) return 2;
+  return 3;
+}
+
+function calcSub(score, total) {
+  const pct = score / (total * 3);
+  if (pct <= 0.33) return '-';
+  if (pct <= 0.50) return '';
+  if (pct <= 0.60) return '+';
+  if (pct <= 0.66) return '-';
+  if (pct <= 0.72) return '';
+  if (pct <= 0.78) return '+';
+  if (pct <= 0.83) return '-';
+  if (pct <= 0.91) return '';
+  return '+';
+}
+
+function startQuiz() {
+  document.getElementById('intro-step').style.display = 'none';
+  document.getElementById('quiz-step').style.display = 'block';
+  renderQuestion();
+}
+
+function renderQuestion() {
+  const q = PREGUNTAS[current];
+  const pct = Math.round((current / PREGUNTAS.length) * 100);
+  document.getElementById('progress-text').textContent = `Pregunta ${current + 1} de ${PREGUNTAS.length}`;
+  document.getElementById('progress-pct').textContent = `${pct}%`;
+  document.getElementById('progress-fill').style.width = `${pct}%`;
+
+  // Show section separator between q5 and c1
+  const sepHtml = current === 5
+    ? `<div class="section-sep"><div class="section-sep-line"></div><div class="section-sep-label">Dimensión comercial</div><div class="section-sep-line"></div></div>`
+    : '';
+
+  let optsHtml = q.opciones.map((o, i) => `
+    <div class="opt" id="opt-${i}" onclick="selectOpt(${i}, ${o.val})">
+      <div class="opt-num">Opción ${i + 1}</div>
+      <div class="opt-text">${o.texto}</div>
+    </div>
+  `).join('');
+
+  document.getElementById('question-container').innerHTML = `
+    ${sepHtml}
+    <div class="dim-label">${q.dim}</div>
+    <div class="question-text">${q.texto}</div>
+    <div class="options">${optsHtml}</div>
+  `;
+}
+
+function selectOpt(idx, val) {
+  document.querySelectorAll('.opt').forEach(el => el.classList.remove('selected'));
+  document.getElementById(`opt-${idx}`).classList.add('selected');
+
+  setTimeout(() => {
+    answers[PREGUNTAS[current].id] = val;
+    current++;
+    if (current < PREGUNTAS.length) {
+      renderQuestion();
+    } else {
+      showResult();
+    }
+  }, 280);
+}
+
+function showResult() {
+  document.getElementById('quiz-step').style.display = 'none';
+  document.getElementById('loading-step').style.display = 'block';
+
+  setTimeout(() => {
+    document.getElementById('loading-step').style.display = 'none';
+
+    const opKeys = ['q1','q2','q3','q4','q5'];
+    const comKeys = ['c1','c2','c3','c4','c5'];
+    const opScore = opKeys.reduce((s,k) => s + (answers[k]||0), 0);
+    const comScore = comKeys.reduce((s,k) => s + (answers[k]||0), 0);
+    const eraOp = calcEra(opScore, 5);
+    const eraCom = calcEra(comScore, 5);
+    const subOp = calcSub(opScore, 5);
+    const subCom = calcSub(comScore, 5);
+    const eraOpStr = `ERA${eraOp}${subOp}`;
+    const eraComStr = `ERA${eraCom}${subCom}`;
+
+    window._eraAnswers = answers;
+    window._eraOp = eraOpStr;
+    window._eraCom = eraComStr;
+
+    // ERA grid
+    document.getElementById('era-grid').innerHTML = `
+      <div class="era-card">
+        <div class="era-card-dim">Operacional</div>
+        <div class="era-card-val" style="color:${ERA_COLORS[eraOp]}">${eraOpStr}</div>
+        <div class="era-card-name">${ERA_NAMES[eraOp]}</div>
+      </div>
+      <div class="era-card">
+        <div class="era-card-dim">Comercial</div>
+        <div class="era-card-val" style="color:${ERA_COLORS[eraCom]}">${eraComStr}</div>
+        <div class="era-card-name">${ERA_NAMES[eraCom]}</div>
+      </div>
+    `;
+
+    document.getElementById('result-interpretation').innerHTML = `
+      <div class="result-section-label">¿Qué significa esto?</div>
+      <div class="result-section-text">
+        <strong>Operacional:</strong> ${ERA_DESC[eraOp]}<br><br>
+        <strong>Comercial:</strong> ${ERA_DESC[eraCom]}
+      </div>
+    `;
+
+    const gapKey = `${eraOp}-${eraCom}`;
+    document.getElementById('result-gap').innerHTML = `
+      <div class="result-section-label">Brecha identificada</div>
+      <div class="result-section-text">${GAP_TEXTS[gapKey] || ''}</div>
+    `;
+
+    document.getElementById('result-step').style.display = 'block';
+    document.getElementById('result-step').scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }, 900);
+}
+
+function showEmailStep() {
+  document.getElementById('upgrade-cta').style.display = 'none';
+  document.getElementById('email-step').style.display = 'block';
+  document.getElementById('inp-nombre').focus();
+}
+
+async function sendOtp() {
+  const nombre = document.getElementById('inp-nombre').value.trim();
+  const email = document.getElementById('inp-email').value.trim();
+  const errEl = document.getElementById('email-error');
+
+  if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+    errEl.style.display = 'block';
+    return;
+  }
+  errEl.style.display = 'none';
+
+  const btn = document.getElementById('btn-send-otp');
+  btn.disabled = true;
+  btn.textContent = 'Enviando…';
+
+  try {
+    const res = await fetch(`${WORKER}/request-otp`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ email, nombre, diagnostico_id: diagId }),
+    });
+    const data = await res.json();
+    if (!data.ok) throw new Error(data.error || 'Error al enviar');
+    diagId = data.diagnostico_id;
+    window._userEmail = email;
+    window._userName = nombre;
+
+    document.getElementById('otp-email-display').textContent = email;
+    document.getElementById('email-step').style.display = 'none';
+    document.getElementById('otp-step').style.display = 'block';
+    document.getElementById('inp-otp').focus();
+  } catch(e) {
+    btn.disabled = false;
+    btn.textContent = 'Generar mi análisis IA →';
+    errEl.textContent = e.message || 'Error al enviar el código. Intenta nuevamente.';
+    errEl.style.display = 'block';
+  }
+}
+
+function onOtpInput() {
+  const val = document.getElementById('inp-otp').value.replace(/\D/g,'');
+  document.getElementById('inp-otp').value = val;
+  if (val.length === 6) verifyOtp(val);
+}
+
+async function verifyOtp(code) {
+  document.getElementById('otp-error').style.display = 'none';
+  document.getElementById('inp-otp').disabled = true;
+
+  try {
+    const res = await fetch(`${WORKER}/verify-otp`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ diagnostico_id: diagId, otp_code: code }),
+    });
+    const data = await res.json();
+    if (!data.ok) throw new Error(data.error || 'Código incorrecto');
+
+    const params = new URLSearchParams({
+      token: data.access_token,
+      email: encodeURIComponent(window._userEmail || ''),
+      nombre: encodeURIComponent(window._userName || ''),
+      era_mode: 'ambas',
+      era_op: window._eraOp || '',
+      era_com: window._eraCom || '',
+      era_answers: encodeURIComponent(JSON.stringify(window._eraAnswers || {})),
+    });
+    window.location.href = `/diagnostico-ia?${params.toString()}`;
+  } catch(e) {
+    document.getElementById('inp-otp').disabled = false;
+    document.getElementById('inp-otp').value = '';
+    document.getElementById('otp-error').textContent = e.message || 'Código incorrecto o expirado';
+    document.getElementById('otp-error').style.display = 'block';
+    document.getElementById('inp-otp').focus();
+  }
+}
+
+async function resendOtp() {
+  if (!window._userEmail) return;
+  document.getElementById('otp-step').style.display = 'none';
+  document.getElementById('email-step').style.display = 'block';
+  document.getElementById('btn-send-otp').disabled = false;
+  document.getElementById('btn-send-otp').textContent = 'Generar mi análisis IA →';
+}
+</script>
+
+</Layout>
