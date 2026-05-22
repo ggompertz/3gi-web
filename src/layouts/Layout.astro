@@ -389,6 +389,8 @@ const canonicalUrl = new URL(Astro.url.pathname, 'https://3g-ia-agents.com').hre
     .fade-up.visible { opacity: 1; transform: translateY(0); }
 
     /* RESPONSIVE */
+    .era-scroll-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+
     @media (max-width: 900px) {
       section { padding: 72px 0; }
       .sect-grid { grid-template-columns: 1fr; }
@@ -402,6 +404,9 @@ const canonicalUrl = new URL(Astro.url.pathname, 'https://3g-ia-agents.com').hre
       .footer-inner { grid-template-columns: 1fr; text-align: center; }
       .footer-copy { text-align: center; }
     }
+    @media (max-width: 700px) {
+      .era-scroll-wrap .era-framework-grid { min-width: 540px; }
+    }
     @media (max-width: 600px) {
       .hero-ctas { flex-direction: column; }
       .btn-lg { width: 100%; justify-content: center; }
@@ -409,6 +414,11 @@ const canonicalUrl = new URL(Astro.url.pathname, 'https://3g-ia-agents.com').hre
       .proof-divider { display: none; }
       .lang-toggle { display: none; }
       .case-metrics { grid-template-columns: repeat(2, 1fr); }
+      .metric-after { font-size: 17px; overflow-wrap: break-word; }
+      .metric-before { font-size: 12px; overflow-wrap: break-word; }
+    }
+    @media (max-width: 480px) {
+      .pq-grid { grid-template-columns: 1fr; }
     }
   </style>
 </head>
