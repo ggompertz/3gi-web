@@ -5,7 +5,17 @@ import Layout from '../layouts/Layout.astro';
 <style>
 *,*:before,*:after{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}body{background:#06060d;color:#eef1f6;font-family:DM Sans,sans-serif;font-weight:400;line-height:1.6;-webkit-font-smoothing:antialiased}a{text-decoration:none;color:inherit}:root{--green: #00E891;--night: #06060D;--night-2: #0D0D1A;--night-3: #141422;--offwh: #EEF1F6;--muted: rgba(238,241,246,.45);--amber: #F59E0B;--blue: #60a5fa;--border: rgba(255,255,255,.07);--max: 1160px}.container{max-width:var(--max);margin:0 auto;padding:0 24px}.logo{display:inline-flex;flex-direction:column;font-family:Syne,sans-serif;font-weight:800;line-height:1}.logo-name{font-size:22px;letter-spacing:-.03em}.logo-name span{color:var(--green)}.logo-sub{font-size:7.5px;letter-spacing:.2em;text-transform:uppercase;color:#eef1f64d;margin-top:4px}.btn{display:inline-flex;align-items:center;gap:8px;padding:14px 28px;border-radius:8px;border:none;font-family:DM Sans,sans-serif;font-weight:500;font-size:15px;cursor:pointer;transition:all .2s;white-space:nowrap}.btn-primary{background:var(--green);color:var(--night)}.btn-primary:hover{background:#00ffa0;transform:translateY(-1px)}.btn-outline{background:transparent;color:var(--offwh);border:1px solid rgba(238,241,246,.2)}.btn-outline:hover{border-color:var(--green);color:var(--green)}.btn-whatsapp{background:#25d366;color:#fff}.btn-whatsapp:hover{background:#20bc5a;transform:translateY(-1px)}nav{position:fixed;top:0;left:0;right:0;z-index:100;background:#06060de6;backdrop-filter:blur(16px);border-bottom:1px solid var(--border)}.nav-inner{max-width:var(--max);margin:0 auto;padding:0 24px;height:68px;display:flex;align-items:center;justify-content:space-between}.nav-links{display:flex;align-items:center;gap:32px;list-style:none}.nav-links a{font-size:14px;color:var(--muted);transition:color .2s}.nav-links a:hover,.nav-links a.active{color:var(--offwh)}.nav-cta{display:flex;gap:10px;align-items:center}.page-hero{padding:140px 0 72px;background:var(--night-2);border-bottom:1px solid var(--border)}.page-tag{font-family:Syne,sans-serif;font-size:11px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--green);margin-bottom:16px}.page-title{font-family:Syne,sans-serif;font-weight:800;font-size:clamp(32px,5vw,56px);letter-spacing:-.03em;line-height:1.05;margin-bottom:16px}.page-sub{font-size:18px;font-weight:300;color:#eef1f699;max-width:600px;line-height:1.65}
 .cases-nav{padding:32px 0;background:var(--night);border-bottom:1px solid var(--border);position:sticky;top:68px;z-index:50}.cases-nav-inner{display:flex;gap:12px;flex-wrap:wrap}.cases-nav-btn{font-size:13px;font-weight:500;padding:7px 16px;border-radius:20px;border:1px solid var(--border);color:var(--muted);background:transparent;cursor:pointer;transition:all .2s;font-family:DM Sans,sans-serif}.cases-nav-btn:hover{color:var(--offwh);border-color:rgba(238,241,246,.2)}.cases-nav-btn.active{background:rgba(0,232,145,.1);border-color:rgba(0,232,145,.3);color:var(--green)}
-.case-section{padding:72px 0}.case-section:nth-child(even){background:var(--night-2)}.case-section:nth-child(odd){background:var(--night)}.case-wrapper{background:var(--night-3);border:1px solid var(--border);border-radius:16px;overflow:hidden;max-width:900px}.case-header{padding:32px 40px 28px;border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px}.case-badge{font-size:10px;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--amber);background:#f59e0b1a;border:1px solid rgba(245,158,11,.2);padding:5px 12px;border-radius:20px}.case-badge-composite{font-size:10px;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--blue);background:rgba(96,165,250,.1);border:1px solid rgba(96,165,250,.2);padding:5px 12px;border-radius:20px}.case-company{font-family:Syne,sans-serif;font-weight:800;font-size:22px;letter-spacing:-.02em}.case-meta{font-size:13px;color:var(--muted);margin-top:4px}.case-body{padding:40px}.case-situation{font-size:16px;font-weight:300;color:#eef1f6bf;line-height:1.75;margin-bottom:40px}.case-results{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-bottom:40px}.result-card{background:var(--night-2);border-radius:10px;padding:20px 16px;border:1px solid var(--border);text-align:center}.result-label{font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:.08em;font-weight:600;margin-bottom:10px}.result-before{font-size:14px;color:#eef1f659;text-decoration:line-through;margin-bottom:4px}.result-after{font-family:Syne,sans-serif;font-weight:800;font-size:22px;color:var(--green);line-height:1}.result-unit{font-size:11px;color:var(--muted);margin-top:6px;line-height:1.4}.case-quote{padding:24px 28px;border-left:3px solid var(--green);background:#00e8910a;border-radius:0 8px 8px 0;margin-bottom:32px}.case-quote p{font-size:16px;font-style:italic;font-weight:300;color:#eef1f6cc;line-height:1.7;margin-bottom:12px}.case-quote cite{font-size:13px;color:var(--muted);font-style:normal}.case-context{margin-top:48px;padding-top:40px;border-top:1px solid var(--border)}.context-title{font-family:Syne,sans-serif;font-weight:800;font-size:20px;margin-bottom:16px}.context-p{font-size:15px;color:#eef1f6a6;line-height:1.8;margin-bottom:16px}.composite-note{margin-top:16px;padding:12px 16px;background:rgba(96,165,250,.06);border:1px solid rgba(96,165,250,.15);border-radius:8px;font-size:12px;color:rgba(238,241,246,.45);line-height:1.6}.cta-band{background:var(--night-2);border-top:1px solid var(--border);padding:72px 0;text-align:center}.cta-band h2{font-family:Syne,sans-serif;font-weight:800;font-size:clamp(24px,4vw,40px);letter-spacing:-.03em;margin-bottom:12px}.cta-band p{font-size:16px;color:var(--muted);margin-bottom:32px}.cta-buttons{display:flex;align-items:center;justify-content:center;gap:14px;flex-wrap:wrap}footer{background:var(--night-2);border-top:1px solid var(--border);padding:40px 0}.footer-inner{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:24px}.footer-links{display:flex;gap:24px;list-style:none;flex-wrap:wrap}.footer-links a{font-size:13px;color:var(--muted);transition:color .2s}.footer-links a:hover{color:var(--offwh)}.footer-copy{font-size:13px;color:var(--muted)}@media(max-width:900px){.nav-links{display:none}.case-results{grid-template-columns:repeat(2,1fr)}.cases-nav{top:68px}}@media(max-width:600px){.case-body,.case-header{padding:24px 20px}.cases-nav{position:relative;top:0}}
+.case-section{padding:72px 0}.case-section:nth-child(even){background:var(--night-2)}.case-section:nth-child(odd){background:var(--night)}.case-wrapper{background:var(--night-3);border:1px solid var(--border);border-radius:16px;overflow:hidden;max-width:900px}.case-header{padding:32px 40px 28px;border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px}.case-badge{font-size:10px;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--amber);background:#f59e0b1a;border:1px solid rgba(245,158,11,.2);padding:5px 12px;border-radius:20px}.case-badge-composite{font-size:10px;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--blue);background:rgba(96,165,250,.1);border:1px solid rgba(96,165,250,.2);padding:5px 12px;border-radius:20px}.case-company{font-family:Syne,sans-serif;font-weight:800;font-size:22px;letter-spacing:-.02em}.case-meta{font-size:13px;color:var(--muted);margin-top:4px}.case-body{padding:40px}.case-situation{font-size:16px;font-weight:300;color:#eef1f6bf;line-height:1.75;margin-bottom:40px}.case-results{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-bottom:40px}.result-card{background:var(--night-2);border-radius:10px;padding:20px 16px;border:1px solid var(--border);text-align:center}.result-label{font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:.08em;font-weight:600;margin-bottom:10px}.result-before{font-size:14px;color:#eef1f659;text-decoration:line-through;margin-bottom:4px}.result-after{font-family:Syne,sans-serif;font-weight:800;font-size:22px;color:var(--green);line-height:1}.result-unit{font-size:11px;color:var(--muted);margin-top:6px;line-height:1.4}.case-quote{padding:24px 28px;border-left:3px solid var(--green);background:#00e8910a;border-radius:0 8px 8px 0;margin-bottom:32px}.case-quote p{font-size:16px;font-style:italic;font-weight:300;color:#eef1f6cc;line-height:1.7;margin-bottom:12px}.case-quote cite{font-size:13px;color:var(--muted);font-style:normal}.case-context{margin-top:48px;padding-top:40px;border-top:1px solid var(--border)}.context-title{font-family:Syne,sans-serif;font-weight:800;font-size:20px;margin-bottom:16px}.context-p{font-size:15px;color:#eef1f6a6;line-height:1.8;margin-bottom:16px}.composite-note{margin-top:16px;padding:12px 16px;background:rgba(96,165,250,.06);border:1px solid rgba(96,165,250,.15);border-radius:8px;font-size:12px;color:rgba(238,241,246,.45);line-height:1.6}
+.impl-list{margin-top:4px;display:flex;flex-direction:column;gap:6px}
+.impl-item{border:1px solid var(--border);border-radius:10px;overflow:hidden;background:#0a0a14}
+.impl-trigger{width:100%;display:flex;align-items:center;justify-content:space-between;gap:12px;padding:14px 18px;background:none;border:none;cursor:pointer;text-align:left;color:var(--offwh);font-family:'DM Sans',sans-serif}
+.impl-trigger:hover{background:rgba(255,255,255,.03)}
+.impl-trigger-text{font-size:14px;font-weight:600;color:var(--offwh);line-height:1.3}
+.impl-trigger-icon{flex-shrink:0;width:20px;height:20px;border-radius:50%;border:1px solid rgba(0,232,145,.3);display:flex;align-items:center;justify-content:center;color:var(--green);font-size:12px;transition:transform .25s}
+.impl-item.open .impl-trigger-icon{transform:rotate(45deg)}
+.impl-body{display:none;padding:0 18px 16px;font-size:14px;color:rgba(238,241,246,.65);line-height:1.75}
+.impl-item.open .impl-body{display:block}
+.context-intro{font-size:14px;color:rgba(238,241,246,.45);font-style:italic;margin-bottom:16px;line-height:1.7}.cta-band{background:var(--night-2);border-top:1px solid var(--border);padding:72px 0;text-align:center}.cta-band h2{font-family:Syne,sans-serif;font-weight:800;font-size:clamp(24px,4vw,40px);letter-spacing:-.03em;margin-bottom:12px}.cta-band p{font-size:16px;color:var(--muted);margin-bottom:32px}.cta-buttons{display:flex;align-items:center;justify-content:center;gap:14px;flex-wrap:wrap}footer{background:var(--night-2);border-top:1px solid var(--border);padding:40px 0}.footer-inner{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:24px}.footer-links{display:flex;gap:24px;list-style:none;flex-wrap:wrap}.footer-links a{font-size:13px;color:var(--muted);transition:color .2s}.footer-links a:hover{color:var(--offwh)}.footer-copy{font-size:13px;color:var(--muted)}@media(max-width:900px){.nav-links{display:none}.case-results{grid-template-columns:repeat(2,1fr)}.cases-nav{top:68px}}@media(max-width:600px){.case-body,.case-header{padding:24px 20px}.cases-nav{position:relative;top:0}}
 </style>
 
 <Layout title="Casos de éxito · IA en PyMEs reales · 3G Intelligence" description="Resultados reales de implementación de IA en PyMEs. Inspecciones, logística de perecederos, exportación agrícola y distribución. Datos concretos, nombres confidenciales.">
@@ -83,12 +93,44 @@ import Layout from '../layouts/Layout.astro';
         </div>
         <div class="case-context">
           <div class="context-title" data-i18n="cert-impl-title">El sistema operativo completo que se construyó</div>
-          <p class="context-p" data-i18n="cert-impl0" style="color:rgba(238,241,246,0.5);font-style:italic;">La clave del proyecto fue no replicar un ERP. Se construyó alrededor de cómo el equipo ya trabajaba — no al revés.</p>
-          <p class="context-p" data-i18n="cert-impl1"><strong style="color:var(--offwh);">1. Dashboard de expedientes en tiempo real.</strong> Cada uno de los 365 clientes y 837 expedientes históricos tiene estado visible: cotizado, aprobado, en inspección, certificable, facturable, cerrado. El gerente ve el cuadro completo sin preguntar a nadie. El inspector actualiza desde terreno.</p>
-          <p class="context-p" data-i18n="cert-impl2"><strong style="color:var(--offwh);">2. Cotizaciones y cobros automáticos vía Gmail.</strong> Al enviar un presupuesto, el sistema genera y entrega la cotización al cliente por email automáticamente. Al marcar un expediente como completado, solicita la factura sin intervención manual. El paso que antes se olvidaba ahora no puede olvidarse.</p>
-          <p class="context-p" data-i18n="cert-impl3"><strong style="color:var(--offwh);">3. WhatsApp Bot operacional.</strong> Cada cambio de etapa de un expediente dispara una notificación por WhatsApp al equipo correspondiente. El inspector sabe cuándo está asignado a un trabajo. El encargado sabe cuándo se completó la inspección. Sin emails que se pierden, sin llamadas de coordinación.</p>
-          <p class="context-p" data-i18n="cert-impl4"><strong style="color:var(--offwh);">4. Bot de normativa para el equipo en terreno.</strong> Los inspectores consultan la normativa técnica vigente directamente por WhatsApp y obtienen la respuesta en segundos. Sin buscar en PDFs, sin llamar a la oficina. La IA trabaja donde el trabajo ocurre.</p>
-          <p class="context-p" data-i18n="cert-impl5"><strong style="color:var(--offwh);">5. Alertas MINVU automáticas.</strong> Un CRON corre cada mañana a las 8am y notifica a los clientes con certificados MINVU próximos a vencer. Todos los certificados bajo control automático — sin que nadie tenga que recordarlo.</p>
+          <p class="context-intro" data-i18n="cert-impl0">La clave del proyecto fue no replicar un ERP. Se construyó alrededor de cómo el equipo ya trabajaba — no al revés.</p>
+          <div class="impl-list">
+            <div class="impl-item">
+              <button class="impl-trigger" onclick="toggleImpl(this)">
+                <span class="impl-trigger-text" data-i18n="cert-impl1-title">1. Dashboard de expedientes en tiempo real</span>
+                <span class="impl-trigger-icon">+</span>
+              </button>
+              <div class="impl-body" data-i18n="cert-impl1-body">Cada uno de los 365 clientes y 837 expedientes históricos tiene estado visible: cotizado, aprobado, en inspección, certificable, facturable, cerrado. El gerente ve el cuadro completo sin preguntar a nadie. El inspector actualiza desde terreno.</div>
+            </div>
+            <div class="impl-item">
+              <button class="impl-trigger" onclick="toggleImpl(this)">
+                <span class="impl-trigger-text" data-i18n="cert-impl2-title">2. Cotizaciones y cobros automáticos vía Gmail</span>
+                <span class="impl-trigger-icon">+</span>
+              </button>
+              <div class="impl-body" data-i18n="cert-impl2-body">Al enviar un presupuesto, el sistema genera y entrega la cotización al cliente por email automáticamente. Al marcar un expediente como completado, solicita la factura sin intervención manual. El paso que antes se olvidaba ahora no puede olvidarse.</div>
+            </div>
+            <div class="impl-item">
+              <button class="impl-trigger" onclick="toggleImpl(this)">
+                <span class="impl-trigger-text" data-i18n="cert-impl3-title">3. WhatsApp Bot operacional</span>
+                <span class="impl-trigger-icon">+</span>
+              </button>
+              <div class="impl-body" data-i18n="cert-impl3-body">Cada cambio de etapa de un expediente dispara una notificación por WhatsApp al equipo correspondiente. El inspector sabe cuándo está asignado a un trabajo. El encargado sabe cuándo se completó la inspección. Sin emails que se pierden, sin llamadas de coordinación.</div>
+            </div>
+            <div class="impl-item">
+              <button class="impl-trigger" onclick="toggleImpl(this)">
+                <span class="impl-trigger-text" data-i18n="cert-impl4-title">4. Bot de normativa para el equipo en terreno</span>
+                <span class="impl-trigger-icon">+</span>
+              </button>
+              <div class="impl-body" data-i18n="cert-impl4-body">Los inspectores consultan la normativa técnica vigente directamente por WhatsApp y obtienen la respuesta en segundos. Sin buscar en PDFs, sin llamar a la oficina. La IA trabaja donde el trabajo ocurre.</div>
+            </div>
+            <div class="impl-item">
+              <button class="impl-trigger" onclick="toggleImpl(this)">
+                <span class="impl-trigger-text" data-i18n="cert-impl5-title">5. Alertas automáticas de vencimiento</span>
+                <span class="impl-trigger-icon">+</span>
+              </button>
+              <div class="impl-body" data-i18n="cert-impl5-body">Un CRON corre cada mañana a las 8am y notifica a los clientes con certificados próximos a vencer. Todos los certificados bajo control automático — sin que nadie tenga que recordarlo.</div>
+            </div>
+          </div>
           <div style="margin-top:24px;padding:16px 20px;background:rgba(0,232,145,0.04);border:1px solid rgba(0,232,145,0.12);border-radius:10px;">
             <p style="font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:rgba(0,232,145,0.6);margin-bottom:6px;">ROI proyectado a 12 meses</p>
             <p style="font-family:Syne,sans-serif;font-size:28px;font-weight:800;color:var(--green);">263%</p>
@@ -141,9 +183,29 @@ import Layout from '../layouts/Layout.astro';
         </div>
         <div class="case-context">
           <div class="context-title" data-i18n="log-impl-title">Qué se implementó</div>
-          <p class="context-p" data-i18n="log-impl1"><strong style="color:var(--offwh);">1. Agente de respuesta a incidencias.</strong> Monitoreo en tiempo real de flota: detecta paradas no programadas, desviaciones de ruta y alarmas de temperatura. Ante cualquier evento, contacta al conductor por WhatsApp con el protocolo definido. Si no hay respuesta en 8 minutos, notifica al cliente y propone solución.</p>
-          <p class="context-p" data-i18n="log-impl2"><strong style="color:var(--offwh);">2. Control de ventanas horarias.</strong> El agente monitorea los tiempos estimados de llegada al puerto en tiempo real. Si proyecta un retraso, alerta al coordinador y al cliente con anticipación — no después de que ocurre el problema.</p>
-          <p class="context-p" data-i18n="log-impl3"><strong style="color:var(--offwh);">3. Dashboard de operaciones nocturnas.</strong> El coordinador revisa el estado de toda la flota en un panel simple antes de dormir y al levantarse. Solo lo llaman si el agente no pudo resolver.</p>
+          <div class="impl-list">
+            <div class="impl-item">
+              <button class="impl-trigger" onclick="toggleImpl(this)">
+                <span class="impl-trigger-text" data-i18n="log-impl1-title">1. Agente de respuesta a incidencias</span>
+                <span class="impl-trigger-icon">+</span>
+              </button>
+              <div class="impl-body" data-i18n="log-impl1-body">Monitoreo en tiempo real de flota: detecta paradas no programadas, desviaciones de ruta y alarmas de temperatura. Ante cualquier evento, contacta al conductor por WhatsApp con el protocolo definido. Si no hay respuesta en 8 minutos, notifica al cliente y propone solución.</div>
+            </div>
+            <div class="impl-item">
+              <button class="impl-trigger" onclick="toggleImpl(this)">
+                <span class="impl-trigger-text" data-i18n="log-impl2-title">2. Control de ventanas horarias</span>
+                <span class="impl-trigger-icon">+</span>
+              </button>
+              <div class="impl-body" data-i18n="log-impl2-body">El agente monitorea los tiempos estimados de llegada al puerto en tiempo real. Si proyecta un retraso, alerta al coordinador y al cliente con anticipación — no después de que ocurre el problema.</div>
+            </div>
+            <div class="impl-item">
+              <button class="impl-trigger" onclick="toggleImpl(this)">
+                <span class="impl-trigger-text" data-i18n="log-impl3-title">3. Dashboard de operaciones nocturnas</span>
+                <span class="impl-trigger-icon">+</span>
+              </button>
+              <div class="impl-body" data-i18n="log-impl3-body">El coordinador revisa el estado de toda la flota en un panel simple antes de dormir y al levantarse. Solo lo llaman si el agente no pudo resolver.</div>
+            </div>
+          </div>
           <div class="composite-note" data-i18n="log-composite-note">Este escenario es compuesto: combina patrones observados en múltiples operaciones logísticas de perecederos en Chile. Los números son representativos del sector, no de una empresa específica.</div>
         </div>
       </div>
@@ -192,9 +254,29 @@ import Layout from '../layouts/Layout.astro';
         </div>
         <div class="case-context">
           <div class="context-title" data-i18n="agro-impl-title">Qué se implementó</div>
-          <p class="context-p" data-i18n="agro-impl1"><strong style="color:var(--offwh);">1. Agente de prescripción agronómica.</strong> Conectado a sensores de humedad de suelo, datos satelitales y forecast climático. Cada mañana el jefe de campo recibe en WhatsApp una instrucción de riego por bloque: sector, duración y fundamento. No un dashboard que hay que interpretar — una acción concreta.</p>
-          <p class="context-p" data-i18n="agro-impl2"><strong style="color:var(--offwh);">2. Alerta de déficit hídrico proyectado.</strong> El agente proyecta el estado hídrico de cada bloque a 3 días. Si detecta déficit inminente, alerta al jefe de campo con anticipación suficiente para actuar antes de que afecte la fruta.</p>
-          <p class="context-p" data-i18n="agro-impl3"><strong style="color:var(--offwh);">3. Registro fitosanitario automatizado.</strong> Las acciones ejecutadas quedan registradas automáticamente. El cuaderno y el WhatsApp dejan de ser la única memoria del fundo. El historial está disponible para auditorías de exportación.</p>
+          <div class="impl-list">
+            <div class="impl-item">
+              <button class="impl-trigger" onclick="toggleImpl(this)">
+                <span class="impl-trigger-text" data-i18n="agro-impl1-title">1. Agente de prescripción agronómica</span>
+                <span class="impl-trigger-icon">+</span>
+              </button>
+              <div class="impl-body" data-i18n="agro-impl1-body">Conectado a sensores de humedad de suelo, datos satelitales y forecast climático. Cada mañana el jefe de campo recibe en WhatsApp una instrucción de riego por bloque: sector, duración y fundamento. No un dashboard que hay que interpretar — una acción concreta.</div>
+            </div>
+            <div class="impl-item">
+              <button class="impl-trigger" onclick="toggleImpl(this)">
+                <span class="impl-trigger-text" data-i18n="agro-impl2-title">2. Alerta de déficit hídrico proyectado</span>
+                <span class="impl-trigger-icon">+</span>
+              </button>
+              <div class="impl-body" data-i18n="agro-impl2-body">El agente proyecta el estado hídrico de cada bloque a 3 días. Si detecta déficit inminente, alerta al jefe de campo con anticipación suficiente para actuar antes de que afecte la fruta.</div>
+            </div>
+            <div class="impl-item">
+              <button class="impl-trigger" onclick="toggleImpl(this)">
+                <span class="impl-trigger-text" data-i18n="agro-impl3-title">3. Registro fitosanitario automatizado</span>
+                <span class="impl-trigger-icon">+</span>
+              </button>
+              <div class="impl-body" data-i18n="agro-impl3-body">Las acciones ejecutadas quedan registradas automáticamente. El cuaderno y el WhatsApp dejan de ser la única memoria del fundo. El historial está disponible para auditorías de exportación.</div>
+            </div>
+          </div>
           <div class="composite-note" data-i18n="agro-composite-note">Este escenario es compuesto: combina datos de plataformas como Instacrops y Kilimo (que operan en Chile y LATAM) con patrones de exportación de cerezas del Maule. Los números de reducción hídrica (30%) y rechazo de calidad están alineados con estudios del sector en condiciones similares.</div>
         </div>
       </div>
@@ -247,9 +329,29 @@ import Layout from '../layouts/Layout.astro';
         </div>
         <div class="case-context">
           <div class="context-title" data-i18n="dist-impl-title">Qué se implementó</div>
-          <p class="context-p" data-i18n="dist-impl1"><strong style="color:var(--offwh);">1. Automatización de cotizaciones.</strong> Se conectó el sistema de stock con una herramienta de generación automática de cotizaciones. El vendedor selecciona productos, el sistema genera el PDF en 30 segundos y lo envía por email. Eliminó el 89% del tiempo administrativo del equipo comercial.</p>
-          <p class="context-p" data-i18n="dist-impl2"><strong style="color:var(--offwh);">2. Agente WhatsApp con IA.</strong> Los clientes consultan disponibilidad, precios y estado de pedidos por WhatsApp en cualquier horario. El agente responde con información en tiempo real del sistema. Solo escala al equipo cuando hay una solicitud de compra nueva.</p>
-          <p class="context-p" data-i18n="dist-impl3"><strong style="color:var(--offwh);">3. Dashboard operacional en tiempo real.</strong> Integración de ventas, stock e inventario en un dashboard gerencial actualizado cada hora. Las decisiones de compra y proyección ahora se basan en datos frescos, no en reportes de la semana anterior.</p>
+          <div class="impl-list">
+            <div class="impl-item">
+              <button class="impl-trigger" onclick="toggleImpl(this)">
+                <span class="impl-trigger-text" data-i18n="dist-impl1-title">1. Automatización de cotizaciones</span>
+                <span class="impl-trigger-icon">+</span>
+              </button>
+              <div class="impl-body" data-i18n="dist-impl1-body">Se conectó el sistema de stock con una herramienta de generación automática de cotizaciones. El vendedor selecciona productos, el sistema genera el PDF en 30 segundos y lo envía por email. Eliminó el 89% del tiempo administrativo del equipo comercial.</div>
+            </div>
+            <div class="impl-item">
+              <button class="impl-trigger" onclick="toggleImpl(this)">
+                <span class="impl-trigger-text" data-i18n="dist-impl2-title">2. Agente WhatsApp con IA</span>
+                <span class="impl-trigger-icon">+</span>
+              </button>
+              <div class="impl-body" data-i18n="dist-impl2-body">Los clientes consultan disponibilidad, precios y estado de pedidos por WhatsApp en cualquier horario. El agente responde con información en tiempo real del sistema. Solo escala al equipo cuando hay una solicitud de compra nueva.</div>
+            </div>
+            <div class="impl-item">
+              <button class="impl-trigger" onclick="toggleImpl(this)">
+                <span class="impl-trigger-text" data-i18n="dist-impl3-title">3. Dashboard operacional en tiempo real</span>
+                <span class="impl-trigger-icon">+</span>
+              </button>
+              <div class="impl-body" data-i18n="dist-impl3-body">Integración de ventas, stock e inventario en un dashboard gerencial actualizado cada hora. Las decisiones de compra y proyección ahora se basan en datos frescos, no en reportes de la semana anterior.</div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -296,11 +398,16 @@ const T_casos = {
     'cert-cite': '— Gerente, empresa de inspecciones y certificaciones (nombre reservado por confidencialidad)',
     'cert-impl-title': 'El sistema operativo completo que se construyó',
     'cert-impl0': 'La clave del proyecto fue no replicar un ERP. Se construyó alrededor de cómo el equipo ya trabajaba — no al revés.',
-    'cert-impl1': '<strong style="color:var(--offwh);">1. Dashboard de expedientes en tiempo real.</strong> Cada uno de los 365 clientes y 837 expedientes históricos tiene estado visible: cotizado, aprobado, en inspección, certificable, facturable, cerrado. El gerente ve el cuadro completo sin preguntar a nadie. El inspector actualiza desde terreno.',
-    'cert-impl2': '<strong style="color:var(--offwh);">2. Cotizaciones y cobros automáticos vía Gmail.</strong> Al enviar un presupuesto, el sistema genera y entrega la cotización al cliente por email automáticamente. Al marcar un expediente como completado, solicita la factura sin intervención manual. El paso que antes se olvidaba ahora no puede olvidarse.',
-    'cert-impl3': '<strong style="color:var(--offwh);">3. WhatsApp Bot operacional.</strong> Cada cambio de etapa de un expediente dispara una notificación por WhatsApp al equipo correspondiente. El inspector sabe cuándo está asignado a un trabajo. El encargado sabe cuándo se completó la inspección. Sin emails que se pierden, sin llamadas de coordinación.',
-    'cert-impl4': '<strong style="color:var(--offwh);">4. Bot de normativa para el equipo en terreno.</strong> Los inspectores consultan la normativa técnica vigente directamente por WhatsApp y obtienen la respuesta en segundos. Sin buscar en PDFs, sin llamar a la oficina. La IA trabaja donde el trabajo ocurre.',
-    'cert-impl5': '<strong style="color:var(--offwh);">5. Alertas MINVU automáticas.</strong> Un CRON corre cada mañana a las 8am y notifica a los clientes con certificados MINVU próximos a vencer. Todos los certificados bajo control automático — sin que nadie tenga que recordarlo.',
+    'cert-impl1-title': '1. Dashboard de expedientes en tiempo real',
+    'cert-impl1-body': 'Cada uno de los 365 clientes y 837 expedientes históricos tiene estado visible: cotizado, aprobado, en inspección, certificable, facturable, cerrado. El gerente ve el cuadro completo sin preguntar a nadie. El inspector actualiza desde terreno.',
+    'cert-impl2-title': '2. Cotizaciones y cobros automáticos vía Gmail',
+    'cert-impl2-body': 'Al enviar un presupuesto, el sistema genera y entrega la cotización al cliente por email automáticamente. Al marcar un expediente como completado, solicita la factura sin intervención manual. El paso que antes se olvidaba ahora no puede olvidarse.',
+    'cert-impl3-title': '3. WhatsApp Bot operacional',
+    'cert-impl3-body': 'Cada cambio de etapa de un expediente dispara una notificación por WhatsApp al equipo correspondiente. El inspector sabe cuándo está asignado a un trabajo. El encargado sabe cuándo se completó la inspección. Sin emails que se pierden, sin llamadas de coordinación.',
+    'cert-impl4-title': '4. Bot de normativa para el equipo en terreno',
+    'cert-impl4-body': 'Los inspectores consultan la normativa técnica vigente directamente por WhatsApp y obtienen la respuesta en segundos. Sin buscar en PDFs, sin llamar a la oficina. La IA trabaja donde el trabajo ocurre.',
+    'cert-impl5-title': '5. Alertas automáticas de vencimiento',
+    'cert-impl5-body': 'Un CRON corre cada mañana a las 8am y notifica a los clientes con certificados próximos a vencer. Todos los certificados bajo control automático — sin que nadie tenga que recordarlo.',
     // Caso 2: Logística
     'log-company': 'Empresa de transporte refrigerado · Ruta packing-puerto',
     'log-meta': '12 camiones · Maule y O\'Higgins → San Antonio · Chile',
@@ -311,9 +418,12 @@ const T_casos = {
     'log-r3-label': 'Gestión nocturna', 'log-r3-before': 'Manual · Coordinador despierto', 'log-r3-after': 'Agente autónomo', 'log-r3-unit': 'Escala solo si no hay respuesta',
     'log-r4-label': 'Contrato exportadora', 'log-r4-before': 'En riesgo', 'log-r4-after': 'Renovado', 'log-r4-unit': 'Con aumento de volumen',
     'log-impl-title': 'Qué se implementó',
-    'log-impl1': '<strong style="color:var(--offwh);">1. Agente de respuesta a incidencias.</strong> Monitoreo en tiempo real de flota: detecta paradas no programadas, desviaciones de ruta y alarmas de temperatura. Ante cualquier evento, contacta al conductor por WhatsApp con el protocolo definido. Si no hay respuesta en 8 minutos, notifica al cliente y propone solución.',
-    'log-impl2': '<strong style="color:var(--offwh);">2. Control de ventanas horarias.</strong> El agente monitorea los tiempos estimados de llegada al puerto en tiempo real. Si proyecta un retraso, alerta al coordinador y al cliente con anticipación — no después de que ocurre el problema.',
-    'log-impl3': '<strong style="color:var(--offwh);">3. Dashboard de operaciones nocturnas.</strong> El coordinador revisa el estado de toda la flota en un panel simple antes de dormir y al levantarse. Solo lo llaman si el agente no pudo resolver.',
+    'log-impl1-title': '1. Agente de respuesta a incidencias',
+    'log-impl1-body': 'Monitoreo en tiempo real de flota: detecta paradas no programadas, desviaciones de ruta y alarmas de temperatura. Ante cualquier evento, contacta al conductor por WhatsApp con el protocolo definido. Si no hay respuesta en 8 minutos, notifica al cliente y propone solución.',
+    'log-impl2-title': '2. Control de ventanas horarias',
+    'log-impl2-body': 'El agente monitorea los tiempos estimados de llegada al puerto en tiempo real. Si proyecta un retraso, alerta al coordinador y al cliente con anticipación — no después de que ocurre el problema.',
+    'log-impl3-title': '3. Dashboard de operaciones nocturnas',
+    'log-impl3-body': 'El coordinador revisa el estado de toda la flota en un panel simple antes de dormir y al levantarse. Solo lo llaman si el agente no pudo resolver.',
     'log-composite-note': 'Este escenario es compuesto: combina patrones observados en múltiples operaciones logísticas de perecederos en Chile. Los números son representativos del sector, no de una empresa específica.',
     // Caso 3: Agro
     'agro-company': 'Exportadora de cerezas · Valle del Maule',
@@ -325,9 +435,12 @@ const T_casos = {
     'agro-r3-label': 'Prescripción de riego', 'agro-r3-before': 'Por experiencia', 'agro-r3-after': 'Por datos · Diario', 'agro-r3-unit': 'WhatsApp cada mañana por bloque',
     'agro-r4-label': 'Presencia del dueño en temporada', 'agro-r4-before': '24/7 en el fundo', 'agro-r4-after': 'Solo en decisiones', 'agro-r4-unit': 'El agente monitorea. Él dirige.',
     'agro-impl-title': 'Qué se implementó',
-    'agro-impl1': '<strong style="color:var(--offwh);">1. Agente de prescripción agronómica.</strong> Conectado a sensores de humedad de suelo, datos satelitales y forecast climático. Cada mañana el jefe de campo recibe en WhatsApp una instrucción de riego por bloque: sector, duración y fundamento. No un dashboard que hay que interpretar — una acción concreta.',
-    'agro-impl2': '<strong style="color:var(--offwh);">2. Alerta de déficit hídrico proyectado.</strong> El agente proyecta el estado hídrico de cada bloque a 3 días. Si detecta déficit inminente, alerta al jefe de campo con anticipación suficiente para actuar antes de que afecte la fruta.',
-    'agro-impl3': '<strong style="color:var(--offwh);">3. Registro fitosanitario automatizado.</strong> Las acciones ejecutadas quedan registradas automáticamente. El cuaderno y el WhatsApp dejan de ser la única memoria del fundo. El historial está disponible para auditorías de exportación.',
+    'agro-impl1-title': '1. Agente de prescripción agronómica',
+    'agro-impl1-body': 'Conectado a sensores de humedad de suelo, datos satelitales y forecast climático. Cada mañana el jefe de campo recibe en WhatsApp una instrucción de riego por bloque: sector, duración y fundamento. No un dashboard que hay que interpretar — una acción concreta.',
+    'agro-impl2-title': '2. Alerta de déficit hídrico proyectado',
+    'agro-impl2-body': 'El agente proyecta el estado hídrico de cada bloque a 3 días. Si detecta déficit inminente, alerta al jefe de campo con anticipación suficiente para actuar antes de que afecte la fruta.',
+    'agro-impl3-title': '3. Registro fitosanitario automatizado',
+    'agro-impl3-body': 'Las acciones ejecutadas quedan registradas automáticamente. El cuaderno y el WhatsApp dejan de ser la única memoria del fundo. El historial está disponible para auditorías de exportación.',
     'agro-composite-note': 'Este escenario es compuesto: combina datos de plataformas como Instacrops y Kilimo (que operan en Chile y LATAM) con patrones de exportación de cerezas del Maule. Los números de reducción hídrica (30%) y rechazo de calidad están alineados con estudios del sector en condiciones similares.',
     // Caso 4: Distribuidora
     'dist-company': 'Empresa distribuidora · Sector comercial',
@@ -341,9 +454,12 @@ const T_casos = {
     'dist-quote': '"Antes de este diagnóstico no teníamos claridad sobre qué automatizar primero. Salimos con tres proyectos priorizados, el ROI de cada uno calculado, y la certeza de que íbamos a implementar en el lugar correcto."',
     'dist-cite': '— Gerente General, empresa distribuidora (nombre reservado por confidencialidad)',
     'dist-impl-title': 'Qué se implementó',
-    'dist-impl1': '<strong style="color:var(--offwh);">1. Automatización de cotizaciones.</strong> Se conectó el sistema de stock con una herramienta de generación automática de cotizaciones. El vendedor selecciona productos, el sistema genera el PDF en 30 segundos y lo envía por email. Eliminó el 89% del tiempo administrativo del equipo comercial.',
-    'dist-impl2': '<strong style="color:var(--offwh);">2. Agente WhatsApp con IA.</strong> Los clientes consultan disponibilidad, precios y estado de pedidos por WhatsApp en cualquier horario. El agente responde con información en tiempo real del sistema. Solo escala al equipo cuando hay una solicitud de compra nueva.',
-    'dist-impl3': '<strong style="color:var(--offwh);">3. Dashboard operacional en tiempo real.</strong> Integración de ventas, stock e inventario en un dashboard gerencial actualizado cada hora. Las decisiones de compra y proyección ahora se basan en datos frescos, no en reportes de la semana anterior.',
+    'dist-impl1-title': '1. Automatización de cotizaciones',
+    'dist-impl1-body': 'Se conectó el sistema de stock con una herramienta de generación automática de cotizaciones. El vendedor selecciona productos, el sistema genera el PDF en 30 segundos y lo envía por email. Eliminó el 89% del tiempo administrativo del equipo comercial.',
+    'dist-impl2-title': '2. Agente WhatsApp con IA',
+    'dist-impl2-body': 'Los clientes consultan disponibilidad, precios y estado de pedidos por WhatsApp en cualquier horario. El agente responde con información en tiempo real del sistema. Solo escala al equipo cuando hay una solicitud de compra nueva.',
+    'dist-impl3-title': '3. Dashboard operacional en tiempo real',
+    'dist-impl3-body': 'Integración de ventas, stock e inventario en un dashboard gerencial actualizado cada hora. Las decisiones de compra y proyección ahora se basan en datos frescos, no en reportes de la semana anterior.',
     // CTA
     'casos-cta-title': '¿Tu empresa podría ser el próximo caso?',
     'casos-cta-sub': 'Agenda una llamada de 30 minutos — sin costo, sin compromiso.',
@@ -371,11 +487,16 @@ const T_casos = {
     'cert-cite': '— Manager, inspections and certifications company (name withheld for confidentiality)',
     'cert-impl-title': 'The complete operating system that was built',
     'cert-impl0': 'The key was not replicating an ERP. It was built around how the team already worked — not the other way around.',
-    'cert-impl1': '<strong style="color:var(--offwh);">1. Real-time file dashboard.</strong> All 365 clients and 837 historical files have visible status: quoted, approved, under inspection, certifiable, billable, closed. The manager sees the full picture without asking anyone. The inspector updates from the field.',
-    'cert-impl2': '<strong style="color:var(--offwh);">2. Automated quotes and billing via Gmail.</strong> When sending a proposal, the system generates and delivers the quote to the client by email automatically. When a file is marked as completed, it requests the invoice without manual intervention. The step that used to be forgotten can no longer be forgotten.',
-    'cert-impl3': '<strong style="color:var(--offwh);">3. Operational WhatsApp Bot.</strong> Every stage change in a file triggers a WhatsApp notification to the relevant team member. The inspector knows when they\'re assigned to a job. The coordinator knows when an inspection is completed. No lost emails, no coordination calls.',
-    'cert-impl4': '<strong style="color:var(--offwh);">4. Regulatory knowledge bot for field teams.</strong> Inspectors consult current technical regulations directly via WhatsApp and get answers in seconds. No searching through PDFs, no calling the office. The AI works where the work happens.',
-    'cert-impl5': '<strong style="color:var(--offwh);">5. Automatic MINVU alerts.</strong> A CRON runs every morning at 8am and notifies clients with MINVU certificates nearing expiration. All certificates under automatic control — without anyone having to remember.',
+    'cert-impl1-title': '1. Real-time file dashboard',
+    'cert-impl1-body': 'All 365 clients and 837 historical files have visible status: quoted, approved, under inspection, certifiable, billable, closed. The manager sees the full picture without asking anyone. The inspector updates from the field.',
+    'cert-impl2-title': '2. Automated quotes and billing via Gmail',
+    'cert-impl2-body': 'When sending a proposal, the system generates and delivers the quote to the client by email automatically. When a file is marked as completed, it requests the invoice without manual intervention. The step that used to be forgotten can no longer be forgotten.',
+    'cert-impl3-title': '3. Operational WhatsApp Bot',
+    'cert-impl3-body': 'Every stage change in a file triggers a WhatsApp notification to the relevant team member. The inspector knows when they\'re assigned to a job. The coordinator knows when an inspection is completed. No lost emails, no coordination calls.',
+    'cert-impl4-title': '4. Regulatory knowledge bot for field teams',
+    'cert-impl4-body': 'Inspectors consult current technical regulations directly via WhatsApp and get answers in seconds. No searching through PDFs, no calling the office. The AI works where the work happens.',
+    'cert-impl5-title': '5. Automatic expiration alerts',
+    'cert-impl5-body': 'A CRON runs every morning at 8am and notifies clients with certificates nearing expiration. All certificates under automatic control — without anyone having to remember.',
     // Case 2: Logistics
     'log-company': 'Refrigerated transport company · Packing-to-port route',
     'log-meta': '12 trucks · Maule and O\'Higgins → San Antonio · Chile',
@@ -386,9 +507,12 @@ const T_casos = {
     'log-r3-label': 'Night operations', 'log-r3-before': 'Manual · Coordinator awake', 'log-r3-after': 'Autonomous agent', 'log-r3-unit': 'Escalates only if no response',
     'log-r4-label': 'Exporter contract', 'log-r4-before': 'At risk', 'log-r4-after': 'Renewed', 'log-r4-unit': 'With increased volume',
     'log-impl-title': 'What was implemented',
-    'log-impl1': '<strong style="color:var(--offwh);">1. Incident response agent.</strong> Real-time fleet monitoring: detects unscheduled stops, route deviations, and temperature alarms. On any event, contacts the driver via WhatsApp with a defined protocol. If no response in 8 minutes, notifies the client and proposes a solution.',
-    'log-impl2': '<strong style="color:var(--offwh);">2. Time-window control.</strong> The agent monitors estimated arrival times at the port in real time. If a delay is projected, it alerts the coordinator and client in advance — not after the problem occurs.',
-    'log-impl3': '<strong style="color:var(--offwh);">3. Night operations dashboard.</strong> The coordinator checks the full fleet status on a simple panel before sleeping and upon waking. They\'re only called if the agent couldn\'t resolve something.',
+    'log-impl1-title': '1. Incident response agent',
+    'log-impl1-body': 'Real-time fleet monitoring: detects unscheduled stops, route deviations, and temperature alarms. On any event, contacts the driver via WhatsApp with a defined protocol. If no response in 8 minutes, notifies the client and proposes a solution.',
+    'log-impl2-title': '2. Time-window control',
+    'log-impl2-body': 'The agent monitors estimated arrival times at the port in real time. If a delay is projected, it alerts the coordinator and client in advance — not after the problem occurs.',
+    'log-impl3-title': '3. Night operations dashboard',
+    'log-impl3-body': 'The coordinator checks the full fleet status on a simple panel before sleeping and upon waking. They\'re only called if the agent couldn\'t resolve something.',
     'log-composite-note': 'This is a composite scenario: it combines patterns observed across multiple perishables logistics operations in Chile. Numbers are representative of the sector, not a specific company.',
     // Case 3: Agro
     'agro-company': 'Cherry exporter · Maule Valley',
@@ -400,9 +524,12 @@ const T_casos = {
     'agro-r3-label': 'Irrigation prescription', 'agro-r3-before': 'By experience', 'agro-r3-after': 'Data-driven · Daily', 'agro-r3-unit': 'WhatsApp each morning by block',
     'agro-r4-label': 'Owner on-farm during season', 'agro-r4-before': '24/7 on the farm', 'agro-r4-after': 'Only for decisions', 'agro-r4-unit': 'Agent monitors. He directs.',
     'agro-impl-title': 'What was implemented',
-    'agro-impl1': '<strong style="color:var(--offwh);">1. Agronomic prescription agent.</strong> Connected to soil moisture sensors, satellite data, and weather forecasts. Each morning the field manager receives a WhatsApp irrigation instruction per block: sector, duration, and rationale. Not a dashboard to interpret — a concrete action.',
-    'agro-impl2': '<strong style="color:var(--offwh);">2. Projected water deficit alert.</strong> The agent projects each block\'s water status 3 days out. If it detects imminent deficit, it alerts the field manager with enough lead time to act before the fruit is affected.',
-    'agro-impl3': '<strong style="color:var(--offwh);">3. Automated phytosanitary records.</strong> Executed actions are logged automatically. The notebook and WhatsApp stop being the farm\'s only memory. The history is available for export audits.',
+    'agro-impl1-title': '1. Agronomic prescription agent',
+    'agro-impl1-body': 'Connected to soil moisture sensors, satellite data, and weather forecasts. Each morning the field manager receives a WhatsApp irrigation instruction per block: sector, duration, and rationale. Not a dashboard to interpret — a concrete action.',
+    'agro-impl2-title': '2. Projected water deficit alert',
+    'agro-impl2-body': 'The agent projects each block\'s water status 3 days out. If it detects imminent deficit, it alerts the field manager with enough lead time to act before the fruit is affected.',
+    'agro-impl3-title': '3. Automated phytosanitary records',
+    'agro-impl3-body': 'Executed actions are logged automatically. The notebook and WhatsApp stop being the farm\'s only memory. The history is available for export audits.',
     'agro-composite-note': 'This is a composite scenario: it combines data from platforms like Instacrops and Kilimo (operating in Chile and LATAM) with Maule cherry export patterns. Water reduction (30%) and quality rejection numbers are aligned with sector studies under similar conditions.',
     // Case 4: Distribuidora
     'dist-company': 'Distribution company · Commercial sector',
@@ -416,9 +543,12 @@ const T_casos = {
     'dist-quote': '"Before this diagnosis we had no clarity on what to automate first. We left with three prioritized projects, the ROI of each calculated, and the certainty that we were going to implement in the right place."',
     'dist-cite': '— General Manager, distribution company (name withheld for confidentiality)',
     'dist-impl-title': 'What was implemented',
-    'dist-impl1': '<strong style="color:var(--offwh);">1. Quote automation.</strong> The stock system was connected to an automatic quote generation tool. The salesperson selects products, the system generates the PDF in 30 seconds and sends it by email. Eliminated 89% of the commercial team\'s administrative time.',
-    'dist-impl2': '<strong style="color:var(--offwh);">2. AI WhatsApp agent.</strong> Customers check availability, prices, and order status via WhatsApp at any time. The agent responds with real-time data from the system. It only escalates to the team when there\'s a new purchase request.',
-    'dist-impl3': '<strong style="color:var(--offwh);">3. Real-time operational dashboard.</strong> Integration of sales, stock, and inventory in a management dashboard updated every hour. Purchasing and forecasting decisions are now based on fresh data, not last week\'s reports.',
+    'dist-impl1-title': '1. Quote automation',
+    'dist-impl1-body': 'The stock system was connected to an automatic quote generation tool. The salesperson selects products, the system generates the PDF in 30 seconds and sends it by email. Eliminated 89% of the commercial team\'s administrative time.',
+    'dist-impl2-title': '2. AI WhatsApp agent',
+    'dist-impl2-body': 'Customers check availability, prices, and order status via WhatsApp at any time. The agent responds with real-time data from the system. It only escalates to the team when there\'s a new purchase request.',
+    'dist-impl3-title': '3. Real-time operational dashboard',
+    'dist-impl3-body': 'Integration of sales, stock, and inventory in a management dashboard updated every hour. Purchasing and forecasting decisions are now based on fresh data, not last week\'s reports.',
     // CTA
     'casos-cta-title': 'Could your company be the next case?',
     'casos-cta-sub': 'Schedule a 30-minute call — no cost, no commitment.',
@@ -437,6 +567,11 @@ function applyLangCasos() {
 }
 document.addEventListener('DOMContentLoaded', () => { _langCasos = (window.location.pathname.startsWith('/en/') || window.location.pathname === '/en') ? 'en' : 'es'; applyLangCasos(); });
 window.addEventListener('langchange', e => { _langCasos = e.detail; applyLangCasos(); });
+
+function toggleImpl(btn) {
+  const item = btn.closest('.impl-item');
+  item.classList.toggle('open');
+}
 </script>
 
 </Layout>
