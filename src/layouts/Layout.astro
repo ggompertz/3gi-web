@@ -390,6 +390,27 @@ const canonicalUrl = new URL(Astro.url.pathname, 'https://3g-ia-agents.com').hre
 
     /* RESPONSIVE */
     .era-scroll-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+    .era-mobile-cards { display: none; flex-direction: column; gap: 12px; margin-bottom: 32px; }
+    .emc { border-radius: 14px; overflow: hidden; }
+    .emc-e1 { border: 1px solid rgba(239,68,68,0.35); }
+    .emc-e2 { border: 1px solid rgba(234,179,8,0.35); }
+    .emc-e3 { border: 1px solid rgba(0,232,145,0.35); }
+    .emc-header { padding: 16px 18px 14px; display: flex; align-items: center; gap: 12px; }
+    .emc-e1 .emc-header { background: rgba(220,38,38,0.12); border-bottom: 2px solid #EF4444; }
+    .emc-e2 .emc-header { background: rgba(234,179,8,0.1); border-bottom: 2px solid #EAB308; }
+    .emc-e3 .emc-header { background: rgba(0,232,145,0.1); border-bottom: 2px solid #00E891; }
+    .emc-badge { font-size: 10px; font-weight: 700; letter-spacing: .15em; text-transform: uppercase; }
+    .emc-e1 .emc-badge { color: #EF4444; }
+    .emc-e2 .emc-badge { color: #EAB308; }
+    .emc-e3 .emc-badge { color: #00E891; }
+    .emc-icon { font-size: 22px; line-height: 1; }
+    .emc-name { font-family: 'Syne', sans-serif; font-size: 15px; font-weight: 800; }
+    .emc-rows { padding: 0; }
+    .emc-row { display: flex; align-items: flex-start; gap: 0; border-bottom: 1px solid rgba(255,255,255,0.05); }
+    .emc-row:last-child { border-bottom: none; }
+    .emc-dim { font-size: 10px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: rgba(238,241,246,0.3); background: rgba(255,255,255,0.02); padding: 12px 14px; min-width: 100px; flex-shrink: 0; display: flex; align-items: center; border-right: 1px solid rgba(255,255,255,0.05); }
+    .emc-val { font-size: 13px; color: rgba(238,241,246,0.7); padding: 12px 14px; line-height: 1.45; flex: 1; }
+    .emc-e3 .emc-val { color: rgba(238,241,246,0.9); background: rgba(0,232,145,0.03); }
 
     @media (max-width: 900px) {
       section { padding: 72px 0; }
@@ -404,8 +425,9 @@ const canonicalUrl = new URL(Astro.url.pathname, 'https://3g-ia-agents.com').hre
       .footer-inner { grid-template-columns: 1fr; text-align: center; }
       .footer-copy { text-align: center; }
     }
-    @media (max-width: 700px) {
-      .era-scroll-wrap .era-framework-grid { min-width: 540px; }
+    @media (max-width: 640px) {
+      .era-scroll-wrap { display: none; }
+      .era-mobile-cards { display: flex; }
     }
     @media (max-width: 600px) {
       .hero-ctas { flex-direction: column; }

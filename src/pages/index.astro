@@ -90,7 +90,57 @@ import Layout from '../layouts/Layout.astro';
       </p>
     </div>
 
-    <!-- Grid ERA -->
+    <!-- Tarjetas ERA (solo móvil ≤640px) -->
+    <div class="era-mobile-cards">
+      <div class="emc emc-e1">
+        <div class="emc-header">
+          <span class="emc-icon">🔥</span>
+          <div><div class="emc-badge">ERA 1</div><div class="emc-name">Caos Operativo</div></div>
+        </div>
+        <div class="emc-rows">
+          <div class="emc-row"><div class="emc-dim">Decisiones</div><div class="emc-val">Por intuición y experiencia del dueño</div></div>
+          <div class="emc-row"><div class="emc-dim">Operación</div><div class="emc-val">Manual. Depende de personas clave</div></div>
+          <div class="emc-row"><div class="emc-dim">Información</div><div class="emc-val">En correos, Excel o en la memoria de alguien</div></div>
+          <div class="emc-row"><div class="emc-dim">Tiempo</div><div class="emc-val">En el día a día y apagar incendios</div></div>
+          <div class="emc-row"><div class="emc-dim">Para crecer</div><div class="emc-val">Hay que contratar más gente</div></div>
+        </div>
+      </div>
+      <div class="emc emc-e2">
+        <div class="emc-header">
+          <span class="emc-icon">📊</span>
+          <div><div class="emc-badge">ERA 2</div><div class="emc-name">Datos Organizados</div></div>
+        </div>
+        <div class="emc-rows">
+          <div class="emc-row"><div class="emc-dim">Decisiones</div><div class="emc-val">Con datos históricos, análisis manual</div></div>
+          <div class="emc-row"><div class="emc-dim">Operación</div><div class="emc-val">Parcial. Algunas tareas automatizadas</div></div>
+          <div class="emc-row"><div class="emc-dim">Información</div><div class="emc-val">En sistemas, pero en silos sin conectar</div></div>
+          <div class="emc-row"><div class="emc-dim">Tiempo</div><div class="emc-val">En gestión y reportes manuales</div></div>
+          <div class="emc-row"><div class="emc-dim">Para crecer</div><div class="emc-val">Limitado por procesos manuales</div></div>
+        </div>
+      </div>
+      <div class="emc emc-e3">
+        <div class="emc-header">
+          <span class="emc-icon">⚡</span>
+          <div><div class="emc-badge">ERA 3</div><div class="emc-name">Empresa con IA</div></div>
+        </div>
+        <div class="emc-rows">
+          <div class="emc-row"><div class="emc-dim">Decisiones</div><div class="emc-val">Con datos + IA que anticipa escenarios</div></div>
+          <div class="emc-row"><div class="emc-dim">Operación</div><div class="emc-val">Flujos automáticos. La IA ejecuta sin intervención</div></div>
+          <div class="emc-row"><div class="emc-dim">Información</div><div class="emc-val">Centralizada, conectada y en tiempo real</div></div>
+          <div class="emc-row"><div class="emc-dim">Tiempo</div><div class="emc-val">En estrategia, clientes y crecimiento</div></div>
+          <div class="emc-row"><div class="emc-dim">Para crecer</div><div class="emc-val">La IA absorbe el volumen sin agregar costos</div></div>
+        </div>
+      </div>
+      <div style="background:rgba(0,232,145,0.07);border:1px solid rgba(0,232,145,0.18);border-radius:12px;padding:16px 18px;display:flex;flex-direction:column;gap:12px;">
+        <div>
+          <div class="efg-cta-text">Movemos tu empresa a ERA 3</div>
+          <div class="efg-cta-sub"><a href="/metodologia#espectro" style="color:rgba(0,232,145,0.5);text-decoration:underline;text-underline-offset:3px;">Cada ERA tiene 3 posiciones de precisión → ver espectro completo</a></div>
+        </div>
+        <a href="/diagnostico" class="btn btn-primary">Descubre tu ERA — es gratis</a>
+      </div>
+    </div>
+
+    <!-- Grid ERA (desktop) -->
     <div class="era-scroll-wrap"><div class="era-framework-grid">
       <!-- Cabecera -->
       <div class="efg-dim-header"><span>Dimensión</span></div>
