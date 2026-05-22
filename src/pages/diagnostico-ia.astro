@@ -3,7 +3,7 @@ import Layout from '../layouts/Layout.astro';
 ---
 
 <Layout
-  title="Diagnóstico IA completo · 3G Intelligence"
+  title="Informe ERA personalizado · 3G Intelligence"
   description="Diagnóstico de madurez en IA para PyMEs. Descubre tus brechas críticas, oportunidades concretas y primer paso de acción."
 >
 
@@ -105,9 +105,9 @@ select.f-select option{background:#0E0E1A;color:var(--offwh)}
     <div class="gate-card">
       <div class="gate-icon">🔒</div>
       <div class="gate-title">Acceso restringido</div>
-      <div class="gate-sub">Este diagnóstico requiere un código de acceso enviado a tu email. Completa primero el diagnóstico ERA gratuito.</div>
+      <div class="gate-sub">Este diagnóstico requiere un código de acceso enviado a tu email. Completa primero el Test ERA gratuito.</div>
       <a href="/diagnostico" class="btn-primary" style="display:block;text-align:center;text-decoration:none;padding:14px 28px">
-        Hacer el diagnóstico ERA gratuito →
+        Hacer el Test ERA gratuito →
       </a>
       <a href="/" class="back-link">← Volver al inicio</a>
     </div>
@@ -115,7 +115,7 @@ select.f-select option{background:#0E0E1A;color:var(--offwh)}
 
   <!-- FORM (visible solo con token válido) -->
   <div id="quiz-step" style="display:none">
-    <div class="eyebrow">Diagnóstico IA completo</div>
+    <div class="eyebrow">Informe ERA personalizado</div>
     <h1>Cuéntanos más sobre<br>tu empresa</h1>
     <p class="intro-sub">8 preguntas · respuestas libres · análisis personalizado con IA.</p>
 
@@ -133,7 +133,7 @@ select.f-select option{background:#0E0E1A;color:var(--offwh)}
     <div id="form-container"></div>
 
     <button id="btn-submit" class="btn-primary" onclick="submitAnalisis()" disabled>
-      Ver mi diagnóstico IA →
+      Ver mi Informe ERA →
     </button>
   </div>
 
@@ -336,7 +336,7 @@ async function submitAnalisis() {
     if (res.status === 401) {
       document.getElementById('loading-step').style.display = 'none';
       document.getElementById('gate-step').style.display = 'block';
-      document.querySelector('.gate-sub').textContent = data.error || 'Tu acceso expiró. Solicita un nuevo código desde el diagnóstico ERA.';
+      document.querySelector('.gate-sub').textContent = data.error || 'Tu acceso expiró. Solicita un nuevo código desde el Test ERA.';
       return;
     }
     if (!data.ok) throw new Error(data.error);
@@ -360,7 +360,7 @@ function renderResult(data) {
 
   document.getElementById('result-step').style.display = 'block';
   document.getElementById('result-step').innerHTML = `
-    <div class="eyebrow">Tu diagnóstico IA</div>
+    <div class="eyebrow">Tu Informe ERA</div>
     <h1 style="font-size:clamp(22px,4vw,30px);margin-bottom:20px">Así está tu empresa hoy</h1>
 
     ${eraBadges ? `<div class="result-era">${eraBadges}</div>` : ''}

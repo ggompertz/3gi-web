@@ -3,7 +3,7 @@ import Layout from '../../layouts/Layout.astro';
 ---
 
 <Layout
-  title="Full AI Diagnostic · 3G Intelligence"
+  title="Personalized ERA Report · 3G Intelligence"
   description="AI maturity diagnostic for SMBs. Discover your critical gaps, concrete opportunities and first action step."
   lang="en"
 >
@@ -78,9 +78,9 @@ select.f-select option{background:#0E0E1A;color:var(--offwh)}
     <div class="gate-card">
       <div class="gate-icon">🔒</div>
       <div class="gate-title">Access required</div>
-      <div class="gate-sub">This diagnostic requires an access code sent to your email. Complete the free ERA diagnostic first.</div>
+      <div class="gate-sub">This diagnostic requires an access code sent to your email. Complete the free ERA Test first.</div>
       <a href="/en/diagnostico" class="btn-primary" style="display:block;text-align:center;text-decoration:none;padding:14px 28px">
-        Take the free ERA diagnostic →
+        Take the free ERA Test →
       </a>
       <a href="/en/" class="back-link">← Back to home</a>
     </div>
@@ -88,7 +88,7 @@ select.f-select option{background:#0E0E1A;color:var(--offwh)}
 
   <!-- FORM -->
   <div id="quiz-step" style="display:none">
-    <div class="eyebrow">Full AI Diagnostic</div>
+    <div class="eyebrow">Personalized ERA Report</div>
     <h1>Tell us more about<br>your company</h1>
     <p class="intro-sub">8 questions · open answers · personalized AI analysis.</p>
 
@@ -332,7 +332,7 @@ function renderResult(data) {
 
   document.getElementById('result-step').style.display = 'block';
   document.getElementById('result-step').innerHTML = `
-    <div class="eyebrow">Your AI Diagnostic</div>
+    <div class="eyebrow">Your ERA Report</div>
     <h1 style="font-size:clamp(22px,4vw,30px);margin-bottom:20px">Here's where your company stands</h1>
 
     ${eraBadges ? `<div class="result-era">${eraBadges}</div>` : ''}
