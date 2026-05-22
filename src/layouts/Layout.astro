@@ -456,6 +456,10 @@ const p = lang === 'en' ? '/en' : '';
       .case-metrics { grid-template-columns: repeat(2, 1fr); }
       .nav-links { display: none; }
       .nav-burger { display: flex; }
+      /* En mobile solo queda la hamburguesa en el nav — todo lo demás va en el drawer */
+      .nav-cta .lang-toggle { display: none; }
+      .nav-cta .btn-outline { display: none; }
+      .nav-cta .btn-primary { display: none; }
       .footer-inner { grid-template-columns: 1fr; text-align: center; }
       .footer-copy { text-align: center; }
     }
@@ -471,9 +475,6 @@ const p = lang === 'en' ? '/en' : '';
       .case-metrics { grid-template-columns: repeat(2, 1fr); }
       .metric-after { font-size: 17px; overflow-wrap: break-word; }
       .metric-before { font-size: 12px; overflow-wrap: break-word; }
-      .nav-cta .lang-toggle { display: none; }
-      .nav-cta .btn-outline { display: none; }
-      .nav-cta .btn-primary { padding: 9px 14px; font-size: 13px; }
     }
     @media (max-width: 480px) {
       .pq-grid { grid-template-columns: 1fr; }
