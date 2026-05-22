@@ -460,8 +460,8 @@ function mostrarResultado() {
   document.querySelector('.progress-wrap').style.display = 'none';
   resEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
 
-  // Registrar en Supabase en background (no bloquea el resultado)
-  registrarDiagnostico();
+  // Registrar en Supabase — guardar promesa para esperarla en otpRequestCode
+  _diagPromise = registrarDiagnostico();
 }
 
 // ── Supabase registro (fire-and-forget) ───────────────────────────────────
@@ -496,6 +496,7 @@ async function registrarDiagnostico() {
 // ── OTP Flow ──────────────────────────────────────────────────────────────
 const OTP_API = 'https://diagnostico-api.3g-ia-agents.com';
 let _otpDiagId = null;
+let _diagPromise = null; // promesa de registrarDiagnostico para esperar el id
 
 function otpShow(step) {
   ['email','code','loading','error'].forEach(s => {
@@ -515,6 +516,8 @@ async function otpRequestCode() {
   }
   if (emailErr) emailErr.style.display = 'none';
   otpShow('loading');
+  // Esperar que Supabase haya registrado el completion y tengamos el id
+  if (_diagPromise) { try { await _diagPromise; } catch(e) {} _diagPromise = null; }
   try {
     const body = { email, nombre: nombreEl ? nombreEl.value.trim() : '' };
     if (_otpDiagId) body.diagnostico_id = _otpDiagId;
