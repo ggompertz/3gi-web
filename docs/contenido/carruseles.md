@@ -10,7 +10,7 @@ Base URL imágenes: `https://pub-afec22bc076746d1804ccf623d884c82.r2.dev/carruse
 ### TikTok — @3gintelligence
 **Descripción (bio):**
 ```
-¿En que ERA opera tu empresa?Diagnóstico gratis -> 3g-ia-agents.com/diagnostico
+¿En que ERA opera tu empresa?Test ERA -> 3g-ia-agents.com/diagnostico
 ```
 
 ---
@@ -33,7 +33,7 @@ Base URL imágenes: `https://pub-afec22bc076746d1804ccf623d884c82.r2.dev/carruse
 | [Post 09](#post-09) | Insight — El Excel como sistema | 7 | ⏳ pendiente | — |
 | [Post 10](#post-10) | Caso COVES — Reactiva vs proactiva | 6 | ⏳ pendiente | — |
 | [Post 11](#post-11) | Los 9 sub-niveles ERA | 6 | ⏳ pendiente | — |
-| [Post 12](#post-12) | CTA — El Diagnóstico gratuito | 6 | ⏳ pendiente | — |
+| [Post 12](#post-12) | CTA — El Test ERA | 6 | ⏳ pendiente | — |
 
 ---
 
@@ -53,7 +53,7 @@ Sino porque la información llega tarde, fragmentada, o en un reporte que nadie 
 
 ¿Cómo tomas tú las decisiones clave?
 
-👇 Diagnóstico gratuito en 5 min → 3g-ia-agents.com/diagnostico
+👇 Test ERA en 5 min → 3g-ia-agents.com/diagnostico
 
 #GestiónEmpresarial #PyME #TomaDeDcisiones #IA #3GIntelligence
 ```
@@ -167,7 +167,7 @@ Vendían. Pero no sabían cuánto les costaba vender.
 
 ¿Sabes cuánto gana realmente tu empresa?
 
-👇 Diagnóstico gratuito → 3g-ia-agents.com/diagnostico
+👇 Test ERA → 3g-ia-agents.com/diagnostico
 
 #PyME #FlujoDeCaja #GestiónFinanciera #NegociosLATAM #3GIntelligence
 ```
@@ -239,7 +239,7 @@ Es de sistema."
 
 *Pantalla: 3g-ia-agents.com/diagnostico*
 
-"Diagnóstico gratuito. Menos de 5 minutos."
+"Test ERA. Menos de 5 minutos."
 
 ---
 
@@ -289,7 +289,7 @@ El 67% de los colaboradores de PyMEs en LATAM no tiene claridad sobre las priori
 
 ¿Cuántos proyectos tienes corriendo hoy sin visibilidad real?
 
-👇 Diagnóstico gratuito → 3g-ia-agents.com/diagnostico
+👇 Test ERA → 3g-ia-agents.com/diagnostico
 
 #Operaciones #GestiónDeEquipos #PyME #EscalarNegocio #3GIntelligence
 ```
@@ -413,7 +413,7 @@ Es cambiar el sistema que hace que la buena gente pierda tiempo.
 
 ## Post 02
 **Tema:** 5 señales de "apagaincendios"  
-**Tipo:** Diagnóstico | **CTA:** ¿En cuántas te reconociste?
+**Tipo:** Test ERA | **CTA:** ¿En cuántas te reconociste?
 
 **Texto LinkedIn:**
 ```
@@ -545,7 +545,7 @@ Es cambiar el sistema que genera los incendios.
 
 ## Post 07
 **Tema:** ERA 1 / ERA 2 / ERA 3 explicadas  
-**Tipo:** Diagnóstico | **CTA:** Link /diagnostico
+**Tipo:** Test ERA | **CTA:** Link /diagnostico
 
 ```json
 {
@@ -640,7 +640,7 @@ Es cambiar el sistema que genera los incendios.
 ---
 
 ## Post 12
-**Tema:** CTA — El Diagnóstico gratuito  
+**Tema:** CTA — El Test ERA  
 **Tipo:** CTA | **CTA:** Link /diagnostico
 
 ```json
@@ -680,7 +680,7 @@ No por falta de ganas. Por falta de estructura."
 
 **[16–20s]** *Pantalla: URL grande, fondo negro*
 "Descubre en qué ERA opera tu empresa.
-Gratis. 5 minutos. 3g-ia-agents.com/diagnostico"
+Test ERA. 5 minutos. 3g-ia-agents.com/diagnostico"
 
 **[20–30s]** *Voz suave, contraste visual ERA 1 vs ERA 3*
 "ERA 1: el estado del negocio lo sabe solo el dueño.
@@ -990,7 +990,7 @@ Pero tener sistemas no es lo mismo que usarlos para decidir."
 
 ---
 
-### Short 12 — "El diagnóstico gratuito"
+### Short 12 — "El Test ERA"
 
 **[0–5s] Gancho**
 "Antes de hablar de IA con cualquier dueño de empresa, siempre hago la misma pregunta.

@@ -19,7 +19,7 @@ Formato: Short/Reel (30s) + texto LinkedIn/Facebook
 | 09 | 08 Jun | El Excel como sistema | ✅ | ✅ | ⏳ pendiente |
 | 10 | 11 Jun | Caso COVES — Reactiva vs proactiva | ✅ | ✅ | ⏳ pendiente |
 | 11 | 14 Jun | Los 9 sub-niveles ERA | ✅ | ✅ | ⏳ pendiente |
-| 12 | 17 Jun | CTA — El diagnóstico gratuito | ✅ | ✅ | ⏳ pendiente |
+| 12 | 17 Jun | CTA — El Test ERA | ✅ | ✅ | ⏳ pendiente |
 
 ---
 
@@ -1048,7 +1048,7 @@ Pero tener sistemas no es lo mismo que usarlos para decidir.
 
 ---
 
-## Post 12 — CTA: El diagnóstico gratuito
+## Post 12 — CTA: El Test ERA
 
 **Fecha:** 17 Jun 2026
 
@@ -1084,7 +1084,7 @@ Y casi nadie la puede responder con datos.
 ¿Sabes exactamente en qué ERA está tu empresa hoy?
 No lo que creés. Lo que dicen los datos.
 
-En este video te explico qué incluye el diagnóstico gratuito
+En este video te explico qué incluye el Test ERA
 y por qué es el primer paso antes de cualquier decisión de tecnología.
 
 🔍 Hacé el test gratuito → 3g-ia-agents.com/diagnostico
