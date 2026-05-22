@@ -375,14 +375,14 @@ const T_met = {
   }
 };
 
-let _langMet = localStorage.getItem('lang') || 'es';
+let _langMet = (window.location.pathname.startsWith('/en/') || window.location.pathname === '/en') ? 'en' : 'es';
 function applyLangMet() {
   document.querySelectorAll('[data-i18n]').forEach(el => {
     const v = (T_met[_langMet] || T_met['es'])[el.getAttribute('data-i18n')];
     if (v) el.innerHTML = v;
   });
 }
-document.addEventListener('DOMContentLoaded', () => { _langMet = localStorage.getItem('lang') || 'es'; applyLangMet(); });
+document.addEventListener('DOMContentLoaded', () => { _langMet = (window.location.pathname.startsWith('/en/') || window.location.pathname === '/en') ? 'en' : 'es'; applyLangMet(); });
 window.addEventListener('langchange', e => { _langMet = e.detail; applyLangMet(); });
 </script>
 
@@ -754,14 +754,14 @@ const T_met = {
   }
 };
 
-let _langMet = localStorage.getItem('lang') || 'es';
+let _langMet = (window.location.pathname.startsWith('/en/') || window.location.pathname === '/en') ? 'en' : 'es';
 function applyLangMet() {
   document.querySelectorAll('[data-i18n]').forEach(el => {
     const v = (T_met[_langMet] || T_met['es'])[el.getAttribute('data-i18n')];
     if (v) el.innerHTML = v;
   });
 }
-document.addEventListener('DOMContentLoaded', () => { _langMet = localStorage.getItem('lang') || 'es'; applyLangMet(); });
+document.addEventListener('DOMContentLoaded', () => { _langMet = (window.location.pathname.startsWith('/en/') || window.location.pathname === '/en') ? 'en' : 'es'; applyLangMet(); });
 window.addEventListener('langchange', e => { _langMet = e.detail; applyLangMet(); });
 </script>
 </Layout>

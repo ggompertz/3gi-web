@@ -428,7 +428,7 @@ window.addEventListener('DOMContentLoaded', () => {
       'faqp-cta-btn-wa': 'Write on WhatsApp',
     });
     // Re-apply current lang to pick up new keys
-    const lang = localStorage.getItem('lang') || 'es';
+    const lang = (window.location.pathname.startsWith('/en/') || window.location.pathname === '/en') ? 'en' : 'es';
     if (typeof setLang === 'function') setLang(lang);
   }
 });
