@@ -329,6 +329,7 @@ function selectOption(el, name, value) {
   }
   updateProgressText();
   updateButtonText();
+  try { localStorage.setItem('diag_answers', JSON.stringify(answers)); localStorage.setItem('diag_mode', currentMode); } catch(e) {}
 }
 
 function calcEra(score, n) {
@@ -408,18 +409,21 @@ function mostrarResultado() {
 
   html += `
     <div class="otp-cta-card" id="otp-cta-card">
-      <div class="otp-cta-icon">🔍</div>
-      <h3>¿Querés el diagnóstico IA completo?</h3>
-      <p>Respondé 5 preguntas y recibí un análisis personalizado: tu ERA exacto, el dolor principal de tu negocio y pasos concretos.</p>
+      <div class="otp-cta-icon">🧠</div>
+      <h3>Tu ERA está calculada. Ahora viene el análisis.</h3>
+      <p>Ingresa tu email y la IA genera un diagnóstico personalizado: el dolor principal de tu negocio, qué automatizar primero y los pasos concretos para avanzar a la siguiente ERA.</p>
       <div id="otp-step-email">
         <input type="email" id="otp-email-input" placeholder="Tu email de trabajo" autocomplete="email" />
         <input type="text" id="otp-nombre-input" placeholder="Tu nombre (opcional)" autocomplete="given-name" />
+        <p id="otp-email-error" style="display:none;color:#f87171;font-size:13px;margin-bottom:8px;"></p>
         <button class="btn-otp-primary" onclick="otpRequestCode()">Recibir mi diagnóstico por email</button>
         <p class="otp-disclaimer">Sin spam. Solo tu resultado.</p>
       </div>
       <div id="otp-step-code" style="display:none">
         <p class="otp-sent-msg">Enviamos un código de 6 dígitos a <strong id="otp-email-display"></strong></p>
+        <p style="font-size:13px;color:rgba(238,241,246,0.5);margin-bottom:12px;">Una vez confirmado, la IA analizará tu operación en profundidad — solo 3 minutos más para un informe específico a tu empresa.</p>
         <input type="text" id="otp-code-input" placeholder="Código de 6 dígitos" maxlength="6" inputmode="numeric" pattern="[0-9]{6}" />
+        <p id="otp-code-error" style="display:none;color:#f87171;font-size:13px;margin-bottom:8px;"></p>
         <button class="btn-otp-primary" onclick="otpVerify()">Continuar →</button>
         <button class="btn-otp-secondary" onclick="otpRequestCode()">Reenviar código</button>
       </div>
@@ -504,10 +508,12 @@ async function otpRequestCode() {
   const emailEl = document.getElementById('otp-email-input');
   const nombreEl = document.getElementById('otp-nombre-input');
   const email = emailEl ? emailEl.value.trim() : '';
+  const emailErr = document.getElementById('otp-email-error');
   if (!email || !email.includes('@')) {
-    alert('Ingresá un email válido.');
+    if (emailErr) { emailErr.textContent = 'Ingresa un email válido.'; emailErr.style.display = 'block'; }
     return;
   }
+  if (emailErr) emailErr.style.display = 'none';
   otpShow('loading');
   try {
     const body = { email, nombre: nombreEl ? nombreEl.value.trim() : '' };
@@ -532,7 +538,12 @@ async function otpVerify() {
   const code = (document.getElementById('otp-code-input')?.value || '').trim();
   const emailEl = document.getElementById('otp-email-input');
   const nombreEl = document.getElementById('otp-nombre-input');
-  if (!code || code.length !== 6) { alert('Ingresa el código de 6 dígitos.'); return; }
+  const codeErr = document.getElementById('otp-code-error');
+  if (!code || code.length !== 6) {
+    if (codeErr) { codeErr.textContent = 'Ingresa el código de 6 dígitos.'; codeErr.style.display = 'block'; }
+    return;
+  }
+  if (codeErr) codeErr.style.display = 'none';
   if (!_otpDiagId) { otpShow('email'); return; }
   otpShow('loading');
   try {
@@ -573,6 +584,7 @@ function otpBack() {
 
 function resetDiag() {
   answers = {};
+  try { localStorage.removeItem('diag_answers'); localStorage.removeItem('diag_mode'); } catch(e) {}
   document.getElementById('resultado').style.display = 'none';
   document.getElementById('resultado').innerHTML = '';
   document.getElementById('quiz').style.display = 'block';
@@ -591,6 +603,27 @@ function resetDiag() {
 document.addEventListener('DOMContentLoaded', () => {
   initDataAttrs();
   lang = localStorage.getItem('lang') || 'es';
+  // Restaurar respuestas guardadas
+  try {
+    const saved = localStorage.getItem('diag_answers');
+    const savedMode = localStorage.getItem('diag_mode');
+    if (saved) {
+      answers = JSON.parse(saved);
+      if (savedMode && savedMode !== 'operacional') setMode(savedMode);
+      // Re-marcar opciones seleccionadas
+      Object.entries(answers).forEach(([name, value]) => {
+        const input = document.querySelector(`input[name="${name}"][value="${value}"]`);
+        if (input) {
+          const label = input.closest('.option');
+          if (label) {
+            label.classList.add('selected');
+            const chk = document.getElementById('chk-' + name);
+            if (chk) { chk.classList.add('done'); chk.querySelector('.qc-icon').textContent = '✓'; }
+          }
+        }
+      });
+    }
+  } catch(e) {}
   applyDiagLang();
   updateProgressText();
   updateButtonText();
