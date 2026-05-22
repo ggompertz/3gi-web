@@ -1,0 +1,380 @@
+---
+import Layout from '../../layouts/Layout.astro';
+---
+
+<Layout
+  title="Full AI Diagnostic · 3G Intelligence"
+  description="AI maturity diagnostic for SMBs. Discover your critical gaps, concrete opportunities and first action step."
+  lang="en"
+>
+
+<style is:global>
+:root{--night:#06060D;--surface:#0E0E1A;--border:#1C1C2E;--green:#00E891;--offwh:#EEF1F6;--muted:#6B7280}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--night);color:var(--offwh);font-family:'DM Sans',sans-serif;font-size:15px;line-height:1.6;min-height:100vh}
+main{max-width:660px;margin:0 auto;padding:80px 24px 80px}
+.eyebrow{font-size:11px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--green);margin-bottom:14px}
+h1{font-family:'Syne',sans-serif;font-size:clamp(24px,5vw,34px);font-weight:900;line-height:1.1;letter-spacing:-.03em;margin-bottom:12px}
+.intro-sub{font-size:14px;color:var(--muted);line-height:1.65;margin-bottom:28px}
+#gate-step{text-align:center;padding:60px 0}
+.gate-card{background:var(--surface);border:1px solid rgba(0,232,145,.15);border-radius:16px;padding:36px 32px;max-width:440px;margin:0 auto}
+.gate-icon{font-size:40px;margin-bottom:16px}
+.gate-title{font-family:'Syne',sans-serif;font-size:20px;font-weight:800;margin-bottom:8px}
+.gate-sub{font-size:14px;color:var(--muted);margin-bottom:24px;line-height:1.6}
+.btn-primary{background:var(--green);color:var(--night);border:none;border-radius:10px;padding:14px 28px;font-size:15px;font-weight:700;cursor:pointer;font-family:'Syne',sans-serif;transition:opacity .2s;width:100%}
+.btn-primary:hover:not(:disabled){opacity:.88}
+.btn-primary:disabled{opacity:.5;cursor:default}
+.back-link{display:inline-block;margin-top:16px;font-size:13px;color:var(--muted);text-decoration:none}
+.back-link:hover{color:var(--offwh)}
+.era-context{display:flex;gap:10px;margin-bottom:28px}
+.era-badge{flex:1;background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:14px;text-align:center}
+.era-badge-dim{font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:4px}
+.era-badge-val{font-family:'Syne',sans-serif;font-size:20px;font-weight:900}
+.era-badge-name{font-size:11px;color:var(--muted);margin-top:2px}
+.progress-wrap{margin-bottom:28px}
+.progress-label{display:flex;justify-content:space-between;font-size:12px;color:var(--muted);margin-bottom:8px}
+.progress-bar{height:3px;background:var(--border);border-radius:2px;overflow:hidden}
+.progress-fill{height:100%;background:var(--green);border-radius:2px;transition:width .4s ease;width:0%}
+.field{margin-bottom:24px;animation:fadeUp .3s ease forwards}
+@keyframes fadeUp{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
+.field-label{font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--green);margin-bottom:6px}
+.field-question{font-family:'Syne',sans-serif;font-size:16px;font-weight:700;color:var(--offwh);margin-bottom:10px;line-height:1.3}
+.field-hint{font-size:12px;color:var(--muted);margin-bottom:10px;line-height:1.5}
+input[type=text].f-input,textarea.f-input,select.f-select{width:100%;background:#ffffff0d;border:1.5px solid var(--border);border-radius:10px;padding:12px 16px;color:var(--offwh);font-size:14px;font-family:'DM Sans',sans-serif;outline:none;transition:border-color .2s;resize:none}
+input[type=text].f-input:focus,textarea.f-input:focus,select.f-select:focus{border-color:#00e89166}
+input[type=text].f-input::placeholder,textarea.f-input::placeholder{color:#4b5563}
+select.f-select{appearance:none;cursor:pointer;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%236B7280' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 14px center}
+select.f-select option{background:#0E0E1A;color:var(--offwh)}
+.field-divider{border:none;border-top:1px solid var(--border);margin:8px 0 24px}
+#loading-step{display:none;text-align:center;padding:48px 0}
+.spinner{width:36px;height:36px;border:3px solid var(--border);border-top-color:var(--green);border-radius:50%;animation:spin .8s linear infinite;margin:0 auto 16px}
+@keyframes spin{to{transform:rotate(360deg)}}
+.loading-text{font-size:14px;color:var(--muted)}
+#result-step{display:none}
+.result-era{display:flex;gap:12px;margin-bottom:20px}
+.result-section{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:20px 22px;margin-bottom:12px}
+.result-section-label{font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-bottom:8px}
+.result-section-text{font-size:14px;color:var(--offwh);line-height:1.65}
+.signal-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:12px}
+.signal-card{border-radius:10px;padding:16px 18px}
+.signal-card.pos{background:#00e89108;border:1px solid rgba(0,232,145,.2)}
+.signal-card.neg{background:#f8717108;border:1px solid rgba(248,113,113,.2)}
+.signal-card-label{font-size:10px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;margin-bottom:8px}
+.signal-card.pos .signal-card-label{color:var(--green)}
+.signal-card.neg .signal-card-label{color:#f87171}
+.signal-card-text{font-size:13px;color:#cbd5e1;line-height:1.55}
+.cta-box{background:linear-gradient(135deg,#00e89112,#00e89106);border:1px solid rgba(0,232,145,.25);border-radius:16px;padding:28px;text-align:center;margin-top:20px}
+.cta-box-eyebrow{font-size:11px;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--green);margin-bottom:10px}
+.cta-box-title{font-family:'Syne',sans-serif;font-size:20px;font-weight:800;margin-bottom:8px;letter-spacing:-.02em}
+.cta-box-sub{font-size:13px;color:var(--muted);margin-bottom:20px;line-height:1.6}
+.btn-calendly{display:inline-flex;align-items:center;gap:10px;background:var(--green);color:var(--night);font-family:'Syne',sans-serif;font-weight:800;font-size:15px;text-decoration:none;border-radius:10px;padding:16px 28px;transition:opacity .2s,transform .15s}
+.btn-calendly:hover{opacity:.88;transform:translateY(-1px)}
+@media(max-width:600px){main{padding:64px 20px}.signal-grid{grid-template-columns:1fr}.result-era{flex-direction:column}.era-context{flex-direction:column}.gate-card{padding:28px 20px}}
+</style>
+
+<main>
+  <!-- GATE -->
+  <div id="gate-step">
+    <div class="gate-card">
+      <div class="gate-icon">🔒</div>
+      <div class="gate-title">Access required</div>
+      <div class="gate-sub">This diagnostic requires an access code sent to your email. Complete the free ERA diagnostic first.</div>
+      <a href="/en/diagnostico" class="btn-primary" style="display:block;text-align:center;text-decoration:none;padding:14px 28px">
+        Take the free ERA diagnostic →
+      </a>
+      <a href="/en/" class="back-link">← Back to home</a>
+    </div>
+  </div>
+
+  <!-- FORM -->
+  <div id="quiz-step" style="display:none">
+    <div class="eyebrow">Full AI Diagnostic</div>
+    <h1>Tell us more about<br>your company</h1>
+    <p class="intro-sub">8 questions · open answers · personalized AI analysis.</p>
+
+    <div class="era-context" id="era-context"></div>
+
+    <div class="progress-wrap">
+      <div class="progress-label">
+        <span id="progress-text">Question 1 of 8</span>
+        <span id="progress-pct">0%</span>
+      </div>
+      <div class="progress-bar"><div class="progress-fill" id="progress-fill"></div></div>
+    </div>
+
+    <div id="form-container"></div>
+
+    <button id="btn-submit" class="btn-primary" onclick="submitAnalisis()" disabled>
+      See my AI diagnostic →
+    </button>
+  </div>
+
+  <!-- LOADING -->
+  <div id="loading-step">
+    <div class="spinner"></div>
+    <p class="loading-text">Analyzing with AI…</p>
+  </div>
+
+  <!-- RESULT -->
+  <div id="result-step"></div>
+</main>
+
+<script is:inline>
+const WORKER = 'https://diagnostico-api.3g-ia-agents.com';
+
+const CAMPOS = [
+  {
+    id: 'sector',
+    label: 'Industry',
+    pregunta: 'What industry does your company operate in?',
+    hint: 'e.g. retail, construction, healthcare, education, logistics, technology…',
+    tipo: 'text',
+    placeholder: 'Type your company\'s sector',
+  },
+  {
+    id: 'tamanio',
+    label: 'Team size',
+    pregunta: 'How many people work at the company?',
+    hint: null,
+    tipo: 'select',
+    opciones: ['Micro — up to 4 people', 'Small — 5 to 20 people', 'Medium — 21 to 100 people', 'Large — more than 100 people'],
+  },
+  {
+    id: 'modelo',
+    label: 'Business model',
+    pregunta: 'How does the company generate revenue?',
+    hint: 'e.g. product sales, project-based services, monthly subscription, distribution…',
+    tipo: 'textarea',
+    placeholder: 'Briefly describe how the business works',
+  },
+  {
+    id: 'objetivo',
+    label: '12-month goal',
+    pregunta: 'What is the most important result you want to achieve in the next 12 months?',
+    hint: null,
+    tipo: 'textarea',
+    placeholder: 'e.g. double sales, reduce delivery times, enter a new market…',
+  },
+  {
+    id: 'intentos',
+    label: 'Previous attempts',
+    pregunta: 'Have you tried to digitize or automate anything before? What happened?',
+    hint: 'If you haven\'t tried anything, you can say so.',
+    tipo: 'textarea',
+    placeholder: 'Tell us what worked, what didn\'t, or why it wasn\'t attempted',
+  },
+  {
+    id: 'decision_sin_datos',
+    label: 'Decision without data',
+    pregunta: 'What important decision do you make today without the data you need?',
+    hint: 'Could be about pricing, inventory, hiring, suppliers, marketing…',
+    tipo: 'textarea',
+    placeholder: 'e.g. I don\'t know whether to open a new branch because I have no visibility into current profitability',
+  },
+  {
+    id: 'proceso_clave',
+    label: 'Highest-impact process',
+    pregunta: 'Which process, if improved, would have the greatest impact on the business?',
+    hint: 'The process that consumes the most time, generates the most errors, or represents the most money.',
+    tipo: 'textarea',
+    placeholder: 'e.g. project quoting, collections follow-up, customer service…',
+  },
+  {
+    id: 'experiencia_ia',
+    label: 'AI experience',
+    pregunta: 'What is your current experience with AI tools?',
+    hint: null,
+    tipo: 'select',
+    opciones: ['None — we haven\'t used AI', 'Basic — we occasionally use ChatGPT or similar tools', 'Moderate — we have some active automations', 'Advanced — AI is already part of productive processes'],
+  },
+];
+
+let postscan = {};
+let accessToken = null;
+let userEmail = null;
+let userName = null;
+let eraAnswers = {};
+let eraMode = 'operacional';
+let eraOpStr = null;
+let eraComStr = null;
+
+function eraColor(n) { return n===1?'#f87171':n===2?'#fbbf24':'#00E891'; }
+function eraName(n)  { return ['','Operational Chaos','Organized Data','AI-Powered Business'][n]; }
+
+document.addEventListener('DOMContentLoaded', () => {
+  const params = new URLSearchParams(window.location.search);
+  const token = params.get('token');
+
+  if (!token) {
+    document.getElementById('gate-step').style.display = 'block';
+    return;
+  }
+
+  accessToken = token;
+  userEmail = params.get('email') ? decodeURIComponent(params.get('email')) : null;
+  userName = params.get('nombre') ? decodeURIComponent(params.get('nombre')) : null;
+  eraMode = params.get('era_mode') || 'operacional';
+  eraOpStr = params.get('era_op') || null;
+  eraComStr = params.get('era_com') || null;
+
+  try {
+    const raw = params.get('era_answers');
+    if (raw) eraAnswers = JSON.parse(decodeURIComponent(raw));
+  } catch(_) {}
+
+  document.getElementById('gate-step').style.display = 'none';
+  document.getElementById('quiz-step').style.display = 'block';
+
+  renderEraContext();
+  renderForm();
+});
+
+function renderEraContext() {
+  const ctx = document.getElementById('era-context');
+  if (!eraOpStr && !eraComStr) { ctx.style.display = 'none'; return; }
+  let html = '';
+  if (eraOpStr) {
+    const n = parseInt(eraOpStr.replace('ERA',''));
+    html += `<div class="era-badge"><div class="era-badge-dim">Operational</div><div class="era-badge-val" style="color:${eraColor(n)}">${eraOpStr}</div><div class="era-badge-name">${eraName(n)}</div></div>`;
+  }
+  if (eraComStr) {
+    const n = parseInt(eraComStr.replace('ERA',''));
+    html += `<div class="era-badge"><div class="era-badge-dim">Commercial</div><div class="era-badge-val" style="color:${eraColor(n)}">${eraComStr}</div><div class="era-badge-name">${eraName(n)}</div></div>`;
+  }
+  ctx.innerHTML = html;
+}
+
+function renderForm() {
+  let html = '';
+  CAMPOS.forEach((c, i) => {
+    html += `<div class="field" style="animation-delay:${i * 0.05}s">`;
+    html += `<div class="field-label">${c.label}</div>`;
+    html += `<div class="field-question">${c.pregunta}</div>`;
+    if (c.hint) html += `<div class="field-hint">${c.hint}</div>`;
+
+    if (c.tipo === 'text') {
+      html += `<input type="text" class="f-input" id="f-${c.id}" placeholder="${c.placeholder || ''}" oninput="updateField('${c.id}',this.value)">`;
+    } else if (c.tipo === 'textarea') {
+      html += `<textarea class="f-input" id="f-${c.id}" rows="3" placeholder="${c.placeholder || ''}" oninput="updateField('${c.id}',this.value)"></textarea>`;
+    } else if (c.tipo === 'select') {
+      html += `<select class="f-select" id="f-${c.id}" onchange="updateField('${c.id}',this.value)"><option value="">Select an option</option>`;
+      c.opciones.forEach(op => { html += `<option value="${op}">${op}</option>`; });
+      html += `</select>`;
+    }
+    html += `</div>`;
+    if (i < CAMPOS.length - 1) html += `<hr class="field-divider">`;
+  });
+
+  document.getElementById('form-container').innerHTML = html;
+  updateProgress();
+}
+
+function updateField(id, val) {
+  postscan[id] = val.trim();
+  updateProgress();
+}
+
+function updateProgress() {
+  const filled = CAMPOS.filter(c => postscan[c.id] && postscan[c.id].length > 0).length;
+  const total = CAMPOS.length;
+  const pct = Math.round((filled / total) * 100);
+  document.getElementById('progress-fill').style.width = pct + '%';
+  document.getElementById('progress-text').textContent = `${filled} of ${total} completed`;
+  document.getElementById('progress-pct').textContent = pct + '%';
+  document.getElementById('btn-submit').disabled = filled < total;
+}
+
+async function submitAnalisis() {
+  document.getElementById('quiz-step').style.display = 'none';
+  document.getElementById('loading-step').style.display = 'block';
+
+  try {
+    const res = await fetch(`${WORKER}/analizar`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        access_token: accessToken,
+        era_mode: eraMode,
+        era_answers: eraAnswers,
+        era_op: eraOpStr,
+        era_com: eraComStr,
+        postscan,
+        email: userEmail,
+        nombre: userName,
+      }),
+    });
+    const data = await res.json();
+
+    if (res.status === 401) {
+      document.getElementById('loading-step').style.display = 'none';
+      document.getElementById('gate-step').style.display = 'block';
+      document.querySelector('.gate-sub').textContent = data.error || 'Your access expired. Request a new code from the ERA diagnostic.';
+      return;
+    }
+    if (!data.ok) throw new Error(data.error);
+    renderResult(data);
+  } catch (err) {
+    document.getElementById('loading-step').style.display = 'none';
+    document.getElementById('quiz-step').style.display = 'block';
+    alert('Error generating the diagnostic: ' + err.message + '. Please try again.');
+  }
+}
+
+function renderResult(data) {
+  document.getElementById('loading-step').style.display = 'none';
+
+  const eraOpNum = data.era_operacional ? parseInt(data.era_operacional.replace('ERA','')) : null;
+  const eraComNum = data.era_comercial  ? parseInt(data.era_comercial.replace('ERA',''))  : null;
+
+  let eraBadges = '';
+  if (eraOpNum) eraBadges += `<div class="era-badge"><div class="era-badge-dim">Operational</div><div class="era-badge-val" style="color:${eraColor(eraOpNum)}">${data.era_operacional}</div><div class="era-badge-name">${eraName(eraOpNum)}</div></div>`;
+  if (eraComNum) eraBadges += `<div class="era-badge"><div class="era-badge-dim">Commercial</div><div class="era-badge-val" style="color:${eraColor(eraComNum)}">${data.era_comercial}</div><div class="era-badge-name">${eraName(eraComNum)}</div></div>`;
+
+  document.getElementById('result-step').style.display = 'block';
+  document.getElementById('result-step').innerHTML = `
+    <div class="eyebrow">Your AI Diagnostic</div>
+    <h1 style="font-size:clamp(22px,4vw,30px);margin-bottom:20px">Here's where your company stands</h1>
+
+    ${eraBadges ? `<div class="result-era">${eraBadges}</div>` : ''}
+
+    <div class="result-section">
+      <div class="result-section-label">What does this mean?</div>
+      <div class="result-section-text">${data.interpretacion}</div>
+    </div>
+
+    <div class="result-section">
+      <div class="result-section-label">Main pain point identified</div>
+      <div class="result-section-text">${data.dolor_principal}</div>
+    </div>
+
+    <div class="result-section">
+      <div class="result-section-label">Concrete opportunity</div>
+      <div class="result-section-text">${data.oportunidad || data.fortaleza}</div>
+    </div>
+
+    <div class="signal-grid">
+      <div class="signal-card pos">
+        <div class="signal-card-label">✓ Positive signal</div>
+        <div class="signal-card-text">${data.fortaleza}</div>
+      </div>
+      <div class="signal-card neg">
+        <div class="signal-card-label">⚠ Critical alert</div>
+        <div class="signal-card-text">${data.alerta}</div>
+      </div>
+    </div>
+
+    <div class="cta-box">
+      <div class="cta-box-eyebrow">Your complete action plan</div>
+      <div class="cta-box-title">What should you do with this?</div>
+      <div class="cta-box-sub">In 30 minutes we'll walk you through the critical gaps, concrete next steps and the estimated ROI of resolving them. At no cost.</div>
+      <a href="https://calendly.com/escribeme-3g-ia-agents/diagnostico-base-en-30-min" target="_blank" class="btn-calendly">
+        Book your free 30-min session
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+    </div>
+  `;
+  document.getElementById('result-step').scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+</script>
+
+</Layout>
