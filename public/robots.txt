@@ -26,4 +26,4 @@ Allow: /
 User-agent: anthropic-ai
 Allow: /
 
-Sitemap: https://3g-ia-agents.com/sitemap.xml
+Sitemap: https://3gi.cl/sitemap.xml

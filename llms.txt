@@ -8,8 +8,8 @@
 
 Fundada por Gonzalo Gompertz Geldres, consultor con 20+ años en gestión empresarial y 15+ años en consultoría estratégica. Sectores atendidos: agroindustria, servicios, turismo, comercio, educación, pesca, programas públicos y organizaciones sin fines de lucro.
 
-Sitio web: https://3g-ia-agents.com
-Contacto: chat@3g-ia-agents.com
+Sitio web: https://3gi.cl
+Contacto: chat@3gi.cl
 WhatsApp: +56 9 8897 4898
 LinkedIn: https://www.linkedin.com/company/3g-intelligence
 
@@ -47,9 +47,9 @@ Empresa distribuidora (10–15 empleados, Chile):
 
 ## Páginas del sitio
 
-- [Inicio](https://3g-ia-agents.com/) — Landing principal
-- [Metodología](https://3g-ia-agents.com/metodologia) — Diagnóstico + 5 fases F1→F5 en detalle, FAQ
-- [Precios](https://3g-ia-agents.com/precios) — Tablas de inversión completas
-- [Nosotros](https://3g-ia-agents.com/nosotros) — Gonzalo Gompertz, trayectoria, por qué nace 3GI
-- [Contenido](https://3g-ia-agents.com/contenido) — Cápsulas semanales de IA aplicada al negocio
-- [Casos](https://3g-ia-agents.com/casos) — Casos de éxito con resultados reales
+- [Inicio](https://3gi.cl/) — Landing principal
+- [Metodología](https://3gi.cl/metodologia) — Diagnóstico + 5 fases F1→F5 en detalle, FAQ
+- [Precios](https://3gi.cl/precios) — Tablas de inversión completas
+- [Nosotros](https://3gi.cl/nosotros) — Gonzalo Gompertz, trayectoria, por qué nace 3GI
+- [Contenido](https://3gi.cl/contenido) — Cápsulas semanales de IA aplicada al negocio
+- [Casos](https://3gi.cl/casos) — Casos de éxito con resultados reales

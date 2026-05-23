@@ -3,14 +3,14 @@
 Base URL imágenes: `https://pub-afec22bc076746d1804ccf623d884c82.r2.dev/carruseles/`
 
 > **Para publicar en Instagram:** llamar al webhook n8n con `POST { "caption": "...", "image_urls": ["url1", "url2", ...] }`  
-> **Webhook:** `https://n8n.3g-ia-agents.com/webhook/instagram-publish`
+> **Webhook:** `https://n8n.3gi.cl/webhook/instagram-publish`
 
 ## Perfiles en redes sociales
 
 ### TikTok — @3gintelligence
 **Descripción (bio):**
 ```
-¿En que ERA opera tu empresa?Test ERA -> 3g-ia-agents.com/diagnostico
+¿En que ERA opera tu empresa?Test ERA -> 3gi.cl/diagnostico
 ```
 
 ---
@@ -53,7 +53,7 @@ Sino porque la información llega tarde, fragmentada, o en un reporte que nadie 
 
 ¿Cómo tomas tú las decisiones clave?
 
-👇 Test ERA en 5 min → 3g-ia-agents.com/diagnostico
+👇 Test ERA en 5 min → 3gi.cl/diagnostico
 
 #GestiónEmpresarial #PyME #TomaDeDcisiones #IA #3GIntelligence
 ```
@@ -115,7 +115,7 @@ ERA 3: los datos generan decisiones automáticas.
 
 ¿En cuál ERA opera tu empresa?"
 
-*Pantalla: 3g-ia-agents.com/diagnostico*
+*Pantalla: 3gi.cl/diagnostico*
 
 "Descúbrelo gratis en 5 minutos."
 
@@ -135,7 +135,7 @@ El problema es que esa información llega cuando ya no sirve.
 En este video te explico por qué eso no es gestión, es reacción,
 y qué separa a las empresas que escalan de las que siempre están apagando incendios.
 
-🔍 Descubre en qué ERA opera tu empresa → 3g-ia-agents.com/diagnostico
+🔍 Descubre en qué ERA opera tu empresa → 3gi.cl/diagnostico
 
 ---
 3G Intelligence ayuda a PyMEs latinoamericanas a pasar del caos operativo
@@ -167,7 +167,7 @@ Vendían. Pero no sabían cuánto les costaba vender.
 
 ¿Sabes cuánto gana realmente tu empresa?
 
-👇 Test ERA → 3g-ia-agents.com/diagnostico
+👇 Test ERA → 3gi.cl/diagnostico
 
 #PyME #FlujoDeCaja #GestiónFinanciera #NegociosLATAM #3GIntelligence
 ```
@@ -237,7 +237,7 @@ Si no tienes esto claro hoy,
 el problema no es de ventas.
 Es de sistema."
 
-*Pantalla: 3g-ia-agents.com/diagnostico*
+*Pantalla: 3gi.cl/diagnostico*
 
 "Test ERA. Menos de 5 minutos."
 
@@ -258,7 +258,7 @@ Pero no sabían cuánto les costaba ejecutar cada uno.
 En este video te explico las 3 métricas mínimas que toda PyME necesita
 tener claras antes de cerrar el próximo proyecto.
 
-🔍 Descubre en qué ERA opera tu empresa → 3g-ia-agents.com/diagnostico
+🔍 Descubre en qué ERA opera tu empresa → 3gi.cl/diagnostico
 
 ---
 3G Intelligence ayuda a PyMEs latinoamericanas a pasar del caos operativo
@@ -289,7 +289,7 @@ El 67% de los colaboradores de PyMEs en LATAM no tiene claridad sobre las priori
 
 ¿Cuántos proyectos tienes corriendo hoy sin visibilidad real?
 
-👇 Test ERA → 3g-ia-agents.com/diagnostico
+👇 Test ERA → 3gi.cl/diagnostico
 
 #Operaciones #GestiónDeEquipos #PyME #EscalarNegocio #3GIntelligence
 ```
@@ -327,7 +327,7 @@ Es cambiar el sistema que te hace indispensable."
 
 **[23–30s] CTA**
 "Ve al enlace de mi perfil y haz el test gratuito de 5 minutos para descubrir en qué ERA opera tu empresa."
-*Pantalla: 3g-ia-agents.com/diagnostico*
+*Pantalla: 3gi.cl/diagnostico*
 
 ---
 
@@ -349,7 +349,7 @@ ERA 1: el estado del negocio lo sabe solo el dueño.
 ERA 3: el sistema detecta el desvío antes de que explote.
 ¿En cuál estás?
 
-🔍 Descubre en qué ERA opera tu empresa → 3g-ia-agents.com/diagnostico
+🔍 Descubre en qué ERA opera tu empresa → 3gi.cl/diagnostico
 
 ---
 3G Intelligence ayuda a PyMEs latinoamericanas a pasar del caos operativo
@@ -680,7 +680,7 @@ No por falta de ganas. Por falta de estructura."
 
 **[16–20s]** *Pantalla: URL grande, fondo negro*
 "Descubre en qué ERA opera tu empresa.
-Test ERA. 5 minutos. 3g-ia-agents.com/diagnostico"
+Test ERA. 5 minutos. 3gi.cl/diagnostico"
 
 **[20–30s]** *Voz suave, contraste visual ERA 1 vs ERA 3*
 "ERA 1: el estado del negocio lo sabe solo el dueño.
@@ -706,7 +706,7 @@ No por falta de ganas. Por falta de estructura."
 **[16–20s]** *Pantalla: URL grande, fondo negro, texto verde*
 "Descubre en qué ERA opera tu empresa.
 Gratis. 5 minutos.
-3g-ia-agents.com/diagnostico"
+3gi.cl/diagnostico"
 
 **[20–28s]** *Contraste visual: dos pantallas rápidas*
 "ERA 1: el estado del negocio lo sabe solo el dueño.
@@ -737,7 +737,7 @@ Era el sistema que hacía que la buena gente perdiera tiempo."
 
 **[23–30s] CTA**
 "Ve al enlace de mi perfil y haz el test gratuito de 5 minutos para descubrir cuánto te está costando el desorden en tu empresa."
-*Pantalla: 3g-ia-agents.com/diagnostico*
+*Pantalla: 3gi.cl/diagnostico*
 
 ### Descripción YouTube — Short 01
 
@@ -756,7 +756,7 @@ No era ineficiente. Era el sistema.
 El problema no es la persona. Es que en ERA 1,
 el costo del desorden es invisible — nadie lo mide porque nadie lo ve.
 
-🔍 Descubre en qué ERA opera tu empresa → 3g-ia-agents.com/diagnostico
+🔍 Descubre en qué ERA opera tu empresa → 3gi.cl/diagnostico
 
 ---
 3G Intelligence ayuda a PyMEs latinoamericanas a pasar del caos operativo
@@ -784,7 +784,7 @@ Es cambiar tu sistema operativo."
 
 **[23–30s] CTA**
 "Ve al enlace de mi perfil y haz el test gratuito de 5 minutos para descubrir en qué ERA está tu empresa y cómo salir de ahí."
-*Pantalla: 3g-ia-agents.com/diagnostico*
+*Pantalla: 3gi.cl/diagnostico*
 
 ---
 
@@ -807,7 +807,7 @@ Y ojo, el primer paso no es más gente. Es saber exactamente dónde está la fug
 
 **[23–30s] CTA**
 "Ve al enlace de mi perfil y haz el test gratuito de 5 minutos para descubrir en qué ERA está tu empresa y cómo salir de ahí."
-*Pantalla: 3g-ia-agents.com/diagnostico*
+*Pantalla: 3gi.cl/diagnostico*
 
 ---
 
@@ -830,7 +830,7 @@ Es que en ERA 1 el desorden tiene costo real — solo que nadie lo ve."
 
 **[23–30s] CTA**
 "Ve al enlace de mi perfil y haz el test gratuito de 5 minutos para descubrir en qué ERA está tu empresa y cuánto te está costando."
-*Pantalla: 3g-ia-agents.com/diagnostico*
+*Pantalla: 3gi.cl/diagnostico*
 
 ---
 
@@ -852,7 +852,7 @@ Y ojo, eso no es magia — es lo que pasa cuando salís de ERA 1."
 
 **[23–30s] CTA**
 "Ve al enlace de mi perfil y haz el test gratuito de 5 minutos para descubrir en qué ERA está tu empresa y cómo salir de ahí."
-*Pantalla: 3g-ia-agents.com/diagnostico*
+*Pantalla: 3gi.cl/diagnostico*
 
 ---
 
@@ -875,7 +875,7 @@ Es qué te está costando más no automatizar hoy."
 
 **[23–30s] CTA**
 "Ve al enlace de mi perfil y haz el test gratuito de 5 minutos para descubrir en qué ERA está tu empresa y por dónde empezar."
-*Pantalla: 3g-ia-agents.com/diagnostico*
+*Pantalla: 3gi.cl/diagnostico*
 
 ---
 
@@ -897,7 +897,7 @@ Lo que importa es saber exactamente dónde estás hoy — no dónde creés estar
 
 **[23–30s] CTA**
 "Ve al enlace de mi perfil y haz el test gratuito de 5 minutos para descubrir en qué ERA opera tu empresa."
-*Pantalla: 3g-ia-agents.com/diagnostico*
+*Pantalla: 3gi.cl/diagnostico*
 
 ---
 
@@ -919,7 +919,7 @@ es porque hay capacidad atrapada en tareas manuales que nadie está midiendo."
 
 **[23–30s] CTA**
 "Ve al enlace de mi perfil y haz el test gratuito de 5 minutos para descubrir cuánta capacidad está atrapada en tu empresa."
-*Pantalla: 3g-ia-agents.com/diagnostico*
+*Pantalla: 3gi.cl/diagnostico*
 
 ---
 
@@ -942,7 +942,7 @@ Es cambiar cómo fluye la información dentro de tu empresa."
 
 **[23–30s] CTA**
 "Ve al enlace de mi perfil y haz el test gratuito de 5 minutos para descubrir en qué ERA está tu empresa y cómo salir de ahí."
-*Pantalla: 3g-ia-agents.com/diagnostico*
+*Pantalla: 3gi.cl/diagnostico*
 
 ---
 
@@ -964,7 +964,7 @@ Requiere cambiar el sistema operativo de tu empresa."
 
 **[23–30s] CTA**
 "Ve al enlace de mi perfil y haz el test gratuito de 5 minutos para descubrir en qué ERA está tu empresa y cómo salir de ahí."
-*Pantalla: 3g-ia-agents.com/diagnostico*
+*Pantalla: 3gi.cl/diagnostico*
 
 ---
 
@@ -986,7 +986,7 @@ Pero tener sistemas no es lo mismo que usarlos para decidir."
 
 **[23–30s] CTA**
 "Ve al enlace de mi perfil y haz el test gratuito de 5 minutos para descubrir en qué sub-nivel exacto está tu empresa."
-*Pantalla: 3g-ia-agents.com/diagnostico*
+*Pantalla: 3gi.cl/diagnostico*
 
 ---
 
@@ -1008,7 +1008,7 @@ Pero el primer paso siempre es el mismo: saber exactamente dónde estás."
 
 **[23–30s] CTA**
 "Ve al enlace de mi perfil y haz el test gratuito de 5 minutos. Sin llamada de ventas. Sin compromiso. Solo claridad."
-*Pantalla: 3g-ia-agents.com/diagnostico*
+*Pantalla: 3gi.cl/diagnostico*
 
 
 

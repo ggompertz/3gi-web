@@ -1,0 +1,16 @@
+{
+  "communities": {
+    "0": [
+      "astro_config_mjs"
+    ]
+  },
+  "cohesion": {
+    "0": 1.0
+  },
+  "gods": [],
+  "surprises": [],
+  "tokens": {
+    "input": 0,
+    "output": 0
+  }
+}

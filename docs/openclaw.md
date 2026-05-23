@@ -21,7 +21,7 @@ Agente IA persistente, siempre encendido. A diferencia de una sesión de Claude 
 | Capacidad | Detalle |
 |---|---|
 | **Chat por Telegram** | Recibe y responde mensajes en `@openclaw_3g_bot`. Solo el usuario `727800376` (@ggompertz) está aprobado. |
-| **n8n** | Puede listar, disparar y monitorear workflows en `https://n8n.3g-ia-agents.com/`. API Key configurada. |
+| **n8n** | Puede listar, disparar y monitorear workflows en `https://n8n.3gi.cl/`. API Key configurada. |
 | **GitHub** | Token PAT activo. Puede ver PRs, commits, estado de repos `ggompertz/*`, crear issues, hacer merge. |
 | **Browser (automatización)** | Plugin `browser` activo. Puede abrir páginas, hacer scraping, rellenar formularios, tomar screenshots. |
 | **OpenRouter** | Fallback a múltiples modelos (Kimi K2, GPT-5, etc.) si Anthropic falla o para tareas que no requieren Sonnet. |
