@@ -1,95 +1,99 @@
 {
   "/root/3gi-web/astro.config.mjs": {
-    "mtime": 1776901156.281572,
-    "hash": "9f1dc3c3b4f6088c1d83c422bd52c777"
+    "mtime": 1779580663.097389,
+    "hash": "34089995289762ac3ee879387bacfcee"
+  },
+  "/root/3gi-web/docs/pre-upload.py": {
+    "mtime": 1779470056.0210176,
+    "hash": "7dbb13659bf453b81449ce1f978c0d83"
   },
   "/root/3gi-web/carrusel-amcl.html": {
-    "mtime": 1776877141.0293286,
-    "hash": "9ee1564539758c5ec78a805b3db4564d"
+    "mtime": 1779580663.0953891,
+    "hash": "12a57aa19d828de7c2576f90cb0794d0"
   },
   "/root/3gi-web/robots.txt": {
-    "mtime": 1776176235.4480464,
-    "hash": "b4a945f09363b27661665dee80b01814"
+    "mtime": 1779580663.100389,
+    "hash": "2eb3de839b120337437641722c65024e"
   },
   "/root/3gi-web/README.md": {
-    "mtime": 1779222411.894696,
-    "hash": "cba9d6bfc9b2fbb084a08a6578cd9818"
+    "mtime": 1779580663.102389,
+    "hash": "4748e1299bd08d4c8c983a30d699ee78"
   },
   "/root/3gi-web/llms.txt": {
-    "mtime": 1776176235.4480464,
-    "hash": "c1e10a5ebb9a203f7c1f5c10dfceebdd"
+    "mtime": 1779580663.1043892,
+    "hash": "cc71902d873d98fade6380a9003bcff5"
   },
   "/root/3gi-web/CLAUDE.md": {
-    "mtime": 1778381709.113762,
+    "mtime": 1779580663.105389,
     "hash": "da79aa9343cd2b362206f03762160abc"
   },
   "/root/3gi-web/AGENTS.md": {
-    "mtime": 1778381709.0357609,
+    "mtime": 1779580663.1083891,
     "hash": "da79aa9343cd2b362206f03762160abc"
   },
   "/root/3gi-web/era-opciones.html": {
-    "mtime": 1779392336.1355553,
+    "mtime": 1779580663.1093893,
     "hash": "5ea6d22e9e21818365a7a8af8a73932d"
   },
   "/root/3gi-web/firma.html": {
-    "mtime": 1776176235.4470465,
-    "hash": "ea63a38e016c4fcca55cf964574349d6"
+    "mtime": 1779580663.1113892,
+    "hash": "ff280d6a2f479cab0fd4e36d8a18b7da"
   },
   "/root/3gi-web/docs/sql-assistant-tablas.md": {
-    "mtime": 1778983282.0275495,
+    "mtime": 1779580663.1203892,
     "hash": "6580079a1876b5498b79725ebbbfeedf"
   },
   "/root/3gi-web/docs/homepage-sections.md": {
-    "mtime": 1779222427.5259044,
-    "hash": "ce833dd348a6aa46773665a355e49cf6"
+    "mtime": 1779580663.1223893,
+    "hash": "1f77712d1eba95347eb285a303162b02"
   },
   "/root/3gi-web/docs/openclaw.md": {
-    "mtime": 1778961394.6021168,
-    "hash": "1790f1f896b61c7b6faa7a18e9b7b2cb"
+    "mtime": 1779580663.1243894,
+    "hash": "63802a97e4d97345be2ef63f39d117c3"
   },
   "/root/3gi-web/docs/agente-personal-3gi.md": {
-    "mtime": 1778982851.344875,
-    "hash": "c97b380401c257c029ea0049f08e8400"
+    "mtime": 1779580663.1263895,
+    "hash": "21058cf774953df515dd27888b317988"
   },
   "/root/3gi-web/docs/faq-page.md": {
-    "mtime": 1779222444.4151297,
+    "mtime": 1779580663.1283894,
     "hash": "608878f75aa40b3dcb3be7a83935ab69"
   },
   "/root/3gi-web/docs/contenido/temp-post-03-imagen.md": {
-    "mtime": 1779390954.4407275,
-    "hash": "294f1a27b9dbd531198b19273e0bcfb2"
+    "mtime": 1779580663.2343907,
+    "hash": "aa4c83255c6df0b05e12736e65fcd1b5"
   },
   "/root/3gi-web/docs/contenido/guia-produccion-shorts.md": {
-    "mtime": 1778198906.930605,
-    "hash": "20053842b1fe567cb798890a4dfda827"
+    "mtime": 1779580663.248391,
+    "hash": "89285d46316d32334f541495d80ef781"
   },
   "/root/3gi-web/docs/contenido/carruseles.md": {
-    "mtime": 1779066389.769972,
-    "hash": "3ca4e35f78d98d64a3a77a806f906434"
+    "mtime": 1779580663.2743912,
+    "hash": "9e3173300f3f1887577ea17b3df513c7"
   },
   "/root/3gi-web/docs/contenido/carruseles2.md": {
-    "mtime": 1779390954.4407275,
-    "hash": "5522130c0dcddd6e927ea29ecefedf26"
+    "mtime": 1779580663.2813914,
+    "hash": "d52204b0bf41e05764955e71d88e31d0"
   },
   "/root/3gi-web/docs/prospectos/2026-05-08-m-eugenia-recurso-animal.md": {
-    "mtime": 1778262787.9257047,
-    "hash": "fe9463f9bd9e445e01ea3e94399e4c40"
+    "mtime": 1779580663.2953916,
+    "hash": "ce8172fe442779aedcd7c275d3cc34dd"
   },
   "/root/3gi-web/public/robots.txt": {
-    "mtime": 1777064859.5301766,
-    "hash": "b4a945f09363b27661665dee80b01814"
+    "mtime": 1779580663.1323895,
+    "hash": "2eb3de839b120337437641722c65024e"
   },
   "/root/3gi-web/public/era-opciones.html": {
-    "mtime": 1779392897.2971995,
+    "mtime": 1779580663.1343894,
     "hash": "90ac834f4946793d7cc2df0688b6258b"
   },
   "/root/3gi-web/public/contenido/carrusel-mayo1-era-dos-lados.html": {
-    "mtime": 1777676608.8315003,
-    "hash": "f8383cf73b55f987e43187d42c8e82dd"
+    "mtime": 1779580663.3053916,
+    "hash": "aa1716e5b60d356ce95c835fe18e1719"
   },
   "/root/3gi-web/contenido/carrusel-mayo1-era-dos-lados.html": {
-    "mtime": 1776176235.4370465,
-    "hash": "f8383cf73b55f987e43187d42c8e82dd"
+    "mtime": 1779580663.6413958,
+    "hash": "aa1716e5b60d356ce95c835fe18e1719"
   },
   "/root/3gi-web/Cloudflare2.png": {
     "mtime": 1776176235.4360464,
