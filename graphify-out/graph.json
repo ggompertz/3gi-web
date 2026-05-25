@@ -8,2088 +8,2088 @@
       "file_type": "document",
       "source_file": "AGENTS.md",
       "source_location": "L1",
-      "id": "agents_md",
       "community": 22,
-      "norm_label": "agents.md"
+      "norm_label": "agents.md",
+      "id": "agents_md"
     },
     {
       "label": "graphify",
       "file_type": "document",
       "source_file": "AGENTS.md",
       "source_location": "L1",
-      "id": "3gi_web_agents_graphify",
       "community": 22,
-      "norm_label": "graphify"
+      "norm_label": "graphify",
+      "id": "3gi_web_agents_graphify"
     },
     {
       "label": "CLAUDE.md",
       "file_type": "document",
       "source_file": "CLAUDE.md",
       "source_location": "L1",
-      "id": "claude_md",
       "community": 23,
-      "norm_label": "claude.md"
+      "norm_label": "claude.md",
+      "id": "claude_md"
     },
     {
       "label": "graphify",
       "file_type": "document",
       "source_file": "CLAUDE.md",
       "source_location": "L1",
-      "id": "3gi_web_claude_graphify",
       "community": 23,
-      "norm_label": "graphify"
+      "norm_label": "graphify",
+      "id": "3gi_web_claude_graphify"
     },
     {
       "label": "README.md",
       "file_type": "document",
       "source_file": "README.md",
       "source_location": "L1",
-      "id": "readme_md",
       "community": 11,
-      "norm_label": "readme.md"
+      "norm_label": "readme.md",
+      "id": "readme_md"
     },
     {
       "label": "3GI Web \u2014 Sitio p\u00fablico de 3G Intelligence",
       "file_type": "document",
       "source_file": "README.md",
       "source_location": "L1",
-      "id": "3gi_web_readme_3gi_web_sitio_p_blico_de_3g_intelligence",
       "community": 11,
-      "norm_label": "3gi web \u2014 sitio publico de 3g intelligence"
+      "norm_label": "3gi web \u2014 sitio publico de 3g intelligence",
+      "id": "3gi_web_readme_3gi_web_sitio_p_blico_de_3g_intelligence"
     },
     {
       "label": "Stack",
       "file_type": "document",
       "source_file": "README.md",
       "source_location": "L5",
-      "id": "3gi_web_readme_stack",
       "community": 11,
-      "norm_label": "stack"
+      "norm_label": "stack",
+      "id": "3gi_web_readme_stack"
     },
     {
       "label": "Estructura",
       "file_type": "document",
       "source_file": "README.md",
       "source_location": "L13",
-      "id": "3gi_web_readme_estructura",
       "community": 11,
-      "norm_label": "estructura"
+      "norm_label": "estructura",
+      "id": "3gi_web_readme_estructura"
     },
     {
       "label": "code:block1 (src/)",
       "file_type": "document",
       "source_file": "README.md",
       "source_location": "L15",
-      "id": "3gi_web_readme_codeblock_1",
       "community": 11,
-      "norm_label": "code:block1 (src/)"
+      "norm_label": "code:block1 (src/)",
+      "id": "3gi_web_readme_codeblock_1"
     },
     {
       "label": "Branding",
       "file_type": "document",
       "source_file": "README.md",
       "source_location": "L34",
-      "id": "3gi_web_readme_branding",
       "community": 11,
-      "norm_label": "branding"
+      "norm_label": "branding",
+      "id": "3gi_web_readme_branding"
     },
     {
       "label": "Nomenclatura obligatoria",
       "file_type": "document",
       "source_file": "README.md",
       "source_location": "L47",
-      "id": "3gi_web_readme_nomenclatura_obligatoria",
       "community": 11,
-      "norm_label": "nomenclatura obligatoria"
+      "norm_label": "nomenclatura obligatoria",
+      "id": "3gi_web_readme_nomenclatura_obligatoria"
     },
     {
       "label": "P\u00e1ginas y prop\u00f3sito",
       "file_type": "document",
       "source_file": "README.md",
       "source_location": "L53",
-      "id": "3gi_web_readme_p_ginas_y_prop_sito",
       "community": 11,
-      "norm_label": "paginas y proposito"
+      "norm_label": "paginas y proposito",
+      "id": "3gi_web_readme_p_ginas_y_prop_sito"
     },
     {
       "label": "SEO / AEO",
       "file_type": "document",
       "source_file": "README.md",
       "source_location": "L65",
-      "id": "3gi_web_readme_seo_aeo",
       "community": 11,
-      "norm_label": "seo / aeo"
+      "norm_label": "seo / aeo",
+      "id": "3gi_web_readme_seo_aeo"
     },
     {
       "label": "i18n",
       "file_type": "document",
       "source_file": "README.md",
       "source_location": "L74",
-      "id": "3gi_web_readme_i18n",
       "community": 11,
-      "norm_label": "i18n"
+      "norm_label": "i18n",
+      "id": "3gi_web_readme_i18n"
     },
     {
       "label": "Deploy",
       "file_type": "document",
       "source_file": "README.md",
       "source_location": "L83",
-      "id": "3gi_web_readme_deploy",
       "community": 11,
-      "norm_label": "deploy"
+      "norm_label": "deploy",
+      "id": "3gi_web_readme_deploy"
     },
     {
       "label": "code:bash (# Build)",
       "file_type": "document",
       "source_file": "README.md",
       "source_location": "L85",
-      "id": "3gi_web_readme_codeblock_2",
       "community": 11,
-      "norm_label": "code:bash (# build)"
+      "norm_label": "code:bash (# build)",
+      "id": "3gi_web_readme_codeblock_2"
     },
     {
       "label": "Contenido semanal",
       "file_type": "document",
       "source_file": "README.md",
       "source_location": "L95",
-      "id": "3gi_web_readme_contenido_semanal",
       "community": 11,
-      "norm_label": "contenido semanal"
+      "norm_label": "contenido semanal",
+      "id": "3gi_web_readme_contenido_semanal"
     },
     {
       "label": "Variables de entorno",
       "file_type": "document",
       "source_file": "README.md",
       "source_location": "L101",
-      "id": "3gi_web_readme_variables_de_entorno",
       "community": 11,
-      "norm_label": "variables de entorno"
+      "norm_label": "variables de entorno",
+      "id": "3gi_web_readme_variables_de_entorno"
     },
     {
       "label": "agente-personal-3gi.md",
       "file_type": "document",
       "source_file": "docs/agente-personal-3gi.md",
       "source_location": "L1",
-      "id": "docs_agente_personal_3gi_md",
       "community": 3,
-      "norm_label": "agente-personal-3gi.md"
+      "norm_label": "agente-personal-3gi.md",
+      "id": "docs_agente_personal_3gi_md"
     },
     {
       "label": "Agente Personal 3GI \u2014 Dise\u00f1o del sistema propio",
       "file_type": "document",
       "source_file": "docs/agente-personal-3gi.md",
       "source_location": "L1",
-      "id": "docs_agente_personal_3gi_agente_personal_3gi_dise_o_del_sistema_propio",
       "community": 3,
-      "norm_label": "agente personal 3gi \u2014 diseno del sistema propio"
+      "norm_label": "agente personal 3gi \u2014 diseno del sistema propio",
+      "id": "docs_agente_personal_3gi_agente_personal_3gi_dise_o_del_sistema_propio"
     },
     {
       "label": "Por qu\u00e9 construir uno propio",
       "file_type": "document",
       "source_file": "docs/agente-personal-3gi.md",
       "source_location": "L9",
-      "id": "docs_agente_personal_3gi_por_qu_construir_uno_propio",
       "community": 3,
-      "norm_label": "por que construir uno propio"
+      "norm_label": "por que construir uno propio",
+      "id": "docs_agente_personal_3gi_por_qu_construir_uno_propio"
     },
     {
       "label": "Capacidades objetivo",
       "file_type": "document",
       "source_file": "docs/agente-personal-3gi.md",
       "source_location": "L15",
-      "id": "docs_agente_personal_3gi_capacidades_objetivo",
       "community": 3,
-      "norm_label": "capacidades objetivo"
+      "norm_label": "capacidades objetivo",
+      "id": "docs_agente_personal_3gi_capacidades_objetivo"
     },
     {
       "label": "Lo que OpenClaw tiene para rescatar (conceptos, no c\u00f3digo)",
       "file_type": "document",
       "source_file": "docs/agente-personal-3gi.md",
       "source_location": "L30",
-      "id": "docs_agente_personal_3gi_lo_que_openclaw_tiene_para_rescatar_conceptos_no_c_digo",
       "community": 3,
-      "norm_label": "lo que openclaw tiene para rescatar (conceptos, no codigo)"
+      "norm_label": "lo que openclaw tiene para rescatar (conceptos, no codigo)",
+      "id": "docs_agente_personal_3gi_lo_que_openclaw_tiene_para_rescatar_conceptos_no_c_digo"
     },
     {
       "label": "Arquitectura",
       "file_type": "document",
       "source_file": "docs/agente-personal-3gi.md",
       "source_location": "L50",
-      "id": "docs_agente_personal_3gi_arquitectura",
       "community": 3,
-      "norm_label": "arquitectura"
+      "norm_label": "arquitectura",
+      "id": "docs_agente_personal_3gi_arquitectura"
     },
     {
       "label": "code:block1 (Telegram (@bot_3gi))",
       "file_type": "document",
       "source_file": "docs/agente-personal-3gi.md",
       "source_location": "L52",
-      "id": "docs_agente_personal_3gi_codeblock_1",
       "community": 3,
-      "norm_label": "code:block1 (telegram (@bot_3gi))"
+      "norm_label": "code:block1 (telegram (@bot_3gi))",
+      "id": "docs_agente_personal_3gi_codeblock_1"
     },
     {
       "label": "Stack t\u00e9cnico",
       "file_type": "document",
       "source_file": "docs/agente-personal-3gi.md",
       "source_location": "L78",
-      "id": "docs_agente_personal_3gi_stack_t_cnico",
       "community": 3,
-      "norm_label": "stack tecnico"
+      "norm_label": "stack tecnico",
+      "id": "docs_agente_personal_3gi_stack_t_cnico"
     },
     {
       "label": "Estructura de archivos",
       "file_type": "document",
       "source_file": "docs/agente-personal-3gi.md",
       "source_location": "L95",
-      "id": "docs_agente_personal_3gi_estructura_de_archivos",
       "community": 3,
-      "norm_label": "estructura de archivos"
+      "norm_label": "estructura de archivos",
+      "id": "docs_agente_personal_3gi_estructura_de_archivos"
     },
     {
       "label": "code:block2 (/root/3gi-assistant/)",
       "file_type": "document",
       "source_file": "docs/agente-personal-3gi.md",
       "source_location": "L97",
-      "id": "docs_agente_personal_3gi_codeblock_2",
       "community": 3,
-      "norm_label": "code:block2 (/root/3gi-assistant/)"
+      "norm_label": "code:block2 (/root/3gi-assistant/)",
+      "id": "docs_agente_personal_3gi_codeblock_2"
     },
     {
       "label": "Tablas Supabase necesarias",
       "file_type": "document",
       "source_file": "docs/agente-personal-3gi.md",
       "source_location": "L123",
-      "id": "docs_agente_personal_3gi_tablas_supabase_necesarias",
       "community": 3,
-      "norm_label": "tablas supabase necesarias"
+      "norm_label": "tablas supabase necesarias",
+      "id": "docs_agente_personal_3gi_tablas_supabase_necesarias"
     },
     {
       "label": "code:sql (-- Historial de conversaciones)",
       "file_type": "document",
       "source_file": "docs/agente-personal-3gi.md",
       "source_location": "L125",
-      "id": "docs_agente_personal_3gi_codeblock_3",
       "community": 3,
-      "norm_label": "code:sql (-- historial de conversaciones)"
+      "norm_label": "code:sql (-- historial de conversaciones)",
+      "id": "docs_agente_personal_3gi_codeblock_3"
     },
     {
       "label": "Variables de entorno",
       "file_type": "document",
       "source_file": "docs/agente-personal-3gi.md",
       "source_location": "L150",
-      "id": "docs_agente_personal_3gi_variables_de_entorno",
       "community": 3,
-      "norm_label": "variables de entorno"
+      "norm_label": "variables de entorno",
+      "id": "docs_agente_personal_3gi_variables_de_entorno"
     },
     {
       "label": "code:bash (# Telegram)",
       "file_type": "document",
       "source_file": "docs/agente-personal-3gi.md",
       "source_location": "L152",
-      "id": "docs_agente_personal_3gi_codeblock_4",
       "community": 3,
-      "norm_label": "code:bash (# telegram)"
+      "norm_label": "code:bash (# telegram)",
+      "id": "docs_agente_personal_3gi_codeblock_4"
     },
     {
       "label": "Flujo de voz (detalle)",
       "file_type": "document",
       "source_file": "docs/agente-personal-3gi.md",
       "source_location": "L180",
-      "id": "docs_agente_personal_3gi_flujo_de_voz_detalle",
       "community": 3,
-      "norm_label": "flujo de voz (detalle)"
+      "norm_label": "flujo de voz (detalle)",
+      "id": "docs_agente_personal_3gi_flujo_de_voz_detalle"
     },
     {
       "label": "code:block5 (Usuario env\u00eda audio .ogg (Telegram))",
       "file_type": "document",
       "source_file": "docs/agente-personal-3gi.md",
       "source_location": "L182",
-      "id": "docs_agente_personal_3gi_codeblock_5",
       "community": 3,
-      "norm_label": "code:block5 (usuario envia audio .ogg (telegram))"
+      "norm_label": "code:block5 (usuario envia audio .ogg (telegram))",
+      "id": "docs_agente_personal_3gi_codeblock_5"
     },
     {
       "label": "Comandos disponibles (dise\u00f1o inicial)",
       "file_type": "document",
       "source_file": "docs/agente-personal-3gi.md",
       "source_location": "L208",
-      "id": "docs_agente_personal_3gi_comandos_disponibles_dise_o_inicial",
       "community": 3,
-      "norm_label": "comandos disponibles (diseno inicial)"
+      "norm_label": "comandos disponibles (diseno inicial)",
+      "id": "docs_agente_personal_3gi_comandos_disponibles_dise_o_inicial"
     },
     {
       "label": "Plan de desarrollo",
       "file_type": "document",
       "source_file": "docs/agente-personal-3gi.md",
       "source_location": "L222",
-      "id": "docs_agente_personal_3gi_plan_de_desarrollo",
       "community": 3,
-      "norm_label": "plan de desarrollo"
+      "norm_label": "plan de desarrollo",
+      "id": "docs_agente_personal_3gi_plan_de_desarrollo"
     },
     {
       "label": "Criterios de \u00e9xito",
       "file_type": "document",
       "source_file": "docs/agente-personal-3gi.md",
       "source_location": "L236",
-      "id": "docs_agente_personal_3gi_criterios_de_xito",
       "community": 3,
-      "norm_label": "criterios de exito"
+      "norm_label": "criterios de exito",
+      "id": "docs_agente_personal_3gi_criterios_de_xito"
     },
     {
       "label": "carruseles.md",
       "file_type": "document",
       "source_file": "docs/contenido/carruseles.md",
       "source_location": "L1",
-      "id": "docs_contenido_carruseles_md",
       "community": 0,
-      "norm_label": "carruseles.md"
+      "norm_label": "carruseles.md",
+      "id": "docs_contenido_carruseles_md"
     },
     {
       "label": "Carruseles 3GI \u2014 Registro de Publicaciones",
       "file_type": "document",
       "source_file": "docs/contenido/carruseles.md",
       "source_location": "L1",
-      "id": "contenido_carruseles_carruseles_3gi_registro_de_publicaciones",
       "community": 0,
-      "norm_label": "carruseles 3gi \u2014 registro de publicaciones"
+      "norm_label": "carruseles 3gi \u2014 registro de publicaciones",
+      "id": "contenido_carruseles_carruseles_3gi_registro_de_publicaciones"
     },
     {
       "label": "Perfiles en redes sociales",
       "file_type": "document",
       "source_file": "docs/contenido/carruseles.md",
       "source_location": "L8",
-      "id": "contenido_carruseles_perfiles_en_redes_sociales",
       "community": 15,
-      "norm_label": "perfiles en redes sociales"
+      "norm_label": "perfiles en redes sociales",
+      "id": "contenido_carruseles_perfiles_en_redes_sociales"
     },
     {
       "label": "TikTok \u2014 @3gintelligence",
       "file_type": "document",
       "source_file": "docs/contenido/carruseles.md",
       "source_location": "L10",
-      "id": "contenido_carruseles_tiktok_3gintelligence",
       "community": 15,
-      "norm_label": "tiktok \u2014 @3gintelligence"
+      "norm_label": "tiktok \u2014 @3gintelligence",
+      "id": "contenido_carruseles_tiktok_3gintelligence"
     },
     {
       "label": "code:block1 (\u00bfEn que ERA opera tu empresa?Test ERA -> 3gi.cl/diagnostico)",
       "file_type": "document",
       "source_file": "docs/contenido/carruseles.md",
       "source_location": "L12",
-      "id": "contenido_carruseles_codeblock_1",
       "community": 15,
-      "norm_label": "code:block1 (\u00bfen que era opera tu empresa?test era -> 3gi.cl/diagnostico)"
+      "norm_label": "code:block1 (\u00bfen que era opera tu empresa?test era -> 3gi.cl/diagnostico)",
+      "id": "contenido_carruseles_codeblock_1"
     },
     {
       "label": "Estado de publicaciones",
       "file_type": "document",
       "source_file": "docs/contenido/carruseles.md",
       "source_location": "L18",
-      "id": "contenido_carruseles_estado_de_publicaciones",
       "community": 0,
-      "norm_label": "estado de publicaciones"
+      "norm_label": "estado de publicaciones",
+      "id": "contenido_carruseles_estado_de_publicaciones"
     },
     {
       "label": "Post 0A",
       "file_type": "document",
       "source_file": "docs/contenido/carruseles.md",
       "source_location": "L40",
-      "id": "contenido_carruseles_post_0a",
       "community": 15,
-      "norm_label": "post 0a"
+      "norm_label": "post 0a",
+      "id": "contenido_carruseles_post_0a"
     },
     {
       "label": "code:block2 (El 72% de los due\u00f1os de PyME toma decisiones sin datos reale)",
       "file_type": "document",
       "source_file": "docs/contenido/carruseles.md",
       "source_location": "L46",
-      "id": "contenido_carruseles_codeblock_2",
       "community": 15,
-      "norm_label": "code:block2 (el 72% de los duenos de pyme toma decisiones sin datos reale)"
+      "norm_label": "code:block2 (el 72% de los duenos de pyme toma decisiones sin datos reale)",
+      "id": "contenido_carruseles_codeblock_2"
     },
     {
       "label": "code:json ({)",
       "file_type": "document",
       "source_file": "docs/contenido/carruseles.md",
       "source_location": "L61",
-      "id": "contenido_carruseles_codeblock_3",
       "community": 15,
-      "norm_label": "code:json ({)"
+      "norm_label": "code:json ({)",
+      "id": "contenido_carruseles_codeblock_3"
     },
     {
       "label": "Short 0A",
       "file_type": "document",
       "source_file": "docs/contenido/carruseles.md",
       "source_location": "L75",
-      "id": "contenido_carruseles_short_0a",
       "community": 15,
-      "norm_label": "short 0a"
+      "norm_label": "short 0a",
+      "id": "contenido_carruseles_short_0a"
     },
     {
       "label": "Descripci\u00f3n YouTube \u2014 Short 0A",
       "file_type": "document",
       "source_file": "docs/contenido/carruseles.md",
       "source_location": "L124",
-      "id": "contenido_carruseles_descripci_n_youtube_short_0a",
       "community": 15,
-      "norm_label": "descripcion youtube \u2014 short 0a"
+      "norm_label": "descripcion youtube \u2014 short 0a",
+      "id": "contenido_carruseles_descripci_n_youtube_short_0a"
     },
     {
       "label": "code:block4 (El 72% de los due\u00f1os de PyME toma decisiones sin datos reale)",
       "file_type": "document",
       "source_file": "docs/contenido/carruseles.md",
       "source_location": "L129",
-      "id": "contenido_carruseles_codeblock_4",
       "community": 15,
-      "norm_label": "code:block4 (el 72% de los duenos de pyme toma decisiones sin datos reale)"
+      "norm_label": "code:block4 (el 72% de los duenos de pyme toma decisiones sin datos reale)",
+      "id": "contenido_carruseles_codeblock_4"
     },
     {
       "label": "Post 0B",
       "file_type": "document",
       "source_file": "docs/contenido/carruseles.md",
       "source_location": "L151",
-      "id": "contenido_carruseles_post_0b",
       "community": 0,
-      "norm_label": "post 0b"
+      "norm_label": "post 0b",
+      "id": "contenido_carruseles_post_0b"
     },
     {
       "label": "code:block5 (La mayor\u00eda de las PyMEs no cierran por falta de ventas.)",
       "file_type": "document",
       "source_file": "docs/contenido/carruseles.md",
       "source_location": "L157",
-      "id": "contenido_carruseles_codeblock_5",
       "community": 0,
-      "norm_label": "code:block5 (la mayoria de las pymes no cierran por falta de ventas.)"
+      "norm_label": "code:block5 (la mayoria de las pymes no cierran por falta de ventas.)",
+      "id": "contenido_carruseles_codeblock_5"
     },
     {
       "label": "code:json ({)",
       "file_type": "document",
       "source_file": "docs/contenido/carruseles.md",
       "source_location": "L175",
-      "id": "contenido_carruseles_codeblock_6",
       "community": 0,
-      "norm_label": "code:json ({)"
+      "norm_label": "code:json ({)",
+      "id": "contenido_carruseles_codeblock_6"
     },
     {
       "label": "Short 0B",
       "file_type": "document",
       "source_file": "docs/contenido/carruseles.md",
       "source_location": "L196",
-      "id": "contenido_carruseles_short_0b",
       "community": 0,
-      "norm_label": "short 0b"
+      "norm_label": "short 0b",
+      "id": "contenido_carruseles_short_0b"
     },
     {
       "label": "Descripci\u00f3n YouTube \u2014 Short 0B",
       "file_type": "document",
       "source_file": "docs/contenido/carruseles.md",
       "source_location": "L246",
-      "id": "contenido_carruseles_descripci_n_youtube_short_0b",
       "community": 0,
-      "norm_label": "descripcion youtube \u2014 short 0b"
+      "norm_label": "descripcion youtube \u2014 short 0b",
+      "id": "contenido_carruseles_descripci_n_youtube_short_0b"
     },
     {
       "label": "code:block7 (El 82% de las PyMEs que cierran no quiebran por falta de ven)",
       "file_type": "document",
       "source_file": "docs/contenido/carruseles.md",
       "source_location": "L251",
-      "id": "contenido_carruseles_codeblock_7",
       "community": 0,
-      "norm_label": "code:block7 (el 82% de las pymes que cierran no quiebran por falta de ven)"
+      "norm_label": "code:block7 (el 82% de las pymes que cierran no quiebran por falta de ven)",
+      "id": "contenido_carruseles_codeblock_7"
     },
     {
       "label": "Post 0C",
       "file_type": "document",
       "source_file": "docs/contenido/carruseles.md",
       "source_location": "L274",
-      "id": "contenido_carruseles_post_0c",
       "community": 0,
-      "norm_label": "post 0c"
+      "norm_label": "post 0c",
+      "id": "contenido_carruseles_post_0c"
     },
     {
       "label": "code:block8 (Tu equipo trabaja duro. Eso no lo dudo.)",
       "file_type": "document",
       "source_file": "docs/contenido/carruseles.md",
       "source_location": "L280",
-      "id": "contenido_carruseles_codeblock_8",
       "community": 0,
-      "norm_label": "code:block8 (tu equipo trabaja duro. eso no lo dudo.)"
+      "norm_label": "code:block8 (tu equipo trabaja duro. eso no lo dudo.)",
+      "id": "contenido_carruseles_codeblock_8"
     },
     {
       "label": "code:json ({)",
       "file_type": "document",
       "source_file": "docs/contenido/carruseles.md",
       "source_location": "L297",
-      "id": "contenido_carruseles_codeblock_9",
       "community": 0,
-      "norm_label": "code:json ({)"
+      "norm_label": "code:json ({)",
+      "id": "contenido_carruseles_codeblock_9"
     },
     {
       "label": "Short 0C",
       "file_type": "document",
       "source_file": "docs/contenido/carruseles.md",
       "source_location": "L311",
-      "id": "contenido_carruseles_short_0c",
       "community": 0,
-      "norm_label": "short 0c"
+      "norm_label": "short 0c",
+      "id": "contenido_carruseles_short_0c"
     },
     {
       "label": "Descripci\u00f3n YouTube \u2014 Short 0C",
       "file_type": "document",
       "source_file": "docs/contenido/carruseles.md",
       "source_location": "L334",
-      "id": "contenido_carruseles_descripci_n_youtube_short_0c",
       "community": 0,
-      "norm_label": "descripcion youtube \u2014 short 0c"
+      "norm_label": "descripcion youtube \u2014 short 0c",
+      "id": "contenido_carruseles_descripci_n_youtube_short_0c"
     },
     {
       "label": "code:block10 (\u00bfSi te vas una semana, qu\u00e9 pasa en tu empresa?)",
       "file_type": "document",
       "source_file": "docs/contenido/carruseles.md",
       "source_location": "L339",
-      "id": "contenido_carruseles_codeblock_10",
       "community": 0,
-      "norm_label": "code:block10 (\u00bfsi te vas una semana, que pasa en tu empresa?)"
+      "norm_label": "code:block10 (\u00bfsi te vas una semana, que pasa en tu empresa?)",
+      "id": "contenido_carruseles_codeblock_10"
     },
     {
       "label": "Post 01",
       "file_type": "document",
       "source_file": "docs/contenido/carruseles.md",
       "source_location": "L365",
-      "id": "contenido_carruseles_post_01",
       "community": 0,
-      "norm_label": "post 01"
+      "norm_label": "post 01",
+      "id": "contenido_carruseles_post_01"
     },
     {
       "label": "code:block11 (Tu mejor profesional te est\u00e1 costando el doble.)",
       "file_type": "document",
       "source_file": "docs/contenido/carruseles.md",
       "source_location": "L370",
-      "id": "contenido_carruseles_codeblock_11",
       "community": 0,
-      "norm_label": "code:block11 (tu mejor profesional te esta costando el doble.)"
+      "norm_label": "code:block11 (tu mejor profesional te esta costando el doble.)",
+      "id": "contenido_carruseles_codeblock_11"
     },
     {
       "label": "code:json ({)",
       "file_type": "document",
       "source_file": "docs/contenido/carruseles.md",
       "source_location": "L393",
-      "id": "contenido_carruseles_codeblock_12",
       "community": 0,
-      "norm_label": "code:json ({)"
+      "norm_label": "code:json ({)",
+      "id": "contenido_carruseles_codeblock_12"
     },
     {
       "label": "Post 02",
       "file_type": "document",
       "source_file": "docs/contenido/carruseles.md",
       "source_location": "L414",
-      "id": "contenido_carruseles_post_02",
       "community": 0,
-      "norm_label": "post 02"
+      "norm_label": "post 02",
+      "id": "contenido_carruseles_post_02"
     },
     {
       "label": "code:block13 (Antes de hablar de IA con un cliente, siempre busco una se\u00f1a)",
       "file_type": "document",
       "source_file": "docs/contenido/carruseles.md",
       "source_location": "L419",
-      "id": "contenido_carruseles_codeblock_13",
       "community": 0,
-      "norm_label": "code:block13 (antes de hablar de ia con un cliente, siempre busco una sena)"
+      "norm_label": "code:block13 (antes de hablar de ia con un cliente, siempre busco una sena)",
+      "id": "contenido_carruseles_codeblock_13"
     },
     {
       "label": "code:json ({)",
       "file_type": "document",
       "source_file": "docs/contenido/carruseles.md",
       "source_location": "L450",
-      "id": "contenido_carruseles_codeblock_14",
       "community": 0,
-      "norm_label": "code:json ({)"
+      "norm_label": "code:json ({)",
+      "id": "contenido_carruseles_codeblock_14"
     },
     {
       "label": "Post 03",
       "file_type": "document",
       "source_file": "docs/contenido/carruseles.md",
       "source_location": "L466",
-      "id": "contenido_carruseles_post_03",
       "community": 0,
-      "norm_label": "post 03"
+      "norm_label": "post 03",
+      "id": "contenido_carruseles_post_03"
     },
     {
       "label": "code:json ({)",
       "file_type": "document",
       "source_file": "docs/contenido/carruseles.md",
       "source_location": "L470",
-      "id": "contenido_carruseles_codeblock_15",
       "community": 0,
-      "norm_label": "code:json ({)"
+      "norm_label": "code:json ({)",
+      "id": "contenido_carruseles_codeblock_15"
     },
     {
       "label": "Post 04",
       "file_type": "document",
       "source_file": "docs/contenido/carruseles.md",
       "source_location": "L485",
-      "id": "contenido_carruseles_post_04",
       "community": 0,
-      "norm_label": "post 04"
+      "norm_label": "post 04",
+      "id": "contenido_carruseles_post_04"
     },
     {
       "label": "code:json ({)",
       "file_type": "document",
       "source_file": "docs/contenido/carruseles.md",
       "source_location": "L489",
-      "id": "contenido_carruseles_codeblock_16",
       "community": 0,
-      "norm_label": "code:json ({)"
+      "norm_label": "code:json ({)",
+      "id": "contenido_carruseles_codeblock_16"
     },
     {
       "label": "Post 05",
       "file_type": "document",
       "source_file": "docs/contenido/carruseles.md",
       "source_location": "L505",
-      "id": "contenido_carruseles_post_05",
       "community": 0,
-      "norm_label": "post 05"
+      "norm_label": "post 05",
+      "id": "contenido_carruseles_post_05"
     },
     {
       "label": "code:json ({)",
       "file_type": "document",
       "source_file": "docs/contenido/carruseles.md",
       "source_location": "L509",
-      "id": "contenido_carruseles_codeblock_17",
       "community": 0,
-      "norm_label": "code:json ({)"
+      "norm_label": "code:json ({)",
+      "id": "contenido_carruseles_codeblock_17"
     },
     {
       "label": "Post 06",
       "file_type": "document",
       "source_file": "docs/contenido/carruseles.md",
       "source_location": "L524",
-      "id": "contenido_carruseles_post_06",
       "community": 0,
-      "norm_label": "post 06"
+      "norm_label": "post 06",
+      "id": "contenido_carruseles_post_06"
     },
     {
       "label": "code:json ({)",
       "file_type": "document",
       "source_file": "docs/contenido/carruseles.md",
       "source_location": "L528",
-      "id": "contenido_carruseles_codeblock_18",
       "community": 0,
-      "norm_label": "code:json ({)"
+      "norm_label": "code:json ({)",
+      "id": "contenido_carruseles_codeblock_18"
     },
     {
       "label": "Post 07",
       "file_type": "document",
       "source_file": "docs/contenido/carruseles.md",
       "source_location": "L546",
-      "id": "contenido_carruseles_post_07",
       "community": 0,
-      "norm_label": "post 07"
+      "norm_label": "post 07",
+      "id": "contenido_carruseles_post_07"
     },
     {
       "label": "code:json ({)",
       "file_type": "document",
       "source_file": "docs/contenido/carruseles.md",
       "source_location": "L550",
-      "id": "contenido_carruseles_codeblock_19",
       "community": 0,
-      "norm_label": "code:json ({)"
+      "norm_label": "code:json ({)",
+      "id": "contenido_carruseles_codeblock_19"
     },
     {
       "label": "Post 08",
       "file_type": "document",
       "source_file": "docs/contenido/carruseles.md",
       "source_location": "L565",
-      "id": "contenido_carruseles_post_08",
       "community": 0,
-      "norm_label": "post 08"
+      "norm_label": "post 08",
+      "id": "contenido_carruseles_post_08"
     },
     {
       "label": "code:json ({)",
       "file_type": "document",
       "source_file": "docs/contenido/carruseles.md",
       "source_location": "L569",
-      "id": "contenido_carruseles_codeblock_20",
       "community": 0,
-      "norm_label": "code:json ({)"
+      "norm_label": "code:json ({)",
+      "id": "contenido_carruseles_codeblock_20"
     },
     {
       "label": "Post 09",
       "file_type": "document",
       "source_file": "docs/contenido/carruseles.md",
       "source_location": "L584",
-      "id": "contenido_carruseles_post_09",
       "community": 0,
-      "norm_label": "post 09"
+      "norm_label": "post 09",
+      "id": "contenido_carruseles_post_09"
     },
     {
       "label": "code:json ({)",
       "file_type": "document",
       "source_file": "docs/contenido/carruseles.md",
       "source_location": "L588",
-      "id": "contenido_carruseles_codeblock_21",
       "community": 0,
-      "norm_label": "code:json ({)"
+      "norm_label": "code:json ({)",
+      "id": "contenido_carruseles_codeblock_21"
     },
     {
       "label": "Post 10",
       "file_type": "document",
       "source_file": "docs/contenido/carruseles.md",
       "source_location": "L604",
-      "id": "contenido_carruseles_post_10",
       "community": 0,
-      "norm_label": "post 10"
+      "norm_label": "post 10",
+      "id": "contenido_carruseles_post_10"
     },
     {
       "label": "code:json ({)",
       "file_type": "document",
       "source_file": "docs/contenido/carruseles.md",
       "source_location": "L608",
-      "id": "contenido_carruseles_codeblock_22",
       "community": 0,
-      "norm_label": "code:json ({)"
+      "norm_label": "code:json ({)",
+      "id": "contenido_carruseles_codeblock_22"
     },
     {
       "label": "Post 11",
       "file_type": "document",
       "source_file": "docs/contenido/carruseles.md",
       "source_location": "L623",
-      "id": "contenido_carruseles_post_11",
       "community": 0,
-      "norm_label": "post 11"
+      "norm_label": "post 11",
+      "id": "contenido_carruseles_post_11"
     },
     {
       "label": "code:json ({)",
       "file_type": "document",
       "source_file": "docs/contenido/carruseles.md",
       "source_location": "L627",
-      "id": "contenido_carruseles_codeblock_23",
       "community": 0,
-      "norm_label": "code:json ({)"
+      "norm_label": "code:json ({)",
+      "id": "contenido_carruseles_codeblock_23"
     },
     {
       "label": "Post 12",
       "file_type": "document",
       "source_file": "docs/contenido/carruseles.md",
       "source_location": "L642",
-      "id": "contenido_carruseles_post_12",
       "community": 0,
-      "norm_label": "post 12"
+      "norm_label": "post 12",
+      "id": "contenido_carruseles_post_12"
     },
     {
       "label": "code:json ({)",
       "file_type": "document",
       "source_file": "docs/contenido/carruseles.md",
       "source_location": "L646",
-      "id": "contenido_carruseles_codeblock_24",
       "community": 0,
-      "norm_label": "code:json ({)"
+      "norm_label": "code:json ({)",
+      "id": "contenido_carruseles_codeblock_24"
     },
     {
       "label": "Guiones Shorts/Reels \u2014 Formato nuevo (m\u00e1x 30 seg, CTA antes del seg 20)",
       "file_type": "document",
       "source_file": "docs/contenido/carruseles.md",
       "source_location": "L661",
-      "id": "contenido_carruseles_guiones_shorts_reels_formato_nuevo_m_x_30_seg_cta_antes_del_seg_20",
       "community": 7,
-      "norm_label": "guiones shorts/reels \u2014 formato nuevo (max 30 seg, cta antes del seg 20)"
+      "norm_label": "guiones shorts/reels \u2014 formato nuevo (max 30 seg, cta antes del seg 20)",
+      "id": "contenido_carruseles_guiones_shorts_reels_formato_nuevo_m_x_30_seg_cta_antes_del_seg_20"
     },
     {
       "label": "Short 0C \u2014 \"El cuello de botella eres t\u00fa\"",
       "file_type": "document",
       "source_file": "docs/contenido/carruseles.md",
       "source_location": "L667",
-      "id": "contenido_carruseles_short_0c_el_cuello_de_botella_eres_t",
       "community": 7,
-      "norm_label": "short 0c \u2014 \"el cuello de botella eres tu\""
+      "norm_label": "short 0c \u2014 \"el cuello de botella eres tu\"",
+      "id": "contenido_carruseles_short_0c_el_cuello_de_botella_eres_t"
     },
     {
       "label": "Opci\u00f3n B \u2014 generada con skill 3gi-short-script",
       "file_type": "document",
       "source_file": "docs/contenido/carruseles.md",
       "source_location": "L690",
-      "id": "contenido_carruseles_opci_n_b_generada_con_skill_3gi_short_script",
       "community": 7,
-      "norm_label": "opcion b \u2014 generada con skill 3gi-short-script"
+      "norm_label": "opcion b \u2014 generada con skill 3gi-short-script",
+      "id": "contenido_carruseles_opci_n_b_generada_con_skill_3gi_short_script"
     },
     {
       "label": "Short 01 \u2014 \"El profesional de USD 3.000\"",
       "file_type": "document",
       "source_file": "docs/contenido/carruseles.md",
       "source_location": "L721",
-      "id": "contenido_carruseles_short_01_el_profesional_de_usd_3_000",
       "community": 7,
-      "norm_label": "short 01 \u2014 \"el profesional de usd 3.000\""
+      "norm_label": "short 01 \u2014 \"el profesional de usd 3.000\"",
+      "id": "contenido_carruseles_short_01_el_profesional_de_usd_3_000"
     },
     {
       "label": "Descripci\u00f3n YouTube \u2014 Short 01",
       "file_type": "document",
       "source_file": "docs/contenido/carruseles.md",
       "source_location": "L742",
-      "id": "contenido_carruseles_descripci_n_youtube_short_01",
       "community": 0,
-      "norm_label": "descripcion youtube \u2014 short 01"
+      "norm_label": "descripcion youtube \u2014 short 01",
+      "id": "contenido_carruseles_descripci_n_youtube_short_01"
     },
     {
       "label": "code:block25 (\u00bfCu\u00e1nto le cuesta realmente el desorden a tu empresa?)",
       "file_type": "document",
       "source_file": "docs/contenido/carruseles.md",
       "source_location": "L747",
-      "id": "contenido_carruseles_codeblock_25",
       "community": 0,
-      "norm_label": "code:block25 (\u00bfcuanto le cuesta realmente el desorden a tu empresa?)"
+      "norm_label": "code:block25 (\u00bfcuanto le cuesta realmente el desorden a tu empresa?)",
+      "id": "contenido_carruseles_codeblock_25"
     },
     {
       "label": "Short 02 \u2014 \"5 se\u00f1ales de apagaincendios\"",
       "file_type": "document",
       "source_file": "docs/contenido/carruseles.md",
       "source_location": "L770",
-      "id": "contenido_carruseles_short_02_5_se_ales_de_apagaincendios",
       "community": 7,
-      "norm_label": "short 02 \u2014 \"5 senales de apagaincendios\""
+      "norm_label": "short 02 \u2014 \"5 senales de apagaincendios\"",
+      "id": "contenido_carruseles_short_02_5_se_ales_de_apagaincendios"
     },
     {
       "label": "Short 03 \u2014 \"De 30 min a 5 min\"",
       "file_type": "document",
       "source_file": "docs/contenido/carruseles.md",
       "source_location": "L791",
-      "id": "contenido_carruseles_short_03_de_30_min_a_5_min",
       "community": 7,
-      "norm_label": "short 03 \u2014 \"de 30 min a 5 min\""
+      "norm_label": "short 03 \u2014 \"de 30 min a 5 min\"",
+      "id": "contenido_carruseles_short_03_de_30_min_a_5_min"
     },
     {
       "label": "Short 04 \u2014 \"El costo invisible\"",
       "file_type": "document",
       "source_file": "docs/contenido/carruseles.md",
       "source_location": "L814",
-      "id": "contenido_carruseles_short_04_el_costo_invisible",
       "community": 7,
-      "norm_label": "short 04 \u2014 \"el costo invisible\""
+      "norm_label": "short 04 \u2014 \"el costo invisible\"",
+      "id": "contenido_carruseles_short_04_el_costo_invisible"
     },
     {
       "label": "Short 05 \u2014 \"De reactivo a proactivo\"",
       "file_type": "document",
       "source_file": "docs/contenido/carruseles.md",
       "source_location": "L837",
-      "id": "contenido_carruseles_short_05_de_reactivo_a_proactivo",
       "community": 7,
-      "norm_label": "short 05 \u2014 \"de reactivo a proactivo\""
+      "norm_label": "short 05 \u2014 \"de reactivo a proactivo\"",
+      "id": "contenido_carruseles_short_05_de_reactivo_a_proactivo"
     },
     {
       "label": "Short 06 \u2014 \"7 procesos a automatizar primero\"",
       "file_type": "document",
       "source_file": "docs/contenido/carruseles.md",
       "source_location": "L859",
-      "id": "contenido_carruseles_short_06_7_procesos_a_automatizar_primero",
       "community": 7,
-      "norm_label": "short 06 \u2014 \"7 procesos a automatizar primero\""
+      "norm_label": "short 06 \u2014 \"7 procesos a automatizar primero\"",
+      "id": "contenido_carruseles_short_06_7_procesos_a_automatizar_primero"
     },
     {
       "label": "Short 07 \u2014 \"ERA 1, ERA 2, ERA 3\"",
       "file_type": "document",
       "source_file": "docs/contenido/carruseles.md",
       "source_location": "L882",
-      "id": "contenido_carruseles_short_07_era_1_era_2_era_3",
       "community": 7,
-      "norm_label": "short 07 \u2014 \"era 1, era 2, era 3\""
+      "norm_label": "short 07 \u2014 \"era 1, era 2, era 3\"",
+      "id": "contenido_carruseles_short_07_era_1_era_2_era_3"
     },
     {
       "label": "Short 08 \u2014 \"+40% capacidad sin contratar\"",
       "file_type": "document",
       "source_file": "docs/contenido/carruseles.md",
       "source_location": "L904",
-      "id": "contenido_carruseles_short_08_40_capacidad_sin_contratar",
       "community": 7,
-      "norm_label": "short 08 \u2014 \"+40% capacidad sin contratar\""
+      "norm_label": "short 08 \u2014 \"+40% capacidad sin contratar\"",
+      "id": "contenido_carruseles_short_08_40_capacidad_sin_contratar"
     },
     {
       "label": "Short 09 \u2014 \"El Excel como sistema\"",
       "file_type": "document",
       "source_file": "docs/contenido/carruseles.md",
       "source_location": "L926",
-      "id": "contenido_carruseles_short_09_el_excel_como_sistema",
       "community": 7,
-      "norm_label": "short 09 \u2014 \"el excel como sistema\""
+      "norm_label": "short 09 \u2014 \"el excel como sistema\"",
+      "id": "contenido_carruseles_short_09_el_excel_como_sistema"
     },
     {
       "label": "Short 10 \u2014 \"Reactiva vs proactiva\"",
       "file_type": "document",
       "source_file": "docs/contenido/carruseles.md",
       "source_location": "L949",
-      "id": "contenido_carruseles_short_10_reactiva_vs_proactiva",
       "community": 7,
-      "norm_label": "short 10 \u2014 \"reactiva vs proactiva\""
+      "norm_label": "short 10 \u2014 \"reactiva vs proactiva\"",
+      "id": "contenido_carruseles_short_10_reactiva_vs_proactiva"
     },
     {
       "label": "Short 11 \u2014 \"Los 9 sub-niveles ERA\"",
       "file_type": "document",
       "source_file": "docs/contenido/carruseles.md",
       "source_location": "L971",
-      "id": "contenido_carruseles_short_11_los_9_sub_niveles_era",
       "community": 7,
-      "norm_label": "short 11 \u2014 \"los 9 sub-niveles era\""
+      "norm_label": "short 11 \u2014 \"los 9 sub-niveles era\"",
+      "id": "contenido_carruseles_short_11_los_9_sub_niveles_era"
     },
     {
       "label": "Short 12 \u2014 \"El Test ERA\"",
       "file_type": "document",
       "source_file": "docs/contenido/carruseles.md",
       "source_location": "L993",
-      "id": "contenido_carruseles_short_12_el_test_era",
       "community": 7,
-      "norm_label": "short 12 \u2014 \"el test era\""
+      "norm_label": "short 12 \u2014 \"el test era\"",
+      "id": "contenido_carruseles_short_12_el_test_era"
     },
     {
       "label": "carruseles2.md",
       "file_type": "document",
       "source_file": "docs/contenido/carruseles2.md",
       "source_location": "L1",
-      "id": "docs_contenido_carruseles2_md",
       "community": 1,
-      "norm_label": "carruseles2.md"
+      "norm_label": "carruseles2.md",
+      "id": "docs_contenido_carruseles2_md"
     },
     {
       "label": "Contenido desde Post 02 \u2014 Shorts + LinkedIn/Facebook",
       "file_type": "document",
       "source_file": "docs/contenido/carruseles2.md",
       "source_location": "L1",
-      "id": "contenido_carruseles2_contenido_desde_post_02_shorts_linkedin_facebook",
       "community": 1,
-      "norm_label": "contenido desde post 02 \u2014 shorts + linkedin/facebook"
+      "norm_label": "contenido desde post 02 \u2014 shorts + linkedin/facebook",
+      "id": "contenido_carruseles2_contenido_desde_post_02_shorts_linkedin_facebook"
     },
     {
       "label": "Estado",
       "file_type": "document",
       "source_file": "docs/contenido/carruseles2.md",
       "source_location": "L8",
-      "id": "contenido_carruseles2_estado",
       "community": 1,
-      "norm_label": "estado"
+      "norm_label": "estado",
+      "id": "contenido_carruseles2_estado"
     },
     {
       "label": "Post 02 \u2014 5 se\u00f1ales de apagaincendios",
       "file_type": "document",
       "source_file": "docs/contenido/carruseles2.md",
       "source_location": "L26",
-      "id": "contenido_carruseles2_post_02_5_se_ales_de_apagaincendios",
       "community": 1,
-      "norm_label": "post 02 \u2014 5 senales de apagaincendios"
+      "norm_label": "post 02 \u2014 5 senales de apagaincendios",
+      "id": "contenido_carruseles2_post_02_5_se_ales_de_apagaincendios"
     },
     {
       "label": "Short 02",
       "file_type": "document",
       "source_file": "docs/contenido/carruseles2.md",
       "source_location": "L31",
-      "id": "contenido_carruseles2_short_02",
       "community": 1,
-      "norm_label": "short 02"
+      "norm_label": "short 02",
+      "id": "contenido_carruseles2_short_02"
     },
     {
       "label": "Texto LinkedIn/Facebook",
       "file_type": "document",
       "source_file": "docs/contenido/carruseles2.md",
       "source_location": "L50",
-      "id": "contenido_carruseles2_texto_linkedin_facebook",
       "community": 1,
-      "norm_label": "texto linkedin/facebook"
+      "norm_label": "texto linkedin/facebook",
+      "id": "contenido_carruseles2_texto_linkedin_facebook"
     },
     {
       "label": "code:block1 (Antes de hablar de IA con un cliente, siempre busco una se\u00f1a)",
       "file_type": "document",
       "source_file": "docs/contenido/carruseles2.md",
       "source_location": "L52",
-      "id": "contenido_carruseles2_codeblock_1",
       "community": 1,
-      "norm_label": "code:block1 (antes de hablar de ia con un cliente, siempre busco una sena)"
+      "norm_label": "code:block1 (antes de hablar de ia con un cliente, siempre busco una sena)",
+      "id": "contenido_carruseles2_codeblock_1"
     },
     {
       "label": "Descripci\u00f3n YouTube \u2014 Short 02",
       "file_type": "document",
       "source_file": "docs/contenido/carruseles2.md",
       "source_location": "L83",
-      "id": "contenido_carruseles2_descripci_n_youtube_short_02",
       "community": 1,
-      "norm_label": "descripcion youtube \u2014 short 02"
+      "norm_label": "descripcion youtube \u2014 short 02",
+      "id": "contenido_carruseles2_descripci_n_youtube_short_02"
     },
     {
       "label": "code:block2 (Antes de hablar de inteligencia artificial con cualquier cli)",
       "file_type": "document",
       "source_file": "docs/contenido/carruseles2.md",
       "source_location": "L88",
-      "id": "contenido_carruseles2_codeblock_2",
       "community": 1,
-      "norm_label": "code:block2 (antes de hablar de inteligencia artificial con cualquier cli)"
+      "norm_label": "code:block2 (antes de hablar de inteligencia artificial con cualquier cli)",
+      "id": "contenido_carruseles2_codeblock_2"
     },
     {
       "label": "Caption Instagram Reel \u2014 Post 02",
       "file_type": "document",
       "source_file": "docs/contenido/carruseles2.md",
       "source_location": "L106",
-      "id": "contenido_carruseles2_caption_instagram_reel_post_02",
       "community": 1,
-      "norm_label": "caption instagram reel \u2014 post 02"
+      "norm_label": "caption instagram reel \u2014 post 02",
+      "id": "contenido_carruseles2_caption_instagram_reel_post_02"
     },
     {
       "label": "code:block3 (Antes de hablar de IA con un cliente, siempre busco una se\u00f1a)",
       "file_type": "document",
       "source_file": "docs/contenido/carruseles2.md",
       "source_location": "L108",
-      "id": "contenido_carruseles2_codeblock_3",
       "community": 5,
-      "norm_label": "code:block3 (antes de hablar de ia con un cliente, siempre busco una sena)"
+      "norm_label": "code:block3 (antes de hablar de ia con un cliente, siempre busco una sena)",
+      "id": "contenido_carruseles2_codeblock_3"
     },
     {
       "label": "Post 03 \u2014 Caso real: De 30 min a 5 min",
       "file_type": "document",
       "source_file": "docs/contenido/carruseles2.md",
       "source_location": "L132",
-      "id": "contenido_carruseles2_post_03_caso_real_de_30_min_a_5_min",
       "community": 1,
-      "norm_label": "post 03 \u2014 caso real: de 30 min a 5 min"
+      "norm_label": "post 03 \u2014 caso real: de 30 min a 5 min",
+      "id": "contenido_carruseles2_post_03_caso_real_de_30_min_a_5_min"
     },
     {
       "label": "Short 03",
       "file_type": "document",
       "source_file": "docs/contenido/carruseles2.md",
       "source_location": "L137",
-      "id": "contenido_carruseles2_short_03",
       "community": 1,
-      "norm_label": "short 03"
+      "norm_label": "short 03",
+      "id": "contenido_carruseles2_short_03"
     },
     {
       "label": "Texto LinkedIn/Facebook",
       "file_type": "document",
       "source_file": "docs/contenido/carruseles2.md",
       "source_location": "L158",
-      "id": "contenido_carruseles2_texto_linkedin_facebook_158",
       "community": 1,
-      "norm_label": "texto linkedin/facebook"
+      "norm_label": "texto linkedin/facebook",
+      "id": "contenido_carruseles2_texto_linkedin_facebook_158"
     },
     {
       "label": "code:block4 (La mayor\u00eda cree que necesita contratar m\u00e1s gente para crecer)",
       "file_type": "document",
       "source_file": "docs/contenido/carruseles2.md",
       "source_location": "L160",
-      "id": "contenido_carruseles2_codeblock_4",
       "community": 1,
-      "norm_label": "code:block4 (la mayoria cree que necesita contratar mas gente para crecer)"
+      "norm_label": "code:block4 (la mayoria cree que necesita contratar mas gente para crecer)",
+      "id": "contenido_carruseles2_codeblock_4"
     },
     {
       "label": "Descripci\u00f3n YouTube \u2014 Short 03",
       "file_type": "document",
       "source_file": "docs/contenido/carruseles2.md",
       "source_location": "L184",
-      "id": "contenido_carruseles2_descripci_n_youtube_short_03",
       "community": 1,
-      "norm_label": "descripcion youtube \u2014 short 03"
+      "norm_label": "descripcion youtube \u2014 short 03",
+      "id": "contenido_carruseles2_descripci_n_youtube_short_03"
     },
     {
       "label": "code:block5 (La mayor\u00eda de due\u00f1os de empresa cree que necesita contratar )",
       "file_type": "document",
       "source_file": "docs/contenido/carruseles2.md",
       "source_location": "L189",
-      "id": "contenido_carruseles2_codeblock_5",
       "community": 2,
-      "norm_label": "code:block5 (la mayoria de duenos de empresa cree que necesita contratar )"
+      "norm_label": "code:block5 (la mayoria de duenos de empresa cree que necesita contratar )",
+      "id": "contenido_carruseles2_codeblock_5"
     },
     {
       "label": "Caption Instagram Reel \u2014 Post 03",
       "file_type": "document",
       "source_file": "docs/contenido/carruseles2.md",
       "source_location": "L208",
-      "id": "contenido_carruseles2_caption_instagram_reel_post_03",
       "community": 1,
-      "norm_label": "caption instagram reel \u2014 post 03"
+      "norm_label": "caption instagram reel \u2014 post 03",
+      "id": "contenido_carruseles2_caption_instagram_reel_post_03"
     },
     {
       "label": "code:block6 (La mayor\u00eda cree que necesita contratar m\u00e1s gente para crecer)",
       "file_type": "document",
       "source_file": "docs/contenido/carruseles2.md",
       "source_location": "L210",
-      "id": "contenido_carruseles2_codeblock_6",
       "community": 8,
-      "norm_label": "code:block6 (la mayoria cree que necesita contratar mas gente para crecer)"
+      "norm_label": "code:block6 (la mayoria cree que necesita contratar mas gente para crecer)",
+      "id": "contenido_carruseles2_codeblock_6"
     },
     {
       "label": "Post 04 \u2014 El costo invisible",
       "file_type": "document",
       "source_file": "docs/contenido/carruseles2.md",
       "source_location": "L230",
-      "id": "contenido_carruseles2_post_04_el_costo_invisible",
       "community": 5,
-      "norm_label": "post 04 \u2014 el costo invisible"
+      "norm_label": "post 04 \u2014 el costo invisible",
+      "id": "contenido_carruseles2_post_04_el_costo_invisible"
     },
     {
       "label": "Short 04",
       "file_type": "document",
       "source_file": "docs/contenido/carruseles2.md",
       "source_location": "L234",
-      "id": "contenido_carruseles2_short_04",
       "community": 5,
-      "norm_label": "short 04"
+      "norm_label": "short 04",
+      "id": "contenido_carruseles2_short_04"
     },
     {
       "label": "Texto LinkedIn/Facebook",
       "file_type": "document",
       "source_file": "docs/contenido/carruseles2.md",
       "source_location": "L255",
-      "id": "contenido_carruseles2_texto_linkedin_facebook_255",
       "community": 5,
-      "norm_label": "texto linkedin/facebook"
+      "norm_label": "texto linkedin/facebook",
+      "id": "contenido_carruseles2_texto_linkedin_facebook_255"
     },
     {
       "label": "code:block7 (Tus procesos ya te est\u00e1n costando dinero.)",
       "file_type": "document",
       "source_file": "docs/contenido/carruseles2.md",
       "source_location": "L257",
-      "id": "contenido_carruseles2_codeblock_7",
       "community": 5,
-      "norm_label": "code:block7 (tus procesos ya te estan costando dinero.)"
+      "norm_label": "code:block7 (tus procesos ya te estan costando dinero.)",
+      "id": "contenido_carruseles2_codeblock_7"
     },
     {
       "label": "Descripci\u00f3n YouTube \u2014 Short 04",
       "file_type": "document",
       "source_file": "docs/contenido/carruseles2.md",
       "source_location": "L283",
-      "id": "contenido_carruseles2_descripci_n_youtube_short_04",
       "community": 5,
-      "norm_label": "descripcion youtube \u2014 short 04"
+      "norm_label": "descripcion youtube \u2014 short 04",
+      "id": "contenido_carruseles2_descripci_n_youtube_short_04"
     },
     {
       "label": "code:block8 (Tus procesos ya te est\u00e1n costando dinero.)",
       "file_type": "document",
       "source_file": "docs/contenido/carruseles2.md",
       "source_location": "L288",
-      "id": "contenido_carruseles2_codeblock_8",
       "community": 5,
-      "norm_label": "code:block8 (tus procesos ya te estan costando dinero.)"
+      "norm_label": "code:block8 (tus procesos ya te estan costando dinero.)",
+      "id": "contenido_carruseles2_codeblock_8"
     },
     {
       "label": "Caption Instagram Reel \u2014 Post 04",
       "file_type": "document",
       "source_file": "docs/contenido/carruseles2.md",
       "source_location": "L307",
-      "id": "contenido_carruseles2_caption_instagram_reel_post_04",
       "community": 4,
-      "norm_label": "caption instagram reel \u2014 post 04"
+      "norm_label": "caption instagram reel \u2014 post 04",
+      "id": "contenido_carruseles2_caption_instagram_reel_post_04"
     },
     {
       "label": "code:block9 (Tus procesos ya te est\u00e1n costando dinero.)",
       "file_type": "document",
       "source_file": "docs/contenido/carruseles2.md",
       "source_location": "L309",
-      "id": "contenido_carruseles2_codeblock_9",
       "community": 4,
-      "norm_label": "code:block9 (tus procesos ya te estan costando dinero.)"
+      "norm_label": "code:block9 (tus procesos ya te estan costando dinero.)",
+      "id": "contenido_carruseles2_codeblock_9"
     },
     {
       "label": "Post 05 \u2014 Caso COVES: De reactivo a proactivo",
       "file_type": "document",
       "source_file": "docs/contenido/carruseles2.md",
       "source_location": "L329",
-      "id": "contenido_carruseles2_post_05_caso_coves_de_reactivo_a_proactivo",
       "community": 1,
-      "norm_label": "post 05 \u2014 caso coves: de reactivo a proactivo"
+      "norm_label": "post 05 \u2014 caso coves: de reactivo a proactivo",
+      "id": "contenido_carruseles2_post_05_caso_coves_de_reactivo_a_proactivo"
     },
     {
       "label": "Short 05",
       "file_type": "document",
       "source_file": "docs/contenido/carruseles2.md",
       "source_location": "L333",
-      "id": "contenido_carruseles2_short_05",
       "community": 1,
-      "norm_label": "short 05"
+      "norm_label": "short 05",
+      "id": "contenido_carruseles2_short_05"
     },
     {
       "label": "Texto LinkedIn/Facebook",
       "file_type": "document",
       "source_file": "docs/contenido/carruseles2.md",
       "source_location": "L353",
-      "id": "contenido_carruseles2_texto_linkedin_facebook_353",
       "community": 1,
-      "norm_label": "texto linkedin/facebook"
+      "norm_label": "texto linkedin/facebook",
+      "id": "contenido_carruseles2_texto_linkedin_facebook_353"
     },
     {
       "label": "code:block10 (La mayor\u00eda de empresas NO necesita m\u00e1s tecnolog\u00eda.)",
       "file_type": "document",
       "source_file": "docs/contenido/carruseles2.md",
       "source_location": "L355",
-      "id": "contenido_carruseles2_codeblock_10",
       "community": 1,
-      "norm_label": "code:block10 (la mayoria de empresas no necesita mas tecnologia.)"
+      "norm_label": "code:block10 (la mayoria de empresas no necesita mas tecnologia.)",
+      "id": "contenido_carruseles2_codeblock_10"
     },
     {
       "label": "Descripci\u00f3n YouTube \u2014 Short 05",
       "file_type": "document",
       "source_file": "docs/contenido/carruseles2.md",
       "source_location": "L380",
-      "id": "contenido_carruseles2_descripci_n_youtube_short_05",
       "community": 6,
-      "norm_label": "descripcion youtube \u2014 short 05"
+      "norm_label": "descripcion youtube \u2014 short 05",
+      "id": "contenido_carruseles2_descripci_n_youtube_short_05"
     },
     {
       "label": "code:block11 (La mayor\u00eda de empresas NO necesita m\u00e1s tecnolog\u00eda.)",
       "file_type": "document",
       "source_file": "docs/contenido/carruseles2.md",
       "source_location": "L385",
-      "id": "contenido_carruseles2_codeblock_11",
       "community": 6,
-      "norm_label": "code:block11 (la mayoria de empresas no necesita mas tecnologia.)"
+      "norm_label": "code:block11 (la mayoria de empresas no necesita mas tecnologia.)",
+      "id": "contenido_carruseles2_codeblock_11"
     },
     {
       "label": "Caption Instagram Reel \u2014 Post 05",
       "file_type": "document",
       "source_file": "docs/contenido/carruseles2.md",
       "source_location": "L404",
-      "id": "contenido_carruseles2_caption_instagram_reel_post_05",
       "community": 2,
-      "norm_label": "caption instagram reel \u2014 post 05"
+      "norm_label": "caption instagram reel \u2014 post 05",
+      "id": "contenido_carruseles2_caption_instagram_reel_post_05"
     },
     {
       "label": "code:block12 (La mayor\u00eda de empresas NO necesita m\u00e1s tecnolog\u00eda.)",
       "file_type": "document",
       "source_file": "docs/contenido/carruseles2.md",
       "source_location": "L406",
-      "id": "contenido_carruseles2_codeblock_12",
       "community": 2,
-      "norm_label": "code:block12 (la mayoria de empresas no necesita mas tecnologia.)"
+      "norm_label": "code:block12 (la mayoria de empresas no necesita mas tecnologia.)",
+      "id": "contenido_carruseles2_codeblock_12"
     },
     {
       "label": "Post 06 \u2014 7 procesos a automatizar primero",
       "file_type": "document",
       "source_file": "docs/contenido/carruseles2.md",
       "source_location": "L429",
-      "id": "contenido_carruseles2_post_06_7_procesos_a_automatizar_primero",
       "community": 2,
-      "norm_label": "post 06 \u2014 7 procesos a automatizar primero"
+      "norm_label": "post 06 \u2014 7 procesos a automatizar primero",
+      "id": "contenido_carruseles2_post_06_7_procesos_a_automatizar_primero"
     },
     {
       "label": "Short 06",
       "file_type": "document",
       "source_file": "docs/contenido/carruseles2.md",
       "source_location": "L433",
-      "id": "contenido_carruseles2_short_06",
       "community": 2,
-      "norm_label": "short 06"
+      "norm_label": "short 06",
+      "id": "contenido_carruseles2_short_06"
     },
     {
       "label": "Texto LinkedIn/Facebook",
       "file_type": "document",
       "source_file": "docs/contenido/carruseles2.md",
       "source_location": "L455",
-      "id": "contenido_carruseles2_texto_linkedin_facebook_455",
       "community": 2,
-      "norm_label": "texto linkedin/facebook"
+      "norm_label": "texto linkedin/facebook",
+      "id": "contenido_carruseles2_texto_linkedin_facebook_455"
     },
     {
       "label": "code:block13 (La mayor\u00eda de las empresas NO necesita m\u00e1s herramientas de I)",
       "file_type": "document",
       "source_file": "docs/contenido/carruseles2.md",
       "source_location": "L457",
-      "id": "contenido_carruseles2_codeblock_13",
       "community": 2,
-      "norm_label": "code:block13 (la mayoria de las empresas no necesita mas herramientas de i)"
+      "norm_label": "code:block13 (la mayoria de las empresas no necesita mas herramientas de i)",
+      "id": "contenido_carruseles2_codeblock_13"
     },
     {
       "label": "Descripci\u00f3n YouTube \u2014 Short 06",
       "file_type": "document",
       "source_file": "docs/contenido/carruseles2.md",
       "source_location": "L486",
-      "id": "contenido_carruseles2_descripci_n_youtube_short_06",
       "community": 2,
-      "norm_label": "descripcion youtube \u2014 short 06"
+      "norm_label": "descripcion youtube \u2014 short 06",
+      "id": "contenido_carruseles2_descripci_n_youtube_short_06"
     },
     {
       "label": "code:block14 (La mayor\u00eda de las empresas NO necesita m\u00e1s herramientas de I)",
       "file_type": "document",
       "source_file": "docs/contenido/carruseles2.md",
       "source_location": "L491",
-      "id": "contenido_carruseles2_codeblock_14",
       "community": 2,
-      "norm_label": "code:block14 (la mayoria de las empresas no necesita mas herramientas de i)"
+      "norm_label": "code:block14 (la mayoria de las empresas no necesita mas herramientas de i)",
+      "id": "contenido_carruseles2_codeblock_14"
     },
     {
       "label": "Caption Instagram Reel \u2014 Post 06",
       "file_type": "document",
       "source_file": "docs/contenido/carruseles2.md",
       "source_location": "L511",
-      "id": "contenido_carruseles2_caption_instagram_reel_post_06",
       "community": 2,
-      "norm_label": "caption instagram reel \u2014 post 06"
+      "norm_label": "caption instagram reel \u2014 post 06",
+      "id": "contenido_carruseles2_caption_instagram_reel_post_06"
     },
     {
       "label": "code:block15 (La mayor\u00eda de las empresas NO necesita m\u00e1s herramientas de I)",
       "file_type": "document",
       "source_file": "docs/contenido/carruseles2.md",
       "source_location": "L513",
-      "id": "contenido_carruseles2_codeblock_15",
       "community": 2,
-      "norm_label": "code:block15 (la mayoria de las empresas no necesita mas herramientas de i)"
+      "norm_label": "code:block15 (la mayoria de las empresas no necesita mas herramientas de i)",
+      "id": "contenido_carruseles2_codeblock_15"
     },
     {
       "label": "Post 07 \u2014 ERA 1 / ERA 2 / ERA 3 explicadas",
       "file_type": "document",
       "source_file": "docs/contenido/carruseles2.md",
       "source_location": "L538",
-      "id": "contenido_carruseles2_post_07_era_1_era_2_era_3_explicadas",
       "community": 8,
-      "norm_label": "post 07 \u2014 era 1 / era 2 / era 3 explicadas"
+      "norm_label": "post 07 \u2014 era 1 / era 2 / era 3 explicadas",
+      "id": "contenido_carruseles2_post_07_era_1_era_2_era_3_explicadas"
     },
     {
       "label": "Short 07",
       "file_type": "document",
       "source_file": "docs/contenido/carruseles2.md",
       "source_location": "L542",
-      "id": "contenido_carruseles2_short_07",
       "community": 8,
-      "norm_label": "short 07"
+      "norm_label": "short 07",
+      "id": "contenido_carruseles2_short_07"
     },
     {
       "label": "Texto LinkedIn/Facebook",
       "file_type": "document",
       "source_file": "docs/contenido/carruseles2.md",
       "source_location": "L562",
-      "id": "contenido_carruseles2_texto_linkedin_facebook_562",
       "community": 8,
-      "norm_label": "texto linkedin/facebook"
+      "norm_label": "texto linkedin/facebook",
+      "id": "contenido_carruseles2_texto_linkedin_facebook_562"
     },
     {
       "label": "code:block16 (La mayor\u00eda de due\u00f1os cree que est\u00e1 en ERA 2.)",
       "file_type": "document",
       "source_file": "docs/contenido/carruseles2.md",
       "source_location": "L564",
-      "id": "contenido_carruseles2_codeblock_16",
       "community": 8,
-      "norm_label": "code:block16 (la mayoria de duenos cree que esta en era 2.)"
+      "norm_label": "code:block16 (la mayoria de duenos cree que esta en era 2.)",
+      "id": "contenido_carruseles2_codeblock_16"
     },
     {
       "label": "Descripci\u00f3n YouTube \u2014 Short 07",
       "file_type": "document",
       "source_file": "docs/contenido/carruseles2.md",
       "source_location": "L595",
-      "id": "contenido_carruseles2_descripci_n_youtube_short_07",
       "community": 8,
-      "norm_label": "descripcion youtube \u2014 short 07"
+      "norm_label": "descripcion youtube \u2014 short 07",
+      "id": "contenido_carruseles2_descripci_n_youtube_short_07"
     },
     {
       "label": "code:block17 (La mayor\u00eda de due\u00f1os cree que est\u00e1 en ERA 2.)",
       "file_type": "document",
       "source_file": "docs/contenido/carruseles2.md",
       "source_location": "L600",
-      "id": "contenido_carruseles2_codeblock_17",
       "community": 8,
-      "norm_label": "code:block17 (la mayoria de duenos cree que esta en era 2.)"
+      "norm_label": "code:block17 (la mayoria de duenos cree que esta en era 2.)",
+      "id": "contenido_carruseles2_codeblock_17"
     },
     {
       "label": "Caption Instagram Reel \u2014 Post 07",
       "file_type": "document",
       "source_file": "docs/contenido/carruseles2.md",
       "source_location": "L619",
-      "id": "contenido_carruseles2_caption_instagram_reel_post_07",
       "community": 8,
-      "norm_label": "caption instagram reel \u2014 post 07"
+      "norm_label": "caption instagram reel \u2014 post 07",
+      "id": "contenido_carruseles2_caption_instagram_reel_post_07"
     },
     {
       "label": "code:block18 (La mayor\u00eda de due\u00f1os cree que est\u00e1 en ERA 2.)",
       "file_type": "document",
       "source_file": "docs/contenido/carruseles2.md",
       "source_location": "L621",
-      "id": "contenido_carruseles2_codeblock_18",
       "community": 8,
-      "norm_label": "code:block18 (la mayoria de duenos cree que esta en era 2.)"
+      "norm_label": "code:block18 (la mayoria de duenos cree que esta en era 2.)",
+      "id": "contenido_carruseles2_codeblock_18"
     },
     {
       "label": "Post 08 \u2014 Caso real: +40% capacidad sin contratar",
       "file_type": "document",
       "source_file": "docs/contenido/carruseles2.md",
       "source_location": "L641",
-      "id": "contenido_carruseles2_post_08_caso_real_40_capacidad_sin_contratar",
       "community": 9,
-      "norm_label": "post 08 \u2014 caso real: +40% capacidad sin contratar"
+      "norm_label": "post 08 \u2014 caso real: +40% capacidad sin contratar",
+      "id": "contenido_carruseles2_post_08_caso_real_40_capacidad_sin_contratar"
     },
     {
       "label": "Short 08",
       "file_type": "document",
       "source_file": "docs/contenido/carruseles2.md",
       "source_location": "L645",
-      "id": "contenido_carruseles2_short_08",
       "community": 9,
-      "norm_label": "short 08"
+      "norm_label": "short 08",
+      "id": "contenido_carruseles2_short_08"
     },
     {
       "label": "Texto LinkedIn/Facebook",
       "file_type": "document",
       "source_file": "docs/contenido/carruseles2.md",
       "source_location": "L665",
-      "id": "contenido_carruseles2_texto_linkedin_facebook_665",
       "community": 9,
-      "norm_label": "texto linkedin/facebook"
+      "norm_label": "texto linkedin/facebook",
+      "id": "contenido_carruseles2_texto_linkedin_facebook_665"
     },
     {
       "label": "code:block19 (Una empresa puede crecer 40% en capacidad sin contratar a na)",
       "file_type": "document",
       "source_file": "docs/contenido/carruseles2.md",
       "source_location": "L667",
-      "id": "contenido_carruseles2_codeblock_19",
       "community": 9,
-      "norm_label": "code:block19 (una empresa puede crecer 40% en capacidad sin contratar a na)"
+      "norm_label": "code:block19 (una empresa puede crecer 40% en capacidad sin contratar a na)",
+      "id": "contenido_carruseles2_codeblock_19"
     },
     {
       "label": "Descripci\u00f3n YouTube \u2014 Short 08",
       "file_type": "document",
       "source_file": "docs/contenido/carruseles2.md",
       "source_location": "L694",
-      "id": "contenido_carruseles2_descripci_n_youtube_short_08",
       "community": 9,
-      "norm_label": "descripcion youtube \u2014 short 08"
+      "norm_label": "descripcion youtube \u2014 short 08",
+      "id": "contenido_carruseles2_descripci_n_youtube_short_08"
     },
     {
       "label": "code:block20 (Una empresa puede crecer 40% en capacidad sin contratar a na)",
       "file_type": "document",
       "source_file": "docs/contenido/carruseles2.md",
       "source_location": "L699",
-      "id": "contenido_carruseles2_codeblock_20",
       "community": 9,
-      "norm_label": "code:block20 (una empresa puede crecer 40% en capacidad sin contratar a na)"
+      "norm_label": "code:block20 (una empresa puede crecer 40% en capacidad sin contratar a na)",
+      "id": "contenido_carruseles2_codeblock_20"
     },
     {
       "label": "Caption Instagram Reel \u2014 Post 08",
       "file_type": "document",
       "source_file": "docs/contenido/carruseles2.md",
       "source_location": "L718",
-      "id": "contenido_carruseles2_caption_instagram_reel_post_08",
       "community": 9,
-      "norm_label": "caption instagram reel \u2014 post 08"
+      "norm_label": "caption instagram reel \u2014 post 08",
+      "id": "contenido_carruseles2_caption_instagram_reel_post_08"
     },
     {
       "label": "code:block21 (Una empresa puede crecer 40% en capacidad sin contratar a na)",
       "file_type": "document",
       "source_file": "docs/contenido/carruseles2.md",
       "source_location": "L720",
-      "id": "contenido_carruseles2_codeblock_21",
       "community": 9,
-      "norm_label": "code:block21 (una empresa puede crecer 40% en capacidad sin contratar a na)"
+      "norm_label": "code:block21 (una empresa puede crecer 40% en capacidad sin contratar a na)",
+      "id": "contenido_carruseles2_codeblock_21"
     },
     {
       "label": "Post 09 \u2014 El Excel como sistema",
       "file_type": "document",
       "source_file": "docs/contenido/carruseles2.md",
       "source_location": "L741",
-      "id": "contenido_carruseles2_post_09_el_excel_como_sistema",
       "community": 12,
-      "norm_label": "post 09 \u2014 el excel como sistema"
+      "norm_label": "post 09 \u2014 el excel como sistema",
+      "id": "contenido_carruseles2_post_09_el_excel_como_sistema"
     },
     {
       "label": "Short 09",
       "file_type": "document",
       "source_file": "docs/contenido/carruseles2.md",
       "source_location": "L745",
-      "id": "contenido_carruseles2_short_09",
       "community": 12,
-      "norm_label": "short 09"
+      "norm_label": "short 09",
+      "id": "contenido_carruseles2_short_09"
     },
     {
       "label": "Texto LinkedIn/Facebook",
       "file_type": "document",
       "source_file": "docs/contenido/carruseles2.md",
       "source_location": "L766",
-      "id": "contenido_carruseles2_texto_linkedin_facebook_766",
       "community": 12,
-      "norm_label": "texto linkedin/facebook"
+      "norm_label": "texto linkedin/facebook",
+      "id": "contenido_carruseles2_texto_linkedin_facebook_766"
     },
     {
       "label": "code:block22 (Hay una se\u00f1al que siempre busco cuando entro a una empresa.)",
       "file_type": "document",
       "source_file": "docs/contenido/carruseles2.md",
       "source_location": "L768",
-      "id": "contenido_carruseles2_codeblock_22",
       "community": 12,
-      "norm_label": "code:block22 (hay una senal que siempre busco cuando entro a una empresa.)"
+      "norm_label": "code:block22 (hay una senal que siempre busco cuando entro a una empresa.)",
+      "id": "contenido_carruseles2_codeblock_22"
     },
     {
       "label": "Descripci\u00f3n YouTube \u2014 Short 09",
       "file_type": "document",
       "source_file": "docs/contenido/carruseles2.md",
       "source_location": "L800",
-      "id": "contenido_carruseles2_descripci_n_youtube_short_09",
       "community": 12,
-      "norm_label": "descripcion youtube \u2014 short 09"
+      "norm_label": "descripcion youtube \u2014 short 09",
+      "id": "contenido_carruseles2_descripci_n_youtube_short_09"
     },
     {
       "label": "code:block23 (Hay una se\u00f1al que siempre busco cuando entro a una empresa.)",
       "file_type": "document",
       "source_file": "docs/contenido/carruseles2.md",
       "source_location": "L805",
-      "id": "contenido_carruseles2_codeblock_23",
       "community": 12,
-      "norm_label": "code:block23 (hay una senal que siempre busco cuando entro a una empresa.)"
+      "norm_label": "code:block23 (hay una senal que siempre busco cuando entro a una empresa.)",
+      "id": "contenido_carruseles2_codeblock_23"
     },
     {
       "label": "Caption Instagram Reel \u2014 Post 09",
       "file_type": "document",
       "source_file": "docs/contenido/carruseles2.md",
       "source_location": "L826",
-      "id": "contenido_carruseles2_caption_instagram_reel_post_09",
       "community": 12,
-      "norm_label": "caption instagram reel \u2014 post 09"
+      "norm_label": "caption instagram reel \u2014 post 09",
+      "id": "contenido_carruseles2_caption_instagram_reel_post_09"
     },
     {
       "label": "code:block24 (Hay una se\u00f1al que siempre busco cuando entro a una empresa.)",
       "file_type": "document",
       "source_file": "docs/contenido/carruseles2.md",
       "source_location": "L828",
-      "id": "contenido_carruseles2_codeblock_24",
       "community": 12,
-      "norm_label": "code:block24 (hay una senal que siempre busco cuando entro a una empresa.)"
+      "norm_label": "code:block24 (hay una senal que siempre busco cuando entro a una empresa.)",
+      "id": "contenido_carruseles2_codeblock_24"
     },
     {
       "label": "Post 10 \u2014 Caso COVES: Reactiva vs proactiva",
       "file_type": "document",
       "source_file": "docs/contenido/carruseles2.md",
       "source_location": "L852",
-      "id": "contenido_carruseles2_post_10_caso_coves_reactiva_vs_proactiva",
       "community": 4,
-      "norm_label": "post 10 \u2014 caso coves: reactiva vs proactiva"
+      "norm_label": "post 10 \u2014 caso coves: reactiva vs proactiva",
+      "id": "contenido_carruseles2_post_10_caso_coves_reactiva_vs_proactiva"
     },
     {
       "label": "Short 10",
       "file_type": "document",
       "source_file": "docs/contenido/carruseles2.md",
       "source_location": "L856",
-      "id": "contenido_carruseles2_short_10",
       "community": 4,
-      "norm_label": "short 10"
+      "norm_label": "short 10",
+      "id": "contenido_carruseles2_short_10"
     },
     {
       "label": "Texto LinkedIn/Facebook",
       "file_type": "document",
       "source_file": "docs/contenido/carruseles2.md",
       "source_location": "L876",
-      "id": "contenido_carruseles2_texto_linkedin_facebook_876",
       "community": 4,
-      "norm_label": "texto linkedin/facebook"
+      "norm_label": "texto linkedin/facebook",
+      "id": "contenido_carruseles2_texto_linkedin_facebook_876"
     },
     {
       "label": "code:block25 (Dos empresas. Mismo sector. Mismo presupuesto.)",
       "file_type": "document",
       "source_file": "docs/contenido/carruseles2.md",
       "source_location": "L878",
-      "id": "contenido_carruseles2_codeblock_25",
       "community": 4,
-      "norm_label": "code:block25 (dos empresas. mismo sector. mismo presupuesto.)"
+      "norm_label": "code:block25 (dos empresas. mismo sector. mismo presupuesto.)",
+      "id": "contenido_carruseles2_codeblock_25"
     },
     {
       "label": "Descripci\u00f3n YouTube \u2014 Short 10",
       "file_type": "document",
       "source_file": "docs/contenido/carruseles2.md",
       "source_location": "L904",
-      "id": "contenido_carruseles2_descripci_n_youtube_short_10",
       "community": 4,
-      "norm_label": "descripcion youtube \u2014 short 10"
+      "norm_label": "descripcion youtube \u2014 short 10",
+      "id": "contenido_carruseles2_descripci_n_youtube_short_10"
     },
     {
       "label": "code:block26 (Dos empresas. Mismo sector. Mismo presupuesto.)",
       "file_type": "document",
       "source_file": "docs/contenido/carruseles2.md",
       "source_location": "L909",
-      "id": "contenido_carruseles2_codeblock_26",
       "community": 4,
-      "norm_label": "code:block26 (dos empresas. mismo sector. mismo presupuesto.)"
+      "norm_label": "code:block26 (dos empresas. mismo sector. mismo presupuesto.)",
+      "id": "contenido_carruseles2_codeblock_26"
     },
     {
       "label": "Caption Instagram Reel \u2014 Post 10",
       "file_type": "document",
       "source_file": "docs/contenido/carruseles2.md",
       "source_location": "L929",
-      "id": "contenido_carruseles2_caption_instagram_reel_post_10",
       "community": 4,
-      "norm_label": "caption instagram reel \u2014 post 10"
+      "norm_label": "caption instagram reel \u2014 post 10",
+      "id": "contenido_carruseles2_caption_instagram_reel_post_10"
     },
     {
       "label": "code:block27 (Dos empresas. Mismo sector. Mismo presupuesto.)",
       "file_type": "document",
       "source_file": "docs/contenido/carruseles2.md",
       "source_location": "L931",
-      "id": "contenido_carruseles2_codeblock_27",
       "community": 4,
-      "norm_label": "code:block27 (dos empresas. mismo sector. mismo presupuesto.)"
+      "norm_label": "code:block27 (dos empresas. mismo sector. mismo presupuesto.)",
+      "id": "contenido_carruseles2_codeblock_27"
     },
     {
       "label": "Post 11 \u2014 Los 9 sub-niveles ERA",
       "file_type": "document",
       "source_file": "docs/contenido/carruseles2.md",
       "source_location": "L952",
-      "id": "contenido_carruseles2_post_11_los_9_sub_niveles_era",
       "community": 13,
-      "norm_label": "post 11 \u2014 los 9 sub-niveles era"
+      "norm_label": "post 11 \u2014 los 9 sub-niveles era",
+      "id": "contenido_carruseles2_post_11_los_9_sub_niveles_era"
     },
     {
       "label": "Short 11",
       "file_type": "document",
       "source_file": "docs/contenido/carruseles2.md",
       "source_location": "L956",
-      "id": "contenido_carruseles2_short_11",
       "community": 13,
-      "norm_label": "short 11"
+      "norm_label": "short 11",
+      "id": "contenido_carruseles2_short_11"
     },
     {
       "label": "Texto LinkedIn/Facebook",
       "file_type": "document",
       "source_file": "docs/contenido/carruseles2.md",
       "source_location": "L976",
-      "id": "contenido_carruseles2_texto_linkedin_facebook_976",
       "community": 13,
-      "norm_label": "texto linkedin/facebook"
+      "norm_label": "texto linkedin/facebook",
+      "id": "contenido_carruseles2_texto_linkedin_facebook_976"
     },
     {
       "label": "code:block28 (La mayor\u00eda de empresas se auto-eval\u00faa dos niveles m\u00e1s arriba)",
       "file_type": "document",
       "source_file": "docs/contenido/carruseles2.md",
       "source_location": "L978",
-      "id": "contenido_carruseles2_codeblock_28",
       "community": 13,
-      "norm_label": "code:block28 (la mayoria de empresas se auto-evalua dos niveles mas arriba)"
+      "norm_label": "code:block28 (la mayoria de empresas se auto-evalua dos niveles mas arriba)",
+      "id": "contenido_carruseles2_codeblock_28"
     },
     {
       "label": "Descripci\u00f3n YouTube \u2014 Short 11",
       "file_type": "document",
       "source_file": "docs/contenido/carruseles2.md",
       "source_location": "L1005",
-      "id": "contenido_carruseles2_descripci_n_youtube_short_11",
       "community": 13,
-      "norm_label": "descripcion youtube \u2014 short 11"
+      "norm_label": "descripcion youtube \u2014 short 11",
+      "id": "contenido_carruseles2_descripci_n_youtube_short_11"
     },
     {
       "label": "code:block29 (La mayor\u00eda de empresas se auto-eval\u00faa dos niveles m\u00e1s arriba)",
       "file_type": "document",
       "source_file": "docs/contenido/carruseles2.md",
       "source_location": "L1010",
-      "id": "contenido_carruseles2_codeblock_29",
       "community": 13,
-      "norm_label": "code:block29 (la mayoria de empresas se auto-evalua dos niveles mas arriba)"
+      "norm_label": "code:block29 (la mayoria de empresas se auto-evalua dos niveles mas arriba)",
+      "id": "contenido_carruseles2_codeblock_29"
     },
     {
       "label": "Caption Instagram Reel \u2014 Post 11",
       "file_type": "document",
       "source_file": "docs/contenido/carruseles2.md",
       "source_location": "L1028",
-      "id": "contenido_carruseles2_caption_instagram_reel_post_11",
       "community": 13,
-      "norm_label": "caption instagram reel \u2014 post 11"
+      "norm_label": "caption instagram reel \u2014 post 11",
+      "id": "contenido_carruseles2_caption_instagram_reel_post_11"
     },
     {
       "label": "code:block30 (La mayor\u00eda de empresas se auto-eval\u00faa dos niveles m\u00e1s arriba)",
       "file_type": "document",
       "source_file": "docs/contenido/carruseles2.md",
       "source_location": "L1030",
-      "id": "contenido_carruseles2_codeblock_30",
       "community": 13,
-      "norm_label": "code:block30 (la mayoria de empresas se auto-evalua dos niveles mas arriba)"
+      "norm_label": "code:block30 (la mayoria de empresas se auto-evalua dos niveles mas arriba)",
+      "id": "contenido_carruseles2_codeblock_30"
     },
     {
       "label": "Post 12 \u2014 CTA: El Test ERA",
       "file_type": "document",
       "source_file": "docs/contenido/carruseles2.md",
       "source_location": "L1051",
-      "id": "contenido_carruseles2_post_12_cta_el_test_era",
       "community": 6,
-      "norm_label": "post 12 \u2014 cta: el test era"
+      "norm_label": "post 12 \u2014 cta: el test era",
+      "id": "contenido_carruseles2_post_12_cta_el_test_era"
     },
     {
       "label": "Short 12",
       "file_type": "document",
       "source_file": "docs/contenido/carruseles2.md",
       "source_location": "L1055",
-      "id": "contenido_carruseles2_short_12",
       "community": 6,
-      "norm_label": "short 12"
+      "norm_label": "short 12",
+      "id": "contenido_carruseles2_short_12"
     },
     {
       "label": "Descripci\u00f3n YouTube \u2014 Short 12",
       "file_type": "document",
       "source_file": "docs/contenido/carruseles2.md",
       "source_location": "L1075",
-      "id": "contenido_carruseles2_descripci_n_youtube_short_12",
       "community": 6,
-      "norm_label": "descripcion youtube \u2014 short 12"
+      "norm_label": "descripcion youtube \u2014 short 12",
+      "id": "contenido_carruseles2_descripci_n_youtube_short_12"
     },
     {
       "label": "code:block31 (Antes de hablar de IA con cualquier due\u00f1o de empresa, siempr)",
       "file_type": "document",
       "source_file": "docs/contenido/carruseles2.md",
       "source_location": "L1080",
-      "id": "contenido_carruseles2_codeblock_31",
       "community": 6,
-      "norm_label": "code:block31 (antes de hablar de ia con cualquier dueno de empresa, siempr)"
+      "norm_label": "code:block31 (antes de hablar de ia con cualquier dueno de empresa, siempr)",
+      "id": "contenido_carruseles2_codeblock_31"
     },
     {
       "label": "Caption Instagram Reel \u2014 Post 12",
       "file_type": "document",
       "source_file": "docs/contenido/carruseles2.md",
       "source_location": "L1099",
-      "id": "contenido_carruseles2_caption_instagram_reel_post_12",
       "community": 6,
-      "norm_label": "caption instagram reel \u2014 post 12"
+      "norm_label": "caption instagram reel \u2014 post 12",
+      "id": "contenido_carruseles2_caption_instagram_reel_post_12"
     },
     {
       "label": "code:block32 (Antes de hablar de IA con cualquier due\u00f1o de empresa, siempr)",
       "file_type": "document",
       "source_file": "docs/contenido/carruseles2.md",
       "source_location": "L1101",
-      "id": "contenido_carruseles2_codeblock_32",
       "community": 6,
-      "norm_label": "code:block32 (antes de hablar de ia con cualquier dueno de empresa, siempr)"
+      "norm_label": "code:block32 (antes de hablar de ia con cualquier dueno de empresa, siempr)",
+      "id": "contenido_carruseles2_codeblock_32"
     },
     {
       "label": "Texto LinkedIn/Facebook",
       "file_type": "document",
       "source_file": "docs/contenido/carruseles2.md",
       "source_location": "L1120",
-      "id": "contenido_carruseles2_texto_linkedin_facebook_1120",
       "community": 6,
-      "norm_label": "texto linkedin/facebook"
+      "norm_label": "texto linkedin/facebook",
+      "id": "contenido_carruseles2_texto_linkedin_facebook_1120"
     },
     {
       "label": "code:block33 (Antes de hablar de IA con cualquier due\u00f1o de empresa, siempr)",
       "file_type": "document",
       "source_file": "docs/contenido/carruseles2.md",
       "source_location": "L1122",
-      "id": "contenido_carruseles2_codeblock_33",
       "community": 6,
-      "norm_label": "code:block33 (antes de hablar de ia con cualquier dueno de empresa, siempr)"
+      "norm_label": "code:block33 (antes de hablar de ia con cualquier dueno de empresa, siempr)",
+      "id": "contenido_carruseles2_codeblock_33"
     },
     {
       "label": "guia-produccion-shorts.md",
       "file_type": "document",
       "source_file": "docs/contenido/guia-produccion-shorts.md",
       "source_location": "L1",
-      "id": "docs_contenido_guia_produccion_shorts_md",
       "community": 18,
-      "norm_label": "guia-produccion-shorts.md"
+      "norm_label": "guia-produccion-shorts.md",
+      "id": "docs_contenido_guia_produccion_shorts_md"
     },
     {
       "label": "Gu\u00eda de Producci\u00f3n \u2014 YouTube Shorts 3GI",
       "file_type": "document",
       "source_file": "docs/contenido/guia-produccion-shorts.md",
       "source_location": "L1",
-      "id": "contenido_guia_produccion_shorts_gu_a_de_producci_n_youtube_shorts_3gi",
       "community": 18,
-      "norm_label": "guia de produccion \u2014 youtube shorts 3gi"
+      "norm_label": "guia de produccion \u2014 youtube shorts 3gi",
+      "id": "contenido_guia_produccion_shorts_gu_a_de_producci_n_youtube_shorts_3gi"
     },
     {
       "label": "Flujo completo para producir un Short en HeyGen",
       "file_type": "document",
       "source_file": "docs/contenido/guia-produccion-shorts.md",
       "source_location": "L3",
-      "id": "contenido_guia_produccion_shorts_flujo_completo_para_producir_un_short_en_heygen",
       "community": 18,
-      "norm_label": "flujo completo para producir un short en heygen"
+      "norm_label": "flujo completo para producir un short en heygen",
+      "id": "contenido_guia_produccion_shorts_flujo_completo_para_producir_un_short_en_heygen"
     },
     {
       "label": "Guiones",
       "file_type": "document",
       "source_file": "docs/contenido/guia-produccion-shorts.md",
       "source_location": "L18",
-      "id": "contenido_guia_produccion_shorts_guiones",
       "community": 18,
-      "norm_label": "guiones"
+      "norm_label": "guiones",
+      "id": "contenido_guia_produccion_shorts_guiones"
     },
     {
       "label": "Short 1 \u2014 Para Post 03",
       "file_type": "document",
       "source_file": "docs/contenido/guia-produccion-shorts.md",
       "source_location": "L20",
-      "id": "contenido_guia_produccion_shorts_short_1_para_post_03",
       "community": 18,
-      "norm_label": "short 1 \u2014 para post 03"
+      "norm_label": "short 1 \u2014 para post 03",
+      "id": "contenido_guia_produccion_shorts_short_1_para_post_03"
     },
     {
       "label": "Short 2 \u2014 Para Post 06",
       "file_type": "document",
       "source_file": "docs/contenido/guia-produccion-shorts.md",
       "source_location": "L42",
-      "id": "contenido_guia_produccion_shorts_short_2_para_post_06",
       "community": 18,
-      "norm_label": "short 2 \u2014 para post 06"
+      "norm_label": "short 2 \u2014 para post 06",
+      "id": "contenido_guia_produccion_shorts_short_2_para_post_06"
     },
     {
       "label": "Short 3 \u2014 Para Post 11",
       "file_type": "document",
       "source_file": "docs/contenido/guia-produccion-shorts.md",
       "source_location": "L62",
-      "id": "contenido_guia_produccion_shorts_short_3_para_post_11",
       "community": 18,
-      "norm_label": "short 3 \u2014 para post 11"
+      "norm_label": "short 3 \u2014 para post 11",
+      "id": "contenido_guia_produccion_shorts_short_3_para_post_11"
     },
     {
       "label": "temp-post-03-imagen.md",
       "file_type": "document",
       "source_file": "docs/contenido/temp-post-03-imagen.md",
       "source_location": "L1",
-      "id": "docs_contenido_temp_post_03_imagen_md",
       "community": 19,
-      "norm_label": "temp-post-03-imagen.md"
+      "norm_label": "temp-post-03-imagen.md",
+      "id": "docs_contenido_temp_post_03_imagen_md"
     },
     {
       "label": "TEMPORAL \u2014 Imagen Post 03",
       "file_type": "document",
       "source_file": "docs/contenido/temp-post-03-imagen.md",
       "source_location": "L1",
-      "id": "contenido_temp_post_03_imagen_temporal_imagen_post_03",
       "community": 19,
-      "norm_label": "temporal \u2014 imagen post 03"
+      "norm_label": "temporal \u2014 imagen post 03",
+      "id": "contenido_temp_post_03_imagen_temporal_imagen_post_03"
     },
     {
       "label": "Imagen LinkedIn / Facebook \u2014 Post 03",
       "file_type": "document",
       "source_file": "docs/contenido/temp-post-03-imagen.md",
       "source_location": "L5",
-      "id": "contenido_temp_post_03_imagen_imagen_linkedin_facebook_post_03",
       "community": 19,
-      "norm_label": "imagen linkedin / facebook \u2014 post 03"
+      "norm_label": "imagen linkedin / facebook \u2014 post 03",
+      "id": "contenido_temp_post_03_imagen_imagen_linkedin_facebook_post_03"
     },
     {
       "label": "code:block1 (https://3gi.cl/contenido/post03-linkedin.png)",
       "file_type": "document",
       "source_file": "docs/contenido/temp-post-03-imagen.md",
       "source_location": "L8",
-      "id": "contenido_temp_post_03_imagen_codeblock_1",
       "community": 19,
-      "norm_label": "code:block1 (https://3gi.cl/contenido/post03-linkedin.png)"
+      "norm_label": "code:block1 (https://3gi.cl/contenido/post03-linkedin.png)",
+      "id": "contenido_temp_post_03_imagen_codeblock_1"
     },
     {
       "label": "homepage-sections.md",
       "file_type": "document",
       "source_file": "docs/homepage-sections.md",
       "source_location": "L1",
-      "id": "docs_homepage_sections_md",
       "community": 16,
-      "norm_label": "homepage-sections.md"
+      "norm_label": "homepage-sections.md",
+      "id": "docs_homepage_sections_md"
     },
     {
       "label": "Homepage \u2014 Secciones y prop\u00f3sito",
       "file_type": "document",
       "source_file": "docs/homepage-sections.md",
       "source_location": "L1",
-      "id": "docs_homepage_sections_homepage_secciones_y_prop_sito",
       "community": 16,
-      "norm_label": "homepage \u2014 secciones y proposito"
+      "norm_label": "homepage \u2014 secciones y proposito",
+      "id": "docs_homepage_sections_homepage_secciones_y_prop_sito"
     },
     {
       "label": "Orden y funci\u00f3n",
       "file_type": "document",
       "source_file": "docs/homepage-sections.md",
       "source_location": "L5",
-      "id": "docs_homepage_sections_orden_y_funci_n",
       "community": 16,
-      "norm_label": "orden y funcion"
+      "norm_label": "orden y funcion",
+      "id": "docs_homepage_sections_orden_y_funci_n"
     },
     {
       "label": "Secciones clave para editar",
       "file_type": "document",
       "source_file": "docs/homepage-sections.md",
       "source_location": "L21",
-      "id": "docs_homepage_sections_secciones_clave_para_editar",
       "community": 16,
-      "norm_label": "secciones clave para editar"
+      "norm_label": "secciones clave para editar",
+      "id": "docs_homepage_sections_secciones_clave_para_editar"
     },
     {
       "label": "`#para-quien`",
       "file_type": "document",
       "source_file": "docs/homepage-sections.md",
       "source_location": "L23",
-      "id": "docs_homepage_sections_para_quien",
       "community": 16,
-      "norm_label": "`#para-quien`"
+      "norm_label": "`#para-quien`",
+      "id": "docs_homepage_sections_para_quien"
     },
     {
       "label": "`#faq` (homepage)",
       "file_type": "document",
       "source_file": "docs/homepage-sections.md",
       "source_location": "L27",
-      "id": "docs_homepage_sections_faq_homepage",
       "community": 16,
-      "norm_label": "`#faq` (homepage)"
+      "norm_label": "`#faq` (homepage)",
+      "id": "docs_homepage_sections_faq_homepage"
     },
     {
       "label": "`#trust`",
       "file_type": "document",
       "source_file": "docs/homepage-sections.md",
       "source_location": "L31",
-      "id": "docs_homepage_sections_trust",
       "community": 16,
-      "norm_label": "`#trust`"
+      "norm_label": "`#trust`",
+      "id": "docs_homepage_sections_trust"
     },
     {
       "label": "Reglas de contenido",
       "file_type": "document",
       "source_file": "docs/homepage-sections.md",
       "source_location": "L35",
-      "id": "docs_homepage_sections_reglas_de_contenido",
       "community": 16,
-      "norm_label": "reglas de contenido"
+      "norm_label": "reglas de contenido",
+      "id": "docs_homepage_sections_reglas_de_contenido"
     },
     {
       "label": "openclaw.md",
       "file_type": "document",
       "source_file": "docs/openclaw.md",
       "source_location": "L1",
-      "id": "docs_openclaw_md",
       "community": 10,
-      "norm_label": "openclaw.md"
+      "norm_label": "openclaw.md",
+      "id": "docs_openclaw_md"
     },
     {
       "label": "OpenClaw \u2014 An\u00e1lisis de capacidades y estado actual",
       "file_type": "document",
       "source_file": "docs/openclaw.md",
       "source_location": "L1",
-      "id": "docs_openclaw_openclaw_an_lisis_de_capacidades_y_estado_actual",
       "community": 10,
-      "norm_label": "openclaw \u2014 analisis de capacidades y estado actual"
+      "norm_label": "openclaw \u2014 analisis de capacidades y estado actual",
+      "id": "docs_openclaw_openclaw_an_lisis_de_capacidades_y_estado_actual"
     },
     {
       "label": "Qu\u00e9 es OpenClaw",
       "file_type": "document",
       "source_file": "docs/openclaw.md",
       "source_location": "L11",
-      "id": "docs_openclaw_qu_es_openclaw",
       "community": 10,
-      "norm_label": "que es openclaw"
+      "norm_label": "que es openclaw",
+      "id": "docs_openclaw_qu_es_openclaw"
     },
     {
       "label": "Capacidades disponibles",
       "file_type": "document",
       "source_file": "docs/openclaw.md",
       "source_location": "L17",
-      "id": "docs_openclaw_capacidades_disponibles",
       "community": 10,
-      "norm_label": "capacidades disponibles"
+      "norm_label": "capacidades disponibles",
+      "id": "docs_openclaw_capacidades_disponibles"
     },
     {
       "label": "\u2705 Activas y funcionando",
       "file_type": "document",
       "source_file": "docs/openclaw.md",
       "source_location": "L19",
-      "id": "docs_openclaw_activas_y_funcionando",
       "community": 10,
-      "norm_label": "\u2705 activas y funcionando"
+      "norm_label": "\u2705 activas y funcionando",
+      "id": "docs_openclaw_activas_y_funcionando"
     },
     {
       "label": "\u274c Desactivados actualmente",
       "file_type": "document",
       "source_file": "docs/openclaw.md",
       "source_location": "L32",
-      "id": "docs_openclaw_desactivados_actualmente",
       "community": 10,
-      "norm_label": "\u274c desactivados actualmente"
+      "norm_label": "\u274c desactivados actualmente",
+      "id": "docs_openclaw_desactivados_actualmente"
     },
     {
       "label": "Qu\u00e9 puede hacer por 3GI hoy",
       "file_type": "document",
       "source_file": "docs/openclaw.md",
       "source_location": "L43",
-      "id": "docs_openclaw_qu_puede_hacer_por_3gi_hoy",
       "community": 10,
-      "norm_label": "que puede hacer por 3gi hoy"
+      "norm_label": "que puede hacer por 3gi hoy",
+      "id": "docs_openclaw_qu_puede_hacer_por_3gi_hoy"
     },
     {
       "label": "Desde Telegram (sin configuraci\u00f3n adicional):",
       "file_type": "document",
       "source_file": "docs/openclaw.md",
       "source_location": "L45",
-      "id": "docs_openclaw_desde_telegram_sin_configuraci_n_adicional",
       "community": 10,
-      "norm_label": "desde telegram (sin configuracion adicional):"
+      "norm_label": "desde telegram (sin configuracion adicional):",
+      "id": "docs_openclaw_desde_telegram_sin_configuraci_n_adicional"
     },
     {
       "label": "Con configuraci\u00f3n adicional (pr\u00f3ximos pasos):",
       "file_type": "document",
       "source_file": "docs/openclaw.md",
       "source_location": "L52",
-      "id": "docs_openclaw_con_configuraci_n_adicional_pr_ximos_pasos",
       "community": 10,
-      "norm_label": "con configuracion adicional (proximos pasos):"
+      "norm_label": "con configuracion adicional (proximos pasos):",
+      "id": "docs_openclaw_con_configuraci_n_adicional_pr_ximos_pasos"
     },
     {
       "label": "Arquitectura t\u00e9cnica",
       "file_type": "document",
       "source_file": "docs/openclaw.md",
       "source_location": "L60",
-      "id": "docs_openclaw_arquitectura_t_cnica",
       "community": 10,
-      "norm_label": "arquitectura tecnica"
+      "norm_label": "arquitectura tecnica",
+      "id": "docs_openclaw_arquitectura_t_cnica"
     },
     {
       "label": "code:block1 (Telegram \u2192 @openclaw_3g_bot)",
       "file_type": "document",
       "source_file": "docs/openclaw.md",
       "source_location": "L62",
-      "id": "docs_openclaw_codeblock_1",
       "community": 10,
-      "norm_label": "code:block1 (telegram \u2192 @openclaw_3g_bot)"
+      "norm_label": "code:block1 (telegram \u2192 @openclaw_3g_bot)",
+      "id": "docs_openclaw_codeblock_1"
     },
     {
       "label": "Problema actual: gasto excesivo de tokens",
       "file_type": "document",
       "source_file": "docs/openclaw.md",
       "source_location": "L84",
-      "id": "docs_openclaw_problema_actual_gasto_excesivo_de_tokens",
       "community": 10,
-      "norm_label": "problema actual: gasto excesivo de tokens"
+      "norm_label": "problema actual: gasto excesivo de tokens",
+      "id": "docs_openclaw_problema_actual_gasto_excesivo_de_tokens"
     },
     {
       "label": "Plan de optimizaci\u00f3n aprobado",
       "file_type": "document",
       "source_file": "docs/openclaw.md",
       "source_location": "L100",
-      "id": "docs_openclaw_plan_de_optimizaci_n_aprobado",
       "community": 10,
-      "norm_label": "plan de optimizacion aprobado"
+      "norm_label": "plan de optimizacion aprobado",
+      "id": "docs_openclaw_plan_de_optimizaci_n_aprobado"
     },
     {
       "label": "Modelos disponibles via OpenRouter (sin costo adicional de setup)",
       "file_type": "document",
       "source_file": "docs/openclaw.md",
       "source_location": "L113",
-      "id": "docs_openclaw_modelos_disponibles_via_openrouter_sin_costo_adicional_de_setup",
       "community": 10,
-      "norm_label": "modelos disponibles via openrouter (sin costo adicional de setup)"
+      "norm_label": "modelos disponibles via openrouter (sin costo adicional de setup)",
+      "id": "docs_openclaw_modelos_disponibles_via_openrouter_sin_costo_adicional_de_setup"
     },
     {
       "label": "pre-upload.py",
       "file_type": "code",
       "source_file": "docs/pre-upload.py",
       "source_location": "L1",
-      "id": "docs_pre_upload_py",
       "community": 24,
-      "norm_label": "pre-upload.py"
+      "norm_label": "pre-upload.py",
+      "id": "docs_pre_upload_py"
     },
     {
       "label": "2026-05-08-m-eugenia-recurso-animal.md",
       "file_type": "document",
       "source_file": "docs/prospectos/2026-05-08-m-eugenia-recurso-animal.md",
       "source_location": "L1",
-      "id": "docs_prospectos_2026_05_08_m_eugenia_recurso_animal_md",
       "community": 20,
-      "norm_label": "2026-05-08-m-eugenia-recurso-animal.md"
+      "norm_label": "2026-05-08-m-eugenia-recurso-animal.md",
+      "id": "docs_prospectos_2026_05_08_m_eugenia_recurso_animal_md"
     },
     {
       "label": "Seguimiento \u2014 M. Eugenia \u00b7 recursoanimalsrl@gmail.com",
       "file_type": "document",
       "source_file": "docs/prospectos/2026-05-08-m-eugenia-recurso-animal.md",
       "source_location": "L1",
-      "id": "prospectos_2026_05_08_m_eugenia_recurso_animal_seguimiento_m_eugenia_recursoanimalsrl_gmail_com",
       "community": 20,
-      "norm_label": "seguimiento \u2014 m. eugenia \u00b7 recursoanimalsrl@gmail.com"
+      "norm_label": "seguimiento \u2014 m. eugenia \u00b7 recursoanimalsrl@gmail.com",
+      "id": "prospectos_2026_05_08_m_eugenia_recurso_animal_seguimiento_m_eugenia_recursoanimalsrl_gmail_com"
     },
     {
       "label": "Seguimiento",
       "file_type": "document",
       "source_file": "docs/prospectos/2026-05-08-m-eugenia-recurso-animal.md",
       "source_location": "L35",
-      "id": "prospectos_2026_05_08_m_eugenia_recurso_animal_seguimiento",
       "community": 20,
-      "norm_label": "seguimiento"
+      "norm_label": "seguimiento",
+      "id": "prospectos_2026_05_08_m_eugenia_recurso_animal_seguimiento"
     },
     {
       "label": "faq-page.md",
@@ -2990,9 +2990,9 @@
       "source_file": "AGENTS.md",
       "source_location": "L1",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "agents_md",
-      "target": "3gi_web_agents_graphify",
-      "confidence_score": 1.0
+      "target": "3gi_web_agents_graphify"
     },
     {
       "relation": "contains",
@@ -3000,9 +3000,9 @@
       "source_file": "CLAUDE.md",
       "source_location": "L1",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "claude_md",
-      "target": "3gi_web_claude_graphify",
-      "confidence_score": 1.0
+      "target": "3gi_web_claude_graphify"
     },
     {
       "relation": "contains",
@@ -3140,9 +3140,9 @@
       "source_file": "docs/agente-personal-3gi.md",
       "source_location": "L1",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_agente_personal_3gi_md",
-      "target": "docs_agente_personal_3gi_agente_personal_3gi_dise_o_del_sistema_propio",
-      "confidence_score": 1.0
+      "target": "docs_agente_personal_3gi_agente_personal_3gi_dise_o_del_sistema_propio"
     },
     {
       "relation": "contains",
@@ -3330,9 +3330,9 @@
       "source_file": "docs/contenido/carruseles.md",
       "source_location": "L1",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_contenido_carruseles_md",
-      "target": "contenido_carruseles_carruseles_3gi_registro_de_publicaciones",
-      "confidence_score": 1.0
+      "target": "contenido_carruseles_carruseles_3gi_registro_de_publicaciones"
     },
     {
       "relation": "contains",
@@ -4280,9 +4280,9 @@
       "source_file": "docs/contenido/carruseles.md",
       "source_location": "L993",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "contenido_carruseles_guiones_shorts_reels_formato_nuevo_m_x_30_seg_cta_antes_del_seg_20",
-      "target": "contenido_carruseles_short_12_el_test_era",
-      "confidence_score": 1.0
+      "target": "contenido_carruseles_short_12_el_test_era"
     },
     {
       "relation": "contains",
@@ -4320,9 +4320,9 @@
       "source_file": "docs/contenido/carruseles2.md",
       "source_location": "L1",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_contenido_carruseles2_md",
-      "target": "contenido_carruseles2_contenido_desde_post_02_shorts_linkedin_facebook",
-      "confidence_score": 1.0
+      "target": "contenido_carruseles2_contenido_desde_post_02_shorts_linkedin_facebook"
     },
     {
       "relation": "contains",
@@ -4350,9 +4350,9 @@
       "source_file": "docs/contenido/carruseles2.md",
       "source_location": "L132",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "contenido_carruseles2_contenido_desde_post_02_shorts_linkedin_facebook",
-      "target": "contenido_carruseles2_post_03_caso_real_de_30_min_a_5_min",
-      "confidence_score": 1.0
+      "target": "contenido_carruseles2_post_03_caso_real_de_30_min_a_5_min"
     },
     {
       "relation": "contains",
@@ -4400,9 +4400,9 @@
       "source_file": "docs/contenido/carruseles2.md",
       "source_location": "L641",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "contenido_carruseles2_contenido_desde_post_02_shorts_linkedin_facebook",
-      "target": "contenido_carruseles2_post_08_caso_real_40_capacidad_sin_contratar",
-      "confidence_score": 1.0
+      "target": "contenido_carruseles2_post_08_caso_real_40_capacidad_sin_contratar"
     },
     {
       "relation": "contains",
@@ -4440,9 +4440,9 @@
       "source_file": "docs/contenido/carruseles2.md",
       "source_location": "L1051",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "contenido_carruseles2_contenido_desde_post_02_shorts_linkedin_facebook",
-      "target": "contenido_carruseles2_post_12_cta_el_test_era",
-      "confidence_score": 1.0
+      "target": "contenido_carruseles2_post_12_cta_el_test_era"
     },
     {
       "relation": "contains",
@@ -4630,9 +4630,9 @@
       "source_file": "docs/contenido/carruseles2.md",
       "source_location": "L137",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "contenido_carruseles2_post_03_caso_real_de_30_min_a_5_min",
-      "target": "contenido_carruseles2_short_03",
-      "confidence_score": 1.0
+      "target": "contenido_carruseles2_short_03"
     },
     {
       "relation": "contains",
@@ -4640,9 +4640,9 @@
       "source_file": "docs/contenido/carruseles2.md",
       "source_location": "L158",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "contenido_carruseles2_post_03_caso_real_de_30_min_a_5_min",
-      "target": "contenido_carruseles2_texto_linkedin_facebook_158",
-      "confidence_score": 1.0
+      "target": "contenido_carruseles2_texto_linkedin_facebook_158"
     },
     {
       "relation": "contains",
@@ -4650,9 +4650,9 @@
       "source_file": "docs/contenido/carruseles2.md",
       "source_location": "L184",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "contenido_carruseles2_post_03_caso_real_de_30_min_a_5_min",
-      "target": "contenido_carruseles2_descripci_n_youtube_short_03",
-      "confidence_score": 1.0
+      "target": "contenido_carruseles2_descripci_n_youtube_short_03"
     },
     {
       "relation": "contains",
@@ -4660,9 +4660,9 @@
       "source_file": "docs/contenido/carruseles2.md",
       "source_location": "L208",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "contenido_carruseles2_post_03_caso_real_de_30_min_a_5_min",
-      "target": "contenido_carruseles2_caption_instagram_reel_post_03",
-      "confidence_score": 1.0
+      "target": "contenido_carruseles2_caption_instagram_reel_post_03"
     },
     {
       "relation": "contains",
@@ -5280,9 +5280,9 @@
       "source_file": "docs/contenido/carruseles2.md",
       "source_location": "L455",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "contenido_carruseles2_post_06_7_procesos_a_automatizar_primero",
-      "target": "contenido_carruseles2_texto_linkedin_facebook_455",
-      "confidence_score": 1.0
+      "target": "contenido_carruseles2_texto_linkedin_facebook_455"
     },
     {
       "relation": "contains",
@@ -5360,9 +5360,9 @@
       "source_file": "docs/contenido/carruseles2.md",
       "source_location": "L457",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "contenido_carruseles2_texto_linkedin_facebook_455",
-      "target": "contenido_carruseles2_codeblock_13",
-      "confidence_score": 1.0
+      "target": "contenido_carruseles2_codeblock_13"
     },
     {
       "relation": "contains",
@@ -5460,9 +5460,9 @@
       "source_file": "docs/contenido/carruseles2.md",
       "source_location": "L562",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "contenido_carruseles2_post_07_era_1_era_2_era_3_explicadas",
-      "target": "contenido_carruseles2_texto_linkedin_facebook_562",
-      "confidence_score": 1.0
+      "target": "contenido_carruseles2_texto_linkedin_facebook_562"
     },
     {
       "relation": "contains",
@@ -5550,9 +5550,9 @@
       "source_file": "docs/contenido/carruseles2.md",
       "source_location": "L564",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "contenido_carruseles2_texto_linkedin_facebook_562",
-      "target": "contenido_carruseles2_codeblock_16",
-      "confidence_score": 1.0
+      "target": "contenido_carruseles2_codeblock_16"
     },
     {
       "relation": "contains",
@@ -5650,9 +5650,9 @@
       "source_file": "docs/contenido/carruseles2.md",
       "source_location": "L645",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "contenido_carruseles2_post_08_caso_real_40_capacidad_sin_contratar",
-      "target": "contenido_carruseles2_short_08",
-      "confidence_score": 1.0
+      "target": "contenido_carruseles2_short_08"
     },
     {
       "relation": "contains",
@@ -5660,9 +5660,9 @@
       "source_file": "docs/contenido/carruseles2.md",
       "source_location": "L665",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "contenido_carruseles2_post_08_caso_real_40_capacidad_sin_contratar",
-      "target": "contenido_carruseles2_texto_linkedin_facebook_665",
-      "confidence_score": 1.0
+      "target": "contenido_carruseles2_texto_linkedin_facebook_665"
     },
     {
       "relation": "contains",
@@ -5670,9 +5670,9 @@
       "source_file": "docs/contenido/carruseles2.md",
       "source_location": "L694",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "contenido_carruseles2_post_08_caso_real_40_capacidad_sin_contratar",
-      "target": "contenido_carruseles2_descripci_n_youtube_short_08",
-      "confidence_score": 1.0
+      "target": "contenido_carruseles2_descripci_n_youtube_short_08"
     },
     {
       "relation": "contains",
@@ -5680,9 +5680,9 @@
       "source_file": "docs/contenido/carruseles2.md",
       "source_location": "L718",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "contenido_carruseles2_post_08_caso_real_40_capacidad_sin_contratar",
-      "target": "contenido_carruseles2_caption_instagram_reel_post_08",
-      "confidence_score": 1.0
+      "target": "contenido_carruseles2_caption_instagram_reel_post_08"
     },
     {
       "relation": "contains",
@@ -5700,9 +5700,9 @@
       "source_file": "docs/contenido/carruseles2.md",
       "source_location": "L667",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "contenido_carruseles2_texto_linkedin_facebook_665",
-      "target": "contenido_carruseles2_codeblock_19",
-      "confidence_score": 1.0
+      "target": "contenido_carruseles2_codeblock_19"
     },
     {
       "relation": "contains",
@@ -5830,9 +5830,9 @@
       "source_file": "docs/contenido/carruseles2.md",
       "source_location": "L766",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "contenido_carruseles2_post_09_el_excel_como_sistema",
-      "target": "contenido_carruseles2_texto_linkedin_facebook_766",
-      "confidence_score": 1.0
+      "target": "contenido_carruseles2_texto_linkedin_facebook_766"
     },
     {
       "relation": "contains",
@@ -5920,9 +5920,9 @@
       "source_file": "docs/contenido/carruseles2.md",
       "source_location": "L768",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "contenido_carruseles2_texto_linkedin_facebook_766",
-      "target": "contenido_carruseles2_codeblock_22",
-      "confidence_score": 1.0
+      "target": "contenido_carruseles2_codeblock_22"
     },
     {
       "relation": "contains",
@@ -6030,9 +6030,9 @@
       "source_file": "docs/contenido/carruseles2.md",
       "source_location": "L876",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "contenido_carruseles2_post_10_caso_coves_reactiva_vs_proactiva",
-      "target": "contenido_carruseles2_texto_linkedin_facebook_876",
-      "confidence_score": 1.0
+      "target": "contenido_carruseles2_texto_linkedin_facebook_876"
     },
     {
       "relation": "contains",
@@ -6120,9 +6120,9 @@
       "source_file": "docs/contenido/carruseles2.md",
       "source_location": "L878",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "contenido_carruseles2_texto_linkedin_facebook_876",
-      "target": "contenido_carruseles2_codeblock_25",
-      "confidence_score": 1.0
+      "target": "contenido_carruseles2_codeblock_25"
     },
     {
       "relation": "contains",
@@ -6220,9 +6220,9 @@
       "source_file": "docs/contenido/carruseles2.md",
       "source_location": "L976",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "contenido_carruseles2_post_11_los_9_sub_niveles_era",
-      "target": "contenido_carruseles2_texto_linkedin_facebook_976",
-      "confidence_score": 1.0
+      "target": "contenido_carruseles2_texto_linkedin_facebook_976"
     },
     {
       "relation": "contains",
@@ -6310,9 +6310,9 @@
       "source_file": "docs/contenido/carruseles2.md",
       "source_location": "L978",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "contenido_carruseles2_texto_linkedin_facebook_976",
-      "target": "contenido_carruseles2_codeblock_28",
-      "confidence_score": 1.0
+      "target": "contenido_carruseles2_codeblock_28"
     },
     {
       "relation": "contains",
@@ -6380,9 +6380,9 @@
       "source_file": "docs/contenido/carruseles2.md",
       "source_location": "L1055",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "contenido_carruseles2_post_12_cta_el_test_era",
-      "target": "contenido_carruseles2_short_12",
-      "confidence_score": 1.0
+      "target": "contenido_carruseles2_short_12"
     },
     {
       "relation": "contains",
@@ -6390,9 +6390,9 @@
       "source_file": "docs/contenido/carruseles2.md",
       "source_location": "L1075",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "contenido_carruseles2_post_12_cta_el_test_era",
-      "target": "contenido_carruseles2_descripci_n_youtube_short_12",
-      "confidence_score": 1.0
+      "target": "contenido_carruseles2_descripci_n_youtube_short_12"
     },
     {
       "relation": "contains",
@@ -6400,9 +6400,9 @@
       "source_file": "docs/contenido/carruseles2.md",
       "source_location": "L1099",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "contenido_carruseles2_post_12_cta_el_test_era",
-      "target": "contenido_carruseles2_caption_instagram_reel_post_12",
-      "confidence_score": 1.0
+      "target": "contenido_carruseles2_caption_instagram_reel_post_12"
     },
     {
       "relation": "contains",
@@ -6410,9 +6410,9 @@
       "source_file": "docs/contenido/carruseles2.md",
       "source_location": "L1120",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "contenido_carruseles2_post_12_cta_el_test_era",
-      "target": "contenido_carruseles2_texto_linkedin_facebook_1120",
-      "confidence_score": 1.0
+      "target": "contenido_carruseles2_texto_linkedin_facebook_1120"
     },
     {
       "relation": "contains",
@@ -6470,9 +6470,9 @@
       "source_file": "docs/contenido/carruseles2.md",
       "source_location": "L1122",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "contenido_carruseles2_texto_linkedin_facebook_1120",
-      "target": "contenido_carruseles2_codeblock_33",
-      "confidence_score": 1.0
+      "target": "contenido_carruseles2_codeblock_33"
     },
     {
       "relation": "contains",
@@ -6520,9 +6520,9 @@
       "source_file": "docs/contenido/guia-produccion-shorts.md",
       "source_location": "L1",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_contenido_guia_produccion_shorts_md",
-      "target": "contenido_guia_produccion_shorts_gu_a_de_producci_n_youtube_shorts_3gi",
-      "confidence_score": 1.0
+      "target": "contenido_guia_produccion_shorts_gu_a_de_producci_n_youtube_shorts_3gi"
     },
     {
       "relation": "contains",
@@ -6530,9 +6530,9 @@
       "source_file": "docs/contenido/guia-produccion-shorts.md",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "contenido_guia_produccion_shorts_gu_a_de_producci_n_youtube_shorts_3gi",
-      "target": "contenido_guia_produccion_shorts_flujo_completo_para_producir_un_short_en_heygen",
-      "confidence_score": 1.0
+      "target": "contenido_guia_produccion_shorts_flujo_completo_para_producir_un_short_en_heygen"
     },
     {
       "relation": "contains",
@@ -6540,9 +6540,9 @@
       "source_file": "docs/contenido/guia-produccion-shorts.md",
       "source_location": "L18",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "contenido_guia_produccion_shorts_gu_a_de_producci_n_youtube_shorts_3gi",
-      "target": "contenido_guia_produccion_shorts_guiones",
-      "confidence_score": 1.0
+      "target": "contenido_guia_produccion_shorts_guiones"
     },
     {
       "relation": "contains",
@@ -6550,9 +6550,9 @@
       "source_file": "docs/contenido/guia-produccion-shorts.md",
       "source_location": "L20",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "contenido_guia_produccion_shorts_guiones",
-      "target": "contenido_guia_produccion_shorts_short_1_para_post_03",
-      "confidence_score": 1.0
+      "target": "contenido_guia_produccion_shorts_short_1_para_post_03"
     },
     {
       "relation": "contains",
@@ -6560,9 +6560,9 @@
       "source_file": "docs/contenido/guia-produccion-shorts.md",
       "source_location": "L42",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "contenido_guia_produccion_shorts_guiones",
-      "target": "contenido_guia_produccion_shorts_short_2_para_post_06",
-      "confidence_score": 1.0
+      "target": "contenido_guia_produccion_shorts_short_2_para_post_06"
     },
     {
       "relation": "contains",
@@ -6570,9 +6570,9 @@
       "source_file": "docs/contenido/guia-produccion-shorts.md",
       "source_location": "L62",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "contenido_guia_produccion_shorts_guiones",
-      "target": "contenido_guia_produccion_shorts_short_3_para_post_11",
-      "confidence_score": 1.0
+      "target": "contenido_guia_produccion_shorts_short_3_para_post_11"
     },
     {
       "relation": "contains",
@@ -6580,9 +6580,9 @@
       "source_file": "docs/contenido/temp-post-03-imagen.md",
       "source_location": "L1",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_contenido_temp_post_03_imagen_md",
-      "target": "contenido_temp_post_03_imagen_temporal_imagen_post_03",
-      "confidence_score": 1.0
+      "target": "contenido_temp_post_03_imagen_temporal_imagen_post_03"
     },
     {
       "relation": "contains",
@@ -6590,9 +6590,9 @@
       "source_file": "docs/contenido/temp-post-03-imagen.md",
       "source_location": "L5",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "contenido_temp_post_03_imagen_temporal_imagen_post_03",
-      "target": "contenido_temp_post_03_imagen_imagen_linkedin_facebook_post_03",
-      "confidence_score": 1.0
+      "target": "contenido_temp_post_03_imagen_imagen_linkedin_facebook_post_03"
     },
     {
       "relation": "contains",
@@ -6600,9 +6600,9 @@
       "source_file": "docs/contenido/temp-post-03-imagen.md",
       "source_location": "L8",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "contenido_temp_post_03_imagen_imagen_linkedin_facebook_post_03",
-      "target": "contenido_temp_post_03_imagen_codeblock_1",
-      "confidence_score": 1.0
+      "target": "contenido_temp_post_03_imagen_codeblock_1"
     },
     {
       "relation": "contains",
@@ -6680,9 +6680,9 @@
       "source_file": "docs/openclaw.md",
       "source_location": "L1",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_openclaw_md",
-      "target": "docs_openclaw_openclaw_an_lisis_de_capacidades_y_estado_actual",
-      "confidence_score": 1.0
+      "target": "docs_openclaw_openclaw_an_lisis_de_capacidades_y_estado_actual"
     },
     {
       "relation": "contains",
@@ -6820,9 +6820,9 @@
       "source_file": "docs/prospectos/2026-05-08-m-eugenia-recurso-animal.md",
       "source_location": "L1",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_prospectos_2026_05_08_m_eugenia_recurso_animal_md",
-      "target": "prospectos_2026_05_08_m_eugenia_recurso_animal_seguimiento_m_eugenia_recursoanimalsrl_gmail_com",
-      "confidence_score": 1.0
+      "target": "prospectos_2026_05_08_m_eugenia_recurso_animal_seguimiento_m_eugenia_recursoanimalsrl_gmail_com"
     },
     {
       "relation": "contains",
@@ -6830,9 +6830,9 @@
       "source_file": "docs/prospectos/2026-05-08-m-eugenia-recurso-animal.md",
       "source_location": "L35",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "prospectos_2026_05_08_m_eugenia_recurso_animal_seguimiento_m_eugenia_recursoanimalsrl_gmail_com",
-      "target": "prospectos_2026_05_08_m_eugenia_recurso_animal_seguimiento",
-      "confidence_score": 1.0
+      "target": "prospectos_2026_05_08_m_eugenia_recurso_animal_seguimiento"
     },
     {
       "relation": "contains",
@@ -7346,5 +7346,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "e4453cf3f8fcbb280a1ad36eeec93b30acb39790"
+  "built_at_commit": "1a26135a4fc868131612d54544c777ecfcde14ae"
 }

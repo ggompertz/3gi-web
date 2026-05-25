@@ -1,4 +1,4 @@
-# Graph Report - 3gi-web  (2026-05-23)
+# Graph Report - 3gi-web  (2026-05-24)
 
 ## Corpus Check
 - 15 files · ~400,154 words
@@ -10,7 +10,7 @@
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `e4453cf3`
+- Built from commit: `1a26135a`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
