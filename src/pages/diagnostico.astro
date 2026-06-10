@@ -8,11 +8,11 @@ import Layout from '../layouts/Layout.astro';
 >
 
 <style is:global>
-:root{--night:#06060D;--surface:#0E0E1A;--border:#1C1C2E;--green:#00E891;--offwh:#EEF1F6;--muted:#6B7280}
+:root{--night:#06060D;--surface:#0E0E1A;--border:#1C1C2E;--green:#00E891;--amber:#F59E0B;--offwh:#EEF1F6;--muted:#6B7280}
 *{box-sizing:border-box;margin:0;padding:0}
 body{background:var(--night);color:var(--offwh);font-family:'DM Sans',sans-serif;font-size:15px;line-height:1.6;min-height:100vh}
 main{max-width:660px;margin:0 auto;padding:80px 24px 100px}
-.eyebrow{font-size:11px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--green);margin-bottom:14px}
+.eyebrow{font-size:11px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--amber);margin-bottom:14px}
 h1{font-family:'Syne',sans-serif;font-size:clamp(24px,5vw,34px);font-weight:900;line-height:1.1;letter-spacing:-.03em;margin-bottom:12px}
 .intro-sub{font-size:14px;color:var(--muted);line-height:1.65;margin-bottom:32px}
 
@@ -20,7 +20,7 @@ h1{font-family:'Syne',sans-serif;font-size:clamp(24px,5vw,34px);font-weight:900;
 .progress-wrap{margin-bottom:32px}
 .progress-label{display:flex;justify-content:space-between;font-size:12px;color:var(--muted);margin-bottom:8px}
 .progress-bar{height:3px;background:var(--border);border-radius:2px;overflow:hidden}
-.progress-fill{height:100%;background:var(--green);border-radius:2px;transition:width .4s ease;width:0%}
+.progress-fill{height:100%;background:var(--amber);border-radius:2px;transition:width .4s ease;width:0%}
 
 /* Dimension label */
 .dim-label{font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-bottom:6px}
@@ -32,13 +32,13 @@ h1{font-family:'Syne',sans-serif;font-size:clamp(24px,5vw,34px);font-weight:900;
 .options{display:flex;flex-direction:column;gap:10px;margin-bottom:32px}
 .opt{background:var(--surface);border:1.5px solid var(--border);border-radius:12px;padding:16px 20px;cursor:pointer;transition:border-color .2s,background .2s;animation:fadeUp .25s ease forwards}
 @keyframes fadeUp{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:translateY(0)}}
-.opt:hover{border-color:#00e89155}
-.opt.selected{border-color:var(--green);background:#00e89109}
-.opt-num{font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--green);margin-bottom:4px}
+.opt:hover{border-color:rgba(245,158,11,0.35)}
+.opt.selected{border-color:var(--amber);background:rgba(245,158,11,0.06)}
+.opt-num{font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--amber);margin-bottom:4px}
 .opt-text{font-size:14px;color:var(--offwh);line-height:1.5}
 
 /* Buttons */
-.btn-primary{background:var(--green);color:var(--night);border:none;border-radius:10px;padding:14px 28px;font-size:15px;font-weight:700;cursor:pointer;font-family:'Syne',sans-serif;transition:opacity .2s;width:100%}
+.btn-primary{background:var(--amber);color:var(--night);border:none;border-radius:10px;padding:14px 28px;font-size:15px;font-weight:700;cursor:pointer;font-family:'Syne',sans-serif;transition:opacity .2s;width:100%}
 .btn-primary:hover:not(:disabled){opacity:.88}
 .btn-primary:disabled{opacity:.4;cursor:default}
 .btn-ghost{background:transparent;color:var(--muted);border:1.5px solid var(--border);border-radius:10px;padding:12px 28px;font-size:14px;font-weight:600;cursor:pointer;font-family:'DM Sans',sans-serif;transition:color .2s,border-color .2s}
@@ -51,7 +51,7 @@ h1{font-family:'Syne',sans-serif;font-size:clamp(24px,5vw,34px);font-weight:900;
 
 /* Loading */
 #loading-step{display:none;text-align:center;padding:80px 0}
-.spinner{width:36px;height:36px;border:3px solid var(--border);border-top-color:var(--green);border-radius:50%;animation:spin .8s linear infinite;margin:0 auto 16px}
+.spinner{width:36px;height:36px;border:3px solid var(--border);border-top-color:var(--amber);border-radius:50%;animation:spin .8s linear infinite;margin:0 auto 16px}
 @keyframes spin{to{transform:rotate(360deg)}}
 .loading-text{font-size:14px;color:var(--muted)}
 
@@ -67,20 +67,20 @@ h1{font-family:'Syne',sans-serif;font-size:clamp(24px,5vw,34px);font-weight:900;
 .result-section-text{font-size:14px;color:var(--offwh);line-height:1.65}
 
 /* CTA upgrade */
-.upgrade-box{background:linear-gradient(135deg,#00e89112,#00e89106);border:1px solid rgba(0,232,145,.25);border-radius:16px;padding:28px;margin-top:24px}
-.upgrade-eyebrow{font-size:11px;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--green);margin-bottom:10px}
+.upgrade-box{background:linear-gradient(135deg,rgba(245,158,11,0.07),rgba(245,158,11,0.03));border:1px solid rgba(245,158,11,0.2);border-radius:16px;padding:28px;margin-top:24px}
+.upgrade-eyebrow{font-size:11px;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--amber);margin-bottom:10px}
 .upgrade-title{font-family:'Syne',sans-serif;font-size:20px;font-weight:800;margin-bottom:8px;letter-spacing:-.02em}
 .upgrade-sub{font-size:13px;color:var(--muted);margin-bottom:20px;line-height:1.6}
 .upgrade-features{list-style:none;margin-bottom:20px;display:flex;flex-direction:column;gap:6px}
 .upgrade-features li{font-size:13px;color:#cbd5e1;display:flex;gap:8px}
-.upgrade-features li::before{content:"→";color:var(--green);flex-shrink:0}
+.upgrade-features li::before{content:"→";color:var(--amber);flex-shrink:0}
 
 /* Email gate */
 #email-step{display:none;margin-top:4px}
 .f-row{display:flex;flex-direction:column;gap:12px;margin-bottom:16px}
-.f-label{font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--green);margin-bottom:5px;display:block}
+.f-label{font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--amber);margin-bottom:5px;display:block}
 input.f-input{width:100%;background:#ffffff0d;border:1.5px solid var(--border);border-radius:10px;padding:12px 16px;color:var(--offwh);font-size:14px;font-family:'DM Sans',sans-serif;outline:none;transition:border-color .2s}
-input.f-input:focus{border-color:#00e89166}
+input.f-input:focus{border-color:rgba(245,158,11,0.55)}
 input.f-input::placeholder{color:#4b5563}
 .f-error{font-size:12px;color:#f87171;margin-top:6px;display:none}
 
@@ -88,9 +88,9 @@ input.f-input::placeholder{color:#4b5563}
 #otp-step{display:none;margin-top:4px}
 .otp-info{font-size:13px;color:var(--muted);margin-bottom:16px;line-height:1.6}
 input.otp-input{width:100%;background:#ffffff0d;border:1.5px solid var(--border);border-radius:10px;padding:14px 16px;color:var(--offwh);font-size:22px;font-family:'Syne',sans-serif;font-weight:700;letter-spacing:.2em;text-align:center;outline:none;transition:border-color .2s}
-input.otp-input:focus{border-color:#00e89166}
+input.otp-input:focus{border-color:rgba(245,158,11,0.55)}
 .otp-resend{font-size:12px;color:var(--muted);margin-top:10px;text-align:center}
-.otp-resend button{background:none;border:none;color:var(--green);cursor:pointer;font-size:12px;text-decoration:underline}
+.otp-resend button{background:none;border:none;color:var(--amber);cursor:pointer;font-size:12px;text-decoration:underline}
 
 @media(max-width:600px){
   main{padding:60px 20px 80px}
