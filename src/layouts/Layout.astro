@@ -16,12 +16,12 @@ const {
   lang = 'es'
 } = Astro.props;
 
-const canonicalUrl = new URL(Astro.url.pathname, 'https://3g-ia-agents.com').href;
+const canonicalUrl = new URL(Astro.url.pathname, 'https://3gi.cl').href;
 const currentPath = Astro.url.pathname;
 const esPath = currentPath.startsWith('/en') ? (currentPath.replace(/^\/en/, '') || '/') : currentPath;
 const enPath = lang === 'en' ? currentPath : `/en${currentPath}`;
-const esUrl = `https://3g-ia-agents.com${esPath}`;
-const enUrl = `https://3g-ia-agents.com${enPath}`;
+const esUrl = `https://3gi.cl${esPath}`;
+const enUrl = `https://3gi.cl${enPath}`;
 const p = lang === 'en' ? '/en' : '';
 ---
 <!DOCTYPE html>
@@ -47,13 +47,13 @@ const p = lang === 'en' ? '/en' : '';
   <meta property="og:url"         content={canonicalUrl} />
   <meta property="og:title"       content={title} />
   <meta property="og:description" content={description} />
-  <meta property="og:image"       content="https://3g-ia-agents.com/3GI -Facebook1.1.png" />
+  <meta property="og:image"       content="https://3gi.cl/3GI -Facebook1.1.png" />
   <meta property="og:locale"      content={lang === 'en' ? 'en_US' : 'es_CL'} />
   <meta property="og:site_name"   content="3G Intelligence" />
   <meta name="twitter:card"       content="summary_large_image" />
   <meta name="twitter:title" content={title} />
   <meta name="twitter:description" content={description} />
-  <meta name="twitter:image"      content="https://3g-ia-agents.com/3GI -Facebook1.1.png" />
+  <meta name="twitter:image"      content="https://3gi.cl/3GI -Facebook1.1.png" />
 
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%2306060D'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-family='Arial Black,sans-serif' font-weight='900' font-size='13' fill='%2300E891'%3E3G%3C/text%3E%3C/svg%3E" />
 
@@ -64,8 +64,8 @@ const p = lang === 'en' ? '/en' : '';
     "@type": "ProfessionalService",
     "name": "3G Intelligence",
     "alternateName": "3GI",
-    "url": "https://3g-ia-agents.com",
-    "logo": "https://3g-ia-agents.com/isotipo.png",
+    "url": "https://3gi.cl",
+    "logo": "https://3gi.cl/isotipo.png",
     "description": "Consultoría de inteligencia artificial para PyMEs latinoamericanas. Diagnóstico + 5 fases F1→F5, automatización y roadmap de IA con ROI medible.",
     "email": "chat@3gi.cl",
     "telephone": "+56978780575",
