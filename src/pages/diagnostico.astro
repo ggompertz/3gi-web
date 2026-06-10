@@ -219,6 +219,11 @@ input.otp-input:focus{border-color:rgba(245,158,11,0.55)}
 </div>
 </main>
 
+<script>
+import { animate } from 'motion';
+window.__anim = animate;
+</script>
+
 <script is:inline>
 const WORKER = 'https://diagnostico-api.3g-ia-agents.com';
 
@@ -390,12 +395,17 @@ function renderQuestion() {
     </div>
   `).join('');
 
-  document.getElementById('question-container').innerHTML = `
+  const container = document.getElementById('question-container');
+  container.innerHTML = `
     ${sepHtml}
     <div class="dim-label">${q.dim}</div>
     <div class="question-text">${q.texto}</div>
     <div class="options">${optsHtml}</div>
   `;
+  // Animate question container in
+  if (window.__anim) {
+    window.__anim(container, { opacity: [0, 1], y: [8, 0] }, { duration: 0.25, easing: 'ease-out' });
+  }
 }
 
 function selectOpt(idx, val) {
@@ -417,7 +427,14 @@ function showResult() {
   document.getElementById('quiz-step').style.display = 'none';
   document.getElementById('loading-step').style.display = 'block';
 
+  // Rotating loading messages
+  const msgs = ['Analizando tus respuestas…', 'Calculando tu ERA…', 'Identificando brechas…', 'Generando diagnóstico…'];
+  let mi = 0;
+  const loadTxt = document.querySelector('.loading-text');
+  const loadInterval = setInterval(() => { mi = (mi+1) % msgs.length; if(loadTxt) loadTxt.textContent = msgs[mi]; }, 600);
+
   setTimeout(() => {
+    clearInterval(loadInterval);
     document.getElementById('loading-step').style.display = 'none';
 
     const opKeys = ['q1','q2','q3','q4','q5'];
@@ -463,8 +480,13 @@ function showResult() {
       <div class="result-section-text">${GAP_TEXTS[gapKey] || ''}</div>
     `;
 
-    document.getElementById('result-step').style.display = 'block';
-    document.getElementById('result-step').scrollIntoView({ behavior: 'smooth', block: 'start' });
+    const resultEl = document.getElementById('result-step');
+    resultEl.style.display = 'block';
+    resultEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    // Animate result reveal
+    if (window.__anim) {
+      window.__anim(resultEl, { opacity: [0, 1], y: [16, 0] }, { duration: 0.4, easing: 'ease-out' });
+    }
   }, 900);
 }
 

@@ -22,6 +22,7 @@
   "dependencies": {
     "@fontsource/dm-sans": "^5.2.8",
     "@fontsource/syne": "^5.2.7",
-    "astro": "^6.1.9"
+    "astro": "^6.1.9",
+    "motion": "^12.40.0"
   }
 }
