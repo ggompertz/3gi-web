@@ -371,13 +371,16 @@ function startQuiz() {
 function renderQuestion() {
   const q = PREGUNTAS[current];
   const pct = Math.round((current / PREGUNTAS.length) * 100);
-  document.getElementById('progress-text').textContent = `Pregunta ${current + 1} de ${PREGUNTAS.length}`;
+  const isComercial = current >= 5;
+  const dimName = isComercial ? 'Comercial' : 'Operacional';
+  const dimNum = isComercial ? current - 4 : current + 1;
+  document.getElementById('progress-text').textContent = `${dimName} · Pregunta ${dimNum} de 5`;
   document.getElementById('progress-pct').textContent = `${pct}%`;
   document.getElementById('progress-fill').style.width = `${pct}%`;
 
   // Show section separator between q5 and c1
   const sepHtml = current === 5
-    ? `<div class="section-sep"><div class="section-sep-line"></div><div class="section-sep-label">Dimensión comercial</div><div class="section-sep-line"></div></div>`
+    ? `<div class="section-sep"><div class="section-sep-line"></div><div class="section-sep-label">Dimensión Comercial</div><div class="section-sep-line"></div></div>`
     : '';
 
   let optsHtml = q.opciones.map((o, i) => `
