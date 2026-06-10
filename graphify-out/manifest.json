@@ -1,0 +1,682 @@
+{
+  "/root/3gi-web/astro.config.mjs": {
+    "mtime": 1779580663.097389,
+    "hash": "34089995289762ac3ee879387bacfcee"
+  },
+  "/root/3gi-web/docs/pre-upload.py": {
+    "mtime": 1779470056.0210176,
+    "hash": "7dbb13659bf453b81449ce1f978c0d83"
+  },
+  "/root/3gi-web/carrusel-amcl.html": {
+    "mtime": 1779580663.0953891,
+    "hash": "12a57aa19d828de7c2576f90cb0794d0"
+  },
+  "/root/3gi-web/robots.txt": {
+    "mtime": 1779580663.100389,
+    "hash": "2eb3de839b120337437641722c65024e"
+  },
+  "/root/3gi-web/README.md": {
+    "mtime": 1779580663.102389,
+    "hash": "4748e1299bd08d4c8c983a30d699ee78"
+  },
+  "/root/3gi-web/llms.txt": {
+    "mtime": 1779580663.1043892,
+    "hash": "cc71902d873d98fade6380a9003bcff5"
+  },
+  "/root/3gi-web/CLAUDE.md": {
+    "mtime": 1779580663.105389,
+    "hash": "da79aa9343cd2b362206f03762160abc"
+  },
+  "/root/3gi-web/AGENTS.md": {
+    "mtime": 1779580663.1083891,
+    "hash": "da79aa9343cd2b362206f03762160abc"
+  },
+  "/root/3gi-web/era-opciones.html": {
+    "mtime": 1779580663.1093893,
+    "hash": "5ea6d22e9e21818365a7a8af8a73932d"
+  },
+  "/root/3gi-web/firma.html": {
+    "mtime": 1779583807.9249394,
+    "hash": "ff280d6a2f479cab0fd4e36d8a18b7da"
+  },
+  "/root/3gi-web/docs/sql-assistant-tablas.md": {
+    "mtime": 1779580663.1203892,
+    "hash": "6580079a1876b5498b79725ebbbfeedf"
+  },
+  "/root/3gi-web/docs/homepage-sections.md": {
+    "mtime": 1779580663.1223893,
+    "hash": "1f77712d1eba95347eb285a303162b02"
+  },
+  "/root/3gi-web/docs/openclaw.md": {
+    "mtime": 1779580663.1243894,
+    "hash": "63802a97e4d97345be2ef63f39d117c3"
+  },
+  "/root/3gi-web/docs/agente-personal-3gi.md": {
+    "mtime": 1779580663.1263895,
+    "hash": "21058cf774953df515dd27888b317988"
+  },
+  "/root/3gi-web/docs/faq-page.md": {
+    "mtime": 1779580663.1283894,
+    "hash": "608878f75aa40b3dcb3be7a83935ab69"
+  },
+  "/root/3gi-web/docs/contenido/temp-post-03-imagen.md": {
+    "mtime": 1779580663.2343907,
+    "hash": "aa4c83255c6df0b05e12736e65fcd1b5"
+  },
+  "/root/3gi-web/docs/contenido/guia-produccion-shorts.md": {
+    "mtime": 1779580663.248391,
+    "hash": "89285d46316d32334f541495d80ef781"
+  },
+  "/root/3gi-web/docs/contenido/carruseles.md": {
+    "mtime": 1779580663.2743912,
+    "hash": "9e3173300f3f1887577ea17b3df513c7"
+  },
+  "/root/3gi-web/docs/contenido/carruseles2.md": {
+    "mtime": 1779580663.2813914,
+    "hash": "d52204b0bf41e05764955e71d88e31d0"
+  },
+  "/root/3gi-web/docs/prospectos/2026-05-08-m-eugenia-recurso-animal.md": {
+    "mtime": 1779580663.2953916,
+    "hash": "ce8172fe442779aedcd7c275d3cc34dd"
+  },
+  "/root/3gi-web/public/robots.txt": {
+    "mtime": 1779580663.1323895,
+    "hash": "2eb3de839b120337437641722c65024e"
+  },
+  "/root/3gi-web/public/era-opciones.html": {
+    "mtime": 1779580663.1343894,
+    "hash": "90ac834f4946793d7cc2df0688b6258b"
+  },
+  "/root/3gi-web/public/contenido/carrusel-mayo1-era-dos-lados.html": {
+    "mtime": 1779580663.3053916,
+    "hash": "aa1716e5b60d356ce95c835fe18e1719"
+  },
+  "/root/3gi-web/contenido/carrusel-mayo1-era-dos-lados.html": {
+    "mtime": 1779580663.6413958,
+    "hash": "aa1716e5b60d356ce95c835fe18e1719"
+  },
+  "/root/3gi-web/web-3gi2.png": {
+    "mtime": 1779716604.5872235,
+    "hash": "e4435ac748dcff7c0b6b7d509491fb56"
+  },
+  "/root/3gi-web/Cloudflare2.png": {
+    "mtime": 1776176235.4360464,
+    "hash": "b6e740bceedf18cf69e4a4005963606f"
+  },
+  "/root/3gi-web/isotipo.png": {
+    "mtime": 1776176235.4480464,
+    "hash": "7f6428039b16beb64b52d8ad1fa96201"
+  },
+  "/root/3gi-web/web-3gi.png": {
+    "mtime": 1779715364.0160089,
+    "hash": "4fc49105607a1082f9803a558c98a8cd"
+  },
+  "/root/3gi-web/Cloudflare1.png": {
+    "mtime": 1776176235.4360464,
+    "hash": "1c5e8f9a3a7cad0f0df25dcabb7b2d02"
+  },
+  "/root/3gi-web/3GI -Facebook1.1.png": {
+    "mtime": 1776176235.4350464,
+    "hash": "2ebae799ccad592a38981538afaf3bc3"
+  },
+  "/root/3gi-web/logo.png": {
+    "mtime": 1776176235.4480464,
+    "hash": "d73c5678a72305a07bdd0a02e37f0134"
+  },
+  "/root/3gi-web/isotipo_dark.png": {
+    "mtime": 1776176235.4480464,
+    "hash": "1e0b02e356405a037fb1aa6d9c1fd323"
+  },
+  "/root/3gi-web/fondo1.webp": {
+    "mtime": 1776176235.4470465,
+    "hash": "2e1de0e5cbb5aee8cef885e6a949f267"
+  },
+  "/root/3gi-web/web-3gi3.png": {
+    "mtime": 1779717187.6245763,
+    "hash": "9137806dda74b158a668c7b439637d40"
+  },
+  "/root/3gi-web/3GI -Facebook1.png": {
+    "mtime": 1776176235.4360464,
+    "hash": "096765cb7e6ab1744877eb2e6d655d2c"
+  },
+  "/root/3gi-web/public/Cloudflare2.png": {
+    "mtime": 1777676608.8315003,
+    "hash": "b6e740bceedf18cf69e4a4005963606f"
+  },
+  "/root/3gi-web/public/isotipo.png": {
+    "mtime": 1777676608.9095013,
+    "hash": "7f6428039b16beb64b52d8ad1fa96201"
+  },
+  "/root/3gi-web/public/Cloudflare1.png": {
+    "mtime": 1777676608.8315003,
+    "hash": "1c5e8f9a3a7cad0f0df25dcabb7b2d02"
+  },
+  "/root/3gi-web/public/fondo-negro-3gi.png": {
+    "mtime": 1778464479.1997375,
+    "hash": "7eee6c502fd9db52604859b1ba5099e0"
+  },
+  "/root/3gi-web/public/3GI -Facebook1.1.png": {
+    "mtime": 1777676608.8255002,
+    "hash": "2ebae799ccad592a38981538afaf3bc3"
+  },
+  "/root/3gi-web/public/logo.png": {
+    "mtime": 1777676608.9105015,
+    "hash": "d73c5678a72305a07bdd0a02e37f0134"
+  },
+  "/root/3gi-web/public/isotipo_dark.png": {
+    "mtime": 1777676608.9105015,
+    "hash": "1e0b02e356405a037fb1aa6d9c1fd323"
+  },
+  "/root/3gi-web/public/fondo1.webp": {
+    "mtime": 1777676608.9095013,
+    "hash": "2e1de0e5cbb5aee8cef885e6a949f267"
+  },
+  "/root/3gi-web/public/3GI -Facebook1.png": {
+    "mtime": 1777676608.8315003,
+    "hash": "096765cb7e6ab1744877eb2e6d655d2c"
+  },
+  "/root/3gi-web/public/contenido/semana7-bisagra-slide05.png": {
+    "mtime": 1777676608.881501,
+    "hash": "4856fdf8b0d77190cfea780f595c26ab"
+  },
+  "/root/3gi-web/public/contenido/post8v2-slide-02.png": {
+    "mtime": 1777676608.8515007,
+    "hash": "3e5535de363b357b9fe2f8798f728aee"
+  },
+  "/root/3gi-web/public/contenido/semana11-empresas-merecen-slide2.png": {
+    "mtime": 1777080346.9058337,
+    "hash": "7e4ef880904b1576a07a9cf135b203ee"
+  },
+  "/root/3gi-web/public/contenido/semana13-brecha-real-slide4.png": {
+    "mtime": 1777676626.2547321,
+    "hash": "ae5370a6ab303fa9e691336c55519c6a"
+  },
+  "/root/3gi-web/public/contenido/post03-linkedin-v2.png": {
+    "mtime": 1779380612.5697584,
+    "hash": "1fb3a0f774223874d78d40aa32729bba"
+  },
+  "/root/3gi-web/public/contenido/semana12-cta-era-slide2.png": {
+    "mtime": 1776902421.397801,
+    "hash": "f7cba95939dde4f04294db0a42351d1d"
+  },
+  "/root/3gi-web/public/contenido/semana14-dos-lados-era-slide1.png": {
+    "mtime": 1777082968.3930943,
+    "hash": "c7b8e567aad021b135b78f9909262aa2"
+  },
+  "/root/3gi-web/public/contenido/semana7-bisagra-slide06.png": {
+    "mtime": 1777676608.881501,
+    "hash": "ca9f339a707f319c58022496f19455d1"
+  },
+  "/root/3gi-web/public/contenido/slide5.png": {
+    "mtime": 1777676608.9095013,
+    "hash": "97c33ddcd862dc30419604e17c6be6ae"
+  },
+  "/root/3gi-web/public/contenido/slide4.png": {
+    "mtime": 1777676608.8965013,
+    "hash": "b0c4fb7c0121fa1bb5be20908d3f03c8"
+  },
+  "/root/3gi-web/public/contenido/post8-slide-05.png": {
+    "mtime": 1777676608.8455005,
+    "hash": "442d6c562cf2bc1c8865cf2d45cc02ed"
+  },
+  "/root/3gi-web/public/contenido/semana14-dos-lados-era-slide3.png": {
+    "mtime": 1777082968.3950944,
+    "hash": "213f082692a61e50f39671c9f0a40fe8"
+  },
+  "/root/3gi-web/public/contenido/semana11-empresa-invisible-slide5.png": {
+    "mtime": 1777676608.8675008,
+    "hash": "349179d895ca9967d81d85e8433f9829"
+  },
+  "/root/3gi-web/public/contenido/semana11-empresa-invisible-slide4.png": {
+    "mtime": 1777676608.865501,
+    "hash": "abcf4028dd0ad2ba34d06456a072406b"
+  },
+  "/root/3gi-web/public/contenido/post8v2-slide-05.png": {
+    "mtime": 1777676608.8525007,
+    "hash": "eea317fba7cd083f5fa973ad580a6dfc"
+  },
+  "/root/3gi-web/public/contenido/semana14-dos-lados-era-slide5.png": {
+    "mtime": 1777082968.3980944,
+    "hash": "cddd0b0d260cd99f2f245cd2594120b9"
+  },
+  "/root/3gi-web/public/contenido/post8v2-slide-06.png": {
+    "mtime": 1777676608.8525007,
+    "hash": "e26890d1b6359d13ac5ce74b03812ecf"
+  },
+  "/root/3gi-web/public/contenido/post8-slide-02.png": {
+    "mtime": 1777676608.8445005,
+    "hash": "ed7e9588aa95b345e2e7443ec27ad5c6"
+  },
+  "/root/3gi-web/public/contenido/semana11-empresas-merecen-slide5.png": {
+    "mtime": 1777080346.9068336,
+    "hash": "a5f86b27a30af8ef1de311abe477632d"
+  },
+  "/root/3gi-web/public/contenido/semana7-bisagra.png": {
+    "mtime": 1777676608.8885012,
+    "hash": "a51c56a42ef75a7cc2b112abd82f8a92"
+  },
+  "/root/3gi-web/public/contenido/semana11-empresas-merecen-slide4.png": {
+    "mtime": 1777676680.6394556,
+    "hash": "a89a4bdb8f71aaa2eb64eb3d4847b02a"
+  },
+  "/root/3gi-web/public/contenido/post0B-slide1.png": {
+    "mtime": 1778198906.933605,
+    "hash": "4ec3973f2d2447e104ef45ded575f972"
+  },
+  "/root/3gi-web/public/contenido/post8-slide-01.png": {
+    "mtime": 1777676608.8445005,
+    "hash": "a43d43d2bb216637a2be9f7a16f37db2"
+  },
+  "/root/3gi-web/public/contenido/semana11-empresa-invisible-slide1.png": {
+    "mtime": 1777676608.8585007,
+    "hash": "1f1aecd4b4dcbac8628eec2d428badd5"
+  },
+  "/root/3gi-web/public/contenido/semana8-problema-escondido.png": {
+    "mtime": 1777676608.8885012,
+    "hash": "a43d43d2bb216637a2be9f7a16f37db2"
+  },
+  "/root/3gi-web/public/contenido/post8v2-slide-03.png": {
+    "mtime": 1777676608.8515007,
+    "hash": "d8b0655d9037f2e6f6a2daadbd591d15"
+  },
+  "/root/3gi-web/public/contenido/semana1-eras.png": {
+    "mtime": 1777676608.8525007,
+    "hash": "3710a2ee9673f1d7b3b1f5357322c1c2"
+  },
+  "/root/3gi-web/public/contenido/semana12-cta-era-slide3.png": {
+    "mtime": 1776902421.399801,
+    "hash": "f6b05cb4c97fbae7e147fb9e3442a7da"
+  },
+  "/root/3gi-web/public/contenido/semana7-bisagra-slide01.png": {
+    "mtime": 1777676608.875501,
+    "hash": "a51c56a42ef75a7cc2b112abd82f8a92"
+  },
+  "/root/3gi-web/public/contenido/semana6-framework9.png": {
+    "mtime": 1777676608.868501,
+    "hash": "5dba5a24de1ada3cb32f73ce8aaf5322"
+  },
+  "/root/3gi-web/public/contenido/semana13-brecha-real-slide5.png": {
+    "mtime": 1777676626.255732,
+    "hash": "48544d6d9aac0030c9d6e5bdaf336b5a"
+  },
+  "/root/3gi-web/public/contenido/post8-slide-04.png": {
+    "mtime": 1777676608.8455005,
+    "hash": "092231ac27c677c368f4df6c9440a96d"
+  },
+  "/root/3gi-web/public/contenido/semana14-dos-lados-era-slide4.png": {
+    "mtime": 1777082968.3970942,
+    "hash": "e72d1c4f1356b9b653a912e015af7b38"
+  },
+  "/root/3gi-web/public/contenido/semana4-era3.png": {
+    "mtime": 1777676608.868501,
+    "hash": "8c4ea2cab1cbcb33ca41da81499fa568"
+  },
+  "/root/3gi-web/public/contenido/semana7-bisagra-slide04.png": {
+    "mtime": 1777676608.881501,
+    "hash": "571dfd722b2c7e86a0c5a091290bc0e5"
+  },
+  "/root/3gi-web/public/contenido/post8v2-slide-04.png": {
+    "mtime": 1777676608.8515007,
+    "hash": "f254e1885b65058fbcdf420de9d2b2ce"
+  },
+  "/root/3gi-web/public/contenido/semana7-bisagra-slide03.png": {
+    "mtime": 1777676608.875501,
+    "hash": "198c7a47d6d4c5d73d82b983fa20e75d"
+  },
+  "/root/3gi-web/public/contenido/semana11-empresa-invisible-slide2.png": {
+    "mtime": 1777676608.8605008,
+    "hash": "205a1ae0a9021806b3b3b8ff438f3445"
+  },
+  "/root/3gi-web/public/contenido/semana13-brecha-real-slide1.png": {
+    "mtime": 1777676626.2537322,
+    "hash": "f11fc7251b3af904d47430f80fd620f0"
+  },
+  "/root/3gi-web/public/contenido/post8-slide-06.png": {
+    "mtime": 1777676608.8455005,
+    "hash": "295ab0309631031bfb4f894fe878722d"
+  },
+  "/root/3gi-web/public/contenido/slide2.png": {
+    "mtime": 1777676608.8915012,
+    "hash": "4ebf70d978cd5388590866f58d4dbff7"
+  },
+  "/root/3gi-web/public/contenido/semana12-cta-era-slide5.png": {
+    "mtime": 1776902421.400801,
+    "hash": "711c85944820884bf0db0abaca640512"
+  },
+  "/root/3gi-web/public/contenido/semana7-bisagra-slide02.png": {
+    "mtime": 1777676608.875501,
+    "hash": "68bc7e703a581088084768dc724ec4e9"
+  },
+  "/root/3gi-web/public/contenido/semana11-empresa-invisible-slide3.png": {
+    "mtime": 1777676608.862501,
+    "hash": "39dfd507d88312cf6dbc14887cd4fe70"
+  },
+  "/root/3gi-web/public/contenido/post8v2-slide-01.png": {
+    "mtime": 1777676608.8515007,
+    "hash": "13d7f6c362f1df0818c3594fbc4ce49e"
+  },
+  "/root/3gi-web/public/contenido/semana12-cta-era-slide4.png": {
+    "mtime": 1776902421.399801,
+    "hash": "b030442bfd8e43068b701539712516be"
+  },
+  "/root/3gi-web/public/contenido/post0A-slide1.png": {
+    "mtime": 1778198906.932605,
+    "hash": "c4e234dae2c49e462bef64fcb6359c9e"
+  },
+  "/root/3gi-web/public/contenido/slide1.png": {
+    "mtime": 1777083164.2361014,
+    "hash": "4bfadea7ac9f69cfd9dcad13c7ddaf53"
+  },
+  "/root/3gi-web/public/contenido/semana13-brecha-real-slide3.png": {
+    "mtime": 1777676626.2547321,
+    "hash": "7c0faf213029af64d6e5dbeb5a7056a5"
+  },
+  "/root/3gi-web/public/contenido/semana14-dos-lados-era-slide2.png": {
+    "mtime": 1777082968.3940945,
+    "hash": "a6951acf82a54fa0098a50d6f969f34f"
+  },
+  "/root/3gi-web/public/contenido/semana12-cta-era-slide1.png": {
+    "mtime": 1776902421.396801,
+    "hash": "23b6259d214121b3081a094b7dbbb40d"
+  },
+  "/root/3gi-web/public/contenido/post03-linkedin.png": {
+    "mtime": 1779379756.3373835,
+    "hash": "1fb3a0f774223874d78d40aa32729bba"
+  },
+  "/root/3gi-web/public/contenido/semana11-empresas-merecen-slide1.png": {
+    "mtime": 1777080346.9048338,
+    "hash": "8ceab796ee088e293662cfbc2f4324a0"
+  },
+  "/root/3gi-web/public/contenido/slide3.png": {
+    "mtime": 1777676608.8935013,
+    "hash": "72b813dcc26204d027de64fd8eda930f"
+  },
+  "/root/3gi-web/public/contenido/semana5-ia-moda.png": {
+    "mtime": 1777676608.868501,
+    "hash": "1039f0a5e2fc38b035295593ef67c4c4"
+  },
+  "/root/3gi-web/public/contenido/post8-slide-03.png": {
+    "mtime": 1777676608.8445005,
+    "hash": "f6869306434095dae1bb4f08cadb2df7"
+  },
+  "/root/3gi-web/public/contenido/semana11-empresas-merecen-slide3.png": {
+    "mtime": 1777676680.6374555,
+    "hash": "f0827438cfa2300a2ff865801cd0f491"
+  },
+  "/root/3gi-web/public/contenido/semana3-era2.png": {
+    "mtime": 1777676608.8675008,
+    "hash": "56d5e3d0979bcdc184a8120cbb383d0f"
+  },
+  "/root/3gi-web/public/contenido/semana13-brecha-real-slide2.png": {
+    "mtime": 1777676626.2537322,
+    "hash": "81b03befa1cb18a2d6258b7eabbe3188"
+  },
+  "/root/3gi-web/public/contenido/semana9-era-dos-lados.png": {
+    "mtime": 1777676608.8885012,
+    "hash": "4113e1d6e31619cbea2770a1893546d2"
+  },
+  "/root/3gi-web/public/contenido/framework9/slide_01.png": {
+    "mtime": 1777676608.8325005,
+    "hash": "5dba5a24de1ada3cb32f73ce8aaf5322"
+  },
+  "/root/3gi-web/public/contenido/framework9/slide_03.png": {
+    "mtime": 1777676608.8325005,
+    "hash": "63b32c8bf4264f02aab1e59bec23aeb2"
+  },
+  "/root/3gi-web/public/contenido/framework9/slide_06.png": {
+    "mtime": 1777676608.8375006,
+    "hash": "203116fe8873c225a5f24dbf61884d2b"
+  },
+  "/root/3gi-web/public/contenido/framework9/slide_09.png": {
+    "mtime": 1777676608.8425004,
+    "hash": "d0282428df1a9a586ef3a49ad62fa987"
+  },
+  "/root/3gi-web/public/contenido/framework9/slide_08.png": {
+    "mtime": 1777676608.8425004,
+    "hash": "758ecef6d437c5d8a150f7b29b5d15d8"
+  },
+  "/root/3gi-web/public/contenido/framework9/slide_02.png": {
+    "mtime": 1777676608.8325005,
+    "hash": "42cf6746120bcee80e73930c3358998c"
+  },
+  "/root/3gi-web/public/contenido/framework9/slide_05.png": {
+    "mtime": 1777676608.8375006,
+    "hash": "eea68f1400e32d42dca325e66fc17dcc"
+  },
+  "/root/3gi-web/public/contenido/framework9/slide_10.png": {
+    "mtime": 1777676608.8425004,
+    "hash": "a824249416a1d68c06aef5c6ffe6c014"
+  },
+  "/root/3gi-web/public/contenido/framework9/slide_07.png": {
+    "mtime": 1777676608.8375006,
+    "hash": "9d03b3801e539fe5c116b56147c131da"
+  },
+  "/root/3gi-web/public/contenido/framework9/slide_04.png": {
+    "mtime": 1777676608.8375006,
+    "hash": "895d242f84ea77ef01ddedb3a63bdce4"
+  },
+  "/root/3gi-web/contenido/semana7-bisagra-slide05.png": {
+    "mtime": 1776176235.4460464,
+    "hash": "4856fdf8b0d77190cfea780f595c26ab"
+  },
+  "/root/3gi-web/contenido/post8v2-slide-02.png": {
+    "mtime": 1776176235.4420464,
+    "hash": "3e5535de363b357b9fe2f8798f728aee"
+  },
+  "/root/3gi-web/contenido/semana13-brecha-real-slide4.png": {
+    "mtime": 1776873622.5896745,
+    "hash": "ae5370a6ab303fa9e691336c55519c6a"
+  },
+  "/root/3gi-web/contenido/semana12-cta-era-slide2.png": {
+    "mtime": 1776873622.5866745,
+    "hash": "f7cba95939dde4f04294db0a42351d1d"
+  },
+  "/root/3gi-web/contenido/semana7-bisagra-slide06.png": {
+    "mtime": 1776176235.4460464,
+    "hash": "ca9f339a707f319c58022496f19455d1"
+  },
+  "/root/3gi-web/contenido/slide5.png": {
+    "mtime": 1776873622.5936744,
+    "hash": "97c33ddcd862dc30419604e17c6be6ae"
+  },
+  "/root/3gi-web/contenido/slide4.png": {
+    "mtime": 1776873622.5926745,
+    "hash": "b0c4fb7c0121fa1bb5be20908d3f03c8"
+  },
+  "/root/3gi-web/contenido/post8-slide-05.png": {
+    "mtime": 1776176235.4410465,
+    "hash": "442d6c562cf2bc1c8865cf2d45cc02ed"
+  },
+  "/root/3gi-web/contenido/semana11-empresa-invisible-slide5.png": {
+    "mtime": 1776873622.5856745,
+    "hash": "349179d895ca9967d81d85e8433f9829"
+  },
+  "/root/3gi-web/contenido/semana11-empresa-invisible-slide4.png": {
+    "mtime": 1776873622.5846744,
+    "hash": "abcf4028dd0ad2ba34d06456a072406b"
+  },
+  "/root/3gi-web/contenido/post8v2-slide-05.png": {
+    "mtime": 1776176235.4430463,
+    "hash": "eea317fba7cd083f5fa973ad580a6dfc"
+  },
+  "/root/3gi-web/contenido/post8v2-slide-06.png": {
+    "mtime": 1776176235.4430463,
+    "hash": "e26890d1b6359d13ac5ce74b03812ecf"
+  },
+  "/root/3gi-web/contenido/post8-slide-02.png": {
+    "mtime": 1776176235.4400465,
+    "hash": "ed7e9588aa95b345e2e7443ec27ad5c6"
+  },
+  "/root/3gi-web/contenido/semana7-bisagra.png": {
+    "mtime": 1776176235.4460464,
+    "hash": "a51c56a42ef75a7cc2b112abd82f8a92"
+  },
+  "/root/3gi-web/contenido/post8-slide-01.png": {
+    "mtime": 1776176235.4400465,
+    "hash": "a43d43d2bb216637a2be9f7a16f37db2"
+  },
+  "/root/3gi-web/contenido/semana11-empresa-invisible-slide1.png": {
+    "mtime": 1776873622.5816746,
+    "hash": "1f1aecd4b4dcbac8628eec2d428badd5"
+  },
+  "/root/3gi-web/contenido/semana8-problema-escondido.png": {
+    "mtime": 1776176235.4470465,
+    "hash": "a43d43d2bb216637a2be9f7a16f37db2"
+  },
+  "/root/3gi-web/contenido/post8v2-slide-03.png": {
+    "mtime": 1776176235.4420464,
+    "hash": "d8b0655d9037f2e6f6a2daadbd591d15"
+  },
+  "/root/3gi-web/contenido/semana1-eras.png": {
+    "mtime": 1776176235.4430463,
+    "hash": "3710a2ee9673f1d7b3b1f5357322c1c2"
+  },
+  "/root/3gi-web/contenido/semana12-cta-era-slide3.png": {
+    "mtime": 1776873622.5876744,
+    "hash": "f6b05cb4c97fbae7e147fb9e3442a7da"
+  },
+  "/root/3gi-web/contenido/semana7-bisagra-slide01.png": {
+    "mtime": 1776176235.4450464,
+    "hash": "a51c56a42ef75a7cc2b112abd82f8a92"
+  },
+  "/root/3gi-web/contenido/semana6-framework9.png": {
+    "mtime": 1776176235.4440465,
+    "hash": "5dba5a24de1ada3cb32f73ce8aaf5322"
+  },
+  "/root/3gi-web/contenido/semana13-brecha-real-slide5.png": {
+    "mtime": 1776873622.5906744,
+    "hash": "48544d6d9aac0030c9d6e5bdaf336b5a"
+  },
+  "/root/3gi-web/contenido/post8-slide-04.png": {
+    "mtime": 1776176235.4410465,
+    "hash": "092231ac27c677c368f4df6c9440a96d"
+  },
+  "/root/3gi-web/contenido/semana4-era3.png": {
+    "mtime": 1776176235.4440465,
+    "hash": "8c4ea2cab1cbcb33ca41da81499fa568"
+  },
+  "/root/3gi-web/contenido/semana7-bisagra-slide04.png": {
+    "mtime": 1776176235.4460464,
+    "hash": "571dfd722b2c7e86a0c5a091290bc0e5"
+  },
+  "/root/3gi-web/contenido/post8v2-slide-04.png": {
+    "mtime": 1776176235.4420464,
+    "hash": "f254e1885b65058fbcdf420de9d2b2ce"
+  },
+  "/root/3gi-web/contenido/semana7-bisagra-slide03.png": {
+    "mtime": 1776176235.4450464,
+    "hash": "198c7a47d6d4c5d73d82b983fa20e75d"
+  },
+  "/root/3gi-web/contenido/semana11-empresa-invisible-slide2.png": {
+    "mtime": 1776873622.5836744,
+    "hash": "205a1ae0a9021806b3b3b8ff438f3445"
+  },
+  "/root/3gi-web/contenido/semana13-brecha-real-slide1.png": {
+    "mtime": 1776873622.5896745,
+    "hash": "f11fc7251b3af904d47430f80fd620f0"
+  },
+  "/root/3gi-web/contenido/post8-slide-06.png": {
+    "mtime": 1776176235.4410465,
+    "hash": "295ab0309631031bfb4f894fe878722d"
+  },
+  "/root/3gi-web/contenido/slide2.png": {
+    "mtime": 1776873622.5916743,
+    "hash": "4ebf70d978cd5388590866f58d4dbff7"
+  },
+  "/root/3gi-web/contenido/semana12-cta-era-slide5.png": {
+    "mtime": 1776873622.5886743,
+    "hash": "711c85944820884bf0db0abaca640512"
+  },
+  "/root/3gi-web/contenido/semana7-bisagra-slide02.png": {
+    "mtime": 1776176235.4450464,
+    "hash": "68bc7e703a581088084768dc724ec4e9"
+  },
+  "/root/3gi-web/contenido/semana11-empresa-invisible-slide3.png": {
+    "mtime": 1776873622.5846744,
+    "hash": "39dfd507d88312cf6dbc14887cd4fe70"
+  },
+  "/root/3gi-web/contenido/post8v2-slide-01.png": {
+    "mtime": 1776176235.4420464,
+    "hash": "13d7f6c362f1df0818c3594fbc4ce49e"
+  },
+  "/root/3gi-web/contenido/semana12-cta-era-slide4.png": {
+    "mtime": 1776873622.5876744,
+    "hash": "b030442bfd8e43068b701539712516be"
+  },
+  "/root/3gi-web/contenido/slide1.png": {
+    "mtime": 1776873622.5916743,
+    "hash": "4bfadea7ac9f69cfd9dcad13c7ddaf53"
+  },
+  "/root/3gi-web/contenido/semana13-brecha-real-slide3.png": {
+    "mtime": 1776873622.5896745,
+    "hash": "7c0faf213029af64d6e5dbeb5a7056a5"
+  },
+  "/root/3gi-web/contenido/semana12-cta-era-slide1.png": {
+    "mtime": 1776873622.5856745,
+    "hash": "23b6259d214121b3081a094b7dbbb40d"
+  },
+  "/root/3gi-web/contenido/slide3.png": {
+    "mtime": 1776873622.5926745,
+    "hash": "72b813dcc26204d027de64fd8eda930f"
+  },
+  "/root/3gi-web/contenido/semana5-ia-moda.png": {
+    "mtime": 1776176235.4440465,
+    "hash": "1039f0a5e2fc38b035295593ef67c4c4"
+  },
+  "/root/3gi-web/contenido/post8-slide-03.png": {
+    "mtime": 1776176235.4410465,
+    "hash": "f6869306434095dae1bb4f08cadb2df7"
+  },
+  "/root/3gi-web/contenido/semana3-era2.png": {
+    "mtime": 1776176235.4440465,
+    "hash": "56d5e3d0979bcdc184a8120cbb383d0f"
+  },
+  "/root/3gi-web/contenido/semana13-brecha-real-slide2.png": {
+    "mtime": 1776873622.5896745,
+    "hash": "81b03befa1cb18a2d6258b7eabbe3188"
+  },
+  "/root/3gi-web/contenido/semana9-era-dos-lados.png": {
+    "mtime": 1777676608.8215003,
+    "hash": "3b43a35da3cd9a0b43a642414a01659a"
+  },
+  "/root/3gi-web/contenido/framework9/slide_01.png": {
+    "mtime": 1776176235.4370465,
+    "hash": "5dba5a24de1ada3cb32f73ce8aaf5322"
+  },
+  "/root/3gi-web/contenido/framework9/slide_03.png": {
+    "mtime": 1776176235.4380465,
+    "hash": "63b32c8bf4264f02aab1e59bec23aeb2"
+  },
+  "/root/3gi-web/contenido/framework9/slide_06.png": {
+    "mtime": 1776176235.4380465,
+    "hash": "203116fe8873c225a5f24dbf61884d2b"
+  },
+  "/root/3gi-web/contenido/framework9/slide_09.png": {
+    "mtime": 1776176235.4390464,
+    "hash": "d0282428df1a9a586ef3a49ad62fa987"
+  },
+  "/root/3gi-web/contenido/framework9/slide_08.png": {
+    "mtime": 1776176235.4390464,
+    "hash": "758ecef6d437c5d8a150f7b29b5d15d8"
+  },
+  "/root/3gi-web/contenido/framework9/slide_02.png": {
+    "mtime": 1776176235.4370465,
+    "hash": "42cf6746120bcee80e73930c3358998c"
+  },
+  "/root/3gi-web/contenido/framework9/slide_05.png": {
+    "mtime": 1776176235.4380465,
+    "hash": "eea68f1400e32d42dca325e66fc17dcc"
+  },
+  "/root/3gi-web/contenido/framework9/slide_10.png": {
+    "mtime": 1776176235.4400465,
+    "hash": "a824249416a1d68c06aef5c6ffe6c014"
+  },
+  "/root/3gi-web/contenido/framework9/slide_07.png": {
+    "mtime": 1776176235.4390464,
+    "hash": "9d03b3801e539fe5c116b56147c131da"
+  },
+  "/root/3gi-web/contenido/framework9/slide_04.png": {
+    "mtime": 1776176235.4380465,
+    "hash": "895d242f84ea77ef01ddedb3a63bdce4"
+  }
+}

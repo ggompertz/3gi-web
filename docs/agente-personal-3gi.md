@@ -165,7 +165,7 @@ SUPABASE_URL=
 SUPABASE_SERVICE_ROLE_KEY=
 
 # n8n
-N8N_URL=https://n8n.3g-ia-agents.com
+N8N_URL=https://n8n.3gi.cl
 N8N_API_KEY=
 
 # Tavily (opcional)

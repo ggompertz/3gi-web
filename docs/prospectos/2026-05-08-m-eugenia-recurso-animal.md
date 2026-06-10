@@ -20,7 +20,7 @@ Puede haber sido un problema técnico con el código de verificación, o simplem
 El diagnóstico toma menos de 5 minutos y te entrega una radiografía concreta de en qué ERA operacional está tu empresa — con foco en dónde están los mayores cuellos de botella y qué procesos tienen más potencial de automatización.
 
 Si quieres retomarlo, puedes hacerlo directamente aquí:
-👉 3g-ia-agents.com/diagnostico
+👉 3gi.cl/diagnostico
 
 Y si prefieres conversarlo primero, con gusto agendamos una llamada de 20 minutos sin costo ni compromiso.
 
@@ -28,7 +28,7 @@ Quedo atento,
 
 Gonzalo Gompertz  
 Fundador · 3G Intelligence  
-gonzalo@3g-ia-agents.com
+gonzalo@3gi.cl
 
 ---
 

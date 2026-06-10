@@ -1,6 +1,6 @@
 # 3GI Web — Sitio público de 3G Intelligence
 
-Sitio web de [3g-ia-agents.com](https://3g-ia-agents.com) — consultora de IA para PyMEs latinoamericanas.
+Sitio web de [3gi.cl](https://3gi.cl) — consultora de IA para PyMEs latinoamericanas.
 
 ## Stack
 

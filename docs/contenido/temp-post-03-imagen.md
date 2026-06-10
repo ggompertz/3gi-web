@@ -6,7 +6,7 @@
 
 **URL pública:**
 ```
-https://3g-ia-agents.com/contenido/post03-linkedin.png
+https://3gi.cl/contenido/post03-linkedin.png
 ```
 
 **Dimensiones:** 1200×628px  

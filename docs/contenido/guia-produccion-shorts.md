@@ -34,7 +34,7 @@ Texto en pantalla: "¿Cuánto tarda tu empresa en enviar un presupuesto?"
 "Esto no es magia. Es pasar de ERA 1 — donde todo depende de las personas — a ERA 2, donde los datos trabajan para ti."
 
 **[0:40–0:45] — CTA**
-Texto en pantalla: "¿En qué ERA está tu empresa? → 3g-ia-agents.com/diagnostico"
+Texto en pantalla: "¿En qué ERA está tu empresa? → 3gi.cl/diagnostico"
 Voz: "El diagnóstico es gratis y toma 5 minutos."
 
 ---
@@ -55,7 +55,7 @@ Aparece cada punto mientras se menciona:
 "Cada uno de estos procesos tiene una solución concreta. No requieren meses de implementación ni presupuestos millonarios."
 
 **[0:45–0:50] — CTA**
-Texto en pantalla: "¿Cuántos tienes sin resolver? → 3g-ia-agents.com/diagnostico"
+Texto en pantalla: "¿Cuántos tienes sin resolver? → 3gi.cl/diagnostico"
 
 ---
 
@@ -82,4 +82,4 @@ ERA 3 más: la empresa aprende sola."
 "La mayoría de las PyMEs en LATAM están entre ERA 1 más y ERA 2. No porque sean mal gestionadas — sino porque nadie les mostró el camino."
 
 **[0:50–0:55] — CTA**
-Texto en pantalla: "Escribe tu ERA en comentarios — o mídete gratis en 3g-ia-agents.com/diagnostico"
+Texto en pantalla: "Escribe tu ERA en comentarios — o mídete gratis en 3gi.cl/diagnostico"

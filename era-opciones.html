@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ERA Framework — 3 Opciones Visuales</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: #06060D; color: #EEF1F6; font-family: 'DM Sans', system-ui, sans-serif; padding: 40px 24px; }
+  h1 { font-family: system-ui, sans-serif; font-weight: 800; font-size: 22px; color: #00E891; margin-bottom: 8px; letter-spacing: -.02em; }
+  .intro { font-size: 14px; color: rgba(238,241,246,0.5); margin-bottom: 60px; }
+  .option { margin-bottom: 80px; }
+  .option-label { font-size: 11px; font-weight: 700; letter-spacing: .18em; text-transform: uppercase; color: #00E891; margin-bottom: 10px; }
+  .option-title { font-size: 24px; font-weight: 800; margin-bottom: 6px; letter-spacing: -.02em; }
+  .option-desc { font-size: 14px; color: rgba(238,241,246,0.5); margin-bottom: 32px; }
+  hr { border: none; border-top: 1px solid rgba(255,255,255,0.07); margin-bottom: 32px; }
+
+  /* ── OPCIÓN A — Flujo horizontal ── */
+  .flow { display: flex; align-items: stretch; gap: 0; }
+  .flow-era { flex: 1; padding: 28px 24px; position: relative; }
+  .flow-era.e1 { background: linear-gradient(135deg, rgba(220,38,38,0.12), rgba(220,38,38,0.05)); border: 1px solid rgba(220,38,38,0.3); border-radius: 14px 0 0 14px; }
+  .flow-era.e2 { background: linear-gradient(135deg, rgba(234,179,8,0.12), rgba(234,179,8,0.05)); border: 1px solid rgba(234,179,8,0.25); border-top: 1px solid rgba(234,179,8,0.25); border-bottom: 1px solid rgba(234,179,8,0.25); border-left: none; border-right: none; }
+  .flow-era.e3 { background: linear-gradient(135deg, rgba(0,232,145,0.12), rgba(0,232,145,0.05)); border: 1px solid rgba(0,232,145,0.3); border-radius: 0 14px 14px 0; }
+  .flow-arrow { display: flex; align-items: center; padding: 0 4px; color: rgba(238,241,246,0.2); font-size: 20px; flex-shrink: 0; }
+  .era-badge { font-size: 10px; font-weight: 700; letter-spacing: .15em; text-transform: uppercase; margin-bottom: 10px; }
+  .e1 .era-badge { color: #EF4444; }
+  .e2 .era-badge { color: #EAB308; }
+  .e3 .era-badge { color: #00E891; }
+  .era-icon { font-size: 32px; margin-bottom: 12px; }
+  .era-name { font-size: 17px; font-weight: 800; letter-spacing: -.01em; margin-bottom: 12px; }
+  .era-symptoms { list-style: none; display: flex; flex-direction: column; gap: 6px; }
+  .era-symptoms li { font-size: 13px; color: rgba(238,241,246,0.6); padding-left: 14px; position: relative; line-height: 1.45; }
+  .era-symptoms li::before { content: "·"; position: absolute; left: 0; }
+  .e1 .era-symptoms li::before { color: #EF4444; }
+  .e2 .era-symptoms li::before { color: #EAB308; }
+  .e3 .era-symptoms li::before { color: #00E891; }
+  .era-cta { margin-top: 20px; font-size: 12px; font-weight: 700; padding: 8px 14px; border-radius: 6px; display: inline-block; }
+  .e3 .era-cta { background: rgba(0,232,145,0.15); color: #00E891; border: 1px solid rgba(0,232,145,0.3); }
+
+  /* ── OPCIÓN B — Tabla comparativa ── */
+  .compare-table { width: 100%; border-collapse: collapse; }
+  .compare-table th { padding: 14px 20px; font-size: 12px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; text-align: left; }
+  .compare-table th.e1h { color: #EF4444; background: rgba(220,38,38,0.08); border-bottom: 2px solid rgba(220,38,38,0.3); }
+  .compare-table th.e2h { color: #EAB308; background: rgba(234,179,8,0.08); border-bottom: 2px solid rgba(234,179,8,0.3); }
+  .compare-table th.e3h { color: #00E891; background: rgba(0,232,145,0.08); border-bottom: 2px solid rgba(0,232,145,0.3); }
+  .compare-table th.dim { color: rgba(238,241,246,0.35); background: transparent; font-size: 10px; width: 140px; }
+  .compare-table td { padding: 14px 20px; font-size: 13px; color: rgba(238,241,246,0.7); border-bottom: 1px solid rgba(255,255,255,0.05); vertical-align: top; line-height: 1.5; }
+  .compare-table td.dim { font-size: 11px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: rgba(238,241,246,0.3); background: rgba(255,255,255,0.02); }
+  .compare-table td.e1c { background: rgba(220,38,38,0.04); }
+  .compare-table td.e2c { background: rgba(234,179,8,0.04); }
+  .compare-table td.e3c { background: rgba(0,232,145,0.04); color: rgba(238,241,246,0.85); }
+  .compare-table tr:last-child td { border-bottom: none; }
+  .badge-era { display: inline-block; font-size: 10px; font-weight: 700; padding: 2px 8px; border-radius: 4px; margin-bottom: 6px; }
+  .b1 { background: rgba(220,38,38,0.15); color: #EF4444; }
+  .b2 { background: rgba(234,179,8,0.15); color: #EAB308; }
+  .b3 { background: rgba(0,232,145,0.15); color: #00E891; }
+  .table-wrap { border: 1px solid rgba(255,255,255,0.07); border-radius: 14px; overflow: hidden; }
+
+  /* ── OPCIÓN C — Escalera ── */
+  .staircase { display: flex; flex-direction: column; gap: 0; max-width: 700px; }
+  .stair { display: flex; align-items: center; gap: 24px; padding: 24px 28px; position: relative; }
+  .stair.s1 { background: rgba(220,38,38,0.08); border: 1px solid rgba(220,38,38,0.2); border-radius: 14px 14px 0 0; margin-right: 80px; }
+  .stair.s2 { background: rgba(234,179,8,0.08); border: 1px solid rgba(234,179,8,0.2); border-top: none; border-radius: 0; margin-right: 40px; margin-left: 0; }
+  .stair.s3 { background: rgba(0,232,145,0.08); border: 1px solid rgba(0,232,145,0.25); border-top: none; border-radius: 0 0 14px 14px; margin-right: 0; }
+  .stair-num { font-size: 48px; font-weight: 800; line-height: 1; flex-shrink: 0; width: 60px; text-align: center; }
+  .s1 .stair-num { color: rgba(220,38,38,0.4); }
+  .s2 .stair-num { color: rgba(234,179,8,0.4); }
+  .s3 .stair-num { color: rgba(0,232,145,0.4); }
+  .stair-content { flex: 1; }
+  .stair-era { font-size: 10px; font-weight: 700; letter-spacing: .15em; text-transform: uppercase; margin-bottom: 4px; }
+  .s1 .stair-era { color: #EF4444; }
+  .s2 .stair-era { color: #EAB308; }
+  .s3 .stair-era { color: #00E891; }
+  .stair-title { font-size: 18px; font-weight: 800; letter-spacing: -.01em; margin-bottom: 8px; }
+  .stair-desc { font-size: 13px; color: rgba(238,241,246,0.55); line-height: 1.6; }
+  .stair-right { flex-shrink: 0; text-align: right; }
+  .stair-stat { font-size: 28px; font-weight: 800; line-height: 1; }
+  .s1 .stair-stat { color: #EF4444; }
+  .s2 .stair-stat { color: #EAB308; }
+  .s3 .stair-stat { color: #00E891; }
+  .stair-stat-label { font-size: 11px; color: rgba(238,241,246,0.35); margin-top: 4px; }
+  .stair-arrow { text-align: center; color: rgba(238,241,246,0.15); font-size: 18px; padding: 4px 0; }
+</style>
+</head>
+<body>
+
+<h1>Framework ERA 1 → ERA 3</h1>
+<p class="intro">3 propuestas visuales — elige la que mejor represente el posicionamiento de 3GI</p>
+
+<!-- OPCIÓN A -->
+<div class="option">
+  <div class="option-label">Opción A</div>
+  <div class="option-title">Flujo horizontal con síntomas</div>
+  <div class="option-desc">Visual de progresión. El visitante se identifica con los síntomas de su ERA. Fácil de exportar para LinkedIn.</div>
+  <hr>
+  <div class="flow">
+    <div class="flow-era e1">
+      <div class="era-badge">ERA 1</div>
+      <div class="era-icon">🔥</div>
+      <div class="era-name">Caos Operativo</div>
+      <ul class="era-symptoms">
+        <li>El negocio corre en tu cabeza</li>
+        <li>Decisiones por intuición</li>
+        <li>Si tú paras, todo para</li>
+        <li>Sin datos para decidir</li>
+      </ul>
+    </div>
+    <div class="flow-arrow">→</div>
+    <div class="flow-era e2">
+      <div class="era-badge">ERA 2</div>
+      <div class="era-icon">📊</div>
+      <div class="era-name">Datos Organizados</div>
+      <ul class="era-symptoms">
+        <li>Sistemas existen, no se usan</li>
+        <li>Reportes armados a mano</li>
+        <li>Datos en silos</li>
+        <li>Potencial sin explotar</li>
+      </ul>
+    </div>
+    <div class="flow-arrow">→</div>
+    <div class="flow-era e3">
+      <div class="era-badge">ERA 3</div>
+      <div class="era-icon">⚡</div>
+      <div class="era-name">Empresa con IA</div>
+      <ul class="era-symptoms">
+        <li>La IA maneja el volumen</li>
+        <li>Decisiones con datos en tiempo real</li>
+        <li>Procesos corren solos</li>
+        <li>Tú manejas la estrategia</li>
+      </ul>
+      <span class="era-cta">← Aquí llegamos</span>
+    </div>
+  </div>
+</div>
+
+<!-- OPCIÓN B -->
+<div class="option">
+  <div class="option-label">Opción B</div>
+  <div class="option-title">Tabla comparativa por dimensión</div>
+  <div class="option-desc">El visitante se ubica fila por fila. Muy efectivo para ventas — genera el "eso soy yo" en cada línea.</div>
+  <hr>
+  <div class="table-wrap">
+    <table class="compare-table">
+      <thead>
+        <tr>
+          <th class="dim">Dimensión</th>
+          <th class="e1h"><span class="badge-era b1">ERA 1</span><br>Caos Operativo</th>
+          <th class="e2h"><span class="badge-era b2">ERA 2</span><br>Datos Organizados</th>
+          <th class="e3h"><span class="badge-era b3">ERA 3</span><br>Empresa con IA</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="dim">Decisiones</td>
+          <td class="e1c">Por intuición y experiencia del dueño</td>
+          <td class="e2c">Con datos históricos, análisis manual</td>
+          <td class="e3c">Con datos + IA que anticipa escenarios</td>
+        </tr>
+        <tr>
+          <td class="dim">Operación</td>
+          <td class="e1c">Manual. Depende de personas clave</td>
+          <td class="e2c">Parcial. Algunas tareas automatizadas</td>
+          <td class="e3c">Flujos automáticos. IA ejecuta sin intervención</td>
+        </tr>
+        <tr>
+          <td class="dim">Información</td>
+          <td class="e1c">En correos, Excel o en la memoria de alguien</td>
+          <td class="e2c">En sistemas, pero en silos sin conectar</td>
+          <td class="e3c">Centralizada, conectada y en tiempo real</td>
+        </tr>
+        <tr>
+          <td class="dim">Tiempo del dueño</td>
+          <td class="e1c">En el día a día y apagar incendios</td>
+          <td class="e2c">En gestión y reportes manuales</td>
+          <td class="e3c">En estrategia, clientes y crecimiento</td>
+        </tr>
+        <tr>
+          <td class="dim">Escalabilidad</td>
+          <td class="e1c">Para crecer hay que contratar más gente</td>
+          <td class="e2c">Crecimiento limitado por procesos manuales</td>
+          <td class="e3c">La IA absorbe el volumen sin agregar costos</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<!-- OPCIÓN C -->
+<div class="option">
+  <div class="option-label">Opción C</div>
+  <div class="option-title">Escalera ascendente</div>
+  <div class="option-desc">Progresión vertical dramática. Transmite que hay un camino claro hacia arriba. Más narrativo.</div>
+  <hr>
+  <div class="staircase">
+    <div class="stair s1">
+      <div class="stair-num">1</div>
+      <div class="stair-content">
+        <div class="stair-era">ERA 1 — Caos Operativo</div>
+        <div class="stair-title">El negocio corre en tu cabeza</div>
+        <div class="stair-desc">Decisiones por intuición. Sin visibilidad real. Si tú paras, la empresa para.</div>
+      </div>
+      <div class="stair-right">
+        <div class="stair-stat">60%</div>
+        <div class="stair-stat-label">del día en tareas<br>repetitivas</div>
+      </div>
+    </div>
+    <div class="stair-arrow">↓</div>
+    <div class="stair s2">
+      <div class="stair-num">2</div>
+      <div class="stair-content">
+        <div class="stair-era">ERA 2 — Datos Organizados</div>
+        <div class="stair-title">Los sistemas existen. Nadie los usa para decidir.</div>
+        <div class="stair-desc">ERP, CRM, BI. Datos en silos. Reportes que se arman a mano cada lunes.</div>
+      </div>
+      <div class="stair-right">
+        <div class="stair-stat">70%</div>
+        <div class="stair-stat-label">de las PyMEs<br>están aquí hoy</div>
+      </div>
+    </div>
+    <div class="stair-arrow">↓</div>
+    <div class="stair s3">
+      <div class="stair-num">3</div>
+      <div class="stair-content">
+        <div class="stair-era">ERA 3 — Empresa con IA</div>
+        <div class="stair-title">La IA maneja el volumen. Tú manejas la estrategia.</div>
+        <div class="stair-desc">Procesos automáticos. Decisiones con datos en tiempo real. Escalas sin contratar.</div>
+      </div>
+      <div class="stair-right">
+        <div class="stair-stat">+260%</div>
+        <div class="stair-stat-label">ROI promedio<br>identificado</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

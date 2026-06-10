@@ -45,7 +45,7 @@ Es cambiar tu sistema operativo."
 
 **[23–30s] CTA**
 "Ve al enlace de mi perfil y haz el test gratuito de 5 minutos para descubrir en qué ERA está tu empresa y cómo salir de ahí."
-*Pantalla: 3g-ia-agents.com/diagnostico*
+*Pantalla: 3gi.cl/diagnostico*
 
 ### Texto LinkedIn/Facebook
 
@@ -94,7 +94,7 @@ Se llama modo apagaincendios.
 En este video te explico las 5 señales que indican que tu empresa opera en ERA 1,
 y por qué la solución no es comprar más herramientas — es cambiar tu sistema operativo.
 
-🔍 Descubre en qué ERA opera tu empresa → 3g-ia-agents.com/diagnostico
+🔍 Descubre en qué ERA opera tu empresa → 3gi.cl/diagnostico
 
 ---
 3G Intelligence ayuda a PyMEs latinoamericanas a pasar del caos operativo
@@ -153,7 +153,7 @@ El primer paso no es más gente. Es saber exactamente dónde está la fuga."
 
 **[23–30s] CTA**
 "Ve al enlace de mi perfil y haz el test gratuito de 5 minutos para descubrir en qué ERA está tu empresa y cómo salir de ahí."
-*Pantalla: 3g-ia-agents.com/diagnostico*
+*Pantalla: 3gi.cl/diagnostico*
 
 ### Texto LinkedIn/Facebook
 
@@ -196,7 +196,7 @@ No cambiaron el sistema. Cambiaron cómo lo usaban.
 En este video te explico cómo el equipo recuperó 2 horas por persona por semana,
 y por qué el primer paso siempre es saber exactamente dónde está la fuga.
 
-🔍 Descubre en qué ERA opera tu empresa → 3g-ia-agents.com/diagnostico
+🔍 Descubre en qué ERA opera tu empresa → 3gi.cl/diagnostico
 
 ---
 3G Intelligence ayuda a PyMEs latinoamericanas a pasar del caos operativo
@@ -250,7 +250,7 @@ Es que en ERA 1 el desorden tiene costo real — solo que nadie lo ve."
 
 **[23–30s] CTA**
 "Ve al enlace de mi perfil y haz el test gratuito de 5 minutos para descubrir en qué ERA está tu empresa y cuánto te está costando."
-*Pantalla: 3g-ia-agents.com/diagnostico*
+*Pantalla: 3gi.cl/diagnostico*
 
 ### Texto LinkedIn/Facebook
 
@@ -295,7 +295,7 @@ que nadie mide porque no aparece en ningún estado de resultados.
 En este video te muestro cómo calcularlo y por qué en ERA 1
 el desorden tiene costo real — solo que nadie lo ve.
 
-🔍 Descubre en qué ERA opera tu empresa → 3g-ia-agents.com/diagnostico
+🔍 Descubre en qué ERA opera tu empresa → 3gi.cl/diagnostico
 
 ---
 3G Intelligence ayuda a PyMEs latinoamericanas a pasar del caos operativo
@@ -348,7 +348,7 @@ Y ojo, eso no es magia — es lo que pasa cuando salís de ERA 1."
 
 **[23–30s] CTA**
 "Ve al enlace de mi perfil y haz el test gratuito de 5 minutos para descubrir en qué ERA está tu empresa y cómo salir de ahí."
-*Pantalla: 3g-ia-agents.com/diagnostico*
+*Pantalla: 3gi.cl/diagnostico*
 
 ### Texto LinkedIn/Facebook
 
@@ -392,7 +392,7 @@ a anticiparlas con datos en tiempo real — sin comprar nada nuevo.
 En este video te explico exactamente qué cambiaron y por qué
 pasar de ERA 1 a ERA 3 no empieza con tecnología.
 
-🔍 Descubre en qué ERA opera tu empresa → 3g-ia-agents.com/diagnostico
+🔍 Descubre en qué ERA opera tu empresa → 3gi.cl/diagnostico
 
 ---
 3G Intelligence ayuda a PyMEs latinoamericanas a pasar del caos operativo
@@ -450,7 +450,7 @@ Es automatizar sin saber dónde está la pérdida."
 
 **[23–30s] CTA**
 "Ve al enlace de mi perfil y haz el test gratuito de 5 minutos para descubrir dónde está perdiendo dinero tu empresa y por dónde empezar."
-*Pantalla: 3g-ia-agents.com/diagnostico*
+*Pantalla: 3gi.cl/diagnostico*
 
 ### Texto LinkedIn/Facebook
 
@@ -499,7 +499,7 @@ porque ahí es donde casi siempre está la fuga.
 El criterio no es "qué podés automatizar."
 Es "dónde está la pérdida real hoy."
 
-🔍 Descubre en qué ERA opera tu empresa → 3g-ia-agents.com/diagnostico
+🔍 Descubre en qué ERA opera tu empresa → 3gi.cl/diagnostico
 
 ---
 3G Intelligence ayuda a PyMEs latinoamericanas a pasar del caos operativo
@@ -557,7 +557,7 @@ Lo que importa es saber exactamente dónde estás hoy — no dónde creés estar
 
 **[23–30s] CTA**
 "Ve al enlace de mi perfil y haz el test gratuito de 5 minutos para descubrir en qué ERA opera tu empresa."
-*Pantalla: 3g-ia-agents.com/diagnostico*
+*Pantalla: 3gi.cl/diagnostico*
 
 ### Texto LinkedIn/Facebook
 
@@ -607,7 +607,7 @@ cuando llevás años en ella.
 En este video te explico qué define exactamente cada ERA
 y el error más común al auto-evaluarse.
 
-🔍 Descubre en qué ERA opera tu empresa → 3g-ia-agents.com/diagnostico
+🔍 Descubre en qué ERA opera tu empresa → 3gi.cl/diagnostico
 
 ---
 3G Intelligence ayuda a PyMEs latinoamericanas a pasar del caos operativo
@@ -660,7 +660,7 @@ es porque hay capacidad atrapada en tareas manuales que nadie está midiendo."
 
 **[23–30s] CTA**
 "Ve al enlace de mi perfil y haz el test gratuito de 5 minutos para descubrir cuánta capacidad está atrapada en tu empresa."
-*Pantalla: 3g-ia-agents.com/diagnostico*
+*Pantalla: 3gi.cl/diagnostico*
 
 ### Texto LinkedIn/Facebook
 
@@ -706,7 +706,7 @@ Los automatizamos. El equipo no se reemplazó — se liberó para lo que importa
 En este video te explico el caso paso a paso y por qué
 el límite de crecimiento no siempre es ventas.
 
-🔍 Descubre en qué ERA opera tu empresa → 3g-ia-agents.com/diagnostico
+🔍 Descubre en qué ERA opera tu empresa → 3gi.cl/diagnostico
 
 ---
 3G Intelligence ayuda a PyMEs latinoamericanas a pasar del caos operativo
@@ -761,7 +761,7 @@ Es cambiar cómo fluye la información dentro de tu empresa."
 
 **[23–30s] CTA**
 "Ve al enlace de mi perfil y haz el test gratuito de 5 minutos para descubrir en qué ERA está tu empresa y cómo salir de ahí."
-*Pantalla: 3g-ia-agents.com/diagnostico*
+*Pantalla: 3gi.cl/diagnostico*
 
 ### Texto LinkedIn/Facebook
 
@@ -814,7 +814,7 @@ y nadie lo sabe hasta que ya pasó.
 
 En este video te explico qué separa ERA 1 de ERA 2 y el salto concreto para salir.
 
-🔍 Descubre en qué ERA opera tu empresa → 3g-ia-agents.com/diagnostico
+🔍 Descubre en qué ERA opera tu empresa → 3gi.cl/diagnostico
 
 ---
 3G Intelligence ayuda a PyMEs latinoamericanas a pasar del caos operativo
@@ -871,7 +871,7 @@ Requiere cambiar el sistema operativo de tu empresa."
 
 **[23–30s] CTA**
 "Ve al enlace de mi perfil y haz el test gratuito de 5 minutos para descubrir en qué ERA está tu empresa y cómo salir de ahí."
-*Pantalla: 3g-ia-agents.com/diagnostico*
+*Pantalla: 3gi.cl/diagnostico*
 
 ### Texto LinkedIn/Facebook
 
@@ -917,7 +917,7 @@ La otra los miraba después de que el daño ya estaba hecho.
 En este video te explico exactamente qué cambiaron y por qué
 pasar de reactivo a proactivo no requiere más tecnología.
 
-🔍 Descubre en qué ERA opera tu empresa → 3g-ia-agents.com/diagnostico
+🔍 Descubre en qué ERA opera tu empresa → 3gi.cl/diagnostico
 
 ---
 3G Intelligence ayuda a PyMEs latinoamericanas a pasar del caos operativo
@@ -971,7 +971,7 @@ Pero tener sistemas no es lo mismo que usarlos para decidir."
 
 **[23–30s] CTA**
 "Ve al enlace de mi perfil y haz el test gratuito de 5 minutos para descubrir en qué sub-nivel exacto está tu empresa."
-*Pantalla: 3g-ia-agents.com/diagnostico*
+*Pantalla: 3gi.cl/diagnostico*
 
 ### Texto LinkedIn/Facebook
 
@@ -1016,7 +1016,7 @@ y un siguiente paso distinto.
 En este video te explico los 9 sub-niveles del Framework ERA y
 por qué tener sistemas no es lo mismo que usarlos para decidir.
 
-🔍 Descubre en qué sub-nivel exacto está tu empresa → 3g-ia-agents.com/diagnostico
+🔍 Descubre en qué sub-nivel exacto está tu empresa → 3gi.cl/diagnostico
 
 ---
 3G Intelligence ayuda a PyMEs latinoamericanas a pasar del caos operativo
@@ -1070,7 +1070,7 @@ Pero el primer paso siempre es el mismo: saber exactamente dónde estás."
 
 **[23–30s] CTA**
 "Ve al enlace de mi perfil y haz el test gratuito de 5 minutos. Sin llamada de ventas. Sin compromiso. Solo claridad."
-*Pantalla: 3g-ia-agents.com/diagnostico*
+*Pantalla: 3gi.cl/diagnostico*
 
 ### Descripción YouTube — Short 12
 
@@ -1087,7 +1087,7 @@ No lo que creés. Lo que dicen los datos.
 En este video te explico qué incluye el Test ERA
 y por qué es el primer paso antes de cualquier decisión de tecnología.
 
-🔍 Hacé el test gratuito → 3g-ia-agents.com/diagnostico
+🔍 Hacé el test gratuito → 3gi.cl/diagnostico
 
 ---
 3G Intelligence ayuda a PyMEs latinoamericanas a pasar del caos operativo
@@ -1140,7 +1140,7 @@ Te dice tu ERA exacta, dónde está la brecha, y cuánto te está costando no av
 Sin llamada de ventas. Sin compromiso.
 Solo claridad sobre dónde estás y qué sigue.
 
-3g-ia-agents.com/diagnostico
+3gi.cl/diagnostico
 
 ¿Cuánto tiempo llevas tomando decisiones sin ese dato?
 

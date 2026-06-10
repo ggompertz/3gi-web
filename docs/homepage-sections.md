@@ -35,5 +35,5 @@ El 4to card responde la objeción "¿me dejan solo con una herramienta?".
 ## Reglas de contenido
 
 - El diagnóstico tarda **menos de 5 minutos** — nunca mencionar "90 minutos" ni "2 horas"
-- CTA principal siempre a `/diagnostico`, nunca a Calendly ni a `app.3g-ia-agents.com`
+- CTA principal siempre a `/diagnostico`, nunca a Calendly ni a `app.3gi.cl`
 - Prueba social: datos anonimizados — nunca nombrar clientes sin autorización explícita

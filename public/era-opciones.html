@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ERA Framework — Mix A+B</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: #06060D; color: #EEF1F6; font-family: 'DM Sans', system-ui, sans-serif; padding: 40px 24px; max-width: 900px; margin: 0 auto; }
+  h1 { font-weight: 800; font-size: 22px; color: #00E891; margin-bottom: 6px; letter-spacing: -.02em; }
+  .intro { font-size: 14px; color: rgba(238,241,246,0.45); margin-bottom: 48px; }
+
+  .era-grid {
+    display: grid;
+    grid-template-columns: 150px 1fr 1fr 1fr;
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 16px;
+    overflow: hidden;
+  }
+
+  .dim-header {
+    background: transparent;
+    border-right: 1px solid rgba(255,255,255,0.06);
+    padding: 20px 22px;
+    display: flex;
+    align-items: flex-end;
+  }
+  .dim-header span {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+    color: rgba(238,241,246,0.25);
+  }
+
+  .era-header {
+    padding: 24px 22px 20px;
+    border-bottom: 2px solid;
+    border-right: 1px solid rgba(255,255,255,0.06);
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  .era-header:last-child { border-right: none; }
+  .h1 { background: rgba(220,38,38,0.1); border-bottom-color: #EF4444; }
+  .h2 { background: rgba(234,179,8,0.1); border-bottom-color: #EAB308; }
+  .h3 { background: rgba(0,232,145,0.1); border-bottom-color: #00E891; }
+
+  .era-badge { font-size: 10px; font-weight: 700; letter-spacing: .15em; text-transform: uppercase; }
+  .h1 .era-badge { color: #EF4444; }
+  .h2 .era-badge { color: #EAB308; }
+  .h3 .era-badge { color: #00E891; }
+
+  .era-icon { font-size: 28px; line-height: 1; }
+  .era-name { font-size: 16px; font-weight: 800; letter-spacing: -.01em; line-height: 1.25; }
+
+  .era-pills { display: flex; flex-wrap: wrap; gap: 5px; margin-top: 4px; }
+  .pill { font-size: 11px; color: rgba(238,241,246,0.55); background: rgba(255,255,255,0.05); padding: 3px 8px; border-radius: 20px; line-height: 1.4; }
+
+  .dim-cell {
+    background: rgba(255,255,255,0.02);
+    border-right: 1px solid rgba(255,255,255,0.06);
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+    padding: 16px 22px;
+    display: flex;
+    align-items: center;
+  }
+  .dim-cell span { font-size: 10px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: rgba(238,241,246,0.3); }
+
+  .data-cell {
+    padding: 16px 22px;
+    border-right: 1px solid rgba(255,255,255,0.06);
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+    font-size: 13px;
+    color: rgba(238,241,246,0.65);
+    line-height: 1.5;
+  }
+  .data-cell.c3 { color: rgba(238,241,246,0.88); background: rgba(0,232,145,0.04); }
+  .data-cell:last-child { border-right: none; }
+
+  .last .dim-cell, .last { border-bottom: none; }
+
+  .cta-row {
+    grid-column: 1 / -1;
+    background: rgba(0,232,145,0.07);
+    border-top: 1px solid rgba(0,232,145,0.2);
+    padding: 18px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+  }
+  .cta-text { font-size: 14px; font-weight: 700; color: #00E891; }
+  .cta-sub { font-size: 12px; color: rgba(238,241,246,0.4); margin-top: 2px; }
+  .cta-btn { background: #00E891; color: #06060D; font-size: 13px; font-weight: 700; padding: 10px 20px; border-radius: 8px; white-space: nowrap; flex-shrink: 0; }
+</style>
+</head>
+<body>
+
+<h1>Framework ERA 1 → ERA 3</h1>
+<p class="intro">¿En qué ERA está tu empresa hoy?</p>
+
+<div class="era-grid">
+
+  <div class="dim-header"><span>Dimensión</span></div>
+
+  <div class="era-header h1">
+    <div class="era-badge">ERA 1</div>
+    <div class="era-icon">🔥</div>
+    <div class="era-name">Caos Operativo</div>
+    <div class="era-pills">
+      <span class="pill">Decisiones por intuición</span>
+      <span class="pill">Sin datos</span>
+      <span class="pill">Todo depende de ti</span>
+    </div>
+  </div>
+
+  <div class="era-header h2">
+    <div class="era-badge">ERA 2</div>
+    <div class="era-icon">📊</div>
+    <div class="era-name">Datos Organizados</div>
+    <div class="era-pills">
+      <span class="pill">Sistemas existen</span>
+      <span class="pill">Datos en silos</span>
+      <span class="pill">Reportes manuales</span>
+    </div>
+  </div>
+
+  <div class="era-header h3">
+    <div class="era-badge">ERA 3</div>
+    <div class="era-icon">⚡</div>
+    <div class="era-name">Empresa con IA</div>
+    <div class="era-pills">
+      <span class="pill">IA maneja el volumen</span>
+      <span class="pill">Decisiones en tiempo real</span>
+      <span class="pill">Tú en la estrategia</span>
+    </div>
+  </div>
+
+  <div class="dim-cell"><span>Decisiones</span></div>
+  <div class="data-cell">Por intuición y experiencia del dueño</div>
+  <div class="data-cell">Con datos históricos, análisis manual</div>
+  <div class="data-cell c3">Con datos + IA que anticipa escenarios</div>
+
+  <div class="dim-cell"><span>Operación</span></div>
+  <div class="data-cell">Manual. Depende de personas clave</div>
+  <div class="data-cell">Parcial. Algunas tareas automatizadas</div>
+  <div class="data-cell c3">Flujos automáticos. La IA ejecuta sin intervención</div>
+
+  <div class="dim-cell"><span>Información</span></div>
+  <div class="data-cell">En correos, Excel o en la memoria de alguien</div>
+  <div class="data-cell">En sistemas, pero en silos sin conectar</div>
+  <div class="data-cell c3">Centralizada, conectada y en tiempo real</div>
+
+  <div class="dim-cell"><span>Tiempo del dueño</span></div>
+  <div class="data-cell">En el día a día y apagar incendios</div>
+  <div class="data-cell">En gestión y reportes manuales</div>
+  <div class="data-cell c3">En estrategia, clientes y crecimiento</div>
+
+  <div class="dim-cell last"><span>Para crecer</span></div>
+  <div class="data-cell last">Hay que contratar más gente</div>
+  <div class="data-cell last">Limitado por procesos manuales</div>
+  <div class="data-cell c3 last">La IA absorbe el volumen sin agregar costos</div>
+
+  <div class="cta-row">
+    <div>
+      <div class="cta-text">Movemos tu empresa a ERA 3</div>
+      <div class="cta-sub">Diagnóstico gratuito · menos de 5 minutos</div>
+    </div>
+    <div class="cta-btn">Hacer el diagnóstico →</div>
+  </div>
+
+</div>
+
+</body>
+</html>

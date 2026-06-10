@@ -67,7 +67,7 @@ const p = lang === 'en' ? '/en' : '';
     "url": "https://3g-ia-agents.com",
     "logo": "https://3g-ia-agents.com/isotipo.png",
     "description": "Consultoría de inteligencia artificial para PyMEs latinoamericanas. Diagnóstico + 5 fases F1→F5, automatización y roadmap de IA con ROI medible.",
-    "email": "chat@3g-ia-agents.com",
+    "email": "chat@3gi.cl",
     "telephone": "+56978780575",
     "areaServed": "Latinoamérica",
     "hasOfferCatalog": {
@@ -208,7 +208,7 @@ const p = lang === 'en' ? '/en' : '';
     .nav-cta { display: flex; gap: 10px; align-items: center; }
 
     /* HERO */
-    #hero { min-height: 100vh; display: flex; align-items: center; padding: 120px 0 80px; background: radial-gradient(ellipse 60% 50% at 70% 40%, rgba(0,232,145,0.06) 0%, transparent 60%), radial-gradient(ellipse 40% 40% at 20% 70%, rgba(0,158,96,0.04) 0%, transparent 60%), var(--night); position: relative; overflow: hidden; }
+    #hero { min-height: 100vh; display: flex; align-items: center; padding: 88px 0 40px; background: radial-gradient(ellipse 60% 50% at 70% 40%, rgba(0,232,145,0.06) 0%, transparent 60%), radial-gradient(ellipse 40% 40% at 20% 70%, rgba(0,158,96,0.04) 0%, transparent 60%), var(--night); position: relative; overflow: hidden; }
     #hero::before { content: ''; position: absolute; inset: 0; background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%2300E891' fill-opacity='0.025'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E"); opacity: 0.4; pointer-events: none; }
     .hero-tag { display: inline-flex; align-items: center; gap: 8px; padding: 6px 14px; border-radius: 20px; background: rgba(245,158,11,0.1); border: 1px solid rgba(245,158,11,0.25); font-size: 12px; font-weight: 500; color: var(--amber); letter-spacing: 0.05em; text-transform: uppercase; margin-bottom: 28px; }
     .hero-tag::before { content: ''; width: 6px; height: 6px; border-radius: 50%; background: var(--amber); animation: pulse-dot 2s infinite; }
@@ -398,11 +398,14 @@ const p = lang === 'en' ? '/en' : '';
 
     /* FOOTER */
     footer { background: var(--night-2); border-top: 1px solid var(--border); padding: 48px 0; }
-    .footer-inner { display: grid; grid-template-columns: auto 1fr auto; align-items: center; gap: 32px; }
+    .footer-inner { display: grid; grid-template-columns: auto 1fr auto auto; align-items: center; gap: 32px; }
     .footer-links { display: flex; gap: 24px; list-style: none; justify-content: center; flex-wrap: wrap; }
     .footer-links a { font-size: 13px; color: var(--muted); transition: color 0.2s; }
     .footer-links a:hover { color: var(--offwh); }
     .footer-copy { font-size: 13px; color: var(--muted); text-align: right; }
+    .footer-social { display: flex; gap: 14px; align-items: center; justify-content: center; }
+    .footer-social a { color: var(--muted); transition: color 0.2s; display: flex; }
+    .footer-social a:hover { color: var(--green); }
 
     /* ANIMATIONS */
     .fade-up { opacity: 0; transform: translateY(24px); transition: opacity 0.6s ease, transform 0.6s ease; }
@@ -466,8 +469,9 @@ const p = lang === 'en' ? '/en' : '';
       .nav-cta .lang-toggle { display: none; }
       .nav-cta .btn-outline { display: none; }
       .nav-cta .btn-primary { display: none; }
-      .footer-inner { grid-template-columns: 1fr; text-align: center; }
+      .footer-inner { grid-template-columns: 1fr; text-align: center; gap: 20px; }
       .footer-copy { text-align: center; }
+      .footer-social { justify-content: center; }
     }
     @media (max-width: 640px) {
       .era-scroll-wrap { display: none; }
@@ -517,7 +521,7 @@ const p = lang === 'en' ? '/en' : '';
         <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
         <span data-i18n="nav-whatsapp">WhatsApp</span>
       </a>
-      <a href="https://calendly.com/escribeme-3g-ia-agents/diagnostico-base-en-30-min" target="_blank" class="btn btn-primary" style="padding:10px 20px; font-size:14px;" data-i18n="nav-cta">Agendar reunión</a>
+      <a href="https://calendly.com/chat-3gi/diagnostico-base-en-30-min" target="_blank" class="btn btn-primary" style="padding:10px 20px; font-size:14px;" data-i18n="nav-cta">Agendar reunión</a>
       <button class="nav-burger" id="navBurger" aria-label="Abrir menú" aria-expanded="false">
         <span></span><span></span><span></span>
       </button>
@@ -540,7 +544,7 @@ const p = lang === 'en' ? '/en' : '';
       <button class={`lang-btn${lang === 'es' ? ' active' : ''}`} onclick={`window.location.href='${esPath}'`}>ES</button>
       <button class={`lang-btn${lang === 'en' ? ' active' : ''}`} onclick={`window.location.href='${enPath}'`}>EN</button>
     </div>
-    <a href="https://calendly.com/escribeme-3g-ia-agents/diagnostico-base-en-30-min" target="_blank" class="btn btn-primary btn-lg" style="width:100%; justify-content:center;" data-i18n="nav-cta">Agendar reunión</a>
+    <a href="https://calendly.com/chat-3gi/diagnostico-base-en-30-min" target="_blank" class="btn btn-primary btn-lg" style="width:100%; justify-content:center;" data-i18n="nav-cta">Agendar reunión</a>
     <a href="https://wa.me/56978780575" target="_blank" class="btn btn-whatsapp" style="width:100%; justify-content:center;">
       <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
       WhatsApp
@@ -563,6 +567,23 @@ const p = lang === 'en' ? '/en' : '';
         <li><a href={`${p}/nosotros`}>Nosotros</a></li>
         <li><a href={`${p}/contenido`}>Contenido</a></li>
       </ul>
+      <div class="footer-social">
+        <a href="https://www.linkedin.com/company/3g-intelligence" target="_blank" rel="noopener" aria-label="LinkedIn">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg>
+        </a>
+        <a href="https://www.youtube.com/@3gintelligence" target="_blank" rel="noopener" aria-label="YouTube">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M10 15l5.19-3L10 9v6m11.56-7.83c.13.47.22 1.1.28 1.9.07.8.1 1.49.1 2.09L22 12c0 2.19-.16 3.8-.44 4.83-.25.9-.83 1.48-1.73 1.73-.47.13-1.33.22-2.65.28-1.3.07-2.49.1-3.59.1L12 19c-4.19 0-6.8-.16-7.83-.44-.9-.25-1.48-.83-1.73-1.73-.13-.47-.22-1.1-.28-1.9-.07-.8-.1-1.49-.1-2.09L2 12c0-2.19.16-3.8.44-4.83.25-.9.83-1.48 1.73-1.73.47-.13 1.33-.22 2.65-.28 1.3-.07 2.49-.1 3.59-.1L12 5c4.19 0 6.8.16 7.83.44.9.25 1.48.83 1.73 1.73z"/></svg>
+        </a>
+        <a href="https://www.instagram.com/3gintelligence" target="_blank" rel="noopener" aria-label="Instagram">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2m-.2 2A3.6 3.6 0 0 0 4 7.6v8.8C4 18.39 5.61 20 7.6 20h8.8a3.6 3.6 0 0 0 3.6-3.6V7.6C20 5.61 18.39 4 16.4 4H7.6m9.65 1.5a1.25 1.25 0 0 1 1.25 1.25A1.25 1.25 0 0 1 17.25 8 1.25 1.25 0 0 1 16 6.75a1.25 1.25 0 0 1 1.25-1.25M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3z"/></svg>
+        </a>
+        <a href="https://www.facebook.com/3gintelligence" target="_blank" rel="noopener" aria-label="Facebook">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.04c-5.5 0-10 4.49-10 10.02 0 5 3.66 9.15 8.44 9.9v-7H7.9v-2.9h2.54V9.85c0-2.51 1.49-3.89 3.78-3.89 1.09 0 2.23.19 2.23.19v2.47h-1.26c-1.24 0-1.63.77-1.63 1.56v1.88h2.78l-.45 2.9h-2.33v7a10 10 0 0 0 8.44-9.9c0-5.53-4.5-10.02-10-10.02z"/></svg>
+        </a>
+        <a href="https://www.tiktok.com/@3g_intelligence" target="_blank" rel="noopener" aria-label="TikTok">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 0 0-.79-.05 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.33-6.34V8.69a8.18 8.18 0 0 0 4.78 1.52V6.76a4.85 4.85 0 0 1-1.01-.07z"/></svg>
+        </a>
+      </div>
       <div class="footer-copy">© 2026 3G Intelligence · <a href="/privacidad" style="color:inherit; text-decoration:underline; text-underline-offset:3px; opacity:0.6;">Privacidad</a></div>
     </div>
   </div>
@@ -614,7 +635,7 @@ const T = {
     'nav-nosotros': 'Nosotros', 'nav-contenido': 'Contenido',
     'nav-whatsapp': 'WhatsApp', 'nav-cta': 'Agendar reunión',
     'hero-tag': 'Diagnóstico de IA para PyMEs · Chile y LATAM',
-    'hero-title': '¿Cuánto le está costando a tu empresa<br>operar sin IA este mes?<br><em>No lo sabes. Ese es el problema.</em>',
+    'hero-title': '¿Cuánto le está costando a tu empresa operar sin IA este mes?<br><em>No lo sabes. Ese es el problema.</em>',
     'hero-sub': 'La mayoría de las PyMEs pierde entre USD 30.000 y 150.000 anuales en procesos que ya podrían estar automatizados. En 3 semanas identificamos exactamente cuáles son los tuyos — y te entregamos el roadmap concreto para resolverlos.',
     'hero-btn-calendar': 'Hacer el Test ERA', 'hero-btn-wa': 'Escribir por WhatsApp',
     'proof-1': 'semanas de diagnóstico', 'proof-2': 'ROI documentado · caso real Chile',
@@ -709,7 +730,7 @@ const T = {
     'cta-title': 'El informe es tuyo.<br><span>Sin importar qué decidas después.</span>',
     'cta-sub': 'No es una llamada de ventas. Es un análisis real de tu empresa: qué automatizar, en qué orden, con qué inversión y con qué retorno proyectado. Si decides no avanzar con 3GI, el informe queda en tus manos.',
     'cta-btn-calendar': 'Quiero saber cuánto estoy perdiendo', 'cta-btn-wa': 'Escribir por WhatsApp',
-    'cta-fine': 'O escríbenos a <a href="mailto:chat@3g-ia-agents.com" style="color:var(--amber);">chat@3g-ia-agents.com</a>',
+    'cta-fine': 'O escríbenos a <a href="mailto:chat@3gi.cl" style="color:var(--amber);">chat@3gi.cl</a>',
     'pq-tag': 'Empresas que movemos',
     'pq-title': '¿Tiene sentido para<br>mi empresa?',
     'pq-sub': 'Trabajamos con PyMEs de distintos rubros en LATAM. Si tu empresa tiene procesos repetibles y quieres decidir con datos, el método funciona.',
@@ -739,7 +760,7 @@ const T = {
     'nav-nosotros': 'About', 'nav-contenido': 'Content',
     'nav-whatsapp': 'WhatsApp', 'nav-cta': 'Schedule a meeting',
     'hero-tag': 'AI Diagnosis for SMEs · Chile & LATAM',
-    'hero-title': 'How much is your company losing<br>by not using AI this month?<br><em>You don\'t know. That\'s the problem.</em>',
+    'hero-title': 'How much is your company losing by not using AI this month?<br><em>You don\'t know. That\'s the problem.</em>',
     'hero-sub': 'Most SMEs lose between USD 30,000 and 150,000 per year in processes that could already be automated. In 3 weeks we identify exactly which ones are yours — and deliver the concrete roadmap to fix them.',
     'hero-btn-calendar': 'Take the ERA Test', 'hero-btn-wa': 'Write on WhatsApp',
     'proof-1': 'weeks of diagnosis', 'proof-2': 'documented ROI · real case Chile',
@@ -834,7 +855,7 @@ const T = {
     'cta-title': 'The report is yours.<br><span>Whatever you decide afterward.</span>',
     'cta-sub': 'This is not a sales call. It\'s a real analysis of your company: what to automate, in what order, with what investment and what projected return. If you decide not to move forward with 3GI, the report stays in your hands.',
     'cta-btn-calendar': 'I want to know what I\'m losing', 'cta-btn-wa': 'Write on WhatsApp',
-    'cta-fine': 'Or write to us at <a href="mailto:chat@3g-ia-agents.com" style="color:var(--amber);">chat@3g-ia-agents.com</a>',
+    'cta-fine': 'Or write to us at <a href="mailto:chat@3gi.cl" style="color:var(--amber);">chat@3gi.cl</a>',
     'pq-tag': 'Companies we move',
     'pq-title': 'Does this make sense<br>for my company?',
     'pq-sub': 'We work with SMEs across different industries in LATAM. If your company has repeatable processes and you want to make data-driven decisions, the method works.',
