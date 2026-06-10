@@ -57,11 +57,15 @@ h1{font-family:'Syne',sans-serif;font-size:clamp(24px,5vw,34px);font-weight:900;
 
 /* Result */
 #result-step{display:none}
-.era-grid{display:flex;gap:12px;margin-bottom:24px}
-.era-card{flex:1;background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:18px;text-align:center}
-.era-card-dim{font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:4px}
-.era-card-val{font-family:'Syne',sans-serif;font-size:22px;font-weight:900;margin-bottom:2px}
-.era-card-name{font-size:11px;color:var(--muted)}
+.result-sub{font-size:13px;color:var(--muted);line-height:1.6;margin:-4px 0 20px}
+.era-result-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:24px}
+.era-result-card{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:20px;border-top:3px solid transparent}
+.era-result-dim{font-size:10px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-bottom:8px}
+.era-result-val{font-family:'Syne',sans-serif;font-size:28px;font-weight:900;margin-bottom:2px;line-height:1}
+.era-result-name{font-size:12px;color:var(--muted);margin-bottom:14px}
+.era-score-bar{height:4px;background:var(--border);border-radius:2px;overflow:hidden;margin-bottom:4px}
+.era-score-fill{height:100%;border-radius:2px;transition:width .6s ease}
+.era-score-label{font-size:10px;color:var(--muted)}
 .result-section{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:20px 22px;margin-bottom:12px}
 .result-section-label{font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-bottom:8px}
 .result-section-text{font-size:14px;color:var(--offwh);line-height:1.65}
@@ -173,7 +177,8 @@ input.otp-input:focus{border-color:rgba(245,158,11,0.55)}
 <div id="result-step">
   <div class="eyebrow">Tu Test ERA</div>
   <h1 id="result-headline">Así está tu empresa hoy</h1>
-  <div class="era-grid" id="era-grid"></div>
+  <p class="result-sub" id="result-sub"></p>
+  <div class="era-result-grid" id="era-grid"></div>
   <div class="result-section" id="result-interpretation"></div>
   <div class="result-section" id="result-gap"></div>
 
@@ -452,17 +457,29 @@ function showResult() {
     window._eraOp = eraOpStr;
     window._eraCom = eraComStr;
 
-    // ERA grid
+    // Score percentages for bars
+    const opPct = Math.round((opScore / 10) * 100);
+    const comPct = Math.round((comScore / 10) * 100);
+
+    // Result sub-headline
+    document.getElementById('result-sub').textContent =
+      `${ERA_NAMES[eraOp]} en lo operacional · ${ERA_NAMES[eraCom]} en lo comercial`;
+
+    // ERA grid with score bars
     document.getElementById('era-grid').innerHTML = `
-      <div class="era-card">
-        <div class="era-card-dim">Operacional</div>
-        <div class="era-card-val" style="color:${ERA_COLORS[eraOp]}">${eraOpStr}</div>
-        <div class="era-card-name">${ERA_NAMES[eraOp]}</div>
+      <div class="era-result-card" style="border-top-color:${ERA_COLORS[eraOp]}">
+        <div class="era-result-dim">Operacional</div>
+        <div class="era-result-val" style="color:${ERA_COLORS[eraOp]}">${eraOpStr}</div>
+        <div class="era-result-name">${ERA_NAMES[eraOp]}</div>
+        <div class="era-score-bar"><div class="era-score-fill" style="width:${opPct}%;background:${ERA_COLORS[eraOp]}"></div></div>
+        <div class="era-score-label">${opScore}/10 puntos</div>
       </div>
-      <div class="era-card">
-        <div class="era-card-dim">Comercial</div>
-        <div class="era-card-val" style="color:${ERA_COLORS[eraCom]}">${eraComStr}</div>
-        <div class="era-card-name">${ERA_NAMES[eraCom]}</div>
+      <div class="era-result-card" style="border-top-color:${ERA_COLORS[eraCom]}">
+        <div class="era-result-dim">Comercial</div>
+        <div class="era-result-val" style="color:${ERA_COLORS[eraCom]}">${eraComStr}</div>
+        <div class="era-result-name">${ERA_NAMES[eraCom]}</div>
+        <div class="era-score-bar"><div class="era-score-fill" style="width:${comPct}%;background:${ERA_COLORS[eraCom]}"></div></div>
+        <div class="era-score-label">${comScore}/10 puntos</div>
       </div>
     `;
 
