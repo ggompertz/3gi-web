@@ -210,11 +210,11 @@ const p = lang === 'en' ? '/en' : '';
     /* HERO */
     #hero { min-height: 100vh; display: flex; align-items: center; padding: 120px 0 80px; background: radial-gradient(ellipse 60% 50% at 70% 40%, rgba(0,232,145,0.06) 0%, transparent 60%), radial-gradient(ellipse 40% 40% at 20% 70%, rgba(0,158,96,0.04) 0%, transparent 60%), var(--night); position: relative; overflow: hidden; }
     #hero::before { content: ''; position: absolute; inset: 0; background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%2300E891' fill-opacity='0.025'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E"); opacity: 0.4; pointer-events: none; }
-    .hero-tag { display: inline-flex; align-items: center; gap: 8px; padding: 6px 14px; border-radius: 20px; background: rgba(0,232,145,0.1); border: 1px solid rgba(0,232,145,0.2); font-size: 12px; font-weight: 500; color: var(--green); letter-spacing: 0.05em; text-transform: uppercase; margin-bottom: 28px; }
-    .hero-tag::before { content: ''; width: 6px; height: 6px; border-radius: 50%; background: var(--green); animation: pulse-dot 2s infinite; }
+    .hero-tag { display: inline-flex; align-items: center; gap: 8px; padding: 6px 14px; border-radius: 20px; background: rgba(245,158,11,0.1); border: 1px solid rgba(245,158,11,0.25); font-size: 12px; font-weight: 500; color: var(--amber); letter-spacing: 0.05em; text-transform: uppercase; margin-bottom: 28px; }
+    .hero-tag::before { content: ''; width: 6px; height: 6px; border-radius: 50%; background: var(--amber); animation: pulse-dot 2s infinite; }
     @keyframes pulse-dot { 0%,100% { opacity: 1; transform: scale(1); } 50% { opacity: 0.5; transform: scale(0.8); } }
     .hero-title { font-family: 'Syne', sans-serif; font-weight: 800; font-size: var(--fs-hero); line-height: 1.0; letter-spacing: -0.03em; margin-bottom: 24px; max-width: 860px; }
-    .hero-title em { color: var(--green); font-style: normal; }
+    .hero-title em { color: var(--amber); font-style: normal; }
     .hero-sub { font-size: clamp(16px, 2vw, 20px); font-weight: 300; color: rgba(238,241,246,0.65); max-width: 560px; line-height: 1.6; margin-bottom: 40px; }
     .hero-ctas { display: flex; gap: 12px; flex-wrap: wrap; }
     .hero-proof { margin-top: 64px; padding-top: 40px; border-top: 1px solid var(--border); display: flex; align-items: center; gap: 40px; flex-wrap: wrap; }
@@ -224,7 +224,7 @@ const p = lang === 'en' ? '/en' : '';
     .proof-divider { width: 1px; height: 40px; background: var(--border); align-self: center; }
 
     /* SECTION COMMON */
-    .section-tag { font-family: 'Syne', sans-serif; font-size: 11px; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: var(--green); margin-bottom: 16px; }
+    .section-tag { font-family: 'Syne', sans-serif; font-size: 11px; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: var(--amber); margin-bottom: 16px; }
     .section-title { font-family: 'Syne', sans-serif; font-weight: 800; font-size: var(--fs-h2); letter-spacing: -0.025em; line-height: 1.1; margin-bottom: 16px; }
     .section-sub { font-size: 17px; font-weight: 300; color: rgba(238,241,246,0.6); max-width: 580px; line-height: 1.6; margin-bottom: 48px; }
 
@@ -359,7 +359,7 @@ const p = lang === 'en' ? '/en' : '';
     .pq-label { font-family: 'Syne', sans-serif; font-weight: 800; font-size: 15px; margin-bottom: 6px; line-height: 1.2; }
     .pq-desc { font-size: 13px; color: var(--muted); line-height: 1.6; }
     .pq-size-strip { margin-top: 32px; padding: 18px 24px; background: rgba(0,232,145,0.04); border: 1px solid rgba(0,232,145,0.12); border-radius: 10px; display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
-    .pq-size-label { font-size: 12px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--green); flex-shrink: 0; }
+    .pq-size-label { font-size: 12px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--amber); flex-shrink: 0; }
     .pq-size-items { display: flex; gap: 12px; flex-wrap: wrap; }
     .pq-size-item { font-size: 13px; color: rgba(238,241,246,0.7); padding: 4px 12px; border-radius: 20px; border: 1px solid var(--border); background: var(--night-3); }
 
@@ -383,16 +383,16 @@ const p = lang === 'en' ? '/en' : '';
     /* CTA FINAL */
     #cta-final { background: linear-gradient(135deg, #0D1A12 0%, #06060D 50%, #0A0D1A 100%); text-align: center; padding: 120px 0; position: relative; overflow: hidden; }
     #cta-final::before { content: ''; position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); width: 600px; height: 600px; border-radius: 50%; background: radial-gradient(circle, rgba(0,232,145,0.07) 0%, transparent 70%); pointer-events: none; }
-    .cta-eyebrow { font-size: 11px; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: var(--green); margin-bottom: 20px; }
+    .cta-eyebrow { font-size: 11px; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: var(--amber); margin-bottom: 20px; }
     .cta-title { font-family: 'Syne', sans-serif; font-weight: 800; font-size: clamp(32px, 5vw, 56px); letter-spacing: -0.03em; line-height: 1.05; max-width: 680px; margin: 0 auto 20px; }
-    .cta-title span { color: var(--green); }
+    .cta-title span { color: var(--amber); }
     .cta-sub { font-size: 17px; font-weight: 300; color: rgba(238,241,246,0.55); margin-bottom: 44px; }
     .cta-buttons { display: flex; align-items: center; justify-content: center; gap: 14px; flex-wrap: wrap; }
     .cta-fine { margin-top: 20px; font-size: 13px; color: var(--muted); }
 
     /* INNER PAGES */
     .page-hero { padding: 140px 0 72px; background: var(--night-2); border-bottom: 1px solid var(--border); }
-    .page-tag { font-family: 'Syne', sans-serif; font-size: 11px; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: var(--green); margin-bottom: 16px; }
+    .page-tag { font-family: 'Syne', sans-serif; font-size: 11px; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: var(--amber); margin-bottom: 16px; }
     .page-title { font-family: 'Syne', sans-serif; font-weight: 800; font-size: clamp(32px, 5vw, 56px); letter-spacing: -0.03em; line-height: 1.05; margin-bottom: 16px; }
     .page-sub { font-size: 18px; font-weight: 300; color: rgba(238,241,246,0.6); max-width: 560px; line-height: 1.65; }
 
@@ -709,7 +709,7 @@ const T = {
     'cta-title': 'El informe es tuyo.<br><span>Sin importar qué decidas después.</span>',
     'cta-sub': 'No es una llamada de ventas. Es un análisis real de tu empresa: qué automatizar, en qué orden, con qué inversión y con qué retorno proyectado. Si decides no avanzar con 3GI, el informe queda en tus manos.',
     'cta-btn-calendar': 'Quiero saber cuánto estoy perdiendo', 'cta-btn-wa': 'Escribir por WhatsApp',
-    'cta-fine': 'O escríbenos a <a href="mailto:chat@3g-ia-agents.com" style="color:var(--green);">chat@3g-ia-agents.com</a>',
+    'cta-fine': 'O escríbenos a <a href="mailto:chat@3g-ia-agents.com" style="color:var(--amber);">chat@3g-ia-agents.com</a>',
     'pq-tag': 'Empresas que movemos',
     'pq-title': '¿Tiene sentido para<br>mi empresa?',
     'pq-sub': 'Trabajamos con PyMEs de distintos rubros en LATAM. Si tu empresa tiene procesos repetibles y quieres decidir con datos, el método funciona.',
@@ -834,7 +834,7 @@ const T = {
     'cta-title': 'The report is yours.<br><span>Whatever you decide afterward.</span>',
     'cta-sub': 'This is not a sales call. It\'s a real analysis of your company: what to automate, in what order, with what investment and what projected return. If you decide not to move forward with 3GI, the report stays in your hands.',
     'cta-btn-calendar': 'I want to know what I\'m losing', 'cta-btn-wa': 'Write on WhatsApp',
-    'cta-fine': 'Or write to us at <a href="mailto:chat@3g-ia-agents.com" style="color:var(--green);">chat@3g-ia-agents.com</a>',
+    'cta-fine': 'Or write to us at <a href="mailto:chat@3g-ia-agents.com" style="color:var(--amber);">chat@3g-ia-agents.com</a>',
     'pq-tag': 'Companies we move',
     'pq-title': 'Does this make sense<br>for my company?',
     'pq-sub': 'We work with SMEs across different industries in LATAM. If your company has repeatable processes and you want to make data-driven decisions, the method works.',
