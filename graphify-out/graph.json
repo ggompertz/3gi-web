@@ -4,11 +4,209 @@
   "graph": {},
   "nodes": [
     {
+      "label": "PLAN_AVANCE.md",
+      "file_type": "document",
+      "source_file": "PLAN_AVANCE.md",
+      "source_location": "L1",
+      "community": 13,
+      "norm_label": "plan_avance.md",
+      "id": "plan_avance_md"
+    },
+    {
+      "label": "Plan de Avance \u2014 Brand Refresh + Web Redesign + Test ERA",
+      "file_type": "document",
+      "source_file": "PLAN_AVANCE.md",
+      "source_location": "L1",
+      "community": 13,
+      "norm_label": "plan de avance \u2014 brand refresh + web redesign + test era",
+      "id": "3gi_web_plan_avance_plan_de_avance_brand_refresh_web_redesign_test_era"
+    },
+    {
+      "label": "Estado general",
+      "file_type": "document",
+      "source_file": "PLAN_AVANCE.md",
+      "source_location": "L12",
+      "community": 13,
+      "norm_label": "estado general",
+      "id": "3gi_web_plan_avance_estado_general"
+    },
+    {
+      "label": "Contexto de decisiones de dise\u00f1o",
+      "file_type": "document",
+      "source_file": "PLAN_AVANCE.md",
+      "source_location": "L26",
+      "community": 13,
+      "norm_label": "contexto de decisiones de diseno",
+      "id": "3gi_web_plan_avance_contexto_de_decisiones_de_dise_o"
+    },
+    {
+      "label": "FASE 1 \u2014 Archivos de marca",
+      "file_type": "document",
+      "source_file": "PLAN_AVANCE.md",
+      "source_location": "L40",
+      "community": 13,
+      "norm_label": "fase 1 \u2014 archivos de marca",
+      "id": "3gi_web_plan_avance_fase_1_archivos_de_marca"
+    },
+    {
+      "label": "FASE 2 \u2014 Redise\u00f1o web 3gi-web",
+      "file_type": "document",
+      "source_file": "PLAN_AVANCE.md",
+      "source_location": "L54",
+      "community": 13,
+      "norm_label": "fase 2 \u2014 rediseno web 3gi-web",
+      "id": "3gi_web_plan_avance_fase_2_redise_o_web_3gi_web"
+    },
+    {
+      "label": "FASE 3 \u2014 Test ERA: dise\u00f1o + funcionalidades",
+      "file_type": "document",
+      "source_file": "PLAN_AVANCE.md",
+      "source_location": "L69",
+      "community": 13,
+      "norm_label": "fase 3 \u2014 test era: diseno + funcionalidades",
+      "id": "3gi_web_plan_avance_fase_3_test_era_dise_o_funcionalidades"
+    },
+    {
+      "label": "Deploy",
+      "file_type": "document",
+      "source_file": "PLAN_AVANCE.md",
+      "source_location": "L84",
+      "community": 13,
+      "norm_label": "deploy",
+      "id": "3gi_web_plan_avance_deploy"
+    },
+    {
+      "label": "Report artifact",
+      "file_type": "document",
+      "source_file": "PLAN_AVANCE.md",
+      "source_location": "L96",
+      "community": 13,
+      "norm_label": "report artifact",
+      "id": "3gi_web_plan_avance_report_artifact"
+    },
+    {
+      "label": "Checklist final pre-merge",
+      "file_type": "document",
+      "source_file": "PLAN_AVANCE.md",
+      "source_location": "L106",
+      "community": 13,
+      "norm_label": "checklist final pre-merge",
+      "id": "3gi_web_plan_avance_checklist_final_pre_merge"
+    },
+    {
+      "label": "code:block1 ([ ] npm run build sin errores)",
+      "file_type": "document",
+      "source_file": "PLAN_AVANCE.md",
+      "source_location": "L108",
+      "community": 13,
+      "norm_label": "code:block1 ([ ] npm run build sin errores)",
+      "id": "3gi_web_plan_avance_codeblock_1"
+    },
+    {
+      "label": "Notas de sesi\u00f3n",
+      "file_type": "document",
+      "source_file": "PLAN_AVANCE.md",
+      "source_location": "L128",
+      "community": 13,
+      "norm_label": "notas de sesion",
+      "id": "3gi_web_plan_avance_notas_de_sesi_n"
+    },
+    {
+      "label": "Sesiones de trabajo",
+      "file_type": "document",
+      "source_file": "PLAN_AVANCE.md",
+      "source_location": "L143",
+      "community": 13,
+      "norm_label": "sesiones de trabajo",
+      "id": "3gi_web_plan_avance_sesiones_de_trabajo"
+    },
+    {
+      "label": "ONBOARDING.md",
+      "file_type": "document",
+      "source_file": "ONBOARDING.md",
+      "source_location": "L1",
+      "community": 17,
+      "norm_label": "onboarding.md",
+      "id": "onboarding_md"
+    },
+    {
+      "label": "Welcome to 3GI Web",
+      "file_type": "document",
+      "source_file": "ONBOARDING.md",
+      "source_location": "L1",
+      "community": 17,
+      "norm_label": "welcome to 3gi web",
+      "id": "3gi_web_onboarding_welcome_to_3gi_web"
+    },
+    {
+      "label": "How We Use Claude",
+      "file_type": "document",
+      "source_file": "ONBOARDING.md",
+      "source_location": "L3",
+      "community": 17,
+      "norm_label": "how we use claude",
+      "id": "3gi_web_onboarding_how_we_use_claude"
+    },
+    {
+      "label": "Your Setup Checklist",
+      "file_type": "document",
+      "source_file": "ONBOARDING.md",
+      "source_location": "L17",
+      "community": 17,
+      "norm_label": "your setup checklist",
+      "id": "3gi_web_onboarding_your_setup_checklist"
+    },
+    {
+      "label": "Codebases",
+      "file_type": "document",
+      "source_file": "ONBOARDING.md",
+      "source_location": "L19",
+      "community": 17,
+      "norm_label": "codebases",
+      "id": "3gi_web_onboarding_codebases"
+    },
+    {
+      "label": "MCP Servers to Activate",
+      "file_type": "document",
+      "source_file": "ONBOARDING.md",
+      "source_location": "L22",
+      "community": 17,
+      "norm_label": "mcp servers to activate",
+      "id": "3gi_web_onboarding_mcp_servers_to_activate"
+    },
+    {
+      "label": "Skills to Know About",
+      "file_type": "document",
+      "source_file": "ONBOARDING.md",
+      "source_location": "L25",
+      "community": 17,
+      "norm_label": "skills to know about",
+      "id": "3gi_web_onboarding_skills_to_know_about"
+    },
+    {
+      "label": "Team Tips",
+      "file_type": "document",
+      "source_file": "ONBOARDING.md",
+      "source_location": "L29",
+      "community": 17,
+      "norm_label": "team tips",
+      "id": "3gi_web_onboarding_team_tips"
+    },
+    {
+      "label": "Get Started",
+      "file_type": "document",
+      "source_file": "ONBOARDING.md",
+      "source_location": "L33",
+      "community": 17,
+      "norm_label": "get started",
+      "id": "3gi_web_onboarding_get_started"
+    },
+    {
       "label": "AGENTS.md",
       "file_type": "document",
       "source_file": "/root/3gi-web/AGENTS.md",
       "source_location": "L1",
-      "community": 22,
+      "community": 24,
       "norm_label": "agents.md",
       "id": "root_3gi_web_agents_md"
     },
@@ -17,7 +215,7 @@
       "file_type": "document",
       "source_file": "/root/3gi-web/AGENTS.md",
       "source_location": "L1",
-      "community": 22,
+      "community": 24,
       "norm_label": "graphify",
       "id": "3gi_web_agents_graphify"
     },
@@ -26,7 +224,7 @@
       "file_type": "document",
       "source_file": "/root/3gi-web/CLAUDE.md",
       "source_location": "L1",
-      "community": 23,
+      "community": 25,
       "norm_label": "claude.md",
       "id": "root_3gi_web_claude_md"
     },
@@ -35,7 +233,7 @@
       "file_type": "document",
       "source_file": "/root/3gi-web/CLAUDE.md",
       "source_location": "L1",
-      "community": 23,
+      "community": 25,
       "norm_label": "graphify",
       "id": "3gi_web_claude_graphify"
     },
@@ -44,7 +242,7 @@
       "file_type": "document",
       "source_file": "/root/3gi-web/README.md",
       "source_location": "L1",
-      "community": 11,
+      "community": 12,
       "norm_label": "readme.md",
       "id": "root_3gi_web_readme_md"
     },
@@ -53,7 +251,7 @@
       "file_type": "document",
       "source_file": "/root/3gi-web/README.md",
       "source_location": "L1",
-      "community": 11,
+      "community": 12,
       "norm_label": "3gi web \u2014 sitio publico de 3g intelligence",
       "id": "3gi_web_readme_3gi_web_sitio_p_blico_de_3g_intelligence"
     },
@@ -62,7 +260,7 @@
       "file_type": "document",
       "source_file": "/root/3gi-web/README.md",
       "source_location": "L5",
-      "community": 11,
+      "community": 12,
       "norm_label": "stack",
       "id": "3gi_web_readme_stack"
     },
@@ -71,7 +269,7 @@
       "file_type": "document",
       "source_file": "/root/3gi-web/README.md",
       "source_location": "L13",
-      "community": 11,
+      "community": 12,
       "norm_label": "estructura",
       "id": "3gi_web_readme_estructura"
     },
@@ -80,7 +278,7 @@
       "file_type": "document",
       "source_file": "/root/3gi-web/README.md",
       "source_location": "L15",
-      "community": 11,
+      "community": 12,
       "norm_label": "code:block1 (src/)",
       "id": "3gi_web_readme_codeblock_1"
     },
@@ -89,7 +287,7 @@
       "file_type": "document",
       "source_file": "/root/3gi-web/README.md",
       "source_location": "L34",
-      "community": 11,
+      "community": 12,
       "norm_label": "branding",
       "id": "3gi_web_readme_branding"
     },
@@ -98,7 +296,7 @@
       "file_type": "document",
       "source_file": "/root/3gi-web/README.md",
       "source_location": "L47",
-      "community": 11,
+      "community": 12,
       "norm_label": "nomenclatura obligatoria",
       "id": "3gi_web_readme_nomenclatura_obligatoria"
     },
@@ -107,7 +305,7 @@
       "file_type": "document",
       "source_file": "/root/3gi-web/README.md",
       "source_location": "L53",
-      "community": 11,
+      "community": 12,
       "norm_label": "paginas y proposito",
       "id": "3gi_web_readme_p_ginas_y_prop_sito"
     },
@@ -116,7 +314,7 @@
       "file_type": "document",
       "source_file": "/root/3gi-web/README.md",
       "source_location": "L65",
-      "community": 11,
+      "community": 12,
       "norm_label": "seo / aeo",
       "id": "3gi_web_readme_seo_aeo"
     },
@@ -125,7 +323,7 @@
       "file_type": "document",
       "source_file": "/root/3gi-web/README.md",
       "source_location": "L74",
-      "community": 11,
+      "community": 12,
       "norm_label": "i18n",
       "id": "3gi_web_readme_i18n"
     },
@@ -134,7 +332,7 @@
       "file_type": "document",
       "source_file": "/root/3gi-web/README.md",
       "source_location": "L83",
-      "community": 11,
+      "community": 12,
       "norm_label": "deploy",
       "id": "3gi_web_readme_deploy"
     },
@@ -143,7 +341,7 @@
       "file_type": "document",
       "source_file": "/root/3gi-web/README.md",
       "source_location": "L85",
-      "community": 11,
+      "community": 12,
       "norm_label": "code:bash (# build)",
       "id": "3gi_web_readme_codeblock_2"
     },
@@ -152,7 +350,7 @@
       "file_type": "document",
       "source_file": "/root/3gi-web/README.md",
       "source_location": "L95",
-      "community": 11,
+      "community": 12,
       "norm_label": "contenido semanal",
       "id": "3gi_web_readme_contenido_semanal"
     },
@@ -161,7 +359,7 @@
       "file_type": "document",
       "source_file": "/root/3gi-web/README.md",
       "source_location": "L101",
-      "community": 11,
+      "community": 12,
       "norm_label": "variables de entorno",
       "id": "3gi_web_readme_variables_de_entorno"
     },
@@ -170,7 +368,7 @@
       "file_type": "document",
       "source_file": "/root/3gi-web/docs/agente-personal-3gi.md",
       "source_location": "L1",
-      "community": 3,
+      "community": 5,
       "norm_label": "agente-personal-3gi.md",
       "id": "root_3gi_web_docs_agente_personal_3gi_md"
     },
@@ -179,7 +377,7 @@
       "file_type": "document",
       "source_file": "/root/3gi-web/docs/agente-personal-3gi.md",
       "source_location": "L1",
-      "community": 3,
+      "community": 5,
       "norm_label": "agente personal 3gi \u2014 diseno del sistema propio",
       "id": "docs_agente_personal_3gi_agente_personal_3gi_dise_o_del_sistema_propio"
     },
@@ -188,7 +386,7 @@
       "file_type": "document",
       "source_file": "/root/3gi-web/docs/agente-personal-3gi.md",
       "source_location": "L9",
-      "community": 3,
+      "community": 5,
       "norm_label": "por que construir uno propio",
       "id": "docs_agente_personal_3gi_por_qu_construir_uno_propio"
     },
@@ -197,7 +395,7 @@
       "file_type": "document",
       "source_file": "/root/3gi-web/docs/agente-personal-3gi.md",
       "source_location": "L15",
-      "community": 3,
+      "community": 5,
       "norm_label": "capacidades objetivo",
       "id": "docs_agente_personal_3gi_capacidades_objetivo"
     },
@@ -206,7 +404,7 @@
       "file_type": "document",
       "source_file": "/root/3gi-web/docs/agente-personal-3gi.md",
       "source_location": "L30",
-      "community": 3,
+      "community": 5,
       "norm_label": "lo que openclaw tiene para rescatar (conceptos, no codigo)",
       "id": "docs_agente_personal_3gi_lo_que_openclaw_tiene_para_rescatar_conceptos_no_c_digo"
     },
@@ -215,7 +413,7 @@
       "file_type": "document",
       "source_file": "/root/3gi-web/docs/agente-personal-3gi.md",
       "source_location": "L50",
-      "community": 3,
+      "community": 5,
       "norm_label": "arquitectura",
       "id": "docs_agente_personal_3gi_arquitectura"
     },
@@ -224,7 +422,7 @@
       "file_type": "document",
       "source_file": "/root/3gi-web/docs/agente-personal-3gi.md",
       "source_location": "L52",
-      "community": 3,
+      "community": 5,
       "norm_label": "code:block1 (telegram (@bot_3gi))",
       "id": "docs_agente_personal_3gi_codeblock_1"
     },
@@ -233,7 +431,7 @@
       "file_type": "document",
       "source_file": "/root/3gi-web/docs/agente-personal-3gi.md",
       "source_location": "L78",
-      "community": 3,
+      "community": 5,
       "norm_label": "stack tecnico",
       "id": "docs_agente_personal_3gi_stack_t_cnico"
     },
@@ -242,7 +440,7 @@
       "file_type": "document",
       "source_file": "/root/3gi-web/docs/agente-personal-3gi.md",
       "source_location": "L95",
-      "community": 3,
+      "community": 5,
       "norm_label": "estructura de archivos",
       "id": "docs_agente_personal_3gi_estructura_de_archivos"
     },
@@ -251,7 +449,7 @@
       "file_type": "document",
       "source_file": "/root/3gi-web/docs/agente-personal-3gi.md",
       "source_location": "L97",
-      "community": 3,
+      "community": 5,
       "norm_label": "code:block2 (/root/3gi-assistant/)",
       "id": "docs_agente_personal_3gi_codeblock_2"
     },
@@ -260,7 +458,7 @@
       "file_type": "document",
       "source_file": "/root/3gi-web/docs/agente-personal-3gi.md",
       "source_location": "L123",
-      "community": 3,
+      "community": 5,
       "norm_label": "tablas supabase necesarias",
       "id": "docs_agente_personal_3gi_tablas_supabase_necesarias"
     },
@@ -269,7 +467,7 @@
       "file_type": "document",
       "source_file": "/root/3gi-web/docs/agente-personal-3gi.md",
       "source_location": "L125",
-      "community": 3,
+      "community": 5,
       "norm_label": "code:sql (-- historial de conversaciones)",
       "id": "docs_agente_personal_3gi_codeblock_3"
     },
@@ -278,7 +476,7 @@
       "file_type": "document",
       "source_file": "/root/3gi-web/docs/agente-personal-3gi.md",
       "source_location": "L150",
-      "community": 3,
+      "community": 5,
       "norm_label": "variables de entorno",
       "id": "docs_agente_personal_3gi_variables_de_entorno"
     },
@@ -287,7 +485,7 @@
       "file_type": "document",
       "source_file": "/root/3gi-web/docs/agente-personal-3gi.md",
       "source_location": "L152",
-      "community": 3,
+      "community": 5,
       "norm_label": "code:bash (# telegram)",
       "id": "docs_agente_personal_3gi_codeblock_4"
     },
@@ -296,7 +494,7 @@
       "file_type": "document",
       "source_file": "/root/3gi-web/docs/agente-personal-3gi.md",
       "source_location": "L180",
-      "community": 3,
+      "community": 5,
       "norm_label": "flujo de voz (detalle)",
       "id": "docs_agente_personal_3gi_flujo_de_voz_detalle"
     },
@@ -305,7 +503,7 @@
       "file_type": "document",
       "source_file": "/root/3gi-web/docs/agente-personal-3gi.md",
       "source_location": "L182",
-      "community": 3,
+      "community": 5,
       "norm_label": "code:block5 (usuario envia audio .ogg (telegram))",
       "id": "docs_agente_personal_3gi_codeblock_5"
     },
@@ -314,7 +512,7 @@
       "file_type": "document",
       "source_file": "/root/3gi-web/docs/agente-personal-3gi.md",
       "source_location": "L208",
-      "community": 3,
+      "community": 5,
       "norm_label": "comandos disponibles (diseno inicial)",
       "id": "docs_agente_personal_3gi_comandos_disponibles_dise_o_inicial"
     },
@@ -323,7 +521,7 @@
       "file_type": "document",
       "source_file": "/root/3gi-web/docs/agente-personal-3gi.md",
       "source_location": "L222",
-      "community": 3,
+      "community": 5,
       "norm_label": "plan de desarrollo",
       "id": "docs_agente_personal_3gi_plan_de_desarrollo"
     },
@@ -332,7 +530,7 @@
       "file_type": "document",
       "source_file": "/root/3gi-web/docs/agente-personal-3gi.md",
       "source_location": "L236",
-      "community": 3,
+      "community": 5,
       "norm_label": "criterios de exito",
       "id": "docs_agente_personal_3gi_criterios_de_xito"
     },
@@ -359,7 +557,7 @@
       "file_type": "document",
       "source_file": "/root/3gi-web/docs/contenido/carruseles.md",
       "source_location": "L8",
-      "community": 15,
+      "community": 3,
       "norm_label": "perfiles en redes sociales",
       "id": "contenido_carruseles_perfiles_en_redes_sociales"
     },
@@ -368,7 +566,7 @@
       "file_type": "document",
       "source_file": "/root/3gi-web/docs/contenido/carruseles.md",
       "source_location": "L10",
-      "community": 15,
+      "community": 3,
       "norm_label": "tiktok \u2014 @3gintelligence",
       "id": "contenido_carruseles_tiktok_3gintelligence"
     },
@@ -377,7 +575,7 @@
       "file_type": "document",
       "source_file": "/root/3gi-web/docs/contenido/carruseles.md",
       "source_location": "L12",
-      "community": 15,
+      "community": 3,
       "norm_label": "code:block1 (\u00bfen que era opera tu empresa?test era -> 3gi.cl/diagnostico)",
       "id": "contenido_carruseles_codeblock_1"
     },
@@ -395,7 +593,7 @@
       "file_type": "document",
       "source_file": "/root/3gi-web/docs/contenido/carruseles.md",
       "source_location": "L40",
-      "community": 15,
+      "community": 3,
       "norm_label": "post 0a",
       "id": "contenido_carruseles_post_0a"
     },
@@ -404,7 +602,7 @@
       "file_type": "document",
       "source_file": "/root/3gi-web/docs/contenido/carruseles.md",
       "source_location": "L46",
-      "community": 15,
+      "community": 3,
       "norm_label": "code:block2 (el 72% de los duenos de pyme toma decisiones sin datos reale)",
       "id": "contenido_carruseles_codeblock_2"
     },
@@ -413,7 +611,7 @@
       "file_type": "document",
       "source_file": "/root/3gi-web/docs/contenido/carruseles.md",
       "source_location": "L61",
-      "community": 15,
+      "community": 3,
       "norm_label": "code:json ({)",
       "id": "contenido_carruseles_codeblock_3"
     },
@@ -422,7 +620,7 @@
       "file_type": "document",
       "source_file": "/root/3gi-web/docs/contenido/carruseles.md",
       "source_location": "L75",
-      "community": 15,
+      "community": 3,
       "norm_label": "short 0a",
       "id": "contenido_carruseles_short_0a"
     },
@@ -431,7 +629,7 @@
       "file_type": "document",
       "source_file": "/root/3gi-web/docs/contenido/carruseles.md",
       "source_location": "L124",
-      "community": 15,
+      "community": 3,
       "norm_label": "descripcion youtube \u2014 short 0a",
       "id": "contenido_carruseles_descripci_n_youtube_short_0a"
     },
@@ -440,7 +638,7 @@
       "file_type": "document",
       "source_file": "/root/3gi-web/docs/contenido/carruseles.md",
       "source_location": "L129",
-      "community": 15,
+      "community": 3,
       "norm_label": "code:block4 (el 72% de los duenos de pyme toma decisiones sin datos reale)",
       "id": "contenido_carruseles_codeblock_4"
     },
@@ -449,7 +647,7 @@
       "file_type": "document",
       "source_file": "/root/3gi-web/docs/contenido/carruseles.md",
       "source_location": "L151",
-      "community": 0,
+      "community": 3,
       "norm_label": "post 0b",
       "id": "contenido_carruseles_post_0b"
     },
@@ -458,7 +656,7 @@
       "file_type": "document",
       "source_file": "/root/3gi-web/docs/contenido/carruseles.md",
       "source_location": "L157",
-      "community": 0,
+      "community": 3,
       "norm_label": "code:block5 (la mayoria de las pymes no cierran por falta de ventas.)",
       "id": "contenido_carruseles_codeblock_5"
     },
@@ -467,7 +665,7 @@
       "file_type": "document",
       "source_file": "/root/3gi-web/docs/contenido/carruseles.md",
       "source_location": "L175",
-      "community": 0,
+      "community": 3,
       "norm_label": "code:json ({)",
       "id": "contenido_carruseles_codeblock_6"
     },
@@ -476,7 +674,7 @@
       "file_type": "document",
       "source_file": "/root/3gi-web/docs/contenido/carruseles.md",
       "source_location": "L196",
-      "community": 0,
+      "community": 3,
       "norm_label": "short 0b",
       "id": "contenido_carruseles_short_0b"
     },
@@ -485,7 +683,7 @@
       "file_type": "document",
       "source_file": "/root/3gi-web/docs/contenido/carruseles.md",
       "source_location": "L246",
-      "community": 0,
+      "community": 3,
       "norm_label": "descripcion youtube \u2014 short 0b",
       "id": "contenido_carruseles_descripci_n_youtube_short_0b"
     },
@@ -494,7 +692,7 @@
       "file_type": "document",
       "source_file": "/root/3gi-web/docs/contenido/carruseles.md",
       "source_location": "L251",
-      "community": 0,
+      "community": 3,
       "norm_label": "code:block7 (el 82% de las pymes que cierran no quiebran por falta de ven)",
       "id": "contenido_carruseles_codeblock_7"
     },
@@ -503,7 +701,7 @@
       "file_type": "document",
       "source_file": "/root/3gi-web/docs/contenido/carruseles.md",
       "source_location": "L274",
-      "community": 0,
+      "community": 3,
       "norm_label": "post 0c",
       "id": "contenido_carruseles_post_0c"
     },
@@ -512,7 +710,7 @@
       "file_type": "document",
       "source_file": "/root/3gi-web/docs/contenido/carruseles.md",
       "source_location": "L280",
-      "community": 0,
+      "community": 3,
       "norm_label": "code:block8 (tu equipo trabaja duro. eso no lo dudo.)",
       "id": "contenido_carruseles_codeblock_8"
     },
@@ -521,7 +719,7 @@
       "file_type": "document",
       "source_file": "/root/3gi-web/docs/contenido/carruseles.md",
       "source_location": "L297",
-      "community": 0,
+      "community": 3,
       "norm_label": "code:json ({)",
       "id": "contenido_carruseles_codeblock_9"
     },
@@ -530,7 +728,7 @@
       "file_type": "document",
       "source_file": "/root/3gi-web/docs/contenido/carruseles.md",
       "source_location": "L311",
-      "community": 0,
+      "community": 3,
       "norm_label": "short 0c",
       "id": "contenido_carruseles_short_0c"
     },
@@ -539,7 +737,7 @@
       "file_type": "document",
       "source_file": "/root/3gi-web/docs/contenido/carruseles.md",
       "source_location": "L334",
-      "community": 0,
+      "community": 3,
       "norm_label": "descripcion youtube \u2014 short 0c",
       "id": "contenido_carruseles_descripci_n_youtube_short_0c"
     },
@@ -548,7 +746,7 @@
       "file_type": "document",
       "source_file": "/root/3gi-web/docs/contenido/carruseles.md",
       "source_location": "L339",
-      "community": 0,
+      "community": 3,
       "norm_label": "code:block10 (\u00bfsi te vas una semana, que pasa en tu empresa?)",
       "id": "contenido_carruseles_codeblock_10"
     },
@@ -791,7 +989,7 @@
       "file_type": "document",
       "source_file": "/root/3gi-web/docs/contenido/carruseles.md",
       "source_location": "L661",
-      "community": 7,
+      "community": 8,
       "norm_label": "guiones shorts/reels \u2014 formato nuevo (max 30 seg, cta antes del seg 20)",
       "id": "contenido_carruseles_guiones_shorts_reels_formato_nuevo_m_x_30_seg_cta_antes_del_seg_20"
     },
@@ -800,7 +998,7 @@
       "file_type": "document",
       "source_file": "/root/3gi-web/docs/contenido/carruseles.md",
       "source_location": "L667",
-      "community": 7,
+      "community": 8,
       "norm_label": "short 0c \u2014 \"el cuello de botella eres tu\"",
       "id": "contenido_carruseles_short_0c_el_cuello_de_botella_eres_t"
     },
@@ -809,7 +1007,7 @@
       "file_type": "document",
       "source_file": "/root/3gi-web/docs/contenido/carruseles.md",
       "source_location": "L690",
-      "community": 7,
+      "community": 8,
       "norm_label": "opcion b \u2014 generada con skill 3gi-short-script",
       "id": "contenido_carruseles_opci_n_b_generada_con_skill_3gi_short_script"
     },
@@ -818,7 +1016,7 @@
       "file_type": "document",
       "source_file": "/root/3gi-web/docs/contenido/carruseles.md",
       "source_location": "L721",
-      "community": 7,
+      "community": 8,
       "norm_label": "short 01 \u2014 \"el profesional de usd 3.000\"",
       "id": "contenido_carruseles_short_01_el_profesional_de_usd_3_000"
     },
@@ -845,7 +1043,7 @@
       "file_type": "document",
       "source_file": "/root/3gi-web/docs/contenido/carruseles.md",
       "source_location": "L770",
-      "community": 7,
+      "community": 8,
       "norm_label": "short 02 \u2014 \"5 senales de apagaincendios\"",
       "id": "contenido_carruseles_short_02_5_se_ales_de_apagaincendios"
     },
@@ -854,7 +1052,7 @@
       "file_type": "document",
       "source_file": "/root/3gi-web/docs/contenido/carruseles.md",
       "source_location": "L791",
-      "community": 7,
+      "community": 8,
       "norm_label": "short 03 \u2014 \"de 30 min a 5 min\"",
       "id": "contenido_carruseles_short_03_de_30_min_a_5_min"
     },
@@ -863,7 +1061,7 @@
       "file_type": "document",
       "source_file": "/root/3gi-web/docs/contenido/carruseles.md",
       "source_location": "L814",
-      "community": 7,
+      "community": 8,
       "norm_label": "short 04 \u2014 \"el costo invisible\"",
       "id": "contenido_carruseles_short_04_el_costo_invisible"
     },
@@ -872,7 +1070,7 @@
       "file_type": "document",
       "source_file": "/root/3gi-web/docs/contenido/carruseles.md",
       "source_location": "L837",
-      "community": 7,
+      "community": 8,
       "norm_label": "short 05 \u2014 \"de reactivo a proactivo\"",
       "id": "contenido_carruseles_short_05_de_reactivo_a_proactivo"
     },
@@ -881,7 +1079,7 @@
       "file_type": "document",
       "source_file": "/root/3gi-web/docs/contenido/carruseles.md",
       "source_location": "L859",
-      "community": 7,
+      "community": 8,
       "norm_label": "short 06 \u2014 \"7 procesos a automatizar primero\"",
       "id": "contenido_carruseles_short_06_7_procesos_a_automatizar_primero"
     },
@@ -890,7 +1088,7 @@
       "file_type": "document",
       "source_file": "/root/3gi-web/docs/contenido/carruseles.md",
       "source_location": "L882",
-      "community": 7,
+      "community": 8,
       "norm_label": "short 07 \u2014 \"era 1, era 2, era 3\"",
       "id": "contenido_carruseles_short_07_era_1_era_2_era_3"
     },
@@ -899,7 +1097,7 @@
       "file_type": "document",
       "source_file": "/root/3gi-web/docs/contenido/carruseles.md",
       "source_location": "L904",
-      "community": 7,
+      "community": 8,
       "norm_label": "short 08 \u2014 \"+40% capacidad sin contratar\"",
       "id": "contenido_carruseles_short_08_40_capacidad_sin_contratar"
     },
@@ -908,7 +1106,7 @@
       "file_type": "document",
       "source_file": "/root/3gi-web/docs/contenido/carruseles.md",
       "source_location": "L926",
-      "community": 7,
+      "community": 8,
       "norm_label": "short 09 \u2014 \"el excel como sistema\"",
       "id": "contenido_carruseles_short_09_el_excel_como_sistema"
     },
@@ -917,7 +1115,7 @@
       "file_type": "document",
       "source_file": "/root/3gi-web/docs/contenido/carruseles.md",
       "source_location": "L949",
-      "community": 7,
+      "community": 8,
       "norm_label": "short 10 \u2014 \"reactiva vs proactiva\"",
       "id": "contenido_carruseles_short_10_reactiva_vs_proactiva"
     },
@@ -926,7 +1124,7 @@
       "file_type": "document",
       "source_file": "/root/3gi-web/docs/contenido/carruseles.md",
       "source_location": "L971",
-      "community": 7,
+      "community": 8,
       "norm_label": "short 11 \u2014 \"los 9 sub-niveles era\"",
       "id": "contenido_carruseles_short_11_los_9_sub_niveles_era"
     },
@@ -935,7 +1133,7 @@
       "file_type": "document",
       "source_file": "/root/3gi-web/docs/contenido/carruseles.md",
       "source_location": "L993",
-      "community": 7,
+      "community": 8,
       "norm_label": "short 12 \u2014 \"el test era\"",
       "id": "contenido_carruseles_short_12_el_test_era"
     },
@@ -944,7 +1142,7 @@
       "file_type": "document",
       "source_file": "/root/3gi-web/docs/contenido/carruseles2.md",
       "source_location": "L1",
-      "community": 1,
+      "community": 2,
       "norm_label": "carruseles2.md",
       "id": "root_3gi_web_docs_contenido_carruseles2_md"
     },
@@ -953,7 +1151,7 @@
       "file_type": "document",
       "source_file": "/root/3gi-web/docs/contenido/carruseles2.md",
       "source_location": "L1",
-      "community": 1,
+      "community": 2,
       "norm_label": "contenido desde post 02 \u2014 shorts + linkedin/facebook",
       "id": "contenido_carruseles2_contenido_desde_post_02_shorts_linkedin_facebook"
     },
@@ -962,7 +1160,7 @@
       "file_type": "document",
       "source_file": "/root/3gi-web/docs/contenido/carruseles2.md",
       "source_location": "L8",
-      "community": 1,
+      "community": 2,
       "norm_label": "estado",
       "id": "contenido_carruseles2_estado"
     },
@@ -971,7 +1169,7 @@
       "file_type": "document",
       "source_file": "/root/3gi-web/docs/contenido/carruseles2.md",
       "source_location": "L26",
-      "community": 1,
+      "community": 2,
       "norm_label": "post 02 \u2014 5 senales de apagaincendios",
       "id": "contenido_carruseles2_post_02_5_se_ales_de_apagaincendios"
     },
@@ -980,7 +1178,7 @@
       "file_type": "document",
       "source_file": "/root/3gi-web/docs/contenido/carruseles2.md",
       "source_location": "L31",
-      "community": 1,
+      "community": 2,
       "norm_label": "short 02",
       "id": "contenido_carruseles2_short_02"
     },
@@ -989,7 +1187,7 @@
       "file_type": "document",
       "source_file": "/root/3gi-web/docs/contenido/carruseles2.md",
       "source_location": "L50",
-      "community": 1,
+      "community": 2,
       "norm_label": "texto linkedin/facebook",
       "id": "contenido_carruseles2_texto_linkedin_facebook"
     },
@@ -998,7 +1196,7 @@
       "file_type": "document",
       "source_file": "/root/3gi-web/docs/contenido/carruseles2.md",
       "source_location": "L52",
-      "community": 1,
+      "community": 2,
       "norm_label": "code:block1 (antes de hablar de ia con un cliente, siempre busco una sena)",
       "id": "contenido_carruseles2_codeblock_1"
     },
@@ -1007,7 +1205,7 @@
       "file_type": "document",
       "source_file": "/root/3gi-web/docs/contenido/carruseles2.md",
       "source_location": "L83",
-      "community": 1,
+      "community": 2,
       "norm_label": "descripcion youtube \u2014 short 02",
       "id": "contenido_carruseles2_descripci_n_youtube_short_02"
     },
@@ -1016,7 +1214,7 @@
       "file_type": "document",
       "source_file": "/root/3gi-web/docs/contenido/carruseles2.md",
       "source_location": "L88",
-      "community": 1,
+      "community": 2,
       "norm_label": "code:block2 (antes de hablar de inteligencia artificial con cualquier cli)",
       "id": "contenido_carruseles2_codeblock_2"
     },
@@ -1025,7 +1223,7 @@
       "file_type": "document",
       "source_file": "/root/3gi-web/docs/contenido/carruseles2.md",
       "source_location": "L106",
-      "community": 1,
+      "community": 2,
       "norm_label": "caption instagram reel \u2014 post 02",
       "id": "contenido_carruseles2_caption_instagram_reel_post_02"
     },
@@ -1034,7 +1232,7 @@
       "file_type": "document",
       "source_file": "/root/3gi-web/docs/contenido/carruseles2.md",
       "source_location": "L108",
-      "community": 5,
+      "community": 7,
       "norm_label": "code:block3 (antes de hablar de ia con un cliente, siempre busco una sena)",
       "id": "contenido_carruseles2_codeblock_3"
     },
@@ -1043,7 +1241,7 @@
       "file_type": "document",
       "source_file": "/root/3gi-web/docs/contenido/carruseles2.md",
       "source_location": "L132",
-      "community": 1,
+      "community": 2,
       "norm_label": "post 03 \u2014 caso real: de 30 min a 5 min",
       "id": "contenido_carruseles2_post_03_caso_real_de_30_min_a_5_min"
     },
@@ -1052,7 +1250,7 @@
       "file_type": "document",
       "source_file": "/root/3gi-web/docs/contenido/carruseles2.md",
       "source_location": "L137",
-      "community": 1,
+      "community": 2,
       "norm_label": "short 03",
       "id": "contenido_carruseles2_short_03"
     },
@@ -1061,7 +1259,7 @@
       "file_type": "document",
       "source_file": "/root/3gi-web/docs/contenido/carruseles2.md",
       "source_location": "L158",
-      "community": 1,
+      "community": 2,
       "norm_label": "texto linkedin/facebook",
       "id": "contenido_carruseles2_texto_linkedin_facebook_158"
     },
@@ -1070,7 +1268,7 @@
       "file_type": "document",
       "source_file": "/root/3gi-web/docs/contenido/carruseles2.md",
       "source_location": "L160",
-      "community": 1,
+      "community": 2,
       "norm_label": "code:block4 (la mayoria cree que necesita contratar mas gente para crecer)",
       "id": "contenido_carruseles2_codeblock_4"
     },
@@ -1079,7 +1277,7 @@
       "file_type": "document",
       "source_file": "/root/3gi-web/docs/contenido/carruseles2.md",
       "source_location": "L184",
-      "community": 1,
+      "community": 2,
       "norm_label": "descripcion youtube \u2014 short 03",
       "id": "contenido_carruseles2_descripci_n_youtube_short_03"
     },
@@ -1088,7 +1286,7 @@
       "file_type": "document",
       "source_file": "/root/3gi-web/docs/contenido/carruseles2.md",
       "source_location": "L189",
-      "community": 2,
+      "community": 4,
       "norm_label": "code:block5 (la mayoria de duenos de empresa cree que necesita contratar )",
       "id": "contenido_carruseles2_codeblock_5"
     },
@@ -1097,7 +1295,7 @@
       "file_type": "document",
       "source_file": "/root/3gi-web/docs/contenido/carruseles2.md",
       "source_location": "L208",
-      "community": 1,
+      "community": 2,
       "norm_label": "caption instagram reel \u2014 post 03",
       "id": "contenido_carruseles2_caption_instagram_reel_post_03"
     },
@@ -1106,7 +1304,7 @@
       "file_type": "document",
       "source_file": "/root/3gi-web/docs/contenido/carruseles2.md",
       "source_location": "L210",
-      "community": 8,
+      "community": 9,
       "norm_label": "code:block6 (la mayoria cree que necesita contratar mas gente para crecer)",
       "id": "contenido_carruseles2_codeblock_6"
     },
@@ -1115,7 +1313,7 @@
       "file_type": "document",
       "source_file": "/root/3gi-web/docs/contenido/carruseles2.md",
       "source_location": "L230",
-      "community": 5,
+      "community": 7,
       "norm_label": "post 04 \u2014 el costo invisible",
       "id": "contenido_carruseles2_post_04_el_costo_invisible"
     },
@@ -1124,7 +1322,7 @@
       "file_type": "document",
       "source_file": "/root/3gi-web/docs/contenido/carruseles2.md",
       "source_location": "L234",
-      "community": 5,
+      "community": 7,
       "norm_label": "short 04",
       "id": "contenido_carruseles2_short_04"
     },
@@ -1133,7 +1331,7 @@
       "file_type": "document",
       "source_file": "/root/3gi-web/docs/contenido/carruseles2.md",
       "source_location": "L255",
-      "community": 5,
+      "community": 7,
       "norm_label": "texto linkedin/facebook",
       "id": "contenido_carruseles2_texto_linkedin_facebook_255"
     },
@@ -1142,7 +1340,7 @@
       "file_type": "document",
       "source_file": "/root/3gi-web/docs/contenido/carruseles2.md",
       "source_location": "L257",
-      "community": 5,
+      "community": 7,
       "norm_label": "code:block7 (tus procesos ya te estan costando dinero.)",
       "id": "contenido_carruseles2_codeblock_7"
     },
@@ -1151,7 +1349,7 @@
       "file_type": "document",
       "source_file": "/root/3gi-web/docs/contenido/carruseles2.md",
       "source_location": "L283",
-      "community": 5,
+      "community": 7,
       "norm_label": "descripcion youtube \u2014 short 04",
       "id": "contenido_carruseles2_descripci_n_youtube_short_04"
     },
@@ -1160,7 +1358,7 @@
       "file_type": "document",
       "source_file": "/root/3gi-web/docs/contenido/carruseles2.md",
       "source_location": "L288",
-      "community": 5,
+      "community": 7,
       "norm_label": "code:block8 (tus procesos ya te estan costando dinero.)",
       "id": "contenido_carruseles2_codeblock_8"
     },
@@ -1169,7 +1367,7 @@
       "file_type": "document",
       "source_file": "/root/3gi-web/docs/contenido/carruseles2.md",
       "source_location": "L307",
-      "community": 4,
+      "community": 6,
       "norm_label": "caption instagram reel \u2014 post 04",
       "id": "contenido_carruseles2_caption_instagram_reel_post_04"
     },
@@ -1178,7 +1376,7 @@
       "file_type": "document",
       "source_file": "/root/3gi-web/docs/contenido/carruseles2.md",
       "source_location": "L309",
-      "community": 4,
+      "community": 6,
       "norm_label": "code:block9 (tus procesos ya te estan costando dinero.)",
       "id": "contenido_carruseles2_codeblock_9"
     },
@@ -1223,7 +1421,7 @@
       "file_type": "document",
       "source_file": "/root/3gi-web/docs/contenido/carruseles2.md",
       "source_location": "L380",
-      "community": 6,
+      "community": 1,
       "norm_label": "descripcion youtube \u2014 short 05",
       "id": "contenido_carruseles2_descripci_n_youtube_short_05"
     },
@@ -1232,7 +1430,7 @@
       "file_type": "document",
       "source_file": "/root/3gi-web/docs/contenido/carruseles2.md",
       "source_location": "L385",
-      "community": 6,
+      "community": 1,
       "norm_label": "code:block11 (la mayoria de empresas no necesita mas tecnologia.)",
       "id": "contenido_carruseles2_codeblock_11"
     },
@@ -1241,7 +1439,7 @@
       "file_type": "document",
       "source_file": "/root/3gi-web/docs/contenido/carruseles2.md",
       "source_location": "L404",
-      "community": 2,
+      "community": 1,
       "norm_label": "caption instagram reel \u2014 post 05",
       "id": "contenido_carruseles2_caption_instagram_reel_post_05"
     },
@@ -1250,7 +1448,7 @@
       "file_type": "document",
       "source_file": "/root/3gi-web/docs/contenido/carruseles2.md",
       "source_location": "L406",
-      "community": 2,
+      "community": 1,
       "norm_label": "code:block12 (la mayoria de empresas no necesita mas tecnologia.)",
       "id": "contenido_carruseles2_codeblock_12"
     },
@@ -1259,7 +1457,7 @@
       "file_type": "document",
       "source_file": "/root/3gi-web/docs/contenido/carruseles2.md",
       "source_location": "L429",
-      "community": 2,
+      "community": 4,
       "norm_label": "post 06 \u2014 7 procesos a automatizar primero",
       "id": "contenido_carruseles2_post_06_7_procesos_a_automatizar_primero"
     },
@@ -1268,7 +1466,7 @@
       "file_type": "document",
       "source_file": "/root/3gi-web/docs/contenido/carruseles2.md",
       "source_location": "L433",
-      "community": 2,
+      "community": 4,
       "norm_label": "short 06",
       "id": "contenido_carruseles2_short_06"
     },
@@ -1277,7 +1475,7 @@
       "file_type": "document",
       "source_file": "/root/3gi-web/docs/contenido/carruseles2.md",
       "source_location": "L455",
-      "community": 2,
+      "community": 4,
       "norm_label": "texto linkedin/facebook",
       "id": "contenido_carruseles2_texto_linkedin_facebook_455"
     },
@@ -1286,7 +1484,7 @@
       "file_type": "document",
       "source_file": "/root/3gi-web/docs/contenido/carruseles2.md",
       "source_location": "L457",
-      "community": 2,
+      "community": 4,
       "norm_label": "code:block13 (la mayoria de las empresas no necesita mas herramientas de i)",
       "id": "contenido_carruseles2_codeblock_13"
     },
@@ -1295,7 +1493,7 @@
       "file_type": "document",
       "source_file": "/root/3gi-web/docs/contenido/carruseles2.md",
       "source_location": "L486",
-      "community": 2,
+      "community": 4,
       "norm_label": "descripcion youtube \u2014 short 06",
       "id": "contenido_carruseles2_descripci_n_youtube_short_06"
     },
@@ -1304,7 +1502,7 @@
       "file_type": "document",
       "source_file": "/root/3gi-web/docs/contenido/carruseles2.md",
       "source_location": "L491",
-      "community": 2,
+      "community": 4,
       "norm_label": "code:block14 (la mayoria de las empresas no necesita mas herramientas de i)",
       "id": "contenido_carruseles2_codeblock_14"
     },
@@ -1313,7 +1511,7 @@
       "file_type": "document",
       "source_file": "/root/3gi-web/docs/contenido/carruseles2.md",
       "source_location": "L511",
-      "community": 2,
+      "community": 4,
       "norm_label": "caption instagram reel \u2014 post 06",
       "id": "contenido_carruseles2_caption_instagram_reel_post_06"
     },
@@ -1322,7 +1520,7 @@
       "file_type": "document",
       "source_file": "/root/3gi-web/docs/contenido/carruseles2.md",
       "source_location": "L513",
-      "community": 2,
+      "community": 4,
       "norm_label": "code:block15 (la mayoria de las empresas no necesita mas herramientas de i)",
       "id": "contenido_carruseles2_codeblock_15"
     },
@@ -1331,7 +1529,7 @@
       "file_type": "document",
       "source_file": "/root/3gi-web/docs/contenido/carruseles2.md",
       "source_location": "L538",
-      "community": 8,
+      "community": 9,
       "norm_label": "post 07 \u2014 era 1 / era 2 / era 3 explicadas",
       "id": "contenido_carruseles2_post_07_era_1_era_2_era_3_explicadas"
     },
@@ -1340,7 +1538,7 @@
       "file_type": "document",
       "source_file": "/root/3gi-web/docs/contenido/carruseles2.md",
       "source_location": "L542",
-      "community": 8,
+      "community": 9,
       "norm_label": "short 07",
       "id": "contenido_carruseles2_short_07"
     },
@@ -1349,7 +1547,7 @@
       "file_type": "document",
       "source_file": "/root/3gi-web/docs/contenido/carruseles2.md",
       "source_location": "L562",
-      "community": 8,
+      "community": 9,
       "norm_label": "texto linkedin/facebook",
       "id": "contenido_carruseles2_texto_linkedin_facebook_562"
     },
@@ -1358,7 +1556,7 @@
       "file_type": "document",
       "source_file": "/root/3gi-web/docs/contenido/carruseles2.md",
       "source_location": "L564",
-      "community": 8,
+      "community": 9,
       "norm_label": "code:block16 (la mayoria de duenos cree que esta en era 2.)",
       "id": "contenido_carruseles2_codeblock_16"
     },
@@ -1367,7 +1565,7 @@
       "file_type": "document",
       "source_file": "/root/3gi-web/docs/contenido/carruseles2.md",
       "source_location": "L595",
-      "community": 8,
+      "community": 9,
       "norm_label": "descripcion youtube \u2014 short 07",
       "id": "contenido_carruseles2_descripci_n_youtube_short_07"
     },
@@ -1376,7 +1574,7 @@
       "file_type": "document",
       "source_file": "/root/3gi-web/docs/contenido/carruseles2.md",
       "source_location": "L600",
-      "community": 8,
+      "community": 9,
       "norm_label": "code:block17 (la mayoria de duenos cree que esta en era 2.)",
       "id": "contenido_carruseles2_codeblock_17"
     },
@@ -1385,7 +1583,7 @@
       "file_type": "document",
       "source_file": "/root/3gi-web/docs/contenido/carruseles2.md",
       "source_location": "L619",
-      "community": 8,
+      "community": 9,
       "norm_label": "caption instagram reel \u2014 post 07",
       "id": "contenido_carruseles2_caption_instagram_reel_post_07"
     },
@@ -1394,7 +1592,7 @@
       "file_type": "document",
       "source_file": "/root/3gi-web/docs/contenido/carruseles2.md",
       "source_location": "L621",
-      "community": 8,
+      "community": 9,
       "norm_label": "code:block18 (la mayoria de duenos cree que esta en era 2.)",
       "id": "contenido_carruseles2_codeblock_18"
     },
@@ -1403,7 +1601,7 @@
       "file_type": "document",
       "source_file": "/root/3gi-web/docs/contenido/carruseles2.md",
       "source_location": "L641",
-      "community": 9,
+      "community": 10,
       "norm_label": "post 08 \u2014 caso real: +40% capacidad sin contratar",
       "id": "contenido_carruseles2_post_08_caso_real_40_capacidad_sin_contratar"
     },
@@ -1412,7 +1610,7 @@
       "file_type": "document",
       "source_file": "/root/3gi-web/docs/contenido/carruseles2.md",
       "source_location": "L645",
-      "community": 9,
+      "community": 10,
       "norm_label": "short 08",
       "id": "contenido_carruseles2_short_08"
     },
@@ -1421,7 +1619,7 @@
       "file_type": "document",
       "source_file": "/root/3gi-web/docs/contenido/carruseles2.md",
       "source_location": "L665",
-      "community": 9,
+      "community": 10,
       "norm_label": "texto linkedin/facebook",
       "id": "contenido_carruseles2_texto_linkedin_facebook_665"
     },
@@ -1430,7 +1628,7 @@
       "file_type": "document",
       "source_file": "/root/3gi-web/docs/contenido/carruseles2.md",
       "source_location": "L667",
-      "community": 9,
+      "community": 10,
       "norm_label": "code:block19 (una empresa puede crecer 40% en capacidad sin contratar a na)",
       "id": "contenido_carruseles2_codeblock_19"
     },
@@ -1439,7 +1637,7 @@
       "file_type": "document",
       "source_file": "/root/3gi-web/docs/contenido/carruseles2.md",
       "source_location": "L694",
-      "community": 9,
+      "community": 10,
       "norm_label": "descripcion youtube \u2014 short 08",
       "id": "contenido_carruseles2_descripci_n_youtube_short_08"
     },
@@ -1448,7 +1646,7 @@
       "file_type": "document",
       "source_file": "/root/3gi-web/docs/contenido/carruseles2.md",
       "source_location": "L699",
-      "community": 9,
+      "community": 10,
       "norm_label": "code:block20 (una empresa puede crecer 40% en capacidad sin contratar a na)",
       "id": "contenido_carruseles2_codeblock_20"
     },
@@ -1457,7 +1655,7 @@
       "file_type": "document",
       "source_file": "/root/3gi-web/docs/contenido/carruseles2.md",
       "source_location": "L718",
-      "community": 9,
+      "community": 10,
       "norm_label": "caption instagram reel \u2014 post 08",
       "id": "contenido_carruseles2_caption_instagram_reel_post_08"
     },
@@ -1466,7 +1664,7 @@
       "file_type": "document",
       "source_file": "/root/3gi-web/docs/contenido/carruseles2.md",
       "source_location": "L720",
-      "community": 9,
+      "community": 10,
       "norm_label": "code:block21 (una empresa puede crecer 40% en capacidad sin contratar a na)",
       "id": "contenido_carruseles2_codeblock_21"
     },
@@ -1475,7 +1673,7 @@
       "file_type": "document",
       "source_file": "/root/3gi-web/docs/contenido/carruseles2.md",
       "source_location": "L741",
-      "community": 12,
+      "community": 14,
       "norm_label": "post 09 \u2014 el excel como sistema",
       "id": "contenido_carruseles2_post_09_el_excel_como_sistema"
     },
@@ -1484,7 +1682,7 @@
       "file_type": "document",
       "source_file": "/root/3gi-web/docs/contenido/carruseles2.md",
       "source_location": "L745",
-      "community": 12,
+      "community": 14,
       "norm_label": "short 09",
       "id": "contenido_carruseles2_short_09"
     },
@@ -1493,7 +1691,7 @@
       "file_type": "document",
       "source_file": "/root/3gi-web/docs/contenido/carruseles2.md",
       "source_location": "L766",
-      "community": 12,
+      "community": 14,
       "norm_label": "texto linkedin/facebook",
       "id": "contenido_carruseles2_texto_linkedin_facebook_766"
     },
@@ -1502,7 +1700,7 @@
       "file_type": "document",
       "source_file": "/root/3gi-web/docs/contenido/carruseles2.md",
       "source_location": "L768",
-      "community": 12,
+      "community": 14,
       "norm_label": "code:block22 (hay una senal que siempre busco cuando entro a una empresa.)",
       "id": "contenido_carruseles2_codeblock_22"
     },
@@ -1511,7 +1709,7 @@
       "file_type": "document",
       "source_file": "/root/3gi-web/docs/contenido/carruseles2.md",
       "source_location": "L800",
-      "community": 12,
+      "community": 14,
       "norm_label": "descripcion youtube \u2014 short 09",
       "id": "contenido_carruseles2_descripci_n_youtube_short_09"
     },
@@ -1520,7 +1718,7 @@
       "file_type": "document",
       "source_file": "/root/3gi-web/docs/contenido/carruseles2.md",
       "source_location": "L805",
-      "community": 12,
+      "community": 14,
       "norm_label": "code:block23 (hay una senal que siempre busco cuando entro a una empresa.)",
       "id": "contenido_carruseles2_codeblock_23"
     },
@@ -1529,7 +1727,7 @@
       "file_type": "document",
       "source_file": "/root/3gi-web/docs/contenido/carruseles2.md",
       "source_location": "L826",
-      "community": 12,
+      "community": 14,
       "norm_label": "caption instagram reel \u2014 post 09",
       "id": "contenido_carruseles2_caption_instagram_reel_post_09"
     },
@@ -1538,7 +1736,7 @@
       "file_type": "document",
       "source_file": "/root/3gi-web/docs/contenido/carruseles2.md",
       "source_location": "L828",
-      "community": 12,
+      "community": 14,
       "norm_label": "code:block24 (hay una senal que siempre busco cuando entro a una empresa.)",
       "id": "contenido_carruseles2_codeblock_24"
     },
@@ -1547,7 +1745,7 @@
       "file_type": "document",
       "source_file": "/root/3gi-web/docs/contenido/carruseles2.md",
       "source_location": "L852",
-      "community": 4,
+      "community": 6,
       "norm_label": "post 10 \u2014 caso coves: reactiva vs proactiva",
       "id": "contenido_carruseles2_post_10_caso_coves_reactiva_vs_proactiva"
     },
@@ -1556,7 +1754,7 @@
       "file_type": "document",
       "source_file": "/root/3gi-web/docs/contenido/carruseles2.md",
       "source_location": "L856",
-      "community": 4,
+      "community": 6,
       "norm_label": "short 10",
       "id": "contenido_carruseles2_short_10"
     },
@@ -1565,7 +1763,7 @@
       "file_type": "document",
       "source_file": "/root/3gi-web/docs/contenido/carruseles2.md",
       "source_location": "L876",
-      "community": 4,
+      "community": 6,
       "norm_label": "texto linkedin/facebook",
       "id": "contenido_carruseles2_texto_linkedin_facebook_876"
     },
@@ -1574,7 +1772,7 @@
       "file_type": "document",
       "source_file": "/root/3gi-web/docs/contenido/carruseles2.md",
       "source_location": "L878",
-      "community": 4,
+      "community": 6,
       "norm_label": "code:block25 (dos empresas. mismo sector. mismo presupuesto.)",
       "id": "contenido_carruseles2_codeblock_25"
     },
@@ -1583,7 +1781,7 @@
       "file_type": "document",
       "source_file": "/root/3gi-web/docs/contenido/carruseles2.md",
       "source_location": "L904",
-      "community": 4,
+      "community": 6,
       "norm_label": "descripcion youtube \u2014 short 10",
       "id": "contenido_carruseles2_descripci_n_youtube_short_10"
     },
@@ -1592,7 +1790,7 @@
       "file_type": "document",
       "source_file": "/root/3gi-web/docs/contenido/carruseles2.md",
       "source_location": "L909",
-      "community": 4,
+      "community": 6,
       "norm_label": "code:block26 (dos empresas. mismo sector. mismo presupuesto.)",
       "id": "contenido_carruseles2_codeblock_26"
     },
@@ -1601,7 +1799,7 @@
       "file_type": "document",
       "source_file": "/root/3gi-web/docs/contenido/carruseles2.md",
       "source_location": "L929",
-      "community": 4,
+      "community": 6,
       "norm_label": "caption instagram reel \u2014 post 10",
       "id": "contenido_carruseles2_caption_instagram_reel_post_10"
     },
@@ -1610,7 +1808,7 @@
       "file_type": "document",
       "source_file": "/root/3gi-web/docs/contenido/carruseles2.md",
       "source_location": "L931",
-      "community": 4,
+      "community": 6,
       "norm_label": "code:block27 (dos empresas. mismo sector. mismo presupuesto.)",
       "id": "contenido_carruseles2_codeblock_27"
     },
@@ -1619,7 +1817,7 @@
       "file_type": "document",
       "source_file": "/root/3gi-web/docs/contenido/carruseles2.md",
       "source_location": "L952",
-      "community": 13,
+      "community": 15,
       "norm_label": "post 11 \u2014 los 9 sub-niveles era",
       "id": "contenido_carruseles2_post_11_los_9_sub_niveles_era"
     },
@@ -1628,7 +1826,7 @@
       "file_type": "document",
       "source_file": "/root/3gi-web/docs/contenido/carruseles2.md",
       "source_location": "L956",
-      "community": 13,
+      "community": 15,
       "norm_label": "short 11",
       "id": "contenido_carruseles2_short_11"
     },
@@ -1637,7 +1835,7 @@
       "file_type": "document",
       "source_file": "/root/3gi-web/docs/contenido/carruseles2.md",
       "source_location": "L976",
-      "community": 13,
+      "community": 15,
       "norm_label": "texto linkedin/facebook",
       "id": "contenido_carruseles2_texto_linkedin_facebook_976"
     },
@@ -1646,7 +1844,7 @@
       "file_type": "document",
       "source_file": "/root/3gi-web/docs/contenido/carruseles2.md",
       "source_location": "L978",
-      "community": 13,
+      "community": 15,
       "norm_label": "code:block28 (la mayoria de empresas se auto-evalua dos niveles mas arriba)",
       "id": "contenido_carruseles2_codeblock_28"
     },
@@ -1655,7 +1853,7 @@
       "file_type": "document",
       "source_file": "/root/3gi-web/docs/contenido/carruseles2.md",
       "source_location": "L1005",
-      "community": 13,
+      "community": 15,
       "norm_label": "descripcion youtube \u2014 short 11",
       "id": "contenido_carruseles2_descripci_n_youtube_short_11"
     },
@@ -1664,7 +1862,7 @@
       "file_type": "document",
       "source_file": "/root/3gi-web/docs/contenido/carruseles2.md",
       "source_location": "L1010",
-      "community": 13,
+      "community": 15,
       "norm_label": "code:block29 (la mayoria de empresas se auto-evalua dos niveles mas arriba)",
       "id": "contenido_carruseles2_codeblock_29"
     },
@@ -1673,7 +1871,7 @@
       "file_type": "document",
       "source_file": "/root/3gi-web/docs/contenido/carruseles2.md",
       "source_location": "L1028",
-      "community": 13,
+      "community": 15,
       "norm_label": "caption instagram reel \u2014 post 11",
       "id": "contenido_carruseles2_caption_instagram_reel_post_11"
     },
@@ -1682,7 +1880,7 @@
       "file_type": "document",
       "source_file": "/root/3gi-web/docs/contenido/carruseles2.md",
       "source_location": "L1030",
-      "community": 13,
+      "community": 15,
       "norm_label": "code:block30 (la mayoria de empresas se auto-evalua dos niveles mas arriba)",
       "id": "contenido_carruseles2_codeblock_30"
     },
@@ -1691,7 +1889,7 @@
       "file_type": "document",
       "source_file": "/root/3gi-web/docs/contenido/carruseles2.md",
       "source_location": "L1051",
-      "community": 6,
+      "community": 1,
       "norm_label": "post 12 \u2014 cta: el test era",
       "id": "contenido_carruseles2_post_12_cta_el_test_era"
     },
@@ -1700,7 +1898,7 @@
       "file_type": "document",
       "source_file": "/root/3gi-web/docs/contenido/carruseles2.md",
       "source_location": "L1055",
-      "community": 6,
+      "community": 1,
       "norm_label": "short 12",
       "id": "contenido_carruseles2_short_12"
     },
@@ -1709,7 +1907,7 @@
       "file_type": "document",
       "source_file": "/root/3gi-web/docs/contenido/carruseles2.md",
       "source_location": "L1075",
-      "community": 6,
+      "community": 1,
       "norm_label": "descripcion youtube \u2014 short 12",
       "id": "contenido_carruseles2_descripci_n_youtube_short_12"
     },
@@ -1718,7 +1916,7 @@
       "file_type": "document",
       "source_file": "/root/3gi-web/docs/contenido/carruseles2.md",
       "source_location": "L1080",
-      "community": 6,
+      "community": 1,
       "norm_label": "code:block31 (antes de hablar de ia con cualquier dueno de empresa, siempr)",
       "id": "contenido_carruseles2_codeblock_31"
     },
@@ -1727,7 +1925,7 @@
       "file_type": "document",
       "source_file": "/root/3gi-web/docs/contenido/carruseles2.md",
       "source_location": "L1099",
-      "community": 6,
+      "community": 1,
       "norm_label": "caption instagram reel \u2014 post 12",
       "id": "contenido_carruseles2_caption_instagram_reel_post_12"
     },
@@ -1736,7 +1934,7 @@
       "file_type": "document",
       "source_file": "/root/3gi-web/docs/contenido/carruseles2.md",
       "source_location": "L1101",
-      "community": 6,
+      "community": 1,
       "norm_label": "code:block32 (antes de hablar de ia con cualquier dueno de empresa, siempr)",
       "id": "contenido_carruseles2_codeblock_32"
     },
@@ -1745,7 +1943,7 @@
       "file_type": "document",
       "source_file": "/root/3gi-web/docs/contenido/carruseles2.md",
       "source_location": "L1120",
-      "community": 6,
+      "community": 1,
       "norm_label": "texto linkedin/facebook",
       "id": "contenido_carruseles2_texto_linkedin_facebook_1120"
     },
@@ -1754,7 +1952,7 @@
       "file_type": "document",
       "source_file": "/root/3gi-web/docs/contenido/carruseles2.md",
       "source_location": "L1122",
-      "community": 6,
+      "community": 1,
       "norm_label": "code:block33 (antes de hablar de ia con cualquier dueno de empresa, siempr)",
       "id": "contenido_carruseles2_codeblock_33"
     },
@@ -1763,7 +1961,7 @@
       "file_type": "document",
       "source_file": "/root/3gi-web/docs/contenido/guia-produccion-shorts.md",
       "source_location": "L1",
-      "community": 18,
+      "community": 20,
       "norm_label": "guia-produccion-shorts.md",
       "id": "root_3gi_web_docs_contenido_guia_produccion_shorts_md"
     },
@@ -1772,7 +1970,7 @@
       "file_type": "document",
       "source_file": "/root/3gi-web/docs/contenido/guia-produccion-shorts.md",
       "source_location": "L1",
-      "community": 18,
+      "community": 20,
       "norm_label": "guia de produccion \u2014 youtube shorts 3gi",
       "id": "contenido_guia_produccion_shorts_gu_a_de_producci_n_youtube_shorts_3gi"
     },
@@ -1781,7 +1979,7 @@
       "file_type": "document",
       "source_file": "/root/3gi-web/docs/contenido/guia-produccion-shorts.md",
       "source_location": "L3",
-      "community": 18,
+      "community": 20,
       "norm_label": "flujo completo para producir un short en heygen",
       "id": "contenido_guia_produccion_shorts_flujo_completo_para_producir_un_short_en_heygen"
     },
@@ -1790,7 +1988,7 @@
       "file_type": "document",
       "source_file": "/root/3gi-web/docs/contenido/guia-produccion-shorts.md",
       "source_location": "L18",
-      "community": 18,
+      "community": 20,
       "norm_label": "guiones",
       "id": "contenido_guia_produccion_shorts_guiones"
     },
@@ -1799,7 +1997,7 @@
       "file_type": "document",
       "source_file": "/root/3gi-web/docs/contenido/guia-produccion-shorts.md",
       "source_location": "L20",
-      "community": 18,
+      "community": 20,
       "norm_label": "short 1 \u2014 para post 03",
       "id": "contenido_guia_produccion_shorts_short_1_para_post_03"
     },
@@ -1808,7 +2006,7 @@
       "file_type": "document",
       "source_file": "/root/3gi-web/docs/contenido/guia-produccion-shorts.md",
       "source_location": "L42",
-      "community": 18,
+      "community": 20,
       "norm_label": "short 2 \u2014 para post 06",
       "id": "contenido_guia_produccion_shorts_short_2_para_post_06"
     },
@@ -1817,7 +2015,7 @@
       "file_type": "document",
       "source_file": "/root/3gi-web/docs/contenido/guia-produccion-shorts.md",
       "source_location": "L62",
-      "community": 18,
+      "community": 20,
       "norm_label": "short 3 \u2014 para post 11",
       "id": "contenido_guia_produccion_shorts_short_3_para_post_11"
     },
@@ -1826,7 +2024,7 @@
       "file_type": "document",
       "source_file": "/root/3gi-web/docs/contenido/temp-post-03-imagen.md",
       "source_location": "L1",
-      "community": 19,
+      "community": 21,
       "norm_label": "temp-post-03-imagen.md",
       "id": "root_3gi_web_docs_contenido_temp_post_03_imagen_md"
     },
@@ -1835,7 +2033,7 @@
       "file_type": "document",
       "source_file": "/root/3gi-web/docs/contenido/temp-post-03-imagen.md",
       "source_location": "L1",
-      "community": 19,
+      "community": 21,
       "norm_label": "temporal \u2014 imagen post 03",
       "id": "contenido_temp_post_03_imagen_temporal_imagen_post_03"
     },
@@ -1844,7 +2042,7 @@
       "file_type": "document",
       "source_file": "/root/3gi-web/docs/contenido/temp-post-03-imagen.md",
       "source_location": "L5",
-      "community": 19,
+      "community": 21,
       "norm_label": "imagen linkedin / facebook \u2014 post 03",
       "id": "contenido_temp_post_03_imagen_imagen_linkedin_facebook_post_03"
     },
@@ -1853,7 +2051,7 @@
       "file_type": "document",
       "source_file": "/root/3gi-web/docs/contenido/temp-post-03-imagen.md",
       "source_location": "L8",
-      "community": 19,
+      "community": 21,
       "norm_label": "code:block1 (https://3gi.cl/contenido/post03-linkedin.png)",
       "id": "contenido_temp_post_03_imagen_codeblock_1"
     },
@@ -1862,7 +2060,7 @@
       "file_type": "document",
       "source_file": "/root/3gi-web/docs/homepage-sections.md",
       "source_location": "L1",
-      "community": 16,
+      "community": 18,
       "norm_label": "homepage-sections.md",
       "id": "root_3gi_web_docs_homepage_sections_md"
     },
@@ -1871,7 +2069,7 @@
       "file_type": "document",
       "source_file": "/root/3gi-web/docs/homepage-sections.md",
       "source_location": "L1",
-      "community": 16,
+      "community": 18,
       "norm_label": "homepage \u2014 secciones y proposito",
       "id": "docs_homepage_sections_homepage_secciones_y_prop_sito"
     },
@@ -1880,7 +2078,7 @@
       "file_type": "document",
       "source_file": "/root/3gi-web/docs/homepage-sections.md",
       "source_location": "L5",
-      "community": 16,
+      "community": 18,
       "norm_label": "orden y funcion",
       "id": "docs_homepage_sections_orden_y_funci_n"
     },
@@ -1889,7 +2087,7 @@
       "file_type": "document",
       "source_file": "/root/3gi-web/docs/homepage-sections.md",
       "source_location": "L21",
-      "community": 16,
+      "community": 18,
       "norm_label": "secciones clave para editar",
       "id": "docs_homepage_sections_secciones_clave_para_editar"
     },
@@ -1898,7 +2096,7 @@
       "file_type": "document",
       "source_file": "/root/3gi-web/docs/homepage-sections.md",
       "source_location": "L23",
-      "community": 16,
+      "community": 18,
       "norm_label": "`#para-quien`",
       "id": "docs_homepage_sections_para_quien"
     },
@@ -1907,7 +2105,7 @@
       "file_type": "document",
       "source_file": "/root/3gi-web/docs/homepage-sections.md",
       "source_location": "L27",
-      "community": 16,
+      "community": 18,
       "norm_label": "`#faq` (homepage)",
       "id": "docs_homepage_sections_faq_homepage"
     },
@@ -1916,7 +2114,7 @@
       "file_type": "document",
       "source_file": "/root/3gi-web/docs/homepage-sections.md",
       "source_location": "L31",
-      "community": 16,
+      "community": 18,
       "norm_label": "`#trust`",
       "id": "docs_homepage_sections_trust"
     },
@@ -1925,7 +2123,7 @@
       "file_type": "document",
       "source_file": "/root/3gi-web/docs/homepage-sections.md",
       "source_location": "L35",
-      "community": 16,
+      "community": 18,
       "norm_label": "reglas de contenido",
       "id": "docs_homepage_sections_reglas_de_contenido"
     },
@@ -1934,7 +2132,7 @@
       "file_type": "document",
       "source_file": "/root/3gi-web/docs/openclaw.md",
       "source_location": "L1",
-      "community": 10,
+      "community": 11,
       "norm_label": "openclaw.md",
       "id": "root_3gi_web_docs_openclaw_md"
     },
@@ -1943,7 +2141,7 @@
       "file_type": "document",
       "source_file": "/root/3gi-web/docs/openclaw.md",
       "source_location": "L1",
-      "community": 10,
+      "community": 11,
       "norm_label": "openclaw \u2014 analisis de capacidades y estado actual",
       "id": "docs_openclaw_openclaw_an_lisis_de_capacidades_y_estado_actual"
     },
@@ -1952,7 +2150,7 @@
       "file_type": "document",
       "source_file": "/root/3gi-web/docs/openclaw.md",
       "source_location": "L11",
-      "community": 10,
+      "community": 11,
       "norm_label": "que es openclaw",
       "id": "docs_openclaw_qu_es_openclaw"
     },
@@ -1961,7 +2159,7 @@
       "file_type": "document",
       "source_file": "/root/3gi-web/docs/openclaw.md",
       "source_location": "L17",
-      "community": 10,
+      "community": 11,
       "norm_label": "capacidades disponibles",
       "id": "docs_openclaw_capacidades_disponibles"
     },
@@ -1970,7 +2168,7 @@
       "file_type": "document",
       "source_file": "/root/3gi-web/docs/openclaw.md",
       "source_location": "L19",
-      "community": 10,
+      "community": 11,
       "norm_label": "\u2705 activas y funcionando",
       "id": "docs_openclaw_activas_y_funcionando"
     },
@@ -1979,7 +2177,7 @@
       "file_type": "document",
       "source_file": "/root/3gi-web/docs/openclaw.md",
       "source_location": "L32",
-      "community": 10,
+      "community": 11,
       "norm_label": "\u274c desactivados actualmente",
       "id": "docs_openclaw_desactivados_actualmente"
     },
@@ -1988,7 +2186,7 @@
       "file_type": "document",
       "source_file": "/root/3gi-web/docs/openclaw.md",
       "source_location": "L43",
-      "community": 10,
+      "community": 11,
       "norm_label": "que puede hacer por 3gi hoy",
       "id": "docs_openclaw_qu_puede_hacer_por_3gi_hoy"
     },
@@ -1997,7 +2195,7 @@
       "file_type": "document",
       "source_file": "/root/3gi-web/docs/openclaw.md",
       "source_location": "L45",
-      "community": 10,
+      "community": 11,
       "norm_label": "desde telegram (sin configuracion adicional):",
       "id": "docs_openclaw_desde_telegram_sin_configuraci_n_adicional"
     },
@@ -2006,7 +2204,7 @@
       "file_type": "document",
       "source_file": "/root/3gi-web/docs/openclaw.md",
       "source_location": "L52",
-      "community": 10,
+      "community": 11,
       "norm_label": "con configuracion adicional (proximos pasos):",
       "id": "docs_openclaw_con_configuraci_n_adicional_pr_ximos_pasos"
     },
@@ -2015,7 +2213,7 @@
       "file_type": "document",
       "source_file": "/root/3gi-web/docs/openclaw.md",
       "source_location": "L60",
-      "community": 10,
+      "community": 11,
       "norm_label": "arquitectura tecnica",
       "id": "docs_openclaw_arquitectura_t_cnica"
     },
@@ -2024,7 +2222,7 @@
       "file_type": "document",
       "source_file": "/root/3gi-web/docs/openclaw.md",
       "source_location": "L62",
-      "community": 10,
+      "community": 11,
       "norm_label": "code:block1 (telegram \u2192 @openclaw_3g_bot)",
       "id": "docs_openclaw_codeblock_1"
     },
@@ -2033,7 +2231,7 @@
       "file_type": "document",
       "source_file": "/root/3gi-web/docs/openclaw.md",
       "source_location": "L84",
-      "community": 10,
+      "community": 11,
       "norm_label": "problema actual: gasto excesivo de tokens",
       "id": "docs_openclaw_problema_actual_gasto_excesivo_de_tokens"
     },
@@ -2042,7 +2240,7 @@
       "file_type": "document",
       "source_file": "/root/3gi-web/docs/openclaw.md",
       "source_location": "L100",
-      "community": 10,
+      "community": 11,
       "norm_label": "plan de optimizacion aprobado",
       "id": "docs_openclaw_plan_de_optimizaci_n_aprobado"
     },
@@ -2051,7 +2249,7 @@
       "file_type": "document",
       "source_file": "/root/3gi-web/docs/openclaw.md",
       "source_location": "L113",
-      "community": 10,
+      "community": 11,
       "norm_label": "modelos disponibles via openrouter (sin costo adicional de setup)",
       "id": "docs_openclaw_modelos_disponibles_via_openrouter_sin_costo_adicional_de_setup"
     },
@@ -2060,7 +2258,7 @@
       "file_type": "code",
       "source_file": "/root/3gi-web/docs/pre-upload.py",
       "source_location": "L1",
-      "community": 24,
+      "community": 26,
       "norm_label": "pre-upload.py",
       "id": "root_3gi_web_docs_pre_upload_py"
     },
@@ -2069,7 +2267,7 @@
       "file_type": "document",
       "source_file": "/root/3gi-web/docs/prospectos/2026-05-08-m-eugenia-recurso-animal.md",
       "source_location": "L1",
-      "community": 20,
+      "community": 22,
       "norm_label": "2026-05-08-m-eugenia-recurso-animal.md",
       "id": "root_3gi_web_docs_prospectos_2026_05_08_m_eugenia_recurso_animal_md"
     },
@@ -2078,7 +2276,7 @@
       "file_type": "document",
       "source_file": "/root/3gi-web/docs/prospectos/2026-05-08-m-eugenia-recurso-animal.md",
       "source_location": "L1",
-      "community": 20,
+      "community": 22,
       "norm_label": "seguimiento \u2014 m. eugenia \u00b7 recursoanimalsrl@gmail.com",
       "id": "prospectos_2026_05_08_m_eugenia_recurso_animal_seguimiento_m_eugenia_recursoanimalsrl_gmail_com"
     },
@@ -2087,7 +2285,7 @@
       "file_type": "document",
       "source_file": "/root/3gi-web/docs/prospectos/2026-05-08-m-eugenia-recurso-animal.md",
       "source_location": "L35",
-      "community": 20,
+      "community": 22,
       "norm_label": "seguimiento",
       "id": "prospectos_2026_05_08_m_eugenia_recurso_animal_seguimiento"
     },
@@ -2096,7 +2294,7 @@
       "file_type": "document",
       "source_file": "docs/faq-page.md",
       "source_location": "L1",
-      "community": 14,
+      "community": 16,
       "norm_label": "faq-page.md",
       "id": "docs_faq_page_md"
     },
@@ -2105,7 +2303,7 @@
       "file_type": "document",
       "source_file": "docs/faq-page.md",
       "source_location": "L1",
-      "community": 14,
+      "community": 16,
       "norm_label": "pagina /faq \u2014 arquitectura y mantenimiento",
       "id": "docs_faq_page_p_gina_faq_arquitectura_y_mantenimiento"
     },
@@ -2114,7 +2312,7 @@
       "file_type": "document",
       "source_file": "docs/faq-page.md",
       "source_location": "L3",
-      "community": 14,
+      "community": 16,
       "norm_label": "proposito",
       "id": "docs_faq_page_prop_sito"
     },
@@ -2123,7 +2321,7 @@
       "file_type": "document",
       "source_file": "docs/faq-page.md",
       "source_location": "L9",
-      "community": 14,
+      "community": 16,
       "norm_label": "estructura",
       "id": "docs_faq_page_estructura"
     },
@@ -2132,7 +2330,7 @@
       "file_type": "document",
       "source_file": "docs/faq-page.md",
       "source_location": "L11",
-      "community": 14,
+      "community": 16,
       "norm_label": "1. seccion espejo (`#espejo`)",
       "id": "docs_faq_page_1_secci_n_espejo_espejo"
     },
@@ -2141,7 +2339,7 @@
       "file_type": "document",
       "source_file": "docs/faq-page.md",
       "source_location": "L22",
-      "community": 14,
+      "community": 16,
       "norm_label": "2. faq por categorias",
       "id": "docs_faq_page_2_faq_por_categor_as"
     },
@@ -2150,7 +2348,7 @@
       "file_type": "document",
       "source_file": "docs/faq-page.md",
       "source_location": "L33",
-      "community": 14,
+      "community": 16,
       "norm_label": "schema json-ld",
       "id": "docs_faq_page_schema_json_ld"
     },
@@ -2159,7 +2357,7 @@
       "file_type": "document",
       "source_file": "docs/faq-page.md",
       "source_location": "L40",
-      "community": 14,
+      "community": 16,
       "norm_label": "como agregar preguntas",
       "id": "docs_faq_page_c_mo_agregar_preguntas"
     },
@@ -2168,7 +2366,7 @@
       "file_type": "document",
       "source_file": "docs/faq-page.md",
       "source_location": "L47",
-      "community": 14,
+      "community": 16,
       "norm_label": "criterio para incluir una pregunta",
       "id": "docs_faq_page_criterio_para_incluir_una_pregunta"
     },
@@ -2177,7 +2375,7 @@
       "file_type": "document",
       "source_file": "docs/faq-page.md",
       "source_location": "L55",
-      "community": 14,
+      "community": 16,
       "norm_label": "nav",
       "id": "docs_faq_page_nav"
     },
@@ -2195,7 +2393,7 @@
       "file_type": "document",
       "source_file": "carruseles.md",
       "source_location": "L993",
-      "community": 7,
+      "community": 8,
       "norm_label": "short 12 \u2014 \"el diagnostico gratuito\"",
       "id": "contenido_carruseles_short_12_el_diagn_stico_gratuito"
     },
@@ -2213,7 +2411,7 @@
       "file_type": "document",
       "source_file": "carruseles2.md",
       "source_location": "L132",
-      "community": 1,
+      "community": 2,
       "norm_label": "post 03 \u2014 caso amcl: de 30 min a 5 min",
       "id": "contenido_carruseles2_post_03_caso_amcl_de_30_min_a_5_min"
     },
@@ -2222,7 +2420,7 @@
       "file_type": "document",
       "source_file": "carruseles2.md",
       "source_location": "L157",
-      "community": 1,
+      "community": 2,
       "norm_label": "texto linkedin/facebook",
       "id": "contenido_carruseles2_texto_linkedin_facebook_157"
     },
@@ -2231,7 +2429,7 @@
       "file_type": "document",
       "source_file": "carruseles2.md",
       "source_location": "L254",
-      "community": 5,
+      "community": 7,
       "norm_label": "texto linkedin/facebook",
       "id": "contenido_carruseles2_texto_linkedin_facebook_254"
     },
@@ -2249,7 +2447,7 @@
       "file_type": "document",
       "source_file": "carruseles2.md",
       "source_location": "L454",
-      "community": 2,
+      "community": 4,
       "norm_label": "texto linkedin/facebook",
       "id": "contenido_carruseles2_texto_linkedin_facebook_454"
     },
@@ -2258,7 +2456,7 @@
       "file_type": "document",
       "source_file": "carruseles2.md",
       "source_location": "L561",
-      "community": 8,
+      "community": 9,
       "norm_label": "texto linkedin/facebook",
       "id": "contenido_carruseles2_texto_linkedin_facebook_561"
     },
@@ -2267,7 +2465,7 @@
       "file_type": "document",
       "source_file": "carruseles2.md",
       "source_location": "L640",
-      "community": 9,
+      "community": 10,
       "norm_label": "post 08 \u2014 caso amcl: +40% capacidad sin contratar",
       "id": "contenido_carruseles2_post_08_caso_amcl_40_capacidad_sin_contratar"
     },
@@ -2276,7 +2474,7 @@
       "file_type": "document",
       "source_file": "carruseles2.md",
       "source_location": "L664",
-      "community": 9,
+      "community": 10,
       "norm_label": "texto linkedin/facebook",
       "id": "contenido_carruseles2_texto_linkedin_facebook_664"
     },
@@ -2285,7 +2483,7 @@
       "file_type": "document",
       "source_file": "carruseles2.md",
       "source_location": "L765",
-      "community": 12,
+      "community": 14,
       "norm_label": "texto linkedin/facebook",
       "id": "contenido_carruseles2_texto_linkedin_facebook_765"
     },
@@ -2294,7 +2492,7 @@
       "file_type": "document",
       "source_file": "carruseles2.md",
       "source_location": "L875",
-      "community": 4,
+      "community": 6,
       "norm_label": "texto linkedin/facebook",
       "id": "contenido_carruseles2_texto_linkedin_facebook_875"
     },
@@ -2303,7 +2501,7 @@
       "file_type": "document",
       "source_file": "carruseles2.md",
       "source_location": "L975",
-      "community": 13,
+      "community": 15,
       "norm_label": "texto linkedin/facebook",
       "id": "contenido_carruseles2_texto_linkedin_facebook_975"
     },
@@ -2312,7 +2510,7 @@
       "file_type": "document",
       "source_file": "carruseles2.md",
       "source_location": "L1050",
-      "community": 6,
+      "community": 1,
       "norm_label": "post 12 \u2014 cta: el diagnostico gratuito",
       "id": "contenido_carruseles2_post_12_cta_el_diagn_stico_gratuito"
     },
@@ -2321,7 +2519,7 @@
       "file_type": "document",
       "source_file": "carruseles2.md",
       "source_location": "L1119",
-      "community": 6,
+      "community": 1,
       "norm_label": "texto linkedin/facebook",
       "id": "contenido_carruseles2_texto_linkedin_facebook_1119"
     },
@@ -2330,7 +2528,7 @@
       "file_type": "document",
       "source_file": "carruseles2.md",
       "source_location": "L453",
-      "community": 2,
+      "community": 4,
       "norm_label": "texto linkedin/facebook",
       "id": "contenido_carruseles2_texto_linkedin_facebook_453"
     },
@@ -2339,7 +2537,7 @@
       "file_type": "document",
       "source_file": "carruseles2.md",
       "source_location": "L554",
-      "community": 8,
+      "community": 9,
       "norm_label": "texto linkedin/facebook",
       "id": "contenido_carruseles2_texto_linkedin_facebook_554"
     },
@@ -2348,7 +2546,7 @@
       "file_type": "document",
       "source_file": "carruseles2.md",
       "source_location": "L657",
-      "community": 9,
+      "community": 10,
       "norm_label": "texto linkedin/facebook",
       "id": "contenido_carruseles2_texto_linkedin_facebook_657"
     },
@@ -2357,7 +2555,7 @@
       "file_type": "document",
       "source_file": "carruseles2.md",
       "source_location": "L758",
-      "community": 12,
+      "community": 14,
       "norm_label": "texto linkedin/facebook",
       "id": "contenido_carruseles2_texto_linkedin_facebook_758"
     },
@@ -2366,7 +2564,7 @@
       "file_type": "document",
       "source_file": "carruseles2.md",
       "source_location": "L868",
-      "community": 4,
+      "community": 6,
       "norm_label": "texto linkedin/facebook",
       "id": "contenido_carruseles2_texto_linkedin_facebook_868"
     },
@@ -2375,7 +2573,7 @@
       "file_type": "document",
       "source_file": "carruseles2.md",
       "source_location": "L968",
-      "community": 13,
+      "community": 15,
       "norm_label": "texto linkedin/facebook",
       "id": "contenido_carruseles2_texto_linkedin_facebook_968"
     },
@@ -2384,7 +2582,7 @@
       "file_type": "document",
       "source_file": "carruseles2.md",
       "source_location": "L1112",
-      "community": 6,
+      "community": 1,
       "norm_label": "texto linkedin/facebook",
       "id": "contenido_carruseles2_texto_linkedin_facebook_1112"
     },
@@ -2393,7 +2591,7 @@
       "file_type": "document",
       "source_file": "carruseles2.md",
       "source_location": "L555",
-      "community": 8,
+      "community": 9,
       "norm_label": "texto linkedin/facebook",
       "id": "contenido_carruseles2_texto_linkedin_facebook_555"
     },
@@ -2402,7 +2600,7 @@
       "file_type": "document",
       "source_file": "carruseles2.md",
       "source_location": "L658",
-      "community": 9,
+      "community": 10,
       "norm_label": "texto linkedin/facebook",
       "id": "contenido_carruseles2_texto_linkedin_facebook_658"
     },
@@ -2411,7 +2609,7 @@
       "file_type": "document",
       "source_file": "carruseles2.md",
       "source_location": "L759",
-      "community": 12,
+      "community": 14,
       "norm_label": "texto linkedin/facebook",
       "id": "contenido_carruseles2_texto_linkedin_facebook_759"
     },
@@ -2420,7 +2618,7 @@
       "file_type": "document",
       "source_file": "carruseles2.md",
       "source_location": "L869",
-      "community": 4,
+      "community": 6,
       "norm_label": "texto linkedin/facebook",
       "id": "contenido_carruseles2_texto_linkedin_facebook_869"
     },
@@ -2429,7 +2627,7 @@
       "file_type": "document",
       "source_file": "carruseles2.md",
       "source_location": "L969",
-      "community": 13,
+      "community": 15,
       "norm_label": "texto linkedin/facebook",
       "id": "contenido_carruseles2_texto_linkedin_facebook_969"
     },
@@ -2438,7 +2636,7 @@
       "file_type": "document",
       "source_file": "carruseles2.md",
       "source_location": "L1113",
-      "community": 6,
+      "community": 1,
       "norm_label": "texto linkedin/facebook",
       "id": "contenido_carruseles2_texto_linkedin_facebook_1113"
     },
@@ -2447,7 +2645,7 @@
       "file_type": "document",
       "source_file": "carruseles2.md",
       "source_location": "L156",
-      "community": 1,
+      "community": 2,
       "norm_label": "texto linkedin/facebook",
       "id": "contenido_carruseles2_texto_linkedin_facebook_156"
     },
@@ -2456,7 +2654,7 @@
       "file_type": "document",
       "source_file": "carruseles2.md",
       "source_location": "L253",
-      "community": 5,
+      "community": 7,
       "norm_label": "texto linkedin/facebook",
       "id": "contenido_carruseles2_texto_linkedin_facebook_253"
     },
@@ -2474,7 +2672,7 @@
       "file_type": "document",
       "source_file": "carruseles2.md",
       "source_location": "L452",
-      "community": 2,
+      "community": 4,
       "norm_label": "texto linkedin/facebook",
       "id": "contenido_carruseles2_texto_linkedin_facebook_452"
     },
@@ -2483,7 +2681,7 @@
       "file_type": "document",
       "source_file": "carruseles2.md",
       "source_location": "L553",
-      "community": 8,
+      "community": 9,
       "norm_label": "texto linkedin/facebook",
       "id": "contenido_carruseles2_texto_linkedin_facebook_553"
     },
@@ -2492,7 +2690,7 @@
       "file_type": "document",
       "source_file": "carruseles2.md",
       "source_location": "L656",
-      "community": 9,
+      "community": 10,
       "norm_label": "texto linkedin/facebook",
       "id": "contenido_carruseles2_texto_linkedin_facebook_656"
     },
@@ -2501,7 +2699,7 @@
       "file_type": "document",
       "source_file": "carruseles2.md",
       "source_location": "L757",
-      "community": 12,
+      "community": 14,
       "norm_label": "texto linkedin/facebook",
       "id": "contenido_carruseles2_texto_linkedin_facebook_757"
     },
@@ -2510,7 +2708,7 @@
       "file_type": "document",
       "source_file": "carruseles2.md",
       "source_location": "L867",
-      "community": 4,
+      "community": 6,
       "norm_label": "texto linkedin/facebook",
       "id": "contenido_carruseles2_texto_linkedin_facebook_867"
     },
@@ -2519,7 +2717,7 @@
       "file_type": "document",
       "source_file": "carruseles2.md",
       "source_location": "L967",
-      "community": 13,
+      "community": 15,
       "norm_label": "texto linkedin/facebook",
       "id": "contenido_carruseles2_texto_linkedin_facebook_967"
     },
@@ -2528,7 +2726,7 @@
       "file_type": "document",
       "source_file": "carruseles2.md",
       "source_location": "L1111",
-      "community": 6,
+      "community": 1,
       "norm_label": "texto linkedin/facebook",
       "id": "contenido_carruseles2_texto_linkedin_facebook_1111"
     },
@@ -2537,7 +2735,7 @@
       "file_type": "document",
       "source_file": "carruseles2.md",
       "source_location": "L109",
-      "community": 1,
+      "community": 2,
       "norm_label": "texto linkedin/facebook",
       "id": "contenido_carruseles2_texto_linkedin_facebook_109"
     },
@@ -2546,7 +2744,7 @@
       "file_type": "document",
       "source_file": "carruseles2.md",
       "source_location": "L162",
-      "community": 5,
+      "community": 7,
       "norm_label": "texto linkedin/facebook",
       "id": "contenido_carruseles2_texto_linkedin_facebook_162"
     },
@@ -2555,7 +2753,7 @@
       "file_type": "document",
       "source_file": "carruseles2.md",
       "source_location": "L216",
-      "community": 1,
+      "community": 2,
       "norm_label": "texto linkedin/facebook",
       "id": "contenido_carruseles2_texto_linkedin_facebook_216"
     },
@@ -2564,7 +2762,7 @@
       "file_type": "document",
       "source_file": "carruseles2.md",
       "source_location": "L270",
-      "community": 2,
+      "community": 4,
       "norm_label": "texto linkedin/facebook",
       "id": "contenido_carruseles2_texto_linkedin_facebook_270"
     },
@@ -2573,7 +2771,7 @@
       "file_type": "document",
       "source_file": "carruseles2.md",
       "source_location": "L325",
-      "community": 8,
+      "community": 9,
       "norm_label": "texto linkedin/facebook",
       "id": "contenido_carruseles2_texto_linkedin_facebook_325"
     },
@@ -2582,7 +2780,7 @@
       "file_type": "document",
       "source_file": "carruseles2.md",
       "source_location": "L384",
-      "community": 5,
+      "community": 7,
       "norm_label": "texto linkedin/facebook",
       "id": "contenido_carruseles2_texto_linkedin_facebook_384"
     },
@@ -2591,7 +2789,7 @@
       "file_type": "document",
       "source_file": "carruseles2.md",
       "source_location": "L440",
-      "community": 5,
+      "community": 7,
       "norm_label": "texto linkedin/facebook",
       "id": "contenido_carruseles2_texto_linkedin_facebook_440"
     },
@@ -2600,7 +2798,7 @@
       "file_type": "document",
       "source_file": "carruseles2.md",
       "source_location": "L500",
-      "community": 4,
+      "community": 6,
       "norm_label": "texto linkedin/facebook",
       "id": "contenido_carruseles2_texto_linkedin_facebook_500"
     },
@@ -2609,7 +2807,7 @@
       "file_type": "document",
       "source_file": "carruseles2.md",
       "source_location": "L609",
-      "community": 6,
+      "community": 1,
       "norm_label": "texto linkedin/facebook",
       "id": "contenido_carruseles2_texto_linkedin_facebook_609"
     },
@@ -2618,7 +2816,7 @@
       "file_type": "document",
       "source_file": "carruseles2.md",
       "source_location": "L104",
-      "community": 1,
+      "community": 2,
       "norm_label": "texto linkedin/facebook",
       "id": "contenido_carruseles2_texto_linkedin_facebook_104"
     },
@@ -2627,7 +2825,7 @@
       "file_type": "document",
       "source_file": "carruseles2.md",
       "source_location": "L154",
-      "community": 5,
+      "community": 7,
       "norm_label": "texto linkedin/facebook",
       "id": "contenido_carruseles2_texto_linkedin_facebook_154"
     },
@@ -2636,7 +2834,7 @@
       "file_type": "document",
       "source_file": "carruseles2.md",
       "source_location": "L206",
-      "community": 1,
+      "community": 2,
       "norm_label": "texto linkedin/facebook",
       "id": "contenido_carruseles2_texto_linkedin_facebook_206"
     },
@@ -2645,7 +2843,7 @@
       "file_type": "document",
       "source_file": "carruseles2.md",
       "source_location": "L261",
-      "community": 2,
+      "community": 4,
       "norm_label": "texto linkedin/facebook",
       "id": "contenido_carruseles2_texto_linkedin_facebook_261"
     },
@@ -2654,7 +2852,7 @@
       "file_type": "document",
       "source_file": "carruseles2.md",
       "source_location": "L315",
-      "community": 8,
+      "community": 9,
       "norm_label": "texto linkedin/facebook",
       "id": "contenido_carruseles2_texto_linkedin_facebook_315"
     },
@@ -2663,7 +2861,7 @@
       "file_type": "document",
       "source_file": "carruseles2.md",
       "source_location": "L372",
-      "community": 5,
+      "community": 7,
       "norm_label": "texto linkedin/facebook",
       "id": "contenido_carruseles2_texto_linkedin_facebook_372"
     },
@@ -2672,7 +2870,7 @@
       "file_type": "document",
       "source_file": "carruseles2.md",
       "source_location": "L426",
-      "community": 5,
+      "community": 7,
       "norm_label": "texto linkedin/facebook",
       "id": "contenido_carruseles2_texto_linkedin_facebook_426"
     },
@@ -2681,7 +2879,7 @@
       "file_type": "document",
       "source_file": "carruseles2.md",
       "source_location": "L484",
-      "community": 4,
+      "community": 6,
       "norm_label": "texto linkedin/facebook",
       "id": "contenido_carruseles2_texto_linkedin_facebook_484"
     },
@@ -2699,7 +2897,7 @@
       "file_type": "document",
       "source_file": "carruseles2.md",
       "source_location": "L589",
-      "community": 6,
+      "community": 1,
       "norm_label": "texto linkedin/facebook",
       "id": "contenido_carruseles2_texto_linkedin_facebook_589"
     },
@@ -2708,7 +2906,7 @@
       "file_type": "document",
       "source_file": "sql-assistant-tablas.md",
       "source_location": "L1",
-      "community": 21,
+      "community": 23,
       "norm_label": "sql-assistant-tablas.md",
       "id": "sql_assistant_tablas_md"
     },
@@ -2717,7 +2915,7 @@
       "file_type": "document",
       "source_file": "sql-assistant-tablas.md",
       "source_location": "L1",
-      "community": 21,
+      "community": 23,
       "norm_label": "sql: tablas para 3gi assistant",
       "id": "docs_sql_assistant_tablas_sql_tablas_para_3gi_assistant"
     },
@@ -2726,7 +2924,7 @@
       "file_type": "document",
       "source_file": "sql-assistant-tablas.md",
       "source_location": "L5",
-      "community": 21,
+      "community": 23,
       "norm_label": "code:sql (create table if not exists assistant_sessions ()",
       "id": "docs_sql_assistant_tablas_codeblock_1"
     },
@@ -2735,7 +2933,7 @@
       "file_type": "document",
       "source_file": "agente-personal-3gi.md",
       "source_location": "L1",
-      "community": 3,
+      "community": 5,
       "norm_label": "agente-personal-3gi.md",
       "id": "agente_personal_3gi_md"
     },
@@ -2744,7 +2942,7 @@
       "file_type": "document",
       "source_file": "openclaw.md",
       "source_location": "L1",
-      "community": 10,
+      "community": 11,
       "norm_label": "openclaw.md",
       "id": "openclaw_md"
     },
@@ -2753,7 +2951,7 @@
       "file_type": "document",
       "source_file": "carruseles2.md",
       "source_location": "L1",
-      "community": 2,
+      "community": 4,
       "norm_label": "calendario de publicaciones \u2014 contenido 17 en adelante",
       "id": "contenido_carruseles2_calendario_de_publicaciones_contenido_17_en_adelante"
     },
@@ -2762,7 +2960,7 @@
       "file_type": "document",
       "source_file": "carruseles2.md",
       "source_location": "L7",
-      "community": 2,
+      "community": 4,
       "norm_label": "calendario",
       "id": "contenido_carruseles2_calendario"
     },
@@ -2771,7 +2969,7 @@
       "file_type": "document",
       "source_file": "carruseles2.md",
       "source_location": "L27",
-      "community": 2,
+      "community": 4,
       "norm_label": "detalle por publicacion",
       "id": "contenido_carruseles2_detalle_por_publicaci_n"
     },
@@ -2780,7 +2978,7 @@
       "file_type": "document",
       "source_file": "carruseles2.md",
       "source_location": "L29",
-      "community": 1,
+      "community": 2,
       "norm_label": "contenido 17 \u2014 12 may 2026",
       "id": "contenido_carruseles2_contenido_17_12_may_2026"
     },
@@ -2789,7 +2987,7 @@
       "file_type": "document",
       "source_file": "carruseles2.md",
       "source_location": "L68",
-      "community": 5,
+      "community": 7,
       "norm_label": "contenido 18 \u2014 15 may 2026",
       "id": "contenido_carruseles2_contenido_18_15_may_2026"
     },
@@ -2798,7 +2996,7 @@
       "file_type": "document",
       "source_file": "carruseles2.md",
       "source_location": "L106",
-      "community": 2,
+      "community": 4,
       "norm_label": "contenido 19 \u2014 18 may 2026",
       "id": "contenido_carruseles2_contenido_19_18_may_2026"
     },
@@ -2807,7 +3005,7 @@
       "file_type": "document",
       "source_file": "carruseles2.md",
       "source_location": "L150",
-      "community": 5,
+      "community": 7,
       "norm_label": "contenido 20 \u2014 21 may 2026",
       "id": "contenido_carruseles2_contenido_20_21_may_2026"
     },
@@ -2816,7 +3014,7 @@
       "file_type": "document",
       "source_file": "carruseles2.md",
       "source_location": "L186",
-      "community": 4,
+      "community": 6,
       "norm_label": "contenido 21 \u2014 24 may 2026",
       "id": "contenido_carruseles2_contenido_21_24_may_2026"
     },
@@ -2825,7 +3023,7 @@
       "file_type": "document",
       "source_file": "carruseles2.md",
       "source_location": "L225",
-      "community": 2,
+      "community": 1,
       "norm_label": "contenido 22 \u2014 27 may 2026",
       "id": "contenido_carruseles2_contenido_22_27_may_2026"
     },
@@ -2834,7 +3032,7 @@
       "file_type": "document",
       "source_file": "carruseles2.md",
       "source_location": "L265",
-      "community": 2,
+      "community": 4,
       "norm_label": "contenido 23 \u2014 30 may 2026",
       "id": "contenido_carruseles2_contenido_23_30_may_2026"
     },
@@ -2843,7 +3041,7 @@
       "file_type": "document",
       "source_file": "carruseles2.md",
       "source_location": "L309",
-      "community": 2,
+      "community": 4,
       "norm_label": "contenido 24 \u2014 02 jun 2026",
       "id": "contenido_carruseles2_contenido_24_02_jun_2026"
     },
@@ -2852,7 +3050,7 @@
       "file_type": "document",
       "source_file": "carruseles2.md",
       "source_location": "L352",
-      "community": 8,
+      "community": 9,
       "norm_label": "contenido 25 \u2014 05 jun 2026",
       "id": "contenido_carruseles2_contenido_25_05_jun_2026"
     },
@@ -2861,7 +3059,7 @@
       "file_type": "document",
       "source_file": "carruseles2.md",
       "source_location": "L391",
-      "community": 9,
+      "community": 10,
       "norm_label": "contenido 26 \u2014 08 jun 2026",
       "id": "contenido_carruseles2_contenido_26_08_jun_2026"
     },
@@ -2870,7 +3068,7 @@
       "file_type": "document",
       "source_file": "carruseles2.md",
       "source_location": "L432",
-      "community": 9,
+      "community": 10,
       "norm_label": "contenido 27 \u2014 11 jun 2026",
       "id": "contenido_carruseles2_contenido_27_11_jun_2026"
     },
@@ -2879,7 +3077,7 @@
       "file_type": "document",
       "source_file": "carruseles2.md",
       "source_location": "L473",
-      "community": 12,
+      "community": 14,
       "norm_label": "contenido 28 \u2014 14 jun 2026",
       "id": "contenido_carruseles2_contenido_28_14_jun_2026"
     },
@@ -2888,7 +3086,7 @@
       "file_type": "document",
       "source_file": "carruseles2.md",
       "source_location": "L514",
-      "community": 4,
+      "community": 6,
       "norm_label": "contenido 29 \u2014 17 jun 2026",
       "id": "contenido_carruseles2_contenido_29_17_jun_2026"
     },
@@ -2897,7 +3095,7 @@
       "file_type": "document",
       "source_file": "carruseles2.md",
       "source_location": "L554",
-      "community": 2,
+      "community": 4,
       "norm_label": "estado de publicaciones",
       "id": "contenido_carruseles2_estado_de_publicaciones"
     },
@@ -2906,7 +3104,7 @@
       "file_type": "document",
       "source_file": "0C.md",
       "source_location": "L1",
-      "community": 17,
+      "community": 19,
       "norm_label": "0c.md",
       "id": "0c_md"
     },
@@ -2915,7 +3113,7 @@
       "file_type": "document",
       "source_file": "0C.md",
       "source_location": "L1",
-      "community": 17,
+      "community": 19,
       "norm_label": "contenido 17 \u2014 post 0c (publicar hoy 11 may 2026)",
       "id": "contenido_0c_contenido_17_post_0c_publicar_hoy_11_may_2026"
     },
@@ -2924,7 +3122,7 @@
       "file_type": "document",
       "source_file": "0C.md",
       "source_location": "L5",
-      "community": 17,
+      "community": 19,
       "norm_label": "reel instagram \u2014 caption",
       "id": "contenido_0c_reel_instagram_caption"
     },
@@ -2933,7 +3131,7 @@
       "file_type": "document",
       "source_file": "0C.md",
       "source_location": "L7",
-      "community": 17,
+      "community": 19,
       "norm_label": "code:block1 (el cuello de botella de tu empresa... eres tu.)",
       "id": "contenido_0c_codeblock_1"
     },
@@ -2942,7 +3140,7 @@
       "file_type": "document",
       "source_file": "0C.md",
       "source_location": "L26",
-      "community": 17,
+      "community": 19,
       "norm_label": "linkedin \u2014 caption",
       "id": "contenido_0c_linkedin_caption"
     },
@@ -2951,7 +3149,7 @@
       "file_type": "document",
       "source_file": "0C.md",
       "source_location": "L28",
-      "community": 17,
+      "community": 19,
       "norm_label": "code:block2 (tu equipo trabaja duro. eso no lo dudo.)",
       "id": "contenido_0c_codeblock_2"
     },
@@ -2960,7 +3158,7 @@
       "file_type": "document",
       "source_file": "0C.md",
       "source_location": "L49",
-      "community": 17,
+      "community": 19,
       "norm_label": "facebook \u2014 caption",
       "id": "contenido_0c_facebook_caption"
     },
@@ -2969,7 +3167,7 @@
       "file_type": "document",
       "source_file": "0C.md",
       "source_location": "L51",
-      "community": 17,
+      "community": 19,
       "norm_label": "code:block3 (tu equipo trabaja duro. eso no lo dudo.)",
       "id": "contenido_0c_codeblock_3"
     },
@@ -2978,12 +3176,212 @@
       "file_type": "code",
       "source_file": "astro.config.mjs",
       "source_location": "L1",
-      "community": 25,
+      "community": 27,
       "norm_label": "astro.config.mjs",
       "id": "astro_config_mjs"
     }
   ],
   "links": [
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "PLAN_AVANCE.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "plan_avance_md",
+      "target": "3gi_web_plan_avance_plan_de_avance_brand_refresh_web_redesign_test_era"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "PLAN_AVANCE.md",
+      "source_location": "L12",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "3gi_web_plan_avance_plan_de_avance_brand_refresh_web_redesign_test_era",
+      "target": "3gi_web_plan_avance_estado_general"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "PLAN_AVANCE.md",
+      "source_location": "L26",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "3gi_web_plan_avance_plan_de_avance_brand_refresh_web_redesign_test_era",
+      "target": "3gi_web_plan_avance_contexto_de_decisiones_de_dise_o"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "PLAN_AVANCE.md",
+      "source_location": "L39",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "3gi_web_plan_avance_plan_de_avance_brand_refresh_web_redesign_test_era",
+      "target": "3gi_web_plan_avance_fase_1_archivos_de_marca"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "PLAN_AVANCE.md",
+      "source_location": "L53",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "3gi_web_plan_avance_plan_de_avance_brand_refresh_web_redesign_test_era",
+      "target": "3gi_web_plan_avance_fase_2_redise_o_web_3gi_web"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "PLAN_AVANCE.md",
+      "source_location": "L68",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "3gi_web_plan_avance_plan_de_avance_brand_refresh_web_redesign_test_era",
+      "target": "3gi_web_plan_avance_fase_3_test_era_dise_o_funcionalidades"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "PLAN_AVANCE.md",
+      "source_location": "L83",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "3gi_web_plan_avance_plan_de_avance_brand_refresh_web_redesign_test_era",
+      "target": "3gi_web_plan_avance_deploy"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "PLAN_AVANCE.md",
+      "source_location": "L95",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "3gi_web_plan_avance_plan_de_avance_brand_refresh_web_redesign_test_era",
+      "target": "3gi_web_plan_avance_report_artifact"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "PLAN_AVANCE.md",
+      "source_location": "L105",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "3gi_web_plan_avance_plan_de_avance_brand_refresh_web_redesign_test_era",
+      "target": "3gi_web_plan_avance_checklist_final_pre_merge"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "PLAN_AVANCE.md",
+      "source_location": "L127",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "3gi_web_plan_avance_plan_de_avance_brand_refresh_web_redesign_test_era",
+      "target": "3gi_web_plan_avance_notas_de_sesi_n"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "PLAN_AVANCE.md",
+      "source_location": "L141",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "3gi_web_plan_avance_plan_de_avance_brand_refresh_web_redesign_test_era",
+      "target": "3gi_web_plan_avance_sesiones_de_trabajo"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "PLAN_AVANCE.md",
+      "source_location": "L107",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "3gi_web_plan_avance_checklist_final_pre_merge",
+      "target": "3gi_web_plan_avance_codeblock_1"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "ONBOARDING.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "onboarding_md",
+      "target": "3gi_web_onboarding_welcome_to_3gi_web"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "ONBOARDING.md",
+      "source_location": "L3",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "3gi_web_onboarding_welcome_to_3gi_web",
+      "target": "3gi_web_onboarding_how_we_use_claude"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "ONBOARDING.md",
+      "source_location": "L17",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "3gi_web_onboarding_welcome_to_3gi_web",
+      "target": "3gi_web_onboarding_your_setup_checklist"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "ONBOARDING.md",
+      "source_location": "L29",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "3gi_web_onboarding_welcome_to_3gi_web",
+      "target": "3gi_web_onboarding_team_tips"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "ONBOARDING.md",
+      "source_location": "L33",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "3gi_web_onboarding_welcome_to_3gi_web",
+      "target": "3gi_web_onboarding_get_started"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "ONBOARDING.md",
+      "source_location": "L19",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "3gi_web_onboarding_your_setup_checklist",
+      "target": "3gi_web_onboarding_codebases"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "ONBOARDING.md",
+      "source_location": "L22",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "3gi_web_onboarding_your_setup_checklist",
+      "target": "3gi_web_onboarding_mcp_servers_to_activate"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "ONBOARDING.md",
+      "source_location": "L25",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "3gi_web_onboarding_your_setup_checklist",
+      "target": "3gi_web_onboarding_skills_to_know_about"
+    },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
@@ -7346,5 +7744,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "3fa506fd472a31bff6a6a89e6007f64250ee84dc"
+  "built_at_commit": "1ca4d5b138be0906bfa7b2d4a9bcf2342d89271e"
 }
