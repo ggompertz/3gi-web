@@ -4,7 +4,7 @@ import Layout from '../layouts/Layout.astro';
 
 <Layout
   title="Test ERA gratuito · 3G Intelligence"
-  description="Descubre en qué ERA está tu empresa: Caos Operativo, Datos Organizados o Empresa con IA. 10 preguntas, resultado inmediato, sin registro."
+  description="Descubre en qué ERA está tu empresa: Caos Operativo, Datos Organizados o Empresa con IA. 10 preguntas, informe gratis en tu email."
 >
 
 <style is:global>
@@ -30,16 +30,15 @@ h1{font-family:'Syne',sans-serif;font-size:clamp(24px,5vw,34px);font-weight:900;
 
 /* Options */
 .options{display:flex;flex-direction:column;gap:10px;margin-bottom:32px}
-.opt{background:var(--surface);border:1.5px solid var(--border);border-radius:12px;padding:16px 20px;cursor:pointer;transition:border-color .2s,background .2s;animation:fadeUp .25s ease forwards}
-@keyframes fadeUp{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:translateY(0)}}
+.opt{background:var(--surface);border:1.5px solid var(--border);border-radius:12px;padding:16px 20px;cursor:pointer;transition:border-color .2s,background .2s}
 .opt:hover{border-color:rgba(245,158,11,0.35)}
 .opt.selected{border-color:var(--amber);background:rgba(245,158,11,0.06)}
 .opt-num{font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--amber);margin-bottom:4px}
 .opt-text{font-size:14px;color:var(--offwh);line-height:1.5}
 
 /* Buttons */
-.btn-primary{background:var(--amber);color:var(--night);border:none;border-radius:10px;padding:14px 28px;font-size:15px;font-weight:700;cursor:pointer;font-family:'Syne',sans-serif;transition:opacity .2s;width:100%}
-.btn-primary:hover:not(:disabled){opacity:.88}
+.btn-primary{background:linear-gradient(90deg,#2563EB,#00E891);color:var(--night);border:none;border-radius:10px;padding:14px 28px;font-size:15px;font-weight:700;cursor:pointer;font-family:'Syne',sans-serif;transition:opacity .2s,transform .2s;width:100%}
+.btn-primary:hover:not(:disabled){opacity:.9;transform:translateY(-1px)}
 .btn-primary:disabled{opacity:.4;cursor:default}
 .btn-ghost{background:transparent;color:var(--muted);border:1.5px solid var(--border);border-radius:10px;padding:12px 28px;font-size:14px;font-weight:600;cursor:pointer;font-family:'DM Sans',sans-serif;transition:color .2s,border-color .2s}
 .btn-ghost:hover{color:var(--offwh);border-color:#4b5563}
@@ -51,84 +50,73 @@ h1{font-family:'Syne',sans-serif;font-size:clamp(24px,5vw,34px);font-weight:900;
 
 /* Loading */
 #loading-step{display:none;text-align:center;padding:80px 0}
-.spinner{width:36px;height:36px;border:3px solid var(--border);border-top-color:var(--amber);border-radius:50%;animation:spin .8s linear infinite;margin:0 auto 16px}
+.spinner{width:36px;height:36px;border:3px solid var(--border);border-top-color:var(--green);border-radius:50%;animation:spin .8s linear infinite;margin:0 auto 16px}
 @keyframes spin{to{transform:rotate(360deg)}}
 .loading-text{font-size:14px;color:var(--muted)}
 
-/* Result */
-#result-step{display:none}
-.result-sub{font-size:13px;color:var(--muted);line-height:1.6;margin:-4px 0 20px}
-.era-result-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:24px}
-.era-result-card{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:20px;border-top:3px solid transparent}
-.era-result-dim{font-size:10px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-bottom:8px}
-.era-result-val{font-family:'Syne',sans-serif;font-size:28px;font-weight:900;margin-bottom:2px;line-height:1}
-.era-result-name{font-size:12px;color:var(--muted);margin-bottom:14px}
-.era-score-bar{height:4px;background:var(--border);border-radius:2px;overflow:hidden;margin-bottom:4px}
-.era-score-fill{height:100%;border-radius:2px;transition:width .6s ease}
-.era-score-label{font-size:10px;color:var(--muted)}
-.result-section{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:20px 22px;margin-bottom:12px}
-.result-section-label{font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-bottom:8px}
-.result-section-text{font-size:14px;color:var(--offwh);line-height:1.65}
-
-/* CTA upgrade */
-.upgrade-box{background:linear-gradient(135deg,rgba(245,158,11,0.07),rgba(245,158,11,0.03));border:1px solid rgba(245,158,11,0.2);border-radius:16px;padding:28px;margin-top:24px}
-.upgrade-eyebrow{font-size:11px;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--amber);margin-bottom:10px}
-.upgrade-title{font-family:'Syne',sans-serif;font-size:20px;font-weight:800;margin-bottom:8px;letter-spacing:-.02em}
-.upgrade-sub{font-size:13px;color:var(--muted);margin-bottom:20px;line-height:1.6}
-.upgrade-features{list-style:none;margin-bottom:20px;display:flex;flex-direction:column;gap:6px}
-.upgrade-features li{font-size:13px;color:#cbd5e1;display:flex;gap:8px}
-.upgrade-features li::before{content:"→";color:var(--amber);flex-shrink:0}
-
-/* ERA Journey intro */
-.era-journey{display:grid;grid-template-columns:1fr auto 1fr auto 1fr;align-items:start;gap:8px;margin:28px 0 20px}
-.era-journey-arrow{font-size:18px;color:var(--muted);align-self:center;padding-top:4px}
-.era-journey-card{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:16px;border-top:3px solid transparent}
-.era-journey-card.era-1{border-top-color:#f87171}
-.era-journey-card.era-2{border-top-color:var(--amber)}
-.era-journey-card.era-3{border-top-color:var(--green)}
-.era-journey-num{font-family:'Syne',sans-serif;font-size:10px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;margin-bottom:4px;opacity:.7}
-.era-1 .era-journey-num{color:#f87171}
-.era-2 .era-journey-num{color:var(--amber)}
-.era-3 .era-journey-num{color:var(--green)}
-.era-journey-name{font-family:'Syne',sans-serif;font-size:13px;font-weight:800;margin-bottom:6px;letter-spacing:-.01em}
-.era-journey-desc{font-size:11px;color:var(--muted);line-height:1.5}
-.intro-fine{font-size:13px;color:var(--muted);line-height:1.6;margin-bottom:20px}
-.intro-meta{font-size:11px;color:var(--muted);text-align:center;margin-top:12px;letter-spacing:.04em}
-@media(max-width:600px){
-  .era-journey{grid-template-columns:1fr;grid-template-rows:auto}
-  .era-journey-arrow{display:none}
-}
+/* Gate step */
+#gate-step{display:none}
+.gate-preview{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:20px 0 8px}
+.gate-card{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:20px;border-top:3px solid transparent}
+.gate-card-label{font-size:10px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-bottom:8px}
+.gate-card-era{font-family:'Syne',sans-serif;font-size:32px;font-weight:900;line-height:1;margin-bottom:4px}
+.gate-card-name{font-size:12px;color:var(--muted)}
+.gate-hint{font-size:12px;color:var(--muted);text-align:center;margin:8px 0 0;letter-spacing:.02em}
+.gate-box{background:var(--surface);border:1px solid var(--border);border-radius:16px;padding:24px;margin:20px 0 0}
+.gate-box-title{font-family:'Syne',sans-serif;font-size:17px;font-weight:800;margin-bottom:8px;letter-spacing:-.02em}
+.gate-box-sub{font-size:13px;color:var(--muted);line-height:1.6;margin-bottom:20px}
+.gate-features{list-style:none;margin-bottom:20px;display:flex;flex-direction:column;gap:6px}
+.gate-features li{font-size:13px;color:#cbd5e1;display:flex;gap:8px;align-items:flex-start}
+.gate-features li::before{content:"→";color:var(--green);flex-shrink:0;margin-top:1px}
 
 /* Share */
-.share-box{margin-top:20px;padding:16px;background:var(--surface);border:1px solid var(--border);border-radius:12px;display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.share-box{margin-top:16px;padding:16px;background:var(--surface);border:1px solid var(--border);border-radius:12px;display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}
 .share-label{font-size:12px;color:var(--muted);font-weight:600;letter-spacing:.04em}
 .share-btns{display:flex;gap:8px}
 .share-btn{display:inline-flex;align-items:center;gap:6px;padding:8px 14px;border-radius:8px;border:1px solid var(--border);font-size:12px;font-weight:600;cursor:pointer;font-family:'DM Sans',sans-serif;transition:all .2s}
 .share-copy{background:transparent;color:var(--offwh)}
-.share-copy:hover{border-color:var(--amber);color:var(--amber)}
+.share-copy:hover{border-color:var(--green);color:var(--green)}
 .share-li{background:#0A66C2;color:#fff;border-color:#0A66C2}
 .share-li:hover{background:#004182;border-color:#004182}
 
-/* Email gate */
-#email-step{display:none;margin-top:4px}
+/* Email + OTP form */
 .f-row{display:flex;flex-direction:column;gap:12px;margin-bottom:16px}
 .f-label{font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--amber);margin-bottom:5px;display:block}
 input.f-input{width:100%;background:#ffffff0d;border:1.5px solid var(--border);border-radius:10px;padding:12px 16px;color:var(--offwh);font-size:14px;font-family:'DM Sans',sans-serif;outline:none;transition:border-color .2s}
-input.f-input:focus{border-color:rgba(245,158,11,0.55)}
+input.f-input:focus{border-color:rgba(0,232,145,0.45)}
 input.f-input::placeholder{color:#4b5563}
 .f-error{font-size:12px;color:#f87171;margin-top:6px;display:none}
-
-/* OTP */
-#otp-step{display:none;margin-top:4px}
 .otp-info{font-size:13px;color:var(--muted);margin-bottom:16px;line-height:1.6}
 input.otp-input{width:100%;background:#ffffff0d;border:1.5px solid var(--border);border-radius:10px;padding:14px 16px;color:var(--offwh);font-size:22px;font-family:'Syne',sans-serif;font-weight:700;letter-spacing:.2em;text-align:center;outline:none;transition:border-color .2s}
-input.otp-input:focus{border-color:rgba(245,158,11,0.55)}
+input.otp-input:focus{border-color:rgba(0,232,145,0.45)}
 .otp-resend{font-size:12px;color:var(--muted);margin-top:10px;text-align:center}
 .otp-resend button{background:none;border:none;color:var(--amber);cursor:pointer;font-size:12px;text-decoration:underline}
 
+/* ERA Journey intro */
+.era-journey{display:flex;flex-direction:column;gap:10px;margin:24px 0 20px}
+.era-journey-card{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:16px 18px;border-left:3px solid transparent;display:flex;align-items:center;gap:14px}
+.era-journey-card.era-1{border-left-color:#f87171}
+.era-journey-card.era-2{border-left-color:var(--amber)}
+.era-journey-card.era-3{border-left-color:var(--green)}
+.era-journey-icon{font-size:22px;flex-shrink:0}
+.era-journey-body{}
+.era-journey-num{font-size:10px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;opacity:.7;margin-bottom:2px}
+.era-1 .era-journey-num{color:#f87171}
+.era-2 .era-journey-num{color:var(--amber)}
+.era-3 .era-journey-num{color:var(--green)}
+.era-journey-name{font-family:'Syne',sans-serif;font-size:14px;font-weight:800;margin-bottom:3px;letter-spacing:-.01em}
+.era-journey-desc{font-size:12px;color:var(--muted);line-height:1.5}
+.intro-fine{font-size:13px;color:var(--muted);line-height:1.6;margin-bottom:20px}
+.intro-meta{font-size:11px;color:var(--muted);text-align:center;margin-top:12px;letter-spacing:.04em}
+
+/* Dim transition overlay */
+.dim-transition{background:rgba(0,232,145,0.05);border:1px solid rgba(0,232,145,0.18);border-radius:12px;padding:20px;text-align:center;margin-bottom:24px}
+.dim-transition-label{font-size:10px;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--green);margin-bottom:6px}
+.dim-transition-title{font-family:'Syne',sans-serif;font-size:16px;font-weight:800;margin-bottom:4px}
+.dim-transition-sub{font-size:12px;color:var(--muted)}
+
 @media(max-width:600px){
   main{padding:60px 20px 80px}
-  .era-grid{flex-direction:column}
 }
 </style>
 
@@ -137,32 +125,38 @@ input.otp-input:focus{border-color:rgba(245,158,11,0.55)}
 <div id="intro-step">
   <div class="eyebrow">Test ERA · gratuito</div>
   <h1>¿En qué ERA está<br>tu empresa?</h1>
-  <p class="intro-sub">10 preguntas · resultado inmediato · sin registro</p>
+  <p class="intro-sub">10 preguntas · informe personalizado gratis · ~3 minutos</p>
 
-  <!-- ERA Journey -->
-  <div class="era-journey">
+  <div class="era-journey" id="era-journey-cards">
     <div class="era-journey-card era-1">
-      <div class="era-journey-num">ERA 1</div>
-      <div class="era-journey-name">Caos Operativo</div>
-      <div class="era-journey-desc">Procesos manuales, datos dispersos, sin automatización formal.</div>
+      <div class="era-journey-icon">🔥</div>
+      <div class="era-journey-body">
+        <div class="era-journey-num">ERA 1</div>
+        <div class="era-journey-name">Caos Operativo</div>
+        <div class="era-journey-desc">Procesos manuales, datos dispersos, decisiones por intuición.</div>
+      </div>
     </div>
-    <div class="era-journey-arrow">→</div>
     <div class="era-journey-card era-2">
-      <div class="era-journey-num">ERA 2</div>
-      <div class="era-journey-name">En Transición</div>
-      <div class="era-journey-desc">Iniciativas IA en marcha, pero sin integración sistémica.</div>
+      <div class="era-journey-icon">📊</div>
+      <div class="era-journey-body">
+        <div class="era-journey-num">ERA 2</div>
+        <div class="era-journey-name">Datos Organizados</div>
+        <div class="era-journey-desc">Sistemas funcionando, pero datos sin conectar ni automatizar.</div>
+      </div>
     </div>
-    <div class="era-journey-arrow">→</div>
     <div class="era-journey-card era-3">
-      <div class="era-journey-num">ERA 3</div>
-      <div class="era-journey-name">Empresa con IA</div>
-      <div class="era-journey-desc">IA embebida en procesos críticos, cultura de datos y mejora continua.</div>
+      <div class="era-journey-icon">⚡</div>
+      <div class="era-journey-body">
+        <div class="era-journey-num">ERA 3</div>
+        <div class="era-journey-name">Empresa con IA</div>
+        <div class="era-journey-desc">IA embebida en procesos críticos. Tú enfocado en estrategia.</div>
+      </div>
     </div>
   </div>
 
-  <p class="intro-fine">El Test ERA mide tu posición actual en este espectro — en ambas dimensiones: operacional y comercial.</p>
+  <p class="intro-fine">El Test ERA mide tu posición en ambas dimensiones — operacional y comercial — y genera un informe personalizado con tus próximos pasos concretos.</p>
   <button class="btn-primary" onclick="startQuiz()">Empezar Test ERA →</button>
-  <p class="intro-meta">10 preguntas · ~3 minutos · resultado inmediato</p>
+  <p class="intro-meta">10 preguntas · informe gratis a tu email · sin compromiso</p>
 </div>
 
 <!-- QUIZ -->
@@ -183,56 +177,59 @@ input.otp-input:focus{border-color:rgba(245,158,11,0.55)}
   <p class="loading-text">Calculando tu ERA…</p>
 </div>
 
-<!-- RESULT -->
-<div id="result-step">
-  <div class="eyebrow">Tu Test ERA</div>
-  <h1 id="result-headline">Así está tu empresa hoy</h1>
-  <p class="result-sub" id="result-sub"></p>
-  <div class="era-result-grid" id="era-grid"></div>
-  <div class="result-section" id="result-interpretation"></div>
-  <div class="result-section" id="result-gap"></div>
+<!-- GATE: ERA preview + email capture -->
+<div id="gate-step">
+  <div class="eyebrow">Tu diagnóstico ERA</div>
+  <h1>Tu empresa está aquí</h1>
+  <p class="intro-sub" style="margin-bottom:0">Calculamos tu ERA en ambas dimensiones. Ingresa tu email para ver la interpretación completa y tus próximos pasos.</p>
 
-  <div class="upgrade-box">
-    <div class="upgrade-eyebrow">Análisis IA completo</div>
-    <div class="upgrade-title">¿Qué hacer con esto?</div>
-    <div class="upgrade-sub">Con tu ERA como base, generamos un análisis personalizado con Claude: qué automatizar, en qué orden, inversión estimada y ROI proyectado.</div>
-    <ul class="upgrade-features">
-      <li>Dolor principal identificado en tu negocio específico</li>
+  <div class="gate-preview">
+    <div class="gate-card" id="gate-op-card">
+      <div class="gate-card-label">Operacional</div>
+      <div class="gate-card-era" id="gate-op-era">—</div>
+      <div class="gate-card-name" id="gate-op-name">—</div>
+    </div>
+    <div class="gate-card" id="gate-com-card">
+      <div class="gate-card-label">Comercial</div>
+      <div class="gate-card-era" id="gate-com-era">—</div>
+      <div class="gate-card-name" id="gate-com-name">—</div>
+    </div>
+  </div>
+  <p class="gate-hint">↓ Desbloquea tu interpretación completa</p>
+
+  <div class="gate-box">
+    <div class="gate-box-title">¿Qué significa tu ERA y qué hacer ahora?</div>
+    <div class="gate-box-sub">El informe incluye: interpretación por dimensión, brecha identificada, y oportunidades concretas de IA para tu empresa. Gratis — llega a tu email en segundos.</div>
+    <ul class="gate-features">
+      <li>Diagnóstico de tu punto de partida real</li>
+      <li>Brecha entre dimensión operacional y comercial</li>
       <li>Oportunidad concreta de IA para tu proceso clave</li>
-      <li>Alerta crítica que debes atender primero</li>
-      <li>El informe llega a tu email — es tuyo para siempre</li>
+      <li>Próximos pasos según tu ERA — sin plantillas genéricas</li>
     </ul>
 
-    <!-- Email capture -->
-    <div id="email-step">
+    <div id="gate-form">
       <div class="f-row">
         <div>
-          <label class="f-label" for="inp-nombre">Tu nombre</label>
-          <input id="inp-nombre" class="f-input" type="text" placeholder="Ej: María González" autocomplete="given-name">
+          <label class="f-label" for="g-nombre">Tu nombre</label>
+          <input id="g-nombre" class="f-input" type="text" placeholder="Ej: María González" autocomplete="given-name">
         </div>
         <div>
-          <label class="f-label" for="inp-email">Tu email</label>
-          <input id="inp-email" class="f-input" type="email" placeholder="tu@empresa.com" autocomplete="email">
-          <div class="f-error" id="email-error">Ingresa un email válido</div>
+          <label class="f-label" for="g-email">Tu email</label>
+          <input id="g-email" class="f-input" type="email" placeholder="tu@empresa.com" autocomplete="email">
+          <div class="f-error" id="g-email-error">Ingresa un email válido</div>
         </div>
       </div>
-      <button class="btn-primary" id="btn-send-otp" onclick="sendOtp()">Generar mi análisis IA →</button>
+      <button class="btn-primary" id="g-btn-otp" onclick="gateOtp()">Ver mi informe ERA →</button>
     </div>
 
-    <!-- OTP -->
-    <div id="otp-step">
-      <p class="otp-info" id="otp-info">Te enviamos un código de 6 dígitos a <strong id="otp-email-display"></strong>. Ingrésalo para continuar.</p>
-      <input id="inp-otp" class="otp-input" type="text" inputmode="numeric" maxlength="6" placeholder="000000" oninput="onOtpInput()">
-      <div class="f-error" id="otp-error">Código incorrecto o expirado</div>
-      <p class="otp-resend">¿No llegó? <button onclick="resendOtp()">Reenviar código</button></p>
-    </div>
-
-    <div id="upgrade-cta">
-      <button class="btn-primary" onclick="showEmailStep()">Quiero el análisis completo →</button>
+    <div id="gate-otp-wrap" style="display:none">
+      <p class="otp-info">Te enviamos un código a <strong id="gate-otp-email"></strong>. Ingrésalo para continuar.</p>
+      <input id="g-otp" class="otp-input" type="text" inputmode="numeric" maxlength="6" placeholder="000000" oninput="onGateOtpInput()">
+      <div class="f-error" id="g-otp-error">Código incorrecto o expirado</div>
+      <p class="otp-resend">¿No llegó? <button onclick="gateResend()">Reenviar código</button></p>
     </div>
   </div>
 
-  <!-- SHARE -->
   <div class="share-box">
     <div class="share-label">Compartir resultado</div>
     <div class="share-btns">
@@ -250,17 +247,16 @@ input.otp-input:focus{border-color:rgba(245,158,11,0.55)}
 </main>
 
 <script>
-import { animate } from 'motion';
+import { animate, stagger } from 'motion';
 window.__anim = animate;
+window.__stagger = stagger;
 </script>
 
 <script is:inline>
 const WORKER = 'https://diagnostico-api.3g-ia-agents.com';
 
 const PREGUNTAS = [
-  // Operacional
-  {
-    id: 'q1', dim: 'Operacional · Datos e información',
+  { id: 'q1', dim: 'Operacional · Datos e información',
     texto: '¿Cómo gestionas la información clave del negocio?',
     opciones: [
       { val: 1, texto: 'En papel, memoria o WhatsApp — sin sistema formal' },
@@ -268,8 +264,7 @@ const PREGUNTAS = [
       { val: 3, texto: 'En sistemas integrados con acceso en tiempo real' },
     ]
   },
-  {
-    id: 'q2', dim: 'Operacional · Reportes y visibilidad',
+  { id: 'q2', dim: 'Operacional · Reportes y visibilidad',
     texto: '¿Cómo conoces el estado real de tu negocio?',
     opciones: [
       { val: 1, texto: 'Preguntando a las personas — no hay reporte formal' },
@@ -277,8 +272,7 @@ const PREGUNTAS = [
       { val: 3, texto: 'Dashboards automáticos actualizados — veo el negocio en tiempo real' },
     ]
   },
-  {
-    id: 'q3', dim: 'Operacional · Automatización',
+  { id: 'q3', dim: 'Operacional · Automatización',
     texto: '¿Cuántos procesos operativos están automatizados?',
     opciones: [
       { val: 1, texto: 'Casi ninguno — todo requiere intervención humana' },
@@ -286,8 +280,7 @@ const PREGUNTAS = [
       { val: 3, texto: 'La mayoría — flujos automáticos encadenados sin intervención' },
     ]
   },
-  {
-    id: 'q4', dim: 'Operacional · Gestión de clientes',
+  { id: 'q4', dim: 'Operacional · Gestión de clientes',
     texto: '¿Cómo gestionas la relación con tus clientes?',
     opciones: [
       { val: 1, texto: 'Sin sistema — por memoria, WhatsApp o cuaderno' },
@@ -295,8 +288,7 @@ const PREGUNTAS = [
       { val: 3, texto: 'CRM integrado con seguimiento automático y alertas' },
     ]
   },
-  {
-    id: 'q5', dim: 'Operacional · Toma de decisiones',
+  { id: 'q5', dim: 'Operacional · Toma de decisiones',
     texto: '¿En qué te basas para tomar decisiones importantes?',
     opciones: [
       { val: 1, texto: 'Intuición y experiencia — no hay datos disponibles' },
@@ -304,9 +296,7 @@ const PREGUNTAS = [
       { val: 3, texto: 'Datos en tiempo real y proyecciones automáticas' },
     ]
   },
-  // Comercial
-  {
-    id: 'c1', dim: 'Comercial · Generación de demanda',
+  { id: 'c1', dim: 'Comercial · Generación de demanda',
     texto: '¿Cómo consigues nuevos clientes?',
     opciones: [
       { val: 1, texto: 'Referencias y red de contactos — sin sistema de adquisición' },
@@ -314,8 +304,7 @@ const PREGUNTAS = [
       { val: 3, texto: 'Sistema predecible: inbound + outbound con métricas claras' },
     ]
   },
-  {
-    id: 'c2', dim: 'Comercial · Proceso de ventas',
+  { id: 'c2', dim: 'Comercial · Proceso de ventas',
     texto: '¿Cómo es tu proceso de ventas?',
     opciones: [
       { val: 1, texto: 'Sin proceso definido — depende del vendedor o del momento' },
@@ -323,8 +312,7 @@ const PREGUNTAS = [
       { val: 3, texto: 'Pipeline gestionado con etapas, métricas y seguimiento automático' },
     ]
   },
-  {
-    id: 'c3', dim: 'Comercial · Retención y recurrencia',
+  { id: 'c3', dim: 'Comercial · Retención y recurrencia',
     texto: '¿Cómo fidelizas a tus clientes actuales?',
     opciones: [
       { val: 1, texto: 'Sin sistema — reaccionamos cuando hay problemas' },
@@ -332,8 +320,7 @@ const PREGUNTAS = [
       { val: 3, texto: 'Programa activo de retención con métricas de churn y NPS' },
     ]
   },
-  {
-    id: 'c4', dim: 'Comercial · Presencia digital',
+  { id: 'c4', dim: 'Comercial · Presencia digital',
     texto: '¿Cómo te encuentran tus clientes potenciales?',
     opciones: [
       { val: 1, texto: 'Solo boca a boca — sin presencia digital real' },
@@ -341,8 +328,7 @@ const PREGUNTAS = [
       { val: 3, texto: 'Presencia digital activa con contenido regular y SEO' },
     ]
   },
-  {
-    id: 'c5', dim: 'Comercial · Métricas comerciales',
+  { id: 'c5', dim: 'Comercial · Métricas comerciales',
     texto: '¿Qué métricas comerciales monitoreas activamente?',
     opciones: [
       { val: 1, texto: 'Solo ventas totales — poco más' },
@@ -355,27 +341,9 @@ const PREGUNTAS = [
 const ERA_NAMES = ['', 'Caos Operativo', 'Datos Organizados', 'Empresa con IA'];
 const ERA_COLORS = ['', '#f87171', '#fbbf24', '#00E891'];
 
-const ERA_DESC = {
-  1: 'El negocio depende de personas clave, las decisiones se toman por intuición y los procesos son difíciles de escalar.',
-  2: 'Hay sistemas funcionando, pero los datos aún no se usan para decidir ni automatizar. El potencial está ahí, sin aprovechar.',
-  3: 'La IA maneja el volumen operativo. Las personas manejan la estrategia. El negocio escala sin agregar fricción.',
-};
-
-const GAP_TEXTS = {
-  '1-1': 'Estás en ERA 1 en ambas dimensiones. La prioridad es salir del caos operativo antes de escalar comercialmente.',
-  '1-2': 'Lo comercial está más maduro que lo operativo. El crecimiento en ventas se topará con un piso operativo débil.',
-  '1-3': 'Hay una brecha crítica: vendes bien pero no puedes sostener el crecimiento con la operación actual.',
-  '2-1': 'Lo operativo está más organizado. El próximo paso es llevar esa estructura al área comercial.',
-  '2-2': 'Estás en ERA 2 en ambas dimensiones. El paso siguiente es usar esos datos para automatizar decisiones.',
-  '2-3': 'Tienes un motor comercial avanzado. Automatizar la operación permitirá escalar sin perder calidad.',
-  '3-1': 'La operación está optimizada con IA, pero lo comercial necesita ponerse al mismo nivel.',
-  '3-2': 'La operación es eficiente. El foco ahora es llevar esa misma lógica de datos al área comercial.',
-  '3-3': 'Estás en ERA 3 en ambas dimensiones. El trabajo es profundizar y mantenerse en la frontera de lo que la IA permite.',
-};
-
 let current = 0;
 let answers = {};
-let diagId = null;
+let gateDiagId = null;
 
 function calcEra(score, total) {
   const pct = score / (total * 3);
@@ -398,9 +366,20 @@ function calcSub(score, total) {
 }
 
 function startQuiz() {
-  document.getElementById('intro-step').style.display = 'none';
-  document.getElementById('quiz-step').style.display = 'block';
-  renderQuestion();
+  const introEl = document.getElementById('intro-step');
+  const quizEl = document.getElementById('quiz-step');
+  if (window.__anim) {
+    window.__anim(introEl, { opacity: [1, 0], y: [0, -8] }, { duration: 0.2, easing: 'ease-in' })
+      .finished.then(() => {
+        introEl.style.display = 'none';
+        quizEl.style.display = 'block';
+        renderQuestion();
+      });
+  } else {
+    introEl.style.display = 'none';
+    quizEl.style.display = 'block';
+    renderQuestion();
+  }
 }
 
 function renderQuestion() {
@@ -413,12 +392,15 @@ function renderQuestion() {
   document.getElementById('progress-pct').textContent = `${pct}%`;
   document.getElementById('progress-fill').style.width = `${pct}%`;
 
-  // Show section separator between q5 and c1
   const sepHtml = current === 5
-    ? `<div class="section-sep"><div class="section-sep-line"></div><div class="section-sep-label">Dimensión Comercial</div><div class="section-sep-line"></div></div>`
+    ? `<div class="dim-transition">
+        <div class="dim-transition-label">✓ Dimensión operacional completa</div>
+        <div class="dim-transition-title">Ahora: dimensión comercial</div>
+        <div class="dim-transition-sub">5 preguntas más sobre cómo creces y vendes</div>
+       </div>`
     : '';
 
-  let optsHtml = q.opciones.map((o, i) => `
+  const optsHtml = q.opciones.map((o, i) => `
     <div class="opt" id="opt-${i}" onclick="selectOpt(${i}, ${o.val})">
       <div class="opt-num">Opción ${i + 1}</div>
       <div class="opt-text">${o.texto}</div>
@@ -430,17 +412,28 @@ function renderQuestion() {
     ${sepHtml}
     <div class="dim-label">${q.dim}</div>
     <div class="question-text">${q.texto}</div>
-    <div class="options">${optsHtml}</div>
+    <div class="options" id="opts-wrap">${optsHtml}</div>
   `;
-  // Animate question container in
-  if (window.__anim) {
-    window.__anim(container, { opacity: [0, 1], y: [8, 0] }, { duration: 0.25, easing: 'ease-out' });
+
+  if (window.__anim && window.__stagger) {
+    window.__anim(
+      '#opts-wrap .opt',
+      { opacity: [0, 1], x: [-10, 0] },
+      { duration: 0.22, delay: window.__stagger(0.06), easing: 'ease-out' }
+    );
+    if (current === 5) {
+      window.__anim('.dim-transition', { opacity: [0, 1], y: [6, 0] }, { duration: 0.3, easing: 'ease-out' });
+    }
   }
 }
 
 function selectOpt(idx, val) {
   document.querySelectorAll('.opt').forEach(el => el.classList.remove('selected'));
-  document.getElementById(`opt-${idx}`).classList.add('selected');
+  const selected = document.getElementById(`opt-${idx}`);
+  selected.classList.add('selected');
+  if (window.__anim) {
+    window.__anim(selected, { scale: [1, 1.02, 1] }, { duration: 0.18, easing: 'ease-out' });
+  }
 
   setTimeout(() => {
     answers[PREGUNTAS[current].id] = val;
@@ -448,17 +441,16 @@ function selectOpt(idx, val) {
     if (current < PREGUNTAS.length) {
       renderQuestion();
     } else {
-      showResult();
+      showGate();
     }
   }, 280);
 }
 
-function showResult() {
+function showGate() {
   document.getElementById('quiz-step').style.display = 'none';
   document.getElementById('loading-step').style.display = 'block';
 
-  // Rotating loading messages
-  const msgs = ['Analizando tus respuestas…', 'Calculando tu ERA…', 'Identificando brechas…', 'Generando diagnóstico…'];
+  const msgs = ['Analizando tus respuestas…', 'Calculando tu ERA…', 'Identificando brechas…', 'Preparando tu informe…'];
   let mi = 0;
   const loadTxt = document.querySelector('.loading-text');
   const loadInterval = setInterval(() => { mi = (mi+1) % msgs.length; if(loadTxt) loadTxt.textContent = msgs[mi]; }, 600);
@@ -482,66 +474,37 @@ function showResult() {
     window._eraOp = eraOpStr;
     window._eraCom = eraComStr;
 
-    // Score percentages for bars
-    const opPct = Math.round((opScore / 10) * 100);
-    const comPct = Math.round((comScore / 10) * 100);
+    // Populate gate preview cards
+    const opCard = document.getElementById('gate-op-card');
+    opCard.style.borderTopColor = ERA_COLORS[eraOp];
+    document.getElementById('gate-op-era').textContent = eraOpStr;
+    document.getElementById('gate-op-era').style.color = ERA_COLORS[eraOp];
+    document.getElementById('gate-op-name').textContent = ERA_NAMES[eraOp];
 
-    // Result sub-headline
-    document.getElementById('result-sub').textContent =
-      `${ERA_NAMES[eraOp]} en lo operacional · ${ERA_NAMES[eraCom]} en lo comercial`;
+    const comCard = document.getElementById('gate-com-card');
+    comCard.style.borderTopColor = ERA_COLORS[eraCom];
+    document.getElementById('gate-com-era').textContent = eraComStr;
+    document.getElementById('gate-com-era').style.color = ERA_COLORS[eraCom];
+    document.getElementById('gate-com-name').textContent = ERA_NAMES[eraCom];
 
-    // ERA grid with score bars
-    document.getElementById('era-grid').innerHTML = `
-      <div class="era-result-card" style="border-top-color:${ERA_COLORS[eraOp]}">
-        <div class="era-result-dim">Operacional</div>
-        <div class="era-result-val" style="color:${ERA_COLORS[eraOp]}">${eraOpStr}</div>
-        <div class="era-result-name">${ERA_NAMES[eraOp]}</div>
-        <div class="era-score-bar"><div class="era-score-fill" style="width:${opPct}%;background:${ERA_COLORS[eraOp]}"></div></div>
-        <div class="era-score-label">${opScore}/10 puntos</div>
-      </div>
-      <div class="era-result-card" style="border-top-color:${ERA_COLORS[eraCom]}">
-        <div class="era-result-dim">Comercial</div>
-        <div class="era-result-val" style="color:${ERA_COLORS[eraCom]}">${eraComStr}</div>
-        <div class="era-result-name">${ERA_NAMES[eraCom]}</div>
-        <div class="era-score-bar"><div class="era-score-fill" style="width:${comPct}%;background:${ERA_COLORS[eraCom]}"></div></div>
-        <div class="era-score-label">${comScore}/10 puntos</div>
-      </div>
-    `;
+    const gateEl = document.getElementById('gate-step');
+    gateEl.style.display = 'block';
+    gateEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
 
-    document.getElementById('result-interpretation').innerHTML = `
-      <div class="result-section-label">¿Qué significa esto?</div>
-      <div class="result-section-text">
-        <strong>Operacional:</strong> ${ERA_DESC[eraOp]}<br><br>
-        <strong>Comercial:</strong> ${ERA_DESC[eraCom]}
-      </div>
-    `;
-
-    const gapKey = `${eraOp}-${eraCom}`;
-    document.getElementById('result-gap').innerHTML = `
-      <div class="result-section-label">Brecha identificada</div>
-      <div class="result-section-text">${GAP_TEXTS[gapKey] || ''}</div>
-    `;
-
-    const resultEl = document.getElementById('result-step');
-    resultEl.style.display = 'block';
-    resultEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    // Animate result reveal
-    if (window.__anim) {
-      window.__anim(resultEl, { opacity: [0, 1], y: [16, 0] }, { duration: 0.4, easing: 'ease-out' });
+    if (window.__anim && window.__stagger) {
+      window.__anim(gateEl, { opacity: [0, 1] }, { duration: 0.3, easing: 'ease-out' });
+      window.__anim('.gate-card', { opacity: [0, 1], y: [16, 0], scale: [0.96, 1] },
+        { duration: 0.35, delay: window.__stagger(0.1, { start: 0.1 }), easing: 'ease-out' });
+      window.__anim('.gate-box', { opacity: [0, 1], y: [12, 0] },
+        { duration: 0.3, delay: 0.35, easing: 'ease-out' });
     }
   }, 900);
 }
 
-function showEmailStep() {
-  document.getElementById('upgrade-cta').style.display = 'none';
-  document.getElementById('email-step').style.display = 'block';
-  document.getElementById('inp-nombre').focus();
-}
-
-async function sendOtp() {
-  const nombre = document.getElementById('inp-nombre').value.trim();
-  const email = document.getElementById('inp-email').value.trim();
-  const errEl = document.getElementById('email-error');
+async function gateOtp() {
+  const nombre = document.getElementById('g-nombre').value.trim();
+  const email = document.getElementById('g-email').value.trim();
+  const errEl = document.getElementById('g-email-error');
 
   if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
     errEl.style.display = 'block';
@@ -549,7 +512,7 @@ async function sendOtp() {
   }
   errEl.style.display = 'none';
 
-  const btn = document.getElementById('btn-send-otp');
+  const btn = document.getElementById('g-btn-otp');
   btn.disabled = true;
   btn.textContent = 'Enviando…';
 
@@ -557,41 +520,45 @@ async function sendOtp() {
     const res = await fetch(`${WORKER}/request-otp`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ email, nombre, diagnostico_id: diagId }),
+      body: JSON.stringify({ email, nombre, diagnostico_id: gateDiagId }),
     });
     const data = await res.json();
     if (!data.ok) throw new Error(data.error || 'Error al enviar');
-    diagId = data.diagnostico_id;
+    gateDiagId = data.diagnostico_id;
     window._userEmail = email;
     window._userName = nombre;
 
-    document.getElementById('otp-email-display').textContent = email;
-    document.getElementById('email-step').style.display = 'none';
-    document.getElementById('otp-step').style.display = 'block';
-    document.getElementById('inp-otp').focus();
+    document.getElementById('gate-otp-email').textContent = email;
+    document.getElementById('gate-form').style.display = 'none';
+    const otpWrap = document.getElementById('gate-otp-wrap');
+    otpWrap.style.display = 'block';
+    if (window.__anim) {
+      window.__anim(otpWrap, { opacity: [0, 1], y: [6, 0] }, { duration: 0.2, easing: 'ease-out' });
+    }
+    document.getElementById('g-otp').focus();
   } catch(e) {
     btn.disabled = false;
-    btn.textContent = 'Generar mi análisis IA →';
+    btn.textContent = 'Ver mi informe ERA →';
     errEl.textContent = e.message || 'Error al enviar el código. Intenta nuevamente.';
     errEl.style.display = 'block';
   }
 }
 
-function onOtpInput() {
-  const val = document.getElementById('inp-otp').value.replace(/\D/g,'');
-  document.getElementById('inp-otp').value = val;
-  if (val.length === 6) verifyOtp(val);
+function onGateOtpInput() {
+  const val = document.getElementById('g-otp').value.replace(/\D/g,'');
+  document.getElementById('g-otp').value = val;
+  if (val.length === 6) verifyGateOtp(val);
 }
 
-async function verifyOtp(code) {
-  document.getElementById('otp-error').style.display = 'none';
-  document.getElementById('inp-otp').disabled = true;
+async function verifyGateOtp(code) {
+  document.getElementById('g-otp-error').style.display = 'none';
+  document.getElementById('g-otp').disabled = true;
 
   try {
     const res = await fetch(`${WORKER}/verify-otp`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ diagnostico_id: diagId, otp_code: code }),
+      body: JSON.stringify({ diagnostico_id: gateDiagId, otp_code: code }),
     });
     const data = await res.json();
     if (!data.ok) throw new Error(data.error || 'Código incorrecto');
@@ -607,20 +574,20 @@ async function verifyOtp(code) {
     });
     window.location.href = `/diagnostico-ia?${params.toString()}`;
   } catch(e) {
-    document.getElementById('inp-otp').disabled = false;
-    document.getElementById('inp-otp').value = '';
-    document.getElementById('otp-error').textContent = e.message || 'Código incorrecto o expirado';
-    document.getElementById('otp-error').style.display = 'block';
-    document.getElementById('inp-otp').focus();
+    document.getElementById('g-otp').disabled = false;
+    document.getElementById('g-otp').value = '';
+    document.getElementById('g-otp-error').textContent = e.message || 'Código incorrecto o expirado';
+    document.getElementById('g-otp-error').style.display = 'block';
+    document.getElementById('g-otp').focus();
   }
 }
 
-async function resendOtp() {
+function gateResend() {
   if (!window._userEmail) return;
-  document.getElementById('otp-step').style.display = 'none';
-  document.getElementById('email-step').style.display = 'block';
-  document.getElementById('btn-send-otp').disabled = false;
-  document.getElementById('btn-send-otp').textContent = 'Generar mi análisis IA →';
+  document.getElementById('gate-otp-wrap').style.display = 'none';
+  document.getElementById('gate-form').style.display = 'block';
+  document.getElementById('g-btn-otp').disabled = false;
+  document.getElementById('g-btn-otp').textContent = 'Ver mi informe ERA →';
 }
 
 function shareUrl() {
@@ -645,6 +612,17 @@ function shareLinkedIn() {
   const url = `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(location.origin + '/diagnostico')}&summary=${encodeURIComponent(text)}`;
   window.open(url, '_blank', 'noopener,width=600,height=500');
 }
+
+// Animate intro ERA journey cards on load
+document.addEventListener('DOMContentLoaded', () => {
+  if (window.__anim && window.__stagger) {
+    window.__anim(
+      '.era-journey-card',
+      { opacity: [0, 1], x: [-12, 0] },
+      { duration: 0.3, delay: window.__stagger(0.08, { start: 0.2 }), easing: 'ease-out' }
+    );
+  }
+});
 </script>
 
 </Layout>
