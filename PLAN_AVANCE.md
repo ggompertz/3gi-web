@@ -27,11 +27,12 @@
 
 > Leer antes de tocar cualquier archivo visual.
 
-- **Color de acción:** `#F59E0B` (ámbar) — CTAs, métricas ROI, resultados destacados
-- **Color de marca/logo:** `#00E891` (verde) — solo isotipo, ERA3, elementos de destino/logro
+- **Color de acción:** `#00E891` (verde) — CTAs, `.btn-primary`, estados activos ← DECISIÓN FINAL (ámbar probado y descartado por el fundador, junio 2026)
+- **Color de marca/logo:** `#00E891` (verde) — mismo token; se distingue por contexto, no por color
+- **Ámbar `#F59E0B`:** SOLO para métricas ROI y valores económicos (ej. $250k, 263%) — nunca en botones
 - **Fondo principal:** `#06060D` — sin cambio
-- **Tipografía hero:** escala editorial `clamp(56px, 7vw, 96px)` — Syne 800
-- **Regla ámbar vs verde:** ámbar = acción/ahora, verde = destino/ERA3
+- **Tipografía hero:** `clamp(24px, 4vw, 52px)` — pendiente de decisión sobre escala editorial mayor
+- **Regla verde:** verde = acción + destino + ERA3 (rol unificado)
 - **Motion:** instalar `motion` como npm dep antes del Chunk 3.4
 
 ---
@@ -55,11 +56,11 @@
 
 | # | Chunk | Archivo(s) | Descripción | Estado | Commit |
 |---|---|---|---|---|---|
-| 2.1 | Variables CSS | `src/layouts/Layout.astro` | Agregar `--amber-action`, `--amber-dark`, escala tipográfica | ⬜ | `chore: promover amber como color de acción en sistema de diseño` |
-| 2.1 | Botones | `src/layouts/Layout.astro` | `.btn-primary` → ámbar | ⬜ | (mismo commit 2.1) |
-| 2.2 | Hero | `src/pages/index.astro` | Headline XL, badge ámbar, CTAs ámbar, proof-nums ámbar | ⬜ | `feat: rediseñar hero con escala tipográfica editorial y CTAs ámbar` |
+| 2.1 | Variables CSS | `src/layouts/Layout.astro` | Verde `#00E891` confirmado como color de acción — NO agregar `--amber-action` | ✅ | Decisión tomada 2026-06-11, no requiere commit |
+| 2.1 | Botones | `src/layouts/Layout.astro` | `.btn-primary` ya es verde — sin cambio necesario | ✅ | Ya implementado |
+| 2.2 | Hero | `src/pages/index.astro` | Headline XL, badge verde, CTAs verde, proof-nums ámbar | ⬜ | `feat: rediseñar hero con escala tipográfica editorial y CTAs verde` |
 | 2.3 | Secciones | `src/pages/index.astro` | #dolor, #eras, #metodologia, #caso, #sectores, #ia-hoy, #cta-final | ⬜ | `feat: actualizar secciones de contenido con nueva paleta y escala` |
-| 2.4 | Páginas internas ES | `precios/metodologia/casos/nosotros/faq.astro` | --text-l, CTAs ámbar | ⬜ | `feat: aplicar brand refresh en páginas internas` |
+| 2.4 | Páginas internas ES | `precios/metodologia/casos/nosotros/faq.astro` | --text-l, CTAs verde | ⬜ | `feat: aplicar brand refresh en páginas internas` |
 | 2.4 | Páginas internas EN | `en/*.astro` | Mismos cambios versión inglés | ⬜ | (mismo commit 2.4) |
 | 2.5 | Responsive | todos | Probar 375px / 768px / 1280px, ajustar clamp() si se cortan títulos | ⬜ | `fix: ajustes responsive brand refresh` |
 
@@ -71,7 +72,7 @@
 | # | Chunk | Archivo(s) | Descripción | Estado | Commit |
 |---|---|---|---|---|---|
 | 3.1 | Limpieza CSS | `src/pages/diagnostico.astro` | Eliminar variables duplicadas, usar vars del Layout | ⬜ | `chore: alinear variables CSS de diagnostico con sistema global` |
-| 3.2 | Intro ERA journey | `src/pages/diagnostico.astro` | Cards ERA1(rojo)/ERA2(ámbar)/ERA3(verde) + botón ámbar | ⬜ | `feat: rediseñar intro del Test ERA con ERA journey visual` |
+| 3.2 | Intro ERA journey | `src/pages/diagnostico.astro` | Cards ERA1(rojo)/ERA2(ámbar)/ERA3(verde) + botón verde | ⬜ | `feat: rediseñar intro del Test ERA con ERA journey visual` |
 | 3.3 | Progreso por sección | `src/pages/diagnostico.astro` | "Operacional · Pregunta X de 5" / "Comercial · Pregunta X de 5" | ⬜ | `feat: mostrar dimensión activa en barra de progreso del quiz` |
 | 3.4 | Motion install | `package.json` | `npm install motion` | ⬜ | — |
 | 3.4 | Motion animaciones | `src/pages/diagnostico.astro` | Transición preguntas, reveal resultado, loading mensajes rotativos | ⬜ | `feat: animaciones Motion en transiciones del quiz` |
@@ -109,9 +110,9 @@
 [ ] TypeScript sin errores
 [ ] Sin console.log de debug
 [ ] Sin variables CSS duplicadas
-[ ] Contraste ámbar/night pasa WCAG AA (ratio ~5.2:1 ✓)
-[ ] Botones primarios: TODOS ámbar (no quedan verdes sueltos)
-[ ] Verde solo en: logo, ERA3, estados de confirmación
+[ ] Contraste verde/night pasa WCAG AA ✓
+[ ] Botones primarios: TODOS verde #00E891 (ámbar descartado por fundador jun-2026)
+[ ] Verde en: logo, ERA3, CTAs, estados de confirmación, tags activos
 [ ] Test ERA completo funciona: intro → 10 preguntas → resultado → share
 [ ] Motion funciona Y quiz funciona sin Motion (graceful degradation)
 [ ] ERA Journey muestra posición correcta para las 9 combinaciones posibles
@@ -132,8 +133,9 @@
 | Fecha | Nota |
 |---|---|
 | 2026-06-10 | Plan aprobado por el usuario. Listo para ejecutar. |
-| 2026-06-10 | Deploy es vía `wrangler` desde Hetzner — no Cloudflare Pages directo. |
+| 2026-06-10 | Deploy es vía GitHub → Cloudflare Pages (auto-deploy en push a master). |
 | 2026-06-10 | Fases 1 y 2 completadas. Iniciando Fase 3 (Test ERA). |
+| 2026-06-11 | ámbar descartado como color de acción. Verde (#00E891) es el color único para CTAs. |
 | | |
 
 ---
