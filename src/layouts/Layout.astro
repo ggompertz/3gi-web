@@ -476,6 +476,8 @@ const p = lang === 'en' ? '/en' : '';
     @media (max-width: 640px) {
       .era-scroll-wrap { display: none; }
       .era-mobile-cards { display: flex; }
+      .page-hero { padding: 80px 0 40px !important; }
+      .page-title { overflow-wrap: break-word; word-break: break-word; }
     }
     @media (max-width: 600px) {
       .hero-ctas { flex-direction: column; }
@@ -571,6 +573,13 @@ const p = lang === 'en' ? '/en' : '';
     .section-light .sect-after-tag { background: rgba(0,158,96,0.10); color: #009E60; }
     .section-light .sect-txt-before { color: rgba(13,11,8,0.60); }
     .section-light .sect-txt-after { color: #0D0B08; }
+    /* ERA mobile cards en section-light */
+    .section-light .emc { background: #fff !important; border: 1px solid rgba(13,11,8,0.10) !important; }
+    .section-light .emc-name { color: #0D0B08 !important; }
+    .section-light .emc-row { border-bottom-color: rgba(13,11,8,0.08) !important; }
+    .section-light .emc-dim { color: rgba(13,11,8,0.45) !important; background: rgba(13,11,8,0.03) !important; border-right-color: rgba(13,11,8,0.08) !important; }
+    .section-light .emc-val { color: rgba(13,11,8,0.72) !important; }
+    .section-light .emc-e3 .emc-val { color: rgba(13,11,8,0.85) !important; background: rgba(0,158,96,0.04) !important; }
     .section-light .sect-divider { background: rgba(13,11,8,0.08); }
     .section-light .sect-sector { color: rgba(13,11,8,0.45); }
     .section-light .sect-cta-link { color: #009E60; }
