@@ -170,7 +170,7 @@ const p = lang === 'en' ? '/en' : '';
       /* Escala tipográfica editorial */
       --fs-hero:   clamp(24px, 4vw, 52px);
       --fs-h1:     clamp(32px, 5vw, 64px);
-      --fs-h2:     clamp(24px, 3.5vw, 44px);
+      --fs-h2:     clamp(26px, 3.8vw, 46px);
       --fs-body:   clamp(16px, 1.1vw, 18px);
     }
 
@@ -224,9 +224,10 @@ const p = lang === 'en' ? '/en' : '';
     .proof-divider { width: 1px; height: 40px; background: var(--border); align-self: center; }
 
     /* SECTION COMMON */
-    .section-tag { font-family: 'Syne', sans-serif; font-size: 11px; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: var(--green); margin-bottom: 16px; }
+    .section-header { text-align: center; margin-bottom: 20px; }
+    .section-tag { font-family: 'Syne', sans-serif; font-size: 13px; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: var(--green); margin-bottom: 16px; }
     .section-title { font-family: 'Syne', sans-serif; font-weight: 800; font-size: var(--fs-h2); letter-spacing: -0.025em; line-height: 1.1; margin-bottom: 16px; }
-    .section-sub { font-size: 17px; font-weight: 300; color: rgba(238,241,246,0.6); max-width: 580px; line-height: 1.6; margin-bottom: 28px; }
+    .section-sub { font-size: 17px; font-weight: 300; color: rgba(238,241,246,0.6); max-width: 680px; line-height: 1.6; margin-bottom: 28px; margin-left: auto; margin-right: auto; }
 
     /* PAIN */
     #dolor { background: var(--night-2); }
