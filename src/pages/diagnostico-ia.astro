@@ -18,6 +18,22 @@ h1{font-family:'Syne',sans-serif;font-size:clamp(24px,5vw,34px);font-weight:900;
 
 /* Access gate */
 #gate-step{text-align:center;padding:60px 0}
+
+/* Bridge */
+#bridge-step{display:none}
+.bridge-box{background:var(--surface);border:1px solid rgba(0,232,145,.18);border-radius:14px;padding:22px 24px;margin:20px 0 24px}
+.bridge-box-title{font-family:'Syne',sans-serif;font-size:16px;font-weight:800;margin-bottom:8px;letter-spacing:-.01em}
+.bridge-box-sub{font-size:13px;color:var(--muted);line-height:1.65;margin-bottom:14px}
+.bridge-meta{font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:rgba(0,232,145,.6)}
+
+/* Error */
+#error-step{display:none;text-align:center;padding:60px 0}
+.error-card{background:var(--surface);border:1px solid rgba(248,113,113,.2);border-radius:16px;padding:32px;max-width:440px;margin:0 auto}
+.error-icon{font-size:36px;margin-bottom:16px}
+.error-title{font-family:'Syne',sans-serif;font-size:18px;font-weight:800;margin-bottom:8px;color:#f87171}
+.error-sub{font-size:14px;color:var(--muted);margin-bottom:24px;line-height:1.6}
+.btn-ghost{background:transparent;color:var(--muted);border:1.5px solid var(--border);border-radius:10px;padding:12px 24px;font-size:14px;font-weight:600;cursor:pointer;font-family:'DM Sans',sans-serif;transition:all .2s;width:100%;margin-top:10px}
+.btn-ghost:hover{border-color:var(--green);color:var(--green)}
 .gate-card{background:var(--surface);border:1px solid rgba(0,232,145,.15);border-radius:16px;padding:36px 32px;max-width:440px;margin:0 auto}
 .gate-icon{font-size:40px;margin-bottom:16px}
 .gate-title{font-family:'Syne',sans-serif;font-size:20px;font-weight:800;margin-bottom:8px}
@@ -113,6 +129,23 @@ select.f-select option{background:#0E0E1A;color:var(--offwh)}
     </div>
   </div>
 
+  <!-- PUENTE (visible con token válido, antes del quiz) -->
+  <div id="bridge-step">
+    <div class="eyebrow">Tu ERA está calculado</div>
+    <h1>Un paso más para<br>tu informe concreto</h1>
+    <p class="intro-sub">Con tu ERA como base, la IA puede generar recomendaciones genéricas — o específicas para tu empresa. 8 preguntas hacen esa diferencia.</p>
+
+    <div class="era-context" id="bridge-era-context"></div>
+
+    <div class="bridge-box">
+      <div class="bridge-box-title">¿Por qué necesitamos esto?</div>
+      <div class="bridge-box-sub">El Test ERA midió dónde estás. Ahora necesitamos entender tu industria, tu modelo de negocio y tu prioridad para que el análisis de IA no sea una plantilla genérica, sino un diagnóstico real de tu operación específica.</div>
+      <div class="bridge-meta">8 preguntas · ~3 minutos · informe aparece al terminar</div>
+    </div>
+
+    <button class="btn-primary" onclick="startQuiz()">Completar mi informe →</button>
+  </div>
+
   <!-- FORM (visible solo con token válido) -->
   <div id="quiz-step" style="display:none">
     <div class="eyebrow">Informe ERA personalizado</div>
@@ -141,6 +174,17 @@ select.f-select option{background:#0E0E1A;color:var(--offwh)}
   <div id="loading-step">
     <div class="spinner"></div>
     <p class="loading-text">Analizando con IA…</p>
+  </div>
+
+  <!-- ERROR -->
+  <div id="error-step">
+    <div class="error-card">
+      <div class="error-icon">⚡</div>
+      <div class="error-title">Servicio temporalmente no disponible</div>
+      <div class="error-sub" id="error-msg">El análisis no se pudo generar en este momento. Tus respuestas están guardadas — puedes intentar nuevamente.</div>
+      <button class="btn-primary" onclick="retrySubmit()">Intentar nuevamente</button>
+      <a href="https://wa.me/56978780575" target="_blank" class="btn-ghost" style="display:block;text-align:center;text-decoration:none">o contáctanos por WhatsApp →</a>
+    </div>
   </div>
 
   <!-- RESULTADO -->
@@ -251,25 +295,34 @@ document.addEventListener('DOMContentLoaded', () => {
   } catch(_) {}
 
   document.getElementById('gate-step').style.display = 'none';
-  document.getElementById('quiz-step').style.display = 'block';
+  document.getElementById('bridge-step').style.display = 'block';
 
   renderEraContext();
   renderForm();
 });
 
+function startQuiz() {
+  document.getElementById('bridge-step').style.display = 'none';
+  document.getElementById('quiz-step').style.display = 'block';
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
 function renderEraContext() {
-  const ctx = document.getElementById('era-context');
-  if (!eraOpStr && !eraComStr) { ctx.style.display = 'none'; return; }
-  let html = '';
-  if (eraOpStr) {
-    const n = parseInt(eraOpStr.replace('ERA',''));
-    html += `<div class="era-badge"><div class="era-badge-dim">Operacional</div><div class="era-badge-val" style="color:${eraColor(n)}">${eraOpStr}</div><div class="era-badge-name">${eraName(n)}</div></div>`;
-  }
-  if (eraComStr) {
-    const n = parseInt(eraComStr.replace('ERA',''));
-    html += `<div class="era-badge"><div class="era-badge-dim">Comercial</div><div class="era-badge-val" style="color:${eraColor(n)}">${eraComStr}</div><div class="era-badge-name">${eraName(n)}</div></div>`;
-  }
-  ctx.innerHTML = html;
+  // Populate both bridge and quiz ERA badges
+  ['bridge-era-context', 'era-context'].forEach(id => {
+  const ctx = document.getElementById(id);
+    if (!eraOpStr && !eraComStr) { ctx.style.display = 'none'; return; }
+    let html = '';
+    if (eraOpStr) {
+      const n = parseInt(eraOpStr.replace('ERA',''));
+      html += `<div class="era-badge"><div class="era-badge-dim">Operacional</div><div class="era-badge-val" style="color:${eraColor(n)}">${eraOpStr}</div><div class="era-badge-name">${eraName(n)}</div></div>`;
+    }
+    if (eraComStr) {
+      const n = parseInt(eraComStr.replace('ERA',''));
+      html += `<div class="era-badge"><div class="era-badge-dim">Comercial</div><div class="era-badge-val" style="color:${eraColor(n)}">${eraComStr}</div><div class="era-badge-name">${eraName(n)}</div></div>`;
+    }
+    ctx.innerHTML = html;
+  });
 }
 
 function renderForm() {
@@ -343,9 +396,17 @@ async function submitAnalisis() {
     renderResult(data);
   } catch (err) {
     document.getElementById('loading-step').style.display = 'none';
-    document.getElementById('quiz-step').style.display = 'block';
-    alert('Error al generar el diagnóstico: ' + err.message + '. Por favor intenta nuevamente.');
+    document.getElementById('error-msg').textContent = err.message
+      ? `No se pudo generar el análisis: ${err.message}. Tus respuestas están guardadas.`
+      : 'El análisis no se pudo generar en este momento. Tus respuestas están guardadas — puedes intentar nuevamente.';
+    document.getElementById('error-step').style.display = 'block';
   }
+}
+
+function retrySubmit() {
+  document.getElementById('error-step').style.display = 'none';
+  document.getElementById('quiz-step').style.display = 'block';
+  submitAnalisis();
 }
 
 function renderResult(data) {
