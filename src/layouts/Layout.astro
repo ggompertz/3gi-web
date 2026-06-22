@@ -27,8 +27,18 @@ const p = lang === 'en' ? '/en' : '';
 <!DOCTYPE html>
 <html lang={lang}>
 <head>
-  <!-- Google Tag Manager -->
-  <script is:inline>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-PC7C2ZZQ');</script>
+  <!-- Google Tag Manager (diferido hasta consentimiento de cookies) -->
+  <script is:inline>
+    window.dataLayer = window.dataLayer || [];
+    window.__loadGTM = function() {
+      if (window.__gtmLoaded) return;
+      window.__gtmLoaded = true;
+      (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-PC7C2ZZQ');
+    };
+    if (localStorage.getItem('cookie_consent') === 'accepted') {
+      window.__loadGTM();
+    }
+  </script>
   <!-- End Google Tag Manager -->
 
   <meta charset="UTF-8" />
@@ -599,13 +609,56 @@ const p = lang === 'en' ? '/en' : '';
     .section-light [style*="color: var(--offwh)"] { color: #0D0B08 !important; }
     .section-light [style*="color:var(--green)"],
     .section-light [style*="color: var(--green)"] { color: #009E60 !important; }
-  </style>
+    .cookie-banner {
+    position: fixed; bottom: 0; left: 0; right: 0; z-index: 9999;
+    background: #06060D; border-top: 1px solid #1F2937;
+    padding: 16px 24px; display: flex; flex-wrap: wrap; gap: 16px;
+    align-items: center; justify-content: space-between;
+  }
+  .cookie-banner-text { font-size: 13px; color: #9CA3AF; margin: 0; max-width: 640px; }
+  .cookie-banner-actions { display: flex; gap: 8px; flex-shrink: 0; }
+  .cookie-btn {
+    padding: 8px 18px; border-radius: 4px; font-size: 13px; font-weight: 600;
+    cursor: pointer; border: 1px solid #374151;
+  }
+  .cookie-btn-reject { background: transparent; color: #9CA3AF; }
+  .cookie-btn-accept { background: #00E891; color: #06060D; border-color: #00E891; }
+</style>
 </head>
 <body>
 
 <!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PC7C2ZZQ" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
+
+<!-- Cookie consent banner -->
+<div id="cookie-banner" class="cookie-banner" hidden>
+  <p class="cookie-banner-text" data-i18n="cookie-banner-text">
+    Usamos cookies de analítica (Google Analytics) para entender cómo se usa este sitio.
+  </p>
+  <div class="cookie-banner-actions">
+    <button id="cookie-reject" class="cookie-btn cookie-btn-reject" data-i18n="cookie-reject">Rechazar</button>
+    <button id="cookie-accept" class="cookie-btn cookie-btn-accept" data-i18n="cookie-accept">Aceptar</button>
+  </div>
+</div>
+<script is:inline>
+  (function() {
+    var consent = localStorage.getItem('cookie_consent');
+    if (consent) return;
+    var banner = document.getElementById('cookie-banner');
+    if (!banner) return;
+    banner.hidden = false;
+    document.getElementById('cookie-accept').addEventListener('click', function() {
+      localStorage.setItem('cookie_consent', 'accepted');
+      banner.hidden = true;
+      if (window.__loadGTM) window.__loadGTM();
+    });
+    document.getElementById('cookie-reject').addEventListener('click', function() {
+      localStorage.setItem('cookie_consent', 'rejected');
+      banner.hidden = true;
+    });
+  })();
+</script>
 
 <!-- NAV -->
 <nav>
@@ -740,6 +793,8 @@ const T = {
     'nav-met': 'Metodología', 'nav-precios': 'Precios', 'nav-casos': 'Casos',
     'nav-nosotros': 'Nosotros', 'nav-contenido': 'Contenido',
     'nav-whatsapp': 'WhatsApp', 'nav-cta': 'Agendar reunión',
+    'cookie-banner-text': 'Usamos cookies de analítica (Google Analytics) para entender cómo se usa este sitio.',
+    'cookie-accept': 'Aceptar', 'cookie-reject': 'Rechazar',
     'hero-tag': 'Diagnóstico de IA para PyMEs · Chile y LATAM',
     'hero-title': '¿Cuánto le está costando a tu empresa operar sin IA este mes?<br><em>No lo sabes. Ese es el problema.</em>',
     'hero-sub': 'La mayoría de las PyMEs pierde entre USD 30.000 y 150.000 anuales en procesos que ya podrían estar automatizados. En 3 semanas identificamos exactamente cuáles son los tuyos — y te entregamos el roadmap concreto para resolverlos.',
@@ -865,6 +920,8 @@ const T = {
     'nav-met': 'Methodology', 'nav-precios': 'Pricing', 'nav-casos': 'Cases',
     'nav-nosotros': 'About', 'nav-contenido': 'Content',
     'nav-whatsapp': 'WhatsApp', 'nav-cta': 'Schedule a meeting',
+    'cookie-banner-text': 'We use analytics cookies (Google Analytics) to understand how this site is used.',
+    'cookie-accept': 'Accept', 'cookie-reject': 'Reject',
     'hero-tag': 'AI Diagnosis for SMEs · Chile & LATAM',
     'hero-title': 'How much is your company losing by not using AI this month?<br><em>You don\'t know. That\'s the problem.</em>',
     'hero-sub': 'Most SMEs lose between USD 30,000 and 150,000 per year in processes that could already be automated. In 3 weeks we identify exactly which ones are yours — and deliver the concrete roadmap to fix them.',
