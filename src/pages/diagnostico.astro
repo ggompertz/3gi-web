@@ -226,7 +226,7 @@ input.otp-input:focus{border-color:rgba(0,232,145,0.45)}
       <p class="otp-info">Te enviamos un código a <strong id="gate-otp-email"></strong>. Ingrésalo para continuar.</p>
       <input id="g-otp" class="otp-input" type="text" inputmode="numeric" maxlength="6" placeholder="000000" oninput="onGateOtpInput()">
       <div class="f-error" id="g-otp-error">Código incorrecto o expirado</div>
-      <p class="otp-resend">¿No llegó? <button onclick="gateResend()">Reenviar código</button></p>
+      <p class="otp-resend">¿No llegó? <button id="g-otp-resend-btn" onclick="gateResend()">Reenviar código</button></p>
     </div>
   </div>
 
@@ -582,12 +582,33 @@ async function verifyGateOtp(code) {
   }
 }
 
-function gateResend() {
+async function gateResend() {
   if (!window._userEmail) return;
-  document.getElementById('gate-otp-wrap').style.display = 'none';
-  document.getElementById('gate-form').style.display = 'block';
-  document.getElementById('g-btn-otp').disabled = false;
-  document.getElementById('g-btn-otp').textContent = 'Ver mi informe ERA →';
+  const btn = document.getElementById('g-otp-resend-btn');
+  const errEl = document.getElementById('g-otp-error');
+  btn.disabled = true;
+  btn.textContent = 'Reenviando…';
+  errEl.style.display = 'none';
+
+  try {
+    const res = await fetch(`${WORKER}/request-otp`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ email: window._userEmail, nombre: window._userName, diagnostico_id: gateDiagId }),
+    });
+    const data = await res.json();
+    if (!data.ok) throw new Error(data.error || 'Error al reenviar');
+    gateDiagId = data.diagnostico_id;
+    document.getElementById('g-otp').value = '';
+    document.getElementById('g-otp').focus();
+    btn.textContent = 'Código reenviado ✓';
+    setTimeout(() => { btn.textContent = 'Reenviar código'; btn.disabled = false; }, 4000);
+  } catch(e) {
+    btn.disabled = false;
+    btn.textContent = 'Reenviar código';
+    errEl.textContent = e.message || 'No se pudo reenviar. Intenta nuevamente.';
+    errEl.style.display = 'block';
+  }
 }
 
 function shareUrl() {
