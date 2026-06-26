@@ -1,0 +1,54 @@
+---
+// Reemplazar CAL_USERNAME con tu username de cal.com (ej: gonzalo-3gi)
+const CAL_USERNAME = 'TU_USERNAME_CALCOM';
+---
+
+<div class="agendar-demo">
+  <button
+    id="btn-agendar"
+    data-cal-link={CAL_USERNAME + '/demo-3gi'}
+    data-cal-config='{"layout":"month_view"}'
+    style="background-color:#11477C; color:#fff; border:none; border-radius:8px; padding:14px 28px; font-size:16px; font-weight:600; cursor:pointer;"
+  >
+    Agenda una demo gratuita →
+  </button>
+</div>
+
+<script>
+(function (C, A, L) {
+  let p = function (a, ar) { a.q.push(ar); };
+  let d = C.document;
+  C.Cal = C.Cal || function () {
+    let cal = C.Cal;
+    let ar = arguments;
+    if (!cal.loaded) {
+      cal.ns = {};
+      cal.q = cal.q || [];
+      d.head.appendChild(d.createElement('script')).src = A;
+      cal.loaded = true;
+    }
+    if (ar[0] === L) {
+      const api = function () { p(api, arguments); };
+      const namespace = ar[1];
+      api.q = api.q || [];
+      typeof namespace === 'string' ? (cal.ns[namespace] = api) && p(api, ar) : p(cal, ar);
+      return;
+    }
+    p(cal, ar);
+  };
+})(window, 'https://app.cal.com/embed/embed.js', 'init');
+Cal('init', { origin: 'https://cal.com' });
+Cal('ui', {
+  styles: { branding: { brandColor: '#11477C' } },
+  hideEventTypeDetails: false,
+});
+</script>
+
+<style>
+.agendar-demo {
+  display: inline-block;
+}
+#btn-agendar:hover {
+  background-color: #0d3560 !important;
+}
+</style>
