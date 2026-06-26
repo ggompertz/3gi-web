@@ -4,18 +4,20 @@ const CAL_USERNAME = '3g-intelligence';
 
 <div class="agendar-opciones">
   <button
+    class="btn btn-primary btn-lg"
     data-cal-link={CAL_USERNAME + '/30min'}
     data-cal-config='{"layout":"month_view"}'
-    style="background-color:#11477C; color:#fff; border:none; border-radius:8px; padding:14px 28px; font-size:16px; font-weight:600; cursor:pointer; margin-right:12px;"
   >
-    Agenda una reunión — 30 min →
+    Agenda una reunión — 30 min
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
   </button>
   <button
+    class="btn btn-primary btn-lg"
     data-cal-link={CAL_USERNAME + '/60min'}
     data-cal-config='{"layout":"month_view"}'
-    style="background-color:#F47920; color:#fff; border:none; border-radius:8px; padding:14px 28px; font-size:16px; font-weight:600; cursor:pointer;"
   >
-    Consultoría — 60 min →
+    Consultoría — 60 min
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
   </button>
 </div>
 
@@ -43,10 +45,7 @@ const CAL_USERNAME = '3g-intelligence';
   };
 })(window, 'https://app.cal.com/embed/embed.js', 'init');
 Cal('init', { origin: 'https://cal.com' });
-Cal('ui', {
-  styles: { branding: { brandColor: '#11477C' } },
-  hideEventTypeDetails: false,
-});
+Cal('ui', { hideEventTypeDetails: false });
 </script>
 
 <style>
@@ -54,8 +53,5 @@ Cal('ui', {
   display: flex;
   flex-wrap: wrap;
   gap: 12px;
-}
-.agendar-opciones button:hover {
-  opacity: 0.9;
 }
 </style>
