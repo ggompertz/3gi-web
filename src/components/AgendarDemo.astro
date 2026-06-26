@@ -1,16 +1,21 @@
 ---
-// Reemplazar CAL_USERNAME con tu username de cal.com (ej: gonzalo-3gi)
-const CAL_USERNAME = 'TU_USERNAME_CALCOM';
+const CAL_USERNAME = '3g-intelligence';
 ---
 
-<div class="agendar-demo">
+<div class="agendar-opciones">
   <button
-    id="btn-agendar"
-    data-cal-link={CAL_USERNAME + '/demo-3gi'}
+    data-cal-link={CAL_USERNAME + '/30min'}
     data-cal-config='{"layout":"month_view"}'
-    style="background-color:#11477C; color:#fff; border:none; border-radius:8px; padding:14px 28px; font-size:16px; font-weight:600; cursor:pointer;"
+    style="background-color:#11477C; color:#fff; border:none; border-radius:8px; padding:14px 28px; font-size:16px; font-weight:600; cursor:pointer; margin-right:12px;"
   >
-    Agenda una demo gratuita →
+    Agenda una reunión — 30 min →
+  </button>
+  <button
+    data-cal-link={CAL_USERNAME + '/60min'}
+    data-cal-config='{"layout":"month_view"}'
+    style="background-color:#F47920; color:#fff; border:none; border-radius:8px; padding:14px 28px; font-size:16px; font-weight:600; cursor:pointer;"
+  >
+    Consultoría — 60 min →
   </button>
 </div>
 
@@ -45,10 +50,12 @@ Cal('ui', {
 </script>
 
 <style>
-.agendar-demo {
-  display: inline-block;
+.agendar-opciones {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
 }
-#btn-agendar:hover {
-  background-color: #0d3560 !important;
+.agendar-opciones button:hover {
+  opacity: 0.9;
 }
 </style>
