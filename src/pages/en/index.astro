@@ -2,7 +2,25 @@
 import Layout from '../../layouts/Layout.astro';
 ---
 
+<style>
+  .book-strip { background: var(--night-3); border-bottom: 1px solid var(--border); padding: 10px 0; }
+  .book-strip-inner { display: flex; align-items: center; justify-content: center; gap: 10px; flex-wrap: wrap; text-align: center; }
+  .book-strip a { font-size: 13px; color: rgba(238,241,246,0.75); }
+  .book-strip a:hover { color: var(--offwh); }
+  .book-strip strong { color: var(--green); font-weight: 600; }
+  .book-strip-link { text-decoration: underline; text-underline-offset: 3px; white-space: nowrap; }
+  @media (max-width: 600px) {
+    .book-strip { padding: 8px 0; }
+    .book-strip a { font-size: 12px; }
+  }
+</style>
+
 <Layout title="Free AI Diagnosis for SMBs · ERA 1 to ERA 3 · 3GI" description="ERA 1: Operational chaos. ERA 2: Unused data. ERA 3: AI working for you. We move companies from one ERA to the next. Identify what to automate with highest ROI in 3 weeks. Free ERA Test in less than 5 minutes." lang="en">
+  <div class="book-strip" style="margin-top: 68px;">
+    <div class="container book-strip-inner">
+      <a href="/en/inteligencia-organizacional" class="book-strip-link">📖 New book: <strong>Organizational Intelligence in the AI Era</strong>, by Gonzalo Gompertz →</a>
+    </div>
+  </div>
   <!-- HERO -->
 <section id="hero">
   <div class="container">

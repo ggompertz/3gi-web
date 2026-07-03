@@ -2,7 +2,25 @@
 import Layout from '../layouts/Layout.astro';
 ---
 
+<style>
+  .book-strip { background: var(--night-3); border-bottom: 1px solid var(--border); padding: 10px 0; }
+  .book-strip-inner { display: flex; align-items: center; justify-content: center; gap: 10px; flex-wrap: wrap; text-align: center; }
+  .book-strip a { font-size: 13px; color: rgba(238,241,246,0.75); }
+  .book-strip a:hover { color: var(--offwh); }
+  .book-strip strong { color: var(--green); font-weight: 600; }
+  .book-strip-link { text-decoration: underline; text-underline-offset: 3px; white-space: nowrap; }
+  @media (max-width: 600px) {
+    .book-strip { padding: 8px 0; }
+    .book-strip a { font-size: 12px; }
+  }
+</style>
+
 <Layout title="Informe ERA gratis para PyMEs · ERA 1 a ERA 3 · 3GI" description="ERA 1: Caos operativo. ERA 2: Datos sin usar. ERA 3: IA trabajando por ti. No vendemos IA — movemos empresas de una ERA a otra. Identificamos qué automatizar con mayor ROI en 3 semanas. Test ERA gratuito en menos de 5 minutos.">
+  <div class="book-strip" style="margin-top: 68px;">
+    <div class="container book-strip-inner">
+      <a href="/inteligencia-organizacional" class="book-strip-link">📖 Nuevo libro: <strong>Inteligencia Organizacional en la Era IA</strong>, de Gonzalo Gompertz →</a>
+    </div>
+  </div>
   <!-- HERO -->
 <section id="hero" style="padding: 60px 0 72px;">
   <div class="container">
