@@ -9,11 +9,13 @@ interface Props {
   title: string;
   description?: string;
   lang?: string;
+  ogImage?: string;
 }
 const {
   title = "Consultoría IA para PyMEs - LATAM, Chile · 3G Intelligence",
   description = "Diagnóstico de inteligencia artificial para PyMEs en Chile y LATAM. Identificamos qué automatizar, cuánto vale cada oportunidad y te entregamos el roadmap listo para ejecutar.",
-  lang = 'es'
+  lang = 'es',
+  ogImage = "https://3gi.cl/3GI -Facebook1.1.png"
 } = Astro.props;
 
 const canonicalUrl = new URL(Astro.url.pathname, 'https://3gi.cl').href;
@@ -57,13 +59,13 @@ const p = lang === 'en' ? '/en' : '';
   <meta property="og:url"         content={canonicalUrl} />
   <meta property="og:title"       content={title} />
   <meta property="og:description" content={description} />
-  <meta property="og:image"       content="https://3gi.cl/3GI -Facebook1.1.png" />
+  <meta property="og:image"       content={ogImage} />
   <meta property="og:locale"      content={lang === 'en' ? 'en_US' : 'es_CL'} />
   <meta property="og:site_name"   content="3G Intelligence" />
   <meta name="twitter:card"       content="summary_large_image" />
   <meta name="twitter:title" content={title} />
   <meta name="twitter:description" content={description} />
-  <meta name="twitter:image"      content="https://3gi.cl/3GI -Facebook1.1.png" />
+  <meta name="twitter:image"      content={ogImage} />
 
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%2306060D'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-family='Arial Black,sans-serif' font-weight='900' font-size='13' fill='%2300E891'%3E3G%3C/text%3E%3C/svg%3E" />
 
