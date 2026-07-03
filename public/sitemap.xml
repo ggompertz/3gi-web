@@ -1,11 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://3gi.cl/</loc><lastmod>2026-04-24</lastmod><changefreq>weekly</changefreq><priority>1.0</priority></url>
-  <url><loc>https://3gi.cl/metodologia</loc><lastmod>2026-04-24</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://3gi.cl/precios</loc><lastmod>2026-04-24</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://3gi.cl/casos</loc><lastmod>2026-04-24</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://3gi.cl/nosotros</loc><lastmod>2026-04-24</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://3gi.cl/contenido</loc><lastmod>2026-04-24</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://3gi.cl/diagnostico</loc><lastmod>2026-04-24</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://3gi.cl/privacidad</loc><lastmod>2026-04-24</lastmod><changefreq>yearly</changefreq><priority>0.3</priority></url>
+  <url><loc>https://3gi.cl/metodologia/</loc><lastmod>2026-04-24</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://3gi.cl/precios/</loc><lastmod>2026-04-24</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://3gi.cl/casos/</loc><lastmod>2026-04-24</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://3gi.cl/nosotros/</loc><lastmod>2026-04-24</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://3gi.cl/contenido/</loc><lastmod>2026-04-24</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://3gi.cl/diagnostico/</loc><lastmod>2026-04-24</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://3gi.cl/privacidad/</loc><lastmod>2026-04-24</lastmod><changefreq>yearly</changefreq><priority>0.3</priority></url>
+  <url><loc>https://3gi.cl/inteligencia-organizacional/</loc><lastmod>2026-07-03</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://3gi.cl/en/</loc><lastmod>2026-04-24</lastmod><changefreq>weekly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://3gi.cl/en/metodologia/</loc><lastmod>2026-04-24</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://3gi.cl/en/precios/</loc><lastmod>2026-04-24</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://3gi.cl/en/casos/</loc><lastmod>2026-04-24</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://3gi.cl/en/nosotros/</loc><lastmod>2026-04-24</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://3gi.cl/en/diagnostico/</loc><lastmod>2026-04-24</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://3gi.cl/en/inteligencia-organizacional/</loc><lastmod>2026-07-03</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
 </urlset>
