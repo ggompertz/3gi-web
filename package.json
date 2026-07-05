@@ -24,5 +24,8 @@
     "@fontsource/syne": "^5.2.7",
     "astro": "^6.1.9",
     "motion": "^12.40.0"
+  },
+  "devDependencies": {
+    "playwright": "^1.61.1"
   }
 }
