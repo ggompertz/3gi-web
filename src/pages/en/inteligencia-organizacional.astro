@@ -2,6 +2,7 @@
 import Layout from '../../layouts/Layout.astro';
 
 const AMAZON_URL = 'https://www.amazon.com/dp/B0H7NQHWYQ';
+const AMAZON_PAPERBACK_URL = 'https://www.amazon.com/dp/B0H7QY67YW';
 ---
 
 <style>
@@ -79,14 +80,13 @@ const AMAZON_URL = 'https://www.amazon.com/dp/B0H7NQHWYQ';
         <p class="book-subtitle">From paradigm shift to organizational maturity: how organizations evolve through the transition to AI-augmented systems.</p>
         <div class="book-author">By <strong>Gonzalo I. Gompertz Geldres</strong> · Founder of 3G Intelligence</div>
         <div class="book-ctas">
-          <a href={AMAZON_URL} target="_blank" rel="noopener" class="btn btn-primary btn-lg">Buy on Amazon →</a>
+          <a href={AMAZON_URL} target="_blank" rel="noopener" class="btn btn-primary btn-lg">Buy on Kindle →</a>
+          <a href={AMAZON_PAPERBACK_URL} target="_blank" rel="noopener" class="btn btn-outline btn-lg">Buy paperback →</a>
         </div>
         <div class="book-meta">
           <span>First edition · 2026</span>
-          <span>Available today on Kindle (English)</span>
-          <span>Paperback edition: coming soon</span>
+          <span>Available today on Kindle and paperback (English)</span>
         </div>
-        <p class="book-lang-note">The English Kindle edition is now available. The paperback edition is in review.</p>
       </div>
       <div class="book-visual">
         <div class="book-visual-mark">"</div>
@@ -154,9 +154,10 @@ const AMAZON_URL = 'https://www.amazon.com/dp/B0H7NQHWYQ';
     <div class="container">
       <div class="cta-eyebrow">Organizational Intelligence in the AI Era</div>
       <h2 class="book-cta-title">Get your <span>copy</span></h2>
-      <p class="book-cta-sub">Available today on Kindle, in English. Paperback edition: coming soon.</p>
+      <p class="book-cta-sub">Available today on Kindle and paperback, in English.</p>
       <div class="cta-buttons">
-        <a href={AMAZON_URL} target="_blank" rel="noopener" class="btn btn-primary btn-lg">Buy on Amazon →</a>
+        <a href={AMAZON_URL} target="_blank" rel="noopener" class="btn btn-primary btn-lg">Buy on Kindle →</a>
+        <a href={AMAZON_PAPERBACK_URL} target="_blank" rel="noopener" class="btn btn-outline btn-lg">Buy paperback →</a>
       </div>
     </div>
   </section>
