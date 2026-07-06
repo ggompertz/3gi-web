@@ -111,7 +111,33 @@ import Layout from '../../layouts/Layout.astro';
   <p>Data is stored on secure servers with restricted access. No passwords or financial information are shared through our channels.</p>
 
   <h2>8. Cookies</h2>
-  <p>We use Google Analytics to understand how this site is used. You can disable these cookies with browser tracking-blocking extensions or by configuring your cookie preferences.</p>
+  <p>We use Google Analytics (via Google Tag Manager) to understand how this site is used. These cookies are only set if you accept them in the notice shown on your first visit — if you reject them, no analytics tools are loaded. You can change your decision at any time via the "Cookie preferences" link at the bottom of this page.</p>
+  <table style="width: 100%; border-collapse: collapse; margin-top: 16px; font-size: 13px;">
+    <tr style="background: rgba(0,232,145,0.1); border-bottom: 1px solid #1F2937;">
+      <th style="text-align: left; padding: 10px; border-right: 1px solid #1F2937; color: #EEF1F6;">Cookie</th>
+      <th style="text-align: left; padding: 10px; border-right: 1px solid #1F2937; color: #EEF1F6;">Provider</th>
+      <th style="text-align: left; padding: 10px; border-right: 1px solid #1F2937; color: #EEF1F6;">Purpose</th>
+      <th style="text-align: left; padding: 10px; color: #EEF1F6;">Duration</th>
+    </tr>
+    <tr style="border-bottom: 1px solid #1F2937;">
+      <td style="padding: 10px; border-right: 1px solid #1F2937; color: #9CA3AF;">_ga</td>
+      <td style="padding: 10px; border-right: 1px solid #1F2937; color: #9CA3AF;">Google</td>
+      <td style="padding: 10px; border-right: 1px solid #1F2937; color: #9CA3AF;">Distinguish users (analytics)</td>
+      <td style="padding: 10px; color: #9CA3AF;">2 years</td>
+    </tr>
+    <tr style="border-bottom: 1px solid #1F2937;">
+      <td style="padding: 10px; border-right: 1px solid #1F2937; color: #9CA3AF;">_ga_*</td>
+      <td style="padding: 10px; border-right: 1px solid #1F2937; color: #9CA3AF;">Google</td>
+      <td style="padding: 10px; border-right: 1px solid #1F2937; color: #9CA3AF;">Maintain session state (analytics)</td>
+      <td style="padding: 10px; color: #9CA3AF;">2 years</td>
+    </tr>
+    <tr>
+      <td style="padding: 10px; border-right: 1px solid #1F2937; color: #9CA3AF;">tgi_consent (localStorage)</td>
+      <td style="padding: 10px; border-right: 1px solid #1F2937; color: #9CA3AF;">3G Intelligence</td>
+      <td style="padding: 10px; border-right: 1px solid #1F2937; color: #9CA3AF;">Remember your consent decision</td>
+      <td style="padding: 10px; color: #9CA3AF;">Until you delete it</td>
+    </tr>
+  </table>
 </div>
 
 <div class="footer">© 2026 3G Intelligence · <a href="mailto:gonzalo@3gi.cl">gonzalo@3gi.cl</a></div>
