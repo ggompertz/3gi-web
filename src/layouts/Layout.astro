@@ -37,8 +37,26 @@ const p = lang === 'en' ? '/en' : '';
       window.__gtmLoaded = true;
       (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-PC7C2ZZQ');
     };
-    if (localStorage.getItem('cookie_consent') === 'accepted') {
-      window.__loadGTM();
+    // Migración y lectura de localStorage con nueva estructura JSON
+    try {
+      var tgiConsent = localStorage.getItem('tgi_consent');
+      var consentStatus = null;
+      if (tgiConsent) {
+        var consentObj = JSON.parse(tgiConsent);
+        consentStatus = consentObj.status;
+      } else {
+        var oldConsent = localStorage.getItem('cookie_consent');
+        if (oldConsent) {
+          consentStatus = oldConsent;
+          localStorage.setItem('tgi_consent', JSON.stringify({status: consentStatus, ts: new Date().toISOString(), v: 1}));
+          localStorage.removeItem('cookie_consent');
+        }
+      }
+      if (consentStatus === 'accepted') {
+        window.__loadGTM();
+      }
+    } catch (e) {
+      console.error('Error reading consent:', e);
     }
   </script>
   <!-- End Google Tag Manager -->
@@ -611,52 +629,53 @@ const p = lang === 'en' ? '/en' : '';
     .section-light [style*="color: var(--offwh)"] { color: #0D0B08 !important; }
     .section-light [style*="color:var(--green)"],
     .section-light [style*="color: var(--green)"] { color: #009E60 !important; }
-    .cookie-banner {
+    .tgi-consent {
     position: fixed; bottom: 0; left: 0; right: 0; z-index: 9999;
     background: #06060D; border-top: 1px solid #1F2937;
     padding: 16px 24px; display: flex; flex-wrap: wrap; gap: 16px;
     align-items: center; justify-content: space-between;
   }
-  .cookie-banner-text { font-size: 13px; color: #9CA3AF; margin: 0; max-width: 640px; }
-  .cookie-banner-actions { display: flex; gap: 8px; flex-shrink: 0; }
-  .cookie-btn {
+  .tgi-consent-text { font-size: 13px; color: #9CA3AF; margin: 0; max-width: 640px; }
+  .tgi-consent-actions { display: flex; gap: 8px; flex-shrink: 0; }
+  .tgi-consent-btn {
     padding: 8px 18px; border-radius: 4px; font-size: 13px; font-weight: 600;
     cursor: pointer; border: 1px solid #374151;
   }
-  .cookie-btn-reject { background: transparent; color: #9CA3AF; }
-  .cookie-btn-accept { background: #00E891; color: #06060D; border-color: #00E891; }
+  .tgi-consent-btn-reject { background: transparent; color: #9CA3AF; }
+  .tgi-consent-btn-accept { background: #00E891; color: #06060D; border-color: #00E891; }
 </style>
 </head>
 <body>
 
-<!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PC7C2ZZQ" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
-
 <!-- Cookie consent banner -->
-<div id="cookie-banner" class="cookie-banner" hidden>
-  <p class="cookie-banner-text" data-i18n="cookie-banner-text">
+<div id="tgi-consent" class="tgi-consent" hidden>
+  <p class="tgi-consent-text" data-i18n="cookie-banner-text">
     Usamos cookies de analítica (Google Analytics) para entender cómo se usa este sitio.
   </p>
-  <div class="cookie-banner-actions">
-    <button id="cookie-reject" class="cookie-btn cookie-btn-reject" data-i18n="cookie-reject">Rechazar</button>
-    <button id="cookie-accept" class="cookie-btn cookie-btn-accept" data-i18n="cookie-accept">Aceptar</button>
+  <div class="tgi-consent-actions">
+    <button id="tgi-consent-reject" class="tgi-consent-btn tgi-consent-btn-reject" data-i18n="cookie-reject">Rechazar</button>
+    <button id="tgi-consent-accept" class="tgi-consent-btn tgi-consent-btn-accept" data-i18n="cookie-accept">Aceptar</button>
   </div>
 </div>
 <script is:inline>
   (function() {
-    var consent = localStorage.getItem('cookie_consent');
-    if (consent) return;
-    var banner = document.getElementById('cookie-banner');
+    try {
+      var tgiConsent = localStorage.getItem('tgi_consent');
+      if (tgiConsent) {
+        JSON.parse(tgiConsent);
+        return;
+      }
+    } catch (e) {}
+    var banner = document.getElementById('tgi-consent');
     if (!banner) return;
     banner.hidden = false;
-    document.getElementById('cookie-accept').addEventListener('click', function() {
-      localStorage.setItem('cookie_consent', 'accepted');
+    document.getElementById('tgi-consent-accept').addEventListener('click', function() {
+      localStorage.setItem('tgi_consent', JSON.stringify({status: 'accepted', ts: new Date().toISOString(), v: 1}));
       banner.hidden = true;
       if (window.__loadGTM) window.__loadGTM();
     });
-    document.getElementById('cookie-reject').addEventListener('click', function() {
-      localStorage.setItem('cookie_consent', 'rejected');
+    document.getElementById('tgi-consent-reject').addEventListener('click', function() {
+      localStorage.setItem('tgi_consent', JSON.stringify({status: 'rejected', ts: new Date().toISOString(), v: 1}));
       banner.hidden = true;
     });
   })();
@@ -727,6 +746,7 @@ const p = lang === 'en' ? '/en' : '';
         <li><a href={`${p}/faq`}>FAQ</a></li>
         <li><a href={`${p}/nosotros`}>Nosotros</a></li>
         <li><a href={`${p}/contenido`}>Contenido</a></li>
+        <li><a href="#" onclick="window.__tgiConsentReset();return false;" data-i18n="cookie-prefs">Preferencias de cookies</a></li>
       </ul>
       <div class="footer-social">
         <a href="https://www.linkedin.com/company/3g-intelligence" target="_blank" rel="noopener" aria-label="LinkedIn">
@@ -751,6 +771,12 @@ const p = lang === 'en' ? '/en' : '';
 </footer>
 
 <script is:inline>
+// Función global para resetear consentimiento de cookies
+window.__tgiConsentReset = function() {
+  localStorage.removeItem('tgi_consent');
+  location.reload();
+};
+
 // HAMBURGER MENU — abre/cierra drawer mobile
 (function() {
   const burger = document.getElementById('navBurger');
@@ -796,7 +822,7 @@ const T = {
     'nav-nosotros': 'Nosotros', 'nav-contenido': 'Contenido',
     'nav-whatsapp': 'WhatsApp', 'nav-cta': 'Agendar reunión',
     'cookie-banner-text': 'Usamos cookies de analítica (Google Analytics) para entender cómo se usa este sitio.',
-    'cookie-accept': 'Aceptar', 'cookie-reject': 'Rechazar',
+    'cookie-accept': 'Aceptar', 'cookie-reject': 'Rechazar', 'cookie-prefs': 'Preferencias de cookies',
     'hero-tag': 'Diagnóstico de IA para PyMEs · Chile y LATAM',
     'hero-title': '¿Cuánto le está costando a tu empresa operar sin IA este mes?<br><em>No lo sabes. Ese es el problema.</em>',
     'hero-sub': 'La mayoría de las PyMEs pierde entre USD 30.000 y 150.000 anuales en procesos que ya podrían estar automatizados. En 3 semanas identificamos exactamente cuáles son los tuyos — y te entregamos el roadmap concreto para resolverlos.',
@@ -929,7 +955,7 @@ const T = {
     'nav-nosotros': 'About', 'nav-contenido': 'Content',
     'nav-whatsapp': 'WhatsApp', 'nav-cta': 'Schedule a meeting',
     'cookie-banner-text': 'We use analytics cookies (Google Analytics) to understand how this site is used.',
-    'cookie-accept': 'Accept', 'cookie-reject': 'Reject',
+    'cookie-accept': 'Accept', 'cookie-reject': 'Reject', 'cookie-prefs': 'Cookie preferences',
     'hero-tag': 'AI Diagnosis for SMEs · Chile & LATAM',
     'hero-title': 'How much is your company losing by not using AI this month?<br><em>You don\'t know. That\'s the problem.</em>',
     'hero-sub': 'Most SMEs lose between USD 30,000 and 150,000 per year in processes that could already be automated. In 3 weeks we identify exactly which ones are yours — and deliver the concrete roadmap to fix them.',
