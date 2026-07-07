@@ -10,12 +10,14 @@ interface Props {
   description?: string;
   lang?: string;
   ogImage?: string;
+  noindex?: boolean;
 }
 const {
   title = "Consultoría IA para PyMEs - LATAM, Chile · 3G Intelligence",
   description = "Diagnóstico de inteligencia artificial para PyMEs en Chile y LATAM. Identificamos qué automatizar, cuánto vale cada oportunidad y te entregamos el roadmap listo para ejecutar.",
   lang = 'es',
-  ogImage = "https://3gi.cl/3GI -Facebook1.1.png"
+  ogImage = "https://3gi.cl/3GI -Facebook1.1.png",
+  noindex = false
 } = Astro.props;
 
 const canonicalUrl = new URL(Astro.url.pathname, 'https://3gi.cl').href;
@@ -70,7 +72,7 @@ const p = lang === 'en' ? '/en' : '';
   <link rel="alternate" hreflang="en" href={enUrl} />
   <link rel="alternate" hreflang="x-default" href={esUrl} />
 
-  <meta name="robots" content="index, follow" />
+  <meta name="robots" content={noindex ? "noindex, follow" : "index, follow"} />
 
   <!-- Open Graph -->
   <meta property="og:type"        content="website" />
