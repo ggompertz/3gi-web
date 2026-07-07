@@ -643,6 +643,9 @@ const p = lang === 'en' ? '/en' : '';
   }
   .tgi-consent-btn-reject { background: transparent; color: #9CA3AF; }
   .tgi-consent-btn-accept { background: #00E891; color: #06060D; border-color: #00E891; }
+  /* El atributo hidden debe ganar sobre display:flex (estilo de autor vs UA):
+     sin esto, aceptar/rechazar no cierra el banner. */
+  .tgi-consent[hidden] { display: none !important; }
 </style>
 </head>
 <body>
