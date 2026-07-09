@@ -3,6 +3,7 @@ import Layout from '../../layouts/Layout.astro';
 
 const AMAZON_URL = 'https://www.amazon.com/dp/B0H7NQHWYQ';
 const AMAZON_PAPERBACK_URL = 'https://www.amazon.com/dp/B0H7QY67YW';
+const AMAZON_HARDCOVER_URL = 'https://www.amazon.com/dp/B0H86JPTBR';
 ---
 
 <style>
@@ -82,10 +83,11 @@ const AMAZON_PAPERBACK_URL = 'https://www.amazon.com/dp/B0H7QY67YW';
         <div class="book-ctas">
           <a href={AMAZON_URL} target="_blank" rel="noopener" class="btn btn-primary btn-lg">Buy on Kindle →</a>
           <a href={AMAZON_PAPERBACK_URL} target="_blank" rel="noopener" class="btn btn-outline btn-lg">Buy paperback →</a>
+          <a href={AMAZON_HARDCOVER_URL} target="_blank" rel="noopener" class="btn btn-outline btn-lg">Buy hardcover →</a>
         </div>
         <div class="book-meta">
           <span>First edition · 2026</span>
-          <span>Available today on Kindle and paperback</span>
+          <span>Available today on Kindle, paperback and hardcover</span>
           <span>English and Spanish</span>
         </div>
       </div>
@@ -155,10 +157,11 @@ const AMAZON_PAPERBACK_URL = 'https://www.amazon.com/dp/B0H7QY67YW';
     <div class="container">
       <div class="cta-eyebrow">Organizational Intelligence in the AI Era</div>
       <h2 class="book-cta-title">Get your <span>copy</span></h2>
-      <p class="book-cta-sub">Available today on Kindle and paperback, in English and Spanish.</p>
+      <p class="book-cta-sub">Available today on Kindle, paperback and hardcover, in English and Spanish.</p>
       <div class="cta-buttons">
         <a href={AMAZON_URL} target="_blank" rel="noopener" class="btn btn-primary btn-lg">Buy on Kindle →</a>
         <a href={AMAZON_PAPERBACK_URL} target="_blank" rel="noopener" class="btn btn-outline btn-lg">Buy paperback →</a>
+        <a href={AMAZON_HARDCOVER_URL} target="_blank" rel="noopener" class="btn btn-outline btn-lg">Buy hardcover →</a>
       </div>
     </div>
   </section>
