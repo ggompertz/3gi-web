@@ -1,0 +1,166 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const AMAZON_URL = 'https://www.amazon.es/dp/B0H7FLCRZR';
+const AMAZON_PAPERBACK_URL = 'https://www.amazon.es/dp/B0H7NV7Z9W';
+const AMAZON_HARDCOVER_URL = 'https://www.amazon.es/dp/B0H7TFX3F3';
+---
+
+<style>
+  .book-hero { padding: 140px 0 80px; background: var(--night-2); border-bottom: 1px solid var(--border); position: relative; overflow: hidden; }
+  .book-hero::before { content: ''; position: absolute; top: -20%; right: -10%; width: 600px; height: 600px; border-radius: 50%; background: radial-gradient(circle, rgba(0,232,145,0.08) 0%, transparent 70%); pointer-events: none; }
+  .book-hero-grid { display: grid; grid-template-columns: 1fr; gap: 40px; align-items: center; position: relative; }
+  .book-visual { border: 1px solid var(--border); border-radius: 16px; background: var(--night-3); padding: 36px 40px; max-width: 620px; position: relative; overflow: hidden; }
+  .book-visual::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: linear-gradient(90deg, #EF4444, #EAB308, #00E891); }
+  .book-visual-mark { font-family: 'Syne', sans-serif; font-size: 64px; font-weight: 800; color: rgba(0,232,145,0.18); line-height: 1; margin-bottom: 8px; }
+  .book-visual-quote { font-family: 'Syne', sans-serif; font-weight: 700; font-size: clamp(17px, 2.2vw, 21px); letter-spacing: -0.01em; line-height: 1.4; color: rgba(238,241,246,0.92); margin-bottom: 20px; }
+  .book-visual-bars { display: flex; gap: 6px; margin-bottom: 12px; }
+  .book-visual-bars span { flex: 1; height: 6px; border-radius: 4px; }
+  .bvb-1 { background: #EF4444; } .bvb-2 { background: #EAB308; } .bvb-3 { background: #00E891; }
+  .book-visual-caption { font-size: 11px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); }
+  .book-eyebrow { font-family: 'Syne', sans-serif; font-size: 12px; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: var(--green); margin-bottom: 16px; }
+  .book-title { font-family: 'Syne', sans-serif; font-weight: 800; font-size: clamp(30px, 4.2vw, 50px); letter-spacing: -0.03em; line-height: 1.08; margin-bottom: 6px; }
+  .book-title span { color: var(--green); }
+  .book-subtitle { font-size: 17px; font-weight: 300; color: rgba(238,241,246,0.68); max-width: 620px; line-height: 1.65; margin: 18px 0 28px; }
+  .book-author { font-size: 14px; color: var(--muted); margin-bottom: 28px; }
+  .book-author strong { color: var(--offwh); font-weight: 500; }
+  .book-ctas { display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 20px; }
+  .book-meta { display: flex; gap: 20px; flex-wrap: wrap; font-size: 12px; color: rgba(238,241,246,0.4); }
+
+  .thesis-section { padding: 80px 0; }
+  .thesis-inner { max-width: 760px; }
+  .thesis-inner h2 { font-family: 'Syne', sans-serif; font-weight: 800; font-size: clamp(24px, 3vw, 34px); letter-spacing: -0.02em; margin-bottom: 24px; line-height: 1.2; }
+  .thesis-inner p { font-size: 16px; font-weight: 300; color: rgba(238,241,246,0.75); line-height: 1.8; margin-bottom: 20px; }
+  .thesis-inner p strong { color: var(--offwh); font-weight: 500; }
+  .thesis-quote { padding: 28px 32px; border-left: 3px solid var(--green); background: rgba(0,232,145,0.04); border-radius: 0 10px 10px 0; margin: 32px 0; }
+  .thesis-quote p { font-size: 18px; font-style: italic; font-weight: 300; color: rgba(238,241,246,0.85); line-height: 1.7; margin: 0; }
+
+  .toc-section { padding: 80px 0; background: var(--night-2); border-top: 1px solid var(--border); }
+  .toc-list { display: flex; flex-direction: column; gap: 2px; margin-top: 32px; }
+  .toc-item { display: flex; gap: 20px; background: var(--night-3); border: 1px solid var(--border); border-radius: 10px; padding: 20px 24px; }
+  .toc-num { font-family: 'Syne', sans-serif; font-weight: 800; font-size: 22px; color: rgba(0,232,145,0.35); line-height: 1.3; flex-shrink: 0; min-width: 32px; }
+  .toc-text h3 { font-family: 'Syne', sans-serif; font-weight: 700; font-size: 16px; margin-bottom: 4px; letter-spacing: -0.01em; }
+  .toc-text p { font-size: 14px; color: var(--muted); line-height: 1.6; }
+
+  .for-whom-section { padding: 80px 0; }
+  .for-whom-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-top: 24px; }
+  .fw-card { background: var(--night-3); border: 1px solid var(--border); border-radius: 12px; padding: 26px 24px; }
+  .fw-icon { font-size: 26px; margin-bottom: 14px; }
+  .fw-title { font-family: 'Syne', sans-serif; font-weight: 700; font-size: 16px; margin-bottom: 8px; }
+  .fw-desc { font-size: 14px; color: var(--muted); line-height: 1.65; }
+
+  .book-cta-section { padding: 100px 0; text-align: center; border-top: 1px solid var(--border); }
+  .book-cta-title { font-family: 'Syne', sans-serif; font-weight: 800; font-size: clamp(28px, 4vw, 42px); letter-spacing: -0.03em; line-height: 1.1; max-width: 680px; margin: 0 auto 20px; }
+  .book-cta-title span { color: var(--green); }
+  .book-cta-sub { font-size: 16px; font-weight: 300; color: rgba(238,241,246,0.55); margin-bottom: 36px; }
+
+  .author-teaser { padding: 56px 0; background: var(--night-2); border-top: 1px solid var(--border); }
+  .author-teaser-inner { display: flex; align-items: center; gap: 20px; flex-wrap: wrap; justify-content: space-between; }
+  .author-teaser p { font-size: 15px; color: rgba(238,241,246,0.72); max-width: 620px; line-height: 1.7; }
+  .author-teaser p strong { color: var(--offwh); font-weight: 500; }
+  .author-teaser-link { font-size: 14px; font-weight: 500; color: var(--green); text-decoration: underline; text-underline-offset: 3px; white-space: nowrap; }
+
+  @media (max-width: 860px) {
+    .book-visual { padding: 28px 24px; max-width: none; }
+    .for-whom-grid { grid-template-columns: 1fr; }
+  }
+</style>
+
+<Layout
+  title="Inteligencia Organizacional en la Era IA · Libro de Gonzalo Gompertz · 3G Intelligence"
+  description="La variable que determina el éxito de una implementación de IA no es la tecnología: es la madurez organizacional. Descubre el Framework 3 ERAs en el libro de Gonzalo I. Gompertz Geldres."
+  ogImage="https://3gi.cl/og-libro-inteligencia-organizacional.png"
+>
+  <section class="book-hero">
+    <div class="container book-hero-grid">
+      <div>
+        <div class="book-eyebrow">Libro · Gestión e Inteligencia Artificial</div>
+        <h1 class="book-title">Inteligencia Organizacional<br><span>en la Era IA</span></h1>
+        <p class="book-subtitle">Del cambio de paradigma a la madurez organizacional: cómo evolucionan las organizaciones en la transición hacia sistemas aumentados por IA.</p>
+        <div class="book-author">Por <strong>Gonzalo I. Gompertz Geldres</strong> · Fundador de 3G Intelligence</div>
+        <div class="book-ctas">
+          <a href={AMAZON_URL} target="_blank" rel="noopener" class="btn btn-primary btn-lg">Comprar en Kindle →</a>
+          <a href={AMAZON_PAPERBACK_URL} target="_blank" rel="noopener" class="btn btn-outline btn-lg">Comprar tapa blanda →</a>
+          <a href={AMAZON_HARDCOVER_URL} target="_blank" rel="noopener" class="btn btn-outline btn-lg">Comprar tapa dura →</a>
+        </div>
+        <div class="book-meta">
+          <span>Primera edición · 2026</span>
+          <span>Disponible hoy en Kindle, tapa blanda y tapa dura</span>
+          <span>Español e inglés</span>
+        </div>
+      </div>
+      <div class="book-visual">
+        <div class="book-visual-mark">"</div>
+        <div class="book-visual-quote">La IA no transforma empresas. La estructura organizacional determina si la IA genera valor o caos.</div>
+        <div class="book-visual-bars"><span class="bvb-1"></span><span class="bvb-2"></span><span class="bvb-3"></span></div>
+        <div class="book-visual-caption">ERA 1 → ERA 2 → ERA 3 — Framework 3 ERAs</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="thesis-section">
+    <div class="container thesis-inner">
+      <h2>La tecnología está disponible. El valor, no.</h2>
+      <p>Según McKinsey (2025), <strong>menos del 1% de las organizaciones</strong> considera que su estrategia de IA es suficientemente madura para capturar valor real. Cuatro de cada cinco proyectos de IA no salen del piloto (IBM, 2023).</p>
+      <p>Este libro propone una tesis simple y verificable: <strong>la variable que determina el éxito de una implementación de IA no es el acceso a la tecnología. Es la madurez organizacional para usarla efectivamente.</strong> La IA no transforma empresas. La estructura organizacional determina si la IA genera valor o caos.</p>
+      <div class="thesis-quote">
+        <p>"La IA no transforma empresas. La estructura organizacional determina si la IA genera valor o caos. Esa estructura no se modifica comprando más tecnología. Se modifica con un diagnóstico honesto y un camino de transformación ordenado."</p>
+      </div>
+      <p>El <strong>Framework 3 ERAs</strong> es ese mapa: no describe un estado ideal, describe el estado real en que cada organización se encuentra hoy y traza el camino concreto hacia el siguiente nivel de madurez — ERA 1 (coordinación por personas), ERA 2 (visibilidad sistémica) y ERA 3 (sistema adaptativo aumentado por IA).</p>
+    </div>
+  </section>
+
+  <section class="toc-section">
+    <div class="container">
+      <div class="section-header" style="text-align:left;">
+        <div class="section-tag">Qué encontrarás en el libro</div>
+        <h2 class="section-title">10 capítulos, un solo argumento</h2>
+      </div>
+      <div class="toc-list">
+        <div class="toc-item"><div class="toc-num">01</div><div class="toc-text"><h3>El fundamento epistemológico</h3><p>Por qué la irrupción de la IA no es una mejora tecnológica sino un cambio de paradigma — con base en Kuhn.</p></div></div>
+        <div class="toc-item"><div class="toc-num">02</div><div class="toc-text"><h3>Las tres formas en que falla la IA</h3><p>El diagnóstico del problema central y por qué el ecosistema evita nombrar la causa real.</p></div></div>
+        <div class="toc-item"><div class="toc-num">03</div><div class="toc-text"><h3>La variable que determina el éxito</h3><p>No el presupuesto, no la tecnología: la estructura organizacional.</p></div></div>
+        <div class="toc-item"><div class="toc-num">04</div><div class="toc-text"><h3>El Framework 3 ERAs</h3><p>Su fundamento en la teoría de sistemas de Bertalanffy, sus dos dimensiones de diagnóstico y su contexto empírico global.</p></div></div>
+        <div class="toc-item"><div class="toc-num">05</div><div class="toc-text"><h3>Personas y cultura organizacional</h3><p>Por qué el cambio de ERA es siempre un desafío adaptativo, no solo técnico.</p></div></div>
+        <div class="toc-item"><div class="toc-num">06–08</div><div class="toc-text"><h3>Cada ERA en detalle</h3><p>Señales diagnósticas, errores frecuentes, perfil de liderazgo típico y condiciones para avanzar a la siguiente.</p></div></div>
+        <div class="toc-item"><div class="toc-num">09</div><div class="toc-text"><h3>El camino de transición</h3><p>Las seis fases F0 a F5, con duración típica, entregables concretos, señal de cierre y error más frecuente en cada una.</p></div></div>
+        <div class="toc-item"><div class="toc-num">10</div><div class="toc-text"><h3>Cuatro casos compuestos anónimos</h3><p>Desde el fracaso de una ERA 1 con IA hasta una organización ERA 3 que aprende del sistema que construyó.</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="for-whom-section">
+    <div class="container">
+      <div class="section-header" style="text-align:left;">
+        <div class="section-tag">Para quién es este libro</div>
+        <h2 class="section-title">Un marco de diagnóstico y acción</h2>
+        <p class="section-sub" style="margin-left:0;">No es un manual técnico. Está escrito para quienes toman decisiones reales sobre la transformación de sus organizaciones con IA.</p>
+      </div>
+      <div class="for-whom-grid">
+        <div class="fw-card"><div class="fw-icon">🧭</div><div class="fw-title">Directivos y gerentes</div><p class="fw-desc">Quienes lideran la transformación de su organización desde la gestión, no desde la tecnología.</p></div>
+        <div class="fw-card"><div class="fw-icon">🤝</div><div class="fw-title">Consultores</div><p class="fw-desc">Profesionales que acompañan procesos de madurez organizacional y necesitan un marco de diagnóstico riguroso.</p></div>
+        <div class="fw-card"><div class="fw-icon">📊</div><div class="fw-title">Líderes de transformación</div><p class="fw-desc">Quienes ya intentaron implementar IA y necesitan entender por qué el proyecto no despegó del piloto.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="author-teaser">
+    <div class="container author-teaser-inner">
+      <p>Escrito por <strong>Gonzalo I. Gompertz Geldres</strong>, fundador y director de 3G Intelligence.</p>
+      <a href="/nosotros" class="author-teaser-link">Conoce al autor →</a>
+    </div>
+  </section>
+
+  <section class="book-cta-section">
+    <div class="container">
+      <div class="cta-eyebrow">Inteligencia Organizacional en la Era IA</div>
+      <h2 class="book-cta-title">Consigue tu <span>ejemplar</span></h2>
+      <p class="book-cta-sub">Disponible hoy en Kindle, tapa blanda y tapa dura, en español e inglés.</p>
+      <div class="cta-buttons">
+        <a href={AMAZON_URL} target="_blank" rel="noopener" class="btn btn-primary btn-lg">Comprar en Kindle →</a>
+        <a href={AMAZON_PAPERBACK_URL} target="_blank" rel="noopener" class="btn btn-outline btn-lg">Comprar tapa blanda →</a>
+        <a href={AMAZON_HARDCOVER_URL} target="_blank" rel="noopener" class="btn btn-outline btn-lg">Comprar tapa dura →</a>
+      </div>
+    </div>
+  </section>
+</Layout>

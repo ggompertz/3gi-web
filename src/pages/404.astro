@@ -1,0 +1,17 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+<Layout
+  title="Página no encontrada · 3G Intelligence"
+  description="La página que buscas no existe o fue movida."
+  noindex={true}
+>
+  <section style="min-height:60vh; display:flex; align-items:center; justify-content:center; text-align:center; padding:140px 20px 80px;">
+    <div>
+      <div style="font-family:'Syne',sans-serif; font-weight:800; font-size:clamp(60px,10vw,120px); line-height:1; color:var(--green); margin-bottom:8px;">404</div>
+      <h1 style="font-family:'Syne',sans-serif; font-weight:800; font-size:clamp(22px,3vw,32px); margin-bottom:16px;">Esta página no existe</h1>
+      <p style="font-size:16px; color:rgba(238,241,246,0.6); margin-bottom:32px;">Puede que el link esté roto o la página se haya movido.</p>
+      <a href="/" class="btn btn-primary btn-lg">Volver al inicio →</a>
+    </div>
+  </section>
+</Layout>
