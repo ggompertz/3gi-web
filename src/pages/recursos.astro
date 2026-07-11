@@ -1,0 +1,196 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<style>
+.page-hero{padding:140px 0 72px;background:var(--night-2);border-bottom:1px solid var(--border)}
+.page-tag{font-family:Syne,sans-serif;font-size:11px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--green);margin-bottom:16px}
+.page-title{font-family:Syne,sans-serif;font-weight:800;font-size:clamp(32px,5vw,56px);letter-spacing:-.03em;line-height:1.05;margin-bottom:16px}
+.page-sub{font-size:18px;font-weight:300;color:#eef1f699;max-width:640px;line-height:1.65}
+.pdf-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:24px;margin-top:8px}
+.pdf-card{border:1px solid var(--border);border-radius:14px;background:var(--night-2);overflow:hidden;display:flex;flex-direction:column}
+.pdf-cover{aspect-ratio:3/4;background:linear-gradient(155deg,#0E0E1A 0%,#06060D 70%);border-bottom:1px solid var(--border);position:relative;display:flex;flex-direction:column;justify-content:center;padding:24px;overflow:hidden}
+.pdf-cover:before{content:"";position:absolute;top:-40%;right:-30%;width:70%;height:70%;background:radial-gradient(circle,rgba(0,232,145,.18),transparent 70%)}
+.pdf-cover-tag{font-family:Syne,sans-serif;font-size:10px;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--green);margin-bottom:10px;position:relative}
+.pdf-cover-title{font-family:Syne,sans-serif;font-weight:800;font-size:20px;line-height:1.2;color:#EEF1F6;position:relative}
+.pdf-body{padding:22px 24px 24px;display:flex;flex-direction:column;flex:1}
+.pdf-desc{font-size:14px;color:var(--muted);line-height:1.6;margin-bottom:20px;flex:1}
+.pdf-btn{width:100%;justify-content:center}
+.lm-modal-backdrop{position:fixed;inset:0;background:rgba(6,6,13,.75);z-index:200;display:none;align-items:center;justify-content:center;padding:20px}
+.lm-modal-backdrop.open{display:flex}
+.lm-modal{background:var(--night-2);border:1px solid var(--border);border-radius:16px;max-width:440px;width:100%;padding:32px;position:relative}
+.lm-modal-close{position:absolute;top:16px;right:16px;background:none;border:none;color:var(--muted);font-size:22px;cursor:pointer;line-height:1}
+.lm-modal h3{font-family:Syne,sans-serif;font-weight:800;font-size:20px;margin-bottom:6px}
+.lm-modal p.lm-modal-sub{font-size:13px;color:var(--muted);margin-bottom:22px}
+.lm-field{margin-bottom:14px}
+.lm-field label{display:block;font-size:12px;color:var(--muted);margin-bottom:6px}
+.lm-field input[type="text"],.lm-field input[type="email"]{width:100%;padding:11px 14px;border-radius:8px;border:1px solid var(--border);background:var(--night-3);color:#EEF1F6;font-size:14px}
+.lm-consent{display:flex;gap:10px;align-items:flex-start;margin:18px 0 22px}
+.lm-consent input{margin-top:3px}
+.lm-consent label{font-size:12.5px;color:var(--muted);line-height:1.5}
+.lm-consent a{color:var(--green)}
+.lm-msg{font-size:13px;margin-top:14px;text-align:center}
+.lm-msg.ok{color:var(--green)}
+.lm-msg.err{color:#EF4444}
+</style>
+
+<Layout title="Recursos gratuitos: PDFs sobre IA para PyMEs · 3G Intelligence" description="Descarga guías gratuitas sobre inteligencia artificial aplicada a PyMEs latinoamericanas: el Framework ERA, errores comunes de implementación y más.">
+
+<div class="page-hero">
+  <div class="container">
+    <div class="page-tag">Recursos</div>
+    <h1 class="page-title">Guías gratuitas para entender<br>dónde está tu empresa hoy.</h1>
+    <p class="page-sub">Cinco PDFs cortos, sin relleno, basados en el Framework ERA. Déjanos tu correo y te lo enviamos al instante.</p>
+  </div>
+</div>
+
+<section>
+  <div class="container">
+    <div class="pdf-grid">
+      <div class="pdf-card" data-slug="las-3-eras">
+        <div class="pdf-cover"><div class="pdf-cover-tag">Framework</div><div class="pdf-cover-title">Las 3 ERAs de la empresa con IA</div></div>
+        <div class="pdf-body">
+          <p class="pdf-desc">El mapa base de 3GI: cómo identificar en qué ERA operacional y comercial está tu empresa, y qué la separa de la siguiente.</p>
+          <button class="btn btn-primary pdf-btn" data-open-modal data-slug="las-3-eras" data-title="Las 3 ERAs de la empresa con IA">Descargar PDF</button>
+        </div>
+      </div>
+      <div class="pdf-card" data-slug="10-preguntas">
+        <div class="pdf-cover"><div class="pdf-cover-tag">Autoevaluación</div><div class="pdf-cover-title">10 preguntas antes de implementar IA</div></div>
+        <div class="pdf-body">
+          <p class="pdf-desc">El checklist que evita el error más caro: implementar IA antes de tener claro el proceso, el dato y el objetivo de negocio.</p>
+          <button class="btn btn-primary pdf-btn" data-open-modal data-slug="10-preguntas" data-title="10 preguntas antes de implementar IA">Descargar PDF</button>
+        </div>
+      </div>
+      <div class="pdf-card" data-slug="fallan-4-de-5">
+        <div class="pdf-cover"><div class="pdf-cover-tag">Diagnóstico</div><div class="pdf-cover-title">Por qué fallan 4 de cada 5 proyectos de IA</div></div>
+        <div class="pdf-body">
+          <p class="pdf-desc">Las causas reales detrás de las implementaciones que no despegan — y cómo detectarlas antes de invertir.</p>
+          <button class="btn btn-primary pdf-btn" data-open-modal data-slug="fallan-4-de-5" data-title="Por qué fallan 4 de cada 5 proyectos de IA">Descargar PDF</button>
+        </div>
+      </div>
+      <div class="pdf-card" data-slug="metrica-equivocada">
+        <div class="pdf-cover"><div class="pdf-cover-tag">Medición</div><div class="pdf-cover-title">La métrica equivocada</div></div>
+        <div class="pdf-body">
+          <p class="pdf-desc">Por qué medir "uso de IA" no sirve, y qué métrica sí conecta la IA con resultados de negocio reales.</p>
+          <button class="btn btn-primary pdf-btn" data-open-modal data-slug="metrica-equivocada" data-title="La métrica equivocada">Descargar PDF</button>
+        </div>
+      </div>
+      <div class="pdf-card" data-slug="cambio-de-paradigma">
+        <div class="pdf-cover"><div class="pdf-cover-tag">Contexto</div><div class="pdf-cover-title">El cambio de paradigma</div></div>
+        <div class="pdf-body">
+          <p class="pdf-desc">Por qué la IA no es "otra herramienta más" sino un cambio de paradigma operacional — y qué implica para tu PyME.</p>
+          <button class="btn btn-primary pdf-btn" data-open-modal data-slug="cambio-de-paradigma" data-title="El cambio de paradigma">Descargar PDF</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="lm-modal-backdrop" id="lmBackdrop">
+  <div class="lm-modal">
+    <button class="lm-modal-close" id="lmClose" aria-label="Cerrar">&times;</button>
+    <h3 id="lmTitle">Descargar guía</h3>
+    <p class="lm-modal-sub">Te enviamos el PDF a tu correo al instante.</p>
+    <form id="lmForm">
+      <div class="lm-field">
+        <label for="lmNombre">Nombre</label>
+        <input type="text" id="lmNombre" name="nombre" required />
+      </div>
+      <div class="lm-field">
+        <label for="lmEmail">Correo electrónico</label>
+        <input type="email" id="lmEmail" name="email" required />
+      </div>
+      <div class="lm-consent">
+        <input type="checkbox" id="lmConsent" name="consentimiento" required />
+        <label for="lmConsent">Acepto recibir el recurso y comunicaciones de 3G Intelligence. Ver <a href="/privacidad" target="_blank">política de privacidad</a>.</label>
+      </div>
+      <button type="submit" class="btn btn-primary pdf-btn" id="lmSubmit">Enviarme el PDF</button>
+      <div class="lm-msg" id="lmMsg"></div>
+    </form>
+  </div>
+</div>
+
+<script is:inline>
+(function () {
+  var backdrop = document.getElementById('lmBackdrop');
+  var form = document.getElementById('lmForm');
+  var title = document.getElementById('lmTitle');
+  var msg = document.getElementById('lmMsg');
+  var submitBtn = document.getElementById('lmSubmit');
+  var currentSlug = null;
+
+  if (window.__funnelTrack) window.__funnelTrack('pdf_view', {});
+
+  document.querySelectorAll('[data-open-modal]').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      currentSlug = btn.getAttribute('data-slug');
+      title.textContent = 'Descargar: ' + btn.getAttribute('data-title');
+      msg.textContent = '';
+      msg.className = 'lm-msg';
+      form.reset();
+      form.style.display = '';
+      backdrop.classList.add('open');
+    });
+  });
+
+  document.getElementById('lmClose').addEventListener('click', function () {
+    backdrop.classList.remove('open');
+  });
+  backdrop.addEventListener('click', function (e) {
+    if (e.target === backdrop) backdrop.classList.remove('open');
+  });
+
+  function getUtm() {
+    try {
+      return JSON.parse(sessionStorage.getItem('_3gi_futm') || '{}');
+    } catch (e) {
+      return {};
+    }
+  }
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    if (!currentSlug) return;
+    submitBtn.disabled = true;
+    submitBtn.textContent = 'Enviando...';
+    msg.textContent = '';
+    msg.className = 'lm-msg';
+
+    var payload = {
+      nombre: document.getElementById('lmNombre').value,
+      email: document.getElementById('lmEmail').value,
+      pdf_slug: currentSlug,
+      consentimiento: document.getElementById('lmConsent').checked,
+      utm: getUtm(),
+    };
+
+    fetch('https://n8n.3gi.cl/webhook/lead-magnet', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(payload),
+    })
+      .then(function (res) {
+        if (!res.ok) throw new Error('bad status');
+        return res.json().catch(function () { return {}; });
+      })
+      .then(function () {
+        if (window.__funnelTrack) window.__funnelTrack('pdf_request', { pdf_slug: currentSlug });
+        form.style.display = 'none';
+        msg.textContent = 'Revisa tu correo, te enviamos el PDF.';
+        msg.className = 'lm-msg ok';
+      })
+      .catch(function () {
+        msg.textContent = 'No pudimos enviar tu solicitud. Intenta de nuevo o escríbenos por WhatsApp.';
+        msg.className = 'lm-msg err';
+      })
+      .finally(function () {
+        submitBtn.disabled = false;
+        submitBtn.textContent = 'Enviarme el PDF';
+      });
+  });
+})();
+</script>
+
+<script src="/funnel-track.js" is:inline></script>
+
+</Layout>
