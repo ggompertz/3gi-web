@@ -143,7 +143,7 @@ input.otp-input:focus{border-color:#00e89166}
 </main>
 
 <script is:inline>
-const WORKER = 'https://diagnostico-api.3g-ia-agents.com';
+const WORKER = 'https://diagnostico-api.3gi.cl';
 
 const PREGUNTAS = [
   {
@@ -456,7 +456,7 @@ async function verifyOtp(code) {
       era_com: window._eraCom || '',
       era_answers: encodeURIComponent(JSON.stringify(window._eraAnswers || {})),
     });
-    window.location.href = `/en/diagnostico-ia?${params.toString()}`;
+    window.location.href = `/en/test-era-ia?${params.toString()}`;
   } catch(e) {
     document.getElementById('inp-otp').disabled = false;
     document.getElementById('inp-otp').value = '';

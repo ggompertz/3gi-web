@@ -253,7 +253,7 @@ window.__stagger = stagger;
 </script>
 
 <script is:inline>
-const WORKER = 'https://diagnostico-api.3g-ia-agents.com';
+const WORKER = 'https://diagnostico-api.3gi.cl';
 
 const PREGUNTAS = [
   { id: 'q1', dim: 'Operacional · Datos e información',
@@ -572,7 +572,7 @@ async function verifyGateOtp(code) {
       era_com: window._eraCom || '',
       era_answers: encodeURIComponent(JSON.stringify(window._eraAnswers || {})),
     });
-    window.location.href = `/diagnostico-ia?${params.toString()}`;
+    window.location.href = `/test-era-ia?${params.toString()}`;
   } catch(e) {
     document.getElementById('g-otp').disabled = false;
     document.getElementById('g-otp').value = '';
