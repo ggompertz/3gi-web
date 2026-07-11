@@ -191,8 +191,10 @@ select.f-select option{background:#0E0E1A;color:var(--offwh)}
   <div id="result-step"></div>
 </main>
 
+<script src="/funnel-track.js" is:inline></script>
 <script is:inline>
 const WORKER = 'https://diagnostico-api.3gi.cl';
+if (window.__funnelTrack) window.__funnelTrack('report_view');
 
 const CAMPOS = [
   {

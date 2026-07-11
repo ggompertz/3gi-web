@@ -142,8 +142,10 @@ input.otp-input:focus{border-color:#00e89166}
 </div>
 </main>
 
+<script src="/funnel-track.js" is:inline></script>
 <script is:inline>
 const WORKER = 'https://diagnostico-api.3gi.cl';
+if (window.__funnelTrack) window.__funnelTrack('test_view');
 
 const PREGUNTAS = [
   {
@@ -316,6 +318,10 @@ function renderQuestion() {
 }
 
 function selectOpt(idx, val) {
+  if (window.__funnelTrack) {
+    if (current === 0) window.__funnelTrack('test_start');
+    window.__funnelTrack('test_question', { n: current + 1 });
+  }
   document.querySelectorAll('.opt').forEach(el => el.classList.remove('selected'));
   document.getElementById(`opt-${idx}`).classList.add('selected');
   setTimeout(() => {
@@ -384,6 +390,7 @@ function showResult() {
 }
 
 function showEmailStep() {
+  if (window.__funnelTrack) window.__funnelTrack('gate_view');
   document.getElementById('upgrade-cta').style.display = 'none';
   document.getElementById('email-step').style.display = 'block';
   document.getElementById('inp-nombre').focus();
@@ -399,6 +406,7 @@ async function sendOtp() {
     return;
   }
   errEl.style.display = 'none';
+  if (window.__funnelTrack) window.__funnelTrack('otp_requested');
 
   const btn = document.getElementById('btn-send-otp');
   btn.disabled = true;
@@ -456,6 +464,7 @@ async function verifyOtp(code) {
       era_com: window._eraCom || '',
       era_answers: encodeURIComponent(JSON.stringify(window._eraAnswers || {})),
     });
+    if (window.__funnelTrack) window.__funnelTrack('test_complete');
     window.location.href = `/en/test-era-ia?${params.toString()}`;
   } catch(e) {
     document.getElementById('inp-otp').disabled = false;

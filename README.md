@@ -48,19 +48,19 @@ dist/                   ← Build output (no commitear)
 
 - **ERAs siempre en mayúsculas:** ERA 1, ERA 2, ERA 3
 - **Nunca "Etapa":** usar Diagnóstico, F1, F2, F3, F4, F5
-- **CTA principal:** `/diagnostico` — nunca Calendly directo ni `/pre-scan`
+- **CTA principal:** `/test-era` — nunca Calendly directo ni `/pre-scan`
 
 ## Páginas y propósito
 
 | Página | Propósito | CTA principal |
 |---|---|---|
-| `/` | Conversión — dolor → ERAs → metodología → caso → FAQ → diagnóstico | `/diagnostico` |
-| `/faq` | SEO/AEO — responder objeciones de compra B2B | `/diagnostico` + WhatsApp |
+| `/` | Conversión — dolor → ERAs → metodología → caso → FAQ → diagnóstico | `/test-era` |
+| `/faq` | SEO/AEO — responder objeciones de compra B2B | `/test-era` + WhatsApp |
 | `/metodologia` | Educación — detalle F1–F5 | Agendar llamada |
 | `/precios` | Cierre — precio fijo + ROI justificado | Calendly |
 | `/casos` | Prueba social — casos reales anonimizados | Ver diagnóstico |
-| `/framework` | Autoridad — detalle del Framework 3 ERAs | `/diagnostico` |
-| `/diagnostico` | Landing de entrada al diagnóstico gratuito | Quiz inline |
+| `/framework` | Autoridad — detalle del Framework 3 ERAs | `/test-era` |
+| `/test-era` | Landing de entrada al test ERA gratuito | Quiz inline |
 
 ## SEO / AEO
 
@@ -87,10 +87,10 @@ Al agregar texto nuevo visible al usuario, agregar la key en ambos idiomas.
 npm run build
 
 # Deploy a Cloudflare Pages
-npx wrangler pages deploy dist --project-name 3g-ia-agents --commit-dirty=true
+npx wrangler pages deploy dist --project-name=3gi-web --commit-dirty=true
 ```
 
-El proyecto en Cloudflare Pages se llama `3g-ia-agents` (no `3gi-web`).
+El proyecto en Cloudflare Pages se llama `3gi-web` (sirve 3gi.cl, www.3gi.cl y 3g-ia-agents.com). El proyecto `3g-ia-agents` es un proyecto Pages distinto y NO sirve tráfico de producción — no usarlo para deploys.
 
 ## Contenido semanal
 
