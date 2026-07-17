@@ -9,9 +9,9 @@ Formato: Short/Reel (30s) + LinkedIn + Facebook — 3 posts, cada uno anclado en
 
 | Post | Fecha | Tema | Capítulo | Short | LinkedIn | Facebook | Estado |
 |---|---|---|---|---|---|---|---|
-| 1 | 2026-07-03 | Cambio de paradigma (Kuhn) | Cap. 1 | ✅ | ✅ | ✅ | ⏳ pendiente |
-| 2 | 2026-07-06 | Por qué falla la IA (y el ecosistema no lo dice) | Cap. 2 | ✅ | ✅ | ✅ | ⏳ pendiente |
-| 3 | 2026-07-09 | Cultura y liderazgo, no proyecto técnico | Cap. 5 | ✅ | ✅ | ✅ | ⏳ pendiente |
+| 1 | 2026-07-03 | Cambio de paradigma (Kuhn) | Cap. 1 | ✅ | ✅ | ✅ | ✅ publicado |
+| 2 | 2026-07-06 | Por qué falla la IA (y el ecosistema no lo dice) | Cap. 2 | ✅ | ✅ | ✅ | ✅ publicado |
+| 3 | 2026-07-09 | Cultura y liderazgo, no proyecto técnico | Cap. 5 | ✅ | ✅ | ✅ | ✅ publicado |
 
 ---
 
