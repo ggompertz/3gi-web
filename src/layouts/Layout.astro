@@ -20,6 +20,7 @@ const {
   noindex = false
 } = Astro.props;
 
+const posthogKey = import.meta.env.PUBLIC_POSTHOG_KEY || '';
 const canonicalUrl = new URL(Astro.url.pathname, 'https://3gi.cl').href;
 const currentPath = Astro.url.pathname;
 const esPath = currentPath.startsWith('/en') ? (currentPath.replace(/^\/en/, '') || '/') : currentPath;
@@ -32,12 +33,30 @@ const p = lang === 'en' ? '/en' : '';
 <html lang={lang}>
 <head>
   <!-- Google Tag Manager (diferido hasta consentimiento de cookies) -->
-  <script is:inline>
+  <script is:inline define:vars={{ posthogKey }}>
     window.dataLayer = window.dataLayer || [];
     window.__loadGTM = function() {
       if (window.__gtmLoaded) return;
       window.__gtmLoaded = true;
       (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-PC7C2ZZQ');
+    };
+    // PostHog (analítica de funnel /test-era) — mismo gate de consentimiento que GTM
+    window.__posthogKey = posthogKey;
+    window.__loadPostHog = function() {
+      if (window.__posthogLoaded || !window.__posthogKey) return;
+      window.__posthogLoaded = true;
+      import('https://cdn.jsdelivr.net/npm/posthog-js@latest/dist/module.full.min.js').then(function(mod) {
+        window.posthog = mod.default;
+        window.posthog.init(window.__posthogKey, {
+          api_host: 'https://us.i.posthog.com',
+          person_profiles: 'identified_only'
+        });
+      });
+    };
+    // Hook genérico ya usado en test-era.astro, test-era-ia.astro y recursos.astro
+    // (ES + EN) — existía sin definición (no-op silencioso). Ahora reenvía a PostHog.
+    window.__funnelTrack = function(eventName, props) {
+      if (window.posthog) window.posthog.capture(eventName, props || {});
     };
     // Migración y lectura de localStorage con nueva estructura JSON
     try {
@@ -56,6 +75,7 @@ const p = lang === 'en' ? '/en' : '';
       }
       if (consentStatus === 'accepted') {
         window.__loadGTM();
+        window.__loadPostHog();
       }
     } catch (e) {
       console.error('Error reading consent:', e);
@@ -678,6 +698,7 @@ const p = lang === 'en' ? '/en' : '';
       localStorage.setItem('tgi_consent', JSON.stringify({status: 'accepted', ts: new Date().toISOString(), v: 1}));
       banner.hidden = true;
       if (window.__loadGTM) window.__loadGTM();
+      if (window.__loadPostHog) window.__loadPostHog();
     });
     document.getElementById('tgi-consent-reject').addEventListener('click', function() {
       localStorage.setItem('tgi_consent', JSON.stringify({status: 'rejected', ts: new Date().toISOString(), v: 1}));

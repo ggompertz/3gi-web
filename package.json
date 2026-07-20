@@ -24,7 +24,8 @@
     "@fontsource/syne": "^5.2.7",
     "@sentry/astro": "^10.67.0",
     "astro": "^6.1.9",
-    "motion": "^12.40.0"
+    "motion": "^12.40.0",
+    "posthog-js": "^1.404.1"
   },
   "devDependencies": {
     "playwright": "^1.61.1"
