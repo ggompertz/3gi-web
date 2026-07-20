@@ -16,6 +16,11 @@ export default defineConfig({
   build: {
     format: 'directory',
   },
+  vite: {
+    build: {
+      sourcemap: true,
+    },
+  },
   i18n: {
     defaultLocale: 'es',
     locales: ['es', 'en'],
@@ -25,6 +30,9 @@ export default defineConfig({
     // Init real de Sentry vive en sentry.client.config.ts (patrón recomendado por @sentry/astro
     // para evitar el warning de deprecación de pasar `dsn` acá). Sitio 100% estático (sin
     // adapter SSR), así que solo aplica sentry.client.config.ts, no hace falta el de server.
-    sentry(),
+    sentry({
+      org: '3gi',
+      project: '3gi-web',
+    }),
   ],
 });
