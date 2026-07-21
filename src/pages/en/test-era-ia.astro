@@ -314,6 +314,7 @@ async function submitAnalisis() {
       return;
     }
     if (!data.ok) throw new Error(data.error);
+    if (window.__funnelTrack) window.__funnelTrack('informe_completado');
     renderResult(data);
   } catch (err) {
     document.getElementById('loading-step').style.display = 'none';
