@@ -10,6 +10,17 @@
           }
         ]
       }
+    ],
+    "PostToolUse": [
+      {
+        "matcher": "Edit|Write",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "PATH_=$(python3 -c \"import json,sys; d=json.load(sys.stdin); print(d.get('tool_input',d).get('file_path',''))\" 2>/dev/null || true); case \"$PATH_\" in */src/pages/en/*) true ;; *src/pages/*.astro) BASENAME=$(basename \"$PATH_\"); DIR=$(dirname \"$PATH_\"); [ -f \"$DIR/en/$BASENAME\" ] && echo '{\"hookSpecificOutput\":{\"hookEventName\":\"PostToolUse\",\"additionalContext\":\"i18n: existe par EN en src/pages/en/'\"$BASENAME\"' — revisar si este cambio también aplica ahí (hreflang).\"}}' || true ;; *) true ;; esac"
+          }
+        ]
+      }
     ]
   }
 }
