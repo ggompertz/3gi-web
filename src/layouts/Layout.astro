@@ -24,6 +24,16 @@ const posthogKey = import.meta.env.PUBLIC_POSTHOG_KEY || '';
 const canonicalUrl = new URL(Astro.url.pathname, 'https://3gi.cl').href;
 const currentPath = Astro.url.pathname;
 const esPath = currentPath.startsWith('/en') ? (currentPath.replace(/^\/en/, '') || '/') : currentPath;
+
+// Páginas que existen en ambos idiomas (ver src/pages/en/) — solo estas deben
+// emitir hreflang="en", de lo contrario Google rastrea /en/<ruta> inexistentes
+// y las reporta como 404 en Search Console (ver informe indexación 28/7/26).
+const ES_SLUGS_WITH_EN_VERSION = new Set([
+  '/', '/casos', '/faq', '/inteligencia-organizacional', '/metodologia',
+  '/nosotros', '/precios', '/privacidad', '/recursos', '/test-era', '/test-era-ia',
+]);
+const esPathNoSlash = esPath !== '/' ? esPath.replace(/\/$/, '') : esPath;
+const hasEnVersion = lang === 'en' || ES_SLUGS_WITH_EN_VERSION.has(esPathNoSlash);
 const enPath = lang === 'en' ? currentPath : `/en${currentPath}`;
 const esUrl = `https://3gi.cl${esPath}`;
 const enUrl = `https://3gi.cl${enPath}`;
@@ -89,7 +99,7 @@ const p = lang === 'en' ? '/en' : '';
   <meta name="description" content={description} />
   <link rel="canonical" href={canonicalUrl} />
   <link rel="alternate" hreflang="es" href={esUrl} />
-  <link rel="alternate" hreflang="en" href={enUrl} />
+  {hasEnVersion && <link rel="alternate" hreflang="en" href={enUrl} />}
   <link rel="alternate" hreflang="x-default" href={esUrl} />
 
   <meta name="robots" content={noindex ? "noindex, follow" : "index, follow"} />
