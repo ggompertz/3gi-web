@@ -1403,7 +1403,7 @@
       "file_type": "document",
       "source_file": "docs/superpowers/plans/2026-06-07-web-alineacion-libro.md",
       "source_location": "L1",
-      "community": 22,
+      "community": 23,
       "norm_label": "2026-06-07-web-alineacion-libro.md",
       "id": "docs_superpowers_plans_2026_06_07_web_alineacion_libro_md"
     },
@@ -1412,7 +1412,7 @@
       "file_type": "document",
       "source_file": "docs/superpowers/plans/2026-06-07-web-alineacion-libro.md",
       "source_location": "L1",
-      "community": 22,
+      "community": 23,
       "norm_label": "alineacion web 3gi con el libro implementation plan",
       "id": "plans_2026_06_07_web_alineacion_libro_alineaci_n_web_3gi_con_el_libro_implementation_plan"
     },
@@ -1421,7 +1421,7 @@
       "file_type": "document",
       "source_file": "docs/superpowers/plans/2026-06-07-web-alineacion-libro.md",
       "source_location": "L13",
-      "community": 22,
+      "community": 23,
       "norm_label": "estructura de archivos",
       "id": "plans_2026_06_07_web_alineacion_libro_estructura_de_archivos"
     },
@@ -1430,7 +1430,7 @@
       "file_type": "document",
       "source_file": "docs/superpowers/plans/2026-06-07-web-alineacion-libro.md",
       "source_location": "L30",
-      "community": 22,
+      "community": 23,
       "norm_label": "task 1: backup de los 3 archivos",
       "id": "plans_2026_06_07_web_alineacion_libro_task_1_backup_de_los_3_archivos"
     },
@@ -1439,7 +1439,7 @@
       "file_type": "document",
       "source_file": "docs/superpowers/plans/2026-06-07-web-alineacion-libro.md",
       "source_location": "L39",
-      "community": 22,
+      "community": 23,
       "norm_label": "code:bash (cd /root/3gi-web)",
       "id": "plans_2026_06_07_web_alineacion_libro_codeblock_1"
     },
@@ -1448,7 +1448,7 @@
       "file_type": "document",
       "source_file": "docs/superpowers/plans/2026-06-07-web-alineacion-libro.md",
       "source_location": "L50",
-      "community": 22,
+      "community": 23,
       "norm_label": "code:bash (cd /root/3gi-web)",
       "id": "plans_2026_06_07_web_alineacion_libro_codeblock_2"
     },
@@ -1592,7 +1592,7 @@
       "file_type": "document",
       "source_file": "docs/superpowers/plans/2026-06-07-web-alineacion-libro.md",
       "source_location": "L181",
-      "community": 23,
+      "community": 22,
       "norm_label": "task 4: metodologia.astro \u2014 seccion \"por que el diagnostico primero\"",
       "id": "plans_2026_06_07_web_alineacion_libro_task_4_metodologia_astro_secci_n_por_qu_el_diagn_stico_primero"
     },
@@ -1601,7 +1601,7 @@
       "file_type": "document",
       "source_file": "docs/superpowers/plans/2026-06-07-web-alineacion-libro.md",
       "source_location": "L193",
-      "community": 23,
+      "community": 22,
       "norm_label": "code:block16 (<div class=\"spectrum-header\"><div class=\"page-tag\" data-i18n)",
       "id": "plans_2026_06_07_web_alineacion_libro_codeblock_16"
     },
@@ -1610,7 +1610,7 @@
       "file_type": "document",
       "source_file": "docs/superpowers/plans/2026-06-07-web-alineacion-libro.md",
       "source_location": "L198",
-      "community": 23,
+      "community": 22,
       "norm_label": "code:block17 (<div class=\"diag-first-section\" style=\"padding:64px 0 56px; )",
       "id": "plans_2026_06_07_web_alineacion_libro_codeblock_17"
     },
@@ -1619,7 +1619,7 @@
       "file_type": "document",
       "source_file": "docs/superpowers/plans/2026-06-07-web-alineacion-libro.md",
       "source_location": "L205",
-      "community": 23,
+      "community": 22,
       "norm_label": "code:block18 ('met-sub': 'metodologia estructurada, entregables concretos,)",
       "id": "plans_2026_06_07_web_alineacion_libro_codeblock_18"
     },
@@ -1628,7 +1628,7 @@
       "file_type": "document",
       "source_file": "docs/superpowers/plans/2026-06-07-web-alineacion-libro.md",
       "source_location": "L211",
-      "community": 23,
+      "community": 22,
       "norm_label": "code:block19 ('met-sub': 'metodologia estructurada, entregables concretos,)",
       "id": "plans_2026_06_07_web_alineacion_libro_codeblock_19"
     },
@@ -1637,7 +1637,7 @@
       "file_type": "document",
       "source_file": "docs/superpowers/plans/2026-06-07-web-alineacion-libro.md",
       "source_location": "L225",
-      "community": 23,
+      "community": 22,
       "norm_label": "code:block20 ('met-sub': 'structured methodology, concrete deliverables, d)",
       "id": "plans_2026_06_07_web_alineacion_libro_codeblock_20"
     },
@@ -1646,7 +1646,7 @@
       "file_type": "document",
       "source_file": "docs/superpowers/plans/2026-06-07-web-alineacion-libro.md",
       "source_location": "L231",
-      "community": 23,
+      "community": 22,
       "norm_label": "code:block21 ('met-sub': 'structured methodology, concrete deliverables, d)",
       "id": "plans_2026_06_07_web_alineacion_libro_codeblock_21"
     },
@@ -1655,7 +1655,7 @@
       "file_type": "document",
       "source_file": "docs/superpowers/plans/2026-06-07-web-alineacion-libro.md",
       "source_location": "L244",
-      "community": 23,
+      "community": 22,
       "norm_label": "code:bash (node --check /root/3gi-web/src/pages/metodologia.astro 2>&1)",
       "id": "plans_2026_06_07_web_alineacion_libro_codeblock_22"
     },
@@ -1664,7 +1664,7 @@
       "file_type": "document",
       "source_file": "docs/superpowers/plans/2026-06-07-web-alineacion-libro.md",
       "source_location": "L252",
-      "community": 23,
+      "community": 22,
       "norm_label": "code:bash (cd /root/3gi-web)",
       "id": "plans_2026_06_07_web_alineacion_libro_codeblock_23"
     },
@@ -1772,7 +1772,7 @@
       "file_type": "document",
       "source_file": "docs/superpowers/plans/2026-06-07-web-alineacion-libro.md",
       "source_location": "L351",
-      "community": 27,
+      "community": 26,
       "norm_label": "task 6: metodologia.astro \u2014 callout \"la meseta era 2\"",
       "id": "plans_2026_06_07_web_alineacion_libro_task_6_metodologia_astro_callout_la_meseta_era_2"
     },
@@ -1781,7 +1781,7 @@
       "file_type": "document",
       "source_file": "docs/superpowers/plans/2026-06-07-web-alineacion-libro.md",
       "source_location": "L362",
-      "community": 27,
+      "community": 26,
       "norm_label": "code:bash (python3 -c \")",
       "id": "plans_2026_06_07_web_alineacion_libro_codeblock_34"
     },
@@ -1790,7 +1790,7 @@
       "file_type": "document",
       "source_file": "docs/superpowers/plans/2026-06-07-web-alineacion-libro.md",
       "source_location": "L378",
-      "community": 27,
+      "community": 26,
       "norm_label": "code:html (<div style=\"background:rgba(234,179,8,0.06); border:1px soli)",
       "id": "plans_2026_06_07_web_alineacion_libro_codeblock_35"
     },
@@ -1799,7 +1799,7 @@
       "file_type": "document",
       "source_file": "docs/superpowers/plans/2026-06-07-web-alineacion-libro.md",
       "source_location": "L388",
-      "community": 27,
+      "community": 26,
       "norm_label": "code:js ('met-meseta-label': 'la meseta era 2',)",
       "id": "plans_2026_06_07_web_alineacion_libro_codeblock_36"
     },
@@ -1808,7 +1808,7 @@
       "file_type": "document",
       "source_file": "docs/superpowers/plans/2026-06-07-web-alineacion-libro.md",
       "source_location": "L395",
-      "community": 27,
+      "community": 26,
       "norm_label": "code:js ('met-meseta-label': 'the era 2 plateau',)",
       "id": "plans_2026_06_07_web_alineacion_libro_codeblock_37"
     },
@@ -1817,7 +1817,7 @@
       "file_type": "document",
       "source_file": "docs/superpowers/plans/2026-06-07-web-alineacion-libro.md",
       "source_location": "L402",
-      "community": 27,
+      "community": 26,
       "norm_label": "code:bash (node --check /root/3gi-web/src/pages/metodologia.astro 2>&1)",
       "id": "plans_2026_06_07_web_alineacion_libro_codeblock_38"
     },
@@ -1826,7 +1826,7 @@
       "file_type": "document",
       "source_file": "docs/superpowers/plans/2026-06-07-web-alineacion-libro.md",
       "source_location": "L408",
-      "community": 27,
+      "community": 26,
       "norm_label": "code:bash (cd /root/3gi-web)",
       "id": "plans_2026_06_07_web_alineacion_libro_codeblock_39"
     },
@@ -1835,7 +1835,7 @@
       "file_type": "document",
       "source_file": "docs/superpowers/plans/2026-06-07-web-alineacion-libro.md",
       "source_location": "L416",
-      "community": 26,
+      "community": 27,
       "norm_label": "task 7: metodologia.astro \u2014 seccion \"la dimension humana\"",
       "id": "plans_2026_06_07_web_alineacion_libro_task_7_metodologia_astro_secci_n_la_dimensi_n_humana"
     },
@@ -1844,7 +1844,7 @@
       "file_type": "document",
       "source_file": "docs/superpowers/plans/2026-06-07-web-alineacion-libro.md",
       "source_location": "L427",
-      "community": 26,
+      "community": 27,
       "norm_label": "code:bash (python3 -c \")",
       "id": "plans_2026_06_07_web_alineacion_libro_codeblock_40"
     },
@@ -1853,7 +1853,7 @@
       "file_type": "document",
       "source_file": "docs/superpowers/plans/2026-06-07-web-alineacion-libro.md",
       "source_location": "L442",
-      "community": 26,
+      "community": 27,
       "norm_label": "code:html (<section style=\"padding:72px 0; border-top:1px solid rgba(25)",
       "id": "plans_2026_06_07_web_alineacion_libro_codeblock_41"
     },
@@ -1862,7 +1862,7 @@
       "file_type": "document",
       "source_file": "docs/superpowers/plans/2026-06-07-web-alineacion-libro.md",
       "source_location": "L448",
-      "community": 26,
+      "community": 27,
       "norm_label": "code:js ('met-human-tag': 'la variable que nadie mide',)",
       "id": "plans_2026_06_07_web_alineacion_libro_codeblock_42"
     },
@@ -1871,7 +1871,7 @@
       "file_type": "document",
       "source_file": "docs/superpowers/plans/2026-06-07-web-alineacion-libro.md",
       "source_location": "L461",
-      "community": 26,
+      "community": 27,
       "norm_label": "code:js ('met-human-tag': 'the variable no one measures',)",
       "id": "plans_2026_06_07_web_alineacion_libro_codeblock_43"
     },
@@ -1880,7 +1880,7 @@
       "file_type": "document",
       "source_file": "docs/superpowers/plans/2026-06-07-web-alineacion-libro.md",
       "source_location": "L474",
-      "community": 26,
+      "community": 27,
       "norm_label": "code:bash (node --check /root/3gi-web/src/pages/metodologia.astro 2>&1)",
       "id": "plans_2026_06_07_web_alineacion_libro_codeblock_44"
     },
@@ -1889,7 +1889,7 @@
       "file_type": "document",
       "source_file": "docs/superpowers/plans/2026-06-07-web-alineacion-libro.md",
       "source_location": "L480",
-      "community": 26,
+      "community": 27,
       "norm_label": "code:bash (cd /root/3gi-web)",
       "id": "plans_2026_06_07_web_alineacion_libro_codeblock_45"
     },
@@ -1988,7 +1988,7 @@
       "file_type": "document",
       "source_file": "docs/superpowers/plans/2026-06-07-web-alineacion-libro.md",
       "source_location": "L569",
-      "community": 22,
+      "community": 23,
       "norm_label": "self-review",
       "id": "plans_2026_06_07_web_alineacion_libro_self_review"
     },
@@ -1997,7 +1997,7 @@
       "file_type": "document",
       "source_file": "docs/superpowers/plans/2026-06-07-web-alineacion-libro.md",
       "source_location": "L571",
-      "community": 22,
+      "community": 23,
       "norm_label": "spec coverage",
       "id": "plans_2026_06_07_web_alineacion_libro_spec_coverage"
     },
@@ -2006,7 +2006,7 @@
       "file_type": "document",
       "source_file": "docs/superpowers/plans/2026-06-07-web-alineacion-libro.md",
       "source_location": "L583",
-      "community": 22,
+      "community": 23,
       "norm_label": "riesgos conocidos",
       "id": "plans_2026_06_07_web_alineacion_libro_riesgos_conocidos"
     },
@@ -12240,5 +12240,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "6965c8a1da3d742a43342dc58d781e4d41dec7b1"
+  "built_at_commit": "bc15c586856231acee10cc7e8152d495db1325d3"
 }
