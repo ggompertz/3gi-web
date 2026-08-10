@@ -1,0 +1,226 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Términos de Servicio · Terms of Service — 3G Intelligence" description="">
+  <!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Términos de Servicio · Terms of Service — 3G Intelligence</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: Arial, sans-serif;
+    background: #06060D;
+    color: #EEF1F6;
+    padding: 48px 24px;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.7;
+  }
+  .lang-toggle {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 40px;
+  }
+  .lang-btn {
+    padding: 6px 16px;
+    border-radius: 4px;
+    border: 1px solid #374151;
+    background: transparent;
+    color: #9CA3AF;
+    cursor: pointer;
+    font-size: 13px;
+  }
+  .lang-btn.active {
+    background: #00E891;
+    color: #06060D;
+    border-color: #00E891;
+    font-weight: 700;
+  }
+  .section { display: none; }
+  .section.active { display: block; }
+  .logo {
+    font-size: 20px;
+    font-weight: 900;
+    margin-bottom: 32px;
+  }
+  .logo span { color: #00E891; }
+  h1 {
+    font-size: 22px;
+    font-weight: 700;
+    color: #00E891;
+    margin-bottom: 8px;
+  }
+  .date {
+    font-size: 12px;
+    color: #6B7280;
+    margin-bottom: 32px;
+  }
+  h2 {
+    font-size: 14px;
+    font-weight: 700;
+    color: #EEF1F6;
+    margin: 28px 0 8px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+  p, li {
+    font-size: 14px;
+    color: #9CA3AF;
+  }
+  ul {
+    padding-left: 20px;
+    margin-top: 6px;
+  }
+  li { margin-bottom: 4px; }
+  a { color: #00E891; text-decoration: none; }
+  .footer {
+    margin-top: 48px;
+    padding-top: 16px;
+    border-top: 1px solid #1F2937;
+    font-size: 12px;
+    color: #4B5563;
+  }
+</style>
+</head>
+<body>
+
+<div class="logo"><span>3G</span> Intelligence</div>
+
+<div class="lang-toggle">
+  <button class="lang-btn active" onclick="setLang('es')">Español</button>
+  <button class="lang-btn" onclick="setLang('en')">English</button>
+</div>
+
+<!-- ══ ESPAÑOL ══ -->
+<div class="section active" id="sec-es">
+  <h1>Términos de Servicio</h1>
+  <div class="date">Última actualización: agosto 2026</div>
+
+  <h2>1. Aceptación de los Términos</h2>
+  <p>Al contratar los servicios de 3G Intelligence SPA ("3GI", "nosotros"), RUT 78.388.535-2, aceptas los presentes Términos de Servicio. Si no estás de acuerdo, no debes contratar el servicio.</p>
+
+  <h2>2. Descripción del servicio</h2>
+  <p>3GI presta servicios de diagnóstico y consultoría en inteligencia artificial y automatización para empresas, estructurados en las siguientes etapas:</p>
+  <ul>
+    <li><strong>Diagnóstico (Scan IA)</strong>: evaluación inicial gratuita de madurez operacional, clasificación en el Framework 3 ERAs.</li>
+    <li><strong>Fases F1 a F5</strong>: análisis profundo, roadmap de implementación, y acompañamiento en la ejecución, según el alcance contratado en cada propuesta comercial.</li>
+  </ul>
+  <p>El alcance, plazos y entregables específicos de cada fase se detallan en la propuesta comercial firmada por el cliente, que forma parte integrante de estos Términos.</p>
+
+  <h2>3. Uso de inteligencia artificial en la prestación del servicio</h2>
+  <p>3GI utiliza modelos de inteligencia artificial (incluyendo Anthropic Claude y OpenAI) como herramientas de apoyo para generar análisis, reportes y recomendaciones. Estas herramientas asisten el trabajo de un consultor humano — ningún entregable final se produce ni se envía sin revisión humana. El detalle de qué datos se procesan y con qué proveedores se describe en nuestra <a href="/privacidad">Política de Privacidad</a>.</p>
+
+  <h2>4. Precios y forma de pago</h2>
+  <p>El Diagnóstico inicial es gratuito. Las Fases F1–F5 tienen precio fijo, acordado por escrito antes de iniciar cada fase — no se cobra por hora ni se agregan costos no informados previamente. La forma de pago (contado, hitos, moneda) se define en la propuesta comercial de cada cliente.</p>
+
+  <h2>5. Propiedad intelectual</h2>
+  <p>El <strong>Framework 3 ERAs</strong> y la metodología propia de 3GI son propiedad intelectual de 3GI y están protegidos como obra registrada. El cliente recibe licencia de uso de los entregables generados para su propio negocio (informes, roadmap, recomendaciones), pero no adquiere derechos sobre la metodología, plantillas o herramientas internas de 3GI.</p>
+
+  <h2>6. Obligaciones del cliente</h2>
+  <p>El cliente se compromete a entregar información veraz y completa durante el proceso de diagnóstico. 3GI no se hace responsable por conclusiones erróneas derivadas de información incompleta o inexacta proporcionada por el cliente.</p>
+
+  <h2>7. Confidencialidad</h2>
+  <p>Ambas partes se obligan a mantener confidencial la información comercial, operacional y técnica intercambiada durante la prestación del servicio, salvo que deba divulgarse por ley o autoridad competente.</p>
+
+  <h2>8. Limitación de responsabilidad</h2>
+  <p>3GI entrega recomendaciones basadas en el diagnóstico realizado, pero <strong>no garantiza resultados específicos de negocio</strong> (ROI, ahorro, ingresos) — las proyecciones son estimaciones basadas en el caso del cliente y en la experiencia comparada, no compromisos contractuales de resultado. La responsabilidad de 3GI frente al cliente, en cualquier caso, se limita al monto efectivamente pagado por la fase del servicio en la que se originó el reclamo.</p>
+
+  <h2>9. Protección de datos personales</h2>
+  <p>El tratamiento de datos personales se rige por nuestra <a href="/privacidad">Política de Privacidad</a>, que forma parte integrante de estos Términos.</p>
+
+  <h2>10. Vigencia y término</h2>
+  <p>El cliente puede terminar el servicio en cualquier momento entre fases, sin obligación de continuar con fases futuras. Las fases ya iniciadas y pagadas se completan según lo pactado, salvo acuerdo distinto entre las partes.</p>
+
+  <h2>11. Modificaciones a estos Términos</h2>
+  <p>3GI puede actualizar estos Términos. Los cambios se publican en esta página con su fecha de última actualización. Los cambios no aplican retroactivamente a servicios ya contratados y en curso.</p>
+
+  <h2>12. Ley aplicable</h2>
+  <p>Estos Términos se rigen por las leyes de la República de Chile.</p>
+
+  <h2>13. Resolución de controversias</h2>
+  <p>Las partes acuerdan resolver cualquier controversia derivada de este contrato conforme al siguiente procedimiento escalonado:</p>
+  <p><strong>a) Negociación directa.</strong> La parte que constate una controversia deberá notificarla por escrito a un representante designado de la otra parte, describiendo los hechos y la solución pretendida. Las partes dispondrán de 15 días corridos desde la notificación para resolverla mediante negociación directa de buena fe.</p>
+  <p><strong>b) Mediación.</strong> Si la controversia no se resuelve dentro del plazo anterior, cualquiera de las partes podrá someterla a mediación ante el Centro de Arbitraje y Mediación de Santiago ("CAM Santiago"), conforme a su reglamento vigente. Las partes dispondrán de 30 días corridos desde el inicio de la mediación para llegar a acuerdo, prorrogables de común acuerdo.</p>
+  <p><strong>c) Arbitraje.</strong> Si la controversia persiste vencido el plazo de mediación, o si una de las partes no participa de buena fe en cualquiera de las etapas anteriores (sin responder dentro de los plazos indicados), la controversia será sometida a arbitraje ante CAM Santiago. Las partes confieren poder especial e irrevocable al CAM Santiago para que, a petición escrita de cualquiera de ellas, designe un árbitro mixto de entre los miembros del cuerpo arbitral, quien tramitará el procedimiento conforme a las normas de procedimiento vigentes al momento de iniciarse el arbitraje y fallará conforme a derecho. En contra de las resoluciones del árbitro no procederá recurso alguno, salvo los que la ley haga irrenunciables. El árbitro queda especialmente facultado para resolver todo asunto relacionado con su competencia y jurisdicción.</p>
+  <p><strong>d) Confidencialidad y prescripción.</strong> Todo lo tratado durante la negociación directa y la mediación es confidencial y no podrá invocarse como prueba en el arbitraje. Los plazos de prescripción quedarán suspendidos mientras dure el procedimiento escalonado.</p>
+
+  <h2>14. Contacto</h2>
+  <p>Para consultas sobre estos Términos: <a href="mailto:gonzalo@3gi.cl">gonzalo@3gi.cl</a></p>
+</div>
+
+<!-- ══ ENGLISH ══ -->
+<div class="section" id="sec-en">
+  <h1>Terms of Service</h1>
+  <div class="date">Last updated: August 2026</div>
+
+  <h2>1. Acceptance of Terms</h2>
+  <p>By engaging the services of 3G Intelligence SPA ("3GI", "we"), Chilean tax ID 78.388.535-2, you accept these Terms of Service. If you do not agree, you should not engage our services.</p>
+
+  <h2>2. Service description</h2>
+  <p>3GI provides AI and automation diagnostic and consulting services for businesses, structured in the following stages:</p>
+  <ul>
+    <li><strong>Diagnostic (AI Scan)</strong>: free initial assessment of operational maturity, classification under the 3 ERAs Framework.</li>
+    <li><strong>Phases F1 to F5</strong>: in-depth analysis, implementation roadmap, and execution support, per the scope agreed in each client's commercial proposal.</li>
+  </ul>
+  <p>The specific scope, timelines, and deliverables for each phase are detailed in the signed commercial proposal, which forms an integral part of these Terms.</p>
+
+  <h2>3. Use of artificial intelligence in service delivery</h2>
+  <p>3GI uses artificial intelligence models (including Anthropic Claude and OpenAI) as support tools to generate analysis, reports, and recommendations. These tools assist the work of a human consultant — no final deliverable is produced or sent without human review. Details on what data is processed and with which providers are described in our <a href="/en/privacidad">Privacy Policy</a>.</p>
+
+  <h2>4. Pricing and payment</h2>
+  <p>The initial Diagnostic is free. Phases F1–F5 have a fixed price, agreed in writing before each phase begins — no hourly billing or undisclosed costs. Payment terms (upfront, milestones, currency) are defined in each client's commercial proposal.</p>
+
+  <h2>5. Intellectual property</h2>
+  <p>The <strong>3 ERAs Framework</strong> and 3GI's proprietary methodology are 3GI's intellectual property and are protected as a registered work. The client receives a license to use the deliverables generated for their own business (reports, roadmap, recommendations), but does not acquire rights over 3GI's methodology, templates, or internal tools.</p>
+
+  <h2>6. Client obligations</h2>
+  <p>The client agrees to provide truthful and complete information during the diagnostic process. 3GI is not responsible for erroneous conclusions resulting from incomplete or inaccurate information provided by the client.</p>
+
+  <h2>7. Confidentiality</h2>
+  <p>Both parties agree to keep confidential the commercial, operational, and technical information exchanged during the service, except where disclosure is required by law or a competent authority.</p>
+
+  <h2>8. Limitation of liability</h2>
+  <p>3GI provides recommendations based on the diagnostic performed, but <strong>does not guarantee specific business outcomes</strong> (ROI, savings, revenue) — projections are estimates based on the client's case and comparable experience, not contractual outcome commitments. 3GI's liability to the client, in any case, is limited to the amount actually paid for the service phase in which the claim originated.</p>
+
+  <h2>9. Personal data protection</h2>
+  <p>Personal data processing is governed by our <a href="/en/privacidad">Privacy Policy</a>, which forms an integral part of these Terms.</p>
+
+  <h2>10. Term and termination</h2>
+  <p>The client may terminate the service at any time between phases, with no obligation to continue with future phases. Phases already started and paid for are completed as agreed, unless the parties agree otherwise.</p>
+
+  <h2>11. Changes to these Terms</h2>
+  <p>3GI may update these Terms. Changes are published on this page with their last-updated date. Changes do not apply retroactively to services already engaged and in progress.</p>
+
+  <h2>12. Governing law</h2>
+  <p>These Terms are governed by the laws of the Republic of Chile.</p>
+
+  <h2>13. Dispute resolution</h2>
+  <p>The parties agree to resolve any dispute arising from this contract through the following tiered procedure:</p>
+  <p><strong>a) Direct negotiation.</strong> The party identifying a dispute must notify a designated representative of the other party in writing, describing the facts and the requested resolution. The parties will have 15 calendar days from notification to resolve the dispute through good-faith direct negotiation.</p>
+  <p><strong>b) Mediation.</strong> If the dispute is not resolved within the above period, either party may submit it to mediation before the Santiago Arbitration and Mediation Center ("CAM Santiago"), under its applicable rules. The parties will have 30 calendar days from the start of mediation to reach an agreement, extendable by mutual consent.</p>
+  <p><strong>c) Arbitration.</strong> If the dispute persists after the mediation period, or if a party fails to participate in good faith in either of the prior stages (by not responding within the indicated deadlines), the dispute will be submitted to arbitration before CAM Santiago. The parties grant CAM Santiago special and irrevocable power to appoint, upon written request from either party, a mixed arbitrator from among the members of its arbitral panel, who will conduct proceedings under the procedural rules in force at the time arbitration begins and will rule in accordance with the law. No appeal will lie against the arbitrator's rulings, except those that are non-waivable by law. The arbitrator is specifically empowered to resolve any matter related to their jurisdiction and competence.</p>
+  <p><strong>d) Confidentiality and limitation periods.</strong> Everything discussed during direct negotiation and mediation is confidential and may not be used as evidence in the arbitration. Limitation periods will be suspended for the duration of the tiered procedure.</p>
+
+  <h2>14. Contact</h2>
+  <p>For questions about these Terms: <a href="mailto:gonzalo@3gi.cl">gonzalo@3gi.cl</a></p>
+</div>
+
+<div class="footer">© 2026 3G Intelligence · <a href="mailto:gonzalo@3gi.cl">gonzalo@3gi.cl</a></div>
+
+<script>
+  function setLang(lang) {
+    document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
+    document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
+    document.getElementById('sec-' + lang).classList.add('active');
+    event.target.classList.add('active');
+  }
+</script>
+
+</body>
+</html>
+
+</Layout>
