@@ -1,11 +1,35 @@
 {
   "/home/ggomp/3gi-web/astro.config.mjs": {
-    "mtime": 1779463154.046184,
-    "hash": "34089995289762ac3ee879387bacfcee"
+    "mtime": 1784582685.6101818,
+    "hash": "dee7cb83ba5034fb990c503e9597b7c8"
+  },
+  "/home/ggomp/3gi-web/sentry.client.config.ts": {
+    "mtime": 1784563110.7056098,
+    "hash": "2bdefa3752dad1a94dd4fa7bc6d5c4f9"
+  },
+  "/home/ggomp/3gi-web/scripts/cf-analytics.mjs": {
+    "mtime": 1781229540.3557549,
+    "hash": "e5d88aa3a7b1b841b1ebb96650da5fd4"
+  },
+  "/home/ggomp/3gi-web/scripts/test-diagnostico-flow.mjs": {
+    "mtime": 1781230157.7997534,
+    "hash": "c3cb790dcc747bdb184767cd9d804781"
+  },
+  "/home/ggomp/3gi-web/scripts/lead-magnets/build.py": {
+    "mtime": 1784315680.29893,
+    "hash": "cf80e1ffdc798333391da3583313e3a0"
+  },
+  "/home/ggomp/3gi-web/scripts/manual-tests/test-e2e-full.mjs": {
+    "mtime": 1783293790.7827935,
+    "hash": "62208bde5760ef1fe3b9eceae3306102"
   },
   "/home/ggomp/3gi-web/docs/pre-upload.py": {
     "mtime": 1781135027.3649013,
     "hash": "7dbb13659bf453b81449ce1f978c0d83"
+  },
+  "/home/ggomp/3gi-web/public/funnel-track.js": {
+    "mtime": 1784315680.2853289,
+    "hash": "38656b3feafe615b22b800526bcd0937"
   },
   "/home/ggomp/3gi-web/PLAN_AVANCE.md": {
     "mtime": 1781191078.072261,
@@ -28,16 +52,16 @@
     "hash": "ff280d6a2f479cab0fd4e36d8a18b7da"
   },
   "/home/ggomp/3gi-web/llms.txt": {
-    "mtime": 1781135027.3769014,
-    "hash": "cc71902d873d98fade6380a9003bcff5"
+    "mtime": 1783431828.54751,
+    "hash": "081933285f8a32d2f0a984990ac26afb"
   },
   "/home/ggomp/3gi-web/CLAUDE.md": {
-    "mtime": 1781135027.3529015,
-    "hash": "da79aa9343cd2b362206f03762160abc"
+    "mtime": 1784908337.9383209,
+    "hash": "b97066211432949bd70aa07b3126d993"
   },
   "/home/ggomp/3gi-web/README.md": {
-    "mtime": 1781135027.3649013,
-    "hash": "4748e1299bd08d4c8c983a30d699ee78"
+    "mtime": 1784315680.281329,
+    "hash": "bb392ec655d47147dd002585579b3cd9"
   },
   "/home/ggomp/3gi-web/ONBOARDING.md": {
     "mtime": 1779404038.4454854,
@@ -46,6 +70,26 @@
   "/home/ggomp/3gi-web/era-opciones.html": {
     "mtime": 1781135027.3649013,
     "hash": "5ea6d22e9e21818365a7a8af8a73932d"
+  },
+  "/home/ggomp/3gi-web/scripts/lead-magnets/metrica-equivocada.html": {
+    "mtime": 1784315680.29893,
+    "hash": "019fc3f9d4aecd0f7e03c7174bd9162b"
+  },
+  "/home/ggomp/3gi-web/scripts/lead-magnets/las-3-eras.html": {
+    "mtime": 1784315680.29893,
+    "hash": "c5d86fb1de55c92aa7d2eb332ed3bccd"
+  },
+  "/home/ggomp/3gi-web/scripts/lead-magnets/fallan-4-de-5.html": {
+    "mtime": 1784315680.29893,
+    "hash": "f4d583d187b5efcc9cb84d4ebb4a5f6e"
+  },
+  "/home/ggomp/3gi-web/scripts/lead-magnets/cambio-de-paradigma.html": {
+    "mtime": 1784315680.29893,
+    "hash": "a13554aa1b12b2576b747bf0fbeb7661"
+  },
+  "/home/ggomp/3gi-web/scripts/lead-magnets/10-preguntas.html": {
+    "mtime": 1784315680.2912707,
+    "hash": "198e957b72647310009a341c14645cdd"
   },
   "/home/ggomp/3gi-web/docs/agente-personal-3gi.md": {
     "mtime": 1781135027.3649013,
@@ -70,6 +114,10 @@
   "/home/ggomp/3gi-web/docs/contenido/carruseles.md": {
     "mtime": 1781135027.3649013,
     "hash": "9e3173300f3f1887577ea17b3df513c7"
+  },
+  "/home/ggomp/3gi-web/docs/contenido/libro-lanzamiento.md": {
+    "mtime": 1784316461.7173297,
+    "hash": "e0d82809d007c790d5827409b681aa25"
   },
   "/home/ggomp/3gi-web/docs/contenido/temp-post-03-imagen.md": {
     "mtime": 1781135027.3649013,
@@ -102,6 +150,26 @@
   "/home/ggomp/3gi-web/contenido/carrusel-mayo1-era-dos-lados.html": {
     "mtime": 1781135027.3649013,
     "hash": "aa1716e5b60d356ce95c835fe18e1719"
+  },
+  "/home/ggomp/3gi-web/public/recursos/pdf/3GI-fallan-4-de-5.pdf": {
+    "mtime": 1784315680.2912707,
+    "hash": "32a313b425135e675def9e209e60b790"
+  },
+  "/home/ggomp/3gi-web/public/recursos/pdf/3GI-cambio-de-paradigma.pdf": {
+    "mtime": 1784315680.2912707,
+    "hash": "63959d44df2c3a95ebb65704697fba89"
+  },
+  "/home/ggomp/3gi-web/public/recursos/pdf/3GI-10-preguntas.pdf": {
+    "mtime": 1784315680.2904174,
+    "hash": "e8ecd24966b66901048bb40e7f74977e"
+  },
+  "/home/ggomp/3gi-web/public/recursos/pdf/3GI-metrica-equivocada.pdf": {
+    "mtime": 1784315680.2912707,
+    "hash": "82cfd76ca51913dc1ce0f7a2778d0791"
+  },
+  "/home/ggomp/3gi-web/public/recursos/pdf/3GI-las-3-eras.pdf": {
+    "mtime": 1784315680.2912707,
+    "hash": "b7a9f5dc2592c4c5942c453674bd5a58"
   },
   "/home/ggomp/3gi-web/web-3gi.png": {
     "mtime": 1781135027.3889015,
@@ -147,6 +215,22 @@
     "mtime": 1773440591.0,
     "hash": "2ebae799ccad592a38981538afaf3bc3"
   },
+  "/home/ggomp/3gi-web/scripts/lead-magnets/assets/logo.png": {
+    "mtime": 1784315680.29893,
+    "hash": "d73c5678a72305a07bdd0a02e37f0134"
+  },
+  "/home/ggomp/3gi-web/scripts/lead-magnets/assets/isotipo.png": {
+    "mtime": 1784315680.29893,
+    "hash": "7f6428039b16beb64b52d8ad1fa96201"
+  },
+  "/home/ggomp/3gi-web/public/og-libro-inteligencia-organizacional.png": {
+    "mtime": 1784576715.490196,
+    "hash": "3652143339663d1b3c90cbddbf084d00"
+  },
+  "/home/ggomp/3gi-web/public/founder-gonzalo.png": {
+    "mtime": 1781195346.9085553,
+    "hash": "c6004f36972beb3aa0753a548bc8056b"
+  },
   "/home/ggomp/3gi-web/public/Cloudflare1.png": {
     "mtime": 1778691275.2571633,
     "hash": "1c5e8f9a3a7cad0f0df25dcabb7b2d02"
@@ -164,8 +248,8 @@
     "hash": "1e0b02e356405a037fb1aa6d9c1fd323"
   },
   "/home/ggomp/3gi-web/public/founder-avatar.png": {
-    "mtime": 1781190960.3852217,
-    "hash": "4dec9a00b1f28ada8d2647d9a34180d2"
+    "mtime": 1781194945.5962565,
+    "hash": "c6004f36972beb3aa0753a548bc8056b"
   },
   "/home/ggomp/3gi-web/public/fondo-negro-3gi.png": {
     "mtime": 1778691275.3331635,
@@ -186,6 +270,10 @@
   "/home/ggomp/3gi-web/public/3GI -Facebook1.1.png": {
     "mtime": 1778691275.2491634,
     "hash": "2ebae799ccad592a38981538afaf3bc3"
+  },
+  "/home/ggomp/3gi-web/public/contenido/libro-cap02-por-que-falla-ia.jpg": {
+    "mtime": 1784572804.1063402,
+    "hash": "77e7e888f60a28d69b926647a01322a1"
   },
   "/home/ggomp/3gi-web/public/contenido/semana11-empresa-invisible-slide2.png": {
     "mtime": 1778691275.3051634,
@@ -263,6 +351,10 @@
     "mtime": 1778691275.2851634,
     "hash": "a43d43d2bb216637a2be9f7a16f37db2"
   },
+  "/home/ggomp/3gi-web/public/contenido/leadmagnet-fallan-4-de-5.png": {
+    "mtime": 1785435925.5193439,
+    "hash": "be37e26f5667f9724bc0e156342bf571"
+  },
   "/home/ggomp/3gi-web/public/contenido/semana12-cta-era-slide5.png": {
     "mtime": 1777638668.0,
     "hash": "711c85944820884bf0db0abaca640512"
@@ -283,6 +375,10 @@
     "mtime": 1778691275.3211634,
     "hash": "571dfd722b2c7e86a0c5a091290bc0e5"
   },
+  "/home/ggomp/3gi-web/public/contenido/articulo03-paradigma-galileo.jpg": {
+    "mtime": 1784576559.8381956,
+    "hash": "17588104c36d5acca93041e1c6befd48"
+  },
   "/home/ggomp/3gi-web/public/contenido/semana13-brecha-real-slide1.png": {
     "mtime": 1777638668.0,
     "hash": "f11fc7251b3af904d47430f80fd620f0"
@@ -290,6 +386,14 @@
   "/home/ggomp/3gi-web/public/contenido/semana11-empresa-invisible-slide5.png": {
     "mtime": 1778691275.3091633,
     "hash": "349179d895ca9967d81d85e8433f9829"
+  },
+  "/home/ggomp/3gi-web/public/contenido/post03-slide1.jpg": {
+    "mtime": 1784576767.058195,
+    "hash": "b5abf4906b6eb10278d5a2f946bf29ae"
+  },
+  "/home/ggomp/3gi-web/public/contenido/libro-presentacion-square.jpg": {
+    "mtime": 1784576721.1021957,
+    "hash": "eb72893b921ef42f567e907296581e6c"
   },
   "/home/ggomp/3gi-web/public/contenido/semana13-brecha-real-slide5.png": {
     "mtime": 1777638668.0,
@@ -323,6 +427,10 @@
     "mtime": 1778691275.3131633,
     "hash": "1039f0a5e2fc38b035295593ef67c4c4"
   },
+  "/home/ggomp/3gi-web/public/contenido/libro-cap05-cultura-liderazgo.jpg": {
+    "mtime": 1784572804.1034558,
+    "hash": "cf9df290e818703373dd8e47b2ab2bad"
+  },
   "/home/ggomp/3gi-web/public/contenido/post8v2-slide-02.png": {
     "mtime": 1778691275.2971635,
     "hash": "3e5535de363b357b9fe2f8798f728aee"
@@ -330,6 +438,10 @@
   "/home/ggomp/3gi-web/public/contenido/semana11-empresa-invisible-slide4.png": {
     "mtime": 1778691275.3091633,
     "hash": "abcf4028dd0ad2ba34d06456a072406b"
+  },
+  "/home/ggomp/3gi-web/public/contenido/articulo01-paradigma-ia.jpg": {
+    "mtime": 1784576538.9621956,
+    "hash": "08c2b26f9e04e41ff7e81701bbd034a7"
   },
   "/home/ggomp/3gi-web/public/contenido/slide2.png": {
     "mtime": 1778691275.3331635,
@@ -363,6 +475,10 @@
     "mtime": 1778691275.2931633,
     "hash": "295ab0309631031bfb4f894fe878722d"
   },
+  "/home/ggomp/3gi-web/public/contenido/post05-coves-reactivo.png": {
+    "mtime": 1783096673.000861,
+    "hash": "2f809c3d6aa86cfa29a159c272d2e301"
+  },
   "/home/ggomp/3gi-web/public/contenido/slide3.png": {
     "mtime": 1778691275.3331635,
     "hash": "72b813dcc26204d027de64fd8eda930f"
@@ -372,12 +488,16 @@
     "hash": "c7b8e567aad021b135b78f9909262aa2"
   },
   "/home/ggomp/3gi-web/public/contenido/semana9-era-dos-lados.png": {
-    "mtime": 1778691275.3291633,
-    "hash": "4113e1d6e31619cbea2770a1893546d2"
+    "mtime": 1783096673.052861,
+    "hash": "edc6501b371b492454155209a385e13e"
   },
   "/home/ggomp/3gi-web/public/contenido/semana14-dos-lados-era-slide5.png": {
     "mtime": 1777638668.0,
     "hash": "cddd0b0d260cd99f2f245cd2594120b9"
+  },
+  "/home/ggomp/3gi-web/public/contenido/articulo02-paradigma-organizaciones.jpg": {
+    "mtime": 1784576551.5861957,
+    "hash": "771dfc422fa949cf20a278c166c68e9d"
   },
   "/home/ggomp/3gi-web/public/contenido/semana14-dos-lados-era-slide4.png": {
     "mtime": 1777638668.0,
@@ -403,6 +523,10 @@
     "mtime": 1778691275.3011634,
     "hash": "eea317fba7cd083f5fa973ad580a6dfc"
   },
+  "/home/ggomp/3gi-web/public/contenido/leadmagnet-las-3-eras.png": {
+    "mtime": 1785866698.929417,
+    "hash": "508d08be00bf5ab452aa563eaaa82563"
+  },
   "/home/ggomp/3gi-web/public/contenido/semana1-eras.png": {
     "mtime": 1778691275.3051634,
     "hash": "3710a2ee9673f1d7b3b1f5357322c1c2"
@@ -426,6 +550,10 @@
   "/home/ggomp/3gi-web/public/contenido/semana12-cta-era-slide3.png": {
     "mtime": 1777638668.0,
     "hash": "f6b05cb4c97fbae7e147fb9e3442a7da"
+  },
+  "/home/ggomp/3gi-web/public/contenido/post04-costo-invisible.png": {
+    "mtime": 1781802529.4321818,
+    "hash": "6c90801a4f15d222c732be6c2a548d4b"
   },
   "/home/ggomp/3gi-web/public/contenido/framework9/slide_10.png": {
     "mtime": 1778691275.2811635,
@@ -610,6 +738,10 @@
   "/home/ggomp/3gi-web/contenido/post8-slide-06.png": {
     "mtime": 1776049351.0,
     "hash": "295ab0309631031bfb4f894fe878722d"
+  },
+  "/home/ggomp/3gi-web/contenido/post05-coves-reactivo.png": {
+    "mtime": 1783096672.972861,
+    "hash": "044bcdba06231f9f1fac777b47bea5b7"
   },
   "/home/ggomp/3gi-web/contenido/slide3.png": {
     "mtime": 1777638668.0,
