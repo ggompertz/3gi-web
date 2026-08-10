@@ -1,6 +1,6 @@
 {
   "/root/3gi-web/astro.config.mjs": {
-    "mtime": 1786327223.6752434,
+    "mtime": 1786376692.067723,
     "hash": "dee7cb83ba5034fb990c503e9597b7c8"
   },
   "/root/3gi-web/sentry.client.config.ts": {
@@ -52,7 +52,7 @@
     "hash": "081933285f8a32d2f0a984990ac26afb"
   },
   "/root/3gi-web/CLAUDE.md": {
-    "mtime": 1786327328.8711038,
+    "mtime": 1786376692.067723,
     "hash": "fd391b7d520a213e84a60bd289a8c7cd"
   },
   "/root/3gi-web/AGENTS.md": {
@@ -308,7 +308,7 @@
     "hash": "c7b8e567aad021b135b78f9909262aa2"
   },
   "/root/3gi-web/public/contenido/libro-cap05-cultura-liderazgo.jpg": {
-    "mtime": 1786327223.6902435,
+    "mtime": 1786376692.0817232,
     "hash": "cf9df290e818703373dd8e47b2ab2bad"
   },
   "/root/3gi-web/public/contenido/semana7-bisagra-slide06.png": {
@@ -328,7 +328,7 @@
     "hash": "442d6c562cf2bc1c8865cf2d45cc02ed"
   },
   "/root/3gi-web/public/contenido/articulo01-paradigma-ia.jpg": {
-    "mtime": 1786327223.6862433,
+    "mtime": 1786376692.0787232,
     "hash": "08c2b26f9e04e41ff7e81701bbd034a7"
   },
   "/root/3gi-web/public/contenido/semana14-dos-lados-era-slide3.png": {
@@ -348,7 +348,7 @@
     "hash": "eea317fba7cd083f5fa973ad580a6dfc"
   },
   "/root/3gi-web/public/contenido/libro-cap02-por-que-falla-ia.jpg": {
-    "mtime": 1786327223.6902435,
+    "mtime": 1786376692.0817232,
     "hash": "77e7e888f60a28d69b926647a01322a1"
   },
   "/root/3gi-web/public/contenido/semana14-dos-lados-era-slide5.png": {
@@ -364,7 +364,7 @@
     "hash": "ed7e9588aa95b345e2e7443ec27ad5c6"
   },
   "/root/3gi-web/public/contenido/libro-presentacion-square.jpg": {
-    "mtime": 1786327223.6912434,
+    "mtime": 1786376692.0817232,
     "hash": "eb72893b921ef42f567e907296581e6c"
   },
   "/root/3gi-web/public/contenido/semana11-empresas-merecen-slide5.png": {
@@ -432,7 +432,7 @@
     "hash": "8c4ea2cab1cbcb33ca41da81499fa568"
   },
   "/root/3gi-web/public/contenido/articulo02-paradigma-organizaciones.jpg": {
-    "mtime": 1786327223.6872435,
+    "mtime": 1786376692.0787232,
     "hash": "771dfc422fa949cf20a278c166c68e9d"
   },
   "/root/3gi-web/public/contenido/semana7-bisagra-slide04.png": {
@@ -500,11 +500,11 @@
     "hash": "a6951acf82a54fa0098a50d6f969f34f"
   },
   "/root/3gi-web/public/contenido/leadmagnet-fallan-4-de-5.png": {
-    "mtime": 1786327223.6902435,
+    "mtime": 1786376692.0797231,
     "hash": "be37e26f5667f9724bc0e156342bf571"
   },
   "/root/3gi-web/public/contenido/post03-slide1.jpg": {
-    "mtime": 1786327223.6912434,
+    "mtime": 1786376692.0817232,
     "hash": "b5abf4906b6eb10278d5a2f946bf29ae"
   },
   "/root/3gi-web/public/contenido/semana12-cta-era-slide1.png": {
@@ -512,7 +512,7 @@
     "hash": "23b6259d214121b3081a094b7dbbb40d"
   },
   "/root/3gi-web/public/contenido/leadmagnet-las-3-eras.png": {
-    "mtime": 1786327223.6902435,
+    "mtime": 1786376692.0797231,
     "hash": "508d08be00bf5ab452aa563eaaa82563"
   },
   "/root/3gi-web/public/contenido/post03-linkedin.png": {
@@ -520,7 +520,7 @@
     "hash": "1fb3a0f774223874d78d40aa32729bba"
   },
   "/root/3gi-web/public/contenido/articulo03-paradigma-galileo.jpg": {
-    "mtime": 1786327223.6872435,
+    "mtime": 1786376692.0797231,
     "hash": "17588104c36d5acca93041e1c6befd48"
   },
   "/root/3gi-web/public/contenido/semana11-empresas-merecen-slide1.png": {
