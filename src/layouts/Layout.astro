@@ -59,7 +59,11 @@ const p = lang === 'en' ? '/en' : '';
         window.posthog = mod.default;
         window.posthog.init(window.__posthogKey, {
           api_host: 'https://us.i.posthog.com',
-          person_profiles: 'identified_only'
+          // 'identified_only' descartaba TODO el tráfico: sitio público de marketing,
+          // nadie llama posthog.identify() en ningún visitante anónimo — confirmado
+          // con Playwright en producción (2026-08-09): ni el pageview automático ni un
+          // capture() manual explícito generaban ningún request de red bajo ese modo.
+          person_profiles: 'always'
         });
       });
     };
