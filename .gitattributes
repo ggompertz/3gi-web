@@ -1,0 +1,6 @@
+# graphify: union-merge driver for graph.json, avoids manual JSON conflict
+# resolution on a file that's often thousands of lines. Requires the
+# corresponding [merge "graphify-union"] section in each clone's local
+# .git/config (git merge drivers are never versioned) — see
+# my-config/memory/reference_graphify.md for the exact snippet.
+graphify-out/graph.json merge=graphify-union
