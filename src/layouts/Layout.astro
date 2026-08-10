@@ -58,7 +58,10 @@ const p = lang === 'en' ? '/en' : '';
       import('https://cdn.jsdelivr.net/npm/posthog-js@latest/dist/module.full.min.js').then(function(mod) {
         window.posthog = mod.default;
         window.posthog.init(window.__posthogKey, {
-          api_host: 'https://us.i.posthog.com',
+          // Managed reverse proxy propio (2026-08-10) — evita que ad-blockers que
+          // bloquean *.posthog.com corten la captura de visitantes reales.
+          api_host: 'https://z.3gi.cl',
+          ui_host: 'https://us.posthog.com', // necesario con proxy: los links del dashboard siguen apuntando a PostHog
           // 'identified_only' descartaba TODO el tráfico: sitio público de marketing,
           // nadie llama posthog.identify() en ningún visitante anónimo — confirmado
           // con Playwright en producción (2026-08-09): ni el pageview automático ni un
