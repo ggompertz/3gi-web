@@ -10,7 +10,7 @@
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `bca1d8d4`
+- Built from commit: `2287dd36`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -136,27 +136,27 @@ Nodes (9): 1. Sección Espejo (`#espejo`), 2. FAQ por categorías, Cómo agregar
 
 ### Community 16 - "Community 16"
 Cohesion: 0.18
-Nodes (10): Alineación Web 3GI con el Libro Implementation Plan, code:block12 (El Framework 3 ERAs está registrado como obra intelectual. N), code:block13 (El Framework 3 ERAs es una metodología con fundamento académ), code:bash (node --check /root/3gi-web/src/pages/index.astro 2>&1), code:bash (cd /root/3gi-web), Estructura de archivos, Riesgos conocidos, Self-Review (+2 more)
-
-### Community 17 - "Community 17"
-Cohesion: 0.18
 Nodes (11): code:block24 (data-i18n="met-spec-title">Tu posición exacta en el espectro), code:block25 (data-i18n="met-signals-title">Señales diagnósticas rápidas</), code:block26 (<div class="page-tag" data-i18n="met-spec-tag">Framework 3GI), code:block27 (<div class="page-tag" data-i18n="met-spec-tag">Framework 3GI), code:block28 ('met-diag-body': 'El problema no es la tecnología. Es el ord), code:block29 ('met-diag-body': 'El problema no es la tecnología. Es el ord), code:block30 ('met-diag-body': 'The problem isn\'t the technology. It\'s t), code:block31 ('met-diag-body': 'The problem isn\'t the technology. It\'s t) (+3 more)
 
-### Community 18 - "Community 18"
+### Community 17 - "Community 17"
 Cohesion: 0.47
 Nodes (7): args, bridge, btn, err, fillQuiz(), SHOT, test()
 
-### Community 19 - "Community 19"
+### Community 18 - "Community 18"
 Cohesion: 0.22
 Nodes (8): Analítica — PostHog (estado real, 2026-08-10), CLAUDE.md — 3gi-web, code:bash (git add <archivos> && git commit -m "mensaje" && git push or), code:bash (ssh hetzner-3gi && cd /root/3gi-web && git pull origin maste), Decisiones de posicionamiento validadas (no modificar), Diseño homepage (index.astro) — decisiones tomadas, graphify, Pendientes (backlog priorizado)
 
-### Community 20 - "Community 20"
+### Community 19 - "Community 19"
 Cohesion: 0.2
 Nodes (8): Codebases, Get Started, How We Use Claude, MCP Servers to Activate, Skills to Know About, Team Tips, Welcome to 3GI Web, Your Setup Checklist
 
-### Community 21 - "Community 21"
+### Community 20 - "Community 20"
 Cohesion: 0.2
 Nodes (10): code:bash (node --check /root/3gi-web/src/pages/nosotros.astro 2>&1), code:bash (cd /root/3gi-web), code:block3 (<p data-i18n="nos-origin-p3">), code:block4 (y sin promesas de transformación digital que no se materiali), code:block5 (y sin promesas de transformación digital que no se materiali), code:block6 ('nos-origin-p3': '3G Intelligence nació para ser la consulto), code:block7 ('nos-origin-p3': '3G Intelligence nació para ser la consulto), code:block8 ('nos-origin-p3': '3G Intelligence was born to be the consult) (+2 more)
+
+### Community 21 - "Community 21"
+Cohesion: 0.2
+Nodes (9): Alineación Web 3GI con el Libro Implementation Plan, code:bash (cd /root/3gi-web), code:bash (ssh -i ~/.ssh/hetzner_n8n root@178.156.157.141 "cd /root/3gi), code:bash (cd /root/3gi-web), Estructura de archivos, Riesgos conocidos, Self-Review, Spec coverage (+1 more)
 
 ### Community 22 - "Community 22"
 Cohesion: 0.22
@@ -194,9 +194,9 @@ Nodes (6): code:bash (cd /root/3gi-web), code:bash (cd /root/3gi-web), code:bash
 Cohesion: 0.4
 Nodes (3): code:block1 (https://3gi.cl/contenido/post03-linkedin.png), Imagen LinkedIn / Facebook — Post 03, TEMPORAL — Imagen Post 03
 
-### Community 34 - "Community 34"
-Cohesion: 0.5
-Nodes (4): code:bash (cd /root/3gi-web), code:bash (ssh -i ~/.ssh/hetzner_n8n root@178.156.157.141 "cd /root/3gi), code:bash (cd /root/3gi-web), Task 9: Deploy a Cloudflare Pages
+### Community 32 - "Community 32"
+Cohesion: 0.4
+Nodes (5): code:block12 (El Framework 3 ERAs está registrado como obra intelectual. N), code:block13 (El Framework 3 ERAs es una metodología con fundamento académ), code:bash (node --check /root/3gi-web/src/pages/index.astro 2>&1), code:bash (cd /root/3gi-web), Task 3: index.astro — Actualizar diferenciador "obra intelectual"
 
 ### Community 36 - "Community 36"
 Cohesion: 0.67
@@ -214,7 +214,7 @@ _Questions this graph is uniquely positioned to answer:_
   _High betweenness centrality (0.063) - this node is a cross-community bridge._
 - **Why does `Detalle por publicación` connect `Community 2` to `Community 1`, `Community 3`, `Community 7`?**
   _High betweenness centrality (0.016) - this node is a cross-community bridge._
-- **Why does `Alineación Web 3GI con el Libro Implementation Plan` connect `Community 16` to `Community 34`, `Community 36`, `Community 17`, `Community 21`, `Community 23`, `Community 26`, `Community 27`, `Community 29`?**
+- **Why does `Alineación Web 3GI con el Libro Implementation Plan` connect `Community 21` to `Community 32`, `Community 36`, `Community 16`, `Community 20`, `Community 23`, `Community 26`, `Community 27`, `Community 29`?**
   _High betweenness centrality (0.014) - this node is a cross-community bridge._
 - **What connects `Estado general`, `Contexto de decisiones de diseño`, `FASE 1 — Archivos de marca` to the rest of the system?**
   _175 weakly-connected nodes found - possible documentation gaps or missing edges._
