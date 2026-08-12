@@ -276,9 +276,18 @@ const p = lang === 'en' ? '/en' : '';
     nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: rgba(6,6,13,0.85); backdrop-filter: blur(16px); border-bottom: 1px solid var(--border); transition: all 0.3s; }
     .nav-inner { max-width: var(--max); margin: 0 auto; padding: 0 24px; height: 68px; display: flex; align-items: center; justify-content: space-between; }
     .nav-links { display: flex; align-items: center; gap: 30px; list-style: none; }
-    .nav-links a { font-size: 13px; color: var(--muted); transition: color 0.2s; }
+    .nav-links a { font-size: 13px; color: var(--muted); transition: color 0.2s; white-space: nowrap; }
     .nav-links a:hover { color: var(--offwh); }
     .nav-cta { display: flex; gap: 10px; align-items: center; }
+
+    /* Rango 900-1239px: caben los 5 links de nav-links (incluido "Contenido") pero
+       no además el botón de WhatsApp con texto — se colapsa a solo ícono en vez de
+       sacar el link del menú, que fue lo que se hizo la vez anterior. */
+    @media (min-width: 901px) and (max-width: 1239px) {
+      .nav-links { gap: 20px; }
+      .nav-cta .btn-outline span { display: none; }
+      .nav-cta .btn-outline { padding: 10px 12px !important; }
+    }
 
     /* HERO */
     #hero { min-height: 100vh; display: flex; align-items: center; padding: 88px 0 20px; background: radial-gradient(ellipse 60% 50% at 70% 40%, rgba(0,232,145,0.06) 0%, transparent 60%), radial-gradient(ellipse 40% 40% at 20% 70%, rgba(0,158,96,0.04) 0%, transparent 60%), var(--night); position: relative; overflow: hidden; }
@@ -740,6 +749,7 @@ const p = lang === 'en' ? '/en' : '';
       <li><a href={`${p}/precios`} data-i18n="nav-precios">Precios</a></li>
       <li><a href={`${p}/casos`} data-i18n="nav-casos">Casos</a></li>
       <li><a href={`${p}/nosotros`} data-i18n="nav-nosotros">Nosotros</a></li>
+      <li><a href={`${p}/contenido`} data-i18n="nav-contenido">Contenido</a></li>
     </ul>
     <div class="nav-cta">
       <div class="lang-toggle">
@@ -765,6 +775,7 @@ const p = lang === 'en' ? '/en' : '';
     <li><a href={`${p}/precios`} data-i18n="nav-precios">Precios</a></li>
     <li><a href={`${p}/casos`} data-i18n="nav-casos">Casos</a></li>
     <li><a href={`${p}/nosotros`} data-i18n="nav-nosotros">Nosotros</a></li>
+    <li><a href={`${p}/contenido`} data-i18n="nav-contenido">Contenido</a></li>
   </ul>
   <div class="mobile-menu-footer">
     <div class="mobile-lang-toggle lang-toggle">
