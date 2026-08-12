@@ -8,7 +8,7 @@
       "file_type": "code",
       "source_file": "astro.config.mjs",
       "source_location": "L1",
-      "community": 36,
+      "community": 37,
       "norm_label": "astro.config.mjs",
       "id": "home_ggomp_3gi_web_astro_config_mjs"
     },
@@ -17,7 +17,7 @@
       "file_type": "code",
       "source_file": "sentry.client.config.ts",
       "source_location": "L1",
-      "community": 37,
+      "community": 38,
       "norm_label": "sentry.client.config.ts",
       "id": "home_ggomp_3gi_web_sentry_client_config_ts"
     },
@@ -242,7 +242,7 @@
       "file_type": "code",
       "source_file": "scripts/test-diagnostico-flow.mjs",
       "source_location": "L1",
-      "community": 18,
+      "community": 17,
       "norm_label": "test-diagnostico-flow.mjs",
       "id": "home_ggomp_3gi_web_scripts_test_diagnostico_flow_mjs"
     },
@@ -251,7 +251,7 @@
       "file_type": "code",
       "source_file": "scripts/test-diagnostico-flow.mjs",
       "source_location": "L24",
-      "community": 18,
+      "community": 17,
       "norm_label": "args",
       "id": "scripts_test_diagnostico_flow_args"
     },
@@ -260,7 +260,7 @@
       "file_type": "code",
       "source_file": "scripts/test-diagnostico-flow.mjs",
       "source_location": "L26",
-      "community": 18,
+      "community": 17,
       "norm_label": "shot",
       "id": "scripts_test_diagnostico_flow_shot"
     },
@@ -269,7 +269,7 @@
       "file_type": "code",
       "source_file": "scripts/test-diagnostico-flow.mjs",
       "source_location": "L36",
-      "community": 18,
+      "community": 17,
       "norm_label": "test()",
       "id": "scripts_test_diagnostico_flow_test"
     },
@@ -278,7 +278,7 @@
       "file_type": "code",
       "source_file": "scripts/test-diagnostico-flow.mjs",
       "source_location": "L53",
-      "community": 18,
+      "community": 17,
       "norm_label": "fillquiz()",
       "id": "scripts_test_diagnostico_flow_fillquiz"
     },
@@ -287,7 +287,7 @@
       "file_type": "code",
       "source_file": "scripts/test-diagnostico-flow.mjs",
       "source_location": "L75",
-      "community": 18,
+      "community": 17,
       "norm_label": "btn",
       "id": "scripts_test_diagnostico_flow_btn"
     },
@@ -296,7 +296,7 @@
       "file_type": "code",
       "source_file": "scripts/test-diagnostico-flow.mjs",
       "source_location": "L117",
-      "community": 18,
+      "community": 17,
       "norm_label": "err",
       "id": "scripts_test_diagnostico_flow_err"
     },
@@ -305,7 +305,7 @@
       "file_type": "code",
       "source_file": "scripts/test-diagnostico-flow.mjs",
       "source_location": "L181",
-      "community": 18,
+      "community": 17,
       "norm_label": "bridge",
       "id": "scripts_test_diagnostico_flow_bridge"
     },
@@ -458,7 +458,7 @@
       "file_type": "code",
       "source_file": "docs/pre-upload.py",
       "source_location": "L1",
-      "community": 38,
+      "community": 39,
       "norm_label": "pre-upload.py",
       "id": "docs_pre_upload_py"
     },
@@ -737,7 +737,7 @@
       "file_type": "document",
       "source_file": "CLAUDE.md",
       "source_location": "L1",
-      "community": 21,
+      "community": 20,
       "norm_label": "claude.md",
       "id": "claude_md"
     },
@@ -746,7 +746,7 @@
       "file_type": "document",
       "source_file": "CLAUDE.md",
       "source_location": "L1",
-      "community": 21,
+      "community": 20,
       "norm_label": "claude.md \u2014 3gi-web",
       "id": "3gi_web_claude_claude_md_3gi_web"
     },
@@ -755,7 +755,7 @@
       "file_type": "document",
       "source_file": "CLAUDE.md",
       "source_location": "L5",
-      "community": 21,
+      "community": 20,
       "norm_label": "code:bash (git add <archivos> && git commit -m \"mensaje\" && git push or)",
       "id": "3gi_web_claude_codeblock_1"
     },
@@ -764,7 +764,7 @@
       "file_type": "document",
       "source_file": "CLAUDE.md",
       "source_location": "L11",
-      "community": 21,
+      "community": 20,
       "norm_label": "code:bash (ssh hetzner-3gi && cd /root/3gi-web && git pull origin maste)",
       "id": "3gi_web_claude_codeblock_2"
     },
@@ -773,7 +773,7 @@
       "file_type": "document",
       "source_file": "CLAUDE.md",
       "source_location": "L22",
-      "community": 21,
+      "community": 20,
       "norm_label": "diseno homepage (index.astro) \u2014 decisiones tomadas",
       "id": "3gi_web_claude_dise_o_homepage_index_astro_decisiones_tomadas"
     },
@@ -782,7 +782,7 @@
       "file_type": "document",
       "source_file": "CLAUDE.md",
       "source_location": "L29",
-      "community": 21,
+      "community": 20,
       "norm_label": "pendientes (backlog priorizado)",
       "id": "3gi_web_claude_pendientes_backlog_priorizado"
     },
@@ -791,7 +791,7 @@
       "file_type": "document",
       "source_file": "CLAUDE.md",
       "source_location": "L57",
-      "community": 21,
+      "community": 20,
       "norm_label": "analitica \u2014 posthog (estado real, 2026-08-10)",
       "id": "3gi_web_claude_anal_tica_posthog_estado_real_2026_08_10"
     },
@@ -800,7 +800,7 @@
       "file_type": "document",
       "source_file": "CLAUDE.md",
       "source_location": "L108",
-      "community": 21,
+      "community": 20,
       "norm_label": "decisiones de posicionamiento validadas (no modificar)",
       "id": "3gi_web_claude_decisiones_de_posicionamiento_validadas_no_modificar"
     },
@@ -809,7 +809,7 @@
       "file_type": "document",
       "source_file": "CLAUDE.md",
       "source_location": "L114",
-      "community": 21,
+      "community": 20,
       "norm_label": "graphify",
       "id": "3gi_web_claude_graphify"
     },
@@ -818,7 +818,7 @@
       "file_type": "document",
       "source_file": "AGENTS.md",
       "source_location": "L1",
-      "community": 35,
+      "community": 36,
       "norm_label": "agents.md",
       "id": "agents_md"
     },
@@ -827,7 +827,7 @@
       "file_type": "document",
       "source_file": "AGENTS.md",
       "source_location": "L1",
-      "community": 35,
+      "community": 36,
       "norm_label": "graphify",
       "id": "3gi_web_agents_graphify"
     },
@@ -836,7 +836,7 @@
       "file_type": "document",
       "source_file": "ONBOARDING.md",
       "source_location": "L1",
-      "community": 19,
+      "community": 18,
       "norm_label": "onboarding.md",
       "id": "home_ggomp_3gi_web_onboarding_md"
     },
@@ -845,7 +845,7 @@
       "file_type": "document",
       "source_file": "ONBOARDING.md",
       "source_location": "L1",
-      "community": 19,
+      "community": 18,
       "norm_label": "welcome to 3gi web",
       "id": "3gi_web_onboarding_welcome_to_3gi_web"
     },
@@ -854,7 +854,7 @@
       "file_type": "document",
       "source_file": "ONBOARDING.md",
       "source_location": "L3",
-      "community": 19,
+      "community": 18,
       "norm_label": "how we use claude",
       "id": "3gi_web_onboarding_how_we_use_claude"
     },
@@ -863,7 +863,7 @@
       "file_type": "document",
       "source_file": "ONBOARDING.md",
       "source_location": "L17",
-      "community": 19,
+      "community": 18,
       "norm_label": "your setup checklist",
       "id": "3gi_web_onboarding_your_setup_checklist"
     },
@@ -872,7 +872,7 @@
       "file_type": "document",
       "source_file": "ONBOARDING.md",
       "source_location": "L19",
-      "community": 19,
+      "community": 18,
       "norm_label": "codebases",
       "id": "3gi_web_onboarding_codebases"
     },
@@ -881,7 +881,7 @@
       "file_type": "document",
       "source_file": "ONBOARDING.md",
       "source_location": "L22",
-      "community": 19,
+      "community": 18,
       "norm_label": "mcp servers to activate",
       "id": "3gi_web_onboarding_mcp_servers_to_activate"
     },
@@ -890,7 +890,7 @@
       "file_type": "document",
       "source_file": "ONBOARDING.md",
       "source_location": "L25",
-      "community": 19,
+      "community": 18,
       "norm_label": "skills to know about",
       "id": "3gi_web_onboarding_skills_to_know_about"
     },
@@ -899,7 +899,7 @@
       "file_type": "document",
       "source_file": "ONBOARDING.md",
       "source_location": "L29",
-      "community": 19,
+      "community": 18,
       "norm_label": "team tips",
       "id": "3gi_web_onboarding_team_tips"
     },
@@ -908,7 +908,7 @@
       "file_type": "document",
       "source_file": "ONBOARDING.md",
       "source_location": "L33",
-      "community": 19,
+      "community": 18,
       "norm_label": "get started",
       "id": "3gi_web_onboarding_get_started"
     },
@@ -944,7 +944,7 @@
       "file_type": "document",
       "source_file": "docs/homepage-sections.md",
       "source_location": "L1",
-      "community": 22,
+      "community": 21,
       "norm_label": "homepage-sections.md",
       "id": "docs_homepage_sections_md"
     },
@@ -953,7 +953,7 @@
       "file_type": "document",
       "source_file": "docs/homepage-sections.md",
       "source_location": "L1",
-      "community": 22,
+      "community": 21,
       "norm_label": "homepage \u2014 secciones y proposito",
       "id": "docs_homepage_sections_homepage_secciones_y_prop_sito"
     },
@@ -962,7 +962,7 @@
       "file_type": "document",
       "source_file": "docs/homepage-sections.md",
       "source_location": "L5",
-      "community": 22,
+      "community": 21,
       "norm_label": "orden y funcion",
       "id": "docs_homepage_sections_orden_y_funci_n"
     },
@@ -971,7 +971,7 @@
       "file_type": "document",
       "source_file": "docs/homepage-sections.md",
       "source_location": "L21",
-      "community": 22,
+      "community": 21,
       "norm_label": "secciones clave para editar",
       "id": "docs_homepage_sections_secciones_clave_para_editar"
     },
@@ -980,7 +980,7 @@
       "file_type": "document",
       "source_file": "docs/homepage-sections.md",
       "source_location": "L23",
-      "community": 22,
+      "community": 21,
       "norm_label": "`#para-quien`",
       "id": "docs_homepage_sections_para_quien"
     },
@@ -989,7 +989,7 @@
       "file_type": "document",
       "source_file": "docs/homepage-sections.md",
       "source_location": "L27",
-      "community": 22,
+      "community": 21,
       "norm_label": "`#faq` (homepage)",
       "id": "docs_homepage_sections_faq_homepage"
     },
@@ -998,7 +998,7 @@
       "file_type": "document",
       "source_file": "docs/homepage-sections.md",
       "source_location": "L31",
-      "community": 22,
+      "community": 21,
       "norm_label": "`#trust`",
       "id": "docs_homepage_sections_trust"
     },
@@ -1007,7 +1007,7 @@
       "file_type": "document",
       "source_file": "docs/homepage-sections.md",
       "source_location": "L35",
-      "community": 22,
+      "community": 21,
       "norm_label": "reglas de contenido",
       "id": "docs_homepage_sections_reglas_de_contenido"
     },
@@ -1313,7 +1313,7 @@
       "file_type": "document",
       "source_file": "docs/faq-page.md",
       "source_location": "L1",
-      "community": 16,
+      "community": 15,
       "norm_label": "faq-page.md",
       "id": "docs_faq_page_md"
     },
@@ -1322,7 +1322,7 @@
       "file_type": "document",
       "source_file": "docs/faq-page.md",
       "source_location": "L1",
-      "community": 16,
+      "community": 15,
       "norm_label": "pagina /faq \u2014 arquitectura y mantenimiento",
       "id": "docs_faq_page_p_gina_faq_arquitectura_y_mantenimiento"
     },
@@ -1331,7 +1331,7 @@
       "file_type": "document",
       "source_file": "docs/faq-page.md",
       "source_location": "L3",
-      "community": 16,
+      "community": 15,
       "norm_label": "proposito",
       "id": "docs_faq_page_prop_sito"
     },
@@ -1340,7 +1340,7 @@
       "file_type": "document",
       "source_file": "docs/faq-page.md",
       "source_location": "L9",
-      "community": 16,
+      "community": 15,
       "norm_label": "estructura",
       "id": "docs_faq_page_estructura"
     },
@@ -1349,7 +1349,7 @@
       "file_type": "document",
       "source_file": "docs/faq-page.md",
       "source_location": "L11",
-      "community": 16,
+      "community": 15,
       "norm_label": "1. seccion espejo (`#espejo`)",
       "id": "docs_faq_page_1_secci_n_espejo_espejo"
     },
@@ -1358,7 +1358,7 @@
       "file_type": "document",
       "source_file": "docs/faq-page.md",
       "source_location": "L22",
-      "community": 16,
+      "community": 15,
       "norm_label": "2. faq por categorias",
       "id": "docs_faq_page_2_faq_por_categor_as"
     },
@@ -1367,7 +1367,7 @@
       "file_type": "document",
       "source_file": "docs/faq-page.md",
       "source_location": "L33",
-      "community": 16,
+      "community": 15,
       "norm_label": "schema json-ld",
       "id": "docs_faq_page_schema_json_ld"
     },
@@ -1376,7 +1376,7 @@
       "file_type": "document",
       "source_file": "docs/faq-page.md",
       "source_location": "L40",
-      "community": 16,
+      "community": 15,
       "norm_label": "como agregar preguntas",
       "id": "docs_faq_page_c_mo_agregar_preguntas"
     },
@@ -1385,7 +1385,7 @@
       "file_type": "document",
       "source_file": "docs/faq-page.md",
       "source_location": "L47",
-      "community": 16,
+      "community": 15,
       "norm_label": "criterio para incluir una pregunta",
       "id": "docs_faq_page_criterio_para_incluir_una_pregunta"
     },
@@ -1394,7 +1394,7 @@
       "file_type": "document",
       "source_file": "docs/faq-page.md",
       "source_location": "L55",
-      "community": 16,
+      "community": 15,
       "norm_label": "nav",
       "id": "docs_faq_page_nav"
     },
@@ -1403,7 +1403,7 @@
       "file_type": "document",
       "source_file": "docs/superpowers/plans/2026-06-07-web-alineacion-libro.md",
       "source_location": "L1",
-      "community": 14,
+      "community": 23,
       "norm_label": "2026-06-07-web-alineacion-libro.md",
       "id": "docs_superpowers_plans_2026_06_07_web_alineacion_libro_md"
     },
@@ -1412,7 +1412,7 @@
       "file_type": "document",
       "source_file": "docs/superpowers/plans/2026-06-07-web-alineacion-libro.md",
       "source_location": "L1",
-      "community": 14,
+      "community": 23,
       "norm_label": "alineacion web 3gi con el libro implementation plan",
       "id": "plans_2026_06_07_web_alineacion_libro_alineaci_n_web_3gi_con_el_libro_implementation_plan"
     },
@@ -1421,7 +1421,7 @@
       "file_type": "document",
       "source_file": "docs/superpowers/plans/2026-06-07-web-alineacion-libro.md",
       "source_location": "L13",
-      "community": 14,
+      "community": 23,
       "norm_label": "estructura de archivos",
       "id": "plans_2026_06_07_web_alineacion_libro_estructura_de_archivos"
     },
@@ -1430,7 +1430,7 @@
       "file_type": "document",
       "source_file": "docs/superpowers/plans/2026-06-07-web-alineacion-libro.md",
       "source_location": "L30",
-      "community": 14,
+      "community": 23,
       "norm_label": "task 1: backup de los 3 archivos",
       "id": "plans_2026_06_07_web_alineacion_libro_task_1_backup_de_los_3_archivos"
     },
@@ -1439,7 +1439,7 @@
       "file_type": "document",
       "source_file": "docs/superpowers/plans/2026-06-07-web-alineacion-libro.md",
       "source_location": "L39",
-      "community": 14,
+      "community": 23,
       "norm_label": "code:bash (cd /root/3gi-web)",
       "id": "plans_2026_06_07_web_alineacion_libro_codeblock_1"
     },
@@ -1448,7 +1448,7 @@
       "file_type": "document",
       "source_file": "docs/superpowers/plans/2026-06-07-web-alineacion-libro.md",
       "source_location": "L50",
-      "community": 14,
+      "community": 23,
       "norm_label": "code:bash (cd /root/3gi-web)",
       "id": "plans_2026_06_07_web_alineacion_libro_codeblock_2"
     },
@@ -1457,7 +1457,7 @@
       "file_type": "document",
       "source_file": "docs/superpowers/plans/2026-06-07-web-alineacion-libro.md",
       "source_location": "L58",
-      "community": 20,
+      "community": 19,
       "norm_label": "task 2: nosotros.astro \u2014 agregar parrafo origen del framework",
       "id": "plans_2026_06_07_web_alineacion_libro_task_2_nosotros_astro_agregar_p_rrafo_origen_del_framework"
     },
@@ -1466,7 +1466,7 @@
       "file_type": "document",
       "source_file": "docs/superpowers/plans/2026-06-07-web-alineacion-libro.md",
       "source_location": "L70",
-      "community": 20,
+      "community": 19,
       "norm_label": "code:block3 (<p data-i18n=\"nos-origin-p3\">)",
       "id": "plans_2026_06_07_web_alineacion_libro_codeblock_3"
     },
@@ -1475,7 +1475,7 @@
       "file_type": "document",
       "source_file": "docs/superpowers/plans/2026-06-07-web-alineacion-libro.md",
       "source_location": "L77",
-      "community": 20,
+      "community": 19,
       "norm_label": "code:block4 (y sin promesas de transformacion digital que no se materiali)",
       "id": "plans_2026_06_07_web_alineacion_libro_codeblock_4"
     },
@@ -1484,7 +1484,7 @@
       "file_type": "document",
       "source_file": "docs/superpowers/plans/2026-06-07-web-alineacion-libro.md",
       "source_location": "L82",
-      "community": 20,
+      "community": 19,
       "norm_label": "code:block5 (y sin promesas de transformacion digital que no se materiali)",
       "id": "plans_2026_06_07_web_alineacion_libro_codeblock_5"
     },
@@ -1493,7 +1493,7 @@
       "file_type": "document",
       "source_file": "docs/superpowers/plans/2026-06-07-web-alineacion-libro.md",
       "source_location": "L89",
-      "community": 20,
+      "community": 19,
       "norm_label": "code:block6 ('nos-origin-p3': '3g intelligence nacio para ser la consulto)",
       "id": "plans_2026_06_07_web_alineacion_libro_codeblock_6"
     },
@@ -1502,7 +1502,7 @@
       "file_type": "document",
       "source_file": "docs/superpowers/plans/2026-06-07-web-alineacion-libro.md",
       "source_location": "L95",
-      "community": 20,
+      "community": 19,
       "norm_label": "code:block7 ('nos-origin-p3': '3g intelligence nacio para ser la consulto)",
       "id": "plans_2026_06_07_web_alineacion_libro_codeblock_7"
     },
@@ -1511,7 +1511,7 @@
       "file_type": "document",
       "source_file": "docs/superpowers/plans/2026-06-07-web-alineacion-libro.md",
       "source_location": "L104",
-      "community": 20,
+      "community": 19,
       "norm_label": "code:block8 ('nos-origin-p3': '3g intelligence was born to be the consult)",
       "id": "plans_2026_06_07_web_alineacion_libro_codeblock_8"
     },
@@ -1520,7 +1520,7 @@
       "file_type": "document",
       "source_file": "docs/superpowers/plans/2026-06-07-web-alineacion-libro.md",
       "source_location": "L110",
-      "community": 20,
+      "community": 19,
       "norm_label": "code:block9 ('nos-origin-p3': '3g intelligence was born to be the consult)",
       "id": "plans_2026_06_07_web_alineacion_libro_codeblock_9"
     },
@@ -1529,7 +1529,7 @@
       "file_type": "document",
       "source_file": "docs/superpowers/plans/2026-06-07-web-alineacion-libro.md",
       "source_location": "L126",
-      "community": 20,
+      "community": 19,
       "norm_label": "code:bash (node --check /root/3gi-web/src/pages/nosotros.astro 2>&1)",
       "id": "plans_2026_06_07_web_alineacion_libro_codeblock_10"
     },
@@ -1538,7 +1538,7 @@
       "file_type": "document",
       "source_file": "docs/superpowers/plans/2026-06-07-web-alineacion-libro.md",
       "source_location": "L136",
-      "community": 20,
+      "community": 19,
       "norm_label": "code:bash (cd /root/3gi-web)",
       "id": "plans_2026_06_07_web_alineacion_libro_codeblock_11"
     },
@@ -1592,7 +1592,7 @@
       "file_type": "document",
       "source_file": "docs/superpowers/plans/2026-06-07-web-alineacion-libro.md",
       "source_location": "L181",
-      "community": 23,
+      "community": 22,
       "norm_label": "task 4: metodologia.astro \u2014 seccion \"por que el diagnostico primero\"",
       "id": "plans_2026_06_07_web_alineacion_libro_task_4_metodologia_astro_secci_n_por_qu_el_diagn_stico_primero"
     },
@@ -1601,7 +1601,7 @@
       "file_type": "document",
       "source_file": "docs/superpowers/plans/2026-06-07-web-alineacion-libro.md",
       "source_location": "L193",
-      "community": 23,
+      "community": 22,
       "norm_label": "code:block16 (<div class=\"spectrum-header\"><div class=\"page-tag\" data-i18n)",
       "id": "plans_2026_06_07_web_alineacion_libro_codeblock_16"
     },
@@ -1610,7 +1610,7 @@
       "file_type": "document",
       "source_file": "docs/superpowers/plans/2026-06-07-web-alineacion-libro.md",
       "source_location": "L198",
-      "community": 23,
+      "community": 22,
       "norm_label": "code:block17 (<div class=\"diag-first-section\" style=\"padding:64px 0 56px; )",
       "id": "plans_2026_06_07_web_alineacion_libro_codeblock_17"
     },
@@ -1619,7 +1619,7 @@
       "file_type": "document",
       "source_file": "docs/superpowers/plans/2026-06-07-web-alineacion-libro.md",
       "source_location": "L205",
-      "community": 23,
+      "community": 22,
       "norm_label": "code:block18 ('met-sub': 'metodologia estructurada, entregables concretos,)",
       "id": "plans_2026_06_07_web_alineacion_libro_codeblock_18"
     },
@@ -1628,7 +1628,7 @@
       "file_type": "document",
       "source_file": "docs/superpowers/plans/2026-06-07-web-alineacion-libro.md",
       "source_location": "L211",
-      "community": 23,
+      "community": 22,
       "norm_label": "code:block19 ('met-sub': 'metodologia estructurada, entregables concretos,)",
       "id": "plans_2026_06_07_web_alineacion_libro_codeblock_19"
     },
@@ -1637,7 +1637,7 @@
       "file_type": "document",
       "source_file": "docs/superpowers/plans/2026-06-07-web-alineacion-libro.md",
       "source_location": "L225",
-      "community": 23,
+      "community": 22,
       "norm_label": "code:block20 ('met-sub': 'structured methodology, concrete deliverables, d)",
       "id": "plans_2026_06_07_web_alineacion_libro_codeblock_20"
     },
@@ -1646,7 +1646,7 @@
       "file_type": "document",
       "source_file": "docs/superpowers/plans/2026-06-07-web-alineacion-libro.md",
       "source_location": "L231",
-      "community": 23,
+      "community": 22,
       "norm_label": "code:block21 ('met-sub': 'structured methodology, concrete deliverables, d)",
       "id": "plans_2026_06_07_web_alineacion_libro_codeblock_21"
     },
@@ -1655,7 +1655,7 @@
       "file_type": "document",
       "source_file": "docs/superpowers/plans/2026-06-07-web-alineacion-libro.md",
       "source_location": "L244",
-      "community": 23,
+      "community": 22,
       "norm_label": "code:bash (node --check /root/3gi-web/src/pages/metodologia.astro 2>&1)",
       "id": "plans_2026_06_07_web_alineacion_libro_codeblock_22"
     },
@@ -1664,7 +1664,7 @@
       "file_type": "document",
       "source_file": "docs/superpowers/plans/2026-06-07-web-alineacion-libro.md",
       "source_location": "L252",
-      "community": 23,
+      "community": 22,
       "norm_label": "code:bash (cd /root/3gi-web)",
       "id": "plans_2026_06_07_web_alineacion_libro_codeblock_23"
     },
@@ -1673,7 +1673,7 @@
       "file_type": "document",
       "source_file": "docs/superpowers/plans/2026-06-07-web-alineacion-libro.md",
       "source_location": "L260",
-      "community": 17,
+      "community": 16,
       "norm_label": "task 5: metodologia.astro \u2014 senales diagnosticas rapidas",
       "id": "plans_2026_06_07_web_alineacion_libro_task_5_metodologia_astro_se_ales_diagn_sticas_r_pidas"
     },
@@ -1682,7 +1682,7 @@
       "file_type": "document",
       "source_file": "docs/superpowers/plans/2026-06-07-web-alineacion-libro.md",
       "source_location": "L272",
-      "community": 17,
+      "community": 16,
       "norm_label": "code:block24 (data-i18n=\"met-spec-title\">tu posicion exacta en el espectro)",
       "id": "plans_2026_06_07_web_alineacion_libro_codeblock_24"
     },
@@ -1691,7 +1691,7 @@
       "file_type": "document",
       "source_file": "docs/superpowers/plans/2026-06-07-web-alineacion-libro.md",
       "source_location": "L277",
-      "community": 17,
+      "community": 16,
       "norm_label": "code:block25 (data-i18n=\"met-signals-title\">senales diagnosticas rapidas</)",
       "id": "plans_2026_06_07_web_alineacion_libro_codeblock_25"
     },
@@ -1700,7 +1700,7 @@
       "file_type": "document",
       "source_file": "docs/superpowers/plans/2026-06-07-web-alineacion-libro.md",
       "source_location": "L286",
-      "community": 17,
+      "community": 16,
       "norm_label": "code:block26 (<div class=\"page-tag\" data-i18n=\"met-spec-tag\">framework 3gi)",
       "id": "plans_2026_06_07_web_alineacion_libro_codeblock_26"
     },
@@ -1709,7 +1709,7 @@
       "file_type": "document",
       "source_file": "docs/superpowers/plans/2026-06-07-web-alineacion-libro.md",
       "source_location": "L291",
-      "community": 17,
+      "community": 16,
       "norm_label": "code:block27 (<div class=\"page-tag\" data-i18n=\"met-spec-tag\">framework 3gi)",
       "id": "plans_2026_06_07_web_alineacion_libro_codeblock_27"
     },
@@ -1718,7 +1718,7 @@
       "file_type": "document",
       "source_file": "docs/superpowers/plans/2026-06-07-web-alineacion-libro.md",
       "source_location": "L300",
-      "community": 17,
+      "community": 16,
       "norm_label": "code:block28 ('met-diag-body': 'el problema no es la tecnologia. es el ord)",
       "id": "plans_2026_06_07_web_alineacion_libro_codeblock_28"
     },
@@ -1727,7 +1727,7 @@
       "file_type": "document",
       "source_file": "docs/superpowers/plans/2026-06-07-web-alineacion-libro.md",
       "source_location": "L306",
-      "community": 17,
+      "community": 16,
       "norm_label": "code:block29 ('met-diag-body': 'el problema no es la tecnologia. es el ord)",
       "id": "plans_2026_06_07_web_alineacion_libro_codeblock_29"
     },
@@ -1736,7 +1736,7 @@
       "file_type": "document",
       "source_file": "docs/superpowers/plans/2026-06-07-web-alineacion-libro.md",
       "source_location": "L318",
-      "community": 17,
+      "community": 16,
       "norm_label": "code:block30 ('met-diag-body': 'the problem isn\\'t the technology. it\\'s t)",
       "id": "plans_2026_06_07_web_alineacion_libro_codeblock_30"
     },
@@ -1745,7 +1745,7 @@
       "file_type": "document",
       "source_file": "docs/superpowers/plans/2026-06-07-web-alineacion-libro.md",
       "source_location": "L324",
-      "community": 17,
+      "community": 16,
       "norm_label": "code:block31 ('met-diag-body': 'the problem isn\\'t the technology. it\\'s t)",
       "id": "plans_2026_06_07_web_alineacion_libro_codeblock_31"
     },
@@ -1754,7 +1754,7 @@
       "file_type": "document",
       "source_file": "docs/superpowers/plans/2026-06-07-web-alineacion-libro.md",
       "source_location": "L335",
-      "community": 17,
+      "community": 16,
       "norm_label": "code:bash (node --check /root/3gi-web/src/pages/metodologia.astro 2>&1)",
       "id": "plans_2026_06_07_web_alineacion_libro_codeblock_32"
     },
@@ -1763,7 +1763,7 @@
       "file_type": "document",
       "source_file": "docs/superpowers/plans/2026-06-07-web-alineacion-libro.md",
       "source_location": "L343",
-      "community": 17,
+      "community": 16,
       "norm_label": "code:bash (cd /root/3gi-web)",
       "id": "plans_2026_06_07_web_alineacion_libro_codeblock_33"
     },
@@ -1952,7 +1952,7 @@
       "file_type": "document",
       "source_file": "docs/superpowers/plans/2026-06-07-web-alineacion-libro.md",
       "source_location": "L532",
-      "community": 14,
+      "community": 34,
       "norm_label": "task 9: deploy a cloudflare pages",
       "id": "plans_2026_06_07_web_alineacion_libro_task_9_deploy_a_cloudflare_pages"
     },
@@ -1961,7 +1961,7 @@
       "file_type": "document",
       "source_file": "docs/superpowers/plans/2026-06-07-web-alineacion-libro.md",
       "source_location": "L538",
-      "community": 14,
+      "community": 34,
       "norm_label": "code:bash (cd /root/3gi-web)",
       "id": "plans_2026_06_07_web_alineacion_libro_codeblock_51"
     },
@@ -1970,7 +1970,7 @@
       "file_type": "document",
       "source_file": "docs/superpowers/plans/2026-06-07-web-alineacion-libro.md",
       "source_location": "L545",
-      "community": 14,
+      "community": 34,
       "norm_label": "code:bash (ssh -i ~/.ssh/hetzner_n8n root@178.156.157.141 \"cd /root/3gi)",
       "id": "plans_2026_06_07_web_alineacion_libro_codeblock_52"
     },
@@ -1979,7 +1979,7 @@
       "file_type": "document",
       "source_file": "docs/superpowers/plans/2026-06-07-web-alineacion-libro.md",
       "source_location": "L560",
-      "community": 14,
+      "community": 34,
       "norm_label": "code:bash (cd /root/3gi-web)",
       "id": "plans_2026_06_07_web_alineacion_libro_codeblock_53"
     },
@@ -1988,7 +1988,7 @@
       "file_type": "document",
       "source_file": "docs/superpowers/plans/2026-06-07-web-alineacion-libro.md",
       "source_location": "L569",
-      "community": 14,
+      "community": 23,
       "norm_label": "self-review",
       "id": "plans_2026_06_07_web_alineacion_libro_self_review"
     },
@@ -1997,7 +1997,7 @@
       "file_type": "document",
       "source_file": "docs/superpowers/plans/2026-06-07-web-alineacion-libro.md",
       "source_location": "L571",
-      "community": 14,
+      "community": 23,
       "norm_label": "spec coverage",
       "id": "plans_2026_06_07_web_alineacion_libro_spec_coverage"
     },
@@ -2006,7 +2006,7 @@
       "file_type": "document",
       "source_file": "docs/superpowers/plans/2026-06-07-web-alineacion-libro.md",
       "source_location": "L583",
-      "community": 14,
+      "community": 23,
       "norm_label": "riesgos conocidos",
       "id": "plans_2026_06_07_web_alineacion_libro_riesgos_conocidos"
     },
@@ -3581,7 +3581,7 @@
       "file_type": "document",
       "source_file": "docs/contenido/carruseles2.md",
       "source_location": "L952",
-      "community": 15,
+      "community": 14,
       "norm_label": "post 11 \u2014 los 9 sub-niveles era",
       "id": "contenido_carruseles2_post_11_los_9_sub_niveles_era"
     },
@@ -3590,7 +3590,7 @@
       "file_type": "document",
       "source_file": "docs/contenido/carruseles2.md",
       "source_location": "L956",
-      "community": 15,
+      "community": 14,
       "norm_label": "short 11",
       "id": "contenido_carruseles2_short_11"
     },
@@ -3599,7 +3599,7 @@
       "file_type": "document",
       "source_file": "docs/contenido/carruseles2.md",
       "source_location": "L976",
-      "community": 15,
+      "community": 14,
       "norm_label": "texto linkedin/facebook",
       "id": "contenido_carruseles2_texto_linkedin_facebook_976"
     },
@@ -3608,7 +3608,7 @@
       "file_type": "document",
       "source_file": "docs/contenido/carruseles2.md",
       "source_location": "L978",
-      "community": 15,
+      "community": 14,
       "norm_label": "code:block28 (la mayoria de empresas se auto-evalua dos niveles mas arriba)",
       "id": "contenido_carruseles2_codeblock_28"
     },
@@ -3617,7 +3617,7 @@
       "file_type": "document",
       "source_file": "docs/contenido/carruseles2.md",
       "source_location": "L1005",
-      "community": 15,
+      "community": 14,
       "norm_label": "descripcion youtube \u2014 short 11",
       "id": "contenido_carruseles2_descripci_n_youtube_short_11"
     },
@@ -3626,7 +3626,7 @@
       "file_type": "document",
       "source_file": "docs/contenido/carruseles2.md",
       "source_location": "L1010",
-      "community": 15,
+      "community": 14,
       "norm_label": "code:block29 (la mayoria de empresas se auto-evalua dos niveles mas arriba)",
       "id": "contenido_carruseles2_codeblock_29"
     },
@@ -3635,7 +3635,7 @@
       "file_type": "document",
       "source_file": "docs/contenido/carruseles2.md",
       "source_location": "L1028",
-      "community": 15,
+      "community": 14,
       "norm_label": "caption instagram reel \u2014 post 11",
       "id": "contenido_carruseles2_caption_instagram_reel_post_11"
     },
@@ -3644,7 +3644,7 @@
       "file_type": "document",
       "source_file": "docs/contenido/carruseles2.md",
       "source_location": "L1030",
-      "community": 15,
+      "community": 14,
       "norm_label": "code:block30 (la mayoria de empresas se auto-evalua dos niveles mas arriba)",
       "id": "contenido_carruseles2_codeblock_30"
     },
@@ -3725,7 +3725,7 @@
       "file_type": "document",
       "source_file": "docs/prospectos/2026-05-08-m-eugenia-recurso-animal.md",
       "source_location": "L1",
-      "community": 34,
+      "community": 35,
       "norm_label": "2026-05-08-m-eugenia-recurso-animal.md",
       "id": "docs_prospectos_2026_05_08_m_eugenia_recurso_animal_md"
     },
@@ -3734,7 +3734,7 @@
       "file_type": "document",
       "source_file": "docs/prospectos/2026-05-08-m-eugenia-recurso-animal.md",
       "source_location": "L1",
-      "community": 34,
+      "community": 35,
       "norm_label": "seguimiento \u2014 m. eugenia \u00b7 recursoanimalsrl@gmail.com",
       "id": "prospectos_2026_05_08_m_eugenia_recurso_animal_seguimiento_m_eugenia_recursoanimalsrl_gmail_com"
     },
@@ -3743,7 +3743,7 @@
       "file_type": "document",
       "source_file": "docs/prospectos/2026-05-08-m-eugenia-recurso-animal.md",
       "source_location": "L35",
-      "community": 34,
+      "community": 35,
       "norm_label": "seguimiento",
       "id": "prospectos_2026_05_08_m_eugenia_recurso_animal_seguimiento"
     },
@@ -3752,7 +3752,7 @@
       "file_type": "code",
       "source_file": "astro.config.mjs",
       "source_location": "L1",
-      "community": 39,
+      "community": 40,
       "norm_label": "astro.config.mjs",
       "id": "astro_config_mjs"
     },
@@ -3761,7 +3761,7 @@
       "file_type": "code",
       "source_file": "sentry.client.config.ts",
       "source_location": "L1",
-      "community": 40,
+      "community": 41,
       "norm_label": "sentry.client.config.ts",
       "id": "sentry_client_config_ts"
     },
@@ -3779,7 +3779,7 @@
       "file_type": "code",
       "source_file": "scripts/test-diagnostico-flow.mjs",
       "source_location": "L1",
-      "community": 18,
+      "community": 17,
       "norm_label": "test-diagnostico-flow.mjs",
       "id": "scripts_test_diagnostico_flow_mjs"
     },
@@ -3806,7 +3806,7 @@
       "file_type": "code",
       "source_file": "docs/pre-upload.py",
       "source_location": "L1",
-      "community": 41,
+      "community": 42,
       "norm_label": "pre-upload.py",
       "id": "root_3gi_web_docs_pre_upload_py"
     },
@@ -3833,7 +3833,7 @@
       "file_type": "document",
       "source_file": "AGENTS.md",
       "source_location": "L1",
-      "community": 35,
+      "community": 36,
       "norm_label": "agents.md",
       "id": "root_3gi_web_agents_md"
     },
@@ -3842,7 +3842,7 @@
       "file_type": "document",
       "source_file": "CLAUDE.md",
       "source_location": "L1",
-      "community": 21,
+      "community": 20,
       "norm_label": "claude.md",
       "id": "root_3gi_web_claude_md"
     },
@@ -3860,7 +3860,7 @@
       "file_type": "document",
       "source_file": "ONBOARDING.md",
       "source_location": "L1",
-      "community": 19,
+      "community": 18,
       "norm_label": "onboarding.md",
       "id": "onboarding_md"
     },
@@ -3878,7 +3878,7 @@
       "file_type": "document",
       "source_file": "docs/faq-page.md",
       "source_location": "L1",
-      "community": 16,
+      "community": 15,
       "norm_label": "faq-page.md",
       "id": "root_3gi_web_docs_faq_page_md"
     },
@@ -3887,7 +3887,7 @@
       "file_type": "document",
       "source_file": "docs/homepage-sections.md",
       "source_location": "L1",
-      "community": 22,
+      "community": 21,
       "norm_label": "homepage-sections.md",
       "id": "root_3gi_web_docs_homepage_sections_md"
     },
@@ -3959,7 +3959,7 @@
       "file_type": "document",
       "source_file": "docs/prospectos/2026-05-08-m-eugenia-recurso-animal.md",
       "source_location": "L1",
-      "community": 34,
+      "community": 35,
       "norm_label": "2026-05-08-m-eugenia-recurso-animal.md",
       "id": "root_3gi_web_docs_prospectos_2026_05_08_m_eugenia_recurso_animal_md"
     },
@@ -4067,7 +4067,7 @@
       "file_type": "code",
       "source_file": "test-diagnostico-flow.mjs",
       "source_location": "L1",
-      "community": 18,
+      "community": 17,
       "norm_label": "test-diagnostico-flow.mjs",
       "id": "test_diagnostico_flow_mjs"
     },
@@ -4193,7 +4193,7 @@
       "file_type": "document",
       "source_file": "carruseles2.md",
       "source_location": "L975",
-      "community": 15,
+      "community": 14,
       "norm_label": "texto linkedin/facebook",
       "id": "contenido_carruseles2_texto_linkedin_facebook_975"
     },
@@ -4265,7 +4265,7 @@
       "file_type": "document",
       "source_file": "carruseles2.md",
       "source_location": "L968",
-      "community": 15,
+      "community": 14,
       "norm_label": "texto linkedin/facebook",
       "id": "contenido_carruseles2_texto_linkedin_facebook_968"
     },
@@ -4319,7 +4319,7 @@
       "file_type": "document",
       "source_file": "carruseles2.md",
       "source_location": "L969",
-      "community": 15,
+      "community": 14,
       "norm_label": "texto linkedin/facebook",
       "id": "contenido_carruseles2_texto_linkedin_facebook_969"
     },
@@ -4409,7 +4409,7 @@
       "file_type": "document",
       "source_file": "carruseles2.md",
       "source_location": "L967",
-      "community": 15,
+      "community": 14,
       "norm_label": "texto linkedin/facebook",
       "id": "contenido_carruseles2_texto_linkedin_facebook_967"
     },
@@ -12250,5 +12250,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "c8d3b49031126e4054b8243ecc81735b3eb59954"
+  "built_at_commit": "acb6092696fef2f5cd63e443ecaffe5cc0dba360"
 }
