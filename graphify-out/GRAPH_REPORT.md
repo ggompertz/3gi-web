@@ -10,7 +10,7 @@
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `e418e520`
+- Built from commit: `73898b47`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -176,11 +176,11 @@ Nodes (7): code:block1 (El cuello de botella de tu empresa... eres tú.), code:b
 
 ### Community 26 - "Community 26"
 Cohesion: 0.29
-Nodes (7): code:bash (python3 -c "), code:html (<div style="background:rgba(234,179,8,0.06); border:1px soli), code:js ('met-meseta-label': 'La Meseta ERA 2',), code:js ('met-meseta-label': 'The ERA 2 Plateau',), code:bash (node --check /root/3gi-web/src/pages/metodologia.astro 2>&1), code:bash (cd /root/3gi-web), Task 6: metodologia.astro — Callout "La Meseta ERA 2"
+Nodes (7): code:bash (python3 -c "), code:html (<section style="padding:72px 0; border-top:1px solid rgba(25), code:js ('met-human-tag': 'La variable que nadie mide',), code:js ('met-human-tag': 'The variable no one measures',), code:bash (node --check /root/3gi-web/src/pages/metodologia.astro 2>&1), code:bash (cd /root/3gi-web), Task 7: metodologia.astro — Sección "La dimensión humana"
 
 ### Community 27 - "Community 27"
 Cohesion: 0.29
-Nodes (7): code:bash (python3 -c "), code:html (<section style="padding:72px 0; border-top:1px solid rgba(25), code:js ('met-human-tag': 'La variable que nadie mide',), code:js ('met-human-tag': 'The variable no one measures',), code:bash (node --check /root/3gi-web/src/pages/metodologia.astro 2>&1), code:bash (cd /root/3gi-web), Task 7: metodologia.astro — Sección "La dimensión humana"
+Nodes (7): code:bash (python3 -c "), code:html (<div style="background:rgba(234,179,8,0.06); border:1px soli), code:js ('met-meseta-label': 'La Meseta ERA 2',), code:js ('met-meseta-label': 'The ERA 2 Plateau',), code:bash (node --check /root/3gi-web/src/pages/metodologia.astro 2>&1), code:bash (cd /root/3gi-web), Task 6: metodologia.astro — Callout "La Meseta ERA 2"
 
 ### Community 28 - "Community 28"
 Cohesion: 0.53
