@@ -698,6 +698,20 @@ const p = lang === 'en' ? '/en' : '';
   /* El atributo hidden debe ganar sobre display:flex (estilo de autor vs UA):
      sin esto, aceptar/rechazar no cierra el banner. */
   .tgi-consent[hidden] { display: none !important; }
+  /* El banner es position:fixed sobre el borde inferior del viewport (z-index 9999),
+     así que CUALQUIER contenido que quede en esa franja durante el scroll recibe el
+     tap en vez del elemento real de abajo — no importa cuánto padding tenga la
+     página, porque el problema es geométrico (el elemento pasa por esa franja
+     mientras se scrollea, esté donde esté en el documento). Bug real encontrado en
+     /test-era/: 0 clics reales en "Empezar Test ERA" en 5+ semanas porque el botón
+     cae justo en esa franja durante el scroll mínimo necesario para verlo.
+     Fix: el banner se "minimiza" (se desliza fuera de pantalla) en cuanto el
+     usuario empieza a scrollear, y vuelve a aparecer si scrollea de nuevo al tope
+     — no otorga ni asume consentimiento, solo dejar de bloquear el contenido.
+     Sigue siendo accesible vía "Preferencias de cookies" en el footer en cualquier
+     momento (window.__tgiConsentReset). */
+  .tgi-consent { transition: transform 0.25s ease; }
+  .tgi-consent.tgi-consent-minimized { transform: translateY(120%); }
 </style>
 </head>
 <body>
@@ -724,15 +738,31 @@ const p = lang === 'en' ? '/en' : '';
     var banner = document.getElementById('tgi-consent');
     if (!banner) return;
     banner.hidden = false;
+
+    // Minimiza el banner (desliza fuera de pantalla, sin ocultarlo del DOM ni
+    // tocar el estado de consentimiento) apenas el usuario empieza a scrollear,
+    // y lo vuelve a mostrar si vuelve al tope de la página. Evita que tape
+    // contenido interactivo más abajo (ver comentario CSS de .tgi-consent).
+    var scrollListenerActive = true;
+    function onScroll() {
+      if (!scrollListenerActive) return;
+      banner.classList.toggle('tgi-consent-minimized', window.scrollY > 24);
+    }
+    window.addEventListener('scroll', onScroll, { passive: true });
+
     document.getElementById('tgi-consent-accept').addEventListener('click', function() {
       localStorage.setItem('tgi_consent', JSON.stringify({status: 'accepted', ts: new Date().toISOString(), v: 1}));
       banner.hidden = true;
+      scrollListenerActive = false;
+      window.removeEventListener('scroll', onScroll);
       if (window.__loadGTM) window.__loadGTM();
       if (window.__loadPostHog) window.__loadPostHog();
     });
     document.getElementById('tgi-consent-reject').addEventListener('click', function() {
       localStorage.setItem('tgi_consent', JSON.stringify({status: 'rejected', ts: new Date().toISOString(), v: 1}));
       banner.hidden = true;
+      scrollListenerActive = false;
+      window.removeEventListener('scroll', onScroll);
     });
   })();
 </script>
