@@ -10,7 +10,7 @@
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `4e6c74cd`
+- Built from commit: `72290dc9`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -152,15 +152,15 @@ Nodes (8): Codebases, Get Started, How We Use Claude, MCP Servers to Activate, S
 
 ### Community 20 - "Community 20"
 Cohesion: 0.2
-Nodes (10): code:bash (node --check /root/3gi-web/src/pages/nosotros.astro 2>&1), code:bash (cd /root/3gi-web), code:block3 (<p data-i18n="nos-origin-p3">), code:block4 (y sin promesas de transformación digital que no se materiali), code:block5 (y sin promesas de transformación digital que no se materiali), code:block6 ('nos-origin-p3': '3G Intelligence nació para ser la consulto), code:block7 ('nos-origin-p3': '3G Intelligence nació para ser la consulto), code:block8 ('nos-origin-p3': '3G Intelligence was born to be the consult) (+2 more)
+Nodes (9): Alineación Web 3GI con el Libro Implementation Plan, code:bash (cd /root/3gi-web), code:bash (ssh -i ~/.ssh/hetzner_n8n root@178.156.157.141 "cd /root/3gi), code:bash (cd /root/3gi-web), Estructura de archivos, Riesgos conocidos, Self-Review, Spec coverage (+1 more)
 
 ### Community 21 - "Community 21"
-Cohesion: 0.22
-Nodes (7): `#faq` (homepage), Homepage — Secciones y propósito, Orden y función, `#para-quien`, Reglas de contenido, Secciones clave para editar, `#trust`
+Cohesion: 0.2
+Nodes (10): code:bash (node --check /root/3gi-web/src/pages/nosotros.astro 2>&1), code:bash (cd /root/3gi-web), code:block3 (<p data-i18n="nos-origin-p3">), code:block4 (y sin promesas de transformación digital que no se materiali), code:block5 (y sin promesas de transformación digital que no se materiali), code:block6 ('nos-origin-p3': '3G Intelligence nació para ser la consulto), code:block7 ('nos-origin-p3': '3G Intelligence nació para ser la consulto), code:block8 ('nos-origin-p3': '3G Intelligence was born to be the consult) (+2 more)
 
 ### Community 22 - "Community 22"
 Cohesion: 0.22
-Nodes (8): Alineación Web 3GI con el Libro Implementation Plan, code:bash (cd /root/3gi-web), code:bash (cd /root/3gi-web), Estructura de archivos, Riesgos conocidos, Self-Review, Spec coverage, Task 1: Backup de los 3 archivos
+Nodes (7): `#faq` (homepage), Homepage — Secciones y propósito, Orden y función, `#para-quien`, Reglas de contenido, Secciones clave para editar, `#trust`
 
 ### Community 23 - "Community 23"
 Cohesion: 0.22
@@ -176,11 +176,11 @@ Nodes (7): code:block1 (El cuello de botella de tu empresa... eres tú.), code:b
 
 ### Community 26 - "Community 26"
 Cohesion: 0.29
-Nodes (7): code:bash (python3 -c "), code:html (<section style="padding:72px 0; border-top:1px solid rgba(25), code:js ('met-human-tag': 'La variable que nadie mide',), code:js ('met-human-tag': 'The variable no one measures',), code:bash (node --check /root/3gi-web/src/pages/metodologia.astro 2>&1), code:bash (cd /root/3gi-web), Task 7: metodologia.astro — Sección "La dimensión humana"
+Nodes (7): code:bash (python3 -c "), code:html (<div style="background:rgba(234,179,8,0.06); border:1px soli), code:js ('met-meseta-label': 'La Meseta ERA 2',), code:js ('met-meseta-label': 'The ERA 2 Plateau',), code:bash (node --check /root/3gi-web/src/pages/metodologia.astro 2>&1), code:bash (cd /root/3gi-web), Task 6: metodologia.astro — Callout "La Meseta ERA 2"
 
 ### Community 27 - "Community 27"
 Cohesion: 0.29
-Nodes (7): code:bash (python3 -c "), code:html (<div style="background:rgba(234,179,8,0.06); border:1px soli), code:js ('met-meseta-label': 'La Meseta ERA 2',), code:js ('met-meseta-label': 'The ERA 2 Plateau',), code:bash (node --check /root/3gi-web/src/pages/metodologia.astro 2>&1), code:bash (cd /root/3gi-web), Task 6: metodologia.astro — Callout "La Meseta ERA 2"
+Nodes (7): code:bash (python3 -c "), code:html (<section style="padding:72px 0; border-top:1px solid rgba(25), code:js ('met-human-tag': 'La variable que nadie mide',), code:js ('met-human-tag': 'The variable no one measures',), code:bash (node --check /root/3gi-web/src/pages/metodologia.astro 2>&1), code:bash (cd /root/3gi-web), Task 7: metodologia.astro — Sección "La dimensión humana"
 
 ### Community 28 - "Community 28"
 Cohesion: 0.33
@@ -198,9 +198,9 @@ Nodes (3): code:block1 (https://3gi.cl/contenido/post03-linkedin.png), Imagen Li
 Cohesion: 0.4
 Nodes (5): code:block12 (El Framework 3 ERAs está registrado como obra intelectual. N), code:block13 (El Framework 3 ERAs es una metodología con fundamento académ), code:bash (node --check /root/3gi-web/src/pages/index.astro 2>&1), code:bash (cd /root/3gi-web), Task 3: index.astro — Actualizar diferenciador "obra intelectual"
 
-### Community 35 - "Community 35"
-Cohesion: 0.5
-Nodes (4): code:bash (cd /root/3gi-web), code:bash (ssh -i ~/.ssh/hetzner_n8n root@178.156.157.141 "cd /root/3gi), code:bash (cd /root/3gi-web), Task 9: Deploy a Cloudflare Pages
+### Community 36 - "Community 36"
+Cohesion: 0.67
+Nodes (3): code:bash (cd /root/3gi-web), code:bash (cd /root/3gi-web), Task 1: Backup de los 3 archivos
 
 ## Knowledge Gaps
 - **175 isolated node(s):** `Estado general`, `Contexto de decisiones de diseño`, `FASE 1 — Archivos de marca`, `FASE 2 — Rediseño web 3gi-web`, `FASE 3 — Test ERA: diseño + funcionalidades` (+170 more)
@@ -214,7 +214,7 @@ _Questions this graph is uniquely positioned to answer:_
   _High betweenness centrality (0.063) - this node is a cross-community bridge._
 - **Why does `Detalle por publicación` connect `Community 2` to `Community 1`, `Community 3`, `Community 7`?**
   _High betweenness centrality (0.016) - this node is a cross-community bridge._
-- **Why does `Alineación Web 3GI con el Libro Implementation Plan` connect `Community 22` to `Community 32`, `Community 35`, `Community 16`, `Community 20`, `Community 23`, `Community 26`, `Community 27`, `Community 28`?**
+- **Why does `Alineación Web 3GI con el Libro Implementation Plan` connect `Community 20` to `Community 32`, `Community 36`, `Community 16`, `Community 21`, `Community 23`, `Community 26`, `Community 27`, `Community 28`?**
   _High betweenness centrality (0.014) - this node is a cross-community bridge._
 - **What connects `Estado general`, `Contexto de decisiones de diseño`, `FASE 1 — Archivos de marca` to the rest of the system?**
   _175 weakly-connected nodes found - possible documentation gaps or missing edges._
