@@ -133,6 +133,16 @@ import Layout from '../layouts/Layout.astro';
     });
   });
 
+  // Preselecciona la guía si llega por ?pdf=slug (ej. desde el DM del bot de
+  // comentarios) — sin esto, la persona pide una guía específica y aterriza
+  // en la grilla completa teniendo que elegir de nuevo, rompiendo la promesa
+  // del DM ("aquí está la guía que pediste").
+  var preselectSlug = new URLSearchParams(location.search).get('pdf');
+  if (preselectSlug) {
+    var preselectBtn = document.querySelector('[data-open-modal][data-slug="' + preselectSlug + '"]');
+    if (preselectBtn) preselectBtn.click();
+  }
+
   document.getElementById('lmClose').addEventListener('click', function () {
     backdrop.classList.remove('open');
   });
