@@ -571,17 +571,19 @@ async function verifyGateOtp(code) {
     const data = await res.json();
     if (!data.ok) throw new Error(data.error || 'Código incorrecto');
 
-    const params = new URLSearchParams({
+    // Hallazgo claude-security F4 (2026-09-12): el access_token y PII iban en
+    // la URL de destino — ahora van por sessionStorage, no en el query string.
+    sessionStorage.setItem('eraHandoff', JSON.stringify({
       token: data.access_token,
-      email: encodeURIComponent(window._userEmail || ''),
-      nombre: encodeURIComponent(window._userName || ''),
+      email: window._userEmail || '',
+      nombre: window._userName || '',
       era_mode: 'ambas',
       era_op: window._eraOp || '',
       era_com: window._eraCom || '',
-      era_answers: encodeURIComponent(JSON.stringify(window._eraAnswers || {})),
-    });
+      era_answers: window._eraAnswers || {},
+    }));
     if (window.__funnelTrack) window.__funnelTrack('test_complete');
-    window.location.href = `/test-era-ia?${params.toString()}`;
+    window.location.href = '/test-era-ia';
   } catch(e) {
     document.getElementById('g-otp').disabled = false;
     document.getElementById('g-otp').value = '';

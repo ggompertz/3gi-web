@@ -1,2 +1,4 @@
 /*
   X-Robots-Tag: all
+  X-Frame-Options: DENY
+  Content-Security-Policy: frame-ancestors 'none'

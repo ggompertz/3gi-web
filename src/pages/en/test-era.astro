@@ -455,17 +455,19 @@ async function verifyOtp(code) {
     const data = await res.json();
     if (!data.ok) throw new Error(data.error || 'Incorrect code');
 
-    const params = new URLSearchParams({
+    // claude-security finding F5 (2026-09-12): access_token and PII went in
+    // the destination URL — now handed off via sessionStorage instead.
+    sessionStorage.setItem('eraHandoff', JSON.stringify({
       token: data.access_token,
-      email: encodeURIComponent(window._userEmail || ''),
-      nombre: encodeURIComponent(window._userName || ''),
+      email: window._userEmail || '',
+      nombre: window._userName || '',
       era_mode: 'ambas',
       era_op: window._eraOp || '',
       era_com: window._eraCom || '',
-      era_answers: encodeURIComponent(JSON.stringify(window._eraAnswers || {})),
-    });
+      era_answers: window._eraAnswers || {},
+    }));
     if (window.__funnelTrack) window.__funnelTrack('test_complete');
-    window.location.href = `/en/test-era-ia?${params.toString()}`;
+    window.location.href = '/en/test-era-ia';
   } catch(e) {
     document.getElementById('inp-otp').disabled = false;
     document.getElementById('inp-otp').value = '';
