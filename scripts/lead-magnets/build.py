@@ -193,16 +193,16 @@ portada("La brecha de evaluación", "Estás midiendo la IA con la métrica equiv
 
 # ── 6. Guía completa: qué hace cada fase de 3GI (post "Por qué le cambiamos el nombre") ──────────
 PDFS['guia-fases-3gi'] = doc(
-portada("La misma metodología, con nombres que dicen lo que hacen", "Qué hace cada fase de 3GI, en qué orden y qué esperar",
+portada("El camino completo, paso a paso", "Qué hace cada fase de 3GI, en qué orden y qué esperar",
  "Una guía de lectura rápida: los cinco pasos del camino, para qué sirve cada uno, qué recibes al terminarlo y cuánto toma.", 'guia-fases-3gi')
 + pagina('''
-<p class="kicker">Por qué cambiamos los nombres</p>
-<h1 style="font-size:20pt">Nosotros decíamos "F1, F2, F3". Tú necesitas saber qué hace cada paso.</h1>
-<p class="lead">La metodología es la misma que usamos con cada cliente. Lo que cambió es el lenguaje: ahora cada nombre dice lo que hace.</p>
-<div class="dato"><span class="cifra">Radar</span>te dice <strong>dónde estás</strong>. Antes lo llamábamos "Diagnóstico".</div>
-<div class="dato"><span class="cifra">Plan de Vuelo</span>traza <strong>cómo llegar</strong> y lo construye. Antes: F1, F2, F3 y F4.</div>
-<div class="dato"><span class="cifra">Piloto Automático</span>te <strong>sostiene en el nuevo rumbo</strong>. Antes: F5.</div>
-<p>El punto de entrada no cambia: todo parte con el <strong>Test ERA</strong>, gratuito. Cada empresa parte en un punto distinto — algunas hacen todo el recorrido y otras llegan directo a Plan de Vuelo. Lo único que no se salta es el Test ERA.</p>
+<p class="kicker">Las tres preguntas de todo proyecto de IA</p>
+<h1 style="font-size:20pt">¿Dónde estoy? ¿Cómo llego? ¿Cómo me sostengo?</h1>
+<p class="lead">Cada pregunta tiene un paso que la responde. Esta guía te cuenta qué hace cada uno, qué recibes al terminarlo y cuánto toma.</p>
+<div class="dato"><span class="cifra">Radar</span>responde <strong>¿dónde estoy?</strong> Te dice dónde está tu empresa hoy y qué oportunidades tiene.</div>
+<div class="dato"><span class="cifra">Plan de Vuelo</span>responde <strong>¿cómo llego?</strong> Traza el camino, calcula cuánto rinde y lo construye.</div>
+<div class="dato"><span class="cifra">Piloto Automático</span>responde <strong>¿cómo me sostengo?</strong> Mantiene y hace evolucionar lo implementado.</div>
+<p>El punto de entrada es siempre el <strong>Test ERA</strong>, gratuito. Cada empresa parte en un punto distinto — algunas hacen todo el recorrido y otras llegan directo a Plan de Vuelo. Lo único que no se salta es el Test ERA.</p>
 ''', '2')
 + pagina('''
 <h2>1 · Test ERA — dónde partir <span style="font-weight:400">(gratuito)</span></h2>
