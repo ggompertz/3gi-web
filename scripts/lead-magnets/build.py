@@ -190,8 +190,78 @@ portada("La brecha de evaluación", "Estás midiendo la IA con la métrica equiv
 <p>Existe un framework que opera precisamente en el paradigma minoritario: no evalúa las capacidades del modelo de IA — evalúa la madurez organizacional para crear valor con IA. No pregunta si la tecnología es buena; pregunta si la organización está lista. El primer paso es un diagnóstico de 5 minutos.</p>
 ''' + cta('metrica-equivocada'), '3'))
 
+
+# ── 6. Guía completa: qué hace cada fase de 3GI (post "Por qué le cambiamos el nombre") ──────────
+PDFS['guia-fases-3gi'] = doc(
+portada("La misma metodología, con nombres que dicen lo que hacen", "Qué hace cada fase de 3GI, en qué orden y qué esperar",
+ "Una guía de lectura rápida: los cinco pasos del camino, para qué sirve cada uno, qué recibes al terminarlo y cuánto toma.", 'guia-fases-3gi')
++ pagina('''
+<p class="kicker">Por qué cambiamos los nombres</p>
+<h1 style="font-size:20pt">Nosotros decíamos "F1, F2, F3". Tú necesitas saber qué hace cada paso.</h1>
+<p class="lead">La metodología es la misma que usamos con cada cliente. Lo que cambió es el lenguaje: ahora cada nombre dice lo que hace.</p>
+<div class="dato"><span class="cifra">Radar</span>te dice <strong>dónde estás</strong>. Antes lo llamábamos "Diagnóstico".</div>
+<div class="dato"><span class="cifra">Plan de Vuelo</span>traza <strong>cómo llegar</strong> y lo construye. Antes: F1, F2, F3 y F4.</div>
+<div class="dato"><span class="cifra">Piloto Automático</span>te <strong>sostiene en el nuevo rumbo</strong>. Antes: F5.</div>
+<p>El punto de entrada no cambia: todo parte con el <strong>Test ERA</strong>, gratuito. Cada empresa parte en un punto distinto — algunas hacen todo el recorrido y otras llegan directo a Plan de Vuelo. Lo único que no se salta es el Test ERA.</p>
+''', '2')
++ pagina('''
+<h2>1 · Test ERA — dónde partir <span style="font-weight:400">(gratuito)</span></h2>
+<p>Un formulario donde identificamos los tres mayores dolores operativos de tu empresa y su potencial de IA. En 24 a 48 horas recibes un Informe ERA con la brecha entre tu situación actual y la ideal, los procesos con mayor oportunidad y el siguiente paso recomendado.</p>
+<ul class="check"><li><strong>Recibes:</strong> Informe ERA en PDF y la recomendación de qué fase sigue.</li></ul>
+<h2>2 · Radar — dónde estás hoy <span style="font-weight:400">(desde USD 1.200)</span></h2>
+<p>Un diagnóstico pagado de dónde está tu empresa y qué oportunidades tiene. Tiene dos variantes:</p>
+<ul class="check">
+<li><strong>Radar Express:</strong> 1 sesión con la dirección. Precio según el tamaño de la empresa.</li>
+<li><strong>Radar 360:</strong> una vuelta completa, con entrevistas en 4 a 6 áreas, más Quick Wins tácticos.</li>
+<li><strong>Recibes:</strong> Score de Madurez IA, clasificación ERA e informe ejecutivo con las oportunidades identificadas.</li>
+<li><strong>Ojo:</strong> ninguna de las dos incluye scoring cuantificado, ROI ni PRD. Eso es trabajo de Plan de Vuelo.</li>
+</ul>
+<h2>Data Foundation <span style="font-weight:400">(solo si aplica)</span></h2>
+<p>La IA funciona bien solo con datos de calidad. No lo eliges tú: tu Radar determina si tus datos ya califican o si hace falta un proyecto previo para limpiar, estructurar e integrar tus fuentes antes de avanzar.</p>
+''', '3')
++ pagina('''
+<h2>3 · Plan de Vuelo — cómo llegar <span style="font-weight:400">(desde USD 6.700)</span></h2>
+<p>Aquí, y solo aquí, se cuantifica, se diseña y se construye: scoring con ROI proyectado a 12 meses, análisis profundo de los procesos, PRD técnico completo e implementación acompañada hasta que el retorno sea real. El precio final depende de cuántas oportunidades persigas y de qué tan compleja sea la solución, y se cotiza al cerrar tu Radar.</p>
+<ul class="check"><li><strong>Recibes:</strong> hoja de ruta cuantificada con ROI, PRD técnico completo y la solución construida y funcionando.</li></ul>
+<h2>4 · Piloto Automático — sostener el rumbo <span style="font-weight:400">(USD 1.500–8.000 al mes)</span></h2>
+<p>Una vez en el nuevo rumbo, esto lo mantiene: soporte y evolución continua de las soluciones ya implementadas. Hay tres niveles según las horas mensuales — Básico (5 a 10 h), Estándar (10 a 20 h) y Avanzado (20 a 40 h) — y se cotiza a medida después de la implementación.</p>
+<h2>Resumen</h2>
+<div class="dato"><span class="cifra">Orden</span>Test ERA → Radar → (Data Foundation, si aplica) → Plan de Vuelo → Piloto Automático.</div>
+<p style="font-size:9pt;color:#6B7280">Los valores son referenciales y corresponden a los publicados en 3gi.cl; el alcance y el precio final se definen en cada caso.</p>
+''' + cta('guia-fases-3gi'), '4'))
+
+# ── 7. Checklist: ¿Radar Express o Radar 360? (post "Radar Express o Radar 360: ¿cuál necesitas?") ─
+PDFS['checklist-radar'] = doc(
+portada("Antes de elegir por dónde empezar", "Radar Express o Radar 360: 5 preguntas para saber cuál te conviene",
+ "Elegir la variante equivocada te hace perder tiempo o gastar de más. Responde con sinceridad — sin darle vueltas.", 'checklist-radar')
++ pagina('''
+<p class="kicker">Las dos formas de empezar</p>
+<h1 style="font-size:20pt">Qué es cada una, en una línea</h1>
+<div class="dato"><span class="cifra">Radar Express</span>1 sesión con tu equipo directivo. Desde USD 1.200, según el tamaño de la empresa. Sirve si ya sabes más o menos dónde te aprieta el zapato.</div>
+<div class="dato"><span class="cifra">Radar 360</span>Una vuelta completa: entrevistas en 4 a 6 áreas, más Quick Wins tácticos. Referencia: USD 6.000. Sirve si nadie en tu empresa se pone de acuerdo en cuál es el problema real.</div>
+<p><strong>Ninguna de las dos incluye scoring, ROI ni PRD todavía.</strong> Eso es trabajo de la fase siguiente (Plan de Vuelo): recién ahí se cuantifica y se construye.</p>
+<h2>Las 5 preguntas</h2>
+<p>Responde <strong>Sí</strong> o <strong>No</strong> a cada una y cuenta cuántas veces respondiste <strong>No</strong>.</p>
+<ul class="check">
+<li><strong>1. ¿Tu equipo directivo coincide en cuál es el problema principal?</strong></li>
+<li><strong>2. ¿Sabes en qué una o dos áreas concentrarías el trabajo?</strong></li>
+<li><strong>3. ¿La información que necesitas está en pocas personas o sistemas?</strong> (No, si vive dispersa en 4 o más áreas.)</li>
+<li><strong>4. ¿Puedes partir sin mostrarle un panorama de toda la empresa a tus socios o al directorio?</strong></li>
+<li><strong>5. ¿Tienes clara tu primera prioridad, sin necesitar mejoras rápidas en varios frentes a la vez?</strong></li>
+</ul>
+''', '2')
++ pagina('''
+<h2>Tu resultado</h2>
+<div class="dato"><span class="cifra">0 a 1 "No"</span><strong>Radar Express.</strong> Ya sabes dónde mirar; una sesión con la dirección basta para ordenarlo.</div>
+<div class="dato"><span class="cifra">2 "No"</span><strong>Zona intermedia.</strong> Haz primero el Test ERA (gratuito): su informe ayuda a desempatar.</div>
+<div class="dato"><span class="cifra">3 a 5 "No"</span><strong>Radar 360.</strong> Hay que escuchar a más áreas antes de decidir dónde actuar.</div>
+<p style="font-size:9pt;color:#6B7280">Es una guía de orientación, no un compromiso: la variante final se confirma contigo antes de empezar. Valores referenciales, publicados en 3gi.cl.</p>
+''' + cta('checklist-radar'), '3'))
+
 os.makedirs('out', exist_ok=True)
-for slug, html in PDFS.items():
+import sys
+_solo = sys.argv[1:] or list(PDFS)
+for slug, html in ((k, v) for k, v in PDFS.items() if k in _solo):
     with open(f'{slug}.html', 'w') as f: f.write(html)
     weasyprint.HTML(string=html, base_url='.').write_pdf(f'out/3GI-{slug}.pdf')
     print(f'✓ out/3GI-{slug}.pdf')
