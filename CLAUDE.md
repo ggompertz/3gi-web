@@ -15,9 +15,16 @@ CLOUDFLARE_API_TOKEN=$(grep CLOUDFLARE_API_TOKEN .env | cut -d= -f2) \
   npx wrangler@latest pages deploy dist --project-name 3g-ia-agents --commit-dirty=true
 ```
 
+> ⚠️ **Verificado 22/09/2026: este fallback no puede ejecutarse hoy.** `/root/3gi-web` no existe en el
+> servidor Hetzner actual (`178.104.93.211`, reconstruido tras el incidente de seguridad del 16-19/09) —
+> habría que clonar el repo ahí de nuevo antes de poder usar este camino. El flujo primario (push directo
+> → Cloudflare Pages) sigue funcionando normalmente y no depende de esto — la regla global
+> "Hetzner-primero" (memoria `feedback_github_workflow`) tampoco aplica a este repo: push directo desde
+> la máquina de desarrollo a GitHub es correcto.
+
 > **Workaround 500 en upload:** si wrangler falla con `POST /pages/assets/upload -> 500` (CF error 1101), correr primero `python3 /root/3gi-web/docs/pre-upload.py` para pre-subir archivos uno a uno, luego wrangler normalmente. Causa: CF Worker crashea con PNGs grandes en batch JSON.
 
-**SSH alias correcto:** `hetzner-3gi` (no `hetzner`) → `ssh -i ~/.ssh/hetzner_n8n root@178.156.157.141`
+**SSH alias correcto:** `hetzner-3gi` (no `hetzner`) → `ssh -i ~/.ssh/hetzner_n8n root@178.104.93.211` (IP corregida 22/09/2026 — la anterior, `178.156.157.141`, es el servidor viejo comprometido y dado de baja)
 
 ## Diseño homepage (index.astro) — decisiones tomadas
 
