@@ -39,7 +39,51 @@ CLOUDFLARE_API_TOKEN=$(grep CLOUDFLARE_API_TOKEN .env | cut -d= -f2) \
 
 **P2 — Separar casos reales vs. proyectados** (`/casos`): arriba "Casos Reales Implementados" (Certificaciones, Distribuidora). Abajo sección rotulada "Casos de Uso de la Industria (Modelos Proyectados)" (Agrícola, Logística). Hoy están mezclados al mismo nivel visual → genera duda de credibilidad.
 
-**~~P3 — i18n nativa Astro~~ ✅ COMPLETADO (commit 831eb8c, Mayo 2026):** Rutas `/en/` activas. 7 páginas EN en `src/pages/en/`. Layout.astro detecta idioma por URL. hreflang en todas las páginas. Flowchart visual en `/metodologia` (commit 50452b0).
+**~~P3 — i18n nativa Astro~~ ✅ COMPLETADO (commit 831eb8c, Mayo 2026), corregido 23/09/2026:** Rutas `/en/` activas. 7 páginas EN en `src/pages/en/`. Layout.astro detecta idioma por URL. hreflang en todas las páginas. Flowchart visual en `/metodologia` (commit 50452b0). Ver sección **"i18n — arquitectura y bug histórico"** más abajo: el "completado" de mayo dejó el texto en español server-side en varias páginas, corregido recién en septiembre.
+
+## i18n — arquitectura y bug histórico (corregido 23/09/2026)
+
+**Cómo funciona hoy:** cada ruta `/en/<page>` es un archivo Astro **separado** de su equivalente
+`/es/<page>` (no hay una sola página que cambie de idioma dinámicamente). El toggle ES/EN del nav
+(`Layout.astro`) navega con `window.location.href`, no cambia estado client-side. Por lo tanto,
+**el texto de cada página debe estar hardcodeado en el idioma correcto directamente en el HTML
+que genera Astro** — no debe depender de JavaScript para mostrarse correctamente.
+
+**Bug real que existió desde mayo hasta el 23/09/2026:** varias páginas EN (`metodologia`, `casos`,
+`precios`, `nosotros`, `faq`) traían el texto **en español hardcodeado** dentro de elementos
+`data-i18n`, con una tabla de traducción en un `<script>` que recién aplicaba el inglés
+client-side, después de `DOMContentLoaded`. Visualmente en el navegador se veía bien (el JS corría
+antes de que el usuario mirara la pantalla), pero el HTML crudo que indexa Google traía español
+bajo un `<title>` en inglés — causa probable de que esas URLs aparecieran "rastreada, actualmente
+sin indexar" en Search Console. Además, el mismo patrón afectaba al nav/footer/cookie banner
+compartidos (`Layout.astro`) y a dos bloques `Schema.org` JSON-LD (`ProfessionalService` +
+`FAQPage`) inyectados en el `<head>` de **todas** las páginas del sitio, también hardcodeados en
+español sin condicional de idioma.
+
+**Cómo se corrigió:** el texto en inglés ya existía completo en las tablas JS (nunca se aplicaba
+server-side) — se extrajo con Node (`vm`-safe, evitando `eval` directo de JS con referencias a
+`window`) y se insertó directamente en el HTML de Astro. Los scripts de traducción `data-i18n`
+quedaron vestigiales una vez el HTML se sirve ya en el idioma correcto y se eliminaron. El nav,
+footer, cookie banner y los dos JSON-LD ahora usan `{lang === 'en' ? '...' : '...'}` (o
+`set:html={JSON.stringify(lang === 'en' ? schemaXEn : schemaXEs)}` para los JSON-LD) directamente
+en `Layout.astro`, condicionado por el prop `lang` que cada página ya pasa al `<Layout>`.
+
+**Regla para páginas EN nuevas o modificadas**: nunca usar `data-i18n` + script de traducción para
+el contenido propio de una página — escribir el texto en inglés directamente en el archivo
+`.astro` de `/en/`. Si se usa un script de reemplazo automatizado (ver commit `d5fced4` en
+`my-config/handoffs/2026-09-23_3gi-web-i18n-server-side-en-pages.md` para el patrón completo), no
+asumir que cada clave aparece una sola vez en el archivo — verificar con un escaneo de
+consistencia entre ocurrencias duplicadas antes de dar el fix por terminado.
+
+**Glosario de marca ES → EN** (confirmado con Gonzalo 23/09/2026, no reinventar):
+
+| Español | Inglés |
+|---|---|
+| Radar (Express / 360) | Radar (Express / 360) — sin traducir |
+| Test ERA | ERA Test |
+| Plan de Vuelo | Flight Plan |
+| Piloto Automático | Autopilot |
+| Diagnóstico (genérico) | Diagnosis (NO confundir con "Test ERA" — son términos distintos en inglés aunque en español a veces se usan indistintamente) |
 
 **P4 — Quiz móvil** (`/diagnostico`): en pantallas ≤768px, las tarjetas de opciones de la grilla deben cambiar a lista vertical con padding amplio. Hoy el texto se comprime en bloques rígidos.
 
