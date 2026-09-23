@@ -38,6 +38,11 @@ const enPath = lang === 'en' ? currentPath : `/en${currentPath}`;
 const esUrl = `https://3gi.cl${esPath}`;
 const enUrl = `https://3gi.cl${enPath}`;
 const p = lang === 'en' ? '/en' : '';
+
+const schemaServiceEs = {"@context": "https://schema.org", "@type": "ProfessionalService", "name": "3G Intelligence", "alternateName": "3GI", "url": "https://3gi.cl", "logo": "https://3gi.cl/isotipo.png", "description": "Consultoría de inteligencia artificial para PyMEs latinoamericanas. Radar (diagnóstico), Plan de Vuelo (roadmap e implementación) y Piloto Automático (soporte continuo), con ROI medible.", "email": "chat@3gi.cl", "telephone": "+56978780575", "areaServed": "Latinoamérica", "hasOfferCatalog": {"@type": "OfferCatalog", "name": "Consultoría de Inteligencia Artificial para PyMEs"}, "priceRange": "USD 1200 - USD 8000", "knowsAbout": ["Inteligencia Artificial", "Automatización", "PyMEs", "Diagnóstico IA", "Transformación Digital"], "founder": {"@type": "Person", "name": "Gonzalo Gompertz Geldres", "jobTitle": "Fundador y Director", "url": "https://www.linkedin.com/in/gonzalo-gompertz-geldres"}, "sameAs": ["https://www.linkedin.com/company/3g-intelligence", "https://www.instagram.com/3gintelligence/", "https://www.youtube.com/@3gintelligence", "https://www.facebook.com/3gintelligence/"]};
+const schemaServiceEn = {"@context": "https://schema.org", "@type": "ProfessionalService", "name": "3G Intelligence", "alternateName": "3GI", "url": "https://3gi.cl", "logo": "https://3gi.cl/isotipo.png", "description": "AI consulting for Latin American SMBs. Radar (diagnosis), Flight Plan (roadmap and implementation), and Autopilot (ongoing support), with measurable ROI.", "email": "chat@3gi.cl", "telephone": "+56978780575", "areaServed": "Latin America", "hasOfferCatalog": {"@type": "OfferCatalog", "name": "AI Consulting for SMBs"}, "priceRange": "USD 1200 - USD 8000", "knowsAbout": ["Artificial Intelligence", "Automation", "SMBs", "AI Diagnosis", "Digital Transformation"], "founder": {"@type": "Person", "name": "Gonzalo Gompertz Geldres", "jobTitle": "Founder & Director", "url": "https://www.linkedin.com/in/gonzalo-gompertz-geldres"}, "sameAs": ["https://www.linkedin.com/company/3g-intelligence", "https://www.instagram.com/3gintelligence/", "https://www.youtube.com/@3gintelligence", "https://www.facebook.com/3gintelligence/"]};
+const schemaFaqEs = {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "¿Cuánto cuesta el diagnóstico de IA y qué incluye?", "acceptedAnswer": {"@type": "Answer", "text": "El Test ERA inicial es completamente gratuito. Radar Express parte en USD 1.200 según el tamaño de tu empresa, Plan de Vuelo desde USD 6.700, y Piloto Automático (soporte continuo) va de USD 1.500 a USD 8.000 al mes — con precio fijo y entregables definidos antes de comenzar. No hay cobros por hora ni sorpresas al final."}}, {"@type": "Question", "name": "¿Cómo sé si la IA realmente le va a servir a mi negocio?", "acceptedAnswer": {"@type": "Answer", "text": "Eso es exactamente lo que mide el Diagnóstico: 5 dimensiones de madurez operacional. En menos de 5 minutos sabes en qué ERA estás y qué oportunidades concretas tiene tu empresa — antes de comprometer un peso."}}, {"@type": "Question", "name": "¿Han trabajado con empresas de mi rubro o tamaño?", "acceptedAnswer": {"@type": "Answer", "text": "Sí. Servicios profesionales, certificaciones, manufactura, logística, comercio. Si tu empresa tiene procesos repetibles con 5–200 personas, el método funciona — independiente del rubro."}}, {"@type": "Question", "name": "¿Cuánto tiempo toma ver resultados?", "acceptedAnswer": {"@type": "Answer", "text": "El primer entregable concreto (tu Radar, con Score de Madurez) llega en menos de una semana. El roadmap ejecutable con ROI proyectado a 12 meses, dentro de Plan de Vuelo. Los resultados operacionales reales comienzan cuando Plan de Vuelo entra en la etapa de implementación."}}, {"@type": "Question", "name": "¿Quién hace el trabajo — ustedes o me dejan solo con una herramienta?", "acceptedAnswer": {"@type": "Answer", "text": "Nosotros hacemos el diagnóstico, el análisis y el roadmap. No es un curso ni software que te dejamos solo. Plan de Vuelo incluye la implementación con un consultor dedicado, y Piloto Automático te acompaña después si lo necesitas. El objetivo es que al terminar, tu equipo opere de forma autónoma — sin depender de 3GI."}}]};
+const schemaFaqEn = {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "How much does the AI diagnosis cost and what does it include?", "acceptedAnswer": {"@type": "Answer", "text": "The initial ERA Test is completely free. Radar Express starts at USD 1,200 depending on company size, Flight Plan from USD 6,700, and Autopilot (ongoing support) runs USD 1,500 to USD 8,000 per month, with fixed pricing and defined deliverables before you start. No hourly fees, no surprises at the end."}}, {"@type": "Question", "name": "How do I know if AI will actually help my business?", "acceptedAnswer": {"@type": "Answer", "text": "That's exactly what the diagnosis measures: 5 dimensions of operational maturity. In less than 5 minutes you know what ERA you're in and what concrete opportunities your company has, before committing a single dollar."}}, {"@type": "Question", "name": "Have you worked with companies in my industry or size?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Professional services, certifications, manufacturing, logistics, trade. If your company has repeatable processes with 5 to 200 people, the method works, regardless of industry."}}, {"@type": "Question", "name": "How long does it take to see results?", "acceptedAnswer": {"@type": "Answer", "text": "The first concrete deliverable (your Radar, with a Maturity Score) arrives in under a week. The executable roadmap with 12-month projected ROI comes within Flight Plan. Real operational results start once Flight Plan reaches the implementation stage."}}, {"@type": "Question", "name": "Who does the work, you or do I get left with just a tool?", "acceptedAnswer": {"@type": "Answer", "text": "We do the diagnosis, the analysis, and the roadmap. It's not a course or software we hand you and leave. Flight Plan includes implementation with a dedicated consultant, and Autopilot supports you afterward if needed. The goal is that by the end, your team operates autonomously, without depending on 3GI."}}]};
 ---
 <!DOCTYPE html>
 <html lang={lang}>
@@ -132,88 +137,10 @@ const p = lang === 'en' ? '/en' : '';
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%2306060D'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-family='Arial Black,sans-serif' font-weight='900' font-size='13' fill='%2300E891'%3E3G%3C/text%3E%3C/svg%3E" />
 
   <!-- Schema.org JSON-LD -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "ProfessionalService",
-    "name": "3G Intelligence",
-    "alternateName": "3GI",
-    "url": "https://3gi.cl",
-    "logo": "https://3gi.cl/isotipo.png",
-    "description": "Consultoría de inteligencia artificial para PyMEs latinoamericanas. Radar (diagnóstico), Plan de Vuelo (roadmap e implementación) y Piloto Automático (soporte continuo), con ROI medible.",
-    "email": "chat@3gi.cl",
-    "telephone": "+56978780575",
-    "areaServed": "Latinoamérica",
-    "hasOfferCatalog": {
-      "@type": "OfferCatalog",
-      "name": "Consultoría de Inteligencia Artificial para PyMEs"
-    },
-    "priceRange": "USD 1200 - USD 8000",
-    "knowsAbout": ["Inteligencia Artificial", "Automatización", "PyMEs", "Diagnóstico IA", "Transformación Digital"],
-    "founder": {
-      "@type": "Person",
-      "name": "Gonzalo Gompertz Geldres",
-      "jobTitle": "Fundador y Director",
-      "url": "https://www.linkedin.com/in/gonzalo-gompertz-geldres"
-    },
-    "sameAs": [
-      "https://www.linkedin.com/company/3g-intelligence",
-      "https://www.instagram.com/3gintelligence/",
-      "https://www.youtube.com/@3gintelligence",
-      "https://www.facebook.com/3gintelligence/"
-    ]
-  }
-  </script>
+  <script type="application/ld+json" set:html={JSON.stringify(lang === 'en' ? schemaServiceEn : schemaServiceEs)}></script>
 
   <!-- FAQ Schema -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "¿Cuánto cuesta el diagnóstico de IA y qué incluye?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "El Test ERA inicial es completamente gratuito. Radar Express parte en USD 1.200 según el tamaño de tu empresa, Plan de Vuelo desde USD 6.700, y Piloto Automático (soporte continuo) va de USD 1.500 a USD 8.000 al mes — con precio fijo y entregables definidos antes de comenzar. No hay cobros por hora ni sorpresas al final."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "¿Cómo sé si la IA realmente le va a servir a mi negocio?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Eso es exactamente lo que mide el Diagnóstico: 5 dimensiones de madurez operacional. En menos de 5 minutos sabes en qué ERA estás y qué oportunidades concretas tiene tu empresa — antes de comprometer un peso."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "¿Han trabajado con empresas de mi rubro o tamaño?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Sí. Servicios profesionales, certificaciones, manufactura, logística, comercio. Si tu empresa tiene procesos repetibles con 5–200 personas, el método funciona — independiente del rubro."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "¿Cuánto tiempo toma ver resultados?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "El primer entregable concreto (tu Radar, con Score de Madurez) llega en menos de una semana. El roadmap ejecutable con ROI proyectado a 12 meses, dentro de Plan de Vuelo. Los resultados operacionales reales comienzan cuando Plan de Vuelo entra en la etapa de implementación."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "¿Quién hace el trabajo — ustedes o me dejan solo con una herramienta?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Nosotros hacemos el diagnóstico, el análisis y el roadmap. No es un curso ni software que te dejamos solo. Plan de Vuelo incluye la implementación con un consultor dedicado, y Piloto Automático te acompaña después si lo necesitas. El objetivo es que al terminar, tu equipo opere de forma autónoma — sin depender de 3GI."
-        }
-      }
-    ]
-  }
-  </script>
+  <script type="application/ld+json" set:html={JSON.stringify(lang === 'en' ? schemaFaqEn : schemaFaqEs)}></script>
 
   <style is:global>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -771,7 +698,7 @@ const p = lang === 'en' ? '/en' : '';
 <!-- NAV -->
 <nav>
   <div class="nav-inner">
-    <a href="/" class="logo" aria-label="3G Intelligence — inicio">
+    <a href="/" class="logo" aria-label={lang === 'en' ? '3G Intelligence, home' : '3G Intelligence, inicio'}>
       <div class="logo-name"><span>3G</span> Intelligence</div>
       <div class="logo-sub" data-i18n="logo-sub">{lang === 'en' ? 'AI applied to real business' : 'IA aplicada al negocio real'}</div>
     </a>
@@ -787,12 +714,12 @@ const p = lang === 'en' ? '/en' : '';
         <button class={`lang-btn${lang === 'es' ? ' active' : ''}`} onclick={`window.location.href='${esPath}'`}>ES</button>
         <button class={`lang-btn${lang === 'en' ? ' active' : ''}`} onclick={`window.location.href='${enPath}'`}>EN</button>
       </div>
-      <a href="https://wa.me/56988974898" target="_blank" class="btn btn-outline" style="padding:10px 18px; font-size:14px;" aria-label="Contactar por WhatsApp">
+      <a href="https://wa.me/56988974898" target="_blank" class="btn btn-outline" style="padding:10px 18px; font-size:14px;" aria-label={lang === 'en' ? 'Contact via WhatsApp' : 'Contactar por WhatsApp'}>
         <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
         <span data-i18n="nav-whatsapp">{lang === 'en' ? 'WhatsApp' : 'WhatsApp'}</span>
       </a>
       <a href="https://cal.com/3g-intelligence/30min" target="_blank" class="btn btn-primary" style="padding:10px 20px; font-size:14px;" data-i18n="nav-cta">{lang === 'en' ? 'Schedule a meeting' : 'Agendar reunión'}</a>
-      <button class="nav-burger" id="navBurger" aria-label="Abrir menú" aria-expanded="false">
+      <button class="nav-burger" id="navBurger" aria-label={lang === 'en' ? 'Open menu' : 'Abrir menú'} aria-expanded="false">
         <span></span><span></span><span></span>
       </button>
     </div>
@@ -800,7 +727,7 @@ const p = lang === 'en' ? '/en' : '';
 </nav>
 
 <!-- MOBILE MENU -->
-<div class="mobile-menu" id="mobileMenu" role="dialog" aria-label="Menú de navegación">
+<div class="mobile-menu" id="mobileMenu" role="dialog" aria-label={lang === 'en' ? 'Navigation menu' : 'Menú de navegación'}>
   <ul class="mobile-menu-links">
     <li><a href={`${p}/metodologia`} data-i18n="nav-met">{lang === 'en' ? 'Methodology' : 'Metodología'}</a></li>
     <li><a href={`${p}/precios`} data-i18n="nav-precios">{lang === 'en' ? 'Pricing' : 'Precios'}</a></li>
@@ -824,7 +751,7 @@ const p = lang === 'en' ? '/en' : '';
   <footer>
   <div class="container">
     <div class="footer-inner">
-      <a href="/" class="logo" aria-label="3G Intelligence — inicio">
+      <a href="/" class="logo" aria-label={lang === 'en' ? '3G Intelligence, home' : '3G Intelligence, inicio'}>
         <div class="logo-name"><span>3G</span> Intelligence</div>
         <div class="logo-sub">{lang === 'en' ? 'AI applied to real business' : 'IA aplicada al negocio real'}</div>
       </a>
