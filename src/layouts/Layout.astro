@@ -29,7 +29,7 @@ const esPath = currentPath.startsWith('/en') ? (currentPath.replace(/^\/en/, '')
 // emitir hreflang="en", de lo contrario Google rastrea /en/<ruta> inexistentes
 // y las reporta como 404 en Search Console (ver informe indexación 28/7/26).
 const ES_SLUGS_WITH_EN_VERSION = new Set([
-  '/', '/casos', '/faq', '/inteligencia-organizacional', '/metodologia',
+  '/', '/casos', '/contenido', '/faq', '/inteligencia-organizacional', '/metodologia',
   '/nosotros', '/precios', '/privacidad', '/recursos', '/terminos', '/test-era', '/test-era-ia',
 ]);
 const esPathNoSlash = esPath !== '/' ? esPath.replace(/\/$/, '') : esPath;

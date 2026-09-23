@@ -1,0 +1,114 @@
+---
+import Layout from '../../layouts/Layout.astro';
+---
+
+<style is:global>
+  .visually-hidden { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
+
+  .page-hero { padding: 140px 0 72px; background: var(--night-2); border-bottom: 1px solid var(--border); }
+  .page-tag { font-family: 'Syne', sans-serif; font-size: 11px; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: var(--green); margin-bottom: 16px; }
+  .page-title { font-family: 'Syne', sans-serif; font-weight: 800; font-size: clamp(32px, 5vw, 56px); letter-spacing: -0.03em; line-height: 1.05; margin-bottom: 16px; }
+  .page-sub { font-size: 18px; font-weight: 300; color: rgba(238,241,246,0.6); max-width: 620px; line-height: 1.65; }
+
+  .content-section { padding: 80px 0; }
+  .lang-note { display: flex; gap: 12px; align-items: flex-start; background: rgba(0,232,145,0.06); border: 1px solid rgba(0,232,145,0.2); border-radius: 12px; padding: 18px 22px; margin-bottom: 56px; max-width: 620px; }
+  .lang-note p { font-size: 14px; color: rgba(238,241,246,0.7); line-height: 1.6; margin: 0; }
+  .lang-note strong { color: var(--green); }
+
+  .en-list { display: flex; flex-direction: column; gap: 0; margin-bottom: 64px; border-top: 1px solid var(--border); }
+  .en-row { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 8px 16px; padding: 20px 0; border-bottom: 1px solid var(--border); }
+  .en-row-main { display: flex; flex-direction: column; gap: 4px; }
+  .en-row-title { font-family: 'Syne', sans-serif; font-weight: 700; font-size: 16px; color: var(--offwh); }
+  .en-row-title a { color: inherit; text-decoration: none; }
+  .en-row-title a:hover { color: var(--green); }
+  .en-row-orig { font-size: 12.5px; color: rgba(238,241,246,0.35); font-style: italic; }
+  .en-row-lang { flex: none; font-size: 10px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(238,241,246,0.4); border: 1px solid var(--border); border-radius: 100px; padding: 3px 10px; }
+
+  .follow-section { padding-top: 48px; border-top: 1px solid var(--border); text-align: center; }
+  .follow-text { font-size: 16px; color: rgba(238,241,246,0.6); margin-bottom: 24px; }
+  .follow-networks { display: flex; justify-content: center; gap: 12px; flex-wrap: wrap; }
+  .follow-btn { display: inline-flex; align-items: center; gap: 8px; font-size: 13px; font-weight: 600; color: rgba(238,241,246,0.7); background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; padding: 10px 18px; transition: all 0.2s; text-decoration: none; }
+  .follow-btn:hover { color: var(--green); border-color: rgba(0,232,145,0.4); background: rgba(0,232,145,0.06); }
+</style>
+
+<Layout title="AI Content Hub · Practical AI for LATAM SMBs · 3G Intelligence" description="Weekly, no-nonsense content on applying AI to real business problems — the Framework 3 ERAs, real cases, measurable results." lang="en">
+  <div class="page-hero">
+    <div class="container">
+      <div class="page-tag">AI applied to real business</div>
+      <h1 class="page-title">Learn before you decide.</h1>
+      <p class="page-sub">Every week we publish a piece on AI applied to real business problems — no jargon, with concrete cases and measurable results.</p>
+    </div>
+  </div>
+
+  <section class="content-section">
+    <div class="container">
+      <div class="lang-note">
+        <p>
+          <strong>Heads up:</strong> our content library is written <strong>in Spanish</strong> — it's the
+          language of the LATAM SMB owners and operators we work with every day. The core pages of this
+          site (<a href="/en/metodologia/" style="color:var(--green)">Methodology</a>,
+          <a href="/en/precios/" style="color:var(--green)">Pricing</a>,
+          <a href="/en/inteligencia-organizacional/" style="color:var(--green)">the book</a>) are fully
+          available in English. Below, the most recent pieces — click through to read or watch them
+          (Spanish audio/text, most social platforms offer auto-translated captions).
+        </p>
+      </div>
+
+      <h2 class="visually-hidden">Recent content (in Spanish)</h2>
+      <div class="en-list">
+        <div class="en-row">
+          <div class="en-row-main">
+            <div class="en-row-title"><a href="https://www.linkedin.com/feed/update/urn:li:activity:7508207073592262656" target="_blank" rel="noopener">Autonomous agents: behind the scenes</a></div>
+            <div class="en-row-orig">"Agentes autónomos: behind the scenes"</div>
+          </div>
+          <span class="en-row-lang">In Spanish</span>
+        </div>
+        <div class="en-row">
+          <div class="en-row-main">
+            <div class="en-row-title"><a href="https://www.linkedin.com/posts/3g-intelligence_inteligenciaartificial-pyme-frameworkera-activity-7504176486673715200-Y5-x" target="_blank" rel="noopener">The wrong metric</a></div>
+            <div class="en-row-orig">"La métrica equivocada"</div>
+          </div>
+          <span class="en-row-lang">In Spanish</span>
+        </div>
+        <div class="en-row">
+          <div class="en-row-main">
+            <div class="en-row-title"><a href="https://www.linkedin.com/posts/3g-intelligence_gobernanzaia-frameworkera-transformaciondigital-activity-7503090940593602560-Kmpv" target="_blank" rel="noopener">The governance gap</a></div>
+            <div class="en-row-orig">"La brecha de gobernanza"</div>
+          </div>
+          <span class="en-row-lang">In Spanish</span>
+        </div>
+        <div class="en-row">
+          <div class="en-row-main">
+            <div class="en-row-title"><a href="https://www.linkedin.com/posts/3g-intelligence_inteligenciaartificial-cambioparadigna-libro-activity-7501670496363667456-afme" target="_blank" rel="noopener">The paradigm shift</a></div>
+            <div class="en-row-orig">"El cambio de paradigma"</div>
+          </div>
+          <span class="en-row-lang">In Spanish</span>
+        </div>
+        <div class="en-row">
+          <div class="en-row-main">
+            <div class="en-row-title"><a href="https://www.linkedin.com/posts/3g-intelligence_inteligenciaartificial-iaresponsable-frameworkera-activity-7500581571679363072-rgUg" target="_blank" rel="noopener">AI hallucinations</a></div>
+            <div class="en-row-orig">"Alucinaciones en IA"</div>
+          </div>
+          <span class="en-row-lang">In Spanish</span>
+        </div>
+        <div class="en-row">
+          <div class="en-row-main">
+            <div class="en-row-title"><a href="https://www.linkedin.com/posts/3g-intelligence_4-de-cada-5-proyectos-de-ia-fracasan-y-activity-7499173258525638656-210e" target="_blank" rel="noopener">A diagnosis isn't enough — you need to see it through</a></div>
+            <div class="en-row-orig">"El diagnóstico no basta: hay que acompañar la ejecución"</div>
+          </div>
+          <span class="en-row-lang">In Spanish</span>
+        </div>
+      </div>
+
+      <div class="follow-section">
+        <p class="follow-text">Follow along for the full library:</p>
+        <div class="follow-networks">
+          <a href="https://www.linkedin.com/company/3g-intelligence" target="_blank" rel="noopener" class="follow-btn">LinkedIn</a>
+          <a href="https://www.youtube.com/@3gintelligence" target="_blank" rel="noopener" class="follow-btn">YouTube</a>
+          <a href="https://www.instagram.com/3gintelligence/" target="_blank" rel="noopener" class="follow-btn">Instagram</a>
+          <a href="https://www.facebook.com/3gintelligence/" target="_blank" rel="noopener" class="follow-btn">Facebook</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>
