@@ -258,6 +258,45 @@ portada("Antes de elegir por dónde empezar", "Radar Express o Radar 360: 5 preg
 <p style="font-size:9pt;color:#6B7280">Es una guía de orientación, no un compromiso: la variante final se confirma contigo antes de empezar. Valores referenciales, publicados en 3gi.cl.</p>
 ''' + cta('checklist-radar'), '3'))
 
+# ── 6. ¿Tienes el número de retorno de tu IA antes de gastar? ──────────────
+PDFS['retorno-antes-de-gastar'] = doc(
+portada("El retorno antes del gasto", "¿Tienes el número de retorno de tu IA antes de gastar el primer peso?",
+ "Una hoja de trabajo de 6 pasos para estimar el retorno de una iniciativa de IA antes de comprometer presupuesto.", 'retorno-antes-de-gastar')
++ pagina('''
+<p class="kicker">Por qué ahora</p>
+<h1 style="font-size:20pt">La presión ya no es "adopta IA". Es "demuestra el retorno".</h1>
+<p class="lead">Una encuesta de Harris Poll a 900 CEOs muestra cuánto se juegan quienes toman la decisión.</p>
+<div class="dato"><span class="cifra">78%</span>de los CEOs encuestados cree que una estrategia de IA fallida podría costarle el puesto.<div class="fuente">Dataiku, Global AI Confessions Report: CEO Edition 2026 (Harris Poll, 900 CEOs, 8 países)</div></div>
+<div class="dato"><span class="cifra">87%</span>dice que apostaría su cargo a los resultados de su IA.<div class="fuente">Misma fuente</div></div>
+<div class="dato"><span class="cifra">56%</span>admite que sus competidores tienen una estrategia de IA mejor que la suya.<div class="fuente">Misma fuente</div></div>
+<p>Tu empresa quizá no tiene directorio. Tiene socios, un banco o una caja que no perdona. La pregunta es la misma: <strong>¿cuál es el retorno y cuándo lo sabes?</strong></p>
+<p>La encuesta no incluye países de Latinoamérica; se cita para mostrar la dirección de la presión, no para describir tu mercado.</p>
+''', '2')
++ pagina('''
+<h2>La hoja de trabajo: 6 pasos</h2>
+<p>Hazla con lápiz y con datos de tu operación. Si no puedes llenar un paso con un dato real, ese vacío es el primer hallazgo.</p>
+<ul class="check">
+<li><strong>1. La decisión.</strong> ¿Qué proceso o decisión concreta cambiaría con la IA? Elige uno solo. ______________________</li>
+<li><strong>2. El costo de hoy.</strong> Horas por semana × costo por hora × 52 = ________ al año. Suma lo que cuestan los errores, el retrabajo o las ventas perdidas por demora: ________</li>
+<li><strong>3. El beneficio esperado.</strong> ¿Qué parte de ese costo debería bajar, y qué evidencia tienes (una prueba, un caso comparable, tus propios datos), más allá de la promesa del proveedor? ________</li>
+<li><strong>4. El costo de la iniciativa.</strong> Licencias + implementación + tiempo de tu equipo + mantención, en 12 meses: ________</li>
+<li><strong>5. La cuenta.</strong> Retorno a 12 meses = (beneficio anual − costo de la iniciativa) ÷ costo de la iniciativa = ________ %</li>
+<li><strong>6. El dueño del número.</strong> ¿Quién responde por él dentro de tu empresa? ______________________</li>
+</ul>
+''' , '3')
++ pagina('''
+<h2>Antes de creerle a tu propia cuenta: 3 condiciones</h2>
+<p>En el libro <em>Inteligencia Organizacional en la Era IA</em> la tesis es que dos organizaciones con el mismo presupuesto, el mismo proveedor y el mismo caso de uso pueden obtener resultados radicalmente distintos. La diferencia está en la estructura de la organización, no en la tecnología. Revisa tres dimensiones:</p>
+<ul class="check">
+<li><strong>Información confiable.</strong> ¿Ventas y finanzas dan la misma cifra del mes pasado? Si no, el beneficio del paso 3 se apoya en datos que nadie comparte.</li>
+<li><strong>Coordinación entre áreas.</strong> ¿Lo que promete una área lo puede entregar la otra, a través de sistemas y no de conversaciones sueltas?</li>
+<li><strong>Velocidad de decisión.</strong> Si el modelo recomienda hoy y la organización tarda tres semanas en actuar, la ventaja desaparece.</li>
+</ul>
+<p>Si alguna respuesta es No, el beneficio del paso 3 probablemente no se materialice aunque la tecnología funcione. Si los pasos 2 o 3 quedaron en blanco, todavía no tienes el número, y es mejor saberlo antes de gastar.</p>
+<h2>Cómo lo hacemos en 3GI</h2>
+<p>Parte con el Test ERA (gratis); si hace falta, sigue el Radar, que ubica dónde está tu empresa hoy. El retorno se cuantifica en el Plan de Vuelo: ROI a 12 meses con evidencia, antes de construir nada.</p>
+''' + cta('retorno-antes-de-gastar'), '4'))
+
 os.makedirs('out', exist_ok=True)
 import sys
 _solo = sys.argv[1:] or list(PDFS)
