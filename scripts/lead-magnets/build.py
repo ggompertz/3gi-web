@@ -297,6 +297,39 @@ portada("El retorno antes del gasto", "¿Tienes el número de retorno de tu IA a
 <p>Parte con el Test ERA (gratis); si hace falta, sigue el Radar, que ubica dónde está tu empresa hoy. El retorno se cuantifica en el Plan de Vuelo: ROI a 12 meses con evidencia, antes de construir nada.</p>
 ''' + cta('retorno-antes-de-gastar'), '4'))
 
+# ── 7. 5 preguntas para quien te cotiza un proyecto de IA ───────────────────
+PDFS['5-preguntas-cotizacion'] = doc(
+portada("Antes de aprobar un precio", "5 preguntas para quien te cotiza un proyecto de IA",
+ "Una guía corta para evaluar una cotización de inteligencia artificial: qué preguntar, qué respuesta buscar y qué señal de alerta no ignorar.", '5-preguntas-cotizacion')
++ pagina('''
+<p class="kicker">Por qué importa</p>
+<h1 style="font-size:20pt">Cotizar sin conocer tu empresa es adivinar.</h1>
+<p class="lead">El precio de un proyecto de IA depende de dos cosas que nadie puede saber desde afuera.</p>
+<div class="dato"><span class="cifra">1</span><strong>Cuántas oportunidades vas a perseguir.</strong> No todas valen lo mismo ni conviene abordarlas a la vez.</div>
+<div class="dato"><span class="cifra">2</span><strong>Qué tan compleja es la solución.</strong> Depende de tus procesos, de la calidad de tus datos y de cómo se coordinan tus áreas.</div>
+<p>Eso solo se descubre mirando la empresa por dentro. Quien pone un precio sin hacerlo está haciendo una apuesta, y la diferencia, si se equivoca, la pagas tú: en alcance recortado, en cambios de precio a mitad de camino o en una solución que nadie usa.</p>
+<p>Estas cinco preguntas te ayudan a distinguir una cotización fundamentada de una suposición bien presentada.</p>
+''', '2')
++ pagina('''
+<h2>Las 5 preguntas</h2>
+<h3>1. ¿Qué conoce de mi empresa antes de poner precio?</h3>
+<p><strong>Buena señal:</strong> pidió ver procesos y datos, y habló con quienes los operan.<br><span style="color:#EF4444"><strong>Alerta:</strong></span> te dio un precio en la primera reunión.</p>
+<h3>2. ¿De qué depende el precio final?</h3>
+<p><strong>Buena señal:</strong> lo explica: cantidad de oportunidades, complejidad, integraciones, calidad de los datos.<br><span style="color:#EF4444"><strong>Alerta:</strong></span> "precio cerrado" sin supuestos escritos.</p>
+<h3>3. ¿Qué incluye y qué no?</h3>
+<p><strong>Buena señal:</strong> separa diseño, construcción, integración y acompañamiento, con responsables.<br><span style="color:#EF4444"><strong>Alerta:</strong></span> "implementación" como una sola línea sin detalle.</p>
+<h3>4. ¿Cómo y cuándo voy a saber si funcionó?</h3>
+<p><strong>Buena señal:</strong> define antes una métrica, un punto de partida y un plazo.<br><span style="color:#EF4444"><strong>Alerta:</strong></span> promete "mejoras de eficiencia" sin un solo número.</p>
+<h3>5. ¿Qué pasa con mis datos?</h3>
+<p><strong>Buena señal:</strong> explica dónde se guardan, quién accede y si se usan para entrenar modelos.<br><span style="color:#EF4444"><strong>Alerta:</strong></span> no sabe responder, o responde "no se preocupe".</p>
+''', '3')
++ pagina('''
+<h2>Cómo leer las respuestas</h2>
+<p>Si en dos o más preguntas la respuesta es una alerta, todavía no hay una cotización: hay una estimación. Pide que la repita después de conocer tu operación.</p>
+<h2>Cómo lo hacemos en 3GI</h2>
+<p>Primero el Radar: dónde está tu empresa hoy y qué oportunidades hay. Al cerrarlo, cotizamos el Plan de Vuelo con números reales, no con supuestos.</p>
+''' + cta('5-preguntas-cotizacion'), '4'))
+
 os.makedirs('out', exist_ok=True)
 import sys
 _solo = sys.argv[1:] or list(PDFS)
