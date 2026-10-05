@@ -96,7 +96,7 @@ portada("El framework", "Las 3 ERAs: ¿en cuál está tu empresa?",
 <p>Cada ERA tiene además sub-niveles (ERA 1-, ERA 1, ERA 1+ …) que precisan el punto exacto del camino, los errores predecibles al implementar IA desde ahí, y las condiciones concretas para avanzar a la siguiente etapa. Ese nivel de detalle — las señales diagnósticas completas, las transiciones medibles y el camino de seis fases para moverse de una ERA a otra — es el corazón del libro.</p>
 <blockquote>La IA no transforma organizaciones. Las organizaciones con la estructura adecuada transforman sus resultados usando IA como herramienta.<span class="autor">— Inteligencia Organizacional en la Era IA</span></blockquote>
 <h2>El primer paso es gratis</h2>
-<p>Saber tu ERA con precisión no requiere una consultoría de meses: requiere responder con honestidad un conjunto de preguntas sobre cómo opera realmente tu empresa. El Test ERA lo hace en 5 minutos y entrega tu perfil operacional y comercial con un informe generado por IA.</p>
+<p>Saber tu ERA con precisión no requiere una consultoría de meses: requiere responder con honestidad un conjunto de preguntas sobre cómo opera realmente tu empresa. El Test ERA lo hace desde 5 minutos y entrega tu perfil operacional y comercial con un informe generado por IA.</p>
 ''' + cta('las-3-eras'), '3'))
 
 # ── 3. 10 preguntas antes de invertir en IA ───────────────────────────────────
