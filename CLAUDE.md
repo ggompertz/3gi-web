@@ -85,6 +85,15 @@ consistencia entre ocurrencias duplicadas antes de dar el fix por terminado.
 | Piloto Automático | Autopilot |
 | Diagnóstico (genérico) | Diagnosis (NO confundir con "Test ERA" — son términos distintos en inglés aunque en español a veces se usan indistintamente) |
 
+## Nomenclatura y precios en /precios (corregido 14/10/2026, PR #9 y #10)
+
+- **El Test ERA es gratuito y NUNCA se llama "diagnóstico".** "Diagnóstico" es el nombre interno del servicio F1 de pago; la capa pública es **Radar Express / Radar 360 → Plan de Vuelo → Piloto Automático**. La nota de valor de `/precios` decía "el costo del Test ERA se descuenta de Plan de Vuelo" (falso: el Test ERA no cuesta); se refería al Radar. Corregido en `precios.astro` y `en/precios.astro`.
+- **Política de descuento:** lo que el cliente paga por su Radar (Express o 360) se descuenta del precio del Plan de Vuelo si lo contrata dentro de los **90 días** siguientes a la entrega del informe.
+- **El Radar NO incluye scoring, ROI ni PRD:** eso vive en Plan de Vuelo (desde USD 6.700; implementación aparte, 10 a 20% del ROI validado si supera USD 30.000). No prometer ROI cuantificado antes del Plan de Vuelo.
+- **Precios vigentes (consultados 14/10/2026):** Radar Express USD 1.200-1.800 micro · 1.800-2.500 pequeña · 2.500-3.500 mediana · grande a cotizar; Radar 360 USD 6.000 plano; Data Foundation N1 800-2.500, N2 2.500-6.000, N3 6.000-15.000; Piloto Automático USD 1.500-2.500 / 2.500-4.500 / 4.500-8.000 al mes.
+- **`<title>` SEO** separado del H1: ES "Precios de consultoría de IA para PyMEs · 3G Intelligence", EN "AI Consulting Pricing for SMBs · 3G Intelligence". El H1 sigue siendo "El Radar cuesta menos que un error de implementación".
+- **Segmento:** el sitio y el canvas de agosto dicen 5-200 / 10-200 empleados; el pitch del Desafío Mi Pymes usa **2 a 50** (decisión de Gonzalo, 14/10). Sin alinear: si 2 a 50 es definitivo, actualizar `index.astro`, `nosotros.astro` y el canvas.
+
 **P4 — Quiz móvil** (`/diagnostico`): en pantallas ≤768px, las tarjetas de opciones de la grilla deben cambiar a lista vertical con padding amplio. Hoy el texto se comprime en bloques rígidos.
 
 **P5 — Calculadora ROI** (`/precios`): widget con dos sliders (horas semanales perdidas + sueldo promedio) que calcule pérdida anual y la contraste con costo del Scan IA USD 2.500.
