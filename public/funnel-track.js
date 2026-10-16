@@ -37,7 +37,19 @@
     }
   }
 
+  // Reenvío a PostHog. Este archivo redefine window.__funnelTrack (el de Layout.astro solo
+  // reenviaba a PostHog), así que sin esto el funnel nunca llegaba ahí. PostHog carga async
+  // y solo con consentimiento (__posthogLoaded lo marca Layout.astro): si aún no está listo,
+  // el evento espera en __phQueue y Layout.astro lo vacía tras posthog.init().
+  function toPostHog(evento, meta) {
+    try {
+      if (window.posthog) window.posthog.capture(evento, meta || {});
+      else if (window.__posthogLoaded) (window.__phQueue = window.__phQueue || []).push([evento, meta || {}]);
+    } catch (e) {}
+  }
+
   window.__funnelTrack = function (evento, meta) {
+    toPostHog(evento, meta);
     try {
       var sid = getSessionId();
       if (!sid) return;
