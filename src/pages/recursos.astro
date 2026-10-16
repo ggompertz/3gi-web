@@ -247,14 +247,21 @@ import Layout from '../layouts/Layout.astro';
         if (!res.ok) throw new Error('bad status');
         return res.json().catch(function () { return {}; });
       })
-      .then(function () {
+      .then(function (data) {
+        if (data && data.ok === false) {
+          var e = new Error('rechazado');
+          e.codigo = data.codigo;
+          throw e;
+        }
         if (window.__funnelTrack) window.__funnelTrack('pdf_request', { pdf_slug: currentSlug });
         form.style.display = 'none';
         msg.textContent = 'Revisa tu correo, te enviamos el PDF.';
         msg.className = 'lm-msg ok';
       })
-      .catch(function () {
-        msg.textContent = 'No pudimos enviar tu solicitud. Intenta de nuevo o escríbenos por WhatsApp.';
+      .catch(function (err) {
+        var codigo = err && err.codigo;
+        var texto = codigo === 'turnstile' ? 'La verificación de seguridad falló. Recarga la página e intenta de nuevo.' : codigo === 'limite' ? 'Ya te enviamos una guía hace poco. Revisa tu correo (y la carpeta de spam) o intenta en una hora.' : null;
+        msg.textContent = texto || 'No pudimos enviar tu solicitud. Intenta de nuevo o escríbenos por WhatsApp.';
         msg.className = 'lm-msg err';
       })
       .finally(function () {
