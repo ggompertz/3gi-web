@@ -15,7 +15,7 @@ import Layout from '../layouts/Layout.astro';
       <li>Número de teléfono al contactar vía WhatsApp</li>
       <li>Mensajes enviados al bot de WhatsApp</li>
       <li>Información de la empresa ingresada en el formulario del Test ERA (nombre, sector, tamaño, procesos)</li>
-      <li>Cookies de análisis de tráfico (Google Analytics) — ver sección 8</li>
+      <li>Cookies de análisis de tráfico (Google Analytics) y de medición publicitaria (LinkedIn) — ver sección 8</li>
     </ul>
 
     <h2>3. Para qué usamos los datos</h2>
@@ -34,6 +34,7 @@ import Layout from '../layouts/Layout.astro';
       <li><strong>Supabase</strong> — almacenamiento de datos</li>
       <li><strong>Hetzner</strong> — hosting de infraestructura</li>
       <li><strong>Google</strong> — analítica de tráfico web (Google Analytics), solo si aceptas las cookies de analítica (ver sección 8)</li>
+      <li><strong>LinkedIn</strong> — medición de conversiones de campañas publicitarias (LinkedIn Insight Tag), solo si aceptas las cookies (ver sección 8)</li>
     </ul>
     <p>Estos proveedores están ubicados en Estados Unidos. La transferencia se ampara en las Cláusulas Contractuales Modelo aprobadas por el Ministerio de Economía de Chile.</p>
 
@@ -47,7 +48,7 @@ import Layout from '../layouts/Layout.astro';
     <p>Los datos se almacenan en servidores seguros con acceso restringido. No se comparten contraseñas ni información financiera a través de nuestros canales.</p>
 
     <h2>8. Cookies</h2>
-    <p>Usamos Google Analytics (vía Google Tag Manager) para entender cómo se usa este sitio. Estas cookies solo se instalan si las aceptas en el aviso que aparece en tu primera visita — si las rechazas, no se carga ninguna herramienta de analítica. Puedes cambiar tu decisión en cualquier momento desde el enlace «Preferencias de cookies» al pie de esta página.</p>
+    <p>Usamos Google Analytics (vía Google Tag Manager) para entender cómo se usa este sitio. Estas cookies solo se instalan si las aceptas en el aviso que aparece en tu primera visita — si las rechazas, no se carga ninguna herramienta de analítica ni de medición publicitaria. Si llegas desde un anuncio de LinkedIn, también usamos el LinkedIn Insight Tag para medir cuántas personas completan el Test ERA tras ver el anuncio. Puedes cambiar tu decisión en cualquier momento desde el enlace «Preferencias de cookies» al pie de esta página.</p>
     <table class="cookie-table">
       <tr class="row-head">
         <th>Cookie</th>
@@ -72,6 +73,12 @@ import Layout from '../layouts/Layout.astro';
         <td>3G Intelligence</td>
         <td>Recordar tu decisión de consentimiento</td>
         <td>Hasta que la borres</td>
+      </tr>
+      <tr>
+        <td>bcookie, lidc, UserMatchHistory (y similares)</td>
+        <td>LinkedIn</td>
+        <td>Medir conversiones de publicidad</td>
+        <td>Según la política de cookies de LinkedIn</td>
       </tr>
     </table>
   </div>

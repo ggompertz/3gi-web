@@ -327,6 +327,7 @@ async function submitAnalisis() {
     }
     if (!data.ok) throw new Error(data.error);
     if (window.__funnelTrack) window.__funnelTrack('informe_completado');
+    if (window.__linkedinConversion) window.__linkedinConversion();
     renderResult(data);
   } catch (err) {
     document.getElementById('loading-step').style.display = 'none';
