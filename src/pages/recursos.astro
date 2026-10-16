@@ -139,11 +139,14 @@ import Layout from '../layouts/Layout.astro';
         <input type="checkbox" id="lmConsent" name="consentimiento" required />
         <label for="lmConsent">Acepto recibir el recurso y comunicaciones de 3G Intelligence. Ver <a href="/privacidad" target="_blank">política de privacidad</a>.</label>
       </div>
+      <div id="lmTurnstile" style="margin:0 0 14px"></div>
       <button type="submit" class="btn btn-primary pdf-btn" id="lmSubmit">Enviarme el PDF</button>
       <div class="lm-msg" id="lmMsg"></div>
     </form>
   </div>
 </div>
+
+<script src="https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit" async defer is:inline></script>
 
 <script is:inline>
 (function () {
@@ -163,8 +166,10 @@ import Layout from '../layouts/Layout.astro';
       msg.textContent = '';
       msg.className = 'lm-msg';
       form.reset();
+      resetTurnstile();
       form.style.display = '';
       backdrop.classList.add('open');
+      renderTurnstile();
     });
   });
 
@@ -200,9 +205,25 @@ import Layout from '../layouts/Layout.astro';
     }
   }
 
+  var TS_SITEKEY = '0x4AAAAAAFYI-afz79avBbdL';
+  var tsWidget = null;
+  function renderTurnstile() {
+    if (tsWidget !== null || !window.turnstile) return;
+    tsWidget = window.turnstile.render('#lmTurnstile', { sitekey: TS_SITEKEY, theme: 'dark' });
+  }
+  function resetTurnstile() {
+    if (tsWidget !== null && window.turnstile) window.turnstile.reset(tsWidget);
+  }
+
   form.addEventListener('submit', function (e) {
     e.preventDefault();
     if (!currentSlug) return;
+    var tsToken = tsWidget !== null && window.turnstile ? window.turnstile.getResponse(tsWidget) : '';
+    if (!tsToken) {
+      msg.textContent = 'Completa la verificación de seguridad e intenta de nuevo.';
+      msg.className = 'lm-msg err';
+      return;
+    }
     submitBtn.disabled = true;
     submitBtn.textContent = 'Enviando...';
     msg.textContent = '';
@@ -214,6 +235,7 @@ import Layout from '../layouts/Layout.astro';
       pdf_slug: currentSlug,
       consentimiento: document.getElementById('lmConsent').checked,
       utm: getUtm(),
+      turnstile_token: tsToken,
     };
 
     fetch('https://n8n.3gi.cl/webhook/lead-magnet', {
@@ -236,6 +258,7 @@ import Layout from '../layouts/Layout.astro';
         msg.className = 'lm-msg err';
       })
       .finally(function () {
+        resetTurnstile();
         submitBtn.disabled = false;
         submitBtn.textContent = 'Enviarme el PDF';
       });
