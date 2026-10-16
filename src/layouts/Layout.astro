@@ -77,6 +77,9 @@ const schemaFaqEn = {"@context": "https://schema.org", "@type": "FAQPage", "main
           // en la config remota del proyecto).
           capture_exceptions: true
         });
+        // Eventos del funnel emitidos antes de que PostHog terminara de cargar (ver public/funnel-track.js)
+        (window.__phQueue || []).forEach(function(e) { window.posthog.capture(e[0], e[1]); });
+        window.__phQueue = [];
       });
     };
     // LinkedIn Insight Tag (campañas de LinkedIn Ads hacia /test-era) — mismo gate de
