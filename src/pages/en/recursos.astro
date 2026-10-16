@@ -212,14 +212,21 @@ import Layout from '../../layouts/Layout.astro';
         if (!res.ok) throw new Error('bad status');
         return res.json().catch(function () { return {}; });
       })
-      .then(function () {
+      .then(function (data) {
+        if (data && data.ok === false) {
+          var e = new Error('rechazado');
+          e.codigo = data.codigo;
+          throw e;
+        }
         if (window.__funnelTrack) window.__funnelTrack('pdf_request', { pdf_slug: currentSlug });
         form.style.display = 'none';
         msg.textContent = 'Check your inbox, we sent you the PDF.';
         msg.className = 'lm-msg ok';
       })
-      .catch(function () {
-        msg.textContent = "We couldn't send your request. Try again or reach us on WhatsApp.";
+      .catch(function (err) {
+        var codigo = err && err.codigo;
+        var texto = codigo === 'turnstile' ? 'The security check failed. Reload the page and try again.' : codigo === 'limite' ? 'We already sent a guide to this email recently. Check your inbox (and spam) or try again in an hour.' : null;
+        msg.textContent = texto || "We couldn't send your request. Try again or reach us on WhatsApp.";
         msg.className = 'lm-msg err';
       })
       .finally(function () {
