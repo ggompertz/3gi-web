@@ -15,7 +15,7 @@ import Layout from '../../layouts/Layout.astro';
       <li>Phone number when contacting via WhatsApp</li>
       <li>Messages sent to the WhatsApp bot</li>
       <li>Business information entered in the Test ERA form (name, sector, size, processes)</li>
-      <li>Traffic analytics cookies (Google Analytics) — see section 8</li>
+      <li>Traffic analytics cookies (Google Analytics) and advertising measurement cookies (LinkedIn) — see section 8</li>
     </ul>
 
     <h2>3. How we use your data</h2>
@@ -34,6 +34,7 @@ import Layout from '../../layouts/Layout.astro';
       <li><strong>Supabase</strong> — data storage</li>
       <li><strong>Hetzner</strong> — infrastructure hosting</li>
       <li><strong>Google</strong> — website traffic analytics (Google Analytics), only if you accept analytics cookies (see section 8)</li>
+      <li><strong>LinkedIn</strong> — advertising conversion measurement (LinkedIn Insight Tag), only if you accept cookies (see section 8)</li>
     </ul>
     <p>These providers are located in the United States. The transfer is supported by the Standard Contractual Clauses approved by Chile's Ministry of Economy.</p>
 
@@ -47,7 +48,7 @@ import Layout from '../../layouts/Layout.astro';
     <p>Data is stored on secure servers with restricted access. No passwords or financial information are shared through our channels.</p>
 
     <h2>8. Cookies</h2>
-    <p>We use Google Analytics (via Google Tag Manager) to understand how this site is used. These cookies are only set if you accept them in the notice shown on your first visit — if you reject them, no analytics tools are loaded. You can change your decision at any time via the "Cookie preferences" link at the bottom of this page.</p>
+    <p>We use Google Analytics (via Google Tag Manager) to understand how this site is used. These cookies are only set if you accept them in the notice shown on your first visit — if you reject them, no analytics or advertising measurement tools are loaded. If you arrive from a LinkedIn ad, we also use the LinkedIn Insight Tag to measure how many people complete the ERA Test after seeing the ad. You can change your decision at any time via the "Cookie preferences" link at the bottom of this page.</p>
     <table class="cookie-table">
       <tr class="row-head">
         <th>Cookie</th>
@@ -72,6 +73,12 @@ import Layout from '../../layouts/Layout.astro';
         <td>3G Intelligence</td>
         <td>Remember your consent decision</td>
         <td>Until you delete it</td>
+      </tr>
+      <tr>
+        <td>bcookie, lidc, UserMatchHistory (and similar)</td>
+        <td>LinkedIn</td>
+        <td>Measure advertising conversions</td>
+        <td>Per LinkedIn's cookie policy</td>
       </tr>
     </table>
   </div>
