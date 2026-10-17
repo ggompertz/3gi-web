@@ -1,0 +1,690 @@
+---
+// Plantilla única de la home para ES y EN. Textos: src/i18n/home.mjs · Precios y plazos: src/data/oferta.mjs
+// Diferencias de estructura entre idiomas (heredadas de las dos páginas originales) con lang === 'es' / 'en' y <OptDiv>.
+import OptDiv from '../OptDiv.astro';
+import { home } from '../../i18n/home.mjs';
+import { fill } from '../../data/oferta.mjs';
+const { lang = 'es' } = Astro.props;
+const t = (k) => fill(home[lang].k[k], lang);
+const p = (path) => (lang === 'en' ? '/en' + path : path);
+---
+<style is:global>
+  .pg-home .book-strip { background: var(--night-3); border-bottom: 1px solid var(--border); padding: 10px 0; }
+  .pg-home .book-strip-inner { display: flex; align-items: center; justify-content: center; gap: 10px; flex-wrap: wrap; text-align: center; }
+  .pg-home .book-strip a { font-size: 13px; color: rgba(238,241,246,0.75); }
+  .pg-home .book-strip a:hover { color: var(--offwh); }
+  .pg-home .book-strip strong { color: var(--green); font-weight: 600; }
+  .pg-home .book-strip-link { text-decoration: underline; text-underline-offset: 3px; white-space: nowrap; }
+  @media (max-width: 600px) {
+    .pg-home .book-strip { padding: 8px 0; }
+    .pg-home .book-strip a { font-size: 12px; }
+  }
+</style>
+<div class="pg-home" data-lang={lang} style="display:contents">
+<div class="book-strip" style="margin-top: 68px;">
+    <div class="container book-strip-inner">
+      <a href={p('/inteligencia-organizacional')} class="book-strip-link"><Fragment set:html={t('x-001')} /> <strong><Fragment set:html={t('x-002')} /></strong><Fragment set:html={t('x-003')} /></a>
+    </div>
+  </div>
+  <!-- HERO -->
+<section id="hero" style={lang === 'es' ? 'padding: 60px 0 72px;' : undefined}>
+  <div class="container">
+    <div class="hero-tag"><Fragment set:html={t('hero-tag')} /></div>
+    <h1 class="hero-title"><Fragment set:html={t('hero-title')} /></h1>
+    <p class="hero-sub"><Fragment set:html={t('hero-sub')} /></p>
+    <div class="hero-ctas">
+      <a href={p('/test-era')} class="btn btn-primary btn-lg">
+        <span><Fragment set:html={t('hero-btn-calendar')} /></span>
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+      <a href="https://wa.me/56988974898?text=Hola,%20me%20interesa%20conocer%20más%20sobre%20el%20diagnóstico%20de%20IA" target="_blank" class="btn btn-whatsapp btn-lg" aria-label="Escribir por WhatsApp">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        <span><Fragment set:html={t('hero-btn-wa')} /></span>
+      </a>
+    </div>
+    <div class="hero-proof">
+      <div class="proof-item">
+        <div class="proof-num">3</div>
+        <div class="proof-label"><Fragment set:html={t('proof-1')} /></div>
+      </div>
+      <div class="proof-divider"></div>
+      <div class="proof-item">
+        <div class="proof-num">263%</div>
+        <div class="proof-label"><Fragment set:html={t('proof-2')} /></div>
+      </div>
+      <div class="proof-divider"></div>
+      <div class="proof-item">
+        <div class="proof-num">$250k</div>
+        <div class="proof-label"><Fragment set:html={t('proof-3')} /></div>
+      </div>
+      <div class="proof-divider"></div>
+      <div class="proof-item">
+        <div class="proof-num">6</div>
+        <div class="proof-label"><Fragment set:html={t('proof-4')} /></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DOLOR -->
+<section id="dolor" class="section-light">
+  <div class="container">
+    <OptDiv on={lang === 'es'} class="section-header">
+      <div class="section-tag"><Fragment set:html={t('dolor-tag')} /></div>
+      <h2 class="section-title"><Fragment set:html={t('dolor-title')} /></h2>
+      <p class="section-sub"><Fragment set:html={t('dolor-sub')} /></p>
+    </OptDiv>
+    <div class="pain-grid">
+      <div class="pain-card fade-up">
+        <div class="pain-icon">💸</div>
+        <div class="pain-title"><Fragment set:html={t('pain1-title')} /></div>
+        <div class="pain-desc"><Fragment set:html={t('pain1-desc')} /></div>
+      </div>
+      <div class="pain-card fade-up">
+        <div class="pain-icon">🔍</div>
+        <div class="pain-title"><Fragment set:html={t('pain2-title')} /></div>
+        <div class="pain-desc"><Fragment set:html={t('pain2-desc')} /></div>
+      </div>
+      <div class="pain-card fade-up">
+        <div class="pain-icon">🎯</div>
+        <div class="pain-title"><Fragment set:html={t('pain3-title')} /></div>
+        <div class="pain-desc"><Fragment set:html={t('pain3-desc')} /></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ERAS -->
+<section id="eras" class="section-light">
+  <div class="container">
+    <OptDiv on={true} class={lang === 'es' ? 'section-header' : undefined} style={lang === 'en' ? 'text-align:center; margin-bottom:20px;' : undefined}>
+      <div class="section-tag"><Fragment set:html={t('eras-tag')} /></div>
+      <h2 class="section-title"><Fragment set:html={t('eras-title')} /></h2>
+      <p class={lang === 'es' ? 'section-sub' : undefined} style={lang === 'en' ? 'font-size:16px; font-weight:300; color:rgba(238,241,246,0.6); line-height:1.7; margin-top:16px; max-width:600px; margin-left:auto; margin-right:auto;' : undefined}><Fragment set:html={t('eras-sub')} /></p>
+    </OptDiv>
+
+    <!-- Tarjetas ERA (solo móvil ≤640px) -->
+    <div class="era-mobile-cards">
+      <div class="emc emc-e1">
+        <div class="emc-header">
+          <span class="emc-icon">🔥</span>
+          <div><div class="emc-badge">ERA 1</div><div class="emc-name"><Fragment set:html={t('x-004')} /></div></div>
+        </div>
+        <div class="emc-rows">
+          <div class="emc-row"><div class="emc-dim"><Fragment set:html={t('x-005')} /></div><div class="emc-val"><Fragment set:html={t('x-006')} /></div></div>
+          <div class="emc-row"><div class="emc-dim"><Fragment set:html={t('x-007')} /></div><div class="emc-val"><Fragment set:html={t('x-008')} /></div></div>
+          <div class="emc-row"><div class="emc-dim"><Fragment set:html={t('x-009')} /></div><div class="emc-val"><Fragment set:html={t('x-010')} /></div></div>
+          <div class="emc-row"><div class="emc-dim"><Fragment set:html={t('x-011')} /></div><div class="emc-val"><Fragment set:html={t('x-012')} /></div></div>
+          <div class="emc-row"><div class="emc-dim"><Fragment set:html={t('x-013')} /></div><div class="emc-val"><Fragment set:html={t('x-014')} /></div></div>
+        </div>
+      </div>
+      <div class="emc emc-e2">
+        <div class="emc-header">
+          <span class="emc-icon">📊</span>
+          <div><div class="emc-badge">ERA 2</div><div class="emc-name"><Fragment set:html={t('x-015')} /></div></div>
+        </div>
+        <div class="emc-rows">
+          <div class="emc-row"><div class="emc-dim"><Fragment set:html={t('x-016')} /></div><div class="emc-val"><Fragment set:html={t('x-017')} /></div></div>
+          <div class="emc-row"><div class="emc-dim"><Fragment set:html={t('x-018')} /></div><div class="emc-val"><Fragment set:html={t('x-019')} /></div></div>
+          <div class="emc-row"><div class="emc-dim"><Fragment set:html={t('x-020')} /></div><div class="emc-val"><Fragment set:html={t('x-021')} /></div></div>
+          <div class="emc-row"><div class="emc-dim"><Fragment set:html={t('x-022')} /></div><div class="emc-val"><Fragment set:html={t('x-023')} /></div></div>
+          <div class="emc-row"><div class="emc-dim"><Fragment set:html={t('x-024')} /></div><div class="emc-val"><Fragment set:html={t('x-025')} /></div></div>
+        </div>
+      </div>
+      <div class="emc emc-e3">
+        <div class="emc-header">
+          <span class="emc-icon">⚡</span>
+          <div><div class="emc-badge">ERA 3</div><div class="emc-name"><Fragment set:html={t('x-026')} /></div></div>
+        </div>
+        <div class="emc-rows">
+          <div class="emc-row"><div class="emc-dim"><Fragment set:html={t('x-027')} /></div><div class="emc-val"><Fragment set:html={t('x-028')} /></div></div>
+          <div class="emc-row"><div class="emc-dim"><Fragment set:html={t('x-029')} /></div><div class="emc-val"><Fragment set:html={t('x-030')} /></div></div>
+          <div class="emc-row"><div class="emc-dim"><Fragment set:html={t('x-031')} /></div><div class="emc-val"><Fragment set:html={t('x-032')} /></div></div>
+          <div class="emc-row"><div class="emc-dim"><Fragment set:html={t('x-033')} /></div><div class="emc-val"><Fragment set:html={t('x-034')} /></div></div>
+          <div class="emc-row"><div class="emc-dim"><Fragment set:html={t('x-035')} /></div><div class="emc-val"><Fragment set:html={t('x-036')} /></div></div>
+        </div>
+      </div>
+      <div style="background:rgba(0,232,145,0.07);border:1px solid rgba(0,232,145,0.18);border-radius:12px;padding:16px 18px;display:flex;flex-direction:column;gap:12px;">
+        <div>
+          <div class="efg-cta-text"><Fragment set:html={t('x-037')} /></div>
+          <div class="efg-cta-sub"><a href={p('/metodologia#espectro')} style="color:rgba(0,232,145,0.5);text-decoration:underline;text-underline-offset:3px;"><Fragment set:html={t('x-038')} /></a></div>
+        </div>
+        <a href={p('/test-era')} class="btn btn-primary"><Fragment set:html={t('x-039')} /></a>
+      </div>
+    </div>
+
+    <!-- Grid ERA (desktop) -->
+    <div class="era-scroll-wrap"><div class="era-framework-grid">
+      <!-- Cabecera -->
+      <div class="efg-dim-header"><span><Fragment set:html={t('x-040')} /></span></div>
+      <div class="efg-era-header efg-h1">
+        <div class="efg-badge">ERA 1</div>
+        <div class="efg-icon">🔥</div>
+        <div class="efg-name"><Fragment set:html={t('era1-name')} /></div>
+        <div class="efg-pills">
+          <span class="efg-pill"><Fragment set:html={t('x-041')} /></span>
+          <span class="efg-pill"><Fragment set:html={t('x-042')} /></span>
+          <span class="efg-pill"><Fragment set:html={t('x-043')} /></span>
+        </div>
+      </div>
+      <div class="efg-era-header efg-h2">
+        <div class="efg-badge">ERA 2</div>
+        <div class="efg-icon">📊</div>
+        <div class="efg-name"><Fragment set:html={t('era2-name')} /></div>
+        <div class="efg-pills">
+          <span class="efg-pill"><Fragment set:html={t('x-044')} /></span>
+          <span class="efg-pill"><Fragment set:html={t('x-045')} /></span>
+          <span class="efg-pill"><Fragment set:html={t('x-046')} /></span>
+        </div>
+      </div>
+      <div class="efg-era-header efg-h3">
+        <div class="efg-badge">ERA 3</div>
+        <div class="efg-icon">⚡</div>
+        <div class="efg-name"><Fragment set:html={t('era3-name')} /></div>
+        <div class="efg-pills">
+          <span class="efg-pill"><Fragment set:html={t('x-047')} /></span>
+          <span class="efg-pill"><Fragment set:html={t('x-048')} /></span>
+          <span class="efg-pill"><Fragment set:html={t('x-049')} /></span>
+        </div>
+      </div>
+
+      <!-- Fila: Decisiones -->
+      <div class="efg-dim"><span><Fragment set:html={t('efg-dim1')} /></span></div>
+      <div class="efg-cell efg-c1"><Fragment set:html={t('efg-d1-e1')} /></div>
+      <div class="efg-cell efg-c2"><Fragment set:html={t('efg-d1-e2')} /></div>
+      <div class="efg-cell efg-c3"><Fragment set:html={t('efg-d1-e3')} /></div>
+
+      <!-- Fila: Operación -->
+      <div class="efg-dim"><span><Fragment set:html={t('efg-dim2')} /></span></div>
+      <div class="efg-cell efg-c1"><Fragment set:html={t('efg-d2-e1')} /></div>
+      <div class="efg-cell efg-c2"><Fragment set:html={t('efg-d2-e2')} /></div>
+      <div class="efg-cell efg-c3"><Fragment set:html={t('efg-d2-e3')} /></div>
+
+      <!-- Fila: Información -->
+      <div class="efg-dim"><span><Fragment set:html={t('efg-dim3')} /></span></div>
+      <div class="efg-cell efg-c1"><Fragment set:html={t('efg-d3-e1')} /></div>
+      <div class="efg-cell efg-c2"><Fragment set:html={t('efg-d3-e2')} /></div>
+      <div class="efg-cell efg-c3"><Fragment set:html={t('efg-d3-e3')} /></div>
+
+      <!-- Fila: Tiempo del dueño -->
+      <div class="efg-dim"><span><Fragment set:html={t('efg-dim4')} /></span></div>
+      <div class="efg-cell efg-c1"><Fragment set:html={t('efg-d4-e1')} /></div>
+      <div class="efg-cell efg-c2"><Fragment set:html={t('efg-d4-e2')} /></div>
+      <div class="efg-cell efg-c3"><Fragment set:html={t('efg-d4-e3')} /></div>
+
+      <!-- Fila: Para crecer -->
+      <div class="efg-dim efg-last"><span><Fragment set:html={t('efg-dim5')} /></span></div>
+      <div class="efg-cell efg-c1 efg-last"><Fragment set:html={t('efg-d5-e1')} /></div>
+      <div class="efg-cell efg-c2 efg-last"><Fragment set:html={t('efg-d5-e2')} /></div>
+      <div class="efg-cell efg-c3 efg-last"><Fragment set:html={t('efg-d5-e3')} /></div>
+
+      <!-- CTA -->
+      <div class="efg-cta-row">
+        <div>
+          <div class="efg-cta-text"><Fragment set:html={t('eras-caption')} /></div>
+          <div class="efg-cta-sub"><Fragment set:html={t('eras-precision')} /></div>
+        </div>
+        <a href={p('/test-era')} class="btn btn-primary"><Fragment set:html={t('eras-cta')} /></a>
+      </div>
+    </div></div>
+  </div>
+</section>
+
+<!-- POR QUÉ 3GI -->
+<section id="por-que-3gi" class="section-light">
+  <div class="container">
+    <OptDiv on={lang === 'es'} class="section-header">
+      <div class="section-tag"><Fragment set:html={t('x-050')} /></div>
+      <h2 class="section-title" style="margin-bottom:12px;"><Fragment set:html={t('x-051')} /><br><Fragment set:html={t('x-052')} /></h2>
+      <p class="section-sub" style="margin-bottom:20px;"><Fragment set:html={t('x-053')} /></p>
+    </OptDiv>
+    <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:20px; margin-bottom:20px;">
+      <div style="background:var(--night-3); border:1px solid var(--border); border-radius:12px; padding:24px;">
+        <div style="font-size:28px; margin-bottom:12px;">🏭</div>
+        <div style="font-family:Syne,sans-serif; font-weight:800; font-size:15px; margin-bottom:8px;"><Fragment set:html={t('x-054')} /></div>
+        <div style="font-size:14px; color:var(--muted); line-height:1.6;"><Fragment set:html={t('x-055')} /></div>
+      </div>
+      <div style="background:var(--night-3); border:1px solid var(--border); border-radius:12px; padding:24px;">
+        <div style="font-size:28px; margin-bottom:12px;">📐</div>
+        <div style="font-family:Syne,sans-serif; font-weight:800; font-size:15px; margin-bottom:8px;"><Fragment set:html={t('x-056')} /></div>
+        <div style="font-size:14px; color:var(--muted); line-height:1.6;"><Fragment set:html={t('x-057')} /></div>
+      </div>
+      <div style="background:var(--night-3); border:1px solid var(--border); border-radius:12px; padding:24px;">
+        <div style="font-size:28px; margin-bottom:12px;">📊</div>
+        <div style="font-family:Syne,sans-serif; font-weight:800; font-size:15px; margin-bottom:8px;"><Fragment set:html={t('x-058')} /></div>
+        <div style="font-size:14px; color:var(--muted); line-height:1.6;"><Fragment set:html={t('x-059')} /></div>
+      </div>
+      <div style="background:var(--night-3); border:1px solid var(--border); border-radius:12px; padding:24px;">
+        <div style="font-size:28px; margin-bottom:12px;">🌎</div>
+        <div style="font-family:Syne,sans-serif; font-weight:800; font-size:15px; margin-bottom:8px;"><Fragment set:html={t('x-060')} /></div>
+        <div style="font-size:14px; color:var(--muted); line-height:1.6;"><Fragment set:html={t('x-061')} /></div>
+      </div>
+    </div>
+    <div style={lang === 'es' ? 'display:flex; align-items:center; gap:16px; padding:20px 24px; background:rgba(0,158,96,0.08); border:1px solid rgba(0,158,96,0.25); border-radius:12px; flex-wrap:wrap;' : 'display:flex; align-items:center; gap:16px; padding:20px 24px; background:rgba(0,232,145,0.04); border:1px solid rgba(0,232,145,0.15); border-radius:12px; flex-wrap:wrap;'}>
+      <div style="flex:1; min-width:200px;">
+        <div style={lang === 'es' ? 'font-size:11px; font-weight:700; letter-spacing:.1em; text-transform:uppercase; color:#009E60; margin-bottom:4px;' : 'font-size:11px; font-weight:700; letter-spacing:.1em; text-transform:uppercase; color:var(--green); margin-bottom:4px;'}><Fragment set:html={t('x-062')} /></div>
+        <div style={lang === 'es' ? 'font-family:Syne,sans-serif; font-weight:800; font-size:15px; margin-bottom:4px; color:#0D0B08;' : 'font-family:Syne,sans-serif; font-weight:800; font-size:15px; margin-bottom:4px;'}>Gonzalo Gompertz G.</div>
+        <div style={lang === 'es' ? 'font-size:14px; color:rgba(13,11,8,0.65);' : 'font-size:14px; color:var(--muted);'}><Fragment set:html={t('x-063')} /></div>
+      </div>
+      <a href="https://www.linkedin.com/in/gonzalo-gompertz-geldres" target="_blank" rel="noopener" style="display:inline-flex; align-items:center; gap:8px; padding:10px 20px; background:rgba(0,232,145,0.1); border:1px solid rgba(0,232,145,0.3); border-radius:8px; font-size:14px; font-weight:600; color:var(--green); white-space:nowrap; transition:all .2s;">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+        <Fragment set:html={t('x-064')} />
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- SECTORES -->
+<section id="sectores" class="section-light">
+  <div class="container">
+    <OptDiv on={lang === 'es'} class="section-header">
+      <div class="section-tag"><Fragment set:html={t('sect-tag')} /></div>
+      <h2 class="section-title"><Fragment set:html={t('sect-title')} /></h2>
+      <p class="section-sub"><Fragment set:html={t('sect-sub')} /></p>
+    </OptDiv>
+    <div class="sect-grid">
+
+      <div class="sect-card fade-up">
+        <div class="sect-sector"><Fragment set:html={t('sect1-sector')} /></div>
+        <div>
+          <div class="sect-before-tag"><Fragment set:html={t('sect-before-tag')} /></div>
+          <p class="sect-txt sect-txt-before"><Fragment set:html={t('sect1-before')} /></p>
+        </div>
+        <div class="sect-divider"></div>
+        <div>
+          <div class="sect-after-tag"><Fragment set:html={t('sect-after-tag')} /></div>
+          <p class="sect-txt sect-txt-after"><Fragment set:html={t('sect1-after')} /></p>
+        </div>
+        <a href={p('/casos#certificaciones')} class="sect-cta-link"><Fragment set:html={t('sect-case-link')} /></a>
+      </div>
+
+      <div class="sect-card fade-up">
+        <div class="sect-sector"><Fragment set:html={t('sect2-sector')} /></div>
+        <div>
+          <div class="sect-before-tag"><Fragment set:html={t('sect-before-tag')} /></div>
+          <p class="sect-txt sect-txt-before"><Fragment set:html={t('sect2-before')} /></p>
+        </div>
+        <div class="sect-divider"></div>
+        <div>
+          <div class="sect-after-tag"><Fragment set:html={t('sect-after-tag')} /></div>
+          <p class="sect-txt sect-txt-after"><Fragment set:html={t('sect2-after')} /></p>
+        </div>
+        <a href={p('/casos#logistica')} class="sect-cta-link"><Fragment set:html={t('sect-case-link')} /></a>
+      </div>
+
+      <div class="sect-card fade-up">
+        <div class="sect-sector"><Fragment set:html={t('sect3-sector')} /></div>
+        <div>
+          <div class="sect-before-tag"><Fragment set:html={t('sect-before-tag')} /></div>
+          <p class="sect-txt sect-txt-before"><Fragment set:html={t('sect3-before')} /></p>
+        </div>
+        <div class="sect-divider"></div>
+        <div>
+          <div class="sect-after-tag"><Fragment set:html={t('sect-after-tag')} /></div>
+          <p class="sect-txt sect-txt-after"><Fragment set:html={t('sect3-after')} /></p>
+        </div>
+        <a href={p('/casos#agro')} class="sect-cta-link"><Fragment set:html={t('sect-case-link')} /></a>
+      </div>
+
+    </div>
+    <div class="sect-footer">
+      <p style="font-size:14px; color:var(--muted); margin-bottom:16px;"><Fragment set:html={t('x-065')} /> <a href={p('/test-era')} style="color:var(--green); text-decoration:underline; text-underline-offset:3px;"><Fragment set:html={t('x-066')} /></a></p>
+      <a href={p('/casos')} class="btn btn-outline"><Fragment set:html={t('sect-more-btn')} /></a>
+    </div>
+  </div>
+</section>
+
+<!-- IA HOY -->
+<section id="ia-hoy" class="section-light">
+  <div class="container">
+    <OptDiv on={lang === 'es'} class="section-header">
+      <div class="section-tag"><Fragment set:html={t('iahoy-tag')} /></div>
+      <h2 class="section-title"><Fragment set:html={t('iahoy-title')} /></h2>
+    </OptDiv>
+
+    <div class="iahoy-tabs" role="tablist" aria-label="Áreas de negocio">
+      <button class="iahoy-tab active" role="tab" aria-selected="true" aria-controls="iahoy-panel-1" data-tab="1"><Fragment set:html={t('iahoy-tab1')} /></button>
+      <button class="iahoy-tab" role="tab" aria-selected="false" aria-controls="iahoy-panel-2" data-tab="2"><Fragment set:html={t('iahoy-tab2')} /></button>
+      <button class="iahoy-tab" role="tab" aria-selected="false" aria-controls="iahoy-panel-3" data-tab="3"><Fragment set:html={t('iahoy-tab3')} /></button>
+    </div>
+
+    <div class="iahoy-panels">
+
+      <div class="iahoy-panel active" id="iahoy-panel-1" role="tabpanel">
+        <div class="iahoy-grid">
+          <div class="iahoy-card fade-up">
+            <div class="iahoy-icon">🎯</div>
+            <div class="iahoy-card-title"><Fragment set:html={t('iahoy-c1-1-title')} /></div>
+            <div class="iahoy-card-desc"><Fragment set:html={t('iahoy-c1-1-desc')} /></div>
+          </div>
+          <div class="iahoy-card fade-up">
+            <div class="iahoy-icon">🔔</div>
+            <div class="iahoy-card-title"><Fragment set:html={t('iahoy-c1-2-title')} /></div>
+            <div class="iahoy-card-desc"><Fragment set:html={t('iahoy-c1-2-desc')} /></div>
+          </div>
+          <div class="iahoy-card fade-up">
+            <div class="iahoy-icon">📄</div>
+            <div class="iahoy-card-title"><Fragment set:html={t('iahoy-c1-3-title')} /></div>
+            <div class="iahoy-card-desc"><Fragment set:html={t('iahoy-c1-3-desc')} /></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="iahoy-panel" id="iahoy-panel-2" role="tabpanel">
+        <div class="iahoy-grid">
+          <div class="iahoy-card fade-up">
+            <div class="iahoy-icon">📅</div>
+            <div class="iahoy-card-title"><Fragment set:html={t('iahoy-c2-1-title')} /></div>
+            <div class="iahoy-card-desc"><Fragment set:html={t('iahoy-c2-1-desc')} /></div>
+          </div>
+          <div class="iahoy-card fade-up">
+            <div class="iahoy-icon">💬</div>
+            <div class="iahoy-card-title"><Fragment set:html={t('iahoy-c2-2-title')} /></div>
+            <div class="iahoy-card-desc"><Fragment set:html={t('iahoy-c2-2-desc')} /></div>
+          </div>
+          <div class="iahoy-card fade-up">
+            <div class="iahoy-icon">📊</div>
+            <div class="iahoy-card-title"><Fragment set:html={t('iahoy-c2-3-title')} /></div>
+            <div class="iahoy-card-desc"><Fragment set:html={t('iahoy-c2-3-desc')} /></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="iahoy-panel" id="iahoy-panel-3" role="tabpanel">
+        <div class="iahoy-grid">
+          <div class="iahoy-card fade-up">
+            <div class="iahoy-icon">📋</div>
+            <div class="iahoy-card-title"><Fragment set:html={t('iahoy-c3-1-title')} /></div>
+            <div class="iahoy-card-desc"><Fragment set:html={t('iahoy-c3-1-desc')} /></div>
+          </div>
+          <div class="iahoy-card fade-up">
+            <div class="iahoy-icon">🔄</div>
+            <div class="iahoy-card-title"><Fragment set:html={t('iahoy-c3-2-title')} /></div>
+            <div class="iahoy-card-desc"><Fragment set:html={t('iahoy-c3-2-desc')} /></div>
+          </div>
+          <div class="iahoy-card fade-up">
+            <div class="iahoy-icon">⚙️</div>
+            <div class="iahoy-card-title"><Fragment set:html={t('iahoy-c3-3-title')} /></div>
+            <div class="iahoy-card-desc"><Fragment set:html={t('iahoy-c3-3-desc')} /></div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="iahoy-cta">
+      <p class="iahoy-cta-question"><Fragment set:html={t('iahoy-cta-question')} /></p>
+      <a href={p('/test-era')} class="btn btn-primary"><Fragment set:html={t('iahoy-cta-btn')} /></a>
+    </div>
+
+  </div>
+</section>
+
+<!-- METODOLOGÍA (resumen) -->
+<section id="metodologia" class="section-light">
+  <div class="container">
+    <OptDiv on={lang === 'es'} class="section-header">
+      <div class="section-tag"><Fragment set:html={t('met-tag')} /></div>
+      <h2 class="section-title"><Fragment set:html={t('met-title')} /></h2>
+      <OptDiv on={lang === 'en'} class="met-intro"><p class="section-sub"><Fragment set:html={t('met-sub')} /></p></OptDiv>
+    </OptDiv>
+    <div class="met-steps">
+      <div class="met-step">
+        <div class="step-num">01</div>
+        <span class="step-tag"><Fragment set:html={t('step1-tag')} /></span>
+        <div class="step-title"><Fragment set:html={t('step1-title')} /></div>
+        <div class="step-desc"><Fragment set:html={t('step1-desc')} /></div>
+        <div class="step-deliverable"><Fragment set:html={t('step1-del')} /></div>
+      </div>
+      <div class="met-step">
+        <div class="step-num">02</div>
+        <span class="step-tag"><Fragment set:html={t('step2-tag')} /></span>
+        <div class="step-title"><Fragment set:html={t('step2-title')} /></div>
+        <div class="step-desc"><Fragment set:html={t('step2-desc')} /></div>
+        <div class="step-deliverable"><Fragment set:html={t('step2-del')} /></div>
+      </div>
+      <div class="met-step">
+        <div class="step-num">03</div>
+        <span class="step-tag"><Fragment set:html={t('step3-tag')} /></span>
+        <div class="step-title"><Fragment set:html={t('step3-title')} /></div>
+        <div class="step-desc"><Fragment set:html={t('step3-desc')} /></div>
+        <div class="step-deliverable"><Fragment set:html={t('step3-del')} /></div>
+      </div>
+    </div>
+    <div class="met-note"><Fragment set:html={t('met-note')} /></div>
+    <div class="met-more">
+      <a href={p('/metodologia')} class="btn btn-outline"><Fragment set:html={t('met-more-btn')} /></a>
+    </div>
+  </div>
+</section>
+
+<!-- CASO (compacto) -->
+<section id="caso" class="section-light">
+  <div class="container">
+    <OptDiv on={lang === 'es'} class="section-header">
+      <div class="section-tag"><Fragment set:html={t('caso-tag')} /></div>
+      <h2 class="section-title" style="margin-bottom:20px;"><Fragment set:html={t('caso-title')} /></h2>
+    </OptDiv>
+    <div class="case-compact fade-up">
+      <div class="case-compact-header">
+        <div>
+          <div class="case-company"><Fragment set:html={t('caso-company')} /></div>
+          <div class="case-meta-txt"><Fragment set:html={t('caso-meta')} /></div>
+          <div style="display:flex;flex-wrap:wrap;gap:8px;margin-top:12px;">
+            <span style="font-size:11px;font-weight:600;letter-spacing:.06em;background:rgba(0,232,145,0.08);border:1px solid rgba(0,232,145,0.2);color:rgba(0,232,145,0.8);padding:3px 10px;border-radius:20px;">Next.js</span>
+            <span style="font-size:11px;font-weight:600;letter-spacing:.06em;background:rgba(0,232,145,0.08);border:1px solid rgba(0,232,145,0.2);color:rgba(0,232,145,0.8);padding:3px 10px;border-radius:20px;">Supabase</span>
+            <span style="font-size:11px;font-weight:600;letter-spacing:.06em;background:rgba(0,232,145,0.08);border:1px solid rgba(0,232,145,0.2);color:rgba(0,232,145,0.8);padding:3px 10px;border-radius:20px;">n8n</span>
+            <span style="font-size:11px;font-weight:600;letter-spacing:.06em;background:rgba(0,232,145,0.08);border:1px solid rgba(0,232,145,0.2);color:rgba(0,232,145,0.8);padding:3px 10px;border-radius:20px;">WhatsApp API</span>
+            <span style="font-size:11px;font-weight:600;letter-spacing:.06em;background:rgba(0,232,145,0.08);border:1px solid rgba(0,232,145,0.2);color:rgba(0,232,145,0.8);padding:3px 10px;border-radius:20px;">Gmail OAuth2</span>
+          </div>
+        </div>
+        <span class="case-badge"><Fragment set:html={t('caso-badge')} /></span>
+      </div>
+      <div class="case-compact-body">
+        <div class="case-metrics">
+          <div class="metric">
+            <div class="metric-before">35 min</div>
+            <div class="metric-after">3 min</div>
+            <div class="metric-label"><Fragment set:html={t('res1-label')} /></div>
+          </div>
+          <div class="metric">
+            <div class="metric-before">Manual</div>
+            <div class="metric-after"><Fragment set:html={t('x-067')} /></div>
+            <div class="metric-label"><Fragment set:html={t('res2-label')} /></div>
+          </div>
+          <div class="metric">
+            <div class="metric-before"><Fragment set:html={t('x-068')} /></div>
+            <div class="metric-after"><Fragment set:html={t('x-069')} /></div>
+            <div class="metric-label"><Fragment set:html={t('res3-label')} /></div>
+          </div>
+          <div class="metric">
+            <div class="metric-before">$250k</div>
+            <div class="metric-after"><Fragment set:html={t('x-070')} /></div>
+            <div class="metric-label"><Fragment set:html={t('res4-label')} /></div>
+          </div>
+        </div>
+        <div class="case-quote-compact">
+          <p><Fragment set:html={t('caso-quote')} /></p>
+          <cite><Fragment set:html={t('caso-cite')} /></cite>
+        </div>
+        <a href={p('/casos')} class="btn btn-primary"><Fragment set:html={t('caso-more')} /></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PARA QUIÉN ES 3GI -->
+<section id="para-quien" class="section-light">
+  <div class="container">
+    <OptDiv on={lang === 'es'} class="section-header">
+      <div class="section-tag"><Fragment set:html={t('pq-tag')} /></div>
+      <h2 class="section-title"><Fragment set:html={t('pq-title')} /></h2>
+      <p class="section-sub"><Fragment set:html={t('pq-sub')} /></p>
+    </OptDiv>
+    <div class="pq-grid">
+      <div class="pq-card">
+        <div class="pq-icon">📋</div>
+        <div class="pq-label"><Fragment set:html={t('pq1-label')} /></div>
+        <div class="pq-desc"><Fragment set:html={t('pq1-desc')} /></div>
+      </div>
+      <div class="pq-card">
+        <div class="pq-icon">🏭</div>
+        <div class="pq-label"><Fragment set:html={t('pq2-label')} /></div>
+        <div class="pq-desc"><Fragment set:html={t('pq2-desc')} /></div>
+      </div>
+      <div class="pq-card">
+        <div class="pq-icon">🚚</div>
+        <div class="pq-label"><Fragment set:html={t('pq3-label')} /></div>
+        <div class="pq-desc"><Fragment set:html={t('pq3-desc')} /></div>
+      </div>
+      <div class="pq-card">
+        <div class="pq-icon">🏗️</div>
+        <div class="pq-label"><Fragment set:html={t('pq4-label')} /></div>
+        <div class="pq-desc"><Fragment set:html={t('pq4-desc')} /></div>
+      </div>
+      <div class="pq-card">
+        <div class="pq-icon">🛍️</div>
+        <div class="pq-label"><Fragment set:html={t('pq5-label')} /></div>
+        <div class="pq-desc"><Fragment set:html={t('pq5-desc')} /></div>
+      </div>
+    </div>
+    <div class="pq-size-strip">
+      <span class="pq-size-label"><Fragment set:html={t('pq-size-label')} /></span>
+      <div class="pq-size-items">
+        <span class="pq-size-item"><Fragment set:html={t('pq-size1')} /></span>
+        <span class="pq-size-item"><Fragment set:html={t('pq-size3')} /></span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TRUST SIGNALS -->
+<section id="trust" class="section-light">
+  <div class="container">
+    <OptDiv on={lang === 'es'} class="section-header">
+      <div class="section-tag"><Fragment set:html={t('trust-tag')} /></div>
+      <h2 class="section-title"><Fragment set:html={t('trust-title')} /></h2>
+      <p class="section-sub"><Fragment set:html={t('trust-sub')} /></p>
+    </OptDiv>
+    <div class="trust-grid">
+      <div class="trust-card">
+        <div class="trust-icon">🔒</div>
+        <div class="trust-title"><Fragment set:html={t('trust1-title')} /></div>
+        <div class="trust-desc"><Fragment set:html={t('trust1-desc')} /></div>
+      </div>
+      <div class="trust-card">
+        <div class="trust-icon">⚖️</div>
+        <div class="trust-title"><Fragment set:html={t('trust2-title')} /></div>
+        <div class="trust-desc"><Fragment set:html={t('trust2-desc')} /></div>
+      </div>
+      <div class="trust-card">
+        <div class="trust-icon">🔑</div>
+        <div class="trust-title"><Fragment set:html={t('trust3-title')} /></div>
+        <div class="trust-desc"><Fragment set:html={t('trust3-desc')} /></div>
+      </div>
+      <div class="trust-card">
+        <div class="trust-icon">👥</div>
+        <div class="trust-title"><Fragment set:html={t('trust4-title')} /></div>
+        <div class="trust-desc"><Fragment set:html={t('trust4-desc')} /></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq" class="section-light">
+  <div class="container">
+    <OptDiv on={lang === 'es'} class="section-header">
+      <div class="section-tag"><Fragment set:html={t('faq-tag')} /></div>
+      <h2 class="section-title"><Fragment set:html={t('faq-title')} /></h2>
+    </OptDiv>
+    <div class="faq-list">
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">
+          <span><Fragment set:html={t('faq1-q')} /></span>
+          <span class="faq-icon" aria-hidden="true">+</span>
+        </button>
+        <div class="faq-a" role="region">
+          <div class="faq-a-inner"><Fragment set:html={t('faq1-a')} /></div>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">
+          <span><Fragment set:html={t('faq2-q')} /></span>
+          <span class="faq-icon" aria-hidden="true">+</span>
+        </button>
+        <div class="faq-a" role="region">
+          <div class="faq-a-inner"><Fragment set:html={t('faq2-a')} /></div>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">
+          <span><Fragment set:html={t('faq3-q')} /></span>
+          <span class="faq-icon" aria-hidden="true">+</span>
+        </button>
+        <div class="faq-a" role="region">
+          <div class="faq-a-inner"><Fragment set:html={t('faq3-a')} /></div>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">
+          <span><Fragment set:html={t('faq4-q')} /></span>
+          <span class="faq-icon" aria-hidden="true">+</span>
+        </button>
+        <div class="faq-a" role="region">
+          <div class="faq-a-inner"><Fragment set:html={t('faq4-a')} /></div>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">
+          <span><Fragment set:html={t('faq5-q')} /></span>
+          <span class="faq-icon" aria-hidden="true">+</span>
+        </button>
+        <div class="faq-a" role="region">
+          <div class="faq-a-inner"><Fragment set:html={t('faq5-a')} /></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- CTA FINAL -->
+<section id="cta-final">
+  <div class="container">
+    <div class="cta-eyebrow"><Fragment set:html={t('cta-eyebrow')} /></div>
+    <h2 class="cta-title"><Fragment set:html={t('cta-title')} /></h2>
+    <p class="cta-sub"><Fragment set:html={t('cta-sub')} /></p>
+    <div class="cta-buttons">
+      <a href={p('/test-era')} class="btn btn-primary btn-lg">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        <span><Fragment set:html={t('cta-btn-calendar')} /></span>
+      </a>
+      <a href="https://wa.me/56988974898?text=Hola,%20quiero%20saber%20más%20sobre%20el%20diagnóstico%20de%20IA%20para%20mi%20empresa" target="_blank" class="btn btn-whatsapp btn-lg" aria-label="Escribir por WhatsApp">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        <span><Fragment set:html={t('cta-btn-wa')} /></span>
+      </a>
+    </div>
+    <p class="cta-fine"><Fragment set:html={t('cta-fine')} /></p>
+  </div>
+</section>
+
+<!-- FOOTER -->
+</div>
+<script>
+  document.querySelectorAll('.faq-q').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const item = btn.closest('.faq-item');
+      const isOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item.open').forEach(i => {
+        i.classList.remove('open');
+        i.querySelector('.faq-q').setAttribute('aria-expanded', 'false');
+      });
+      if (!isOpen) {
+        item.classList.add('open');
+        btn.setAttribute('aria-expanded', 'true');
+      }
+    });
+  });
+</script>

@@ -1,0 +1,6 @@
+---
+// Contenedor opcional: con on=false solo renderiza el contenido (sin el <div>).
+// Sirve para conservar diferencias de estructura entre idiomas dentro de una plantilla única.
+const { on = true, ...rest } = Astro.props;
+---
+{on ? <div {...rest}><slot /></div> : <slot />}
