@@ -75,7 +75,11 @@ const schemaFaqEn = {"@context": "https://schema.org", "@type": "FAQPage", "main
           // Error Tracking (2026-08-10) — captura excepciones JS no manejadas en
           // producción, antes venía apagado por defecto (autocaptureExceptions:false
           // en la config remota del proyecto).
-          capture_exceptions: true
+          capture_exceptions: true,
+          // Grabaciones de sesión: sin registro de consola y campos escritos siempre enmascarados.
+          // El texto visible con datos personales se oculta con las clases ph-no-capture / ph-mask.
+          enable_recording_console_log: false,
+          session_recording: { maskAllInputs: true }
         });
         // Eventos del funnel emitidos antes de que PostHog terminara de cargar (ver public/funnel-track.js)
         (window.__phQueue || []).forEach(function(e) { window.posthog.capture(e[0], e[1]); });
@@ -713,12 +717,14 @@ const schemaFaqEn = {"@context": "https://schema.org", "@type": "FAQPage", "main
       if (window.__loadGTM) window.__loadGTM();
       if (window.__loadPostHog) window.__loadPostHog();
       if (window.__loadLinkedIn) window.__loadLinkedIn();
+      if (window.__funnelTrack) window.__funnelTrack('consent_accepted');
     });
     document.getElementById('tgi-consent-reject').addEventListener('click', function() {
       localStorage.setItem('tgi_consent', JSON.stringify({status: 'rejected', ts: new Date().toISOString(), v: 1}));
       banner.hidden = true;
       scrollListenerActive = false;
       window.removeEventListener('scroll', onScroll);
+      if (window.__funnelTrack) window.__funnelTrack('consent_rejected');
     });
   })();
 </script>

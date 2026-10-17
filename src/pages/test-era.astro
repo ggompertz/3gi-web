@@ -223,7 +223,7 @@ input.otp-input:focus{border-color:rgba(0,232,145,0.45)}
     </div>
 
     <div id="gate-otp-wrap" style="display:none">
-      <p class="otp-info">Te enviamos un código a <strong id="gate-otp-email"></strong>. Ingrésalo para continuar.</p>
+      <p class="otp-info">Te enviamos un código a <strong id="gate-otp-email" class="ph-no-capture"></strong>. Ingrésalo para continuar.</p>
       <input id="g-otp" class="otp-input" type="text" inputmode="numeric" maxlength="6" placeholder="000000" oninput="onGateOtpInput()">
       <div class="f-error" id="g-otp-error">Código incorrecto o expirado</div>
       <p class="otp-resend">¿No llegó? <button id="g-otp-resend-btn" onclick="gateResend()">Reenviar código</button></p>

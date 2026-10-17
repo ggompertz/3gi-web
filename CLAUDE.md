@@ -173,7 +173,7 @@ el estado final): `my-config/handoffs/2026-08-10_3gi-web-posthog-fix-completo.md
 - **Conversión LinkedIn `31872113`** = Test ERA completado: `window.__linkedinConversion()` se llama junto a
   `informe_completado` en `test-era-ia.astro` (ES y EN). No cuelga de `__funnelTrack` (ver abajo).
 - **`public/funnel-track.js` redefine `window.__funnelTrack`** en test-era, test-era-ia y recursos (ES y EN), pisando la
-  versión de `Layout.astro`. Envía a Supabase `funnel_events` (sin pasar por el consentimiento) y, desde 2026-10-16, también
+  versión de `Layout.astro`. Envía a Supabase `funnel_events` (en dos niveles según el consentimiento, ver «Funnel y consentimiento») y, desde 2026-10-16, también
   reenvía a PostHog (`toPostHog()`; cola `window.__phQueue` mientras PostHog termina de cargar, la vacía `Layout.astro`).
   Antes del 16-oct los eventos del funnel NO llegaban a PostHog en esas páginas.
 - **Probar PostHog con Playwright no sirve**: posthog-js 1.438.x descarta `capture()` en navegadores automatizados (devuelve
@@ -181,9 +181,21 @@ el estado final): `my-config/handoffs/2026-08-10_3gi-web-posthog-fix-completo.md
   espiar `posthog.capture`; para verificar la entrega real, un recorrido manual y revisar Activity en PostHog.
 - **LinkedIn no podía "verificar" el tag** (resuelto por Gonzalo el 2026-10-16; no se registró el método): el verificador no acepta el banner, era esperado. Comprobar aceptando cookies y con
   la extensión Insight Tag Helper; "Activo" llega con tráfico real que aceptó cookies (hasta 24 h).
-- **Pendientes**: Supabase `funnel_events` registra aun con cookies rechazadas y `privacidad` no lo declara; PostHog tampoco
-  figura en `privacidad`; PostHog se carga con `posthog-js@latest` (fijar versión). Handoff:
-  `my-config/handoffs/2026-10-16_3gi-web-linkedin-insight-tag.md`.
+- **Pendientes**: fijar la versión de `posthog-js` (hoy `@latest`); plazo de retención de `funnel_events` y de PostHog sin definir;
+  segunda conversión `test_complete` opcional en Campaign Manager. Handoffs:
+  `my-config/handoffs/2026-10-16_3gi-web-linkedin-insight-tag.md` y `2026-10-16_3gi-web-funnel-consentimiento-mascaras.md`.
+
+## Funnel y consentimiento (2026-10-16)
+
+Spec: R2 `3gi-outputs/proyectos/3gi-web/2026-10-16/prd-funnel-consentimiento.md`. Prueba: `scripts/manual-tests/funnel-consentimiento.mjs` (contra preview local, Supabase interceptado).
+
+- **`funnel-track.js` en dos niveles.** Sin consentimiento aceptado (sin decisión o rechazo): el ID de sesión vive solo en una variable en memoria, `utm` va vacío, no se lee ni escribe nada en `sessionStorage`/`localStorage`. Con consentimiento: ID en `sessionStorage` (`_3gi_fsid`) y parámetros `src` + `utm_*` (`_3gi_futm`); si había un ID en memoria al aceptar, se adopta.
+- **`lid` ya no se guarda** (es el ID de un lead en el enlace del PDF; unía navegación con una persona). Si un `_3gi_futm` heredado lo trae, se elimina. Si algún día se usa `lid`, que viaje solo en el envío del formulario (el `leads` guarda `consentimiento`).
+- **Bots descartados**: `navigator.webdriver` o User-Agent bot/crawl/headless/lighthouse/preview. **Efecto en pruebas**: cualquier prueba con Playwright debe ocultar `webdriver` y usar un User-Agent normal, si no `__funnelTrack` no envía nada.
+- **Tasa de consentimiento**: los handlers del banner (`Layout.astro`) llaman `__funnelTrack('consent_accepted' | 'consent_rejected')`. Solo cuenta en páginas con `funnel-track.js`. Leer con `select evento, count(distinct session_id) from funnel_events where evento like 'consent_%' group by 1` y compararlo con las sesiones de `test_view`.
+- **PostHog**: `enable_recording_console_log: false` y `session_recording.maskAllInputs: true` en `posthog.init`. Máscaras en el HTML: `ph-no-capture` en el correo del paso del código (ES `#gate-otp-email`, EN `#otp-email-display`) y `ph-mask` en `#result-step` (informe). **Un dato personal nuevo mostrado como texto** (no en un campo) hay que marcarlo con una de esas clases. El registro de consola también se apaga en PostHog (Settings, Session replay), paso manual.
+- **Límite aceptado**: sin consentimiento el funnel no une `test-era` con `test-era-ia` (cada página tiene su ID en memoria); el tramo final lo cubre `diagnostico_completions`.
+- **Fuera de alcance, no tocar sin pedirlo**: el comportamiento del banner (se esconde al hacer scroll para no tapar el CTA, Memoria de Soluciones #12) y las filas históricas de `funnel_events`.
 
 ## Decisiones de posicionamiento validadas (no modificar)
 

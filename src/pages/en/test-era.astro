@@ -129,7 +129,7 @@ input.otp-input:focus{border-color:#00e89166}
     </div>
 
     <div id="otp-step">
-      <p class="otp-info">We sent a 6-digit code to <strong id="otp-email-display"></strong>. Enter it below to continue.</p>
+      <p class="otp-info">We sent a 6-digit code to <strong id="otp-email-display" class="ph-no-capture"></strong>. Enter it below to continue.</p>
       <input id="inp-otp" class="otp-input" type="text" inputmode="numeric" maxlength="6" placeholder="000000" oninput="onOtpInput()">
       <div class="f-error" id="otp-error">Incorrect or expired code</div>
       <p class="otp-resend">Didn't receive it? <button onclick="resendOtp()">Resend code</button></p>
