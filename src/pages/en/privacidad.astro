@@ -5,7 +5,7 @@ import Layout from '../../layouts/Layout.astro';
 <Layout title="Privacy Policy — 3G Intelligence" description="" lang="en">
   <div class="legal-doc">
     <h1>Privacy Policy</h1>
-    <div class="date">Last updated: September 2026</div>
+    <div class="date">Last updated: October 2026</div>
 
     <h2>1. Who we are</h2>
     <p>3G Intelligence is an artificial intelligence consultancy offering diagnostics and automation solutions for businesses. Contact: <a href="mailto:gonzalo@3gi.cl">gonzalo@3gi.cl</a></p>
@@ -15,7 +15,8 @@ import Layout from '../../layouts/Layout.astro';
       <li>Phone number when contacting via WhatsApp</li>
       <li>Messages sent to the WhatsApp bot</li>
       <li>Business information entered in the Test ERA form (name, sector, size, processes)</li>
-      <li>Traffic analytics cookies (Google Analytics) and advertising measurement cookies (LinkedIn) — see section 8</li>
+      <li>Traffic analytics cookies (Google Analytics and PostHog) and advertising measurement cookies (LinkedIn) — see section 8</li>
+      <li>A record of the steps of your journey in the ERA Test (page, step reached and campaign parameters) — see section 8</li>
     </ul>
 
     <h2>3. How we use your data</h2>
@@ -23,6 +24,7 @@ import Layout from '../../layouts/Layout.astro';
       <li>To qualify and process Test ERA report requests</li>
       <li>To follow up commercially with the prospect</li>
       <li>To generate internal diagnostic reports</li>
+      <li>To analyze and improve the ERA Test journey and measure the results of our campaigns</li>
     </ul>
 
     <h2>4. Who we share it with</h2>
@@ -34,6 +36,7 @@ import Layout from '../../layouts/Layout.astro';
       <li><strong>Supabase</strong> — data storage</li>
       <li><strong>Hetzner</strong> — infrastructure hosting</li>
       <li><strong>Google</strong> — website traffic analytics (Google Analytics), only if you accept analytics cookies (see section 8)</li>
+      <li><strong>PostHog</strong> — product analytics and recordings of the journey on the site, only if you accept cookies (see section 8)</li>
       <li><strong>LinkedIn</strong> — advertising conversion measurement (LinkedIn Insight Tag), only if you accept cookies (see section 8)</li>
     </ul>
     <p>These providers are located in the United States. The transfer is supported by the Standard Contractual Clauses approved by Chile's Ministry of Economy.</p>
@@ -48,7 +51,9 @@ import Layout from '../../layouts/Layout.astro';
     <p>Data is stored on secure servers with restricted access. No passwords or financial information are shared through our channels.</p>
 
     <h2>8. Cookies</h2>
-    <p>We use Google Analytics (via Google Tag Manager) to understand how this site is used. These cookies are only set if you accept them in the notice shown on your first visit — if you reject them, no analytics or advertising measurement tools are loaded. If you arrive from a LinkedIn ad, we also use the LinkedIn Insight Tag to measure how many people complete the ERA Test after seeing the ad. You can change your decision at any time via the "Cookie preferences" link at the bottom of this page.</p>
+    <p>With your consent we use three third-party tools: Google Analytics (via Google Tag Manager) to understand how this site is used; PostHog to analyze the ERA Test journey (page views, clicks, completed steps and recordings of your browsing on the site); and, if you arrive from a LinkedIn ad, the LinkedIn Insight Tag to measure how many people complete the ERA Test after seeing the ad. They are only loaded if you accept them in the notice shown on your first visit: if you reject them, none of them is loaded.</p>
+    <p>Even if you reject cookies, the ERA Test and the resources pages record the steps of your journey (for example, which test question you are on, the page and the campaign parameters of the address you visited) using a random identifier that lasts only while the tab stays open. This record does not use cookies, does not include your name, email or company data, and is stored only on our own servers (Supabase). We use it to learn where people drop out of the test and improve it.</p>
+    <p>You can change your cookie decision at any time via the "Cookie preferences" link at the bottom of this page.</p>
     <table class="cookie-table">
       <tr class="row-head">
         <th>Cookie</th>
@@ -79,6 +84,18 @@ import Layout from '../../layouts/Layout.astro';
         <td>LinkedIn</td>
         <td>Measure advertising conversions</td>
         <td>Per LinkedIn's cookie policy</td>
+      </tr>
+      <tr>
+        <td>ph_*_posthog (cookie and localStorage)</td>
+        <td>PostHog</td>
+        <td>Distinguish visitors and sessions (analytics and recordings)</td>
+        <td>1 year</td>
+      </tr>
+      <tr>
+        <td>_3gi_fsid, _3gi_futm (sessionStorage)</td>
+        <td>3G Intelligence</td>
+        <td>Own record of the ERA Test steps</td>
+        <td>Until you close the tab</td>
       </tr>
     </table>
   </div>
