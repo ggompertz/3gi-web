@@ -165,6 +165,26 @@ escritura en la Personal API Key usada (`3GI-ERA`, scopes: `query:read` +
 Handoff completo de esta sesión (incluye todo el proceso de diagnóstico, no solo
 el estado final): `my-config/handoffs/2026-08-10_3gi-web-posthog-fix-completo.md`.
 
+## LinkedIn Insight Tag y funnel-track.js (2026-10-16)
+
+- **LinkedIn Insight Tag** (partner `9969249`): `window.__loadLinkedIn()` en `Layout.astro`, **solo tras aceptar cookies**
+  (mismo gate que GTM y PostHog, llamado en los mismos dos puntos). El `<noscript>` del snippet oficial se omite a propósito
+  (dispararía sin consentimiento). **No pegar el snippet fijo en el HTML**: cargaría para todos y contradice `privacidad`.
+- **Conversión LinkedIn `31872113`** = Test ERA completado: `window.__linkedinConversion()` se llama junto a
+  `informe_completado` en `test-era-ia.astro` (ES y EN). No cuelga de `__funnelTrack` (ver abajo).
+- **`public/funnel-track.js` redefine `window.__funnelTrack`** en test-era, test-era-ia y recursos (ES y EN), pisando la
+  versión de `Layout.astro`. Envía a Supabase `funnel_events` (sin pasar por el consentimiento) y, desde 2026-10-16, también
+  reenvía a PostHog (`toPostHog()`; cola `window.__phQueue` mientras PostHog termina de cargar, la vacía `Layout.astro`).
+  Antes del 16-oct los eventos del funnel NO llegaban a PostHog en esas páginas.
+- **Probar PostHog con Playwright no sirve**: posthog-js 1.438.x descarta `capture()` en navegadores automatizados (devuelve
+  `undefined`, ningún request a `/e/`), aun cambiando User-Agent y `navigator.webdriver`. Para verificar la lógica propia,
+  espiar `posthog.capture`; para verificar la entrega real, un recorrido manual y revisar Activity en PostHog.
+- **LinkedIn no puede "verificar" el tag**: el verificador no acepta el banner, es esperado. Comprobar aceptando cookies y con
+  la extensión Insight Tag Helper; "Activo" llega con tráfico real que aceptó cookies (hasta 24 h).
+- **Pendientes**: Supabase `funnel_events` registra aun con cookies rechazadas y `privacidad` no lo declara; PostHog tampoco
+  figura en `privacidad`; PostHog se carga con `posthog-js@latest` (fijar versión). Handoff:
+  `my-config/handoffs/2026-10-16_3gi-web-linkedin-insight-tag.md`.
+
 ## Decisiones de posicionamiento validadas (no modificar)
 
 - **Densidad de texto** = activo estratégico. Filtra prospectos y precalifica tickets USD 2.500–6.000. No simplificar.
