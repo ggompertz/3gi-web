@@ -21,7 +21,7 @@ Cada sección del `index.astro` tiene un rol específico en el funnel de convers
 ## Secciones clave para editar
 
 ### `#para-quien`
-Agregada en mayo 2026. Muestra 5 rubros objetivo y el tamaño ideal (10–200 empleados, USD 500K–10M).  
+Agregada en mayo 2026. Muestra 5 rubros objetivo y el tamaño ideal (2–50 empleados, USD 500K–10M).  
 Si se agregan nuevos rubros objetivo, editar aquí + en `/faq` categoría "¿Es para mi empresa?".
 
 ### `#faq` (homepage)
