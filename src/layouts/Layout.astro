@@ -691,7 +691,8 @@ const schemaFaqEn = {"@context": "https://schema.org", "@type": "FAQPage", "main
 
 <!-- Cookie consent banner -->
 <div id="tgi-consent" class="tgi-consent" hidden>
-  <p class="tgi-consent-text" data-i18n="cookie-banner-text">
+  <!-- Sin data-i18n: la tabla de traducción vestigial de más abajo sobrescribía este texto en el navegador con la versión vieja (solo Google Analytics) -->
+  <p class="tgi-consent-text">
     <span class="tgi-consent-long">{lang === 'en' ? 'We use analytics and advertising measurement cookies (Google Analytics, PostHog, LinkedIn) to understand how this site is used and measure our ads.' : 'Usamos cookies de analítica y de medición publicitaria (Google Analytics, PostHog, LinkedIn) para entender cómo se usa este sitio y medir nuestros anuncios.'}</span>
     <span class="tgi-consent-short">{lang === 'en' ? <>We use analytics and advertising cookies (Google, PostHog, LinkedIn). <a href={`${p}/privacidad`}>Learn more</a></> : <>Usamos cookies de analítica y publicidad (Google, PostHog, LinkedIn). <a href={`${p}/privacidad`}>Más información</a></>}</span>
   </p>
@@ -886,7 +887,7 @@ const T = {
     'nav-met': 'Metodología', 'nav-precios': 'Precios', 'nav-casos': 'Casos',
     'nav-nosotros': 'Nosotros', 'nav-contenido': 'Contenido',
     'nav-whatsapp': 'WhatsApp', 'nav-cta': 'Agendar reunión',
-    'cookie-banner-text': 'Usamos cookies de analítica (Google Analytics) para entender cómo se usa este sitio.',
+    'cookie-banner-text': 'Usamos cookies de analítica y de medición publicitaria (Google Analytics, PostHog, LinkedIn) para entender cómo se usa este sitio y medir nuestros anuncios.',
     'cookie-accept': 'Aceptar', 'cookie-reject': 'Rechazar', 'cookie-prefs': 'Preferencias de cookies',
     'hero-tag': 'Diagnóstico de IA para PyMEs · Chile y LATAM',
     'hero-title': '¿Cuánto le está costando a tu empresa operar sin IA este mes?<br> <em>No lo sabes. Ese es el problema.</em>',
@@ -1019,7 +1020,7 @@ const T = {
     'nav-met': 'Methodology', 'nav-precios': 'Pricing', 'nav-casos': 'Cases',
     'nav-nosotros': 'About', 'nav-contenido': 'Content',
     'nav-whatsapp': 'WhatsApp', 'nav-cta': 'Schedule a meeting',
-    'cookie-banner-text': 'We use analytics cookies (Google Analytics) to understand how this site is used.',
+    'cookie-banner-text': 'We use analytics and advertising measurement cookies (Google Analytics, PostHog, LinkedIn) to understand how this site is used and measure our ads.',
     'cookie-accept': 'Accept', 'cookie-reject': 'Reject', 'cookie-prefs': 'Cookie preferences',
     'hero-tag': 'AI Diagnosis for SMEs · Chile & LATAM',
     'hero-title': 'How much is your company losing<br> by not using AI this month?<br> <em>You don\'t know. That\'s the problem.</em>',
