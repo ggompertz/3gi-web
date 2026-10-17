@@ -12,7 +12,7 @@ git add <archivos> && git commit -m "mensaje" && git push origin master
 ssh hetzner-3gi && cd /root/3gi-web && git pull origin master
 npm run build
 CLOUDFLARE_API_TOKEN=$(grep CLOUDFLARE_API_TOKEN .env | cut -d= -f2) \
-  npx wrangler@latest pages deploy dist --project-name 3g-ia-agents --commit-dirty=true
+  npx wrangler@latest pages deploy dist --project-name 3gi-web --commit-dirty=true
 ```
 
 > ⚠️ **Verificado 22/09/2026: este fallback no puede ejecutarse hoy.** `/root/3gi-web` no existe en el
