@@ -1,0 +1,395 @@
+---
+// Plantilla única de /casos para ES y EN. Textos: src/i18n/casos.mjs
+// Diferencias de estructura entre idiomas (heredadas de las dos páginas originales): lang === 'es'/'en'.
+import { casos } from '../../i18n/casos.mjs';
+const { lang = 'es' } = Astro.props;
+const t = (k) => casos[lang].k[k];
+const p = (path) => (lang === 'en' ? '/en' + path : path);
+---
+<style is:global>
+.pg-casos *,.pg-casos *:before,.pg-casos *:after{box-sizing:border-box;margin:0;padding:0}.pg-casos html{scroll-behavior:smooth}.pg-casos body{background:#06060d;color:#eef1f6;font-family:DM Sans,sans-serif;font-weight:400;line-height:1.6;-webkit-font-smoothing:antialiased}.pg-casos a{text-decoration:none;color:inherit}:root{--green: #00E891;--night: #06060D;--night-2: #0D0D1A;--night-3: #141422;--offwh: #EEF1F6;--muted: rgba(238,241,246,.45);--amber: #F59E0B;--blue: #60a5fa;--border: rgba(255,255,255,.07);--max: 1160px}.pg-casos .container{max-width:var(--max);margin:0 auto;padding:0 24px}.pg-casos .logo{display:inline-flex;flex-direction:column;font-family:Syne,sans-serif;font-weight:800;line-height:1}.pg-casos .logo-name{font-size:22px;letter-spacing:-.03em}.pg-casos .logo-name span{color:var(--green)}.pg-casos .logo-sub{font-size:7.5px;letter-spacing:.2em;text-transform:uppercase;color:#eef1f64d;margin-top:4px}.pg-casos .btn{display:inline-flex;align-items:center;gap:8px;padding:14px 28px;border-radius:8px;border:none;font-family:DM Sans,sans-serif;font-weight:500;font-size:15px;cursor:pointer;transition:all .2s;white-space:nowrap}.pg-casos .btn-primary{background:linear-gradient(90deg,#2563EB,#00E891);color:var(--night)}.pg-casos .btn-primary:hover{background:linear-gradient(90deg,#1D4ED8,#00ffA0);transform:translateY(-1px)}.pg-casos .btn-outline{background:transparent;color:var(--offwh);border:1px solid rgba(238,241,246,.2)}.pg-casos .btn-outline:hover{border-color:var(--green);color:var(--green)}.pg-casos .btn-whatsapp{background:#25d366;color:#fff}.pg-casos .btn-whatsapp:hover{background:#20bc5a;transform:translateY(-1px)}.pg-casos nav{position:fixed;top:0;left:0;right:0;z-index:100;background:#06060de6;backdrop-filter:blur(16px);border-bottom:1px solid var(--border)}.pg-casos .nav-inner{max-width:var(--max);margin:0 auto;padding:0 24px;height:68px;display:flex;align-items:center;justify-content:space-between}.pg-casos .nav-links{display:flex;align-items:center;gap:32px;list-style:none}.pg-casos .nav-links a{font-size:14px;color:var(--muted);transition:color .2s}.pg-casos .nav-links a:hover,.pg-casos .nav-links a.active{color:var(--offwh)}.pg-casos .nav-cta{display:flex;gap:10px;align-items:center}.pg-casos .page-hero{padding:140px 0 72px;background:var(--night-2);border-bottom:1px solid var(--border)}.pg-casos .page-tag{font-family:Syne,sans-serif;font-size:11px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--green);margin-bottom:16px}.pg-casos .page-title{font-family:Syne,sans-serif;font-weight:800;font-size:clamp(32px,5vw,56px);letter-spacing:-.03em;line-height:1.05;margin-bottom:16px}.pg-casos .page-sub{font-size:18px;font-weight:300;color:#eef1f699;max-width:600px;line-height:1.65}
+.pg-casos .cases-nav{padding:32px 0;background:var(--night);border-bottom:1px solid var(--border);position:sticky;top:68px;z-index:50}.pg-casos .cases-nav-inner{display:flex;gap:12px;flex-wrap:wrap}.pg-casos .cases-nav-btn{font-size:13px;font-weight:500;padding:7px 16px;border-radius:20px;border:1px solid var(--border);color:var(--muted);background:transparent;cursor:pointer;transition:all .2s;font-family:DM Sans,sans-serif}.pg-casos .cases-nav-btn:hover{color:var(--offwh);border-color:rgba(238,241,246,.2)}.pg-casos .cases-nav-btn.active{background:rgba(0,232,145,.1);border-color:rgba(0,232,145,.3);color:var(--green)}
+.pg-casos .case-section{padding:72px 0}.pg-casos .case-section:nth-child(even){background:var(--night-2)}.pg-casos .case-section:nth-child(odd){background:var(--night)}.pg-casos .case-wrapper{background:var(--night-3);border:1px solid var(--border);border-radius:16px;overflow:hidden;max-width:900px}.pg-casos .case-header{padding:32px 40px 28px;border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px}.pg-casos .case-badge{font-size:10px;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--green);background:#f59e0b1a;border:1px solid rgba(0,232,145,.2);padding:5px 12px;border-radius:20px}.pg-casos .case-badge-composite{font-size:10px;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--blue);background:rgba(96,165,250,.1);border:1px solid rgba(96,165,250,.2);padding:5px 12px;border-radius:20px}.pg-casos .case-company{font-family:Syne,sans-serif;font-weight:800;font-size:22px;letter-spacing:-.02em}.pg-casos .case-meta{font-size:13px;color:var(--muted);margin-top:4px}.pg-casos .case-body{padding:40px}.pg-casos .case-situation{font-size:16px;font-weight:300;color:#eef1f6bf;line-height:1.75;margin-bottom:20px}.pg-casos .case-results{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-bottom:20px}.pg-casos .result-card{background:var(--night-2);border-radius:10px;padding:20px 16px;border:1px solid var(--border);text-align:center}.pg-casos .result-label{font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:.08em;font-weight:600;margin-bottom:10px}.pg-casos .result-before{font-size:14px;color:#eef1f659;text-decoration:line-through;margin-bottom:4px}.pg-casos .result-after{font-family:Syne,sans-serif;font-weight:800;font-size:22px;color:var(--green);line-height:1}.pg-casos .result-unit{font-size:11px;color:var(--muted);margin-top:6px;line-height:1.4}.pg-casos .case-quote{padding:24px 28px;border-left:3px solid var(--amber);background:rgba(0,232,145,0.04);border-radius:0 8px 8px 0;margin-bottom:32px}.pg-casos .case-quote p{font-size:16px;font-style:italic;font-weight:300;color:#eef1f6cc;line-height:1.7;margin-bottom:12px}.pg-casos .case-quote cite{font-size:13px;color:var(--muted);font-style:normal}.pg-casos .case-context{margin-top:24px;padding-top:40px;border-top:1px solid var(--border)}.pg-casos .context-title{font-family:Syne,sans-serif;font-weight:800;font-size:20px;margin-bottom:16px}.pg-casos .context-p{font-size:15px;color:#eef1f6a6;line-height:1.8;margin-bottom:16px}.pg-casos .composite-note{margin-top:16px;padding:12px 16px;background:rgba(96,165,250,.06);border:1px solid rgba(96,165,250,.15);border-radius:8px;font-size:12px;color:rgba(238,241,246,.45);line-height:1.6}
+.pg-casos .impl-list{margin-top:4px;display:flex;flex-direction:column;gap:6px}
+.pg-casos .impl-item{border:1px solid var(--border);border-radius:10px;overflow:hidden;background:#0a0a14}
+.pg-casos .impl-trigger{width:100%;display:flex;align-items:center;justify-content:space-between;gap:12px;padding:14px 18px;background:none;border:none;cursor:pointer;text-align:left;color:var(--offwh);font-family:'DM Sans',sans-serif}
+.pg-casos .impl-trigger:hover{background:rgba(255,255,255,.03)}
+.pg-casos .impl-trigger-text{font-size:14px;font-weight:600;color:var(--offwh);line-height:1.3}
+.pg-casos .impl-trigger-icon{flex-shrink:0;width:20px;height:20px;border-radius:50%;border:1px solid rgba(0,232,145,.3);display:flex;align-items:center;justify-content:center;color:var(--green);font-size:12px;transition:transform .25s}
+.pg-casos .impl-item.open .impl-trigger-icon{transform:rotate(45deg)}
+.pg-casos .impl-body{display:none;padding:0 18px 16px;font-size:14px;color:rgba(238,241,246,.65);line-height:1.75}
+.pg-casos .impl-item.open .impl-body{display:block}
+.pg-casos .context-intro{font-size:14px;color:rgba(238,241,246,.45);font-style:italic;margin-bottom:16px;line-height:1.7}.pg-casos .cta-band{background:var(--night-2);border-top:1px solid var(--border);padding:72px 0;text-align:center}.pg-casos .cta-band h2{font-family:Syne,sans-serif;font-weight:800;font-size:clamp(24px,4vw,40px);letter-spacing:-.03em;margin-bottom:12px}.pg-casos .cta-band p{font-size:16px;color:var(--muted);margin-bottom:32px}.pg-casos .cta-buttons{display:flex;align-items:center;justify-content:center;gap:14px;flex-wrap:wrap}.pg-casos footer{background:var(--night-2);border-top:1px solid var(--border);padding:40px 0}.pg-casos .footer-inner{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:24px}.pg-casos .footer-links{display:flex;gap:24px;list-style:none;flex-wrap:wrap}.pg-casos .footer-links a{font-size:13px;color:var(--muted);transition:color .2s}.pg-casos .footer-links a:hover{color:var(--offwh)}.pg-casos .footer-copy{font-size:13px;color:var(--muted)}@media(max-width:900px){.pg-casos .nav-links{display:none}.pg-casos .case-results{grid-template-columns:repeat(2,1fr)}.pg-casos .cases-nav{top:68px}}@media(max-width:600px){.pg-casos .case-body,.pg-casos .case-header{padding:24px 20px}.pg-casos .cases-nav{position:relative;top:0}.pg-casos .result-after{font-size:16px;overflow-wrap:break-word;word-break:break-word}.pg-casos .result-before{font-size:11px;overflow-wrap:break-word}.pg-casos .result-label{font-size:10px}}
+/* Diferencias de diseño propias de la versión en inglés (así estaban en la página original). */.pg-casos[data-lang="en"] .case-situation{margin-bottom:40px}.pg-casos[data-lang="en"] .case-results{margin-bottom:40px}.pg-casos[data-lang="en"] .case-context{margin-top:48px}</style>
+<div class="pg-casos" data-lang={lang} style="display:contents">
+<div class="page-hero">
+  <div class="container">
+    <div class="page-tag"><Fragment set:html={t('casos-tag')} /></div>
+    <h1 class="page-title"><Fragment set:html={t('casos-title')} /></h1>
+    <p class="page-sub"><Fragment set:html={t('casos-sub')} /></p>
+  </div>
+</div>
+
+<div class="cases-nav">
+  <div class="container">
+    <div class="cases-nav-inner">
+      <a href="#certificaciones" class="cases-nav-btn"><Fragment set:html={t('nav-cert')} /></a>
+      <a href="#logistica" class="cases-nav-btn"><Fragment set:html={t('nav-log')} /></a>
+      <a href="#agro" class="cases-nav-btn"><Fragment set:html={t('nav-agro')} /></a>
+      <a href="#distribuidora" class="cases-nav-btn"><Fragment set:html={t('nav-dist')} /></a>
+    </div>
+  </div>
+</div>
+
+<!-- CASO 1: CERTIFICACIONES -->
+<section class="case-section" id="certificaciones">
+  <div class="container">
+    <div class="case-wrapper">
+      <div class="case-header">
+        <div>
+          <div class="case-company"><Fragment set:html={t('cert-company')} /></div>
+          <div class="case-meta"><Fragment set:html={t('cert-meta')} /></div>
+          <div style="display:flex;flex-wrap:wrap;gap:8px;margin-top:14px;">
+            <span style="font-size:11px;font-weight:600;letter-spacing:.06em;background:rgba(0,232,145,0.08);border:1px solid rgba(0,232,145,0.2);color:rgba(0,232,145,0.8);padding:3px 10px;border-radius:20px;">Next.js</span>
+            <span style="font-size:11px;font-weight:600;letter-spacing:.06em;background:rgba(0,232,145,0.08);border:1px solid rgba(0,232,145,0.2);color:rgba(0,232,145,0.8);padding:3px 10px;border-radius:20px;">TypeScript</span>
+            <span style="font-size:11px;font-weight:600;letter-spacing:.06em;background:rgba(0,232,145,0.08);border:1px solid rgba(0,232,145,0.2);color:rgba(0,232,145,0.8);padding:3px 10px;border-radius:20px;">Supabase</span>
+            <span style="font-size:11px;font-weight:600;letter-spacing:.06em;background:rgba(0,232,145,0.08);border:1px solid rgba(0,232,145,0.2);color:rgba(0,232,145,0.8);padding:3px 10px;border-radius:20px;">n8n</span>
+            <span style="font-size:11px;font-weight:600;letter-spacing:.06em;background:rgba(0,232,145,0.08);border:1px solid rgba(0,232,145,0.2);color:rgba(0,232,145,0.8);padding:3px 10px;border-radius:20px;">WhatsApp API</span>
+            <span style="font-size:11px;font-weight:600;letter-spacing:.06em;background:rgba(0,232,145,0.08);border:1px solid rgba(0,232,145,0.2);color:rgba(0,232,145,0.8);padding:3px 10px;border-radius:20px;">Gmail OAuth2</span>
+            <span style="font-size:11px;font-weight:600;letter-spacing:.06em;background:rgba(0,232,145,0.08);border:1px solid rgba(0,232,145,0.2);color:rgba(0,232,145,0.8);padding:3px 10px;border-radius:20px;">Vercel CRON</span>
+          </div>
+        </div>
+        <span class="case-badge"><Fragment set:html={t('cert-badge')} /></span>
+      </div>
+      <div class="case-body">
+        <p class="case-situation"><Fragment set:html={t('cert-situation')} /></p>
+        <div class="case-results">
+          <div class="result-card">
+            <div class="result-label"><Fragment set:html={t('cert-r1-label')} /></div>
+            <div class="result-before">35 min</div>
+            <div class="result-after">3 min</div>
+            <div class="result-unit"><Fragment set:html={t('cert-r1-unit')} /></div>
+          </div>
+          <div class="result-card">
+            <div class="result-label"><Fragment set:html={t('cert-r2-label')} /></div>
+            <div class="result-before"><Fragment set:html={t('cert-r2-before')} /></div>
+            <div class="result-after"><Fragment set:html={t('cert-r2-after')} /></div>
+            <div class="result-unit"><Fragment set:html={t('cert-r2-unit')} /></div>
+          </div>
+          <div class="result-card">
+            <div class="result-label"><Fragment set:html={t('cert-r3-label')} /></div>
+            <div class="result-before"><Fragment set:html={t('cert-r3-before')} /></div>
+            <div class="result-after"><Fragment set:html={t('cert-r3-after')} /></div>
+            <div class="result-unit"><Fragment set:html={t('cert-r3-unit')} /></div>
+          </div>
+          <div class="result-card">
+            <div class="result-label"><Fragment set:html={t('cert-r4-label')} /></div>
+            <div class="result-before">$0</div>
+            <div class="result-after">$250k</div>
+            <div class="result-unit"><Fragment set:html={t('cert-r4-unit')} /></div>
+          </div>
+        </div>
+        <div class="case-quote">
+          <p><Fragment set:html={t('cert-quote')} /></p>
+          <cite><Fragment set:html={t('cert-cite')} /></cite>
+        </div>
+        <div class="case-context">
+          <div class="context-title"><Fragment set:html={t('cert-impl-title')} /></div>
+          <p class={lang === 'es' ? "context-intro" : "context-p"} style={lang === 'es' ? undefined : "color:rgba(238,241,246,0.5);font-style:italic;"}><Fragment set:html={t('cert-impl0')} /></p>
+          {lang === 'es' ? (<><div class="impl-list">
+            <div class="impl-item">
+              <button class="impl-trigger" onclick="toggleImpl(this)">
+                <span class="impl-trigger-text"><Fragment set:html={t('cert-impl1-title')} /></span>
+                <span class="impl-trigger-icon">+</span>
+              </button>
+              <div class="impl-body"><Fragment set:html={t('cert-impl1-body')} /></div>
+            </div>
+            <div class="impl-item">
+              <button class="impl-trigger" onclick="toggleImpl(this)">
+                <span class="impl-trigger-text"><Fragment set:html={t('cert-impl2-title')} /></span>
+                <span class="impl-trigger-icon">+</span>
+              </button>
+              <div class="impl-body"><Fragment set:html={t('cert-impl2-body')} /></div>
+            </div>
+            <div class="impl-item">
+              <button class="impl-trigger" onclick="toggleImpl(this)">
+                <span class="impl-trigger-text"><Fragment set:html={t('cert-impl3-title')} /></span>
+                <span class="impl-trigger-icon">+</span>
+              </button>
+              <div class="impl-body"><Fragment set:html={t('cert-impl3-body')} /></div>
+            </div>
+            <div class="impl-item">
+              <button class="impl-trigger" onclick="toggleImpl(this)">
+                <span class="impl-trigger-text"><Fragment set:html={t('cert-impl4-title')} /></span>
+                <span class="impl-trigger-icon">+</span>
+              </button>
+              <div class="impl-body"><Fragment set:html={t('cert-impl4-body')} /></div>
+            </div>
+            <div class="impl-item">
+              <button class="impl-trigger" onclick="toggleImpl(this)">
+                <span class="impl-trigger-text"><Fragment set:html={t('cert-impl5-title')} /></span>
+                <span class="impl-trigger-icon">+</span>
+              </button>
+              <div class="impl-body"><Fragment set:html={t('cert-impl5-body')} /></div>
+            </div>
+          </div></>) : (<><p class="context-p"><Fragment set:html={t('cert-impl1')} /></p>
+          <p class="context-p"><Fragment set:html={t('cert-impl2')} /></p>
+          <p class="context-p"><Fragment set:html={t('cert-impl3')} /></p>
+          <p class="context-p"><Fragment set:html={t('cert-impl4')} /></p>
+          <p class="context-p"><Fragment set:html={t('cert-impl5')} /></p></>)}
+          <div style="margin-top:24px;padding:16px 20px;background:rgba(0,232,145,0.04);border:1px solid rgba(0,232,145,0.12);border-radius:10px;">
+            <p style="font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:rgba(0,232,145,0.6);margin-bottom:6px;">ROI proyectado a 12 meses</p>
+            <p style="font-family:Syne,sans-serif;font-size:28px;font-weight:800;color:var(--green);">263%</p>
+            <p style="font-size:13px;color:var(--muted);margin-top:4px;">Sobre la inversión total en diagnóstico e implementación</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CASO 2: LOGÍSTICA PERECEDEROS -->
+<section class="case-section" id="logistica">
+  <div class="container">
+    <div class="case-wrapper">
+      <div class="case-header">
+        <div>
+          <div class="case-company"><Fragment set:html={t('log-company')} /></div>
+          <div class="case-meta"><Fragment set:html={t('log-meta')} /></div>
+        </div>
+        <span class="case-badge-composite"><Fragment set:html={t('log-badge')} /></span>
+      </div>
+      <div class="case-body">
+        <p class="case-situation"><Fragment set:html={t('log-situation')} /></p>
+        <div class="case-results">
+          <div class="result-card">
+            <div class="result-label"><Fragment set:html={t('log-r1-label')} /></div>
+            <div class="result-before">40 min</div>
+            <div class="result-after">&lt; 10 min</div>
+            <div class="result-unit"><Fragment set:html={t('log-r1-unit')} /></div>
+          </div>
+          <div class="result-card">
+            <div class="result-label"><Fragment set:html={t('log-r2-label')} /></div>
+            <div class="result-before">3</div>
+            <div class="result-after">0</div>
+            <div class="result-unit"><Fragment set:html={t('log-r2-unit')} /></div>
+          </div>
+          <div class="result-card">
+            <div class="result-label"><Fragment set:html={t('log-r3-label')} /></div>
+            <div class="result-before"><Fragment set:html={t('log-r3-before')} /></div>
+            <div class="result-after"><Fragment set:html={t('log-r3-after')} /></div>
+            <div class="result-unit"><Fragment set:html={t('log-r3-unit')} /></div>
+          </div>
+          <div class="result-card">
+            <div class="result-label"><Fragment set:html={t('log-r4-label')} /></div>
+            <div class="result-before"><Fragment set:html={t('log-r4-before')} /></div>
+            <div class="result-after"><Fragment set:html={t('log-r4-after')} /></div>
+            <div class="result-unit"><Fragment set:html={t('log-r4-unit')} /></div>
+          </div>
+        </div>
+        <div class="case-context">
+          <div class="context-title"><Fragment set:html={t('log-impl-title')} /></div>
+          {lang === 'es' ? (<><div class="impl-list">
+            <div class="impl-item">
+              <button class="impl-trigger" onclick="toggleImpl(this)">
+                <span class="impl-trigger-text"><Fragment set:html={t('log-impl1-title')} /></span>
+                <span class="impl-trigger-icon">+</span>
+              </button>
+              <div class="impl-body"><Fragment set:html={t('log-impl1-body')} /></div>
+            </div>
+            <div class="impl-item">
+              <button class="impl-trigger" onclick="toggleImpl(this)">
+                <span class="impl-trigger-text"><Fragment set:html={t('log-impl2-title')} /></span>
+                <span class="impl-trigger-icon">+</span>
+              </button>
+              <div class="impl-body"><Fragment set:html={t('log-impl2-body')} /></div>
+            </div>
+            <div class="impl-item">
+              <button class="impl-trigger" onclick="toggleImpl(this)">
+                <span class="impl-trigger-text"><Fragment set:html={t('log-impl3-title')} /></span>
+                <span class="impl-trigger-icon">+</span>
+              </button>
+              <div class="impl-body"><Fragment set:html={t('log-impl3-body')} /></div>
+            </div>
+          </div></>) : (<><p class="context-p"><Fragment set:html={t('log-impl1')} /></p>
+          <p class="context-p"><Fragment set:html={t('log-impl2')} /></p>
+          <p class="context-p"><Fragment set:html={t('log-impl3')} /></p></>)}
+          <div class="composite-note"><Fragment set:html={t('log-composite-note')} /></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CASO 3: EXPORTACIÓN AGRÍCOLA -->
+<section class="case-section" id="agro">
+  <div class="container">
+    <div class="case-wrapper">
+      <div class="case-header">
+        <div>
+          <div class="case-company"><Fragment set:html={t('agro-company')} /></div>
+          <div class="case-meta"><Fragment set:html={t('agro-meta')} /></div>
+        </div>
+        <span class="case-badge-composite"><Fragment set:html={t('agro-badge')} /></span>
+      </div>
+      <div class="case-body">
+        <p class="case-situation"><Fragment set:html={t('agro-situation')} /></p>
+        <div class="case-results">
+          <div class="result-card">
+            <div class="result-label"><Fragment set:html={t('agro-r1-label')} /></div>
+            <div class="result-before">18%</div>
+            <div class="result-after">0%</div>
+            <div class="result-unit"><Fragment set:html={t('agro-r1-unit')} /></div>
+          </div>
+          <div class="result-card">
+            <div class="result-label"><Fragment set:html={t('agro-r2-label')} /></div>
+            <div class="result-before"><Fragment set:html={t('agro-r2-before')} /></div>
+            <div class="result-after">−30%</div>
+            <div class="result-unit"><Fragment set:html={t('agro-r2-unit')} /></div>
+          </div>
+          <div class="result-card">
+            <div class="result-label"><Fragment set:html={t('agro-r3-label')} /></div>
+            <div class="result-before"><Fragment set:html={t('agro-r3-before')} /></div>
+            <div class="result-after"><Fragment set:html={t('agro-r3-after')} /></div>
+            <div class="result-unit"><Fragment set:html={t('agro-r3-unit')} /></div>
+          </div>
+          <div class="result-card">
+            <div class="result-label"><Fragment set:html={t('agro-r4-label')} /></div>
+            <div class="result-before"><Fragment set:html={t('agro-r4-before')} /></div>
+            <div class="result-after"><Fragment set:html={t('agro-r4-after')} /></div>
+            <div class="result-unit"><Fragment set:html={t('agro-r4-unit')} /></div>
+          </div>
+        </div>
+        <div class="case-context">
+          <div class="context-title"><Fragment set:html={t('agro-impl-title')} /></div>
+          {lang === 'es' ? (<><div class="impl-list">
+            <div class="impl-item">
+              <button class="impl-trigger" onclick="toggleImpl(this)">
+                <span class="impl-trigger-text"><Fragment set:html={t('agro-impl1-title')} /></span>
+                <span class="impl-trigger-icon">+</span>
+              </button>
+              <div class="impl-body"><Fragment set:html={t('agro-impl1-body')} /></div>
+            </div>
+            <div class="impl-item">
+              <button class="impl-trigger" onclick="toggleImpl(this)">
+                <span class="impl-trigger-text"><Fragment set:html={t('agro-impl2-title')} /></span>
+                <span class="impl-trigger-icon">+</span>
+              </button>
+              <div class="impl-body"><Fragment set:html={t('agro-impl2-body')} /></div>
+            </div>
+            <div class="impl-item">
+              <button class="impl-trigger" onclick="toggleImpl(this)">
+                <span class="impl-trigger-text"><Fragment set:html={t('agro-impl3-title')} /></span>
+                <span class="impl-trigger-icon">+</span>
+              </button>
+              <div class="impl-body"><Fragment set:html={t('agro-impl3-body')} /></div>
+            </div>
+          </div></>) : (<><p class="context-p"><Fragment set:html={t('agro-impl1')} /></p>
+          <p class="context-p"><Fragment set:html={t('agro-impl2')} /></p>
+          <p class="context-p"><Fragment set:html={t('agro-impl3')} /></p></>)}
+          <div class="composite-note"><Fragment set:html={t('agro-composite-note')} /></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CASO 4: DISTRIBUIDORA -->
+<section class="case-section" id="distribuidora">
+  <div class="container">
+    <div class="case-wrapper">
+      <div class="case-header">
+        <div>
+          <div class="case-company"><Fragment set:html={t('dist-company')} /></div>
+          <div class="case-meta"><Fragment set:html={t('dist-meta')} /></div>
+        </div>
+        <span class="case-badge"><Fragment set:html={t('dist-badge')} /></span>
+      </div>
+      <div class="case-body">
+        <p class="case-situation"><Fragment set:html={t('dist-situation')} /></p>
+        <div class="case-results">
+          <div class="result-card">
+            <div class="result-label"><Fragment set:html={t('dist-r1-label')} /></div>
+            <div class="result-before">45 min</div>
+            <div class="result-after">5 min</div>
+            <div class="result-unit"><Fragment set:html={t('dist-r1-unit')} /></div>
+          </div>
+          <div class="result-card">
+            <div class="result-label"><Fragment set:html={t('dist-r2-label')} /></div>
+            <div class="result-before"><Fragment set:html={t('dist-r2-before')} /></div>
+            <div class="result-after">24/7</div>
+            <div class="result-unit"><Fragment set:html={t('dist-r2-unit')} /></div>
+          </div>
+          <div class="result-card">
+            <div class="result-label"><Fragment set:html={t('dist-r3-label')} /></div>
+            <div class="result-before">7 días</div>
+            <div class="result-after">&lt; 1h</div>
+            <div class="result-unit"><Fragment set:html={t('dist-r3-unit')} /></div>
+          </div>
+          <div class="result-card">
+            <div class="result-label"><Fragment set:html={t('dist-r4-label')} /></div>
+            <div class="result-before">0%</div>
+            <div class="result-after">+263%</div>
+            <div class="result-unit"><Fragment set:html={t('dist-r4-unit')} /></div>
+          </div>
+        </div>
+        <div class="case-quote">
+          <p><Fragment set:html={t('dist-quote')} /></p>
+          <cite><Fragment set:html={t('dist-cite')} /></cite>
+        </div>
+        <div class="case-context">
+          <div class="context-title"><Fragment set:html={t('dist-impl-title')} /></div>
+          {lang === 'es' ? (<><div class="impl-list">
+            <div class="impl-item">
+              <button class="impl-trigger" onclick="toggleImpl(this)">
+                <span class="impl-trigger-text"><Fragment set:html={t('dist-impl1-title')} /></span>
+                <span class="impl-trigger-icon">+</span>
+              </button>
+              <div class="impl-body"><Fragment set:html={t('dist-impl1-body')} /></div>
+            </div>
+            <div class="impl-item">
+              <button class="impl-trigger" onclick="toggleImpl(this)">
+                <span class="impl-trigger-text"><Fragment set:html={t('dist-impl2-title')} /></span>
+                <span class="impl-trigger-icon">+</span>
+              </button>
+              <div class="impl-body"><Fragment set:html={t('dist-impl2-body')} /></div>
+            </div>
+            <div class="impl-item">
+              <button class="impl-trigger" onclick="toggleImpl(this)">
+                <span class="impl-trigger-text"><Fragment set:html={t('dist-impl3-title')} /></span>
+                <span class="impl-trigger-icon">+</span>
+              </button>
+              <div class="impl-body"><Fragment set:html={t('dist-impl3-body')} /></div>
+            </div>
+          </div></>) : (<><p class="context-p"><Fragment set:html={t('dist-impl1')} /></p>
+          <p class="context-p"><Fragment set:html={t('dist-impl2')} /></p>
+          <p class="context-p"><Fragment set:html={t('dist-impl3')} /></p></>)}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="cta-band">
+  <div class="container">
+    <h2><Fragment set:html={t('casos-cta-title')} /></h2>
+    <p><Fragment set:html={t('casos-cta-sub')} /></p>
+    <div class="cta-buttons">
+      <a href={p('/test-era')} class="btn btn-primary">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        <span><Fragment set:html={t('casos-btn-diag')} /></span>
+      </a>
+      <a href="https://wa.me/56988974898" target="_blank" class="btn btn-whatsapp">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        <span><Fragment set:html={t('casos-btn-whatsapp')} /></span>
+      </a>
+    </div>
+  </div>
+</div>
+</div>
+<script is:inline>
+function toggleImpl(btn) {
+  const item = btn.closest('.impl-item');
+  item.classList.toggle('open');
+}
+</script>

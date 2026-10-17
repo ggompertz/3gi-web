@@ -239,7 +239,7 @@ export const home = {
   },
   },
   en: {
-    meta: {"title": "Free AI Diagnosis for SMBs · ERA 1 to ERA 3 · 3GI", "description": "ERA 1: Operational chaos. ERA 2: Unused data. ERA 3: AI working for you. We move companies from one ERA to the next. Identify what to automate with highest ROI in 3 weeks. Free ERA Test from 5 minutes."},
+    meta: {"title": "Free ERA Test for SMBs · ERA 1 to ERA 3 · 3GI", "description": "ERA 1: Operational chaos. ERA 2: Unused data. ERA 3: AI working for you. We move companies from one ERA to the next. Identify what to automate with highest ROI in 3 weeks. Free ERA Test from 5 minutes."},
     k: {
     "caso-badge": "Real case · Anonymized data",
     "caso-cite": "— Manager, inspections and certifications company",
