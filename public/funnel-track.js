@@ -2,11 +2,39 @@
   var SUPA_URL = 'https://rfvhiuyqtfpqzjwpumav.supabase.co';
   var SUPA_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InJmdmhpdXlxdGZwcXpqd3B1bWF2Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzI4Mzc5OTksImV4cCI6MjA4ODQxMzk5OX0.BQfrR1TdfptuXsbEhqjFtYOULgOjKxae8H5nrzIZbQs';
 
+  // Sin consentimiento aceptado no se escribe nada en el navegador: el ID vive solo en esta
+  // variable (dura lo que dura la página) y no se leen ni guardan parámetros de campaña.
+  var memSid = null;
+
+  function hasConsent() {
+    try {
+      var c = JSON.parse(localStorage.getItem('tgi_consent') || 'null');
+      return !!c && c.status === 'accepted';
+    } catch (e) {
+      return false;
+    }
+  }
+
+  // Los rastreadores y navegadores automatizados inflaban las visitas del funnel.
+  function isBot() {
+    try {
+      return !!navigator.webdriver ||
+        /bot|crawl|spider|headless|lighthouse|pagespeed|preview|facebookexternalhit|slurp/i.test(navigator.userAgent || '');
+    } catch (e) {
+      return false;
+    }
+  }
+
   function getSessionId() {
     try {
+      if (!hasConsent()) {
+        if (!memSid) memSid = crypto.randomUUID();
+        return memSid;
+      }
       var sid = sessionStorage.getItem('_3gi_fsid');
       if (!sid) {
-        sid = crypto.randomUUID();
+        // Si ya había un ID en memoria (la persona aceptó a mitad de página), se adopta para no partir la sesión
+        sid = memSid || crypto.randomUUID();
         sessionStorage.setItem('_3gi_fsid', sid);
       }
       return sid;
@@ -16,14 +44,20 @@
   }
 
   function captureUtm() {
+    if (!hasConsent()) return {};
     try {
       var params = new URLSearchParams(location.search);
-      var keys = ['src', 'lid', 'utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'utm_term'];
+      // 'lid' (ID de un lead en el enlace del PDF) NO se guarda: uniría la navegación con una persona identificada
+      var keys = ['src', 'utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'utm_term'];
       var stored = {};
       try {
         stored = JSON.parse(sessionStorage.getItem('_3gi_futm') || '{}');
       } catch (e) {}
       var changed = false;
+      if (stored.lid !== undefined) {
+        delete stored.lid;
+        changed = true;
+      }
       keys.forEach(function (k) {
         if (params.has(k)) {
           stored[k] = params.get(k);
@@ -49,6 +83,7 @@
   }
 
   window.__funnelTrack = function (evento, meta) {
+    if (isBot()) return;
     toPostHog(evento, meta);
     try {
       var sid = getSessionId();
@@ -75,5 +110,5 @@
     } catch (e) {}
   };
 
-  captureUtm();
+  if (hasConsent()) captureUtm();
 })();
