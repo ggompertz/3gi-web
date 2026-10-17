@@ -179,7 +179,7 @@ el estado final): `my-config/handoffs/2026-08-10_3gi-web-posthog-fix-completo.md
 - **Probar PostHog con Playwright no sirve**: posthog-js 1.438.x descarta `capture()` en navegadores automatizados (devuelve
   `undefined`, ningún request a `/e/`), aun cambiando User-Agent y `navigator.webdriver`. Para verificar la lógica propia,
   espiar `posthog.capture`; para verificar la entrega real, un recorrido manual y revisar Activity en PostHog.
-- **LinkedIn no puede "verificar" el tag**: el verificador no acepta el banner, es esperado. Comprobar aceptando cookies y con
+- **LinkedIn no podía "verificar" el tag** (resuelto por Gonzalo el 2026-10-16; no se registró el método): el verificador no acepta el banner, era esperado. Comprobar aceptando cookies y con
   la extensión Insight Tag Helper; "Activo" llega con tráfico real que aceptó cookies (hasta 24 h).
 - **Pendientes**: Supabase `funnel_events` registra aun con cookies rechazadas y `privacidad` no lo declara; PostHog tampoco
   figura en `privacidad`; PostHog se carga con `posthog-js@latest` (fijar versión). Handoff:
