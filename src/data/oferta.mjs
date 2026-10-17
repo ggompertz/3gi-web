@@ -41,9 +41,8 @@ export const OFERTA = {
   otrosMontosUSD: [
     { usd: 250000, origen: 'Caso inspecciones y certificaciones (servicios entregados sin cobrar)' },
     { usd: 40000, origen: 'Ejemplo ilustrativo de ROI en la nota de valor del Radar (/precios)' },
-    { usd: 30000, origen: 'Umbral de ROI de la Ejecución; y «pierde entre USD 30.000 y 150.000» del hero (SIN FUENTE: pendiente)' },
-    { usd: 150000, origen: 'Hero de la home «pierde entre USD 30.000 y 150.000» (SIN FUENTE: pendiente)' },
-    { usd: 80000, origen: 'FAQ «una PyME de 20–50 personas pierde entre USD 30.000 y USD 80.000 anuales» (SIN FUENTE: pendiente; además no coincide con el hero)' },
+    { usd: 30000, origen: 'Umbral de ROI de la Ejecución; y piso de «pierde entre USD 30.000 y 100.000 anuales» (hero de la home y FAQ)' },
+    { usd: 100000, origen: 'Techo de «pierde entre USD 30.000 y 100.000 anuales» en procesos automatizables (hero de la home y FAQ). Cifra definida por Gonzalo el 2026-10-17; SIN FUENTE externa (la búsqueda web no encontró respaldo)' },
     { usd: 200, origen: 'FAQ: «herramientas de IA accesibles desde USD 50–200 al mes» (precio de herramientas de terceros, no de 3GI)' },
     { usd: 3000, origen: 'Contenido: caso real de LinkedIn «El profesional de USD 3.000» (15-may-2026)' },
     { usd: 864, origen: 'Contenido: mismo caso de LinkedIn (USD 864/mes en tareas administrativas)' },
