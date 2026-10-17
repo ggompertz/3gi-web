@@ -210,6 +210,20 @@ Spec: R2 `3gi-outputs/proyectos/3gi-web/2026-10-16/prd-funnel-consentimiento.md`
 - **Jerga técnica** (n8n, Supabase, OAuth2) = señal de credibilidad para tomadores de decisión informados. Mantener visible, no esconder en desplegables.
 - **GTM duplicado** = hipótesis descartada. Astro es estático, no hay transiciones SPA.
 
+## Oferta: fuente única, plantillas por idioma y guardia de contenido (2026-10-17)
+
+**Dónde cambiar qué:**
+- **Precios, plazos y condiciones** (Test ERA, Radar, Plan de Vuelo en 2 tramos, Data Foundation, Piloto Automático, ventana de 45 días, 10–20 % por hitos): SOLO en `src/data/oferta.mjs`. De ahí salen `/precios`, `/metodologia` (ES y EN) y `/llms.txt` (`src/pages/llms.txt.ts`, ya no existe `public/llms.txt`).
+- **Textos** de `/precios` y `/metodologia`: `src/i18n/precios.mjs` y `src/i18n/metodologia.mjs` (`{ es, en }` por clave). Los precios y plazos van como `[[marcadores]]` (`radarDesde`, `pdvDesde`, `ventana`, `pct`, `testMin`, …; ver `tokens()` en `oferta.mjs`); un marcador desconocido rompe el build.
+- **Estructura**: `src/components/pages/PreciosPage.astro` y `MetodologiaPage.astro` (una plantilla por página, prop `lang`); `src/pages/precios.astro`, `src/pages/en/precios.astro` y sus equivalentes de metodología son envoltorios de 10 líneas. **Ya no hay script de traducción en estas dos páginas**: lo que se ve es el HTML.
+- Una página nueva con versión EN sigue el mismo patrón (plantilla + diccionario); no usar `data-i18n` ni tablas `T_*`.
+
+**Guardia de contenido** (`src/integrations/guardia-contenido.mjs`, integración de Astro en `astro.config.mjs`; corre con cualquier comando de build, Cloudflare incluido): hace FALLAR el build si el HTML generado trae F1–F5, «Etapa», E1–E3, voseo/regionalismos (`acá`, `tenés`, …), segmento obsoleto (5–200, 10–200), duraciones obsoletas del Test ERA (15 min, 24–48 h, ~3 min), afirmaciones sin fuente (USD 30.000–100.000, «mínimo $50k»), nombres de producto con «Diagnóstico/Diagnosis» aplicados al Test ERA, «implementación incluida» en el Plan de Vuelo, o un monto USD que no esté en `oferta.mjs` (`montosPermitidos()`). Un monto nuevo se agrega ahí **con su origen**.
+- **Excepciones temporales** (se imprimen en cada build): `/framework` (documento INTERNO publicado: puertos, hosts, F1–F4, E1–E3; decidir si se retira), y las «fases F0–F5» de `/contenido` e `/inteligencia-organizacional` (descripción del libro).
+- **Montos sin fuente aún declarados** (marcados «SIN FUENTE» en `oferta.mjs`): «pierde entre USD 30.000 y 150.000» (hero de la home) y «USD 30.000–80.000 anuales» (FAQ): no coinciden entre sí y no hay respaldo.
+
+**Pendiente (no hecho):** `Layout.astro` (JSON-LD y tabla `T` global), home, FAQ, casos y nosotros aún repiten precios a mano (el guardia lo detecta si cambia un precio: lista cada archivo) y conservan el script que sobrescribe el HTML con tablas posiblemente desactualizadas. Verificado 2026-10-17: ES de `/precios` y `/metodologia` idéntico al píxel antes/después; en EN se corrigieron un H1 equivocado (colisión de claves con `Layout.astro`), enlaces sin `/en/` y el badge «Most popular».
+
 ## graphify
 
 This project has a knowledge graph at graphify-out/ with god nodes, community structure, and cross-file relationships.
