@@ -93,6 +93,11 @@ function tokens(lang) {
     semanasR360: String(OFERTA.radar.r360.desdeSemanas),
     testMin: String(OFERTA.testEra.desdeMinutos),
     descuentoDias: String(OFERTA.radar.descuentoEnPlanDeVueloDias),
+    // priceRange del JSON-LD (formato fijo sin separador de miles)
+    precioMinimoPlano: String(OFERTA.radar.express.tramos[0].usd[0]),
+    precioMaximoPlano: String(OFERTA.piloto[2].usd[1]),
+    pilotoMin: usd(OFERTA.piloto[0].usd[0], lang),
+    pilotoMax: usd(OFERTA.piloto[2].usd[1], lang),
   };
 }
 /** @param {string} s @param {Lang} lang */
