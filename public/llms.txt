@@ -8,7 +8,7 @@
 
 - [Metodología](https://3gi.cl/metodologia): Framework 3 ERAs completo, posiciones dentro de cada ERA y las etapas del servicio: Test ERA, Radar, Plan de Vuelo y Piloto Automático.
 - [Test ERA](https://3gi.cl/test-era): Test gratuito, desde 5 minutos, que clasifica a la empresa en una ERA y entrega un puntaje de madurez en IA. Es la puerta de entrada a los demás servicios.
-- [Precios](https://3gi.cl/precios): Test ERA gratuito. Radar Express desde USD 1.200 (según tamaño de la empresa) y Radar 360 en USD 6.000. Plan de Vuelo desde USD 6.700, con implementación cotizada aparte. Data Foundation USD 800–15.000 según nivel. Piloto Automático (retainer mensual) USD 1.500–8.000 al mes. Lo pagado por el Radar se descuenta del Plan de Vuelo si se contrata dentro de 90 días.
+- [Precios](https://3gi.cl/precios): Test ERA gratuito. Radar Express desde USD 1.200 (según tamaño de la empresa) y Radar 360 en USD 6.000. Plan de Vuelo en dos tramos: la Propuesta desde USD 6.700 (con la cotización cerrada de la Ejecución, vigente 45 días) y la Ejecución con honorario de 10–20 % del ROI validado, pagado por hitos. Data Foundation USD 800–15.000 según nivel. Piloto Automático (retainer mensual) USD 1.500–8.000 al mes. Lo pagado por el Radar se descuenta del Plan de Vuelo si se contrata dentro de 90 días.
 
 ## Casos y resultados
 
