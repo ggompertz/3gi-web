@@ -60,7 +60,7 @@ const schemaFaqEn = {"@context": "https://schema.org", "@type": "FAQPage", "main
     window.__loadPostHog = function() {
       if (window.__posthogLoaded || !window.__posthogKey) return;
       window.__posthogLoaded = true;
-      import('https://cdn.jsdelivr.net/npm/posthog-js@latest/dist/module.full.min.js').then(function(mod) {
+      import('https://cdn.jsdelivr.net/npm/posthog-js@1.438.12/dist/module.full.min.js').then(function(mod) {
         window.posthog = mod.default;
         window.posthog.init(window.__posthogKey, {
           // Managed reverse proxy propio (2026-08-10) — evita que ad-blockers que

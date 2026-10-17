@@ -181,7 +181,8 @@ el estado final): `my-config/handoffs/2026-08-10_3gi-web-posthog-fix-completo.md
   espiar `posthog.capture`; para verificar la entrega real, un recorrido manual y revisar Activity en PostHog.
 - **LinkedIn no podía "verificar" el tag** (resuelto por Gonzalo el 2026-10-16; no se registró el método): el verificador no acepta el banner, era esperado. Comprobar aceptando cookies y con
   la extensión Insight Tag Helper; "Activo" llega con tráfico real que aceptó cookies (hasta 24 h).
-- **Pendientes**: fijar la versión de `posthog-js` (hoy `@latest`); plazo de retención de `funnel_events` y de PostHog sin definir;
+- **`posthog-js` fijado a 1.438.12** (2026-10-17, `Layout.astro`). Para subirla: cambiar la URL de jsDelivr, correr `scripts/manual-tests/funnel-consentimiento.mjs` y revisar el changelog; revisarla cada trimestre.
+- **Pendientes**: plazo de retención de `funnel_events` y de PostHog sin definir;
   segunda conversión `test_complete` opcional en Campaign Manager. Handoffs:
   `my-config/handoffs/2026-10-16_3gi-web-linkedin-insight-tag.md` y `2026-10-16_3gi-web-funnel-consentimiento-mascaras.md`.
 
