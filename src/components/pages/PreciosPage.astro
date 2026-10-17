@@ -1,9 +1,9 @@
 ---
 // Plantilla única de /precios para ES y EN. Textos: src/i18n/precios.mjs · Precios: src/data/oferta.mjs
 import { precios } from '../../i18n/precios.mjs';
-import { OFERTA, usd, usdRango } from '../../data/oferta.mjs';
+import { OFERTA, usd, usdRango, fill } from '../../data/oferta.mjs';
 const { lang = 'es' } = Astro.props;
-const t = (k) => precios[lang].k[k];
+const t = (k) => fill(precios[lang].k[k], lang);
 const p = (path) => (lang === 'en' ? '/en' + path : path);
 ---
 <style>

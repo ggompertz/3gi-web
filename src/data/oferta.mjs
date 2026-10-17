@@ -73,3 +73,33 @@ export function montosPermitidos() {
   OFERTA.otrosMontosUSD.forEach((m) => add(m.usd));
   return s;
 }
+
+/** Rango del Radar Express: del mínimo del tramo más chico al máximo del tramo «Mediana». */
+export const radarExpressRango = () => [OFERTA.radar.express.tramos[0].usd[0], OFERTA.radar.express.tramos[2].usd[1]];
+
+/** Marcadores [[nombre]] que se usan dentro de los textos (src/i18n/*.mjs). Un marcador desconocido hace fallar el build. */
+function tokens(lang) {
+  const pdv = OFERTA.planDeVuelo;
+  return {
+    radarDesde: usd(OFERTA.radar.express.tramos[0].usd[0], lang),
+    radarRango: usdRango(radarExpressRango(), lang),
+    radar360: usd(OFERTA.radar.r360.usd, lang),
+    pdvDesde: usd(pdv.propuesta.desdeUSD, lang),
+    umbralROI: usd(pdv.ejecucion.umbralROIUSD, lang),
+    dfRango: usdRango([OFERTA.dataFoundation.niveles[0].usd[0], OFERTA.dataFoundation.niveles[2].usd[1]], lang),
+    pilotoRango: usdRango([OFERTA.piloto[0].usd[0], OFERTA.piloto[2].usd[1]], lang),
+    ventana: String(pdv.propuesta.ventanaCotizacionEjecucionDias),
+    pct: `${pdv.ejecucion.pctROI[0]}–${pdv.ejecucion.pctROI[1]}`,
+    semanasR360: String(OFERTA.radar.r360.desdeSemanas),
+    testMin: String(OFERTA.testEra.desdeMinutos),
+    descuentoDias: String(OFERTA.radar.descuentoEnPlanDeVueloDias),
+  };
+}
+/** @param {string} s @param {Lang} lang */
+export function fill(s, lang) {
+  const T = tokens(lang);
+  return s.replace(/\[\[(\w+)\]\]/g, (m, k) => {
+    if (!(k in T)) throw new Error(`Marcador desconocido ${m} en un texto de i18n (ver tokens() en src/data/oferta.mjs)`);
+    return T[k];
+  });
+}
