@@ -286,6 +286,8 @@ function calcSub(score, total) {
 }
 
 function startQuiz() {
+  // Clic en "Start" (test_start recién se dispara al responder la primera pregunta)
+  if (window.__funnelTrack) window.__funnelTrack('cta_empezar_click', { pos: 'unico' });
   document.getElementById('intro-step').style.display = 'none';
   document.getElementById('quiz-step').style.display = 'block';
   renderQuestion();
