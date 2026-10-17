@@ -1,0 +1,263 @@
+---
+// Plantilla única de /faq para ES y EN. Textos y JSON-LD: src/i18n/faq.mjs · Precios y plazos: src/data/oferta.mjs
+import { faq } from '../../i18n/faq.mjs';
+import { fill, fillDeep } from '../../data/oferta.mjs';
+const { lang = 'es' } = Astro.props;
+const t = (k) => fill(faq[lang].k[k], lang);
+const p = (path) => (lang === 'en' ? '/en' + path : path);
+const schema = fillDeep(faq[lang].jsonld, lang);
+---
+<script type="application/ld+json" set:html={JSON.stringify(schema)} />
+<style is:global>
+/* PAGE HERO */
+.pg-faq .faq-hero { padding: 140px 0 72px; background: var(--night-2); border-bottom: 1px solid var(--border); }
+.pg-faq .faq-hero .page-tag { font-family: 'Syne', sans-serif; font-size: 11px; font-weight: 700; letter-spacing: .2em; text-transform: uppercase; color: var(--green); margin-bottom: 16px; }
+.pg-faq .faq-hero h1 { font-family: 'Syne', sans-serif; font-weight: 800; font-size: clamp(32px, 5vw, 52px); letter-spacing: -.03em; line-height: 1.05; margin-bottom: 16px; }
+.pg-faq .faq-hero h1 em { color: var(--green); font-style: normal; }
+.pg-faq .faq-hero p { font-size: 18px; font-weight: 300; color: rgba(238,241,246,0.6); max-width: 560px; line-height: 1.65; }
+
+/* ESPEJO */
+.pg-faq #espejo { background: var(--night); padding: 96px 0; }
+.pg-faq .espejo-intro { font-family: 'Syne', sans-serif; font-weight: 800; font-size: clamp(20px, 3vw, 28px); letter-spacing: -.02em; line-height: 1.2; max-width: 640px; margin-bottom: 48px; }
+.pg-faq .espejo-intro span { color: var(--green); }
+.pg-faq .espejo-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; margin-bottom: 48px; }
+.pg-faq .espejo-q { background: var(--night-3); border: 1px solid var(--border); border-radius: 12px; padding: 24px 24px 24px 20px; border-left: 3px solid rgba(0,232,145,0.3); transition: border-color .2s, border-left-color .2s; }
+.pg-faq .espejo-q:hover { border-color: rgba(0,232,145,0.25); border-left-color: var(--green); }
+.pg-faq .espejo-q p { font-family: 'Syne', sans-serif; font-weight: 700; font-size: clamp(14px, 1.6vw, 16px); line-height: 1.35; color: rgba(238,241,246,0.85); }
+.pg-faq .espejo-cta-strip { display: flex; align-items: center; gap: 20px; padding: 24px 28px; background: rgba(0,232,145,0.04); border: 1px solid rgba(0,232,145,0.15); border-radius: 12px; flex-wrap: wrap; }
+.pg-faq .espejo-cta-txt { font-family: 'Syne', sans-serif; font-weight: 800; font-size: clamp(15px, 2vw, 18px); flex: 1; min-width: 220px; }
+.pg-faq .espejo-cta-txt span { color: var(--green); }
+
+/* FAQ SECTIONS */
+.pg-faq #faq-page { background: var(--night-2); padding: 96px 0; }
+.pg-faq .faq-cats { display: flex; flex-direction: column; gap: 64px; }
+.pg-faq .faq-cat-title { font-family: 'Syne', sans-serif; font-weight: 800; font-size: clamp(18px, 2.5vw, 24px); letter-spacing: -.02em; margin-bottom: 4px; }
+.pg-faq .faq-cat-sub { font-size: 14px; color: var(--muted); margin-bottom: 24px; }
+.pg-faq .faq-list { display: flex; flex-direction: column; gap: 2px; }
+.pg-faq .faq-item { border: 1px solid var(--border); border-radius: 10px; overflow: hidden; transition: border-color .2s; }
+.pg-faq .faq-item.open { border-color: rgba(0,232,145,.25); }
+.pg-faq .faq-q-btn { width: 100%; background: var(--night-3); border: none; text-align: left; padding: 20px 24px; display: flex; align-items: center; justify-content: space-between; gap: 16px; cursor: pointer; font-family: 'Syne', sans-serif; font-weight: 800; font-size: clamp(14px, 1.8vw, 16px); color: var(--offwh); letter-spacing: -.01em; line-height: 1.3; transition: background .15s; }
+.pg-faq .faq-q-btn:hover { background: rgba(255,255,255,.03); }
+.pg-faq .faq-ico { flex-shrink: 0; width: 22px; height: 22px; border-radius: 50%; border: 1px solid rgba(0,232,145,.3); display: flex; align-items: center; justify-content: center; color: var(--green); transition: transform .25s; font-size: 16px; line-height: 1; }
+.pg-faq .faq-item.open .faq-ico { transform: rotate(45deg); }
+.pg-faq .faq-ans { max-height: 0; overflow: hidden; transition: max-height .32s ease; }
+.pg-faq .faq-item.open .faq-ans { max-height: 400px; }
+.pg-faq .faq-ans-inner { padding: 0 24px 22px; font-size: 15px; color: rgba(238,241,246,0.7); line-height: 1.75; }
+.pg-faq .faq-ans-inner strong { color: var(--green); font-weight: 600; }
+.pg-faq .faq-ans-inner a { color: var(--green); text-decoration: underline; text-underline-offset: 3px; }
+
+/* CTA FINAL */
+.pg-faq .faq-cta-band { background: var(--night); border-top: 1px solid var(--border); padding: 80px 0; text-align: center; }
+.pg-faq .faq-cta-band h2 { font-family: 'Syne', sans-serif; font-weight: 800; font-size: clamp(24px, 4vw, 40px); letter-spacing: -.03em; margin-bottom: 12px; }
+.pg-faq .faq-cta-band h2 span { color: var(--green); }
+.pg-faq .faq-cta-band p { font-size: 16px; color: var(--muted); margin-bottom: 32px; max-width: 480px; margin-left: auto; margin-right: auto; }
+.pg-faq .cta-buttons { display: flex; align-items: center; justify-content: center; gap: 14px; flex-wrap: wrap; }
+
+@media (max-width: 700px) {
+  .pg-faq .espejo-grid { grid-template-columns: 1fr; }
+  .pg-faq .espejo-cta-strip { flex-direction: column; text-align: center; }
+  .pg-faq .espejo-cta-strip .btn { width: 100%; justify-content: center; }
+}
+</style>
+<div class="pg-faq" style="display:contents">
+<!-- HERO -->
+<div class="faq-hero">
+  <div class="container">
+    <div class="page-tag"><Fragment set:html={t('faqp-hero-tag')} /></div>
+    <h1><Fragment set:html={t('faqp-hero-title')} /></h1>
+    <p><Fragment set:html={t('faqp-hero-sub')} /></p>
+  </div>
+</div>
+
+<!-- ESPEJO DE DOLOR -->
+<section id="espejo">
+  <div class="container">
+    <p class="espejo-intro"><Fragment set:html={t('faqp-espejo-intro')} /></p>
+    <div class="espejo-grid">
+      <div class="espejo-q"><p><Fragment set:html={t('faqp-eq1')} /></p></div>
+      <div class="espejo-q"><p><Fragment set:html={t('faqp-eq2')} /></p></div>
+      <div class="espejo-q"><p><Fragment set:html={t('faqp-eq3')} /></p></div>
+      <div class="espejo-q"><p><Fragment set:html={t('faqp-eq4')} /></p></div>
+      <div class="espejo-q"><p><Fragment set:html={t('faqp-eq5')} /></p></div>
+      <div class="espejo-q"><p><Fragment set:html={t('faqp-eq6')} /></p></div>
+      <div class="espejo-q"><p><Fragment set:html={t('faqp-eq7')} /></p></div>
+      <div class="espejo-q"><p><Fragment set:html={t('faqp-eq8')} /></p></div>
+    </div>
+    <div class="espejo-cta-strip">
+      <p class="espejo-cta-txt"><Fragment set:html={t('faqp-espejo-cta-txt')} /></p>
+      <a href={p('/test-era')} class="btn btn-primary">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        <span><Fragment set:html={t('faqp-espejo-cta-btn')} /></span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ POR CATEGORÍA -->
+<section id="faq-page">
+  <div class="container">
+    <div class="faq-cats">
+
+      <!-- CATEGORÍA 1: DINERO Y ROI -->
+      <div>
+        <div class="section-tag"><Fragment set:html={t('faqp-c1-tag')} /></div>
+        <h2 class="faq-cat-title"><Fragment set:html={t('faqp-c1-title')} /></h2>
+        <p class="faq-cat-sub"><Fragment set:html={t('faqp-c1-sub')} /></p>
+        <div class="faq-list">
+          <div class="faq-item">
+            <button class="faq-q-btn" aria-expanded="false"><span><Fragment set:html={t('faqp-c1q1')} /></span><span class="faq-ico">+</span></button>
+            <div class="faq-ans"><div class="faq-ans-inner"><Fragment set:html={t('faqp-c1a1')} /></div></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q-btn" aria-expanded="false"><span><Fragment set:html={t('faqp-c1q2')} /></span><span class="faq-ico">+</span></button>
+            <div class="faq-ans"><div class="faq-ans-inner"><Fragment set:html={t('faqp-c1a2')} /></div></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q-btn" aria-expanded="false"><span><Fragment set:html={t('faqp-c1q3')} /></span><span class="faq-ico">+</span></button>
+            <div class="faq-ans"><div class="faq-ans-inner"><Fragment set:html={t('faqp-c1a3')} /></div></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q-btn" aria-expanded="false"><span><Fragment set:html={t('faqp-c1q4')} /></span><span class="faq-ico">+</span></button>
+            <div class="faq-ans"><div class="faq-ans-inner"><Fragment set:html={t('faqp-c1a4')} /></div></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CATEGORÍA 2: TIEMPO Y PROCESO -->
+      <div>
+        <div class="section-tag"><Fragment set:html={t('faqp-c2-tag')} /></div>
+        <h2 class="faq-cat-title"><Fragment set:html={t('faqp-c2-title')} /></h2>
+        <p class="faq-cat-sub"><Fragment set:html={t('faqp-c2-sub')} /></p>
+        <div class="faq-list">
+          <div class="faq-item">
+            <button class="faq-q-btn" aria-expanded="false"><span><Fragment set:html={t('faqp-c2q1')} /></span><span class="faq-ico">+</span></button>
+            <div class="faq-ans"><div class="faq-ans-inner"><Fragment set:html={t('faqp-c2a1')} /></div></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q-btn" aria-expanded="false"><span><Fragment set:html={t('faqp-c2q2')} /></span><span class="faq-ico">+</span></button>
+            <div class="faq-ans"><div class="faq-ans-inner"><Fragment set:html={t('faqp-c2a2')} /></div></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q-btn" aria-expanded="false"><span><Fragment set:html={t('faqp-c2q3')} /></span><span class="faq-ico">+</span></button>
+            <div class="faq-ans"><div class="faq-ans-inner"><Fragment set:html={t('faqp-c2a3')} /></div></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q-btn" aria-expanded="false"><span><Fragment set:html={t('faqp-c2q4')} /></span><span class="faq-ico">+</span></button>
+            <div class="faq-ans"><div class="faq-ans-inner"><Fragment set:html={t('faqp-c2a4')} /></div></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CATEGORÍA 3: ¿ES PARA MI EMPRESA? -->
+      <div>
+        <div class="section-tag"><Fragment set:html={t('faqp-c3-tag')} /></div>
+        <h2 class="faq-cat-title"><Fragment set:html={t('faqp-c3-title')} /></h2>
+        <p class="faq-cat-sub"><Fragment set:html={t('faqp-c3-sub')} /></p>
+        <div class="faq-list">
+          <div class="faq-item">
+            <button class="faq-q-btn" aria-expanded="false"><span><Fragment set:html={t('faqp-c3q1')} /></span><span class="faq-ico">+</span></button>
+            <div class="faq-ans"><div class="faq-ans-inner"><Fragment set:html={t('faqp-c3a1')} /></div></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q-btn" aria-expanded="false"><span><Fragment set:html={t('faqp-c3q2')} /></span><span class="faq-ico">+</span></button>
+            <div class="faq-ans"><div class="faq-ans-inner"><Fragment set:html={t('faqp-c3a2')} /></div></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q-btn" aria-expanded="false"><span><Fragment set:html={t('faqp-c3q3')} /></span><span class="faq-ico">+</span></button>
+            <div class="faq-ans"><div class="faq-ans-inner"><Fragment set:html={t('faqp-c3a3')} /></div></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q-btn" aria-expanded="false"><span><Fragment set:html={t('faqp-c3q4')} /></span><span class="faq-ico">+</span></button>
+            <div class="faq-ans"><div class="faq-ans-inner"><Fragment set:html={t('faqp-c3a4')} /></div></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CATEGORÍA 4: MIEDO A QUEDARSE ATRÁS -->
+      <div>
+        <div class="section-tag"><Fragment set:html={t('faqp-c4-tag')} /></div>
+        <h2 class="faq-cat-title"><Fragment set:html={t('faqp-c4-title')} /></h2>
+        <p class="faq-cat-sub"><Fragment set:html={t('faqp-c4-sub')} /></p>
+        <div class="faq-list">
+          <div class="faq-item">
+            <button class="faq-q-btn" aria-expanded="false"><span><Fragment set:html={t('faqp-c4q1')} /></span><span class="faq-ico">+</span></button>
+            <div class="faq-ans"><div class="faq-ans-inner"><Fragment set:html={t('faqp-c4a1')} /></div></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q-btn" aria-expanded="false"><span><Fragment set:html={t('faqp-c4q2')} /></span><span class="faq-ico">+</span></button>
+            <div class="faq-ans"><div class="faq-ans-inner"><Fragment set:html={t('faqp-c4a2')} /></div></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q-btn" aria-expanded="false"><span><Fragment set:html={t('faqp-c4q3')} /></span><span class="faq-ico">+</span></button>
+            <div class="faq-ans"><div class="faq-ans-inner"><Fragment set:html={t('faqp-c4a3')} /></div></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q-btn" aria-expanded="false"><span><Fragment set:html={t('faqp-c4q4')} /></span><span class="faq-ico">+</span></button>
+            <div class="faq-ans"><div class="faq-ans-inner"><Fragment set:html={t('faqp-c4a4')} /></div></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CATEGORÍA 5: CÓMO TRABAJAMOS -->
+      <div>
+        <div class="section-tag"><Fragment set:html={t('faqp-c5-tag')} /></div>
+        <h2 class="faq-cat-title"><Fragment set:html={t('faqp-c5-title')} /></h2>
+        <p class="faq-cat-sub"><Fragment set:html={t('faqp-c5-sub')} /></p>
+        <div class="faq-list">
+          <div class="faq-item">
+            <button class="faq-q-btn" aria-expanded="false"><span><Fragment set:html={t('faqp-c5q1')} /></span><span class="faq-ico">+</span></button>
+            <div class="faq-ans"><div class="faq-ans-inner"><Fragment set:html={t('faqp-c5a1')} /></div></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q-btn" aria-expanded="false"><span><Fragment set:html={t('faqp-c5q2')} /></span><span class="faq-ico">+</span></button>
+            <div class="faq-ans"><div class="faq-ans-inner"><Fragment set:html={t('faqp-c5a2')} /></div></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q-btn" aria-expanded="false"><span><Fragment set:html={t('faqp-c5q3')} /></span><span class="faq-ico">+</span></button>
+            <div class="faq-ans"><div class="faq-ans-inner"><Fragment set:html={t('faqp-c5a3')} /></div></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q-btn" aria-expanded="false"><span><Fragment set:html={t('faqp-c5q4')} /></span><span class="faq-ico">+</span></button>
+            <div class="faq-ans"><div class="faq-ans-inner"><Fragment set:html={t('faqp-c5a4')} /></div></div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- CTA FINAL -->
+<div class="faq-cta-band">
+  <div class="container">
+    <h2><Fragment set:html={t('faqp-cta-title')} /></h2>
+    <p><Fragment set:html={t('faqp-cta-sub')} /></p>
+    <div class="cta-buttons">
+      <a href={p('/test-era')} class="btn btn-primary btn-lg">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        <span><Fragment set:html={t('faqp-cta-btn-diag')} /></span>
+      </a>
+      <a href="https://wa.me/56988974898?text=Hola,%20tengo%20preguntas%20sobre%20implementar%20IA%20en%20mi%20empresa" target="_blank" class="btn btn-outline btn-lg" aria-label="WhatsApp">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        <span><Fragment set:html={t('faqp-cta-btn-wa')} /></span>
+      </a>
+    </div>
+  </div>
+</div>
+</div>
+<script>
+  document.querySelectorAll('.faq-q-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const item = btn.closest('.faq-item');
+      const isOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item.open').forEach(i => {
+        i.classList.remove('open');
+        i.querySelector('.faq-q-btn').setAttribute('aria-expanded', 'false');
+      });
+      if (!isOpen) {
+        item.classList.add('open');
+        btn.setAttribute('aria-expanded', 'true');
+      }
+    });
+  });
+</script>

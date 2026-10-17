@@ -103,3 +103,11 @@ export function fill(s, lang) {
     return T[k];
   });
 }
+
+/** Aplica fill() a todos los textos de un objeto (p. ej. JSON-LD). @param {any} o @param {Lang} lang */
+export function fillDeep(o, lang) {
+  if (typeof o === 'string') return fill(o, lang);
+  if (Array.isArray(o)) return o.map((x) => fillDeep(x, lang));
+  if (o && typeof o === 'object') return Object.fromEntries(Object.entries(o).map(([k, v]) => [k, fillDeep(v, lang)]));
+  return o;
+}
