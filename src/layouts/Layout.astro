@@ -671,6 +671,20 @@ const schemaFaqEn = {"@context": "https://schema.org", "@type": "FAQPage", "main
      momento (window.__tgiConsentReset). */
   .tgi-consent { transition: transform 0.25s ease; }
   .tgi-consent.tgi-consent-minimized { transform: translateY(120%); }
+  /* Móvil: banner compacto (texto corto + botones en una fila, ~80 px en vez de ~124). El banner
+     alto tapaba la mitad inferior del botón "Empezar Test ERA" al cargar en 390x844 (iPhone 12 a
+     14), justo en el tráfico de la campaña de LinkedIn. El texto largo queda en escritorio y la
+     información completa en /privacidad (enlace en el texto corto). */
+  .tgi-consent-short { display: none; }
+  @media (max-width: 640px) {
+    .tgi-consent { padding: 8px 12px; gap: 6px; }
+    .tgi-consent-long { display: none; }
+    .tgi-consent-short { display: inline; }
+    .tgi-consent-short a { color: #00E891; text-decoration: underline; }
+    .tgi-consent-text { font-size: 12px; line-height: 1.35; }
+    .tgi-consent-actions { width: 100%; }
+    .tgi-consent-btn { flex: 1; padding: 8px 12px; }
+  }
 </style>
 </head>
 <body>
@@ -678,7 +692,8 @@ const schemaFaqEn = {"@context": "https://schema.org", "@type": "FAQPage", "main
 <!-- Cookie consent banner -->
 <div id="tgi-consent" class="tgi-consent" hidden>
   <p class="tgi-consent-text" data-i18n="cookie-banner-text">
-    {lang === 'en' ? 'We use analytics and advertising measurement cookies (Google Analytics, PostHog, LinkedIn) to understand how this site is used and measure our ads.' : 'Usamos cookies de analítica y de medición publicitaria (Google Analytics, PostHog, LinkedIn) para entender cómo se usa este sitio y medir nuestros anuncios.'}
+    <span class="tgi-consent-long">{lang === 'en' ? 'We use analytics and advertising measurement cookies (Google Analytics, PostHog, LinkedIn) to understand how this site is used and measure our ads.' : 'Usamos cookies de analítica y de medición publicitaria (Google Analytics, PostHog, LinkedIn) para entender cómo se usa este sitio y medir nuestros anuncios.'}</span>
+    <span class="tgi-consent-short">{lang === 'en' ? <>We use analytics and advertising cookies (Google, PostHog, LinkedIn). <a href={`${p}/privacidad`}>Learn more</a></> : <>Usamos cookies de analítica y publicidad (Google, PostHog, LinkedIn). <a href={`${p}/privacidad`}>Más información</a></>}</span>
   </p>
   <div class="tgi-consent-actions">
     <button id="tgi-consent-reject" class="tgi-consent-btn tgi-consent-btn-reject" data-i18n="cookie-reject">{lang === 'en' ? 'Reject' : 'Rechazar'}</button>
