@@ -35,13 +35,18 @@ function textoVisible(raw, esHtml) {
     .replace(/&nbsp;/g, ' ').replace(/&amp;/g, '&').replace(/&#39;|&apos;/g, "'").replace(/&quot;/g, '"')
     .replace(/\s+/g, ' ');
 }
-// Excepciones TEMPORALES y visibles: se imprimen en cada build hasta que se resuelvan.
-const EXCEPCIONES = {
-  'nomenclatura-interna': {
+// Excepciones PERMANENTES y acotadas (decisión de Gonzalo, 2026-10-17): el libro «Inteligencia Organizacional en la Era IA»
+// describe su capítulo 9 como «las seis fases F0 a F5». Solo se permite esa mención, en las páginas que describen el libro;
+// cualquier otro código interno (F1–F5, E1–E3, «Etapa») sigue rechazado también en esas páginas.
+const PERMITIDOS = [
+  {
+    regla: 'nomenclatura-interna',
     archivos: ['contenido/index.html', 'inteligencia-organizacional/index.html', 'en/inteligencia-organizacional/index.html'],
-    motivo: 'contenido e inteligencia-organizacional describen las «fases F0–F5» del libro: decidir si se mantienen.',
+    contexto: /(?:fases?|phases?)\s+F0/i,
   },
-};
+];
+const permitido = (regla, rel, texto, i) =>
+  PERMITIDOS.some((e) => e.regla === regla && e.archivos.includes(rel) && e.contexto.test(texto.slice(Math.max(0, i - 40), i + 20)));
 const aNumero = (s) => (/^\d{1,3}([.,]\d{3})+$/.test(s) ? Number(s.replace(/[.,]/g, '')) : /^\d+$/.test(s) ? Number(s) : NaN);
 
 export default function guardiaContenido() {
@@ -56,9 +61,9 @@ export default function guardiaContenido() {
           const rel = path.relative(raiz, f);
           const texto = textoVisible(fs.readFileSync(f, 'utf8'), f.endsWith('.html'));
           for (const r of REGLAS) {
-            if (EXCEPCIONES[r.id]?.archivos.includes(rel)) continue;
             for (const m of texto.matchAll(r.re)) {
               const i = m.index ?? 0;
+              if (permitido(r.id, rel, texto, i)) continue;
               fallas.push(`${rel} · ${r.id}: «${m[0]}» …${texto.slice(Math.max(0, i - 30), i + 40)}…  → ${r.msg}`);
             }
           }
@@ -74,7 +79,6 @@ export default function guardiaContenido() {
           const unicas = [...new Set(fallas)];
           throw new Error(`\n[guardia-contenido] ${unicas.length} problema(s) en el HTML generado:\n - ${unicas.join('\n - ')}\n`);
         }
-        for (const [id, e] of Object.entries(EXCEPCIONES)) console.warn(`[guardia-contenido] ⚠ excepción activa (${id}) en ${e.archivos.join(', ')} — ${e.motivo}`);
         console.log('[guardia-contenido] OK — nomenclatura, regionalismos, datos obsoletos y montos verificados');
       },
     },
