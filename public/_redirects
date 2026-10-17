@@ -11,3 +11,6 @@
 /en/diagnostico-ia/ /en/test-era-ia 301
 /libro /inteligencia-organizacional 301
 /libro/ /inteligencia-organizacional 301
+# /framework era un documento interno publicado por error (mapa de infraestructura); retirado el 2026-10-17. Sigue en el historial de git.
+/framework /metodologia 301
+/framework/ /metodologia 301

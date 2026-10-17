@@ -38,8 +38,8 @@ function textoVisible(raw, esHtml) {
 // Excepciones TEMPORALES y visibles: se imprimen en cada build hasta que se resuelvan.
 const EXCEPCIONES = {
   'nomenclatura-interna': {
-    archivos: ['framework/index.html', 'contenido/index.html', 'inteligencia-organizacional/index.html', 'en/inteligencia-organizacional/index.html'],
-    motivo: '/framework es un documento INTERNO publicado (puertos, hosts, F1–F4, E1–E3): decidir si se retira del sitio; contenido e inteligencia-organizacional describen las «fases F0–F5» del libro: decidir si se mantienen.',
+    archivos: ['contenido/index.html', 'inteligencia-organizacional/index.html', 'en/inteligencia-organizacional/index.html'],
+    motivo: 'contenido e inteligencia-organizacional describen las «fases F0–F5» del libro: decidir si se mantienen.',
   },
 };
 const aNumero = (s) => (/^\d{1,3}([.,]\d{3})+$/.test(s) ? Number(s.replace(/[.,]/g, '')) : /^\d+$/.test(s) ? Number(s) : NaN);

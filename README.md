@@ -25,7 +25,6 @@ src/
     nosotros.astro      ← Equipo
     contenido.astro     ← Blog / contenido semanal
     diagnostico.astro   ← CTA principal al diagnóstico
-    framework.astro     ← Framework 3 ERAs detallado
     privacidad.astro    ← Política de privacidad
 public/                 ← Imágenes estáticas, robots.txt, sitemap
 dist/                   ← Build output (no commitear)
@@ -59,7 +58,6 @@ dist/                   ← Build output (no commitear)
 | `/metodologia` | Educación — detalle F1–F5 | Agendar llamada |
 | `/precios` | Cierre — precio fijo + ROI justificado | Calendly |
 | `/casos` | Prueba social — casos reales anonimizados | Ver diagnóstico |
-| `/framework` | Autoridad — detalle del Framework 3 ERAs | `/test-era` |
 | `/test-era` | Landing de entrada al test ERA gratuito | Quiz inline |
 
 ## SEO / AEO
