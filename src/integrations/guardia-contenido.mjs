@@ -13,7 +13,7 @@ const REGLAS = [
   { id: 'segmento-obsoleto', re: /5\s?[–-]\s?200|10\s?[–-]\s?200|entre 5 y 100|between 5 and 100|5 to 200/gi, msg: 'segmento obsoleto (el vigente es 2 a 50 empleados)' },
   { id: 'test-era-obsoleto', re: /15 minutos|15-minute|~\s?3 minutos|24\s?[–-]\s?48\s?(?:horas|h\b|hours)/gi, msg: 'duración/plazo obsoleto del Test ERA (es «desde 5 minutos», informe al terminar)' },
   { id: 'sin-fuente', re: /30[.,]000\s?[–-]\s?100[.,]000|M[ií]nimo \$50k|Min \$50k|USD 50[.,]000\+/gi, msg: 'afirmación sin fuente (se retiró; no reintroducir sin respaldo)' },
-  { id: 'test-era-como-diagnostico', re: /Gratis \(Diagn[oó]stico\)|Sin costo \(Diagn[oó]stico\)|Reporte de Diagn[oó]stico|Diagnosis Report|Free \(Diagnosis\)|No cost \(Diagnosis\)|Free AI Diagnosis/g, msg: 'el Test ERA no se llama «diagnóstico/diagnosis» (el informe es el «Informe ERA»)' },
+  { id: 'test-era-como-diagnostico', re: /Gratis \(Diagn[oó]stico\)|Sin costo \(Diagn[oó]stico\)|Reporte de Diagn[oó]stico|Diagnosis Report|Free \(Diagnosis\)|No cost \(Diagnosis\)|Free AI Diagnosis|Diagn[oó]stico de IA para PyMEs|AI Diagnosis for SMEs/g, msg: 'el Test ERA no se llama «diagnóstico/diagnosis» (el informe es el «Informe ERA»)' },
   { id: 'implementacion-incluida', re: /implementación incluida|Implementation included|hands-on implementation until|implementación acompañada hasta/gi, msg: 'el Plan de Vuelo tiene dos tramos: la Ejecución se cobra aparte, por hitos' },
 ];
 
