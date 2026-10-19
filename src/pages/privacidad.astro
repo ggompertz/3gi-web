@@ -16,7 +16,7 @@ import Layout from '../layouts/Layout.astro';
       <li>Mensajes enviados al bot de WhatsApp</li>
       <li>Información de la empresa ingresada en el formulario del Test ERA (nombre, sector, tamaño, procesos)</li>
       <li>Cookies de análisis de tráfico (Google Analytics y PostHog) y de medición publicitaria (LinkedIn) — ver sección 8</li>
-      <li>Registro de los pasos de tu recorrido en el Test ERA (página y paso alcanzado y, solo si aceptas las cookies, parámetros de campaña) — ver sección 8</li>
+      <li>Registro de los pasos de tu recorrido en el Test ERA (página, paso alcanzado y etiquetas de campaña de la dirección; solo si aceptas las cookies se sigue tu recorrido completo) — ver sección 8</li>
     </ul>
 
     <h2>3. Para qué usamos los datos</h2>
@@ -52,7 +52,7 @@ import Layout from '../layouts/Layout.astro';
 
     <h2>8. Cookies</h2>
     <p>Con tu consentimiento usamos tres herramientas de terceros: Google Analytics (vía Google Tag Manager) para entender cómo se usa este sitio; PostHog para analizar el recorrido del Test ERA (páginas vistas, clics, pasos completados y grabaciones de tu navegación por el sitio); y, si llegas desde un anuncio de LinkedIn, el LinkedIn Insight Tag para medir cuántas personas completan el Test ERA tras ver el anuncio. Solo se cargan si las aceptas en el aviso que aparece en tu primera visita: si las rechazas, no se carga ninguna.</p>
-    <p>Aunque rechaces las cookies, el Test ERA y las páginas de recursos registran los pasos de tu recorrido (por ejemplo, la pregunta del test en que vas y la página) con un identificador aleatorio que existe solo en la memoria de la página: no se guarda en tu navegador, se pierde al cambiar de página o cerrarla, y no se registran parámetros de campaña. Con tu consentimiento, ese identificador se guarda en tu navegador mientras la pestaña esté abierta y se registran también los parámetros de campaña de la dirección que visitaste (por ejemplo, de qué anuncio llegaste), para poder seguir tu recorrido completo. En ambos casos el registro no incluye tu nombre, correo ni los datos de tu empresa y se guarda solo en nuestros propios servidores (Supabase). También contamos, sin identificarte, cuántas personas aceptan o rechazan las cookies. Lo usamos para saber en qué punto se abandona el test y mejorarlo.</p>
+    <p>Aunque rechaces las cookies, el Test ERA y las páginas de recursos registran los pasos de tu recorrido (por ejemplo, la pregunta del test en que vas y la página) con un identificador aleatorio que existe solo en la memoria de la página: no se guarda en tu navegador y se pierde al cambiar de página o cerrarla. Si llegaste desde un anuncio, también registramos las etiquetas de campaña de la dirección (por ejemplo, el nombre de la campaña y del anuncio), sin guardarlas en tu navegador y solo asociadas a los pasos de esa página. Con tu consentimiento, ese identificador se guarda en tu navegador mientras la pestaña esté abierta y se registran además esos parámetros durante todo tu recorrido, para poder seguirlo completo. En ambos casos el registro no incluye tu nombre, correo ni los datos de tu empresa y se guarda solo en nuestros propios servidores (Supabase). También contamos, sin identificarte, cuántas personas aceptan o rechazan las cookies. Lo usamos para saber en qué punto se abandona el test y mejorarlo.</p>
     <p>Puedes cambiar tu decisión sobre las cookies en cualquier momento desde el enlace «Preferencias de cookies» al pie de esta página.</p>
     <table class="cookie-table">
       <tr class="row-head">

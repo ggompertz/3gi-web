@@ -3,7 +3,8 @@
   var SUPA_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InJmdmhpdXlxdGZwcXpqd3B1bWF2Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzI4Mzc5OTksImV4cCI6MjA4ODQxMzk5OX0.BQfrR1TdfptuXsbEhqjFtYOULgOjKxae8H5nrzIZbQs';
 
   // Sin consentimiento aceptado no se escribe nada en el navegador: el ID vive solo en esta
-  // variable (dura lo que dura la página) y no se leen ni guardan parámetros de campaña.
+  // variable (dura lo que dura la página). Sí se envían los utm_* de la dirección actual (etiquetas
+  // de campaña, sin guardarlas), solo si el valor es una etiqueta simple (ver readUtm).
   var memSid = null;
 
   function hasConsent() {
@@ -43,8 +44,25 @@
     }
   }
 
+  // Sin consentimiento: solo utm_* de la dirección actual, sin leer ni escribir storage. Un valor
+  // que no sea una etiqueta simple se omite, para que un enlace con un correo u otro dato personal
+  // en la dirección no quede registrado. 'src' y 'lid' no se registran en este nivel.
+  function readUtm() {
+    try {
+      var params = new URLSearchParams(location.search);
+      var out = {};
+      ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'utm_term'].forEach(function (k) {
+        var v = params.get(k);
+        if (v !== null && /^[A-Za-z0-9._~-]{1,64}$/.test(v)) out[k] = v;
+      });
+      return out;
+    } catch (e) {
+      return {};
+    }
+  }
+
   function captureUtm() {
-    if (!hasConsent()) return {};
+    if (!hasConsent()) return readUtm();
     try {
       var params = new URLSearchParams(location.search);
       // 'lid' (ID de un lead en el enlace del PDF) NO se guarda: uniría la navegación con una persona identificada

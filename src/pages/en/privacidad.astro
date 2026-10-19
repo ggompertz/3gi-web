@@ -16,7 +16,7 @@ import Layout from '../../layouts/Layout.astro';
       <li>Messages sent to the WhatsApp bot</li>
       <li>Business information entered in the Test ERA form (name, sector, size, processes)</li>
       <li>Traffic analytics cookies (Google Analytics and PostHog) and advertising measurement cookies (LinkedIn) — see section 8</li>
-      <li>A record of the steps of your journey in the ERA Test (page and step reached and, only if you accept cookies, campaign parameters) — see section 8</li>
+      <li>A record of the steps of your journey in the ERA Test (page, step reached and campaign tags from the address; only if you accept cookies is your full journey followed) — see section 8</li>
     </ul>
 
     <h2>3. How we use your data</h2>
@@ -52,7 +52,7 @@ import Layout from '../../layouts/Layout.astro';
 
     <h2>8. Cookies</h2>
     <p>With your consent we use three third-party tools: Google Analytics (via Google Tag Manager) to understand how this site is used; PostHog to analyze the ERA Test journey (page views, clicks, completed steps and recordings of your browsing on the site); and, if you arrive from a LinkedIn ad, the LinkedIn Insight Tag to measure how many people complete the ERA Test after seeing the ad. They are only loaded if you accept them in the notice shown on your first visit: if you reject them, none of them is loaded.</p>
-    <p>Even if you reject cookies, the ERA Test and the resources pages record the steps of your journey (for example, which test question you are on and the page) using a random identifier that exists only in the memory of the page: it is not stored in your browser, it is lost when you change page or close it, and no campaign parameters are recorded. With your consent, that identifier is stored in your browser while the tab stays open, and the campaign parameters of the address you visited (for example, which ad you came from) are also recorded, so we can follow your full journey. In both cases the record does not include your name, email or company data, and it is stored only on our own servers (Supabase). We also count, without identifying you, how many people accept or reject cookies. We use it to learn where people drop out of the test and improve it.</p>
+    <p>Even if you reject cookies, the ERA Test and the resources pages record the steps of your journey (for example, which test question you are on and the page) using a random identifier that exists only in the memory of the page: it is not stored in your browser and it is lost when you change page or close it. If you arrived from an ad, we also record the campaign tags in the address (for example, the name of the campaign and of the ad), without storing them in your browser and only tied to the steps on that page. With your consent, that identifier is stored in your browser while the tab stays open, and those parameters are also recorded throughout your journey, so we can follow it in full. In both cases the record does not include your name, email or company data, and it is stored only on our own servers (Supabase). We also count, without identifying you, how many people accept or reject cookies. We use it to learn where people drop out of the test and improve it.</p>
     <p>You can change your cookie decision at any time via the "Cookie preferences" link at the bottom of this page.</p>
     <table class="cookie-table">
       <tr class="row-head">

@@ -54,11 +54,38 @@ for (const consent of [null, 'rejected']) {
   await page.waitForTimeout(500);
   const k = await claves(page);
   check(`RF-01 ${etiqueta}: no se escribe _3gi_fsid ni _3gi_futm`, !k.s.includes('_3gi_fsid') && !k.s.includes('_3gi_futm'), JSON.stringify(k.s));
-  check(`RF-01 ${etiqueta}: se envían eventos con utm vacío`, inserts.length >= 2 && inserts.every((e) => Object.keys(e.utm || {}).length === 0), `${inserts.length} eventos`);
+  check(`RF-01 ${etiqueta}: se envían eventos solo con utm_* (sin src)`, inserts.length >= 2 && inserts.every((e) => JSON.stringify(e.utm || {}) === '{"utm_source":"li"}'), `${inserts.length} eventos, ${JSON.stringify(inserts[0]?.utm)}`);
   check(`RF-01 ${etiqueta}: mismo ID dentro de la página`, new Set(inserts.map((e) => e.session_id)).size === 1);
   check(`RF-03 ${etiqueta}: lid no viaja`, !JSON.stringify(inserts).includes('abc123'));
   check(`RNF-01 ${etiqueta}: sin errores de consola`, errores.length === 0, errores.join(' | '));
   await browser.close();
+}
+
+// UTM sin consentimiento (opción B, 2026-10-19): solo utm_* válidos, de la URL actual, sin guardar nada
+// RF-UTM-01 a RF-UTM-04 de proyectos/3gi-web/2026-10-19/prd-trd-utm-sin-consentimiento.md
+for (const consent of [null, 'rejected']) {
+  const etiqueta = consent ? 'rechazado' : 'sin decisión';
+  {
+    const { browser, page, inserts } = await sesion({ consent });
+    await page.goto(`${BASE}/test-era/?utm_source=linkedin&utm_medium=paid_social&utm_campaign=test-era-visitas-2026-10&utm_content=a1&utm_term=t1&src=pdf&lid=abc123`, { waitUntil: 'load' });
+    await page.waitForTimeout(500);
+    const u = inserts[0]?.utm || {};
+    const esperado = { utm_source: 'linkedin', utm_medium: 'paid_social', utm_campaign: 'test-era-visitas-2026-10', utm_content: 'a1', utm_term: 't1' };
+    check(`RF-UTM-01 ${etiqueta}: el evento lleva los 5 utm_*`, inserts.length >= 1 && inserts.every((e) => JSON.stringify(e.utm) === JSON.stringify(esperado)), JSON.stringify(u));
+    const k = await claves(page);
+    check(`RF-UTM-02 ${etiqueta}: nada en localStorage (salvo la decisión) ni sessionStorage`, k.s.length === 0 && k.l.every((x) => x === 'tgi_consent'), JSON.stringify(k));
+    check(`RF-UTM-03 ${etiqueta}: src y lid no viajan`, !('src' in u) && !JSON.stringify(inserts).includes('abc123') && !JSON.stringify(inserts).includes('pdf'), JSON.stringify(u));
+    await browser.close();
+  }
+  {
+    const largo = 'a'.repeat(65);
+    const { browser, page, inserts } = await sesion({ consent });
+    await page.goto(`${BASE}/test-era/?utm_source=linkedin&utm_content=ana@correo.cl&utm_campaign=${largo}&utm_medium=con%20espacio&utm_term=x%3Cy`, { waitUntil: 'load' });
+    await page.waitForTimeout(500);
+    const u = inserts[0]?.utm || {};
+    check(`RF-UTM-04 ${etiqueta}: valores con @, espacios, símbolos o más de 64 caracteres se omiten`, inserts.length >= 1 && JSON.stringify(u) === '{"utm_source":"linkedin"}', JSON.stringify(u));
+    await browser.close();
+  }
 }
 
 // RF-02 y RF-03: con consentimiento, ID compartido entre páginas y utm sin lid
