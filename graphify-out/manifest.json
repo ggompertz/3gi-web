@@ -1,7 +1,7 @@
 {
   "/home/ggomp/3gi-web/astro.config.mjs": {
-    "mtime": 1784582685.6101818,
-    "hash": "dee7cb83ba5034fb990c503e9597b7c8"
+    "mtime": 1792423314.7617059,
+    "hash": "5eb6824c6f6ab2aaec4d3d5626d8871a"
   },
   "/home/ggomp/3gi-web/sentry.client.config.ts": {
     "mtime": 1784563110.7056098,
@@ -16,20 +16,64 @@
     "hash": "c3cb790dcc747bdb184767cd9d804781"
   },
   "/home/ggomp/3gi-web/scripts/lead-magnets/build.py": {
-    "mtime": 1787685790.6971912,
-    "hash": "041841764e7461a296ce6164842e59b2"
+    "mtime": 1792124681.1104467,
+    "hash": "ce184be9acf840d10006508bfb0b228c"
   },
   "/home/ggomp/3gi-web/scripts/manual-tests/test-e2e-full.mjs": {
     "mtime": 1783293790.7827935,
     "hash": "62208bde5760ef1fe3b9eceae3306102"
+  },
+  "/home/ggomp/3gi-web/scripts/manual-tests/funnel-consentimiento.mjs": {
+    "mtime": 1792423925.041703,
+    "hash": "4aea70aebe5953182b508395d2ebf9ad"
+  },
+  "/home/ggomp/3gi-web/scripts/manual-tests/banner-movil.mjs": {
+    "mtime": 1792243331.6074378,
+    "hash": "5d031846e01e08c25c3910c5662deaa4"
   },
   "/home/ggomp/3gi-web/docs/pre-upload.py": {
     "mtime": 1781135027.3649013,
     "hash": "7dbb13659bf453b81449ce1f978c0d83"
   },
   "/home/ggomp/3gi-web/public/funnel-track.js": {
-    "mtime": 1784315680.2853289,
-    "hash": "38656b3feafe615b22b800526bcd0937"
+    "mtime": 1792424041.1417038,
+    "hash": "e9970aa709c96607b0670a441d991297"
+  },
+  "/home/ggomp/3gi-web/src/integrations/guardia-contenido.mjs": {
+    "mtime": 1792423314.7692897,
+    "hash": "683494a5aa2e2c5c8aede472dd99cfb3"
+  },
+  "/home/ggomp/3gi-web/src/pages/llms.txt.ts": {
+    "mtime": 1792423314.769706,
+    "hash": "b032af5ae7f2cc4ad3a0bc2fb01d3929"
+  },
+  "/home/ggomp/3gi-web/src/i18n/nosotros.mjs": {
+    "mtime": 1792423314.7692897,
+    "hash": "42f951d336ea0a9705fdeba012f64933"
+  },
+  "/home/ggomp/3gi-web/src/i18n/casos.mjs": {
+    "mtime": 1792423314.766929,
+    "hash": "77bd8de623c8e522955e078d79a4a27c"
+  },
+  "/home/ggomp/3gi-web/src/i18n/metodologia.mjs": {
+    "mtime": 1792423314.7692897,
+    "hash": "c7833f726846cc65b42af5e8ffc995ec"
+  },
+  "/home/ggomp/3gi-web/src/i18n/precios.mjs": {
+    "mtime": 1792423314.7692897,
+    "hash": "ee3fdc5cbb0facebdf1e640558ea337f"
+  },
+  "/home/ggomp/3gi-web/src/i18n/home.mjs": {
+    "mtime": 1792423314.7692897,
+    "hash": "bca8ddb174264f16c7a68c24310211a8"
+  },
+  "/home/ggomp/3gi-web/src/i18n/faq.mjs": {
+    "mtime": 1792423314.7692897,
+    "hash": "2e0a39e3e3697d9c00bcc2981848d821"
+  },
+  "/home/ggomp/3gi-web/src/data/oferta.mjs": {
+    "mtime": 1792423314.766929,
+    "hash": "9797c48b764a50ba2eec556aecbc53e5"
   },
   "/home/ggomp/3gi-web/PLAN_AVANCE.md": {
     "mtime": 1781191078.072261,
@@ -51,17 +95,13 @@
     "mtime": 1781135027.3649013,
     "hash": "ff280d6a2f479cab0fd4e36d8a18b7da"
   },
-  "/home/ggomp/3gi-web/llms.txt": {
-    "mtime": 1783431828.54751,
-    "hash": "081933285f8a32d2f0a984990ac26afb"
-  },
   "/home/ggomp/3gi-web/CLAUDE.md": {
-    "mtime": 1786327006.4070868,
-    "hash": "fd391b7d520a213e84a60bd289a8c7cd"
+    "mtime": 1792424247.5057023,
+    "hash": "e59c1e89952d24b95337d859b500b11a"
   },
   "/home/ggomp/3gi-web/README.md": {
-    "mtime": 1784315680.281329,
-    "hash": "bb392ec655d47147dd002585579b3cd9"
+    "mtime": 1792423314.7617059,
+    "hash": "8bcbcbc49d5f83b8447e36bbd4270d99"
   },
   "/home/ggomp/3gi-web/ONBOARDING.md": {
     "mtime": 1779404038.4454854,
@@ -72,28 +112,44 @@
     "hash": "5ea6d22e9e21818365a7a8af8a73932d"
   },
   "/home/ggomp/3gi-web/scripts/lead-magnets/metrica-equivocada.html": {
-    "mtime": 1787685790.6971912,
-    "hash": "c5648b915af1cb03a362ae1a2f4c7bbb"
+    "mtime": 1792124681.1264467,
+    "hash": "b764e6a04e534dea476f04f633743c1f"
+  },
+  "/home/ggomp/3gi-web/scripts/lead-magnets/retorno-antes-de-gastar.html": {
+    "mtime": 1792124681.1344466,
+    "hash": "70caffa81c19e3e02a01a47e134002cd"
   },
   "/home/ggomp/3gi-web/scripts/lead-magnets/caso-data-foundation.html": {
-    "mtime": 1787685790.6971912,
-    "hash": "7f441c176aa805e03eca69171e214915"
+    "mtime": 1792124681.1144466,
+    "hash": "47a97c894e2d7584f873d3c24b8ca453"
   },
   "/home/ggomp/3gi-web/scripts/lead-magnets/las-3-eras.html": {
-    "mtime": 1787685790.6971912,
-    "hash": "c457af4aabed0b72429e23b5b0048a9c"
+    "mtime": 1792124681.1264467,
+    "hash": "959ed715909f5a3ad9457e22b291256d"
+  },
+  "/home/ggomp/3gi-web/scripts/lead-magnets/5-preguntas-cotizacion.html": {
+    "mtime": 1792124681.1064467,
+    "hash": "0d39266fce6953dcc37d548fbcca79f0"
   },
   "/home/ggomp/3gi-web/scripts/lead-magnets/fallan-4-de-5.html": {
-    "mtime": 1787685790.6971912,
-    "hash": "fc888cd9ef0a132dd386ecd9554751de"
+    "mtime": 1792124681.1184466,
+    "hash": "38b429e94bc09c87884933672e0ce1d4"
   },
   "/home/ggomp/3gi-web/scripts/lead-magnets/cambio-de-paradigma.html": {
-    "mtime": 1787685790.6971912,
-    "hash": "10ed1629601d320c9c729f89e0b87b5d"
+    "mtime": 1792124681.1104467,
+    "hash": "3b06c9a81dfd0f809aef61cd715e1e58"
+  },
+  "/home/ggomp/3gi-web/scripts/lead-magnets/checklist-radar.html": {
+    "mtime": 1792124681.1144466,
+    "hash": "2350e358f3d91bd89bc1a2ed2fe8d7b2"
   },
   "/home/ggomp/3gi-web/scripts/lead-magnets/10-preguntas.html": {
-    "mtime": 1787685790.6931913,
-    "hash": "8b6a0914aa096770a714dc2b7f6b0410"
+    "mtime": 1792124681.1064467,
+    "hash": "74cae88b6281560dbf53f1e825b0257b"
+  },
+  "/home/ggomp/3gi-web/scripts/lead-magnets/guia-fases-3gi.html": {
+    "mtime": 1792124681.1224465,
+    "hash": "85dd71caeadb480ee9e1dec683f3f984"
   },
   "/home/ggomp/3gi-web/docs/agente-personal-3gi.md": {
     "mtime": 1781135027.3649013,
@@ -104,8 +160,8 @@
     "hash": "608878f75aa40b3dcb3be7a83935ab69"
   },
   "/home/ggomp/3gi-web/docs/homepage-sections.md": {
-    "mtime": 1781135027.3649013,
-    "hash": "1f77712d1eba95347eb285a303162b02"
+    "mtime": 1792200076.8645673,
+    "hash": "e412d55fb80823f186949c2f5b330817"
   },
   "/home/ggomp/3gi-web/docs/sql-assistant-tablas.md": {
     "mtime": 1779400819.5934865,
@@ -148,8 +204,8 @@
     "hash": "2eb3de839b120337437641722c65024e"
   },
   "/home/ggomp/3gi-web/public/era-opciones.html": {
-    "mtime": 1781135027.3809013,
-    "hash": "90ac834f4946793d7cc2df0688b6258b"
+    "mtime": 1792124681.0704467,
+    "hash": "2011af3d54bfc28198105383d5f6a1f8"
   },
   "/home/ggomp/3gi-web/public/contenido/carrusel-mayo1-era-dos-lados.html": {
     "mtime": 1781135027.3809013,
@@ -159,29 +215,45 @@
     "mtime": 1781135027.3649013,
     "hash": "aa1716e5b60d356ce95c835fe18e1719"
   },
+  "/home/ggomp/3gi-web/public/recursos/pdf/3GI-retorno-antes-de-gastar.pdf": {
+    "mtime": 1792124681.0984466,
+    "hash": "cc2492ed148001ee2786157454bdfee4"
+  },
+  "/home/ggomp/3gi-web/public/recursos/pdf/3GI-checklist-radar.pdf": {
+    "mtime": 1792124681.0784466,
+    "hash": "38d3090aac8a0ddf19408652a1debf67"
+  },
   "/home/ggomp/3gi-web/public/recursos/pdf/3GI-fallan-4-de-5.pdf": {
-    "mtime": 1787685790.6931913,
-    "hash": "bf9791982c0e330e0cc1301bbb18fd75"
+    "mtime": 1792124681.0864465,
+    "hash": "7036132b0cf6b52c5cfc0e13afd5092f"
   },
   "/home/ggomp/3gi-web/public/recursos/pdf/3GI-cambio-de-paradigma.pdf": {
-    "mtime": 1787685790.6931913,
-    "hash": "4e97b84bfee7618939739f9c65ee0e3a"
+    "mtime": 1792124681.0744467,
+    "hash": "50bd7115deeab5cb7e3e0419847eff74"
+  },
+  "/home/ggomp/3gi-web/public/recursos/pdf/3GI-5-preguntas-cotizacion.pdf": {
+    "mtime": 1792124681.0744467,
+    "hash": "42f082583fd4a149e8217c796cecf2e9"
   },
   "/home/ggomp/3gi-web/public/recursos/pdf/3GI-10-preguntas.pdf": {
-    "mtime": 1787685790.6931913,
-    "hash": "5b41348b285375b043832b1135311437"
+    "mtime": 1792124681.0704467,
+    "hash": "0428c589776256e50e0610895068e551"
   },
   "/home/ggomp/3gi-web/public/recursos/pdf/3GI-caso-data-foundation.pdf": {
-    "mtime": 1787685790.6931913,
-    "hash": "b2d47863b157d89fd9e8c04ccbd6a879"
+    "mtime": 1792124681.0784466,
+    "hash": "dc52e0830c055418936f1a816fe23d4e"
   },
   "/home/ggomp/3gi-web/public/recursos/pdf/3GI-metrica-equivocada.pdf": {
-    "mtime": 1787685790.6931913,
-    "hash": "5cc62f0368a624bc68a38e30d922f2e1"
+    "mtime": 1792124681.0984466,
+    "hash": "a7052b9c1bcabbc30246432b472462bb"
+  },
+  "/home/ggomp/3gi-web/public/recursos/pdf/3GI-guia-fases-3gi.pdf": {
+    "mtime": 1792124681.0904467,
+    "hash": "e973f0d4a30a7fe6dbe93a19cfdbe543"
   },
   "/home/ggomp/3gi-web/public/recursos/pdf/3GI-las-3-eras.pdf": {
-    "mtime": 1787685790.6931913,
-    "hash": "b05ac55361a59a48453ddeb2dabe9f52"
+    "mtime": 1792124681.0944467,
+    "hash": "4007edced50353cdddc9552fee80ed83"
   },
   "/home/ggomp/3gi-web/web-3gi.png": {
     "mtime": 1781135027.3889015,
@@ -291,6 +363,14 @@
     "mtime": 1784572804.1063402,
     "hash": "77e7e888f60a28d69b926647a01322a1"
   },
+  "/home/ggomp/3gi-web/public/contenido/metrica-equivocada.png": {
+    "mtime": 1790098886.9635386,
+    "hash": "24a58896f558fc084c74df67e9eae50f"
+  },
+  "/home/ggomp/3gi-web/public/contenido/radar-express-360.png": {
+    "mtime": 1792124681.0664465,
+    "hash": "09e0c8f7326e69465b6be086af3831cb"
+  },
   "/home/ggomp/3gi-web/public/contenido/semana11-empresa-invisible-slide2.png": {
     "mtime": 1778691275.3051634,
     "hash": "205a1ae0a9021806b3b3b8ff438f3445"
@@ -302,6 +382,10 @@
   "/home/ggomp/3gi-web/public/contenido/post8v2-slide-03.png": {
     "mtime": 1778691275.2971635,
     "hash": "d8b0655d9037f2e6f6a2daadbd591d15"
+  },
+  "/home/ggomp/3gi-web/public/contenido/tres-preguntas.png": {
+    "mtime": 1792124681.0664465,
+    "hash": "0ba7ee011908634147080a3b494ce050"
   },
   "/home/ggomp/3gi-web/public/contenido/post8v2-slide-04.png": {
     "mtime": 1778691275.2971635,
@@ -326,6 +410,10 @@
   "/home/ggomp/3gi-web/public/contenido/semana7-bisagra-slide06.png": {
     "mtime": 1778691275.3291633,
     "hash": "ca9f339a707f319c58022496f19455d1"
+  },
+  "/home/ggomp/3gi-web/public/contenido/agentes-autonomos.png": {
+    "mtime": 1790097697.702038,
+    "hash": "b89f20cd9cbdaadf5828debc2294a40e"
   },
   "/home/ggomp/3gi-web/public/contenido/semana7-bisagra.png": {
     "mtime": 1778691275.3291633,
@@ -386,6 +474,10 @@
   "/home/ggomp/3gi-web/public/contenido/semana4-era3.png": {
     "mtime": 1778691275.3131633,
     "hash": "8c4ea2cab1cbcb33ca41da81499fa568"
+  },
+  "/home/ggomp/3gi-web/public/contenido/brecha-gobernanza.png": {
+    "mtime": 1790098886.982161,
+    "hash": "831410e755838b8cd4c4d7fadaaa2e23"
   },
   "/home/ggomp/3gi-web/public/contenido/semana11-empresa-invisible-slide3.png": {
     "mtime": 1778691275.3051634,
@@ -550,6 +642,10 @@
   "/home/ggomp/3gi-web/public/contenido/post8v2-slide-05.png": {
     "mtime": 1778691275.3011634,
     "hash": "eea317fba7cd083f5fa973ad580a6dfc"
+  },
+  "/home/ggomp/3gi-web/public/contenido/alucinaciones.png": {
+    "mtime": 1790098886.9715385,
+    "hash": "be9ae8df1421d05f5dac84a01b2cbf88"
   },
   "/home/ggomp/3gi-web/public/contenido/leadmagnet-las-3-eras.png": {
     "mtime": 1785866698.929417,

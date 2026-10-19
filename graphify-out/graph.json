@@ -4,11 +4,146 @@
   "graph": {},
   "nodes": [
     {
+      "label": "funnel-track.js",
+      "file_type": "code",
+      "source_file": "public/funnel-track.js",
+      "source_location": "L1",
+      "id": "public_funnel_track_js",
+      "community": 27,
+      "norm_label": "funnel-track.js"
+    },
+    {
+      "label": "hasConsent()",
+      "file_type": "code",
+      "source_file": "public/funnel-track.js",
+      "source_location": "L10",
+      "id": "public_funnel_track_hasconsent",
+      "community": 27,
+      "norm_label": "hasconsent()"
+    },
+    {
+      "label": "isBot()",
+      "file_type": "code",
+      "source_file": "public/funnel-track.js",
+      "source_location": "L20",
+      "id": "public_funnel_track_isbot",
+      "community": 27,
+      "norm_label": "isbot()"
+    },
+    {
+      "label": "getSessionId()",
+      "file_type": "code",
+      "source_file": "public/funnel-track.js",
+      "source_location": "L29",
+      "id": "public_funnel_track_getsessionid",
+      "community": 27,
+      "norm_label": "getsessionid()"
+    },
+    {
+      "label": "readUtm()",
+      "file_type": "code",
+      "source_file": "public/funnel-track.js",
+      "source_location": "L50",
+      "id": "public_funnel_track_readutm",
+      "community": 27,
+      "norm_label": "readutm()"
+    },
+    {
+      "label": "captureUtm()",
+      "file_type": "code",
+      "source_file": "public/funnel-track.js",
+      "source_location": "L64",
+      "id": "public_funnel_track_captureutm",
+      "community": 27,
+      "norm_label": "captureutm()"
+    },
+    {
+      "label": "toPostHog()",
+      "file_type": "code",
+      "source_file": "public/funnel-track.js",
+      "source_location": "L96",
+      "id": "public_funnel_track_toposthog",
+      "community": 27,
+      "norm_label": "toposthog()"
+    },
+    {
+      "label": "funnel-consentimiento.mjs",
+      "file_type": "code",
+      "source_file": "scripts/manual-tests/funnel-consentimiento.mjs",
+      "source_location": "L1",
+      "id": "scripts_manual_tests_funnel_consentimiento_mjs",
+      "community": 28,
+      "norm_label": "funnel-consentimiento.mjs"
+    },
+    {
+      "label": "check()",
+      "file_type": "code",
+      "source_file": "scripts/manual-tests/funnel-consentimiento.mjs",
+      "source_location": "L20",
+      "id": "manual_tests_funnel_consentimiento_check",
+      "community": 28,
+      "norm_label": "check()"
+    },
+    {
+      "label": "sesion()",
+      "file_type": "code",
+      "source_file": "scripts/manual-tests/funnel-consentimiento.mjs",
+      "source_location": "L25",
+      "id": "manual_tests_funnel_consentimiento_sesion",
+      "community": 28,
+      "norm_label": "sesion()"
+    },
+    {
+      "label": "claves()",
+      "file_type": "code",
+      "source_file": "scripts/manual-tests/funnel-consentimiento.mjs",
+      "source_location": "L46",
+      "id": "manual_tests_funnel_consentimiento_claves",
+      "community": 28,
+      "norm_label": "claves()"
+    },
+    {
+      "label": "esperado",
+      "file_type": "code",
+      "source_file": "scripts/manual-tests/funnel-consentimiento.mjs",
+      "source_location": "L73",
+      "id": "manual_tests_funnel_consentimiento_esperado",
+      "community": 28,
+      "norm_label": "esperado"
+    },
+    {
+      "label": "largo",
+      "file_type": "code",
+      "source_file": "scripts/manual-tests/funnel-consentimiento.mjs",
+      "source_location": "L81",
+      "id": "manual_tests_funnel_consentimiento_largo",
+      "community": 28,
+      "norm_label": "largo"
+    },
+    {
+      "label": "ids",
+      "file_type": "code",
+      "source_file": "scripts/manual-tests/funnel-consentimiento.mjs",
+      "source_location": "L100",
+      "id": "manual_tests_funnel_consentimiento_ids",
+      "community": 28,
+      "norm_label": "ids"
+    },
+    {
+      "label": "e",
+      "file_type": "code",
+      "source_file": "scripts/manual-tests/funnel-consentimiento.mjs",
+      "source_location": "L135",
+      "id": "manual_tests_funnel_consentimiento_e",
+      "community": 28,
+      "norm_label": "e"
+    },
+    {
       "label": "astro.config.mjs",
       "file_type": "code",
       "source_file": "astro.config.mjs",
       "source_location": "L1",
-      "community": 37,
+      "community": 6,
       "norm_label": "astro.config.mjs",
       "id": "astro_config_mjs"
     },
@@ -17,7 +152,7 @@
       "file_type": "code",
       "source_file": "sentry.client.config.ts",
       "source_location": "L1",
-      "community": 38,
+      "community": 46,
       "norm_label": "sentry.client.config.ts",
       "id": "sentry_client_config_ts"
     },
@@ -242,7 +377,7 @@
       "file_type": "code",
       "source_file": "scripts/test-diagnostico-flow.mjs",
       "source_location": "L1",
-      "community": 17,
+      "community": 22,
       "norm_label": "test-diagnostico-flow.mjs",
       "id": "scripts_test_diagnostico_flow_mjs"
     },
@@ -251,7 +386,7 @@
       "file_type": "code",
       "source_file": "scripts/test-diagnostico-flow.mjs",
       "source_location": "L24",
-      "community": 17,
+      "community": 22,
       "norm_label": "args",
       "id": "scripts_test_diagnostico_flow_args"
     },
@@ -260,7 +395,7 @@
       "file_type": "code",
       "source_file": "scripts/test-diagnostico-flow.mjs",
       "source_location": "L26",
-      "community": 17,
+      "community": 22,
       "norm_label": "shot",
       "id": "scripts_test_diagnostico_flow_shot"
     },
@@ -269,7 +404,7 @@
       "file_type": "code",
       "source_file": "scripts/test-diagnostico-flow.mjs",
       "source_location": "L36",
-      "community": 17,
+      "community": 22,
       "norm_label": "test()",
       "id": "scripts_test_diagnostico_flow_test"
     },
@@ -278,7 +413,7 @@
       "file_type": "code",
       "source_file": "scripts/test-diagnostico-flow.mjs",
       "source_location": "L53",
-      "community": 17,
+      "community": 22,
       "norm_label": "fillquiz()",
       "id": "scripts_test_diagnostico_flow_fillquiz"
     },
@@ -287,7 +422,7 @@
       "file_type": "code",
       "source_file": "scripts/test-diagnostico-flow.mjs",
       "source_location": "L75",
-      "community": 17,
+      "community": 22,
       "norm_label": "btn",
       "id": "scripts_test_diagnostico_flow_btn"
     },
@@ -296,7 +431,7 @@
       "file_type": "code",
       "source_file": "scripts/test-diagnostico-flow.mjs",
       "source_location": "L117",
-      "community": 17,
+      "community": 22,
       "norm_label": "err",
       "id": "scripts_test_diagnostico_flow_err"
     },
@@ -305,7 +440,7 @@
       "file_type": "code",
       "source_file": "scripts/test-diagnostico-flow.mjs",
       "source_location": "L181",
-      "community": 17,
+      "community": 22,
       "norm_label": "bridge",
       "id": "scripts_test_diagnostico_flow_bridge"
     },
@@ -314,7 +449,7 @@
       "file_type": "code",
       "source_file": "scripts/lead-magnets/build.py",
       "source_location": "L1",
-      "community": 28,
+      "community": 33,
       "norm_label": "build.py",
       "id": "scripts_lead_magnets_build_py"
     },
@@ -323,7 +458,7 @@
       "file_type": "code",
       "source_file": "scripts/lead-magnets/build.py",
       "source_location": "L7",
-      "community": 28,
+      "community": 33,
       "norm_label": "portada()",
       "id": "lead_magnets_build_portada"
     },
@@ -332,7 +467,7 @@
       "file_type": "code",
       "source_file": "scripts/lead-magnets/build.py",
       "source_location": "L17",
-      "community": 28,
+      "community": 33,
       "norm_label": "cta()",
       "id": "lead_magnets_build_cta"
     },
@@ -341,7 +476,7 @@
       "file_type": "code",
       "source_file": "scripts/lead-magnets/build.py",
       "source_location": "L26",
-      "community": 28,
+      "community": 33,
       "norm_label": "pagina()",
       "id": "lead_magnets_build_pagina"
     },
@@ -350,7 +485,7 @@
       "file_type": "code",
       "source_file": "scripts/lead-magnets/build.py",
       "source_location": "L29",
-      "community": 28,
+      "community": 33,
       "norm_label": "doc()",
       "id": "lead_magnets_build_doc"
     },
@@ -359,7 +494,7 @@
       "file_type": "code",
       "source_file": "scripts/manual-tests/test-e2e-full.mjs",
       "source_location": "L1",
-      "community": 13,
+      "community": 16,
       "norm_label": "test-e2e-full.mjs",
       "id": "scripts_manual_tests_test_e2e_full_mjs"
     },
@@ -368,7 +503,7 @@
       "file_type": "code",
       "source_file": "scripts/manual-tests/test-e2e-full.mjs",
       "source_location": "L23",
-      "community": 13,
+      "community": 16,
       "norm_label": "args",
       "id": "manual_tests_test_e2e_full_args"
     },
@@ -377,7 +512,7 @@
       "file_type": "code",
       "source_file": "scripts/manual-tests/test-e2e-full.mjs",
       "source_location": "L28",
-      "community": 13,
+      "community": 16,
       "norm_label": "rl",
       "id": "manual_tests_test_e2e_full_rl"
     },
@@ -386,7 +521,7 @@
       "file_type": "code",
       "source_file": "scripts/manual-tests/test-e2e-full.mjs",
       "source_location": "L32",
-      "community": 13,
+      "community": 16,
       "norm_label": "log()",
       "id": "manual_tests_test_e2e_full_log"
     },
@@ -395,7 +530,7 @@
       "file_type": "code",
       "source_file": "scripts/manual-tests/test-e2e-full.mjs",
       "source_location": "L33",
-      "community": 13,
+      "community": 16,
       "norm_label": "ok()",
       "id": "manual_tests_test_e2e_full_ok"
     },
@@ -404,7 +539,7 @@
       "file_type": "code",
       "source_file": "scripts/manual-tests/test-e2e-full.mjs",
       "source_location": "L34",
-      "community": 13,
+      "community": 16,
       "norm_label": "fail()",
       "id": "manual_tests_test_e2e_full_fail"
     },
@@ -413,7 +548,7 @@
       "file_type": "code",
       "source_file": "scripts/manual-tests/test-e2e-full.mjs",
       "source_location": "L36",
-      "community": 13,
+      "community": 16,
       "norm_label": "askotp()",
       "id": "manual_tests_test_e2e_full_askotp"
     },
@@ -422,7 +557,7 @@
       "file_type": "code",
       "source_file": "scripts/manual-tests/test-e2e-full.mjs",
       "source_location": "L42",
-      "community": 13,
+      "community": 16,
       "norm_label": "fillquiz()",
       "id": "manual_tests_test_e2e_full_fillquiz"
     },
@@ -431,7 +566,7 @@
       "file_type": "code",
       "source_file": "scripts/manual-tests/test-e2e-full.mjs",
       "source_location": "L56",
-      "community": 13,
+      "community": 16,
       "norm_label": "test1()",
       "id": "manual_tests_test_e2e_full_test1"
     },
@@ -440,7 +575,7 @@
       "file_type": "code",
       "source_file": "scripts/manual-tests/test-e2e-full.mjs",
       "source_location": "L150",
-      "community": 13,
+      "community": 16,
       "norm_label": "test2()",
       "id": "manual_tests_test_e2e_full_test2"
     },
@@ -449,52 +584,430 @@
       "file_type": "code",
       "source_file": "scripts/manual-tests/test-e2e-full.mjs",
       "source_location": "L210",
-      "community": 13,
+      "community": 16,
       "norm_label": "test3()",
       "id": "manual_tests_test_e2e_full_test3"
+    },
+    {
+      "label": "banner-movil.mjs",
+      "file_type": "code",
+      "source_file": "scripts/manual-tests/banner-movil.mjs",
+      "source_location": "L1",
+      "community": 15,
+      "norm_label": "banner-movil.mjs",
+      "id": "scripts_manual_tests_banner_movil_mjs"
+    },
+    {
+      "label": "anchos",
+      "file_type": "code",
+      "source_file": "scripts/manual-tests/banner-movil.mjs",
+      "source_location": "L21",
+      "community": 15,
+      "norm_label": "anchos",
+      "id": "manual_tests_banner_movil_anchos"
+    },
+    {
+      "label": "altos",
+      "file_type": "code",
+      "source_file": "scripts/manual-tests/banner-movil.mjs",
+      "source_location": "L22",
+      "community": 15,
+      "norm_label": "altos",
+      "id": "manual_tests_banner_movil_altos"
+    },
+    {
+      "label": "rutas",
+      "file_type": "code",
+      "source_file": "scripts/manual-tests/banner-movil.mjs",
+      "source_location": "L23",
+      "community": 15,
+      "norm_label": "rutas",
+      "id": "manual_tests_banner_movil_rutas"
+    },
+    {
+      "label": "re",
+      "file_type": "code",
+      "source_file": "scripts/manual-tests/banner-movil.mjs",
+      "source_location": "L47",
+      "community": 15,
+      "norm_label": "re",
+      "id": "manual_tests_banner_movil_re"
+    },
+    {
+      "label": "btn",
+      "file_type": "code",
+      "source_file": "scripts/manual-tests/banner-movil.mjs",
+      "source_location": "L48",
+      "community": 15,
+      "norm_label": "btn",
+      "id": "manual_tests_banner_movil_btn"
+    },
+    {
+      "label": "bn",
+      "file_type": "code",
+      "source_file": "scripts/manual-tests/banner-movil.mjs",
+      "source_location": "L49",
+      "community": 15,
+      "norm_label": "bn",
+      "id": "manual_tests_banner_movil_bn"
+    },
+    {
+      "label": "a",
+      "file_type": "code",
+      "source_file": "scripts/manual-tests/banner-movil.mjs",
+      "source_location": "L51",
+      "community": 15,
+      "norm_label": "a",
+      "id": "manual_tests_banner_movil_a"
+    },
+    {
+      "label": "c",
+      "file_type": "code",
+      "source_file": "scripts/manual-tests/banner-movil.mjs",
+      "source_location": "L52",
+      "community": 15,
+      "norm_label": "c",
+      "id": "manual_tests_banner_movil_c"
+    },
+    {
+      "label": "evs",
+      "file_type": "code",
+      "source_file": "scripts/manual-tests/banner-movil.mjs",
+      "source_location": "L95",
+      "community": 15,
+      "norm_label": "evs",
+      "id": "manual_tests_banner_movil_evs"
+    },
+    {
+      "label": "b",
+      "file_type": "code",
+      "source_file": "scripts/manual-tests/banner-movil.mjs",
+      "source_location": "L100",
+      "community": 15,
+      "norm_label": "b",
+      "id": "manual_tests_banner_movil_b"
+    },
+    {
+      "label": "q",
+      "file_type": "code",
+      "source_file": "scripts/manual-tests/banner-movil.mjs",
+      "source_location": "L100",
+      "community": 15,
+      "norm_label": "q",
+      "id": "manual_tests_banner_movil_q"
+    },
+    {
+      "label": "ev",
+      "file_type": "code",
+      "source_file": "scripts/manual-tests/banner-movil.mjs",
+      "source_location": "L105",
+      "community": 15,
+      "norm_label": "ev",
+      "id": "manual_tests_banner_movil_ev"
     },
     {
       "label": "pre-upload.py",
       "file_type": "code",
       "source_file": "/root/3gi-web/docs/pre-upload.py",
       "source_location": "L1",
-      "community": 39,
+      "community": 47,
       "norm_label": "pre-upload.py",
       "id": "root_3gi_web_docs_pre_upload_py"
     },
     {
-      "label": "funnel-track.js",
+      "label": "guardia-contenido.mjs",
       "file_type": "code",
-      "source_file": "public/funnel-track.js",
+      "source_file": "src/integrations/guardia-contenido.mjs",
       "source_location": "L1",
-      "community": 33,
-      "norm_label": "funnel-track.js",
-      "id": "public_funnel_track_js"
+      "community": 6,
+      "norm_label": "guardia-contenido.mjs",
+      "id": "src_integrations_guardia_contenido_mjs"
     },
     {
-      "label": "getSessionId()",
+      "label": "REGLAS",
       "file_type": "code",
-      "source_file": "public/funnel-track.js",
-      "source_location": "L5",
-      "community": 33,
-      "norm_label": "getsessionid()",
-      "id": "public_funnel_track_getsessionid"
+      "source_file": "src/integrations/guardia-contenido.mjs",
+      "source_location": "L10",
+      "community": 6,
+      "norm_label": "reglas",
+      "id": "integrations_guardia_contenido_reglas"
     },
     {
-      "label": "captureUtm()",
+      "label": "archivos()",
       "file_type": "code",
-      "source_file": "public/funnel-track.js",
-      "source_location": "L18",
-      "community": 33,
-      "norm_label": "captureutm()",
-      "id": "public_funnel_track_captureutm"
+      "source_file": "src/integrations/guardia-contenido.mjs",
+      "source_location": "L20",
+      "community": 6,
+      "norm_label": "archivos()",
+      "id": "integrations_guardia_contenido_archivos"
+    },
+    {
+      "label": "textoVisible()",
+      "file_type": "code",
+      "source_file": "src/integrations/guardia-contenido.mjs",
+      "source_location": "L28",
+      "community": 6,
+      "norm_label": "textovisible()",
+      "id": "integrations_guardia_contenido_textovisible"
+    },
+    {
+      "label": "PERMITIDOS",
+      "file_type": "code",
+      "source_file": "src/integrations/guardia-contenido.mjs",
+      "source_location": "L41",
+      "community": 6,
+      "norm_label": "permitidos",
+      "id": "integrations_guardia_contenido_permitidos"
+    },
+    {
+      "label": "permitido()",
+      "file_type": "code",
+      "source_file": "src/integrations/guardia-contenido.mjs",
+      "source_location": "L48",
+      "community": 6,
+      "norm_label": "permitido()",
+      "id": "integrations_guardia_contenido_permitido"
+    },
+    {
+      "label": "aNumero()",
+      "file_type": "code",
+      "source_file": "src/integrations/guardia-contenido.mjs",
+      "source_location": "L50",
+      "community": 6,
+      "norm_label": "anumero()",
+      "id": "integrations_guardia_contenido_anumero"
+    },
+    {
+      "label": "guardiaContenido()",
+      "file_type": "code",
+      "source_file": "src/integrations/guardia-contenido.mjs",
+      "source_location": "L52",
+      "community": 6,
+      "norm_label": "guardiacontenido()",
+      "id": "integrations_guardia_contenido_guardiacontenido"
+    },
+    {
+      "label": "llms.txt.ts",
+      "file_type": "code",
+      "source_file": "src/pages/llms.txt.ts",
+      "source_location": "L1",
+      "community": 6,
+      "norm_label": "llms.txt.ts",
+      "id": "src_pages_llms_txt_ts"
+    },
+    {
+      "label": "GET()",
+      "file_type": "code",
+      "source_file": "src/pages/llms.txt.ts",
+      "source_location": "L4",
+      "community": 6,
+      "norm_label": "get()",
+      "id": "pages_llms_txt_get"
+    },
+    {
+      "label": "nosotros.mjs",
+      "file_type": "code",
+      "source_file": "src/i18n/nosotros.mjs",
+      "source_location": "L1",
+      "community": 40,
+      "norm_label": "nosotros.mjs",
+      "id": "src_i18n_nosotros_mjs"
+    },
+    {
+      "label": "nosotros",
+      "file_type": "code",
+      "source_file": "src/i18n/nosotros.mjs",
+      "source_location": "L2",
+      "community": 40,
+      "norm_label": "nosotros",
+      "id": "i18n_nosotros_nosotros"
+    },
+    {
+      "label": "casos.mjs",
+      "file_type": "code",
+      "source_file": "src/i18n/casos.mjs",
+      "source_location": "L1",
+      "community": 41,
+      "norm_label": "casos.mjs",
+      "id": "src_i18n_casos_mjs"
+    },
+    {
+      "label": "casos",
+      "file_type": "code",
+      "source_file": "src/i18n/casos.mjs",
+      "source_location": "L2",
+      "community": 41,
+      "norm_label": "casos",
+      "id": "i18n_casos_casos"
+    },
+    {
+      "label": "metodologia.mjs",
+      "file_type": "code",
+      "source_file": "src/i18n/metodologia.mjs",
+      "source_location": "L1",
+      "community": 42,
+      "norm_label": "metodologia.mjs",
+      "id": "src_i18n_metodologia_mjs"
+    },
+    {
+      "label": "metodologia",
+      "file_type": "code",
+      "source_file": "src/i18n/metodologia.mjs",
+      "source_location": "L2",
+      "community": 42,
+      "norm_label": "metodologia",
+      "id": "i18n_metodologia_metodologia"
+    },
+    {
+      "label": "precios.mjs",
+      "file_type": "code",
+      "source_file": "src/i18n/precios.mjs",
+      "source_location": "L1",
+      "community": 43,
+      "norm_label": "precios.mjs",
+      "id": "src_i18n_precios_mjs"
+    },
+    {
+      "label": "precios",
+      "file_type": "code",
+      "source_file": "src/i18n/precios.mjs",
+      "source_location": "L2",
+      "community": 43,
+      "norm_label": "precios",
+      "id": "i18n_precios_precios"
+    },
+    {
+      "label": "home.mjs",
+      "file_type": "code",
+      "source_file": "src/i18n/home.mjs",
+      "source_location": "L1",
+      "community": 44,
+      "norm_label": "home.mjs",
+      "id": "src_i18n_home_mjs"
+    },
+    {
+      "label": "home",
+      "file_type": "code",
+      "source_file": "src/i18n/home.mjs",
+      "source_location": "L3",
+      "community": 44,
+      "norm_label": "home",
+      "id": "i18n_home_home"
+    },
+    {
+      "label": "faq.mjs",
+      "file_type": "code",
+      "source_file": "src/i18n/faq.mjs",
+      "source_location": "L1",
+      "community": 45,
+      "norm_label": "faq.mjs",
+      "id": "src_i18n_faq_mjs"
+    },
+    {
+      "label": "faq",
+      "file_type": "code",
+      "source_file": "src/i18n/faq.mjs",
+      "source_location": "L2",
+      "community": 45,
+      "norm_label": "faq",
+      "id": "i18n_faq_faq"
+    },
+    {
+      "label": "oferta.mjs",
+      "file_type": "code",
+      "source_file": "src/data/oferta.mjs",
+      "source_location": "L1",
+      "community": 6,
+      "norm_label": "oferta.mjs",
+      "id": "src_data_oferta_mjs"
+    },
+    {
+      "label": "OFERTA",
+      "file_type": "code",
+      "source_file": "src/data/oferta.mjs",
+      "source_location": "L7",
+      "community": 6,
+      "norm_label": "oferta",
+      "id": "data_oferta_oferta"
+    },
+    {
+      "label": "num()",
+      "file_type": "code",
+      "source_file": "src/data/oferta.mjs",
+      "source_location": "L54",
+      "community": 6,
+      "norm_label": "num()",
+      "id": "data_oferta_num"
+    },
+    {
+      "label": "usd()",
+      "file_type": "code",
+      "source_file": "src/data/oferta.mjs",
+      "source_location": "L58",
+      "community": 6,
+      "norm_label": "usd()",
+      "id": "data_oferta_usd"
+    },
+    {
+      "label": "usdRango()",
+      "file_type": "code",
+      "source_file": "src/data/oferta.mjs",
+      "source_location": "L60",
+      "community": 6,
+      "norm_label": "usdrango()",
+      "id": "data_oferta_usdrango"
+    },
+    {
+      "label": "montosPermitidos()",
+      "file_type": "code",
+      "source_file": "src/data/oferta.mjs",
+      "source_location": "L63",
+      "community": 6,
+      "norm_label": "montospermitidos()",
+      "id": "data_oferta_montospermitidos"
+    },
+    {
+      "label": "radarExpressRango()",
+      "file_type": "code",
+      "source_file": "src/data/oferta.mjs",
+      "source_location": "L77",
+      "community": 6,
+      "norm_label": "radarexpressrango()",
+      "id": "data_oferta_radarexpressrango"
+    },
+    {
+      "label": "tokens()",
+      "file_type": "code",
+      "source_file": "src/data/oferta.mjs",
+      "source_location": "L80",
+      "community": 6,
+      "norm_label": "tokens()",
+      "id": "data_oferta_tokens"
+    },
+    {
+      "label": "fill()",
+      "file_type": "code",
+      "source_file": "src/data/oferta.mjs",
+      "source_location": "L103",
+      "community": 6,
+      "norm_label": "fill()",
+      "id": "data_oferta_fill"
+    },
+    {
+      "label": "fillDeep()",
+      "file_type": "code",
+      "source_file": "src/data/oferta.mjs",
+      "source_location": "L112",
+      "community": 6,
+      "norm_label": "filldeep()",
+      "id": "data_oferta_filldeep"
     },
     {
       "label": "PLAN_AVANCE.md",
       "file_type": "document",
       "source_file": "PLAN_AVANCE.md",
       "source_location": "L1",
-      "community": 12,
+      "community": 14,
       "norm_label": "plan_avance.md",
       "id": "plan_avance_md"
     },
@@ -503,7 +1016,7 @@
       "file_type": "document",
       "source_file": "PLAN_AVANCE.md",
       "source_location": "L1",
-      "community": 12,
+      "community": 14,
       "norm_label": "plan de avance \u2014 brand refresh + web redesign + test era",
       "id": "3gi_web_plan_avance_plan_de_avance_brand_refresh_web_redesign_test_era"
     },
@@ -512,7 +1025,7 @@
       "file_type": "document",
       "source_file": "PLAN_AVANCE.md",
       "source_location": "L12",
-      "community": 12,
+      "community": 14,
       "norm_label": "estado general",
       "id": "3gi_web_plan_avance_estado_general"
     },
@@ -521,7 +1034,7 @@
       "file_type": "document",
       "source_file": "PLAN_AVANCE.md",
       "source_location": "L26",
-      "community": 12,
+      "community": 14,
       "norm_label": "contexto de decisiones de diseno",
       "id": "3gi_web_plan_avance_contexto_de_decisiones_de_dise_o"
     },
@@ -530,7 +1043,7 @@
       "file_type": "document",
       "source_file": "PLAN_AVANCE.md",
       "source_location": "L40",
-      "community": 12,
+      "community": 14,
       "norm_label": "fase 1 \u2014 archivos de marca",
       "id": "3gi_web_plan_avance_fase_1_archivos_de_marca"
     },
@@ -539,7 +1052,7 @@
       "file_type": "document",
       "source_file": "PLAN_AVANCE.md",
       "source_location": "L54",
-      "community": 12,
+      "community": 14,
       "norm_label": "fase 2 \u2014 rediseno web 3gi-web",
       "id": "3gi_web_plan_avance_fase_2_redise_o_web_3gi_web"
     },
@@ -548,7 +1061,7 @@
       "file_type": "document",
       "source_file": "PLAN_AVANCE.md",
       "source_location": "L69",
-      "community": 12,
+      "community": 14,
       "norm_label": "fase 3 \u2014 test era: diseno + funcionalidades",
       "id": "3gi_web_plan_avance_fase_3_test_era_dise_o_funcionalidades"
     },
@@ -557,7 +1070,7 @@
       "file_type": "document",
       "source_file": "PLAN_AVANCE.md",
       "source_location": "L84",
-      "community": 12,
+      "community": 14,
       "norm_label": "deploy",
       "id": "3gi_web_plan_avance_deploy"
     },
@@ -566,7 +1079,7 @@
       "file_type": "document",
       "source_file": "PLAN_AVANCE.md",
       "source_location": "L96",
-      "community": 12,
+      "community": 14,
       "norm_label": "report artifact",
       "id": "3gi_web_plan_avance_report_artifact"
     },
@@ -575,7 +1088,7 @@
       "file_type": "document",
       "source_file": "PLAN_AVANCE.md",
       "source_location": "L106",
-      "community": 12,
+      "community": 14,
       "norm_label": "checklist final pre-merge",
       "id": "3gi_web_plan_avance_checklist_final_pre_merge"
     },
@@ -584,7 +1097,7 @@
       "file_type": "document",
       "source_file": "PLAN_AVANCE.md",
       "source_location": "L108",
-      "community": 12,
+      "community": 14,
       "norm_label": "code:block1 ([ ] npm run build sin errores)",
       "id": "3gi_web_plan_avance_codeblock_1"
     },
@@ -593,7 +1106,7 @@
       "file_type": "document",
       "source_file": "PLAN_AVANCE.md",
       "source_location": "L128",
-      "community": 12,
+      "community": 14,
       "norm_label": "notas de sesion",
       "id": "3gi_web_plan_avance_notas_de_sesi_n"
     },
@@ -602,7 +1115,7 @@
       "file_type": "document",
       "source_file": "PLAN_AVANCE.md",
       "source_location": "L143",
-      "community": 12,
+      "community": 14,
       "norm_label": "sesiones de trabajo",
       "id": "3gi_web_plan_avance_sesiones_de_trabajo"
     },
@@ -611,7 +1124,7 @@
       "file_type": "document",
       "source_file": "/root/3gi-web/AGENTS.md",
       "source_location": "L1",
-      "community": 36,
+      "community": 39,
       "norm_label": "agents.md",
       "id": "root_3gi_web_agents_md"
     },
@@ -620,88 +1133,133 @@
       "file_type": "document",
       "source_file": "/root/3gi-web/AGENTS.md",
       "source_location": "L1",
-      "community": 36,
+      "community": 39,
       "norm_label": "graphify",
       "id": "3gi_web_agents_graphify"
     },
     {
       "label": "CLAUDE.md",
       "file_type": "document",
-      "source_file": "/root/3gi-web/CLAUDE.md",
+      "source_file": "CLAUDE.md",
       "source_location": "L1",
-      "community": 18,
+      "community": 13,
       "norm_label": "claude.md",
-      "id": "root_3gi_web_claude_md"
+      "id": "claude_md"
     },
     {
       "label": "CLAUDE.md \u2014 3gi-web",
       "file_type": "document",
-      "source_file": "/root/3gi-web/CLAUDE.md",
+      "source_file": "CLAUDE.md",
       "source_location": "L1",
-      "community": 18,
+      "community": 13,
       "norm_label": "claude.md \u2014 3gi-web",
       "id": "3gi_web_claude_claude_md_3gi_web"
     },
     {
       "label": "code:bash (git add <archivos> && git commit -m \"mensaje\" && git push or)",
       "file_type": "document",
-      "source_file": "/root/3gi-web/CLAUDE.md",
+      "source_file": "CLAUDE.md",
       "source_location": "L5",
-      "community": 18,
+      "community": 13,
       "norm_label": "code:bash (git add <archivos> && git commit -m \"mensaje\" && git push or)",
       "id": "3gi_web_claude_codeblock_1"
     },
     {
       "label": "code:bash (ssh hetzner-3gi && cd /root/3gi-web && git pull origin maste)",
       "file_type": "document",
-      "source_file": "/root/3gi-web/CLAUDE.md",
+      "source_file": "CLAUDE.md",
       "source_location": "L11",
-      "community": 18,
+      "community": 13,
       "norm_label": "code:bash (ssh hetzner-3gi && cd /root/3gi-web && git pull origin maste)",
       "id": "3gi_web_claude_codeblock_2"
     },
     {
       "label": "Dise\u00f1o homepage (index.astro) \u2014 decisiones tomadas",
       "file_type": "document",
-      "source_file": "/root/3gi-web/CLAUDE.md",
-      "source_location": "L22",
-      "community": 18,
+      "source_file": "CLAUDE.md",
+      "source_location": "L29",
+      "community": 13,
       "norm_label": "diseno homepage (index.astro) \u2014 decisiones tomadas",
       "id": "3gi_web_claude_dise_o_homepage_index_astro_decisiones_tomadas"
     },
     {
       "label": "Pendientes (backlog priorizado)",
       "file_type": "document",
-      "source_file": "/root/3gi-web/CLAUDE.md",
-      "source_location": "L29",
-      "community": 18,
+      "source_file": "CLAUDE.md",
+      "source_location": "L36",
+      "community": 13,
       "norm_label": "pendientes (backlog priorizado)",
       "id": "3gi_web_claude_pendientes_backlog_priorizado"
     },
     {
+      "label": "i18n \u2014 arquitectura y bug hist\u00f3rico (corregido 23/09/2026)",
+      "file_type": "document",
+      "source_file": "CLAUDE.md",
+      "source_location": "L44",
+      "community": 13,
+      "norm_label": "i18n \u2014 arquitectura y bug historico (corregido 23/09/2026)",
+      "id": "3gi_web_claude_i18n_arquitectura_y_bug_hist_rico_corregido_23_09_2026"
+    },
+    {
+      "label": "Nomenclatura y precios en /precios (corregido 14/10/2026, PR #9 y #10)",
+      "file_type": "document",
+      "source_file": "CLAUDE.md",
+      "source_location": "L88",
+      "community": 13,
+      "norm_label": "nomenclatura y precios en /precios (corregido 14/10/2026, pr #9 y #10)",
+      "id": "3gi_web_claude_nomenclatura_y_precios_en_precios_corregido_14_10_2026_pr_9_y_10"
+    },
+    {
       "label": "Anal\u00edtica \u2014 PostHog (estado real, 2026-08-10)",
       "file_type": "document",
-      "source_file": "/root/3gi-web/CLAUDE.md",
-      "source_location": "L57",
-      "community": 18,
+      "source_file": "CLAUDE.md",
+      "source_location": "L117",
+      "community": 13,
       "norm_label": "analitica \u2014 posthog (estado real, 2026-08-10)",
       "id": "3gi_web_claude_anal_tica_posthog_estado_real_2026_08_10"
     },
     {
+      "label": "LinkedIn Insight Tag y funnel-track.js (2026-10-16)",
+      "file_type": "document",
+      "source_file": "CLAUDE.md",
+      "source_location": "L168",
+      "community": 13,
+      "norm_label": "linkedin insight tag y funnel-track.js (2026-10-16)",
+      "id": "3gi_web_claude_linkedin_insight_tag_y_funnel_track_js_2026_10_16"
+    },
+    {
+      "label": "Funnel y consentimiento (2026-10-16)",
+      "file_type": "document",
+      "source_file": "CLAUDE.md",
+      "source_location": "L189",
+      "community": 13,
+      "norm_label": "funnel y consentimiento (2026-10-16)",
+      "id": "3gi_web_claude_funnel_y_consentimiento_2026_10_16"
+    },
+    {
       "label": "Decisiones de posicionamiento validadas (no modificar)",
       "file_type": "document",
-      "source_file": "/root/3gi-web/CLAUDE.md",
-      "source_location": "L108",
-      "community": 18,
+      "source_file": "CLAUDE.md",
+      "source_location": "L207",
+      "community": 13,
       "norm_label": "decisiones de posicionamiento validadas (no modificar)",
       "id": "3gi_web_claude_decisiones_de_posicionamiento_validadas_no_modificar"
     },
     {
+      "label": "Oferta: fuente \u00fanica, plantillas por idioma y guardia de contenido (2026-10-17)",
+      "file_type": "document",
+      "source_file": "CLAUDE.md",
+      "source_location": "L213",
+      "community": 13,
+      "norm_label": "oferta: fuente unica, plantillas por idioma y guardia de contenido (2026-10-17)",
+      "id": "3gi_web_claude_oferta_fuente_nica_plantillas_por_idioma_y_guardia_de_contenido_2026_10_17"
+    },
+    {
       "label": "graphify",
       "file_type": "document",
-      "source_file": "/root/3gi-web/CLAUDE.md",
-      "source_location": "L114",
-      "community": 18,
+      "source_file": "CLAUDE.md",
+      "source_location": "L227",
+      "community": 13,
       "norm_label": "graphify",
       "id": "3gi_web_claude_graphify"
     },
@@ -710,7 +1268,7 @@
       "file_type": "document",
       "source_file": "README.md",
       "source_location": "L1",
-      "community": 9,
+      "community": 10,
       "norm_label": "readme.md",
       "id": "readme_md"
     },
@@ -719,7 +1277,7 @@
       "file_type": "document",
       "source_file": "README.md",
       "source_location": "L1",
-      "community": 9,
+      "community": 10,
       "norm_label": "3gi web \u2014 sitio publico de 3g intelligence",
       "id": "3gi_web_readme_3gi_web_sitio_p_blico_de_3g_intelligence"
     },
@@ -728,7 +1286,7 @@
       "file_type": "document",
       "source_file": "README.md",
       "source_location": "L5",
-      "community": 9,
+      "community": 10,
       "norm_label": "stack",
       "id": "3gi_web_readme_stack"
     },
@@ -737,7 +1295,7 @@
       "file_type": "document",
       "source_file": "README.md",
       "source_location": "L13",
-      "community": 9,
+      "community": 10,
       "norm_label": "estructura",
       "id": "3gi_web_readme_estructura"
     },
@@ -746,7 +1304,7 @@
       "file_type": "document",
       "source_file": "README.md",
       "source_location": "L15",
-      "community": 9,
+      "community": 10,
       "norm_label": "code:block1 (src/)",
       "id": "3gi_web_readme_codeblock_1"
     },
@@ -754,8 +1312,8 @@
       "label": "Branding",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L34",
-      "community": 9,
+      "source_location": "L33",
+      "community": 10,
       "norm_label": "branding",
       "id": "3gi_web_readme_branding"
     },
@@ -763,8 +1321,8 @@
       "label": "Nomenclatura obligatoria",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L47",
-      "community": 9,
+      "source_location": "L46",
+      "community": 10,
       "norm_label": "nomenclatura obligatoria",
       "id": "3gi_web_readme_nomenclatura_obligatoria"
     },
@@ -772,8 +1330,8 @@
       "label": "P\u00e1ginas y prop\u00f3sito",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L53",
-      "community": 9,
+      "source_location": "L52",
+      "community": 10,
       "norm_label": "paginas y proposito",
       "id": "3gi_web_readme_p_ginas_y_prop_sito"
     },
@@ -781,8 +1339,8 @@
       "label": "SEO / AEO",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L65",
-      "community": 9,
+      "source_location": "L63",
+      "community": 10,
       "norm_label": "seo / aeo",
       "id": "3gi_web_readme_seo_aeo"
     },
@@ -790,8 +1348,8 @@
       "label": "i18n",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L74",
-      "community": 9,
+      "source_location": "L72",
+      "community": 10,
       "norm_label": "i18n",
       "id": "3gi_web_readme_i18n"
     },
@@ -799,8 +1357,8 @@
       "label": "Deploy",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L83",
-      "community": 9,
+      "source_location": "L81",
+      "community": 10,
       "norm_label": "deploy",
       "id": "3gi_web_readme_deploy"
     },
@@ -808,8 +1366,8 @@
       "label": "code:bash (# Build)",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L85",
-      "community": 9,
+      "source_location": "L83",
+      "community": 10,
       "norm_label": "code:bash (# build)",
       "id": "3gi_web_readme_codeblock_2"
     },
@@ -817,8 +1375,8 @@
       "label": "Contenido semanal",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L95",
-      "community": 9,
+      "source_location": "L93",
+      "community": 10,
       "norm_label": "contenido semanal",
       "id": "3gi_web_readme_contenido_semanal"
     },
@@ -826,8 +1384,8 @@
       "label": "Variables de entorno",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L101",
-      "community": 9,
+      "source_location": "L99",
+      "community": 10,
       "norm_label": "variables de entorno",
       "id": "3gi_web_readme_variables_de_entorno"
     },
@@ -836,7 +1394,7 @@
       "file_type": "document",
       "source_file": "ONBOARDING.md",
       "source_location": "L1",
-      "community": 19,
+      "community": 23,
       "norm_label": "onboarding.md",
       "id": "onboarding_md"
     },
@@ -845,7 +1403,7 @@
       "file_type": "document",
       "source_file": "ONBOARDING.md",
       "source_location": "L1",
-      "community": 19,
+      "community": 23,
       "norm_label": "welcome to 3gi web",
       "id": "3gi_web_onboarding_welcome_to_3gi_web"
     },
@@ -854,7 +1412,7 @@
       "file_type": "document",
       "source_file": "ONBOARDING.md",
       "source_location": "L3",
-      "community": 19,
+      "community": 23,
       "norm_label": "how we use claude",
       "id": "3gi_web_onboarding_how_we_use_claude"
     },
@@ -863,7 +1421,7 @@
       "file_type": "document",
       "source_file": "ONBOARDING.md",
       "source_location": "L17",
-      "community": 19,
+      "community": 23,
       "norm_label": "your setup checklist",
       "id": "3gi_web_onboarding_your_setup_checklist"
     },
@@ -872,7 +1430,7 @@
       "file_type": "document",
       "source_file": "ONBOARDING.md",
       "source_location": "L19",
-      "community": 19,
+      "community": 23,
       "norm_label": "codebases",
       "id": "3gi_web_onboarding_codebases"
     },
@@ -881,7 +1439,7 @@
       "file_type": "document",
       "source_file": "ONBOARDING.md",
       "source_location": "L22",
-      "community": 19,
+      "community": 23,
       "norm_label": "mcp servers to activate",
       "id": "3gi_web_onboarding_mcp_servers_to_activate"
     },
@@ -890,7 +1448,7 @@
       "file_type": "document",
       "source_file": "ONBOARDING.md",
       "source_location": "L25",
-      "community": 19,
+      "community": 23,
       "norm_label": "skills to know about",
       "id": "3gi_web_onboarding_skills_to_know_about"
     },
@@ -899,7 +1457,7 @@
       "file_type": "document",
       "source_file": "ONBOARDING.md",
       "source_location": "L29",
-      "community": 19,
+      "community": 23,
       "norm_label": "team tips",
       "id": "3gi_web_onboarding_team_tips"
     },
@@ -908,7 +1466,7 @@
       "file_type": "document",
       "source_file": "ONBOARDING.md",
       "source_location": "L33",
-      "community": 19,
+      "community": 23,
       "norm_label": "get started",
       "id": "3gi_web_onboarding_get_started"
     },
@@ -917,7 +1475,7 @@
       "file_type": "document",
       "source_file": "/root/3gi-web/docs/agente-personal-3gi.md",
       "source_location": "L1",
-      "community": 6,
+      "community": 7,
       "norm_label": "agente-personal-3gi.md",
       "id": "root_3gi_web_docs_agente_personal_3gi_md"
     },
@@ -926,7 +1484,7 @@
       "file_type": "document",
       "source_file": "/root/3gi-web/docs/agente-personal-3gi.md",
       "source_location": "L1",
-      "community": 6,
+      "community": 7,
       "norm_label": "agente personal 3gi \u2014 diseno del sistema propio",
       "id": "docs_agente_personal_3gi_agente_personal_3gi_dise_o_del_sistema_propio"
     },
@@ -935,7 +1493,7 @@
       "file_type": "document",
       "source_file": "/root/3gi-web/docs/agente-personal-3gi.md",
       "source_location": "L9",
-      "community": 6,
+      "community": 7,
       "norm_label": "por que construir uno propio",
       "id": "docs_agente_personal_3gi_por_qu_construir_uno_propio"
     },
@@ -944,7 +1502,7 @@
       "file_type": "document",
       "source_file": "/root/3gi-web/docs/agente-personal-3gi.md",
       "source_location": "L15",
-      "community": 6,
+      "community": 7,
       "norm_label": "capacidades objetivo",
       "id": "docs_agente_personal_3gi_capacidades_objetivo"
     },
@@ -953,7 +1511,7 @@
       "file_type": "document",
       "source_file": "/root/3gi-web/docs/agente-personal-3gi.md",
       "source_location": "L30",
-      "community": 6,
+      "community": 7,
       "norm_label": "lo que openclaw tiene para rescatar (conceptos, no codigo)",
       "id": "docs_agente_personal_3gi_lo_que_openclaw_tiene_para_rescatar_conceptos_no_c_digo"
     },
@@ -962,7 +1520,7 @@
       "file_type": "document",
       "source_file": "/root/3gi-web/docs/agente-personal-3gi.md",
       "source_location": "L50",
-      "community": 6,
+      "community": 7,
       "norm_label": "arquitectura",
       "id": "docs_agente_personal_3gi_arquitectura"
     },
@@ -971,7 +1529,7 @@
       "file_type": "document",
       "source_file": "/root/3gi-web/docs/agente-personal-3gi.md",
       "source_location": "L52",
-      "community": 6,
+      "community": 7,
       "norm_label": "code:block1 (telegram (@bot_3gi))",
       "id": "docs_agente_personal_3gi_codeblock_1"
     },
@@ -980,7 +1538,7 @@
       "file_type": "document",
       "source_file": "/root/3gi-web/docs/agente-personal-3gi.md",
       "source_location": "L78",
-      "community": 6,
+      "community": 7,
       "norm_label": "stack tecnico",
       "id": "docs_agente_personal_3gi_stack_t_cnico"
     },
@@ -989,7 +1547,7 @@
       "file_type": "document",
       "source_file": "/root/3gi-web/docs/agente-personal-3gi.md",
       "source_location": "L95",
-      "community": 6,
+      "community": 7,
       "norm_label": "estructura de archivos",
       "id": "docs_agente_personal_3gi_estructura_de_archivos"
     },
@@ -998,7 +1556,7 @@
       "file_type": "document",
       "source_file": "/root/3gi-web/docs/agente-personal-3gi.md",
       "source_location": "L97",
-      "community": 6,
+      "community": 7,
       "norm_label": "code:block2 (/root/3gi-assistant/)",
       "id": "docs_agente_personal_3gi_codeblock_2"
     },
@@ -1007,7 +1565,7 @@
       "file_type": "document",
       "source_file": "/root/3gi-web/docs/agente-personal-3gi.md",
       "source_location": "L123",
-      "community": 6,
+      "community": 7,
       "norm_label": "tablas supabase necesarias",
       "id": "docs_agente_personal_3gi_tablas_supabase_necesarias"
     },
@@ -1016,7 +1574,7 @@
       "file_type": "document",
       "source_file": "/root/3gi-web/docs/agente-personal-3gi.md",
       "source_location": "L125",
-      "community": 6,
+      "community": 7,
       "norm_label": "code:sql (-- historial de conversaciones)",
       "id": "docs_agente_personal_3gi_codeblock_3"
     },
@@ -1025,7 +1583,7 @@
       "file_type": "document",
       "source_file": "/root/3gi-web/docs/agente-personal-3gi.md",
       "source_location": "L150",
-      "community": 6,
+      "community": 7,
       "norm_label": "variables de entorno",
       "id": "docs_agente_personal_3gi_variables_de_entorno"
     },
@@ -1034,7 +1592,7 @@
       "file_type": "document",
       "source_file": "/root/3gi-web/docs/agente-personal-3gi.md",
       "source_location": "L152",
-      "community": 6,
+      "community": 7,
       "norm_label": "code:bash (# telegram)",
       "id": "docs_agente_personal_3gi_codeblock_4"
     },
@@ -1043,7 +1601,7 @@
       "file_type": "document",
       "source_file": "/root/3gi-web/docs/agente-personal-3gi.md",
       "source_location": "L180",
-      "community": 6,
+      "community": 7,
       "norm_label": "flujo de voz (detalle)",
       "id": "docs_agente_personal_3gi_flujo_de_voz_detalle"
     },
@@ -1052,7 +1610,7 @@
       "file_type": "document",
       "source_file": "/root/3gi-web/docs/agente-personal-3gi.md",
       "source_location": "L182",
-      "community": 6,
+      "community": 7,
       "norm_label": "code:block5 (usuario envia audio .ogg (telegram))",
       "id": "docs_agente_personal_3gi_codeblock_5"
     },
@@ -1061,7 +1619,7 @@
       "file_type": "document",
       "source_file": "/root/3gi-web/docs/agente-personal-3gi.md",
       "source_location": "L208",
-      "community": 6,
+      "community": 7,
       "norm_label": "comandos disponibles (diseno inicial)",
       "id": "docs_agente_personal_3gi_comandos_disponibles_dise_o_inicial"
     },
@@ -1070,7 +1628,7 @@
       "file_type": "document",
       "source_file": "/root/3gi-web/docs/agente-personal-3gi.md",
       "source_location": "L222",
-      "community": 6,
+      "community": 7,
       "norm_label": "plan de desarrollo",
       "id": "docs_agente_personal_3gi_plan_de_desarrollo"
     },
@@ -1079,7 +1637,7 @@
       "file_type": "document",
       "source_file": "/root/3gi-web/docs/agente-personal-3gi.md",
       "source_location": "L236",
-      "community": 6,
+      "community": 7,
       "norm_label": "criterios de exito",
       "id": "docs_agente_personal_3gi_criterios_de_xito"
     },
@@ -1088,7 +1646,7 @@
       "file_type": "document",
       "source_file": "/root/3gi-web/docs/faq-page.md",
       "source_location": "L1",
-      "community": 15,
+      "community": 20,
       "norm_label": "faq-page.md",
       "id": "root_3gi_web_docs_faq_page_md"
     },
@@ -1097,7 +1655,7 @@
       "file_type": "document",
       "source_file": "/root/3gi-web/docs/faq-page.md",
       "source_location": "L1",
-      "community": 15,
+      "community": 20,
       "norm_label": "pagina /faq \u2014 arquitectura y mantenimiento",
       "id": "docs_faq_page_p_gina_faq_arquitectura_y_mantenimiento"
     },
@@ -1106,7 +1664,7 @@
       "file_type": "document",
       "source_file": "/root/3gi-web/docs/faq-page.md",
       "source_location": "L3",
-      "community": 15,
+      "community": 20,
       "norm_label": "proposito",
       "id": "docs_faq_page_prop_sito"
     },
@@ -1115,7 +1673,7 @@
       "file_type": "document",
       "source_file": "/root/3gi-web/docs/faq-page.md",
       "source_location": "L9",
-      "community": 15,
+      "community": 20,
       "norm_label": "estructura",
       "id": "docs_faq_page_estructura"
     },
@@ -1124,7 +1682,7 @@
       "file_type": "document",
       "source_file": "/root/3gi-web/docs/faq-page.md",
       "source_location": "L11",
-      "community": 15,
+      "community": 20,
       "norm_label": "1. seccion espejo (`#espejo`)",
       "id": "docs_faq_page_1_secci_n_espejo_espejo"
     },
@@ -1133,7 +1691,7 @@
       "file_type": "document",
       "source_file": "/root/3gi-web/docs/faq-page.md",
       "source_location": "L22",
-      "community": 15,
+      "community": 20,
       "norm_label": "2. faq por categorias",
       "id": "docs_faq_page_2_faq_por_categor_as"
     },
@@ -1142,7 +1700,7 @@
       "file_type": "document",
       "source_file": "/root/3gi-web/docs/faq-page.md",
       "source_location": "L33",
-      "community": 15,
+      "community": 20,
       "norm_label": "schema json-ld",
       "id": "docs_faq_page_schema_json_ld"
     },
@@ -1151,7 +1709,7 @@
       "file_type": "document",
       "source_file": "/root/3gi-web/docs/faq-page.md",
       "source_location": "L40",
-      "community": 15,
+      "community": 20,
       "norm_label": "como agregar preguntas",
       "id": "docs_faq_page_c_mo_agregar_preguntas"
     },
@@ -1160,7 +1718,7 @@
       "file_type": "document",
       "source_file": "/root/3gi-web/docs/faq-page.md",
       "source_location": "L47",
-      "community": 15,
+      "community": 20,
       "norm_label": "criterio para incluir una pregunta",
       "id": "docs_faq_page_criterio_para_incluir_una_pregunta"
     },
@@ -1169,79 +1727,79 @@
       "file_type": "document",
       "source_file": "/root/3gi-web/docs/faq-page.md",
       "source_location": "L55",
-      "community": 15,
+      "community": 20,
       "norm_label": "nav",
       "id": "docs_faq_page_nav"
     },
     {
       "label": "homepage-sections.md",
       "file_type": "document",
-      "source_file": "/root/3gi-web/docs/homepage-sections.md",
+      "source_file": "docs/homepage-sections.md",
       "source_location": "L1",
-      "community": 21,
+      "community": 25,
       "norm_label": "homepage-sections.md",
-      "id": "root_3gi_web_docs_homepage_sections_md"
+      "id": "docs_homepage_sections_md"
     },
     {
       "label": "Homepage \u2014 Secciones y prop\u00f3sito",
       "file_type": "document",
-      "source_file": "/root/3gi-web/docs/homepage-sections.md",
+      "source_file": "docs/homepage-sections.md",
       "source_location": "L1",
-      "community": 21,
+      "community": 25,
       "norm_label": "homepage \u2014 secciones y proposito",
       "id": "docs_homepage_sections_homepage_secciones_y_prop_sito"
     },
     {
       "label": "Orden y funci\u00f3n",
       "file_type": "document",
-      "source_file": "/root/3gi-web/docs/homepage-sections.md",
+      "source_file": "docs/homepage-sections.md",
       "source_location": "L5",
-      "community": 21,
+      "community": 25,
       "norm_label": "orden y funcion",
       "id": "docs_homepage_sections_orden_y_funci_n"
     },
     {
       "label": "Secciones clave para editar",
       "file_type": "document",
-      "source_file": "/root/3gi-web/docs/homepage-sections.md",
+      "source_file": "docs/homepage-sections.md",
       "source_location": "L21",
-      "community": 21,
+      "community": 25,
       "norm_label": "secciones clave para editar",
       "id": "docs_homepage_sections_secciones_clave_para_editar"
     },
     {
       "label": "`#para-quien`",
       "file_type": "document",
-      "source_file": "/root/3gi-web/docs/homepage-sections.md",
+      "source_file": "docs/homepage-sections.md",
       "source_location": "L23",
-      "community": 21,
+      "community": 25,
       "norm_label": "`#para-quien`",
       "id": "docs_homepage_sections_para_quien"
     },
     {
       "label": "`#faq` (homepage)",
       "file_type": "document",
-      "source_file": "/root/3gi-web/docs/homepage-sections.md",
+      "source_file": "docs/homepage-sections.md",
       "source_location": "L27",
-      "community": 21,
+      "community": 25,
       "norm_label": "`#faq` (homepage)",
       "id": "docs_homepage_sections_faq_homepage"
     },
     {
       "label": "`#trust`",
       "file_type": "document",
-      "source_file": "/root/3gi-web/docs/homepage-sections.md",
+      "source_file": "docs/homepage-sections.md",
       "source_location": "L31",
-      "community": 21,
+      "community": 25,
       "norm_label": "`#trust`",
       "id": "docs_homepage_sections_trust"
     },
     {
       "label": "Reglas de contenido",
       "file_type": "document",
-      "source_file": "/root/3gi-web/docs/homepage-sections.md",
+      "source_file": "docs/homepage-sections.md",
       "source_location": "L35",
-      "community": 21,
+      "community": 25,
       "norm_label": "reglas de contenido",
       "id": "docs_homepage_sections_reglas_de_contenido"
     },
@@ -1250,7 +1808,7 @@
       "file_type": "document",
       "source_file": "/root/3gi-web/docs/sql-assistant-tablas.md",
       "source_location": "L1",
-      "community": 30,
+      "community": 35,
       "norm_label": "sql-assistant-tablas.md",
       "id": "root_3gi_web_docs_sql_assistant_tablas_md"
     },
@@ -1259,7 +1817,7 @@
       "file_type": "document",
       "source_file": "/root/3gi-web/docs/sql-assistant-tablas.md",
       "source_location": "L1",
-      "community": 30,
+      "community": 35,
       "norm_label": "sql: tablas para 3gi assistant",
       "id": "docs_sql_assistant_tablas_sql_tablas_para_3gi_assistant"
     },
@@ -1268,7 +1826,7 @@
       "file_type": "document",
       "source_file": "/root/3gi-web/docs/sql-assistant-tablas.md",
       "source_location": "L5",
-      "community": 30,
+      "community": 35,
       "norm_label": "code:sql (create table if not exists assistant_sessions ()",
       "id": "docs_sql_assistant_tablas_codeblock_1"
     },
@@ -1277,7 +1835,7 @@
       "file_type": "document",
       "source_file": "/root/3gi-web/docs/openclaw.md",
       "source_location": "L1",
-      "community": 10,
+      "community": 11,
       "norm_label": "openclaw.md",
       "id": "root_3gi_web_docs_openclaw_md"
     },
@@ -1286,7 +1844,7 @@
       "file_type": "document",
       "source_file": "/root/3gi-web/docs/openclaw.md",
       "source_location": "L1",
-      "community": 10,
+      "community": 11,
       "norm_label": "openclaw \u2014 analisis de capacidades y estado actual",
       "id": "docs_openclaw_openclaw_an_lisis_de_capacidades_y_estado_actual"
     },
@@ -1295,7 +1853,7 @@
       "file_type": "document",
       "source_file": "/root/3gi-web/docs/openclaw.md",
       "source_location": "L11",
-      "community": 10,
+      "community": 11,
       "norm_label": "que es openclaw",
       "id": "docs_openclaw_qu_es_openclaw"
     },
@@ -1304,7 +1862,7 @@
       "file_type": "document",
       "source_file": "/root/3gi-web/docs/openclaw.md",
       "source_location": "L17",
-      "community": 10,
+      "community": 11,
       "norm_label": "capacidades disponibles",
       "id": "docs_openclaw_capacidades_disponibles"
     },
@@ -1313,7 +1871,7 @@
       "file_type": "document",
       "source_file": "/root/3gi-web/docs/openclaw.md",
       "source_location": "L19",
-      "community": 10,
+      "community": 11,
       "norm_label": "\u2705 activas y funcionando",
       "id": "docs_openclaw_activas_y_funcionando"
     },
@@ -1322,7 +1880,7 @@
       "file_type": "document",
       "source_file": "/root/3gi-web/docs/openclaw.md",
       "source_location": "L32",
-      "community": 10,
+      "community": 11,
       "norm_label": "\u274c desactivados actualmente",
       "id": "docs_openclaw_desactivados_actualmente"
     },
@@ -1331,7 +1889,7 @@
       "file_type": "document",
       "source_file": "/root/3gi-web/docs/openclaw.md",
       "source_location": "L43",
-      "community": 10,
+      "community": 11,
       "norm_label": "que puede hacer por 3gi hoy",
       "id": "docs_openclaw_qu_puede_hacer_por_3gi_hoy"
     },
@@ -1340,7 +1898,7 @@
       "file_type": "document",
       "source_file": "/root/3gi-web/docs/openclaw.md",
       "source_location": "L45",
-      "community": 10,
+      "community": 11,
       "norm_label": "desde telegram (sin configuracion adicional):",
       "id": "docs_openclaw_desde_telegram_sin_configuraci_n_adicional"
     },
@@ -1349,7 +1907,7 @@
       "file_type": "document",
       "source_file": "/root/3gi-web/docs/openclaw.md",
       "source_location": "L52",
-      "community": 10,
+      "community": 11,
       "norm_label": "con configuracion adicional (proximos pasos):",
       "id": "docs_openclaw_con_configuraci_n_adicional_pr_ximos_pasos"
     },
@@ -1358,7 +1916,7 @@
       "file_type": "document",
       "source_file": "/root/3gi-web/docs/openclaw.md",
       "source_location": "L60",
-      "community": 10,
+      "community": 11,
       "norm_label": "arquitectura tecnica",
       "id": "docs_openclaw_arquitectura_t_cnica"
     },
@@ -1367,7 +1925,7 @@
       "file_type": "document",
       "source_file": "/root/3gi-web/docs/openclaw.md",
       "source_location": "L62",
-      "community": 10,
+      "community": 11,
       "norm_label": "code:block1 (telegram \u2192 @openclaw_3g_bot)",
       "id": "docs_openclaw_codeblock_1"
     },
@@ -1376,7 +1934,7 @@
       "file_type": "document",
       "source_file": "/root/3gi-web/docs/openclaw.md",
       "source_location": "L84",
-      "community": 10,
+      "community": 11,
       "norm_label": "problema actual: gasto excesivo de tokens",
       "id": "docs_openclaw_problema_actual_gasto_excesivo_de_tokens"
     },
@@ -1385,7 +1943,7 @@
       "file_type": "document",
       "source_file": "/root/3gi-web/docs/openclaw.md",
       "source_location": "L100",
-      "community": 10,
+      "community": 11,
       "norm_label": "plan de optimizacion aprobado",
       "id": "docs_openclaw_plan_de_optimizaci_n_aprobado"
     },
@@ -1394,7 +1952,7 @@
       "file_type": "document",
       "source_file": "/root/3gi-web/docs/openclaw.md",
       "source_location": "L113",
-      "community": 10,
+      "community": 11,
       "norm_label": "modelos disponibles via openrouter (sin costo adicional de setup)",
       "id": "docs_openclaw_modelos_disponibles_via_openrouter_sin_costo_adicional_de_setup"
     },
@@ -1853,7 +2411,7 @@
       "file_type": "document",
       "source_file": "/root/3gi-web/docs/contenido/carruseles.md",
       "source_location": "L661",
-      "community": 11,
+      "community": 12,
       "norm_label": "guiones shorts/reels \u2014 formato nuevo (max 30 seg, cta antes del seg 20)",
       "id": "contenido_carruseles_guiones_shorts_reels_formato_nuevo_m_x_30_seg_cta_antes_del_seg_20"
     },
@@ -1862,7 +2420,7 @@
       "file_type": "document",
       "source_file": "/root/3gi-web/docs/contenido/carruseles.md",
       "source_location": "L667",
-      "community": 11,
+      "community": 12,
       "norm_label": "short 0c \u2014 \"el cuello de botella eres tu\"",
       "id": "contenido_carruseles_short_0c_el_cuello_de_botella_eres_t"
     },
@@ -1871,7 +2429,7 @@
       "file_type": "document",
       "source_file": "/root/3gi-web/docs/contenido/carruseles.md",
       "source_location": "L690",
-      "community": 11,
+      "community": 12,
       "norm_label": "opcion b \u2014 generada con skill 3gi-short-script",
       "id": "contenido_carruseles_opci_n_b_generada_con_skill_3gi_short_script"
     },
@@ -1880,7 +2438,7 @@
       "file_type": "document",
       "source_file": "/root/3gi-web/docs/contenido/carruseles.md",
       "source_location": "L721",
-      "community": 11,
+      "community": 12,
       "norm_label": "short 01 \u2014 \"el profesional de usd 3.000\"",
       "id": "contenido_carruseles_short_01_el_profesional_de_usd_3_000"
     },
@@ -1907,7 +2465,7 @@
       "file_type": "document",
       "source_file": "/root/3gi-web/docs/contenido/carruseles.md",
       "source_location": "L770",
-      "community": 11,
+      "community": 12,
       "norm_label": "short 02 \u2014 \"5 senales de apagaincendios\"",
       "id": "contenido_carruseles_short_02_5_se_ales_de_apagaincendios"
     },
@@ -1916,7 +2474,7 @@
       "file_type": "document",
       "source_file": "/root/3gi-web/docs/contenido/carruseles.md",
       "source_location": "L791",
-      "community": 11,
+      "community": 12,
       "norm_label": "short 03 \u2014 \"de 30 min a 5 min\"",
       "id": "contenido_carruseles_short_03_de_30_min_a_5_min"
     },
@@ -1925,7 +2483,7 @@
       "file_type": "document",
       "source_file": "/root/3gi-web/docs/contenido/carruseles.md",
       "source_location": "L814",
-      "community": 11,
+      "community": 12,
       "norm_label": "short 04 \u2014 \"el costo invisible\"",
       "id": "contenido_carruseles_short_04_el_costo_invisible"
     },
@@ -1934,7 +2492,7 @@
       "file_type": "document",
       "source_file": "/root/3gi-web/docs/contenido/carruseles.md",
       "source_location": "L837",
-      "community": 11,
+      "community": 12,
       "norm_label": "short 05 \u2014 \"de reactivo a proactivo\"",
       "id": "contenido_carruseles_short_05_de_reactivo_a_proactivo"
     },
@@ -1943,7 +2501,7 @@
       "file_type": "document",
       "source_file": "/root/3gi-web/docs/contenido/carruseles.md",
       "source_location": "L859",
-      "community": 11,
+      "community": 12,
       "norm_label": "short 06 \u2014 \"7 procesos a automatizar primero\"",
       "id": "contenido_carruseles_short_06_7_procesos_a_automatizar_primero"
     },
@@ -1952,7 +2510,7 @@
       "file_type": "document",
       "source_file": "/root/3gi-web/docs/contenido/carruseles.md",
       "source_location": "L882",
-      "community": 11,
+      "community": 12,
       "norm_label": "short 07 \u2014 \"era 1, era 2, era 3\"",
       "id": "contenido_carruseles_short_07_era_1_era_2_era_3"
     },
@@ -1961,7 +2519,7 @@
       "file_type": "document",
       "source_file": "/root/3gi-web/docs/contenido/carruseles.md",
       "source_location": "L904",
-      "community": 11,
+      "community": 12,
       "norm_label": "short 08 \u2014 \"+40% capacidad sin contratar\"",
       "id": "contenido_carruseles_short_08_40_capacidad_sin_contratar"
     },
@@ -1970,7 +2528,7 @@
       "file_type": "document",
       "source_file": "/root/3gi-web/docs/contenido/carruseles.md",
       "source_location": "L926",
-      "community": 11,
+      "community": 12,
       "norm_label": "short 09 \u2014 \"el excel como sistema\"",
       "id": "contenido_carruseles_short_09_el_excel_como_sistema"
     },
@@ -1979,7 +2537,7 @@
       "file_type": "document",
       "source_file": "/root/3gi-web/docs/contenido/carruseles.md",
       "source_location": "L949",
-      "community": 11,
+      "community": 12,
       "norm_label": "short 10 \u2014 \"reactiva vs proactiva\"",
       "id": "contenido_carruseles_short_10_reactiva_vs_proactiva"
     },
@@ -1988,7 +2546,7 @@
       "file_type": "document",
       "source_file": "/root/3gi-web/docs/contenido/carruseles.md",
       "source_location": "L971",
-      "community": 11,
+      "community": 12,
       "norm_label": "short 11 \u2014 \"los 9 sub-niveles era\"",
       "id": "contenido_carruseles_short_11_los_9_sub_niveles_era"
     },
@@ -1997,7 +2555,7 @@
       "file_type": "document",
       "source_file": "/root/3gi-web/docs/contenido/carruseles.md",
       "source_location": "L993",
-      "community": 11,
+      "community": 12,
       "norm_label": "short 12 \u2014 \"el test era\"",
       "id": "contenido_carruseles_short_12_el_test_era"
     },
@@ -2195,7 +2753,7 @@
       "file_type": "document",
       "source_file": "/root/3gi-web/docs/contenido/temp-post-03-imagen.md",
       "source_location": "L1",
-      "community": 31,
+      "community": 36,
       "norm_label": "temp-post-03-imagen.md",
       "id": "root_3gi_web_docs_contenido_temp_post_03_imagen_md"
     },
@@ -2204,7 +2762,7 @@
       "file_type": "document",
       "source_file": "/root/3gi-web/docs/contenido/temp-post-03-imagen.md",
       "source_location": "L1",
-      "community": 31,
+      "community": 36,
       "norm_label": "temporal \u2014 imagen post 03",
       "id": "contenido_temp_post_03_imagen_temporal_imagen_post_03"
     },
@@ -2213,7 +2771,7 @@
       "file_type": "document",
       "source_file": "/root/3gi-web/docs/contenido/temp-post-03-imagen.md",
       "source_location": "L5",
-      "community": 31,
+      "community": 36,
       "norm_label": "imagen linkedin / facebook \u2014 post 03",
       "id": "contenido_temp_post_03_imagen_imagen_linkedin_facebook_post_03"
     },
@@ -2222,7 +2780,7 @@
       "file_type": "document",
       "source_file": "/root/3gi-web/docs/contenido/temp-post-03-imagen.md",
       "source_location": "L8",
-      "community": 31,
+      "community": 36,
       "norm_label": "code:block1 (https://3gi.cl/contenido/post03-linkedin.png)",
       "id": "contenido_temp_post_03_imagen_codeblock_1"
     },
@@ -2231,7 +2789,7 @@
       "file_type": "document",
       "source_file": "/root/3gi-web/docs/contenido/carruseles2.md",
       "source_location": "L1",
-      "community": 2,
+      "community": 3,
       "norm_label": "carruseles2.md",
       "id": "root_3gi_web_docs_contenido_carruseles2_md"
     },
@@ -2240,7 +2798,7 @@
       "file_type": "document",
       "source_file": "/root/3gi-web/docs/contenido/carruseles2.md",
       "source_location": "L1",
-      "community": 2,
+      "community": 3,
       "norm_label": "contenido desde post 02 \u2014 shorts + linkedin/facebook",
       "id": "contenido_carruseles2_contenido_desde_post_02_shorts_linkedin_facebook"
     },
@@ -2249,7 +2807,7 @@
       "file_type": "document",
       "source_file": "/root/3gi-web/docs/contenido/carruseles2.md",
       "source_location": "L8",
-      "community": 2,
+      "community": 3,
       "norm_label": "estado",
       "id": "contenido_carruseles2_estado"
     },
@@ -2258,7 +2816,7 @@
       "file_type": "document",
       "source_file": "/root/3gi-web/docs/contenido/carruseles2.md",
       "source_location": "L26",
-      "community": 2,
+      "community": 3,
       "norm_label": "post 02 \u2014 5 senales de apagaincendios",
       "id": "contenido_carruseles2_post_02_5_se_ales_de_apagaincendios"
     },
@@ -2267,7 +2825,7 @@
       "file_type": "document",
       "source_file": "/root/3gi-web/docs/contenido/carruseles2.md",
       "source_location": "L31",
-      "community": 2,
+      "community": 3,
       "norm_label": "short 02",
       "id": "contenido_carruseles2_short_02"
     },
@@ -2276,7 +2834,7 @@
       "file_type": "document",
       "source_file": "/root/3gi-web/docs/contenido/carruseles2.md",
       "source_location": "L50",
-      "community": 2,
+      "community": 3,
       "norm_label": "texto linkedin/facebook",
       "id": "contenido_carruseles2_texto_linkedin_facebook"
     },
@@ -2285,7 +2843,7 @@
       "file_type": "document",
       "source_file": "/root/3gi-web/docs/contenido/carruseles2.md",
       "source_location": "L52",
-      "community": 2,
+      "community": 3,
       "norm_label": "code:block1 (antes de hablar de ia con un cliente, siempre busco una sena)",
       "id": "contenido_carruseles2_codeblock_1"
     },
@@ -2294,7 +2852,7 @@
       "file_type": "document",
       "source_file": "/root/3gi-web/docs/contenido/carruseles2.md",
       "source_location": "L83",
-      "community": 2,
+      "community": 3,
       "norm_label": "descripcion youtube \u2014 short 02",
       "id": "contenido_carruseles2_descripci_n_youtube_short_02"
     },
@@ -2303,7 +2861,7 @@
       "file_type": "document",
       "source_file": "/root/3gi-web/docs/contenido/carruseles2.md",
       "source_location": "L88",
-      "community": 2,
+      "community": 3,
       "norm_label": "code:block2 (antes de hablar de inteligencia artificial con cualquier cli)",
       "id": "contenido_carruseles2_codeblock_2"
     },
@@ -2312,7 +2870,7 @@
       "file_type": "document",
       "source_file": "/root/3gi-web/docs/contenido/carruseles2.md",
       "source_location": "L106",
-      "community": 2,
+      "community": 3,
       "norm_label": "caption instagram reel \u2014 post 02",
       "id": "contenido_carruseles2_caption_instagram_reel_post_02"
     },
@@ -2330,7 +2888,7 @@
       "file_type": "document",
       "source_file": "/root/3gi-web/docs/contenido/carruseles2.md",
       "source_location": "L132",
-      "community": 2,
+      "community": 3,
       "norm_label": "post 03 \u2014 caso real: de 30 min a 5 min",
       "id": "contenido_carruseles2_post_03_caso_real_de_30_min_a_5_min"
     },
@@ -2339,7 +2897,7 @@
       "file_type": "document",
       "source_file": "/root/3gi-web/docs/contenido/carruseles2.md",
       "source_location": "L137",
-      "community": 2,
+      "community": 3,
       "norm_label": "short 03",
       "id": "contenido_carruseles2_short_03"
     },
@@ -2348,7 +2906,7 @@
       "file_type": "document",
       "source_file": "/root/3gi-web/docs/contenido/carruseles2.md",
       "source_location": "L158",
-      "community": 2,
+      "community": 3,
       "norm_label": "texto linkedin/facebook",
       "id": "contenido_carruseles2_texto_linkedin_facebook_158"
     },
@@ -2357,7 +2915,7 @@
       "file_type": "document",
       "source_file": "/root/3gi-web/docs/contenido/carruseles2.md",
       "source_location": "L160",
-      "community": 2,
+      "community": 3,
       "norm_label": "code:block4 (la mayoria cree que necesita contratar mas gente para crecer)",
       "id": "contenido_carruseles2_codeblock_4"
     },
@@ -2366,7 +2924,7 @@
       "file_type": "document",
       "source_file": "/root/3gi-web/docs/contenido/carruseles2.md",
       "source_location": "L184",
-      "community": 2,
+      "community": 3,
       "norm_label": "descripcion youtube \u2014 short 03",
       "id": "contenido_carruseles2_descripci_n_youtube_short_03"
     },
@@ -2375,7 +2933,7 @@
       "file_type": "document",
       "source_file": "/root/3gi-web/docs/contenido/carruseles2.md",
       "source_location": "L189",
-      "community": 3,
+      "community": 2,
       "norm_label": "code:block5 (la mayoria de duenos de empresa cree que necesita contratar )",
       "id": "contenido_carruseles2_codeblock_5"
     },
@@ -2384,7 +2942,7 @@
       "file_type": "document",
       "source_file": "/root/3gi-web/docs/contenido/carruseles2.md",
       "source_location": "L208",
-      "community": 2,
+      "community": 3,
       "norm_label": "caption instagram reel \u2014 post 03",
       "id": "contenido_carruseles2_caption_instagram_reel_post_03"
     },
@@ -2393,7 +2951,7 @@
       "file_type": "document",
       "source_file": "/root/3gi-web/docs/contenido/carruseles2.md",
       "source_location": "L210",
-      "community": 3,
+      "community": 2,
       "norm_label": "code:block6 (la mayoria cree que necesita contratar mas gente para crecer)",
       "id": "contenido_carruseles2_codeblock_6"
     },
@@ -2456,7 +3014,7 @@
       "file_type": "document",
       "source_file": "/root/3gi-web/docs/contenido/carruseles2.md",
       "source_location": "L307",
-      "community": 7,
+      "community": 8,
       "norm_label": "caption instagram reel \u2014 post 04",
       "id": "contenido_carruseles2_caption_instagram_reel_post_04"
     },
@@ -2465,7 +3023,7 @@
       "file_type": "document",
       "source_file": "/root/3gi-web/docs/contenido/carruseles2.md",
       "source_location": "L309",
-      "community": 7,
+      "community": 8,
       "norm_label": "code:block9 (tus procesos ya te estan costando dinero.)",
       "id": "contenido_carruseles2_codeblock_9"
     },
@@ -2474,7 +3032,7 @@
       "file_type": "document",
       "source_file": "/root/3gi-web/docs/contenido/carruseles2.md",
       "source_location": "L329",
-      "community": 2,
+      "community": 3,
       "norm_label": "post 05 \u2014 caso coves: de reactivo a proactivo",
       "id": "contenido_carruseles2_post_05_caso_coves_de_reactivo_a_proactivo"
     },
@@ -2483,7 +3041,7 @@
       "file_type": "document",
       "source_file": "/root/3gi-web/docs/contenido/carruseles2.md",
       "source_location": "L333",
-      "community": 2,
+      "community": 3,
       "norm_label": "short 05",
       "id": "contenido_carruseles2_short_05"
     },
@@ -2492,7 +3050,7 @@
       "file_type": "document",
       "source_file": "/root/3gi-web/docs/contenido/carruseles2.md",
       "source_location": "L353",
-      "community": 2,
+      "community": 3,
       "norm_label": "texto linkedin/facebook",
       "id": "contenido_carruseles2_texto_linkedin_facebook_353"
     },
@@ -2501,7 +3059,7 @@
       "file_type": "document",
       "source_file": "/root/3gi-web/docs/contenido/carruseles2.md",
       "source_location": "L355",
-      "community": 2,
+      "community": 3,
       "norm_label": "code:block10 (la mayoria de empresas no necesita mas tecnologia.)",
       "id": "contenido_carruseles2_codeblock_10"
     },
@@ -2510,7 +3068,7 @@
       "file_type": "document",
       "source_file": "/root/3gi-web/docs/contenido/carruseles2.md",
       "source_location": "L380",
-      "community": 8,
+      "community": 9,
       "norm_label": "descripcion youtube \u2014 short 05",
       "id": "contenido_carruseles2_descripci_n_youtube_short_05"
     },
@@ -2519,7 +3077,7 @@
       "file_type": "document",
       "source_file": "/root/3gi-web/docs/contenido/carruseles2.md",
       "source_location": "L385",
-      "community": 8,
+      "community": 9,
       "norm_label": "code:block11 (la mayoria de empresas no necesita mas tecnologia.)",
       "id": "contenido_carruseles2_codeblock_11"
     },
@@ -2528,7 +3086,7 @@
       "file_type": "document",
       "source_file": "/root/3gi-web/docs/contenido/carruseles2.md",
       "source_location": "L404",
-      "community": 3,
+      "community": 2,
       "norm_label": "caption instagram reel \u2014 post 05",
       "id": "contenido_carruseles2_caption_instagram_reel_post_05"
     },
@@ -2537,7 +3095,7 @@
       "file_type": "document",
       "source_file": "/root/3gi-web/docs/contenido/carruseles2.md",
       "source_location": "L406",
-      "community": 3,
+      "community": 2,
       "norm_label": "code:block12 (la mayoria de empresas no necesita mas tecnologia.)",
       "id": "contenido_carruseles2_codeblock_12"
     },
@@ -2546,7 +3104,7 @@
       "file_type": "document",
       "source_file": "/root/3gi-web/docs/contenido/carruseles2.md",
       "source_location": "L429",
-      "community": 3,
+      "community": 2,
       "norm_label": "post 06 \u2014 7 procesos a automatizar primero",
       "id": "contenido_carruseles2_post_06_7_procesos_a_automatizar_primero"
     },
@@ -2555,7 +3113,7 @@
       "file_type": "document",
       "source_file": "/root/3gi-web/docs/contenido/carruseles2.md",
       "source_location": "L433",
-      "community": 3,
+      "community": 2,
       "norm_label": "short 06",
       "id": "contenido_carruseles2_short_06"
     },
@@ -2564,7 +3122,7 @@
       "file_type": "document",
       "source_file": "/root/3gi-web/docs/contenido/carruseles2.md",
       "source_location": "L455",
-      "community": 3,
+      "community": 2,
       "norm_label": "texto linkedin/facebook",
       "id": "contenido_carruseles2_texto_linkedin_facebook_455"
     },
@@ -2573,7 +3131,7 @@
       "file_type": "document",
       "source_file": "/root/3gi-web/docs/contenido/carruseles2.md",
       "source_location": "L457",
-      "community": 3,
+      "community": 2,
       "norm_label": "code:block13 (la mayoria de las empresas no necesita mas herramientas de i)",
       "id": "contenido_carruseles2_codeblock_13"
     },
@@ -2582,7 +3140,7 @@
       "file_type": "document",
       "source_file": "/root/3gi-web/docs/contenido/carruseles2.md",
       "source_location": "L486",
-      "community": 3,
+      "community": 2,
       "norm_label": "descripcion youtube \u2014 short 06",
       "id": "contenido_carruseles2_descripci_n_youtube_short_06"
     },
@@ -2591,7 +3149,7 @@
       "file_type": "document",
       "source_file": "/root/3gi-web/docs/contenido/carruseles2.md",
       "source_location": "L491",
-      "community": 3,
+      "community": 2,
       "norm_label": "code:block14 (la mayoria de las empresas no necesita mas herramientas de i)",
       "id": "contenido_carruseles2_codeblock_14"
     },
@@ -2600,7 +3158,7 @@
       "file_type": "document",
       "source_file": "/root/3gi-web/docs/contenido/carruseles2.md",
       "source_location": "L511",
-      "community": 3,
+      "community": 2,
       "norm_label": "caption instagram reel \u2014 post 06",
       "id": "contenido_carruseles2_caption_instagram_reel_post_06"
     },
@@ -2609,7 +3167,7 @@
       "file_type": "document",
       "source_file": "/root/3gi-web/docs/contenido/carruseles2.md",
       "source_location": "L513",
-      "community": 3,
+      "community": 2,
       "norm_label": "code:block15 (la mayoria de las empresas no necesita mas herramientas de i)",
       "id": "contenido_carruseles2_codeblock_15"
     },
@@ -2618,7 +3176,7 @@
       "file_type": "document",
       "source_file": "/root/3gi-web/docs/contenido/carruseles2.md",
       "source_location": "L538",
-      "community": 3,
+      "community": 2,
       "norm_label": "post 07 \u2014 era 1 / era 2 / era 3 explicadas",
       "id": "contenido_carruseles2_post_07_era_1_era_2_era_3_explicadas"
     },
@@ -2627,7 +3185,7 @@
       "file_type": "document",
       "source_file": "/root/3gi-web/docs/contenido/carruseles2.md",
       "source_location": "L542",
-      "community": 3,
+      "community": 2,
       "norm_label": "short 07",
       "id": "contenido_carruseles2_short_07"
     },
@@ -2636,7 +3194,7 @@
       "file_type": "document",
       "source_file": "/root/3gi-web/docs/contenido/carruseles2.md",
       "source_location": "L562",
-      "community": 3,
+      "community": 2,
       "norm_label": "texto linkedin/facebook",
       "id": "contenido_carruseles2_texto_linkedin_facebook_562"
     },
@@ -2645,7 +3203,7 @@
       "file_type": "document",
       "source_file": "/root/3gi-web/docs/contenido/carruseles2.md",
       "source_location": "L564",
-      "community": 3,
+      "community": 2,
       "norm_label": "code:block16 (la mayoria de duenos cree que esta en era 2.)",
       "id": "contenido_carruseles2_codeblock_16"
     },
@@ -2654,7 +3212,7 @@
       "file_type": "document",
       "source_file": "/root/3gi-web/docs/contenido/carruseles2.md",
       "source_location": "L595",
-      "community": 3,
+      "community": 2,
       "norm_label": "descripcion youtube \u2014 short 07",
       "id": "contenido_carruseles2_descripci_n_youtube_short_07"
     },
@@ -2663,7 +3221,7 @@
       "file_type": "document",
       "source_file": "/root/3gi-web/docs/contenido/carruseles2.md",
       "source_location": "L600",
-      "community": 3,
+      "community": 2,
       "norm_label": "code:block17 (la mayoria de duenos cree que esta en era 2.)",
       "id": "contenido_carruseles2_codeblock_17"
     },
@@ -2672,7 +3230,7 @@
       "file_type": "document",
       "source_file": "/root/3gi-web/docs/contenido/carruseles2.md",
       "source_location": "L619",
-      "community": 3,
+      "community": 2,
       "norm_label": "caption instagram reel \u2014 post 07",
       "id": "contenido_carruseles2_caption_instagram_reel_post_07"
     },
@@ -2681,7 +3239,7 @@
       "file_type": "document",
       "source_file": "/root/3gi-web/docs/contenido/carruseles2.md",
       "source_location": "L621",
-      "community": 3,
+      "community": 2,
       "norm_label": "code:block18 (la mayoria de duenos cree que esta en era 2.)",
       "id": "contenido_carruseles2_codeblock_18"
     },
@@ -2834,7 +3392,7 @@
       "file_type": "document",
       "source_file": "/root/3gi-web/docs/contenido/carruseles2.md",
       "source_location": "L852",
-      "community": 7,
+      "community": 8,
       "norm_label": "post 10 \u2014 caso coves: reactiva vs proactiva",
       "id": "contenido_carruseles2_post_10_caso_coves_reactiva_vs_proactiva"
     },
@@ -2843,7 +3401,7 @@
       "file_type": "document",
       "source_file": "/root/3gi-web/docs/contenido/carruseles2.md",
       "source_location": "L856",
-      "community": 7,
+      "community": 8,
       "norm_label": "short 10",
       "id": "contenido_carruseles2_short_10"
     },
@@ -2852,7 +3410,7 @@
       "file_type": "document",
       "source_file": "/root/3gi-web/docs/contenido/carruseles2.md",
       "source_location": "L876",
-      "community": 7,
+      "community": 8,
       "norm_label": "texto linkedin/facebook",
       "id": "contenido_carruseles2_texto_linkedin_facebook_876"
     },
@@ -2861,7 +3419,7 @@
       "file_type": "document",
       "source_file": "/root/3gi-web/docs/contenido/carruseles2.md",
       "source_location": "L878",
-      "community": 7,
+      "community": 8,
       "norm_label": "code:block25 (dos empresas. mismo sector. mismo presupuesto.)",
       "id": "contenido_carruseles2_codeblock_25"
     },
@@ -2870,7 +3428,7 @@
       "file_type": "document",
       "source_file": "/root/3gi-web/docs/contenido/carruseles2.md",
       "source_location": "L904",
-      "community": 7,
+      "community": 8,
       "norm_label": "descripcion youtube \u2014 short 10",
       "id": "contenido_carruseles2_descripci_n_youtube_short_10"
     },
@@ -2879,7 +3437,7 @@
       "file_type": "document",
       "source_file": "/root/3gi-web/docs/contenido/carruseles2.md",
       "source_location": "L909",
-      "community": 7,
+      "community": 8,
       "norm_label": "code:block26 (dos empresas. mismo sector. mismo presupuesto.)",
       "id": "contenido_carruseles2_codeblock_26"
     },
@@ -2888,7 +3446,7 @@
       "file_type": "document",
       "source_file": "/root/3gi-web/docs/contenido/carruseles2.md",
       "source_location": "L929",
-      "community": 7,
+      "community": 8,
       "norm_label": "caption instagram reel \u2014 post 10",
       "id": "contenido_carruseles2_caption_instagram_reel_post_10"
     },
@@ -2897,7 +3455,7 @@
       "file_type": "document",
       "source_file": "/root/3gi-web/docs/contenido/carruseles2.md",
       "source_location": "L931",
-      "community": 7,
+      "community": 8,
       "norm_label": "code:block27 (dos empresas. mismo sector. mismo presupuesto.)",
       "id": "contenido_carruseles2_codeblock_27"
     },
@@ -2906,7 +3464,7 @@
       "file_type": "document",
       "source_file": "/root/3gi-web/docs/contenido/carruseles2.md",
       "source_location": "L952",
-      "community": 2,
+      "community": 19,
       "norm_label": "post 11 \u2014 los 9 sub-niveles era",
       "id": "contenido_carruseles2_post_11_los_9_sub_niveles_era"
     },
@@ -2915,7 +3473,7 @@
       "file_type": "document",
       "source_file": "/root/3gi-web/docs/contenido/carruseles2.md",
       "source_location": "L956",
-      "community": 2,
+      "community": 19,
       "norm_label": "short 11",
       "id": "contenido_carruseles2_short_11"
     },
@@ -2924,7 +3482,7 @@
       "file_type": "document",
       "source_file": "/root/3gi-web/docs/contenido/carruseles2.md",
       "source_location": "L976",
-      "community": 2,
+      "community": 19,
       "norm_label": "texto linkedin/facebook",
       "id": "contenido_carruseles2_texto_linkedin_facebook_976"
     },
@@ -2933,7 +3491,7 @@
       "file_type": "document",
       "source_file": "/root/3gi-web/docs/contenido/carruseles2.md",
       "source_location": "L978",
-      "community": 2,
+      "community": 19,
       "norm_label": "code:block28 (la mayoria de empresas se auto-evalua dos niveles mas arriba)",
       "id": "contenido_carruseles2_codeblock_28"
     },
@@ -2942,7 +3500,7 @@
       "file_type": "document",
       "source_file": "/root/3gi-web/docs/contenido/carruseles2.md",
       "source_location": "L1005",
-      "community": 2,
+      "community": 19,
       "norm_label": "descripcion youtube \u2014 short 11",
       "id": "contenido_carruseles2_descripci_n_youtube_short_11"
     },
@@ -2951,7 +3509,7 @@
       "file_type": "document",
       "source_file": "/root/3gi-web/docs/contenido/carruseles2.md",
       "source_location": "L1010",
-      "community": 2,
+      "community": 19,
       "norm_label": "code:block29 (la mayoria de empresas se auto-evalua dos niveles mas arriba)",
       "id": "contenido_carruseles2_codeblock_29"
     },
@@ -2960,7 +3518,7 @@
       "file_type": "document",
       "source_file": "/root/3gi-web/docs/contenido/carruseles2.md",
       "source_location": "L1028",
-      "community": 2,
+      "community": 19,
       "norm_label": "caption instagram reel \u2014 post 11",
       "id": "contenido_carruseles2_caption_instagram_reel_post_11"
     },
@@ -2969,7 +3527,7 @@
       "file_type": "document",
       "source_file": "/root/3gi-web/docs/contenido/carruseles2.md",
       "source_location": "L1030",
-      "community": 2,
+      "community": 19,
       "norm_label": "code:block30 (la mayoria de empresas se auto-evalua dos niveles mas arriba)",
       "id": "contenido_carruseles2_codeblock_30"
     },
@@ -2978,7 +3536,7 @@
       "file_type": "document",
       "source_file": "/root/3gi-web/docs/contenido/carruseles2.md",
       "source_location": "L1051",
-      "community": 8,
+      "community": 9,
       "norm_label": "post 12 \u2014 cta: el test era",
       "id": "contenido_carruseles2_post_12_cta_el_test_era"
     },
@@ -2987,7 +3545,7 @@
       "file_type": "document",
       "source_file": "/root/3gi-web/docs/contenido/carruseles2.md",
       "source_location": "L1055",
-      "community": 8,
+      "community": 9,
       "norm_label": "short 12",
       "id": "contenido_carruseles2_short_12"
     },
@@ -2996,7 +3554,7 @@
       "file_type": "document",
       "source_file": "/root/3gi-web/docs/contenido/carruseles2.md",
       "source_location": "L1075",
-      "community": 8,
+      "community": 9,
       "norm_label": "descripcion youtube \u2014 short 12",
       "id": "contenido_carruseles2_descripci_n_youtube_short_12"
     },
@@ -3005,7 +3563,7 @@
       "file_type": "document",
       "source_file": "/root/3gi-web/docs/contenido/carruseles2.md",
       "source_location": "L1080",
-      "community": 8,
+      "community": 9,
       "norm_label": "code:block31 (antes de hablar de ia con cualquier dueno de empresa, siempr)",
       "id": "contenido_carruseles2_codeblock_31"
     },
@@ -3014,7 +3572,7 @@
       "file_type": "document",
       "source_file": "/root/3gi-web/docs/contenido/carruseles2.md",
       "source_location": "L1099",
-      "community": 8,
+      "community": 9,
       "norm_label": "caption instagram reel \u2014 post 12",
       "id": "contenido_carruseles2_caption_instagram_reel_post_12"
     },
@@ -3023,7 +3581,7 @@
       "file_type": "document",
       "source_file": "/root/3gi-web/docs/contenido/carruseles2.md",
       "source_location": "L1101",
-      "community": 8,
+      "community": 9,
       "norm_label": "code:block32 (antes de hablar de ia con cualquier dueno de empresa, siempr)",
       "id": "contenido_carruseles2_codeblock_32"
     },
@@ -3032,7 +3590,7 @@
       "file_type": "document",
       "source_file": "/root/3gi-web/docs/contenido/carruseles2.md",
       "source_location": "L1120",
-      "community": 8,
+      "community": 9,
       "norm_label": "texto linkedin/facebook",
       "id": "contenido_carruseles2_texto_linkedin_facebook_1120"
     },
@@ -3041,7 +3599,7 @@
       "file_type": "document",
       "source_file": "/root/3gi-web/docs/contenido/carruseles2.md",
       "source_location": "L1122",
-      "community": 8,
+      "community": 9,
       "norm_label": "code:block33 (antes de hablar de ia con cualquier dueno de empresa, siempr)",
       "id": "contenido_carruseles2_codeblock_33"
     },
@@ -3050,7 +3608,7 @@
       "file_type": "document",
       "source_file": "/root/3gi-web/docs/contenido/guia-produccion-shorts.md",
       "source_location": "L1",
-      "community": 24,
+      "community": 29,
       "norm_label": "guia-produccion-shorts.md",
       "id": "root_3gi_web_docs_contenido_guia_produccion_shorts_md"
     },
@@ -3059,7 +3617,7 @@
       "file_type": "document",
       "source_file": "/root/3gi-web/docs/contenido/guia-produccion-shorts.md",
       "source_location": "L1",
-      "community": 24,
+      "community": 29,
       "norm_label": "guia de produccion \u2014 youtube shorts 3gi",
       "id": "contenido_guia_produccion_shorts_gu_a_de_producci_n_youtube_shorts_3gi"
     },
@@ -3068,7 +3626,7 @@
       "file_type": "document",
       "source_file": "/root/3gi-web/docs/contenido/guia-produccion-shorts.md",
       "source_location": "L3",
-      "community": 24,
+      "community": 29,
       "norm_label": "flujo completo para producir un short en heygen",
       "id": "contenido_guia_produccion_shorts_flujo_completo_para_producir_un_short_en_heygen"
     },
@@ -3077,7 +3635,7 @@
       "file_type": "document",
       "source_file": "/root/3gi-web/docs/contenido/guia-produccion-shorts.md",
       "source_location": "L18",
-      "community": 24,
+      "community": 29,
       "norm_label": "guiones",
       "id": "contenido_guia_produccion_shorts_guiones"
     },
@@ -3086,7 +3644,7 @@
       "file_type": "document",
       "source_file": "/root/3gi-web/docs/contenido/guia-produccion-shorts.md",
       "source_location": "L20",
-      "community": 24,
+      "community": 29,
       "norm_label": "short 1 \u2014 para post 03",
       "id": "contenido_guia_produccion_shorts_short_1_para_post_03"
     },
@@ -3095,7 +3653,7 @@
       "file_type": "document",
       "source_file": "/root/3gi-web/docs/contenido/guia-produccion-shorts.md",
       "source_location": "L42",
-      "community": 24,
+      "community": 29,
       "norm_label": "short 2 \u2014 para post 06",
       "id": "contenido_guia_produccion_shorts_short_2_para_post_06"
     },
@@ -3104,7 +3662,7 @@
       "file_type": "document",
       "source_file": "/root/3gi-web/docs/contenido/guia-produccion-shorts.md",
       "source_location": "L62",
-      "community": 24,
+      "community": 29,
       "norm_label": "short 3 \u2014 para post 11",
       "id": "contenido_guia_produccion_shorts_short_3_para_post_11"
     },
@@ -3113,7 +3671,7 @@
       "file_type": "document",
       "source_file": "/root/3gi-web/docs/prospectos/2026-05-08-m-eugenia-recurso-animal.md",
       "source_location": "L1",
-      "community": 34,
+      "community": 38,
       "norm_label": "2026-05-08-m-eugenia-recurso-animal.md",
       "id": "root_3gi_web_docs_prospectos_2026_05_08_m_eugenia_recurso_animal_md"
     },
@@ -3122,7 +3680,7 @@
       "file_type": "document",
       "source_file": "/root/3gi-web/docs/prospectos/2026-05-08-m-eugenia-recurso-animal.md",
       "source_location": "L1",
-      "community": 34,
+      "community": 38,
       "norm_label": "seguimiento \u2014 m. eugenia \u00b7 recursoanimalsrl@gmail.com",
       "id": "prospectos_2026_05_08_m_eugenia_recurso_animal_seguimiento_m_eugenia_recursoanimalsrl_gmail_com"
     },
@@ -3131,7 +3689,7 @@
       "file_type": "document",
       "source_file": "/root/3gi-web/docs/prospectos/2026-05-08-m-eugenia-recurso-animal.md",
       "source_location": "L35",
-      "community": 34,
+      "community": 38,
       "norm_label": "seguimiento",
       "id": "prospectos_2026_05_08_m_eugenia_recurso_animal_seguimiento"
     },
@@ -3140,7 +3698,7 @@
       "file_type": "document",
       "source_file": "CLAUDE-SECURITY-20260912-022246/CLAUDE-SECURITY-RESULTS.md",
       "source_location": "L1",
-      "community": 14,
+      "community": 17,
       "norm_label": "claude-security-results.md",
       "id": "claude_security_20260912_022246_claude_security_results_md"
     },
@@ -3149,7 +3707,7 @@
       "file_type": "document",
       "source_file": "CLAUDE-SECURITY-20260912-022246/CLAUDE-SECURITY-RESULTS.md",
       "source_location": "L1",
-      "community": 14,
+      "community": 17,
       "norm_label": "claude security results",
       "id": "claude_security_20260912_022246_claude_security_results_claude_security_results"
     },
@@ -3158,7 +3716,7 @@
       "file_type": "document",
       "source_file": "CLAUDE-SECURITY-20260912-022246/CLAUDE-SECURITY-RESULTS.md",
       "source_location": "L5",
-      "community": 14,
+      "community": 17,
       "norm_label": "coverage",
       "id": "claude_security_20260912_022246_claude_security_results_coverage"
     },
@@ -3167,7 +3725,7 @@
       "file_type": "document",
       "source_file": "CLAUDE-SECURITY-20260912-022246/CLAUDE-SECURITY-RESULTS.md",
       "source_location": "L13",
-      "community": 14,
+      "community": 17,
       "norm_label": "findings",
       "id": "claude_security_20260912_022246_claude_security_results_findings"
     },
@@ -3176,7 +3734,7 @@
       "file_type": "document",
       "source_file": "CLAUDE-SECURITY-20260912-022246/CLAUDE-SECURITY-RESULTS.md",
       "source_location": "L15",
-      "community": 14,
+      "community": 17,
       "norm_label": "f1 \u2014 reflected dom xss via era_op/era_com url parameters rendered unescaped into innerhtml (high, confidence high)",
       "id": "claude_security_20260912_022246_claude_security_results_f1_reflected_dom_xss_via_era_op_era_com_url_parameters_rendered_unescaped_into_innerhtml_high_confidence_high"
     },
@@ -3185,7 +3743,7 @@
       "file_type": "document",
       "source_file": "CLAUDE-SECURITY-20260912-022246/CLAUDE-SECURITY-RESULTS.md",
       "source_location": "L33",
-      "community": 14,
+      "community": 17,
       "norm_label": "f2 \u2014 reflected dom xss via era_op/era_com url parameters rendered unescaped into innerhtml, english variant (high, confidence high)",
       "id": "claude_security_20260912_022246_claude_security_results_f2_reflected_dom_xss_via_era_op_era_com_url_parameters_rendered_unescaped_into_innerhtml_english_variant_high_confidence_high"
     },
@@ -3194,7 +3752,7 @@
       "file_type": "document",
       "source_file": "CLAUDE-SECURITY-20260912-022246/CLAUDE-SECURITY-RESULTS.md",
       "source_location": "L51",
-      "community": 14,
+      "community": 17,
       "norm_label": "f3 \u2014 internal sales playbook page served publicly with no authorization check (medium, confidence high)",
       "id": "claude_security_20260912_022246_claude_security_results_f3_internal_sales_playbook_page_served_publicly_with_no_authorization_check_medium_confidence_high"
     },
@@ -3203,7 +3761,7 @@
       "file_type": "document",
       "source_file": "CLAUDE-SECURITY-20260912-022246/CLAUDE-SECURITY-RESULTS.md",
       "source_location": "L68",
-      "community": 14,
+      "community": 17,
       "norm_label": "f4 \u2014 bearer access_token for the personalized-report api is placed in a navigable url query string (medium, confidence medium)",
       "id": "claude_security_20260912_022246_claude_security_results_f4_bearer_access_token_for_the_personalized_report_api_is_placed_in_a_navigable_url_query_string_medium_confidence_medium"
     },
@@ -3212,7 +3770,7 @@
       "file_type": "document",
       "source_file": "CLAUDE-SECURITY-20260912-022246/CLAUDE-SECURITY-RESULTS.md",
       "source_location": "L86",
-      "community": 14,
+      "community": 17,
       "norm_label": "f5 \u2014 english-variant duplicate: otp access_token and pii placed in url query string before redirect (medium, confidence medium)",
       "id": "claude_security_20260912_022246_claude_security_results_f5_english_variant_duplicate_otp_access_token_and_pii_placed_in_url_query_string_before_redirect_medium_confidence_medium"
     },
@@ -3221,7 +3779,7 @@
       "file_type": "document",
       "source_file": "CLAUDE-SECURITY-20260912-022246/CLAUDE-SECURITY-RESULTS.md",
       "source_location": "L103",
-      "community": 14,
+      "community": 17,
       "norm_label": "f6 \u2014 unauthenticated write to supabase funnel_events table via public, static anon key (medium, confidence medium)",
       "id": "claude_security_20260912_022246_claude_security_results_f6_unauthenticated_write_to_supabase_funnel_events_table_via_public_static_anon_key_medium_confidence_medium"
     },
@@ -3230,7 +3788,7 @@
       "file_type": "document",
       "source_file": "CLAUDE-SECURITY-20260912-022246/CLAUDE-SECURITY-RESULTS.md",
       "source_location": "L121",
-      "community": 14,
+      "community": 17,
       "norm_label": "f7 \u2014 unsanitized ?pdf= query parameter concatenated into a css attribute selector, english page (low, confidence medium)",
       "id": "claude_security_20260912_022246_claude_security_results_f7_unsanitized_pdf_query_parameter_concatenated_into_a_css_attribute_selector_english_page_low_confidence_medium"
     },
@@ -3239,7 +3797,7 @@
       "file_type": "document",
       "source_file": "CLAUDE-SECURITY-20260912-022246/CLAUDE-SECURITY-RESULTS.md",
       "source_location": "L138",
-      "community": 14,
+      "community": 17,
       "norm_label": "f8 \u2014 no clickjacking protection (missing x-frame-options / csp frame-ancestors) on any route (low, confidence medium)",
       "id": "claude_security_20260912_022246_claude_security_results_f8_no_clickjacking_protection_missing_x_frame_options_csp_frame_ancestors_on_any_route_low_confidence_medium"
     },
@@ -3248,16 +3806,52 @@
       "file_type": "document",
       "source_file": "CLAUDE-SECURITY-20260912-022246/CLAUDE-SECURITY-RESULTS.md",
       "source_location": "L156",
-      "community": 14,
+      "community": 17,
       "norm_label": "what was verified",
       "id": "claude_security_20260912_022246_claude_security_results_what_was_verified"
+    },
+    {
+      "label": "banner-movil.mjs",
+      "file_type": "code",
+      "source_file": "banner-movil.mjs",
+      "source_location": "L1",
+      "community": 15,
+      "norm_label": "banner-movil.mjs",
+      "id": "banner_movil_mjs"
+    },
+    {
+      "label": "homepage-sections.md",
+      "file_type": "document",
+      "source_file": "/root/3gi-web/docs/homepage-sections.md",
+      "source_location": "L1",
+      "community": 25,
+      "norm_label": "homepage-sections.md",
+      "id": "root_3gi_web_docs_homepage_sections_md"
+    },
+    {
+      "label": "funnel-track.js",
+      "file_type": "code",
+      "source_file": "funnel-track.js",
+      "source_location": "L1",
+      "community": 27,
+      "norm_label": "funnel-track.js",
+      "id": "funnel_track_js"
+    },
+    {
+      "label": "CLAUDE.md",
+      "file_type": "document",
+      "source_file": "/root/3gi-web/CLAUDE.md",
+      "source_location": "L1",
+      "community": 13,
+      "norm_label": "claude.md",
+      "id": "root_3gi_web_claude_md"
     },
     {
       "label": "astro.config.mjs",
       "file_type": "code",
       "source_file": "astro.config.mjs",
       "source_location": "L1",
-      "community": 40,
+      "community": 48,
       "norm_label": "astro.config.mjs",
       "id": "home_ggomp_3gi_web_astro_config_mjs"
     },
@@ -3266,7 +3860,7 @@
       "file_type": "code",
       "source_file": "sentry.client.config.ts",
       "source_location": "L1",
-      "community": 41,
+      "community": 49,
       "norm_label": "sentry.client.config.ts",
       "id": "home_ggomp_3gi_web_sentry_client_config_ts"
     },
@@ -3284,7 +3878,7 @@
       "file_type": "code",
       "source_file": "scripts/test-diagnostico-flow.mjs",
       "source_location": "L1",
-      "community": 17,
+      "community": 22,
       "norm_label": "test-diagnostico-flow.mjs",
       "id": "home_ggomp_3gi_web_scripts_test_diagnostico_flow_mjs"
     },
@@ -3293,7 +3887,7 @@
       "file_type": "code",
       "source_file": "scripts/manual-tests/test-e2e-full.mjs",
       "source_location": "L1",
-      "community": 13,
+      "community": 16,
       "norm_label": "test-e2e-full.mjs",
       "id": "home_ggomp_3gi_web_scripts_manual_tests_test_e2e_full_mjs"
     },
@@ -3302,7 +3896,7 @@
       "file_type": "code",
       "source_file": "scripts/lead-magnets/build.py",
       "source_location": "L1",
-      "community": 28,
+      "community": 33,
       "norm_label": "build.py",
       "id": "home_ggomp_3gi_web_scripts_lead_magnets_build_py"
     },
@@ -3311,25 +3905,16 @@
       "file_type": "code",
       "source_file": "docs/pre-upload.py",
       "source_location": "L1",
-      "community": 42,
+      "community": 50,
       "norm_label": "pre-upload.py",
       "id": "docs_pre_upload_py"
-    },
-    {
-      "label": "funnel-track.js",
-      "file_type": "code",
-      "source_file": "public/funnel-track.js",
-      "source_location": "L1",
-      "community": 33,
-      "norm_label": "funnel-track.js",
-      "id": "home_ggomp_3gi_web_public_funnel_track_js"
     },
     {
       "label": "PLAN_AVANCE.md",
       "file_type": "document",
       "source_file": "PLAN_AVANCE.md",
       "source_location": "L1",
-      "community": 12,
+      "community": 14,
       "norm_label": "plan_avance.md",
       "id": "home_ggomp_3gi_web_plan_avance_md"
     },
@@ -3338,25 +3923,16 @@
       "file_type": "document",
       "source_file": "README.md",
       "source_location": "L1",
-      "community": 9,
+      "community": 10,
       "norm_label": "readme.md",
       "id": "home_ggomp_3gi_web_readme_md"
-    },
-    {
-      "label": "CLAUDE.md",
-      "file_type": "document",
-      "source_file": "CLAUDE.md",
-      "source_location": "L1",
-      "community": 18,
-      "norm_label": "claude.md",
-      "id": "claude_md"
     },
     {
       "label": "AGENTS.md",
       "file_type": "document",
       "source_file": "AGENTS.md",
       "source_location": "L1",
-      "community": 36,
+      "community": 39,
       "norm_label": "agents.md",
       "id": "agents_md"
     },
@@ -3365,7 +3941,7 @@
       "file_type": "document",
       "source_file": "ONBOARDING.md",
       "source_location": "L1",
-      "community": 19,
+      "community": 23,
       "norm_label": "onboarding.md",
       "id": "home_ggomp_3gi_web_onboarding_md"
     },
@@ -3374,25 +3950,16 @@
       "file_type": "document",
       "source_file": "docs/sql-assistant-tablas.md",
       "source_location": "L1",
-      "community": 30,
+      "community": 35,
       "norm_label": "sql-assistant-tablas.md",
       "id": "docs_sql_assistant_tablas_md"
-    },
-    {
-      "label": "homepage-sections.md",
-      "file_type": "document",
-      "source_file": "docs/homepage-sections.md",
-      "source_location": "L1",
-      "community": 21,
-      "norm_label": "homepage-sections.md",
-      "id": "docs_homepage_sections_md"
     },
     {
       "label": "openclaw.md",
       "file_type": "document",
       "source_file": "docs/openclaw.md",
       "source_location": "L1",
-      "community": 10,
+      "community": 11,
       "norm_label": "openclaw.md",
       "id": "docs_openclaw_md"
     },
@@ -3401,7 +3968,7 @@
       "file_type": "document",
       "source_file": "docs/agente-personal-3gi.md",
       "source_location": "L1",
-      "community": 6,
+      "community": 7,
       "norm_label": "agente-personal-3gi.md",
       "id": "docs_agente_personal_3gi_md"
     },
@@ -3410,7 +3977,7 @@
       "file_type": "document",
       "source_file": "docs/faq-page.md",
       "source_location": "L1",
-      "community": 15,
+      "community": 20,
       "norm_label": "faq-page.md",
       "id": "docs_faq_page_md"
     },
@@ -3419,7 +3986,7 @@
       "file_type": "document",
       "source_file": "docs/superpowers/plans/2026-06-07-web-alineacion-libro.md",
       "source_location": "L1",
-      "community": 23,
+      "community": 18,
       "norm_label": "2026-06-07-web-alineacion-libro.md",
       "id": "docs_superpowers_plans_2026_06_07_web_alineacion_libro_md"
     },
@@ -3428,7 +3995,7 @@
       "file_type": "document",
       "source_file": "docs/superpowers/plans/2026-06-07-web-alineacion-libro.md",
       "source_location": "L1",
-      "community": 23,
+      "community": 18,
       "norm_label": "alineacion web 3gi con el libro implementation plan",
       "id": "plans_2026_06_07_web_alineacion_libro_alineaci_n_web_3gi_con_el_libro_implementation_plan"
     },
@@ -3437,7 +4004,7 @@
       "file_type": "document",
       "source_file": "docs/superpowers/plans/2026-06-07-web-alineacion-libro.md",
       "source_location": "L13",
-      "community": 23,
+      "community": 18,
       "norm_label": "estructura de archivos",
       "id": "plans_2026_06_07_web_alineacion_libro_estructura_de_archivos"
     },
@@ -3446,7 +4013,7 @@
       "file_type": "document",
       "source_file": "docs/superpowers/plans/2026-06-07-web-alineacion-libro.md",
       "source_location": "L30",
-      "community": 23,
+      "community": 18,
       "norm_label": "task 1: backup de los 3 archivos",
       "id": "plans_2026_06_07_web_alineacion_libro_task_1_backup_de_los_3_archivos"
     },
@@ -3455,7 +4022,7 @@
       "file_type": "document",
       "source_file": "docs/superpowers/plans/2026-06-07-web-alineacion-libro.md",
       "source_location": "L39",
-      "community": 23,
+      "community": 18,
       "norm_label": "code:bash (cd /root/3gi-web)",
       "id": "plans_2026_06_07_web_alineacion_libro_codeblock_1"
     },
@@ -3464,7 +4031,7 @@
       "file_type": "document",
       "source_file": "docs/superpowers/plans/2026-06-07-web-alineacion-libro.md",
       "source_location": "L50",
-      "community": 23,
+      "community": 18,
       "norm_label": "code:bash (cd /root/3gi-web)",
       "id": "plans_2026_06_07_web_alineacion_libro_codeblock_2"
     },
@@ -3473,7 +4040,7 @@
       "file_type": "document",
       "source_file": "docs/superpowers/plans/2026-06-07-web-alineacion-libro.md",
       "source_location": "L58",
-      "community": 20,
+      "community": 24,
       "norm_label": "task 2: nosotros.astro \u2014 agregar parrafo origen del framework",
       "id": "plans_2026_06_07_web_alineacion_libro_task_2_nosotros_astro_agregar_p_rrafo_origen_del_framework"
     },
@@ -3482,7 +4049,7 @@
       "file_type": "document",
       "source_file": "docs/superpowers/plans/2026-06-07-web-alineacion-libro.md",
       "source_location": "L70",
-      "community": 20,
+      "community": 24,
       "norm_label": "code:block3 (<p data-i18n=\"nos-origin-p3\">)",
       "id": "plans_2026_06_07_web_alineacion_libro_codeblock_3"
     },
@@ -3491,7 +4058,7 @@
       "file_type": "document",
       "source_file": "docs/superpowers/plans/2026-06-07-web-alineacion-libro.md",
       "source_location": "L77",
-      "community": 20,
+      "community": 24,
       "norm_label": "code:block4 (y sin promesas de transformacion digital que no se materiali)",
       "id": "plans_2026_06_07_web_alineacion_libro_codeblock_4"
     },
@@ -3500,7 +4067,7 @@
       "file_type": "document",
       "source_file": "docs/superpowers/plans/2026-06-07-web-alineacion-libro.md",
       "source_location": "L82",
-      "community": 20,
+      "community": 24,
       "norm_label": "code:block5 (y sin promesas de transformacion digital que no se materiali)",
       "id": "plans_2026_06_07_web_alineacion_libro_codeblock_5"
     },
@@ -3509,7 +4076,7 @@
       "file_type": "document",
       "source_file": "docs/superpowers/plans/2026-06-07-web-alineacion-libro.md",
       "source_location": "L89",
-      "community": 20,
+      "community": 24,
       "norm_label": "code:block6 ('nos-origin-p3': '3g intelligence nacio para ser la consulto)",
       "id": "plans_2026_06_07_web_alineacion_libro_codeblock_6"
     },
@@ -3518,7 +4085,7 @@
       "file_type": "document",
       "source_file": "docs/superpowers/plans/2026-06-07-web-alineacion-libro.md",
       "source_location": "L95",
-      "community": 20,
+      "community": 24,
       "norm_label": "code:block7 ('nos-origin-p3': '3g intelligence nacio para ser la consulto)",
       "id": "plans_2026_06_07_web_alineacion_libro_codeblock_7"
     },
@@ -3527,7 +4094,7 @@
       "file_type": "document",
       "source_file": "docs/superpowers/plans/2026-06-07-web-alineacion-libro.md",
       "source_location": "L104",
-      "community": 20,
+      "community": 24,
       "norm_label": "code:block8 ('nos-origin-p3': '3g intelligence was born to be the consult)",
       "id": "plans_2026_06_07_web_alineacion_libro_codeblock_8"
     },
@@ -3536,7 +4103,7 @@
       "file_type": "document",
       "source_file": "docs/superpowers/plans/2026-06-07-web-alineacion-libro.md",
       "source_location": "L110",
-      "community": 20,
+      "community": 24,
       "norm_label": "code:block9 ('nos-origin-p3': '3g intelligence was born to be the consult)",
       "id": "plans_2026_06_07_web_alineacion_libro_codeblock_9"
     },
@@ -3545,7 +4112,7 @@
       "file_type": "document",
       "source_file": "docs/superpowers/plans/2026-06-07-web-alineacion-libro.md",
       "source_location": "L126",
-      "community": 20,
+      "community": 24,
       "norm_label": "code:bash (node --check /root/3gi-web/src/pages/nosotros.astro 2>&1)",
       "id": "plans_2026_06_07_web_alineacion_libro_codeblock_10"
     },
@@ -3554,7 +4121,7 @@
       "file_type": "document",
       "source_file": "docs/superpowers/plans/2026-06-07-web-alineacion-libro.md",
       "source_location": "L136",
-      "community": 20,
+      "community": 24,
       "norm_label": "code:bash (cd /root/3gi-web)",
       "id": "plans_2026_06_07_web_alineacion_libro_codeblock_11"
     },
@@ -3563,7 +4130,7 @@
       "file_type": "document",
       "source_file": "docs/superpowers/plans/2026-06-07-web-alineacion-libro.md",
       "source_location": "L144",
-      "community": 32,
+      "community": 37,
       "norm_label": "task 3: index.astro \u2014 actualizar diferenciador \"obra intelectual\"",
       "id": "plans_2026_06_07_web_alineacion_libro_task_3_index_astro_actualizar_diferenciador_obra_intelectual"
     },
@@ -3572,7 +4139,7 @@
       "file_type": "document",
       "source_file": "docs/superpowers/plans/2026-06-07-web-alineacion-libro.md",
       "source_location": "L154",
-      "community": 32,
+      "community": 37,
       "norm_label": "code:block12 (el framework 3 eras esta registrado como obra intelectual. n)",
       "id": "plans_2026_06_07_web_alineacion_libro_codeblock_12"
     },
@@ -3581,7 +4148,7 @@
       "file_type": "document",
       "source_file": "docs/superpowers/plans/2026-06-07-web-alineacion-libro.md",
       "source_location": "L159",
-      "community": 32,
+      "community": 37,
       "norm_label": "code:block13 (el framework 3 eras es una metodologia con fundamento academ)",
       "id": "plans_2026_06_07_web_alineacion_libro_codeblock_13"
     },
@@ -3590,7 +4157,7 @@
       "file_type": "document",
       "source_file": "docs/superpowers/plans/2026-06-07-web-alineacion-libro.md",
       "source_location": "L165",
-      "community": 32,
+      "community": 37,
       "norm_label": "code:bash (node --check /root/3gi-web/src/pages/index.astro 2>&1)",
       "id": "plans_2026_06_07_web_alineacion_libro_codeblock_14"
     },
@@ -3599,7 +4166,7 @@
       "file_type": "document",
       "source_file": "docs/superpowers/plans/2026-06-07-web-alineacion-libro.md",
       "source_location": "L173",
-      "community": 32,
+      "community": 37,
       "norm_label": "code:bash (cd /root/3gi-web)",
       "id": "plans_2026_06_07_web_alineacion_libro_codeblock_15"
     },
@@ -3608,7 +4175,7 @@
       "file_type": "document",
       "source_file": "docs/superpowers/plans/2026-06-07-web-alineacion-libro.md",
       "source_location": "L181",
-      "community": 22,
+      "community": 26,
       "norm_label": "task 4: metodologia.astro \u2014 seccion \"por que el diagnostico primero\"",
       "id": "plans_2026_06_07_web_alineacion_libro_task_4_metodologia_astro_secci_n_por_qu_el_diagn_stico_primero"
     },
@@ -3617,7 +4184,7 @@
       "file_type": "document",
       "source_file": "docs/superpowers/plans/2026-06-07-web-alineacion-libro.md",
       "source_location": "L193",
-      "community": 22,
+      "community": 26,
       "norm_label": "code:block16 (<div class=\"spectrum-header\"><div class=\"page-tag\" data-i18n)",
       "id": "plans_2026_06_07_web_alineacion_libro_codeblock_16"
     },
@@ -3626,7 +4193,7 @@
       "file_type": "document",
       "source_file": "docs/superpowers/plans/2026-06-07-web-alineacion-libro.md",
       "source_location": "L198",
-      "community": 22,
+      "community": 26,
       "norm_label": "code:block17 (<div class=\"diag-first-section\" style=\"padding:64px 0 56px; )",
       "id": "plans_2026_06_07_web_alineacion_libro_codeblock_17"
     },
@@ -3635,7 +4202,7 @@
       "file_type": "document",
       "source_file": "docs/superpowers/plans/2026-06-07-web-alineacion-libro.md",
       "source_location": "L205",
-      "community": 22,
+      "community": 26,
       "norm_label": "code:block18 ('met-sub': 'metodologia estructurada, entregables concretos,)",
       "id": "plans_2026_06_07_web_alineacion_libro_codeblock_18"
     },
@@ -3644,7 +4211,7 @@
       "file_type": "document",
       "source_file": "docs/superpowers/plans/2026-06-07-web-alineacion-libro.md",
       "source_location": "L211",
-      "community": 22,
+      "community": 26,
       "norm_label": "code:block19 ('met-sub': 'metodologia estructurada, entregables concretos,)",
       "id": "plans_2026_06_07_web_alineacion_libro_codeblock_19"
     },
@@ -3653,7 +4220,7 @@
       "file_type": "document",
       "source_file": "docs/superpowers/plans/2026-06-07-web-alineacion-libro.md",
       "source_location": "L225",
-      "community": 22,
+      "community": 26,
       "norm_label": "code:block20 ('met-sub': 'structured methodology, concrete deliverables, d)",
       "id": "plans_2026_06_07_web_alineacion_libro_codeblock_20"
     },
@@ -3662,7 +4229,7 @@
       "file_type": "document",
       "source_file": "docs/superpowers/plans/2026-06-07-web-alineacion-libro.md",
       "source_location": "L231",
-      "community": 22,
+      "community": 26,
       "norm_label": "code:block21 ('met-sub': 'structured methodology, concrete deliverables, d)",
       "id": "plans_2026_06_07_web_alineacion_libro_codeblock_21"
     },
@@ -3671,7 +4238,7 @@
       "file_type": "document",
       "source_file": "docs/superpowers/plans/2026-06-07-web-alineacion-libro.md",
       "source_location": "L244",
-      "community": 22,
+      "community": 26,
       "norm_label": "code:bash (node --check /root/3gi-web/src/pages/metodologia.astro 2>&1)",
       "id": "plans_2026_06_07_web_alineacion_libro_codeblock_22"
     },
@@ -3680,7 +4247,7 @@
       "file_type": "document",
       "source_file": "docs/superpowers/plans/2026-06-07-web-alineacion-libro.md",
       "source_location": "L252",
-      "community": 22,
+      "community": 26,
       "norm_label": "code:bash (cd /root/3gi-web)",
       "id": "plans_2026_06_07_web_alineacion_libro_codeblock_23"
     },
@@ -3689,7 +4256,7 @@
       "file_type": "document",
       "source_file": "docs/superpowers/plans/2026-06-07-web-alineacion-libro.md",
       "source_location": "L260",
-      "community": 16,
+      "community": 21,
       "norm_label": "task 5: metodologia.astro \u2014 senales diagnosticas rapidas",
       "id": "plans_2026_06_07_web_alineacion_libro_task_5_metodologia_astro_se_ales_diagn_sticas_r_pidas"
     },
@@ -3698,7 +4265,7 @@
       "file_type": "document",
       "source_file": "docs/superpowers/plans/2026-06-07-web-alineacion-libro.md",
       "source_location": "L272",
-      "community": 16,
+      "community": 21,
       "norm_label": "code:block24 (data-i18n=\"met-spec-title\">tu posicion exacta en el espectro)",
       "id": "plans_2026_06_07_web_alineacion_libro_codeblock_24"
     },
@@ -3707,7 +4274,7 @@
       "file_type": "document",
       "source_file": "docs/superpowers/plans/2026-06-07-web-alineacion-libro.md",
       "source_location": "L277",
-      "community": 16,
+      "community": 21,
       "norm_label": "code:block25 (data-i18n=\"met-signals-title\">senales diagnosticas rapidas</)",
       "id": "plans_2026_06_07_web_alineacion_libro_codeblock_25"
     },
@@ -3716,7 +4283,7 @@
       "file_type": "document",
       "source_file": "docs/superpowers/plans/2026-06-07-web-alineacion-libro.md",
       "source_location": "L286",
-      "community": 16,
+      "community": 21,
       "norm_label": "code:block26 (<div class=\"page-tag\" data-i18n=\"met-spec-tag\">framework 3gi)",
       "id": "plans_2026_06_07_web_alineacion_libro_codeblock_26"
     },
@@ -3725,7 +4292,7 @@
       "file_type": "document",
       "source_file": "docs/superpowers/plans/2026-06-07-web-alineacion-libro.md",
       "source_location": "L291",
-      "community": 16,
+      "community": 21,
       "norm_label": "code:block27 (<div class=\"page-tag\" data-i18n=\"met-spec-tag\">framework 3gi)",
       "id": "plans_2026_06_07_web_alineacion_libro_codeblock_27"
     },
@@ -3734,7 +4301,7 @@
       "file_type": "document",
       "source_file": "docs/superpowers/plans/2026-06-07-web-alineacion-libro.md",
       "source_location": "L300",
-      "community": 16,
+      "community": 21,
       "norm_label": "code:block28 ('met-diag-body': 'el problema no es la tecnologia. es el ord)",
       "id": "plans_2026_06_07_web_alineacion_libro_codeblock_28"
     },
@@ -3743,7 +4310,7 @@
       "file_type": "document",
       "source_file": "docs/superpowers/plans/2026-06-07-web-alineacion-libro.md",
       "source_location": "L306",
-      "community": 16,
+      "community": 21,
       "norm_label": "code:block29 ('met-diag-body': 'el problema no es la tecnologia. es el ord)",
       "id": "plans_2026_06_07_web_alineacion_libro_codeblock_29"
     },
@@ -3752,7 +4319,7 @@
       "file_type": "document",
       "source_file": "docs/superpowers/plans/2026-06-07-web-alineacion-libro.md",
       "source_location": "L318",
-      "community": 16,
+      "community": 21,
       "norm_label": "code:block30 ('met-diag-body': 'the problem isn\\'t the technology. it\\'s t)",
       "id": "plans_2026_06_07_web_alineacion_libro_codeblock_30"
     },
@@ -3761,7 +4328,7 @@
       "file_type": "document",
       "source_file": "docs/superpowers/plans/2026-06-07-web-alineacion-libro.md",
       "source_location": "L324",
-      "community": 16,
+      "community": 21,
       "norm_label": "code:block31 ('met-diag-body': 'the problem isn\\'t the technology. it\\'s t)",
       "id": "plans_2026_06_07_web_alineacion_libro_codeblock_31"
     },
@@ -3770,7 +4337,7 @@
       "file_type": "document",
       "source_file": "docs/superpowers/plans/2026-06-07-web-alineacion-libro.md",
       "source_location": "L335",
-      "community": 16,
+      "community": 21,
       "norm_label": "code:bash (node --check /root/3gi-web/src/pages/metodologia.astro 2>&1)",
       "id": "plans_2026_06_07_web_alineacion_libro_codeblock_32"
     },
@@ -3779,7 +4346,7 @@
       "file_type": "document",
       "source_file": "docs/superpowers/plans/2026-06-07-web-alineacion-libro.md",
       "source_location": "L343",
-      "community": 16,
+      "community": 21,
       "norm_label": "code:bash (cd /root/3gi-web)",
       "id": "plans_2026_06_07_web_alineacion_libro_codeblock_33"
     },
@@ -3788,7 +4355,7 @@
       "file_type": "document",
       "source_file": "docs/superpowers/plans/2026-06-07-web-alineacion-libro.md",
       "source_location": "L351",
-      "community": 27,
+      "community": 32,
       "norm_label": "task 6: metodologia.astro \u2014 callout \"la meseta era 2\"",
       "id": "plans_2026_06_07_web_alineacion_libro_task_6_metodologia_astro_callout_la_meseta_era_2"
     },
@@ -3797,7 +4364,7 @@
       "file_type": "document",
       "source_file": "docs/superpowers/plans/2026-06-07-web-alineacion-libro.md",
       "source_location": "L362",
-      "community": 27,
+      "community": 32,
       "norm_label": "code:bash (python3 -c \")",
       "id": "plans_2026_06_07_web_alineacion_libro_codeblock_34"
     },
@@ -3806,7 +4373,7 @@
       "file_type": "document",
       "source_file": "docs/superpowers/plans/2026-06-07-web-alineacion-libro.md",
       "source_location": "L378",
-      "community": 27,
+      "community": 32,
       "norm_label": "code:html (<div style=\"background:rgba(234,179,8,0.06); border:1px soli)",
       "id": "plans_2026_06_07_web_alineacion_libro_codeblock_35"
     },
@@ -3815,7 +4382,7 @@
       "file_type": "document",
       "source_file": "docs/superpowers/plans/2026-06-07-web-alineacion-libro.md",
       "source_location": "L388",
-      "community": 27,
+      "community": 32,
       "norm_label": "code:js ('met-meseta-label': 'la meseta era 2',)",
       "id": "plans_2026_06_07_web_alineacion_libro_codeblock_36"
     },
@@ -3824,7 +4391,7 @@
       "file_type": "document",
       "source_file": "docs/superpowers/plans/2026-06-07-web-alineacion-libro.md",
       "source_location": "L395",
-      "community": 27,
+      "community": 32,
       "norm_label": "code:js ('met-meseta-label': 'the era 2 plateau',)",
       "id": "plans_2026_06_07_web_alineacion_libro_codeblock_37"
     },
@@ -3833,7 +4400,7 @@
       "file_type": "document",
       "source_file": "docs/superpowers/plans/2026-06-07-web-alineacion-libro.md",
       "source_location": "L402",
-      "community": 27,
+      "community": 32,
       "norm_label": "code:bash (node --check /root/3gi-web/src/pages/metodologia.astro 2>&1)",
       "id": "plans_2026_06_07_web_alineacion_libro_codeblock_38"
     },
@@ -3842,7 +4409,7 @@
       "file_type": "document",
       "source_file": "docs/superpowers/plans/2026-06-07-web-alineacion-libro.md",
       "source_location": "L408",
-      "community": 27,
+      "community": 32,
       "norm_label": "code:bash (cd /root/3gi-web)",
       "id": "plans_2026_06_07_web_alineacion_libro_codeblock_39"
     },
@@ -3851,7 +4418,7 @@
       "file_type": "document",
       "source_file": "docs/superpowers/plans/2026-06-07-web-alineacion-libro.md",
       "source_location": "L416",
-      "community": 26,
+      "community": 31,
       "norm_label": "task 7: metodologia.astro \u2014 seccion \"la dimension humana\"",
       "id": "plans_2026_06_07_web_alineacion_libro_task_7_metodologia_astro_secci_n_la_dimensi_n_humana"
     },
@@ -3860,7 +4427,7 @@
       "file_type": "document",
       "source_file": "docs/superpowers/plans/2026-06-07-web-alineacion-libro.md",
       "source_location": "L427",
-      "community": 26,
+      "community": 31,
       "norm_label": "code:bash (python3 -c \")",
       "id": "plans_2026_06_07_web_alineacion_libro_codeblock_40"
     },
@@ -3869,7 +4436,7 @@
       "file_type": "document",
       "source_file": "docs/superpowers/plans/2026-06-07-web-alineacion-libro.md",
       "source_location": "L442",
-      "community": 26,
+      "community": 31,
       "norm_label": "code:html (<section style=\"padding:72px 0; border-top:1px solid rgba(25)",
       "id": "plans_2026_06_07_web_alineacion_libro_codeblock_41"
     },
@@ -3878,7 +4445,7 @@
       "file_type": "document",
       "source_file": "docs/superpowers/plans/2026-06-07-web-alineacion-libro.md",
       "source_location": "L448",
-      "community": 26,
+      "community": 31,
       "norm_label": "code:js ('met-human-tag': 'la variable que nadie mide',)",
       "id": "plans_2026_06_07_web_alineacion_libro_codeblock_42"
     },
@@ -3887,7 +4454,7 @@
       "file_type": "document",
       "source_file": "docs/superpowers/plans/2026-06-07-web-alineacion-libro.md",
       "source_location": "L461",
-      "community": 26,
+      "community": 31,
       "norm_label": "code:js ('met-human-tag': 'the variable no one measures',)",
       "id": "plans_2026_06_07_web_alineacion_libro_codeblock_43"
     },
@@ -3896,7 +4463,7 @@
       "file_type": "document",
       "source_file": "docs/superpowers/plans/2026-06-07-web-alineacion-libro.md",
       "source_location": "L474",
-      "community": 26,
+      "community": 31,
       "norm_label": "code:bash (node --check /root/3gi-web/src/pages/metodologia.astro 2>&1)",
       "id": "plans_2026_06_07_web_alineacion_libro_codeblock_44"
     },
@@ -3905,7 +4472,7 @@
       "file_type": "document",
       "source_file": "docs/superpowers/plans/2026-06-07-web-alineacion-libro.md",
       "source_location": "L480",
-      "community": 26,
+      "community": 31,
       "norm_label": "code:bash (cd /root/3gi-web)",
       "id": "plans_2026_06_07_web_alineacion_libro_codeblock_45"
     },
@@ -3914,7 +4481,7 @@
       "file_type": "document",
       "source_file": "docs/superpowers/plans/2026-06-07-web-alineacion-libro.md",
       "source_location": "L488",
-      "community": 29,
+      "community": 34,
       "norm_label": "task 8: build local + verificacion visual",
       "id": "plans_2026_06_07_web_alineacion_libro_task_8_build_local_verificaci_n_visual"
     },
@@ -3923,7 +4490,7 @@
       "file_type": "document",
       "source_file": "docs/superpowers/plans/2026-06-07-web-alineacion-libro.md",
       "source_location": "L494",
-      "community": 29,
+      "community": 34,
       "norm_label": "code:bash (cd /root/3gi-web)",
       "id": "plans_2026_06_07_web_alineacion_libro_codeblock_46"
     },
@@ -3932,7 +4499,7 @@
       "file_type": "document",
       "source_file": "docs/superpowers/plans/2026-06-07-web-alineacion-libro.md",
       "source_location": "L503",
-      "community": 29,
+      "community": 34,
       "norm_label": "code:bash (cd /root/3gi-web)",
       "id": "plans_2026_06_07_web_alineacion_libro_codeblock_47"
     },
@@ -3941,7 +4508,7 @@
       "file_type": "document",
       "source_file": "docs/superpowers/plans/2026-06-07-web-alineacion-libro.md",
       "source_location": "L512",
-      "community": 29,
+      "community": 34,
       "norm_label": "code:bash (curl -s http://localhost:4321/ | grep -c \"fundamento academi)",
       "id": "plans_2026_06_07_web_alineacion_libro_codeblock_48"
     },
@@ -3950,7 +4517,7 @@
       "file_type": "document",
       "source_file": "docs/superpowers/plans/2026-06-07-web-alineacion-libro.md",
       "source_location": "L518",
-      "community": 29,
+      "community": 34,
       "norm_label": "code:bash (curl -s http://localhost:4321/nosotros | grep -c \"nos-origin)",
       "id": "plans_2026_06_07_web_alineacion_libro_codeblock_49"
     },
@@ -3959,7 +4526,7 @@
       "file_type": "document",
       "source_file": "docs/superpowers/plans/2026-06-07-web-alineacion-libro.md",
       "source_location": "L526",
-      "community": 29,
+      "community": 34,
       "norm_label": "code:bash (kill %1 2>/dev/null || pkill -f \"astro preview\")",
       "id": "plans_2026_06_07_web_alineacion_libro_codeblock_50"
     },
@@ -3968,7 +4535,7 @@
       "file_type": "document",
       "source_file": "docs/superpowers/plans/2026-06-07-web-alineacion-libro.md",
       "source_location": "L532",
-      "community": 35,
+      "community": 18,
       "norm_label": "task 9: deploy a cloudflare pages",
       "id": "plans_2026_06_07_web_alineacion_libro_task_9_deploy_a_cloudflare_pages"
     },
@@ -3977,7 +4544,7 @@
       "file_type": "document",
       "source_file": "docs/superpowers/plans/2026-06-07-web-alineacion-libro.md",
       "source_location": "L538",
-      "community": 35,
+      "community": 18,
       "norm_label": "code:bash (cd /root/3gi-web)",
       "id": "plans_2026_06_07_web_alineacion_libro_codeblock_51"
     },
@@ -3986,7 +4553,7 @@
       "file_type": "document",
       "source_file": "docs/superpowers/plans/2026-06-07-web-alineacion-libro.md",
       "source_location": "L545",
-      "community": 35,
+      "community": 18,
       "norm_label": "code:bash (ssh -i ~/.ssh/hetzner_n8n root@178.156.157.141 \"cd /root/3gi)",
       "id": "plans_2026_06_07_web_alineacion_libro_codeblock_52"
     },
@@ -3995,7 +4562,7 @@
       "file_type": "document",
       "source_file": "docs/superpowers/plans/2026-06-07-web-alineacion-libro.md",
       "source_location": "L560",
-      "community": 35,
+      "community": 18,
       "norm_label": "code:bash (cd /root/3gi-web)",
       "id": "plans_2026_06_07_web_alineacion_libro_codeblock_53"
     },
@@ -4004,7 +4571,7 @@
       "file_type": "document",
       "source_file": "docs/superpowers/plans/2026-06-07-web-alineacion-libro.md",
       "source_location": "L569",
-      "community": 23,
+      "community": 18,
       "norm_label": "self-review",
       "id": "plans_2026_06_07_web_alineacion_libro_self_review"
     },
@@ -4013,7 +4580,7 @@
       "file_type": "document",
       "source_file": "docs/superpowers/plans/2026-06-07-web-alineacion-libro.md",
       "source_location": "L571",
-      "community": 23,
+      "community": 18,
       "norm_label": "spec coverage",
       "id": "plans_2026_06_07_web_alineacion_libro_spec_coverage"
     },
@@ -4022,7 +4589,7 @@
       "file_type": "document",
       "source_file": "docs/superpowers/plans/2026-06-07-web-alineacion-libro.md",
       "source_location": "L583",
-      "community": 23,
+      "community": 18,
       "norm_label": "riesgos conocidos",
       "id": "plans_2026_06_07_web_alineacion_libro_riesgos_conocidos"
     },
@@ -4031,7 +4598,7 @@
       "file_type": "document",
       "source_file": "docs/contenido/temp-post-03-imagen.md",
       "source_location": "L1",
-      "community": 31,
+      "community": 36,
       "norm_label": "temp-post-03-imagen.md",
       "id": "docs_contenido_temp_post_03_imagen_md"
     },
@@ -4040,7 +4607,7 @@
       "file_type": "document",
       "source_file": "docs/contenido/guia-produccion-shorts.md",
       "source_location": "L1",
-      "community": 24,
+      "community": 29,
       "norm_label": "guia-produccion-shorts.md",
       "id": "docs_contenido_guia_produccion_shorts_md"
     },
@@ -4067,7 +4634,7 @@
       "file_type": "document",
       "source_file": "docs/contenido/carruseles2.md",
       "source_location": "L1",
-      "community": 2,
+      "community": 3,
       "norm_label": "carruseles2.md",
       "id": "docs_contenido_carruseles2_md"
     },
@@ -4076,7 +4643,7 @@
       "file_type": "document",
       "source_file": "docs/prospectos/2026-05-08-m-eugenia-recurso-animal.md",
       "source_location": "L1",
-      "community": 34,
+      "community": 38,
       "norm_label": "2026-05-08-m-eugenia-recurso-animal.md",
       "id": "docs_prospectos_2026_05_08_m_eugenia_recurso_animal_md"
     },
@@ -4085,7 +4652,7 @@
       "file_type": "document",
       "source_file": "README.md",
       "source_location": "L1",
-      "community": 9,
+      "community": 10,
       "norm_label": "readme.md",
       "id": "root_3gi_web_readme_md"
     },
@@ -4094,7 +4661,7 @@
       "file_type": "code",
       "source_file": "test-e2e-full.mjs",
       "source_location": "L1",
-      "community": 13,
+      "community": 16,
       "norm_label": "test-e2e-full.mjs",
       "id": "test_e2e_full_mjs"
     },
@@ -4184,7 +4751,7 @@
       "file_type": "code",
       "source_file": "test-diagnostico-flow.mjs",
       "source_location": "L1",
-      "community": 17,
+      "community": 22,
       "norm_label": "test-diagnostico-flow.mjs",
       "id": "test_diagnostico_flow_mjs"
     },
@@ -4202,7 +4769,7 @@
       "file_type": "document",
       "source_file": "carruseles.md",
       "source_location": "L993",
-      "community": 11,
+      "community": 12,
       "norm_label": "short 12 \u2014 \"el diagnostico gratuito\"",
       "id": "contenido_carruseles_short_12_el_diagn_stico_gratuito"
     },
@@ -4211,7 +4778,7 @@
       "file_type": "document",
       "source_file": "carruseles2.md",
       "source_location": "L1",
-      "community": 3,
+      "community": 2,
       "norm_label": "carruseles2.md",
       "id": "carruseles2_md"
     },
@@ -4220,7 +4787,7 @@
       "file_type": "document",
       "source_file": "carruseles2.md",
       "source_location": "L132",
-      "community": 2,
+      "community": 3,
       "norm_label": "post 03 \u2014 caso amcl: de 30 min a 5 min",
       "id": "contenido_carruseles2_post_03_caso_amcl_de_30_min_a_5_min"
     },
@@ -4229,7 +4796,7 @@
       "file_type": "document",
       "source_file": "carruseles2.md",
       "source_location": "L157",
-      "community": 2,
+      "community": 3,
       "norm_label": "texto linkedin/facebook",
       "id": "contenido_carruseles2_texto_linkedin_facebook_157"
     },
@@ -4247,7 +4814,7 @@
       "file_type": "document",
       "source_file": "carruseles2.md",
       "source_location": "L352",
-      "community": 2,
+      "community": 3,
       "norm_label": "texto linkedin/facebook",
       "id": "contenido_carruseles2_texto_linkedin_facebook_352"
     },
@@ -4256,7 +4823,7 @@
       "file_type": "document",
       "source_file": "carruseles2.md",
       "source_location": "L454",
-      "community": 3,
+      "community": 2,
       "norm_label": "texto linkedin/facebook",
       "id": "contenido_carruseles2_texto_linkedin_facebook_454"
     },
@@ -4265,7 +4832,7 @@
       "file_type": "document",
       "source_file": "carruseles2.md",
       "source_location": "L561",
-      "community": 3,
+      "community": 2,
       "norm_label": "texto linkedin/facebook",
       "id": "contenido_carruseles2_texto_linkedin_facebook_561"
     },
@@ -4301,7 +4868,7 @@
       "file_type": "document",
       "source_file": "carruseles2.md",
       "source_location": "L875",
-      "community": 7,
+      "community": 8,
       "norm_label": "texto linkedin/facebook",
       "id": "contenido_carruseles2_texto_linkedin_facebook_875"
     },
@@ -4310,7 +4877,7 @@
       "file_type": "document",
       "source_file": "carruseles2.md",
       "source_location": "L975",
-      "community": 2,
+      "community": 19,
       "norm_label": "texto linkedin/facebook",
       "id": "contenido_carruseles2_texto_linkedin_facebook_975"
     },
@@ -4319,7 +4886,7 @@
       "file_type": "document",
       "source_file": "carruseles2.md",
       "source_location": "L1050",
-      "community": 8,
+      "community": 9,
       "norm_label": "post 12 \u2014 cta: el diagnostico gratuito",
       "id": "contenido_carruseles2_post_12_cta_el_diagn_stico_gratuito"
     },
@@ -4328,7 +4895,7 @@
       "file_type": "document",
       "source_file": "carruseles2.md",
       "source_location": "L1119",
-      "community": 8,
+      "community": 9,
       "norm_label": "texto linkedin/facebook",
       "id": "contenido_carruseles2_texto_linkedin_facebook_1119"
     },
@@ -4337,7 +4904,7 @@
       "file_type": "document",
       "source_file": "carruseles2.md",
       "source_location": "L453",
-      "community": 3,
+      "community": 2,
       "norm_label": "texto linkedin/facebook",
       "id": "contenido_carruseles2_texto_linkedin_facebook_453"
     },
@@ -4346,7 +4913,7 @@
       "file_type": "document",
       "source_file": "carruseles2.md",
       "source_location": "L554",
-      "community": 3,
+      "community": 2,
       "norm_label": "texto linkedin/facebook",
       "id": "contenido_carruseles2_texto_linkedin_facebook_554"
     },
@@ -4373,7 +4940,7 @@
       "file_type": "document",
       "source_file": "carruseles2.md",
       "source_location": "L868",
-      "community": 7,
+      "community": 8,
       "norm_label": "texto linkedin/facebook",
       "id": "contenido_carruseles2_texto_linkedin_facebook_868"
     },
@@ -4382,7 +4949,7 @@
       "file_type": "document",
       "source_file": "carruseles2.md",
       "source_location": "L968",
-      "community": 2,
+      "community": 19,
       "norm_label": "texto linkedin/facebook",
       "id": "contenido_carruseles2_texto_linkedin_facebook_968"
     },
@@ -4391,7 +4958,7 @@
       "file_type": "document",
       "source_file": "carruseles2.md",
       "source_location": "L1112",
-      "community": 8,
+      "community": 9,
       "norm_label": "texto linkedin/facebook",
       "id": "contenido_carruseles2_texto_linkedin_facebook_1112"
     },
@@ -4400,7 +4967,7 @@
       "file_type": "document",
       "source_file": "carruseles2.md",
       "source_location": "L555",
-      "community": 3,
+      "community": 2,
       "norm_label": "texto linkedin/facebook",
       "id": "contenido_carruseles2_texto_linkedin_facebook_555"
     },
@@ -4427,7 +4994,7 @@
       "file_type": "document",
       "source_file": "carruseles2.md",
       "source_location": "L869",
-      "community": 7,
+      "community": 8,
       "norm_label": "texto linkedin/facebook",
       "id": "contenido_carruseles2_texto_linkedin_facebook_869"
     },
@@ -4436,7 +5003,7 @@
       "file_type": "document",
       "source_file": "carruseles2.md",
       "source_location": "L969",
-      "community": 2,
+      "community": 19,
       "norm_label": "texto linkedin/facebook",
       "id": "contenido_carruseles2_texto_linkedin_facebook_969"
     },
@@ -4445,7 +5012,7 @@
       "file_type": "document",
       "source_file": "carruseles2.md",
       "source_location": "L1113",
-      "community": 8,
+      "community": 9,
       "norm_label": "texto linkedin/facebook",
       "id": "contenido_carruseles2_texto_linkedin_facebook_1113"
     },
@@ -4454,7 +5021,7 @@
       "file_type": "document",
       "source_file": "carruseles2.md",
       "source_location": "L156",
-      "community": 2,
+      "community": 3,
       "norm_label": "texto linkedin/facebook",
       "id": "contenido_carruseles2_texto_linkedin_facebook_156"
     },
@@ -4472,7 +5039,7 @@
       "file_type": "document",
       "source_file": "carruseles2.md",
       "source_location": "L351",
-      "community": 2,
+      "community": 3,
       "norm_label": "texto linkedin/facebook",
       "id": "contenido_carruseles2_texto_linkedin_facebook_351"
     },
@@ -4481,7 +5048,7 @@
       "file_type": "document",
       "source_file": "carruseles2.md",
       "source_location": "L452",
-      "community": 3,
+      "community": 2,
       "norm_label": "texto linkedin/facebook",
       "id": "contenido_carruseles2_texto_linkedin_facebook_452"
     },
@@ -4490,7 +5057,7 @@
       "file_type": "document",
       "source_file": "carruseles2.md",
       "source_location": "L553",
-      "community": 3,
+      "community": 2,
       "norm_label": "texto linkedin/facebook",
       "id": "contenido_carruseles2_texto_linkedin_facebook_553"
     },
@@ -4517,7 +5084,7 @@
       "file_type": "document",
       "source_file": "carruseles2.md",
       "source_location": "L867",
-      "community": 7,
+      "community": 8,
       "norm_label": "texto linkedin/facebook",
       "id": "contenido_carruseles2_texto_linkedin_facebook_867"
     },
@@ -4526,7 +5093,7 @@
       "file_type": "document",
       "source_file": "carruseles2.md",
       "source_location": "L967",
-      "community": 2,
+      "community": 19,
       "norm_label": "texto linkedin/facebook",
       "id": "contenido_carruseles2_texto_linkedin_facebook_967"
     },
@@ -4535,7 +5102,7 @@
       "file_type": "document",
       "source_file": "carruseles2.md",
       "source_location": "L1111",
-      "community": 8,
+      "community": 9,
       "norm_label": "texto linkedin/facebook",
       "id": "contenido_carruseles2_texto_linkedin_facebook_1111"
     },
@@ -4544,7 +5111,7 @@
       "file_type": "document",
       "source_file": "carruseles2.md",
       "source_location": "L109",
-      "community": 2,
+      "community": 3,
       "norm_label": "texto linkedin/facebook",
       "id": "contenido_carruseles2_texto_linkedin_facebook_109"
     },
@@ -4562,7 +5129,7 @@
       "file_type": "document",
       "source_file": "carruseles2.md",
       "source_location": "L216",
-      "community": 2,
+      "community": 3,
       "norm_label": "texto linkedin/facebook",
       "id": "contenido_carruseles2_texto_linkedin_facebook_216"
     },
@@ -4571,7 +5138,7 @@
       "file_type": "document",
       "source_file": "carruseles2.md",
       "source_location": "L270",
-      "community": 3,
+      "community": 2,
       "norm_label": "texto linkedin/facebook",
       "id": "contenido_carruseles2_texto_linkedin_facebook_270"
     },
@@ -4580,7 +5147,7 @@
       "file_type": "document",
       "source_file": "carruseles2.md",
       "source_location": "L325",
-      "community": 3,
+      "community": 2,
       "norm_label": "texto linkedin/facebook",
       "id": "contenido_carruseles2_texto_linkedin_facebook_325"
     },
@@ -4607,7 +5174,7 @@
       "file_type": "document",
       "source_file": "carruseles2.md",
       "source_location": "L500",
-      "community": 7,
+      "community": 8,
       "norm_label": "texto linkedin/facebook",
       "id": "contenido_carruseles2_texto_linkedin_facebook_500"
     },
@@ -4616,7 +5183,7 @@
       "file_type": "document",
       "source_file": "carruseles2.md",
       "source_location": "L609",
-      "community": 8,
+      "community": 9,
       "norm_label": "texto linkedin/facebook",
       "id": "contenido_carruseles2_texto_linkedin_facebook_609"
     },
@@ -4625,7 +5192,7 @@
       "file_type": "document",
       "source_file": "carruseles2.md",
       "source_location": "L104",
-      "community": 2,
+      "community": 3,
       "norm_label": "texto linkedin/facebook",
       "id": "contenido_carruseles2_texto_linkedin_facebook_104"
     },
@@ -4643,7 +5210,7 @@
       "file_type": "document",
       "source_file": "carruseles2.md",
       "source_location": "L206",
-      "community": 2,
+      "community": 3,
       "norm_label": "texto linkedin/facebook",
       "id": "contenido_carruseles2_texto_linkedin_facebook_206"
     },
@@ -4652,7 +5219,7 @@
       "file_type": "document",
       "source_file": "carruseles2.md",
       "source_location": "L261",
-      "community": 3,
+      "community": 2,
       "norm_label": "texto linkedin/facebook",
       "id": "contenido_carruseles2_texto_linkedin_facebook_261"
     },
@@ -4661,7 +5228,7 @@
       "file_type": "document",
       "source_file": "carruseles2.md",
       "source_location": "L315",
-      "community": 3,
+      "community": 2,
       "norm_label": "texto linkedin/facebook",
       "id": "contenido_carruseles2_texto_linkedin_facebook_315"
     },
@@ -4688,7 +5255,7 @@
       "file_type": "document",
       "source_file": "carruseles2.md",
       "source_location": "L484",
-      "community": 7,
+      "community": 8,
       "norm_label": "texto linkedin/facebook",
       "id": "contenido_carruseles2_texto_linkedin_facebook_484"
     },
@@ -4697,7 +5264,7 @@
       "file_type": "document",
       "source_file": "carruseles2.md",
       "source_location": "L536",
-      "community": 2,
+      "community": 3,
       "norm_label": "texto linkedin/facebook",
       "id": "contenido_carruseles2_texto_linkedin_facebook_536"
     },
@@ -4706,7 +5273,7 @@
       "file_type": "document",
       "source_file": "carruseles2.md",
       "source_location": "L589",
-      "community": 8,
+      "community": 9,
       "norm_label": "texto linkedin/facebook",
       "id": "contenido_carruseles2_texto_linkedin_facebook_589"
     },
@@ -4715,7 +5282,7 @@
       "file_type": "document",
       "source_file": "sql-assistant-tablas.md",
       "source_location": "L1",
-      "community": 30,
+      "community": 35,
       "norm_label": "sql-assistant-tablas.md",
       "id": "sql_assistant_tablas_md"
     },
@@ -4724,7 +5291,7 @@
       "file_type": "document",
       "source_file": "agente-personal-3gi.md",
       "source_location": "L1",
-      "community": 6,
+      "community": 7,
       "norm_label": "agente-personal-3gi.md",
       "id": "agente_personal_3gi_md"
     },
@@ -4733,7 +5300,7 @@
       "file_type": "document",
       "source_file": "openclaw.md",
       "source_location": "L1",
-      "community": 10,
+      "community": 11,
       "norm_label": "openclaw.md",
       "id": "openclaw_md"
     },
@@ -4742,7 +5309,7 @@
       "file_type": "document",
       "source_file": "carruseles2.md",
       "source_location": "L1",
-      "community": 3,
+      "community": 2,
       "norm_label": "calendario de publicaciones \u2014 contenido 17 en adelante",
       "id": "contenido_carruseles2_calendario_de_publicaciones_contenido_17_en_adelante"
     },
@@ -4751,7 +5318,7 @@
       "file_type": "document",
       "source_file": "carruseles2.md",
       "source_location": "L7",
-      "community": 3,
+      "community": 2,
       "norm_label": "calendario",
       "id": "contenido_carruseles2_calendario"
     },
@@ -4760,7 +5327,7 @@
       "file_type": "document",
       "source_file": "carruseles2.md",
       "source_location": "L27",
-      "community": 3,
+      "community": 2,
       "norm_label": "detalle por publicacion",
       "id": "contenido_carruseles2_detalle_por_publicaci_n"
     },
@@ -4769,7 +5336,7 @@
       "file_type": "document",
       "source_file": "carruseles2.md",
       "source_location": "L29",
-      "community": 2,
+      "community": 3,
       "norm_label": "contenido 17 \u2014 12 may 2026",
       "id": "contenido_carruseles2_contenido_17_12_may_2026"
     },
@@ -4787,7 +5354,7 @@
       "file_type": "document",
       "source_file": "carruseles2.md",
       "source_location": "L106",
-      "community": 3,
+      "community": 2,
       "norm_label": "contenido 19 \u2014 18 may 2026",
       "id": "contenido_carruseles2_contenido_19_18_may_2026"
     },
@@ -4805,7 +5372,7 @@
       "file_type": "document",
       "source_file": "carruseles2.md",
       "source_location": "L186",
-      "community": 7,
+      "community": 8,
       "norm_label": "contenido 21 \u2014 24 may 2026",
       "id": "contenido_carruseles2_contenido_21_24_may_2026"
     },
@@ -4814,7 +5381,7 @@
       "file_type": "document",
       "source_file": "carruseles2.md",
       "source_location": "L225",
-      "community": 3,
+      "community": 2,
       "norm_label": "contenido 22 \u2014 27 may 2026",
       "id": "contenido_carruseles2_contenido_22_27_may_2026"
     },
@@ -4823,7 +5390,7 @@
       "file_type": "document",
       "source_file": "carruseles2.md",
       "source_location": "L265",
-      "community": 3,
+      "community": 2,
       "norm_label": "contenido 23 \u2014 30 may 2026",
       "id": "contenido_carruseles2_contenido_23_30_may_2026"
     },
@@ -4832,7 +5399,7 @@
       "file_type": "document",
       "source_file": "carruseles2.md",
       "source_location": "L309",
-      "community": 3,
+      "community": 2,
       "norm_label": "contenido 24 \u2014 02 jun 2026",
       "id": "contenido_carruseles2_contenido_24_02_jun_2026"
     },
@@ -4841,7 +5408,7 @@
       "file_type": "document",
       "source_file": "carruseles2.md",
       "source_location": "L352",
-      "community": 3,
+      "community": 2,
       "norm_label": "contenido 25 \u2014 05 jun 2026",
       "id": "contenido_carruseles2_contenido_25_05_jun_2026"
     },
@@ -4877,7 +5444,7 @@
       "file_type": "document",
       "source_file": "carruseles2.md",
       "source_location": "L514",
-      "community": 7,
+      "community": 8,
       "norm_label": "contenido 29 \u2014 17 jun 2026",
       "id": "contenido_carruseles2_contenido_29_17_jun_2026"
     },
@@ -4886,7 +5453,7 @@
       "file_type": "document",
       "source_file": "carruseles2.md",
       "source_location": "L554",
-      "community": 3,
+      "community": 2,
       "norm_label": "estado de publicaciones",
       "id": "contenido_carruseles2_estado_de_publicaciones"
     },
@@ -4895,7 +5462,7 @@
       "file_type": "document",
       "source_file": "0C.md",
       "source_location": "L1",
-      "community": 25,
+      "community": 30,
       "norm_label": "0c.md",
       "id": "0c_md"
     },
@@ -4904,7 +5471,7 @@
       "file_type": "document",
       "source_file": "0C.md",
       "source_location": "L1",
-      "community": 25,
+      "community": 30,
       "norm_label": "contenido 17 \u2014 post 0c (publicar hoy 11 may 2026)",
       "id": "contenido_0c_contenido_17_post_0c_publicar_hoy_11_may_2026"
     },
@@ -4913,7 +5480,7 @@
       "file_type": "document",
       "source_file": "0C.md",
       "source_location": "L5",
-      "community": 25,
+      "community": 30,
       "norm_label": "reel instagram \u2014 caption",
       "id": "contenido_0c_reel_instagram_caption"
     },
@@ -4922,7 +5489,7 @@
       "file_type": "document",
       "source_file": "0C.md",
       "source_location": "L7",
-      "community": 25,
+      "community": 30,
       "norm_label": "code:block1 (el cuello de botella de tu empresa... eres tu.)",
       "id": "contenido_0c_codeblock_1"
     },
@@ -4931,7 +5498,7 @@
       "file_type": "document",
       "source_file": "0C.md",
       "source_location": "L26",
-      "community": 25,
+      "community": 30,
       "norm_label": "linkedin \u2014 caption",
       "id": "contenido_0c_linkedin_caption"
     },
@@ -4940,7 +5507,7 @@
       "file_type": "document",
       "source_file": "0C.md",
       "source_location": "L28",
-      "community": 25,
+      "community": 30,
       "norm_label": "code:block2 (tu equipo trabaja duro. eso no lo dudo.)",
       "id": "contenido_0c_codeblock_2"
     },
@@ -4949,7 +5516,7 @@
       "file_type": "document",
       "source_file": "0C.md",
       "source_location": "L49",
-      "community": 25,
+      "community": 30,
       "norm_label": "facebook \u2014 caption",
       "id": "contenido_0c_facebook_caption"
     },
@@ -4958,12 +5525,216 @@
       "file_type": "document",
       "source_file": "0C.md",
       "source_location": "L51",
-      "community": 25,
+      "community": 30,
       "norm_label": "code:block3 (tu equipo trabaja duro. eso no lo dudo.)",
       "id": "contenido_0c_codeblock_3"
     }
   ],
   "links": [
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "public/funnel-track.js",
+      "source_location": "L9",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "public_funnel_track_js",
+      "target": "public_funnel_track_hasconsent"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "public/funnel-track.js",
+      "source_location": "L19",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "public_funnel_track_js",
+      "target": "public_funnel_track_isbot"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "public/funnel-track.js",
+      "source_location": "L5",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "public_funnel_track_js",
+      "target": "public_funnel_track_getsessionid"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "public/funnel-track.js",
+      "source_location": "L50",
+      "weight": 1.0,
+      "source": "public_funnel_track_js",
+      "target": "public_funnel_track_readutm",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "public/funnel-track.js",
+      "source_location": "L18",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "public_funnel_track_js",
+      "target": "public_funnel_track_captureutm"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "public/funnel-track.js",
+      "source_location": "L44",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "public_funnel_track_js",
+      "target": "public_funnel_track_toposthog"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "public/funnel-track.js",
+      "source_location": "L30",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "public_funnel_track_getsessionid",
+      "target": "public_funnel_track_hasconsent"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "public/funnel-track.js",
+      "source_location": "L47",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "public_funnel_track_captureutm",
+      "target": "public_funnel_track_hasconsent"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "funnel-track.js",
+      "source_location": "L5",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "funnel_track_js",
+      "target": "public_funnel_track_getsessionid"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "public/funnel-track.js",
+      "source_location": "L65",
+      "weight": 1.0,
+      "source": "public_funnel_track_captureutm",
+      "target": "public_funnel_track_readutm",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "funnel-track.js",
+      "source_location": "L18",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "funnel_track_js",
+      "target": "public_funnel_track_captureutm"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "funnel-track.js",
+      "source_location": "L44",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "funnel_track_js",
+      "target": "public_funnel_track_toposthog"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/manual-tests/funnel-consentimiento.mjs",
+      "source_location": "L20",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "scripts_manual_tests_funnel_consentimiento_mjs",
+      "target": "manual_tests_funnel_consentimiento_check"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/manual-tests/funnel-consentimiento.mjs",
+      "source_location": "L25",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "scripts_manual_tests_funnel_consentimiento_mjs",
+      "target": "manual_tests_funnel_consentimiento_sesion"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/manual-tests/funnel-consentimiento.mjs",
+      "source_location": "L46",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "scripts_manual_tests_funnel_consentimiento_mjs",
+      "target": "manual_tests_funnel_consentimiento_claves"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/manual-tests/funnel-consentimiento.mjs",
+      "source_location": "L73",
+      "weight": 1.0,
+      "source": "scripts_manual_tests_funnel_consentimiento_mjs",
+      "target": "manual_tests_funnel_consentimiento_esperado",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/manual-tests/funnel-consentimiento.mjs",
+      "source_location": "L81",
+      "weight": 1.0,
+      "source": "scripts_manual_tests_funnel_consentimiento_mjs",
+      "target": "manual_tests_funnel_consentimiento_largo",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/manual-tests/funnel-consentimiento.mjs",
+      "source_location": "L73",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "scripts_manual_tests_funnel_consentimiento_mjs",
+      "target": "manual_tests_funnel_consentimiento_ids"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/manual-tests/funnel-consentimiento.mjs",
+      "source_location": "L108",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "scripts_manual_tests_funnel_consentimiento_mjs",
+      "target": "manual_tests_funnel_consentimiento_e"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "astro.config.mjs",
+      "source_location": "L3",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "astro_config_mjs",
+      "target": "src_integrations_guardia_contenido_mjs"
+    },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
@@ -6478,42 +7249,597 @@
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "public/funnel-track.js",
-      "source_location": "L5",
+      "source_file": "scripts/manual-tests/banner-movil.mjs",
+      "source_location": "L21",
       "weight": 1.0,
       "confidence_score": 1.0,
-      "source": "public_funnel_track_getsessionid",
-      "target": "public_funnel_track_js"
+      "source": "scripts_manual_tests_banner_movil_mjs",
+      "target": "manual_tests_banner_movil_anchos"
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "public/funnel-track.js",
+      "source_file": "scripts/manual-tests/banner-movil.mjs",
+      "source_location": "L22",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "scripts_manual_tests_banner_movil_mjs",
+      "target": "manual_tests_banner_movil_altos"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/manual-tests/banner-movil.mjs",
+      "source_location": "L23",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "scripts_manual_tests_banner_movil_mjs",
+      "target": "manual_tests_banner_movil_rutas"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/manual-tests/banner-movil.mjs",
+      "source_location": "L47",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "scripts_manual_tests_banner_movil_mjs",
+      "target": "manual_tests_banner_movil_re"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/manual-tests/banner-movil.mjs",
+      "source_location": "L48",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "scripts_manual_tests_banner_movil_mjs",
+      "target": "manual_tests_banner_movil_btn"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/manual-tests/banner-movil.mjs",
+      "source_location": "L49",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "scripts_manual_tests_banner_movil_mjs",
+      "target": "manual_tests_banner_movil_bn"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/manual-tests/banner-movil.mjs",
+      "source_location": "L51",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "scripts_manual_tests_banner_movil_mjs",
+      "target": "manual_tests_banner_movil_a"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/manual-tests/banner-movil.mjs",
+      "source_location": "L52",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "scripts_manual_tests_banner_movil_mjs",
+      "target": "manual_tests_banner_movil_c"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/manual-tests/banner-movil.mjs",
+      "source_location": "L95",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "scripts_manual_tests_banner_movil_mjs",
+      "target": "manual_tests_banner_movil_evs"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/manual-tests/banner-movil.mjs",
+      "source_location": "L102",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "scripts_manual_tests_banner_movil_mjs",
+      "target": "manual_tests_banner_movil_b"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/manual-tests/banner-movil.mjs",
+      "source_location": "L102",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "scripts_manual_tests_banner_movil_mjs",
+      "target": "manual_tests_banner_movil_q"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/manual-tests/banner-movil.mjs",
+      "source_location": "L105",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "scripts_manual_tests_banner_movil_mjs",
+      "target": "manual_tests_banner_movil_ev"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "banner-movil.mjs",
+      "source_location": "L21",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "banner_movil_mjs",
+      "target": "manual_tests_banner_movil_anchos"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "banner-movil.mjs",
+      "source_location": "L22",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "banner_movil_mjs",
+      "target": "manual_tests_banner_movil_altos"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "banner-movil.mjs",
+      "source_location": "L23",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "banner_movil_mjs",
+      "target": "manual_tests_banner_movil_rutas"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "banner-movil.mjs",
+      "source_location": "L47",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "banner_movil_mjs",
+      "target": "manual_tests_banner_movil_re"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "banner-movil.mjs",
+      "source_location": "L48",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "banner_movil_mjs",
+      "target": "manual_tests_banner_movil_btn"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "banner-movil.mjs",
+      "source_location": "L49",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "banner_movil_mjs",
+      "target": "manual_tests_banner_movil_bn"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "banner-movil.mjs",
+      "source_location": "L51",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "banner_movil_mjs",
+      "target": "manual_tests_banner_movil_a"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "banner-movil.mjs",
+      "source_location": "L52",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "banner_movil_mjs",
+      "target": "manual_tests_banner_movil_c"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/integrations/guardia-contenido.mjs",
+      "source_location": "L8",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_integrations_guardia_contenido_mjs",
+      "target": "src_data_oferta_mjs"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/integrations/guardia-contenido.mjs",
+      "source_location": "L8",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_integrations_guardia_contenido_mjs",
+      "target": "data_oferta_montospermitidos"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/integrations/guardia-contenido.mjs",
+      "source_location": "L10",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_integrations_guardia_contenido_mjs",
+      "target": "integrations_guardia_contenido_reglas"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/integrations/guardia-contenido.mjs",
+      "source_location": "L20",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_integrations_guardia_contenido_mjs",
+      "target": "integrations_guardia_contenido_archivos"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/integrations/guardia-contenido.mjs",
+      "source_location": "L28",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_integrations_guardia_contenido_mjs",
+      "target": "integrations_guardia_contenido_textovisible"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/integrations/guardia-contenido.mjs",
+      "source_location": "L41",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_integrations_guardia_contenido_mjs",
+      "target": "integrations_guardia_contenido_permitidos"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/integrations/guardia-contenido.mjs",
+      "source_location": "L48",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_integrations_guardia_contenido_mjs",
+      "target": "integrations_guardia_contenido_permitido"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/integrations/guardia-contenido.mjs",
+      "source_location": "L50",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_integrations_guardia_contenido_mjs",
+      "target": "integrations_guardia_contenido_anumero"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/integrations/guardia-contenido.mjs",
+      "source_location": "L52",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_integrations_guardia_contenido_mjs",
+      "target": "integrations_guardia_contenido_guardiacontenido"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/pages/llms.txt.ts",
+      "source_location": "L2",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_pages_llms_txt_ts",
+      "target": "src_data_oferta_mjs"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/pages/llms.txt.ts",
+      "source_location": "L2",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_pages_llms_txt_ts",
+      "target": "data_oferta_oferta"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/pages/llms.txt.ts",
+      "source_location": "L2",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_pages_llms_txt_ts",
+      "target": "data_oferta_usd"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/pages/llms.txt.ts",
+      "source_location": "L2",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_pages_llms_txt_ts",
+      "target": "data_oferta_usdrango"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/pages/llms.txt.ts",
+      "source_location": "L4",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_pages_llms_txt_ts",
+      "target": "pages_llms_txt_get"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/pages/llms.txt.ts",
       "source_location": "L18",
       "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "public_funnel_track_captureutm",
-      "target": "public_funnel_track_js"
+      "source": "pages_llms_txt_get",
+      "target": "data_oferta_usd"
     },
     {
-      "relation": "contains",
+      "relation": "calls",
+      "context": "call",
       "confidence": "EXTRACTED",
-      "source_file": "public/funnel-track.js",
-      "source_location": "L5",
-      "weight": 1.0,
       "confidence_score": 1.0,
-      "source": "home_ggomp_3gi_web_public_funnel_track_js",
-      "target": "public_funnel_track_getsessionid"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "public/funnel-track.js",
+      "source_file": "src/pages/llms.txt.ts",
       "source_location": "L18",
       "weight": 1.0,
+      "source": "pages_llms_txt_get",
+      "target": "data_oferta_usdrango"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/i18n/nosotros.mjs",
+      "source_location": "L2",
+      "weight": 1.0,
       "confidence_score": 1.0,
-      "source": "home_ggomp_3gi_web_public_funnel_track_js",
-      "target": "public_funnel_track_captureutm"
+      "source": "src_i18n_nosotros_mjs",
+      "target": "i18n_nosotros_nosotros"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/i18n/casos.mjs",
+      "source_location": "L2",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_i18n_casos_mjs",
+      "target": "i18n_casos_casos"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/i18n/metodologia.mjs",
+      "source_location": "L2",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_i18n_metodologia_mjs",
+      "target": "i18n_metodologia_metodologia"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/i18n/precios.mjs",
+      "source_location": "L2",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_i18n_precios_mjs",
+      "target": "i18n_precios_precios"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/i18n/home.mjs",
+      "source_location": "L3",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_i18n_home_mjs",
+      "target": "i18n_home_home"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/i18n/faq.mjs",
+      "source_location": "L2",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_i18n_faq_mjs",
+      "target": "i18n_faq_faq"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/data/oferta.mjs",
+      "source_location": "L7",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_data_oferta_mjs",
+      "target": "data_oferta_oferta"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/data/oferta.mjs",
+      "source_location": "L54",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_data_oferta_mjs",
+      "target": "data_oferta_num"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/data/oferta.mjs",
+      "source_location": "L58",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_data_oferta_mjs",
+      "target": "data_oferta_usd"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/data/oferta.mjs",
+      "source_location": "L60",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_data_oferta_mjs",
+      "target": "data_oferta_usdrango"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/data/oferta.mjs",
+      "source_location": "L63",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_data_oferta_mjs",
+      "target": "data_oferta_montospermitidos"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/data/oferta.mjs",
+      "source_location": "L77",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_data_oferta_mjs",
+      "target": "data_oferta_radarexpressrango"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/data/oferta.mjs",
+      "source_location": "L80",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_data_oferta_mjs",
+      "target": "data_oferta_tokens"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/data/oferta.mjs",
+      "source_location": "L103",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_data_oferta_mjs",
+      "target": "data_oferta_fill"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/data/oferta.mjs",
+      "source_location": "L112",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_data_oferta_mjs",
+      "target": "data_oferta_filldeep"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/data/oferta.mjs",
+      "source_location": "L58",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "data_oferta_usd",
+      "target": "data_oferta_num"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/data/oferta.mjs",
+      "source_location": "L60",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "data_oferta_usdrango",
+      "target": "data_oferta_num"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/data/oferta.mjs",
+      "source_location": "L83",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "data_oferta_tokens",
+      "target": "data_oferta_usd"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/data/oferta.mjs",
+      "source_location": "L84",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "data_oferta_tokens",
+      "target": "data_oferta_usdrango"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/data/oferta.mjs",
+      "source_location": "L84",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "data_oferta_tokens",
+      "target": "data_oferta_radarexpressrango"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/data/oferta.mjs",
+      "source_location": "L104",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "data_oferta_fill",
+      "target": "data_oferta_tokens"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/data/oferta.mjs",
+      "source_location": "L113",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "data_oferta_filldeep",
+      "target": "data_oferta_fill"
     },
     {
       "relation": "contains",
@@ -6672,18 +7998,8 @@
       "source_location": "L1",
       "weight": 1.0,
       "confidence_score": 1.0,
-      "source": "3gi_web_claude_claude_md_3gi_web",
-      "target": "root_3gi_web_claude_md"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "CLAUDE.md",
-      "source_location": "L1",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "3gi_web_claude_graphify",
-      "target": "root_3gi_web_claude_md"
+      "source": "claude_md",
+      "target": "3gi_web_claude_claude_md_3gi_web"
     },
     {
       "relation": "contains",
@@ -6729,6 +8045,26 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "CLAUDE.md",
+      "source_location": "L44",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "3gi_web_claude_claude_md_3gi_web",
+      "target": "3gi_web_claude_i18n_arquitectura_y_bug_hist_rico_corregido_23_09_2026"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "CLAUDE.md",
+      "source_location": "L88",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "3gi_web_claude_claude_md_3gi_web",
+      "target": "3gi_web_claude_nomenclatura_y_precios_en_precios_corregido_14_10_2026_pr_9_y_10"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "CLAUDE.md",
       "source_location": "L57",
       "weight": 1.0,
       "confidence_score": 1.0,
@@ -6739,11 +8075,41 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "CLAUDE.md",
+      "source_location": "L168",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "3gi_web_claude_claude_md_3gi_web",
+      "target": "3gi_web_claude_linkedin_insight_tag_y_funnel_track_js_2026_10_16"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "CLAUDE.md",
+      "source_location": "L188",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "3gi_web_claude_claude_md_3gi_web",
+      "target": "3gi_web_claude_funnel_y_consentimiento_2026_10_16"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "CLAUDE.md",
       "source_location": "L57",
       "weight": 1.0,
       "confidence_score": 1.0,
       "source": "3gi_web_claude_claude_md_3gi_web",
       "target": "3gi_web_claude_decisiones_de_posicionamiento_validadas_no_modificar"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "CLAUDE.md",
+      "source_location": "L213",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "3gi_web_claude_claude_md_3gi_web",
+      "target": "3gi_web_claude_oferta_fuente_nica_plantillas_por_idioma_y_guardia_de_contenido_2026_10_17"
     },
     {
       "relation": "contains",
@@ -6762,8 +8128,18 @@
       "source_location": "L1",
       "weight": 1.0,
       "confidence_score": 1.0,
-      "source": "claude_md",
-      "target": "3gi_web_claude_claude_md_3gi_web"
+      "source": "3gi_web_claude_claude_md_3gi_web",
+      "target": "root_3gi_web_claude_md"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "CLAUDE.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "3gi_web_claude_graphify",
+      "target": "root_3gi_web_claude_md"
     },
     {
       "relation": "contains",
@@ -7312,8 +8688,8 @@
       "source_location": "L1",
       "weight": 1.0,
       "confidence_score": 1.0,
-      "source": "docs_homepage_sections_homepage_secciones_y_prop_sito",
-      "target": "root_3gi_web_docs_homepage_sections_md"
+      "source": "docs_homepage_sections_md",
+      "target": "docs_homepage_sections_homepage_secciones_y_prop_sito"
     },
     {
       "relation": "contains",
@@ -7352,8 +8728,8 @@
       "source_location": "L1",
       "weight": 1.0,
       "confidence_score": 1.0,
-      "source": "docs_homepage_sections_md",
-      "target": "docs_homepage_sections_homepage_secciones_y_prop_sito"
+      "source": "docs_homepage_sections_homepage_secciones_y_prop_sito",
+      "target": "root_3gi_web_docs_homepage_sections_md"
     },
     {
       "relation": "contains",
@@ -12487,5 +13863,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "48ad9e86b230605468bbdb26fc7c36b69ace423e"
+  "built_at_commit": "5d063124e464d0790830cf0d273b5284066eabd6"
 }
