@@ -138,9 +138,9 @@ const p = (path) => (lang === 'en' ? '/en' + path : path);
           <p class="context-p"><Fragment set:html={t('cert-impl4')} /></p>
           <p class="context-p"><Fragment set:html={t('cert-impl5')} /></p></>)}
           <div style="margin-top:24px;padding:16px 20px;background:rgba(0,232,145,0.04);border:1px solid rgba(0,232,145,0.12);border-radius:10px;">
-            <p style="font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:rgba(0,232,145,0.6);margin-bottom:6px;">ROI proyectado a 12 meses</p>
+            <p style="font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:rgba(0,232,145,0.6);margin-bottom:6px;"><Fragment set:html={t('cert-roi-label')} /></p>
             <p style="font-family:Syne,sans-serif;font-size:28px;font-weight:800;color:var(--green);">263%</p>
-            <p style="font-size:13px;color:var(--muted);margin-top:4px;">Sobre la inversión total en diagnóstico e implementación</p>
+            <p style="font-size:13px;color:var(--muted);margin-top:4px;"><Fragment set:html={t('cert-roi-unit')} /></p>
           </div>
         </div>
       </div>
