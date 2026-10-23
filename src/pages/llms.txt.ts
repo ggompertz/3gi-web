@@ -7,7 +7,7 @@ export function GET() {
   const pdv = OFERTA.planDeVuelo;
   const body = `# 3G Intelligence (3GI)
 
-> 3GI es una consultora de IA aplicada al negocio real, enfocada en PyMEs de Chile y LATAM. Ayudamos a las empresas a identificar qué procesos automatizar con mayor ROI usando el Framework 3 ERAs (ERA 1: Caos Operativo, ERA 2: Datos Organizados, ERA 3: Empresa con IA), una metodología propia. No vendemos herramientas de IA: hacemos diagnóstico, análisis y hoja de ruta de implementación con consultores dedicados, no software genérico.
+> 3GI es una consultora de IA aplicada al negocio real, enfocada en PyMEs de Chile y LATAM. Ayudamos a las empresas a identificar qué procesos automatizar con mayor ROI usando el Framework 3 ERAs (ERA 1: Caos Operativo, ERA 2: Datos Organizados, ERA 3: Empresa con IA), una metodología propia. No vendemos herramientas de IA: hacemos el Radar, el análisis y la hoja de ruta de implementación con consultores dedicados, no software genérico.
 
 3GI trabaja con PyMEs de ${OFERTA.segmento.empleados[0]} a ${OFERTA.segmento.empleados[1]} empleados en Chile, México, Colombia, Argentina y Perú, en rubros como servicios profesionales, manufactura, logística y transporte, construcción/certificaciones, y comercio/distribución. El fundador y director es Gonzalo Gompertz G. (MBA, 20+ años de experiencia con PyMEs).
 
