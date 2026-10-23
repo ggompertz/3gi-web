@@ -19,6 +19,8 @@ export const OFERTA = {
     r360: { usd: 6000, desdeSemanas: 3, areasEntrevistadas: [4, 6], quickWins: { cantidad: [2, 3], maxSemanas: 4 } },
     descuentoEnPlanDeVueloDias: 90,
   },
+  // Radar + Propuesta del Plan de Vuelo: plazo mínimo del tramo inicial (antes escrito a mano en el FAQ como «3–4 semanas»).
+  inicio: { desdeSemanas: 3 },
   dataFoundation: {
     niveles: [
       { id: 'N1', usd: [800, 2500] },
@@ -90,6 +92,7 @@ function tokens(lang) {
     ventana: String(pdv.propuesta.ventanaCotizacionEjecucionDias),
     pct: `${pdv.ejecucion.pctROI[0]}–${pdv.ejecucion.pctROI[1]}`,
     semanasR360: String(OFERTA.radar.r360.desdeSemanas),
+    semanasInicio: String(OFERTA.inicio.desdeSemanas),
     testMin: String(OFERTA.testEra.desdeMinutos),
     descuentoDias: String(OFERTA.radar.descuentoEnPlanDeVueloDias),
     // priceRange del JSON-LD (formato fijo sin separador de miles)
