@@ -57,6 +57,16 @@ function textosDeEnlacesWhatsApp(html) {
   }
   return out;
 }
+// El Test ERA es gratuito y NUNCA se llama «diagnóstico» (regla del 2026-10-14; la guardia solo rechazaba frases exactas y dejó pasar
+// «Free ERA Diagnostic»). En sus páginas la palabra está prohibida en texto visible, título y metadatos. El resto del sitio se trata aparte.
+const PAGINAS_TEST_ERA = ['test-era/index.html', 'en/test-era/index.html', 'test-era-ia/index.html', 'en/test-era-ia/index.html'];
+const DIAGNOSTICO = /diagn[oó]stic[oa]?s?|diagnosis/gi;
+function textosCabeceraYMeta(html) {
+  const out = [];
+  for (const m of html.matchAll(/<title>([^<]*)<\/title>/gi)) out.push(m[1]);
+  for (const m of html.matchAll(/<meta\s+[^>]*content\s*=\s*"([^"]*)"[^>]*>/gi)) out.push(m[1]);
+  return out;
+}
 const aNumero = (s) => (/^\d{1,3}([.,]\d{3})+$/.test(s) ? Number(s.replace(/[.,]/g, '')) : /^\d+$/.test(s) ? Number(s) : NaN);
 
 export default function guardiaContenido() {
@@ -75,6 +85,14 @@ export default function guardiaContenido() {
               const i = m.index ?? 0;
               if (permitido(r.id, rel, texto, i)) continue;
               fallas.push(`${rel} · ${r.id}: «${m[0]}» …${texto.slice(Math.max(0, i - 30), i + 40)}…  → ${r.msg}`);
+            }
+          }
+          if (PAGINAS_TEST_ERA.includes(rel.split(path.sep).join('/'))) {
+            const bruto = fs.readFileSync(f, 'utf8');
+            // Los datos estructurados (JSON-LD) los inyecta Layout.astro en TODAS las páginas y se revisan en su propia fase.
+            const propio = textoVisible(bruto.replace(/<script[^>]*application\/ld\+json[\s\S]*?<\/script>/gi, ' '), true);
+            for (const t of [...propio.split(/(?<=[.!?:])\s+|\s{2,}/), ...textosCabeceraYMeta(bruto)]) {
+              for (const m of t.matchAll(DIAGNOSTICO)) fallas.push(`${rel} · test-era-llamado-diagnostico: «${m[0]}» en «${t.trim().slice(0, 80)}» → el Test ERA nunca se llama diagnóstico (usar «Test ERA», «resultado ERA» o «Informe ERA»)`);
             }
           }
           if (f.endsWith('.html')) {

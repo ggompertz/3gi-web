@@ -4,7 +4,7 @@ import Layout from '../../layouts/Layout.astro';
 
 <Layout
   title="Personalized ERA Report · 3G Intelligence"
-  description="AI maturity diagnostic for SMBs. Discover your critical gaps, concrete opportunities and first action step."
+  description="ERA Report on AI maturity for SMBs. Discover your critical gaps, concrete opportunities and first action step."
   lang="en"
 >
 
@@ -78,7 +78,7 @@ select.f-select option{background:#0E0E1A;color:var(--offwh)}
     <div class="gate-card">
       <div class="gate-icon">🔒</div>
       <div class="gate-title">Access required</div>
-      <div class="gate-sub">This diagnostic requires an access code sent to your email. Complete the free ERA Test first.</div>
+      <div class="gate-sub">This report requires an access code sent to your email. Complete the free ERA Test first.</div>
       <a href="/en/test-era" class="btn-primary" style="display:block;text-align:center;text-decoration:none;padding:14px 28px">
         Take the free ERA Test →
       </a>
@@ -105,7 +105,7 @@ select.f-select option{background:#0E0E1A;color:var(--offwh)}
     <div id="form-container"></div>
 
     <button id="btn-submit" class="btn-primary" onclick="submitAnalisis()" disabled>
-      See my AI diagnostic →
+      See my ERA Report →
     </button>
   </div>
 
@@ -322,7 +322,7 @@ async function submitAnalisis() {
     if (res.status === 401) {
       document.getElementById('loading-step').style.display = 'none';
       document.getElementById('gate-step').style.display = 'block';
-      document.querySelector('.gate-sub').textContent = data.error || 'Your access expired. Request a new code from the ERA diagnostic.';
+      document.querySelector('.gate-sub').textContent = data.error || 'Your access expired. Request a new code from the ERA Test.';
       return;
     }
     if (!data.ok) throw new Error(data.error);
@@ -332,7 +332,7 @@ async function submitAnalisis() {
   } catch (err) {
     document.getElementById('loading-step').style.display = 'none';
     document.getElementById('quiz-step').style.display = 'block';
-    alert('Error generating the diagnostic: ' + err.message + '. Please try again.');
+    alert('Error generating the report: ' + err.message + '. Please try again.');
   }
 }
 
