@@ -185,7 +185,7 @@ input.otp-input:focus{border-color:rgba(0,232,145,0.45)}
 
 <!-- GATE: ERA preview + email capture -->
 <div id="gate-step">
-  <div class="eyebrow">Tu diagnóstico ERA</div>
+  <div class="eyebrow">Tu resultado ERA</div>
   <h1>Tu empresa está aquí</h1>
   <p class="intro-sub" style="margin-bottom:0">Calculamos tu ERA en ambas dimensiones. Ingresa tu email para ver la interpretación completa y tus próximos pasos.</p>
 
@@ -207,7 +207,7 @@ input.otp-input:focus{border-color:rgba(0,232,145,0.45)}
     <div class="gate-box-title">¿Qué significa tu ERA y qué hacer ahora?</div>
     <div class="gate-box-sub">El informe incluye: interpretación por dimensión, brecha identificada, y oportunidades concretas de IA para tu empresa. Gratis — llega a tu email en segundos.</div>
     <ul class="gate-features">
-      <li>Diagnóstico de tu punto de partida real</li>
+      <li>Tu punto de partida real</li>
       <li>Brecha entre dimensión operacional y comercial</li>
       <li>Oportunidad concreta de IA para tu proceso clave</li>
       <li>Próximos pasos según tu ERA — sin plantillas genéricas</li>
@@ -633,7 +633,7 @@ async function gateResend() {
 function shareUrl() {
   const eraOp = window._eraOp || '';
   const eraCom = window._eraCom || '';
-  const url = `${location.origin}/diagnostico?era_op=${encodeURIComponent(eraOp)}&era_com=${encodeURIComponent(eraCom)}`;
+  const url = `${location.origin}/test-era?era_op=${encodeURIComponent(eraOp)}&era_com=${encodeURIComponent(eraCom)}`;
   if (navigator.clipboard) {
     navigator.clipboard.writeText(url).then(() => {
       const lbl = document.getElementById('copy-label');
@@ -649,7 +649,7 @@ function shareLinkedIn() {
   const eraOp = window._eraOp || '';
   const eraCom = window._eraCom || '';
   const text = `Acabo de hacer el Test ERA de 3G Intelligence. Mi empresa está en ${eraOp} (operacional) y ${eraCom} (comercial). ¿En qué ERA estás tú?`;
-  const url = `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(location.origin + '/diagnostico')}&summary=${encodeURIComponent(text)}`;
+  const url = `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(location.origin + '/test-era')}&summary=${encodeURIComponent(text)}`;
   window.open(url, '_blank', 'noopener,width=600,height=500');
 }
 
