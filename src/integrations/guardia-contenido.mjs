@@ -47,6 +47,16 @@ const PERMITIDOS = [
 ];
 const permitido = (regla, rel, texto, i) =>
   PERMITIDOS.some((e) => e.regla === regla && e.archivos.includes(rel) && e.contexto.test(texto.slice(Math.max(0, i - 40), i + 20)));
+// Lo que la persona le «dice» a la empresa al tocar un enlace de WhatsApp (wa.me/?text=) también es texto visible al cliente
+// aunque viva en la dirección del enlace: textoVisible() no lo ve. «Diagnóstico» es el nombre interno del servicio (el público es Radar).
+const NOMBRE_INTERNO_EN_ENLACE = /diagn[oó]stic|diagnosis|diagnostic/i;
+function textosDeEnlacesWhatsApp(html) {
+  const out = [];
+  for (const m of html.matchAll(/href="([^"]*wa\.me\/[^"]*[?&]text=[^"]*)"/gi)) {
+    try { out.push(decodeURIComponent(m[1].split(/[?&]text=/)[1].replace(/&amp;.*/, ''))); } catch { /* codificación inválida: la ignora */ }
+  }
+  return out;
+}
 const aNumero = (s) => (/^\d{1,3}([.,]\d{3})+$/.test(s) ? Number(s.replace(/[.,]/g, '')) : /^\d+$/.test(s) ? Number(s) : NaN);
 
 export default function guardiaContenido() {
@@ -65,6 +75,11 @@ export default function guardiaContenido() {
               const i = m.index ?? 0;
               if (permitido(r.id, rel, texto, i)) continue;
               fallas.push(`${rel} · ${r.id}: «${m[0]}» …${texto.slice(Math.max(0, i - 30), i + 40)}…  → ${r.msg}`);
+            }
+          }
+          if (f.endsWith('.html')) {
+            for (const t of textosDeEnlacesWhatsApp(fs.readFileSync(f, 'utf8'))) {
+              if (NOMBRE_INTERNO_EN_ENLACE.test(t)) fallas.push(`${rel} · diagnostico-en-enlace-whatsapp: «${t}» → «Diagnóstico» es nombre interno; el servicio público es Radar (o Test ERA)`);
             }
           }
           for (const m of texto.matchAll(/USD\s?(\d[\d.,]*)([kK])?(?:\s?[–-]\s?(\d[\d.,]*)([kK])?)?/g)) {
