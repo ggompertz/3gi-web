@@ -75,6 +75,21 @@ el contenido propio de una página — escribir el texto en inglés directamente
 asumir que cada clave aparece una sola vez en el archivo — verificar con un escaneo de
 consistencia entre ocurrencias duplicadas antes de dar el fix por terminado.
 
+**Español dentro del inglés: cuarto caso (22/10/2026, PR #12 y #13).** Gonzalo halló en producción, en `/en/metodologia`,
+«Entregable: Score de Madurez IA…» y «Resultado: Empresa con ventaja competitiva…» dentro del diccionario EN; al revisar
+todo aparecieron dos más en `/en/casos` («ROI proyectado a 12 meses» y «Sobre la inversión total en diagnóstico e
+implementación»), escritos directo en la plantilla y por eso en español en AMBOS idiomas. Corregidos con claves de
+diccionario. Además la portada atribuía el «Informe ERA» (entregable del Test ERA gratuito) al Radar; ahora dice
+«Informe ejecutivo» / «Executive report», como la página de Metodología. **Este sitio todavía NO tiene una guardia contra
+textos sin traducir** (la integración de build `astro:build:done` cubre nomenclatura, regionalismos, datos y precios, no
+esto). Pendiente de decisión: que falle el build si un valor EN es idéntico al ES (salvo nombres propios), si lleva
+marcadores de español (`ñ ¿ ¡`, tildes, de/del/la/los/el/para/con/que/por/una/se/su…) o si una plantilla de `/en/` tiene
+texto literal fuera del diccionario. Hasta entonces: tras cada cambio de contenido EN, leer TODAS las páginas EN en el
+navegador (`innerText`) y, si se usa un escáner, probarlo antes con los 4 textos de arriba (el del 22/10 dijo «0
+sospechosos» con el sitio sin limpiar). Los títulos en español de `contenido` (`en-row-orig`) y los nombres de
+instituciones en `nosotros` son intencionales. Lección completa: `my-config/handoffs/2026-10-22_ingles-portal-y-sitio-y-ensenanza.md`
+y `process-rules.yaml` → `textos_bilingues_es_en`.
+
 **Glosario de marca ES → EN** (confirmado con Gonzalo 23/09/2026, no reinventar):
 
 | Español | Inglés |
