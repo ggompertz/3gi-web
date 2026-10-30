@@ -181,7 +181,7 @@ select.f-select option{background:#0E0E1A;color:var(--offwh)}
     <div class="error-card">
       <div class="error-icon">⚡</div>
       <div class="error-title">Servicio temporalmente no disponible</div>
-      <div class="error-sub" id="error-msg">El análisis no se pudo generar en este momento. Tus respuestas están guardadas — puedes intentar nuevamente.</div>
+      <div class="error-sub" id="error-msg">No pudimos generar tu análisis en este momento. Puedes intentar de nuevo o escribirnos por WhatsApp.</div>
       <button class="btn-primary" onclick="retrySubmit()">Intentar nuevamente</button>
       <a href="https://wa.me/56988974898" target="_blank" class="btn-ghost" style="display:block;text-align:center;text-decoration:none">o contáctanos por WhatsApp →</a>
     </div>
@@ -400,7 +400,7 @@ async function submitAnalisis() {
         nombre: userName,
       }),
     });
-    const data = await res.json();
+    const data = await res.json().catch(() => ({}));
 
     if (res.status === 401) {
       document.getElementById('loading-step').style.display = 'none';
@@ -408,17 +408,23 @@ async function submitAnalisis() {
       document.querySelector('.gate-sub').textContent = data.error || 'Tu acceso expiró. Solicita un nuevo código desde el Test ERA.';
       return;
     }
-    if (!data.ok) throw new Error(data.error);
+    if (!data.ok) { mostrarErrorAnalisis(data.guardado === true); return; }
     if (window.__funnelTrack) window.__funnelTrack('informe_completado');
     if (window.__linkedinConversion) window.__linkedinConversion();
     renderResult(data);
-  } catch (err) {
-    document.getElementById('loading-step').style.display = 'none';
-    document.getElementById('error-msg').textContent = err.message
-      ? `No se pudo generar el análisis: ${err.message}. Tus respuestas están guardadas.`
-      : 'El análisis no se pudo generar en este momento. Tus respuestas están guardadas — puedes intentar nuevamente.';
-    document.getElementById('error-step').style.display = 'block';
+  } catch (_) {
+    mostrarErrorAnalisis(false);
   }
+}
+
+// Solo se dice que las respuestas están guardadas cuando el servidor lo confirma (`guardado: true`).
+// Si no hay confirmación (sin conexión, servicio caído), las respuestas viven solo en esta página.
+function mostrarErrorAnalisis(guardado) {
+  document.getElementById('loading-step').style.display = 'none';
+  document.getElementById('error-msg').textContent = guardado
+    ? 'No pudimos generar tu análisis en este momento. Tus respuestas quedaron guardadas en nuestro sistema. Puedes intentar de nuevo ahora o escribirnos por WhatsApp y lo retomamos contigo.'
+    : 'No pudimos conectar con el servicio. Tus respuestas siguen en esta página mientras no la cierres ni la recargues, así que puedes intentar de nuevo. Si no funciona, escríbenos por WhatsApp.';
+  document.getElementById('error-step').style.display = 'block';
 }
 
 function retrySubmit() {

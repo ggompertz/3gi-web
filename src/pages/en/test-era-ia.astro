@@ -107,6 +107,11 @@ select.f-select option{background:#0E0E1A;color:var(--offwh)}
     <button id="btn-submit" class="btn-primary" onclick="submitAnalisis()" disabled>
       See my ERA Report →
     </button>
+
+    <div id="submit-error" role="alert" style="display:none;margin-top:16px;padding:14px 16px;border:1px solid rgba(248,113,113,.3);border-radius:10px;font-size:14px;line-height:1.6;color:#f87171">
+      <span id="submit-error-text"></span>
+      <a href="https://wa.me/56988974898" target="_blank" rel="noopener" style="color:var(--green)">Write to us on WhatsApp →</a>
+    </div>
   </div>
 
   <!-- LOADING -->
@@ -299,6 +304,7 @@ function updateProgress() {
 }
 
 async function submitAnalisis() {
+  document.getElementById('submit-error').style.display = 'none';
   document.getElementById('quiz-step').style.display = 'none';
   document.getElementById('loading-step').style.display = 'block';
 
@@ -317,7 +323,7 @@ async function submitAnalisis() {
         nombre: userName,
       }),
     });
-    const data = await res.json();
+    const data = await res.json().catch(() => ({}));
 
     if (res.status === 401) {
       document.getElementById('loading-step').style.display = 'none';
@@ -325,15 +331,24 @@ async function submitAnalisis() {
       document.querySelector('.gate-sub').textContent = data.error || 'Your access expired. Request a new code from the ERA Test.';
       return;
     }
-    if (!data.ok) throw new Error(data.error);
+    if (!data.ok) { mostrarErrorAnalisis(data.guardado === true); return; }
     if (window.__funnelTrack) window.__funnelTrack('informe_completado');
     if (window.__linkedinConversion) window.__linkedinConversion();
     renderResult(data);
-  } catch (err) {
-    document.getElementById('loading-step').style.display = 'none';
-    document.getElementById('quiz-step').style.display = 'block';
-    alert('Error generating the report: ' + err.message + '. Please try again.');
+  } catch (_) {
+    mostrarErrorAnalisis(false);
   }
+}
+
+// Only say the answers are saved when the server confirms it (`guardado: true`).
+// Without confirmation (offline, service down) they live only on this page.
+function mostrarErrorAnalisis(guardado) {
+  document.getElementById('loading-step').style.display = 'none';
+  document.getElementById('quiz-step').style.display = 'block';
+  document.getElementById('submit-error-text').textContent = guardado
+    ? "We couldn't generate your report right now. Your answers were saved in our system. You can try again now or write to us on WhatsApp and we'll pick it up with you."
+    : "We couldn't reach the service. Your answers stay on this page as long as you don't close or reload it, so you can try again. If it still fails, write to us on WhatsApp.";
+  document.getElementById('submit-error').style.display = 'block';
 }
 
 function renderResult(data) {
