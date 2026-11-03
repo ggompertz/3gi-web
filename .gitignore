@@ -20,4 +20,4 @@ Thumbs.db
 # Environment
 .env
 .env.local
-graphify-out/.rebuild.lock
+graphify-out/
