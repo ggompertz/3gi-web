@@ -257,3 +257,11 @@ Rules:
 - IF graphify-out/wiki/index.md EXISTS, navigate it instead of reading raw files
 - For cross-module "how does X relate to Y" questions, prefer `graphify query "<question>"`, `graphify path "<A>" "<B>"`, or `graphify explain "<concept>"` over grep — these traverse the graph's EXTRACTED + INFERRED edges instead of scanning files
 - After modifying code, run `graphify update .` to keep the graph current (AST-only, no API cost).
+
+## Reversión (comprobada en seco el 2026-11-03)
+
+Comprobada en seco el 2026-11-03: se verificó que el camino existe, sin ejecutar ningún rollback. Volver atrás en producción lo autoriza Gonzalo. Reglas y límites comunes en `my-config/standards/reversion.md`.
+
+- **Sitio (Cloudflare Pages):** el despliegue es automático al hacer push a `master`, así que la vía documentada es `git revert -m 1 <sha-de-la-fusión>` y push (redespliega en unos 2 minutos). Existe también *Rollback* en el panel de Cloudflare Pages, *Deployments*. **No comprobado**: solo se verificó el camino por Git.
+- **Copia del servidor:** `/root/3gi-web` se actualiza con `git pull origin master`. Si se usó, volver con `git checkout <sha-anterior>` en esa carpeta.
+- **Después:** comprobar la página y los eventos del embudo (`funnel-track.js`) con un clic real.
