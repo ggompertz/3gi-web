@@ -22,7 +22,7 @@ El formulario «Preparación del Radar» (`/radar/previo/`) recoge información 
 - Domicilio publicado: **solo «Viña del Mar, Chile»**. El domicilio de casa matriz de la cédula parece residencial y no se publica. El RUT personal del usuario de la cédula tampoco.
 - Correo de contacto y de solicitudes: chat@3gi.cl.
 - IA: redacción genérica «modelos de inteligencia artificial».
-- Plazo de 12 meses: **confirmar** (el mensaje con la decisión llegó cortado: «12 meses o…»).
+- Plazo de conservación para quien no contrata: **12 meses** desde el último contacto (confirmado por Gonzalo el 2026-11-05).
 
 ## Preguntas para el abogado
 1. **Base de licitud del cuestionario:** ¿bastan las «medidas precontractuales a petición del titular», o conviene un consentimiento expreso en el propio formulario? El formulario hoy solo muestra un aviso con enlace a esta política.
