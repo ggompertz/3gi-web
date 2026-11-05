@@ -6,7 +6,7 @@ Rama: `docs/privacidad-radar-previo` · Páginas: `src/pages/privacidad.astro` (
 ## Por qué se cambia
 El formulario «Preparación del Radar» (`/radar/previo/`) recoge información de la empresa y datos de contacto antes de la reunión. La política vigente (octubre 2026) cubría el Test ERA y el seguimiento comercial, pero no ese cuestionario, no identificaba a la sociedad responsable y no definía qué pasa con los datos de quien no contrata. La Ley 21.719 entra en vigencia el **1 de diciembre de 2026** (BCN, versión 2026-12-01).
 
-## Qué cambia (los mismos 8 puntos en ES y EN)
+## Qué cambia (los mismos 9 puntos en ES y EN; el 9 se agregó el 2026-11-05 por decisión de Gonzalo)
 1. **Fecha y versión:** «noviembre 2026 · Versión 2026-11» (la ley pide fecha y versión de la política).
 2. **§1 Responsable:** «3G Intelligence es el nombre comercial de 3GI SpA, RUT 78.388.535-2, con domicilio en Viña del Mar, Chile, representada por Gonzalo Gompertz Geldres». Contacto único: **chat@3gi.cl** (antes gonzalo@3gi.cl; cambiado también en la frase de derechos de la §6).
 3. **§2 Datos:** nuevo punto sobre el cuestionario («No te pedimos datos personales de tus clientes»).
@@ -15,6 +15,7 @@ El formulario «Preparación del Radar» (`/radar/previo/`) recoge información 
 6. **§5 Conservación:** si no se contrata, las respuestas y demás datos de preparación se eliminan o anonimizan a más tardar **12 meses** después del último contacto; el enlace del cuestionario vence a los 14 días.
 7. **§6 Derechos:** desde el 1-dic-2026, si no respondemos o rechazamos una solicitud, el titular puede reclamar ante la Agencia de Protección de Datos Personales.
 8. **§7 Seguridad y §8 Cookies:** enlace único, intransferible, que vence y puede revocarse; conexión cifrada; la página no usa analítica ni cookies; nueva fila `rp_t` (sessionStorage, estrictamente necesaria, hasta cerrar la pestaña).
+9. **§4 Transferencias:** se retira la frase sobre las «Cláusulas Contractuales Modelo aprobadas por el Ministerio de Economía». Queda «Estos proveedores están ubicados en Estados Unidos», que sigue siendo incompleta (Hetzner está en Alemania; ver más abajo).
 
 ## Decisiones de Gonzalo (2026-11-05)
 - Razón social y RUT: los de la cédula del SII (emisión 27-03-2026).
@@ -32,7 +33,7 @@ El formulario «Preparación del Radar» (`/radar/previo/`) recoge información 
 6. **Conservación general (§5):** «mientras dure la relación comercial» sigue sin plazo para clientes; la ley exige conservar solo el tiempo necesario.
 
 ## Lo que NO se modificó porque no se pudo verificar (revisar)
-- La frase *«La transferencia se ampara en las Cláusulas Contractuales Modelo aprobadas por el Ministerio de Economía de Chile»*: no hay evidencia de que existan. En la ley nueva la Agencia es quien determina los países con nivel adecuado.
+- ~~La frase *«La transferencia se ampara en las Cláusulas Contractuales Modelo aprobadas por el Ministerio de Economía de Chile»*~~ **Retirada de ambas páginas por decisión de Gonzalo (2026-11-05), mientras revisa el abogado**: no hay evidencia de que existan. En la ley nueva la Agencia es quien determina los países con nivel adecuado. **Queda sin fundamento publicado para las transferencias internacionales**: el abogado debe indicar cuál corresponde (ver el texto propuesto con alternativas A, B y C que se le envía aparte).
 - La frase *«Estos proveedores están ubicados en Estados Unidos»* es incompleta. **Ubicación verificada el 2026-11-05** (resolución DNS y geolocalización de IP; la región de la base de datos, con el panel de Supabase):
   - **Hetzner (servidor actual, `178.104.93.211`): Núremberg, Alemania.** Ahí resuelven n8n, auth, pipeline, los agentes, wa, slides y el resto de los subdominios de la plataforma. El servidor anterior (Ashburn, EE.UU.) fue dado de baja tras el incidente de seguridad de septiembre de 2026.
   - **Supabase (base de datos, donde se guardan las respuestas del cuestionario): región `us-west-2`, EE.UU. (Oregón).**
