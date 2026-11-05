@@ -94,7 +94,7 @@ async function test1(browser) {
 
     // 6. Pedir OTP al usuario y verificar via fetch directo
     const otp = await askOtp(EMAIL);
-    const WORKER = 'https://diagnostico-api.3g-ia-agents.com';
+    const WORKER = 'https://diagnostico-api.3gi.cl';
     const verifyBody = await page.evaluate(async ({ worker, id, code }) => {
       const res = await fetch(`${worker}/verify-otp`, {
         method: 'POST', headers: { 'Content-Type': 'application/json' },
@@ -178,7 +178,7 @@ async function test2(browser) {
     ok(`OTP box visible en mobile`);
 
     const otp2 = await askOtp(EMAIL);
-    const WORKER = 'https://diagnostico-api.3g-ia-agents.com';
+    const WORKER = 'https://diagnostico-api.3gi.cl';
     const verifyBody2 = await page.evaluate(async ({ worker, id, code }) => {
       const res = await fetch(`${worker}/verify-otp`, {
         method: 'POST', headers: { 'Content-Type': 'application/json' },
@@ -228,7 +228,7 @@ async function test3(browser) {
     ok('Primer OTP enviado');
 
     // Ingresar código incorrecto (verificar directo con diagId)
-    const WORKER = 'https://diagnostico-api.3g-ia-agents.com';
+    const WORKER = 'https://diagnostico-api.3gi.cl';
     const wrongRes = await page.evaluate(async ({ worker, id }) => {
       const res = await fetch(`${worker}/verify-otp`, {
         method: 'POST', headers: { 'Content-Type': 'application/json' },
