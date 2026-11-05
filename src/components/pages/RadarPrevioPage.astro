@@ -1,0 +1,178 @@
+---
+import LayoutPrivado from '../../layouts/LayoutPrivado.astro';
+import RadarPregunta from './RadarPregunta.astro';
+import { estructura } from '../../data/radar-previo/index.mjs';
+import { radarPrevio, verificarCobertura } from '../../i18n/radar-previo.mjs';
+
+const { lang = 'es' } = Astro.props;
+const t = radarPrevio[lang];
+verificarCobertura(estructura, t); // el build falla si falta o sobra un texto respecto de la estructura
+
+const API = import.meta.env.PUBLIC_RADAR_PREVIO_API ?? 'https://radar-previo-api.3gi.cl';
+
+// Al navegador solo viaja lo necesario para armar y leer el formulario. `destino` y `sugiere` son mapeos internos al Radar
+// (campos de la ficha y rangos de madurez): NO deben salir en el HTML público.
+const paraCliente = (d) => {
+  const o = { tipo: d.tipo };
+  for (const k of ['obligatoria', 'opciones', 'min', 'max', 'requerido', 'ref', 'exclusiva', 'visible_si']) if (d[k] !== undefined) o[k] = d[k];
+  if (d.campos) o.campos = Object.fromEntries(Object.entries(d.campos).map(([k, c]) => [k, paraCliente(c)]));
+  return o;
+};
+const paraNavegador = {
+  secciones: estructura.secciones.map((s) => ({ id: s.id, modulo: s.modulo ?? null, preguntas: s.preguntas })),
+  preguntas: Object.fromEntries(Object.entries(estructura.preguntas).map(([id, d]) => [id, paraCliente(d)])),
+};
+const json = JSON.stringify(paraNavegador).replace(/</g, '\\u003c');
+---
+<LayoutPrivado title={t.ui.pagina_titulo} lang={lang}>
+  <main class="rp" id="rp" data-api={API}>
+    <div class="rp-wrap">
+
+      <section class="rp-pantalla" data-pantalla="cargando">
+        <p class="rp-ayuda" role="status">{t.ui.cargando}</p>
+      </section>
+
+      <section class="rp-pantalla" data-pantalla="invalido" hidden>
+        <h1 class="rp-h1" tabindex="-1">{t.ui.invalido_titulo}</h1>
+        <p>{t.ui.invalido_texto} <a href={`mailto:${t.ui.contacto}`}>{t.ui.contacto}</a></p>
+      </section>
+
+      <section class="rp-pantalla" data-pantalla="error-carga" hidden>
+        <h1 class="rp-h1" tabindex="-1">{t.ui.error_carga_titulo}</h1>
+        <p>{t.ui.error_carga_texto}</p>
+        <button type="button" class="rp-btn" data-reintentar-carga>{t.ui.reintentar}</button>
+      </section>
+
+      <section class="rp-pantalla" data-pantalla="cerrado" hidden>
+        <h1 class="rp-h1" tabindex="-1">{t.ui.cerrado_titulo}</h1>
+        <p>{t.ui.cerrado_texto} <a href={`mailto:${t.ui.contacto}`}>{t.ui.contacto}</a></p>
+      </section>
+
+      <section class="rp-pantalla" data-pantalla="intro" hidden>
+        <h1 class="rp-h1" tabindex="-1">{t.ui.titulo}</h1>
+        <p class="rp-sub">{t.ui.subtitulo}</p>
+        <ul class="rp-lista">
+          <li>{t.ui.intro_guardado}</li>
+          <li>{t.ui.intro_tiempo}</li>
+          <li>{t.ui.intro_no_se}</li>
+        </ul>
+        <p class="rp-privacidad">{t.ui.intro_privacidad} <a href="/privacidad/" target="_blank" rel="noopener noreferrer">{t.ui.privacidad_enlace}</a>.</p>
+        <button type="button" class="rp-btn" data-empezar><span data-empezar-txt>{t.ui.empezar}</span></button>
+      </section>
+
+      {estructura.secciones.map((s) => (
+        <section class="rp-pantalla" data-pantalla="seccion" data-seccion={s.id} data-modulo={s.modulo} hidden>
+          <div class="rp-prog">
+            <p class="rp-prog-txt" data-prog-txt data-min={t.secciones[s.id].minutos}></p>
+            <div class="rp-prog-bar" aria-hidden="true"><div class="rp-prog-fill" data-prog-fill></div></div>
+          </div>
+          <h2 class="rp-h2" tabindex="-1">{t.secciones[s.id].titulo}</h2>
+          {s.preguntas.map((id) => <RadarPregunta id={id} def={estructura.preguntas[id]} dic={t.preguntas[id]} t={t} />)}
+          <div class="rp-nav">
+            <button type="button" class="rp-btn rp-btn-sec" data-ir="anterior">{t.ui.anterior}</button>
+            <button type="button" class="rp-btn" data-ir="siguiente">{t.ui.siguiente}</button>
+          </div>
+        </section>
+      ))}
+
+      <section class="rp-pantalla" data-pantalla="revision" hidden>
+        <h2 class="rp-h2" tabindex="-1">{t.ui.revision_titulo}</h2>
+        <p data-revision-resumen></p>
+        <div data-revision-pendientes hidden>
+          <p class="rp-error-fuerte">{t.ui.revision_pendientes}</p>
+          <ul class="rp-lista" data-revision-lista></ul>
+        </div>
+        <p data-revision-ok hidden>{t.ui.revision_ok}</p>
+        <p class="rp-privacidad">{t.ui.revision_privacidad} <a href="/privacidad/" target="_blank" rel="noopener noreferrer">{t.ui.privacidad_enlace}</a>.</p>
+        <p class="rp-error" role="alert" data-error-envio hidden>{t.ui.error_enviar}</p>
+        <div class="rp-nav">
+          <button type="button" class="rp-btn rp-btn-sec" data-ir="anterior">{t.ui.anterior}</button>
+          <button type="button" class="rp-btn" data-enviar>{t.ui.enviar}</button>
+        </div>
+      </section>
+
+      <section class="rp-pantalla" data-pantalla="enviado" hidden>
+        <h1 class="rp-h1" tabindex="-1">{t.ui.enviado_titulo}</h1>
+        <p>{t.ui.enviado_texto}</p>
+        <p class="rp-ayuda">{t.ui.enviado_editar}</p>
+        <button type="button" class="rp-btn rp-btn-sec" data-editar>{t.ui.editar}</button>
+      </section>
+
+      <div class="rp-conflicto" data-conflicto hidden role="alertdialog" aria-labelledby="rp-conf-t">
+        <p class="rp-conflicto-t" id="rp-conf-t">{t.ui.conflicto_titulo}</p>
+        <p>{t.ui.conflicto_texto}</p>
+        <button type="button" class="rp-btn" data-cargar-servidor>{t.ui.conflicto_boton}</button>
+      </div>
+    </div>
+
+    <div class="rp-estado" role="status" aria-live="polite" data-estado hidden></div>
+
+    <!-- Textos que usa el script. Viven en el HTML (no en el JavaScript) para que las guardias del sitio los revisen. -->
+    <div hidden data-textos>
+      {Object.entries(t.ui).map(([k, v]) => <span data-t={k}>{v}</span>)}
+    </div>
+    <script is:inline type="application/json" id="rp-estructura" set:html={json}></script>
+  </main>
+</LayoutPrivado>
+
+<style is:global>
+  .rp [hidden] { display: none !important; }
+  .rp { padding: 28px 20px 140px; }
+  .rp-wrap { max-width: 720px; margin: 0 auto; }
+  .rp-h1 { font-family: 'Syne', sans-serif; font-weight: 800; font-size: clamp(26px, 5vw, 38px); line-height: 1.12; letter-spacing: -0.02em; margin-bottom: 12px; }
+  .rp-h2 { font-family: 'Syne', sans-serif; font-weight: 700; font-size: clamp(22px, 4vw, 28px); line-height: 1.2; margin: 8px 0 22px; }
+  .rp-sub { color: var(--muted); font-size: 18px; margin-bottom: 20px; }
+  .rp-lista { margin: 0 0 20px 20px; display: grid; gap: 8px; }
+  .rp-privacidad { color: var(--muted); font-size: 14px; margin-bottom: 24px; }
+  .rp-ayuda { color: var(--muted); font-size: 14px; }
+  .rp-prog-txt { color: var(--muted); font-size: 13px; margin-bottom: 8px; }
+  .rp-prog-bar { height: 4px; background: var(--line); border-radius: 2px; overflow: hidden; }
+  .rp-prog-fill { height: 100%; width: 0; background: var(--green); transition: width .3s ease; }
+  .rp-pregunta { border-top: 1px solid var(--line); padding: 22px 0; }
+  .rp-fieldset { border: 0; min-inline-size: 0; }
+  .rp-titulo { font-size: 17px; font-weight: 500; line-height: 1.4; margin-bottom: 8px; padding: 0; }
+  .rp-oblig { margin-left: 10px; font-size: 11px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--green); border: 1px solid var(--grn-dk); border-radius: 20px; padding: 2px 8px; white-space: nowrap; }
+  .rp-controles { display: grid; gap: 14px; margin: 12px 0; }
+  .rp-campo { display: grid; gap: 6px; }
+  .rp-label { font-size: 14px; color: var(--muted); }
+  .rp-input { width: 100%; min-height: 48px; background: var(--surface); color: var(--offwh); border: 1px solid var(--line); border-radius: 10px; padding: 12px 14px; font: inherit; font-size: 16px; }
+  .rp-input:focus { border-color: var(--green); }
+  .rp-input:disabled { opacity: .45; }
+  .rp-textarea { min-height: 110px; resize: vertical; }
+  .rp-opciones { display: grid; gap: 8px; }
+  .rp-opcion { display: flex; align-items: flex-start; gap: 12px; min-height: 48px; padding: 12px 14px; background: var(--surface); border: 1px solid var(--line); border-radius: 10px; cursor: pointer; }
+  .rp-opcion input { width: 20px; height: 20px; margin-top: 2px; accent-color: var(--green); flex: none; }
+  .rp-opcion:has(input:checked) { border-color: var(--green); background: rgba(0, 232, 145, .08); }
+  .rp-opcion:has(input:disabled) { opacity: .45; cursor: default; }
+  .rp-nose { display: inline-flex; align-items: center; gap: 10px; min-height: 44px; font-size: 14px; color: var(--muted); cursor: pointer; }
+  .rp-nose input { width: 20px; height: 20px; accent-color: var(--green); }
+  .rp-error { color: var(--danger); font-size: 14px; margin-top: 8px; }
+  .rp-error-fuerte { color: var(--amber); font-weight: 500; margin-bottom: 8px; }
+  .rp-precarga { background: rgba(0, 232, 145, .06); border: 1px dashed var(--grn-dk); border-radius: 10px; padding: 12px 14px; margin: 10px 0; display: grid; gap: 8px; }
+  .rp-precarga-t { font-size: 14px; font-weight: 500; }
+  .rp-precarga-texto { border-left: 3px solid var(--green); padding-left: 12px; font-size: 15px; white-space: pre-wrap; }
+  .rp-fila { border: 1px solid var(--line); border-radius: 12px; padding: 14px; display: grid; gap: 12px; background: var(--surface-2); margin-bottom: 12px; }
+  .rp-fila-t { font-weight: 500; font-size: 14px; color: var(--green); }
+  .rp-btn { display: inline-flex; align-items: center; justify-content: center; min-height: 48px; padding: 0 22px; border-radius: 10px; border: 1px solid var(--green); background: var(--green); color: var(--night); font: inherit; font-weight: 600; font-size: 16px; cursor: pointer; }
+  .rp-btn:disabled { opacity: .5; cursor: default; }
+  .rp-btn-sec { background: transparent; color: var(--offwh); border-color: var(--line); }
+  .rp-btn-sec:hover:not(:disabled) { border-color: var(--green); color: var(--green); }
+  .rp-btn-chico { min-height: 44px; font-size: 14px; justify-self: start; }
+  .rp-nav { display: flex; justify-content: space-between; gap: 12px; margin-top: 28px; }
+  .rp-estado { position: fixed; left: 50%; bottom: 16px; transform: translateX(-50%); z-index: 20; max-width: min(92vw, 640px); background: var(--surface-2); border: 1px solid var(--line); border-radius: 999px; padding: 10px 18px; font-size: 14px; text-align: center; box-shadow: 0 6px 24px rgba(0, 0, 0, .5); }
+  .rp-estado[data-nivel="ok"] { border-color: var(--grn-dk); }
+  .rp-estado[data-nivel="aviso"] { border-color: var(--amber); color: var(--amber); }
+  .rp-estado[data-nivel="error"] { border-color: var(--danger); color: var(--danger); }
+  .rp-conflicto { position: fixed; inset: auto 16px 80px 16px; max-width: 560px; margin: 0 auto; z-index: 30; background: var(--surface-2); border: 1px solid var(--amber); border-radius: 14px; padding: 18px; display: grid; gap: 10px; }
+  .rp-conflicto-t { font-weight: 600; color: var(--amber); }
+  @media (max-width: 480px) {
+    .rp-nav { flex-direction: column-reverse; }
+    .rp-nav .rp-btn, .rp-pregunta .rp-btn { width: 100%; }
+    .rp-estado { border-radius: 14px; }
+  }
+  @media (prefers-reduced-motion: reduce) { .rp-prog-fill { transition: none; } html { scroll-behavior: auto; } }
+</style>
+
+<script>
+  import '../../scripts/radar-previo.js';
+</script>

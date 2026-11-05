@@ -1,0 +1,153 @@
+{
+  "plantilla": "core",
+  "version": "1.0.0",
+  "secciones": [
+    { "id": "s1", "preguntas": ["n01", "n02", "n03", "n04", "n05"] },
+    { "id": "s2", "preguntas": ["n06", "n07", "n08"] },
+    { "id": "s3", "preguntas": ["n09", "n10", "n11", "n12"] },
+    { "id": "s4", "preguntas": ["n13", "n14", "n15", "n16"] },
+    { "id": "s5", "preguntas": ["n17", "n18", "n19", "n20", "n21"] },
+    { "id": "s6", "preguntas": ["n22", "n23", "n24", "n25"] },
+    { "id": "s7", "preguntas": ["n26", "n27", "n28", "n29", "n30", "n31"] }
+  ],
+  "preguntas": {
+    "n01": { "tipo": "texto_largo", "obligatoria": true, "precarga": "modelo", "destino": "a1.modelo_negocio" },
+    "n02": {
+      "tipo": "compuesto", "obligatoria": true, "precarga": "tamanio", "destino": "a1.tamanio_equipo",
+      "campos": {
+        "personas": { "tipo": "numero", "min": 1, "max": 1000 },
+        "composicion": { "tipo": "seleccion", "opciones": ["solo_yo", "yo_dependientes", "yo_externos", "ambos"] }
+      }
+    },
+    "n03": {
+      "tipo": "compuesto", "destino": "a1.clientes_activos",
+      "campos": {
+        "clientes": { "tipo": "seleccion", "opciones": ["lt15", "r15_40", "r41_100", "gt100"] },
+        "tendencia": { "tipo": "seleccion", "opciones": ["crecio", "igual", "bajo"] }
+      }
+    },
+    "n04": { "tipo": "texto_corto", "precarga": "objetivo", "destino": "a1.objetivos_12m" },
+    "n05": { "tipo": "seleccion", "opciones": ["yo", "yo_con_otros", "otra_persona"], "destino": "gatillo:decide_solo" },
+
+    "n06": {
+      "tipo": "repetidor", "obligatoria": true, "min": 1, "max": 3, "destino": "a2.dolores",
+      "campos": {
+        "area": { "tipo": "seleccion", "opciones": ["ventas", "atencion_clientes", "operaciones", "finanzas_administracion", "cumplimiento", "marketing", "otra"] },
+        "descripcion": { "tipo": "texto_corto", "requerido": true },
+        "horas": { "tipo": "numero", "min": 0, "max": 168 },
+        "frecuencia": { "tipo": "seleccion", "opciones": ["diaria", "semanal", "mensual", "anual"] }
+      }
+    },
+    "n07": { "tipo": "ref_repetidor", "ref": "n06", "destino": "a2.dolor_principal" },
+    "n08": { "tipo": "texto_corto", "destino": "a4.por_que_asi" },
+
+    "n09": {
+      "tipo": "compuesto", "obligatoria": true, "destino": "a3.sistemas",
+      "campos": {
+        "herramientas": { "tipo": "multiseleccion", "opciones": ["excel", "whatsapp", "correo", "drive", "crm", "contable_erp", "plataformas_terceros", "software_rubro", "otra", "ninguna"], "exclusiva": "ninguna" },
+        "crm_cual": { "tipo": "texto_corto" },
+        "erp_cual": { "tipo": "texto_corto" },
+        "software_cual": { "tipo": "texto_corto" },
+        "otra_cual": { "tipo": "texto_corto" }
+      }
+    },
+    "n10": {
+      "tipo": "seleccion", "obligatoria": true,
+      "opciones": ["cabeza_papel", "whatsapp_correo", "excel", "sistema_diario", "varios_conectados"],
+      "destino": "a3.centralizado",
+      "sugiere": [
+        { "dimension": "datos", "rangos": { "cabeza_papel": [1, 1], "whatsapp_correo": [1, 1], "excel": [1, 2], "sistema_diario": [3, 4], "varios_conectados": [4, 4] } },
+        { "dimension": "tecnologia", "rangos": { "cabeza_papel": [1, 1], "whatsapp_correo": [1, 1], "excel": [1, 2], "sistema_diario": [3, 4], "varios_conectados": [4, 4] } }
+      ]
+    },
+    "n11": {
+      "tipo": "seleccion", "opciones": ["no", "notas", "principales", "revisa_mide"], "destino": "evidencia:procesos",
+      "sugiere": [{ "dimension": "procesos", "rangos": { "no": [1, 1], "notas": [2, 2], "principales": [3, 3], "revisa_mide": [4, 4] } }]
+    },
+    "n12": {
+      "tipo": "compuesto", "destino": "a3.intentos_previos",
+      "campos": {
+        "opcion": { "tipo": "seleccion", "opciones": ["no", "si_funciono", "si_no_adoptamos"] },
+        "detalle": { "tipo": "texto_corto" }
+      }
+    },
+
+    "n13": {
+      "tipo": "multiseleccion", "opciones": ["identificacion_contacto", "situacion_financiera", "perfil_riesgo", "salud", "menores", "ninguno"],
+      "exclusiva": "ninguno", "destino": "a5.datos_regulados"
+    },
+    "n14": {
+      "tipo": "seleccion", "opciones": ["no", "informal", "escrita", "escrita_revisa"], "destino": "a5.politica_privacidad",
+      "sugiere": [{ "dimension": "gobernanza", "rangos": { "no": [1, 1], "informal": [2, 2], "escrita": [3, 3], "escrita_revisa": [3, 4] } }]
+    },
+    "n15": {
+      "tipo": "multiseleccion", "opciones": ["clave_bloqueo", "doble_verificacion", "respaldos_auto", "disco_cifrado", "confidencialidad_terceros", "ninguna"],
+      "exclusiva": "ninguna", "destino": "evidencia:gobernanza,datos"
+    },
+    "n16": {
+      "tipo": "compuesto", "destino": "senal",
+      "campos": {
+        "opcion": { "tipo": "seleccion", "opciones": ["no", "susto", "si"] },
+        "detalle": { "tipo": "texto_corto" }
+      }
+    },
+
+    "n17": {
+      "tipo": "compuesto", "destino": "evidencia:canales",
+      "campos": {
+        "principal": { "tipo": "seleccion", "opciones": ["referidos", "contactos_personales", "redes", "web_busquedas", "alianzas_instituciones", "eventos", "otra"] },
+        "segunda": { "tipo": "seleccion", "opciones": ["referidos", "contactos_personales", "redes", "web_busquedas", "alianzas_instituciones", "eventos", "otra"] }
+      }
+    },
+    "n18": {
+      "tipo": "compuesto", "destino": "evidencia:presencia",
+      "campos": {
+        "lugares": { "tipo": "multiseleccion", "opciones": ["sitio_propio", "ficha_google", "instagram", "linkedin", "otra", "ninguno"], "exclusiva": "ninguno" },
+        "enlaces": { "tipo": "texto_corto" }
+      }
+    },
+    "n19": {
+      "tipo": "seleccion", "opciones": ["no_hago", "cuando_escriben", "manual_periodico", "programado_registro"], "destino": "evidencia:automatizacion_com,retencion",
+      "sugiere": [
+        { "dimension": "automatizacion_com", "rangos": { "no_hago": [1, 1], "cuando_escriben": [1, 2], "manual_periodico": [2, 3], "programado_registro": [3, 5] } },
+        { "dimension": "retencion", "rangos": { "no_hago": [1, 1], "cuando_escriben": [1, 2], "manual_periodico": [2, 3], "programado_registro": [3, 5] } }
+      ]
+    },
+    "n20": {
+      "tipo": "seleccion", "opciones": ["nunca", "rara_vez", "mensual_mas", "semanal"], "destino": "evidencia:contenido",
+      "sugiere": [{ "dimension": "contenido", "rangos": { "nunca": [1, 1], "rara_vez": [1, 2], "mensual_mas": [3, 4], "semanal": [4, 5] } }]
+    },
+    "n21": {
+      "tipo": "seleccion", "opciones": ["casi_ninguno", "algunos_sin_registro", "muchos_con_cuenta"], "destino": "evidencia:retencion",
+      "sugiere": [{ "dimension": "retencion", "rangos": { "casi_ninguno": [1, 1], "algunos_sin_registro": [2, 3], "muchos_con_cuenta": [4, 5] } }]
+    },
+
+    "n22": { "tipo": "texto_corto", "precarga": "decision_sin_datos", "destino": "a4.decision_sin_datos" },
+    "n23": { "tipo": "texto_corto", "precarga": "proceso_clave", "destino": "a4.proceso_clave" },
+    "n24": {
+      "tipo": "compuesto", "precarga": "experiencia_ia", "destino": "a4.experiencia_ia",
+      "campos": {
+        "opcion": { "tipo": "seleccion", "opciones": ["no", "personal_algo", "personal_seguido", "en_procesos"] },
+        "detalle": { "tipo": "texto_corto" }
+      }
+    },
+    "n25": {
+      "tipo": "seleccion", "opciones": ["resistencia", "desgano", "disposicion", "entusiasmo"], "destino": "evidencia:personas",
+      "visible_si": { "pregunta": "n02", "campo": "personas", "op": "gt", "valor": 1 },
+      "sugiere": [{ "dimension": "personas", "rangos": { "resistencia": [1, 1], "desgano": [2, 2], "disposicion": [3, 3], "entusiasmo": [4, 4] } }]
+    },
+
+    "n26": { "tipo": "texto_largo", "obligatoria": true, "destino": "q1" },
+    "n27": { "tipo": "texto_largo", "destino": "q1" },
+    "n28": { "tipo": "texto_largo", "destino": "q3", "visible_si": { "pregunta": "n05", "op": "ne", "valor": "yo" } },
+    "n29": {
+      "tipo": "compuesto", "destino": "q4",
+      "campos": {
+        "presupuesto": { "tipo": "seleccion", "opciones": ["si", "no", "depende"] },
+        "plazo": { "tipo": "seleccion", "opciones": ["dos_semanas", "uno_dos_meses", "mas_dos_meses"] }
+      }
+    },
+    "n30": { "tipo": "texto_largo", "destino": "q5" },
+    "n31": { "tipo": "texto_largo", "destino": "nota" }
+  }
+}

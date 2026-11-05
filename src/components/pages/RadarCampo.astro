@@ -1,0 +1,49 @@
+---
+// Un control de formulario según su tipo en la estructura. `path` identifica el valor (p. ej. «n02.personas» o «n06[#].area»;
+// «#» se reemplaza por el índice al clonar una fila del repetidor). Los textos llegan del diccionario, nunca de JavaScript.
+const { path, def, dic = {}, labelledby, t } = Astro.props;
+const opciones = def.opciones ?? [];
+const enFila = path.includes('[#]'); // dentro de una fila clonada no se usan ids (las etiquetas envuelven al control)
+const idBase = enFila ? undefined : 'rp-' + path.replace(/[^\w]/g, '_');
+const label = dic.label;
+const aria = enFila ? { 'aria-label': label } : (!label && labelledby ? { 'aria-labelledby': labelledby } : {});
+const ariaGrupo = enFila ? { 'aria-label': label } : { 'aria-labelledby': label ? idBase + '_l' : labelledby };
+const usaSelect = def.tipo === 'seleccion' && opciones.length > 5;
+---
+<div class="rp-campo" data-en-fila={enFila ? "1" : undefined}>
+  {label && !enFila && def.tipo !== 'seleccion' && def.tipo !== 'multiseleccion' && <label class="rp-label" for={idBase}>{label}</label>}
+  {label && !enFila && (def.tipo === 'seleccion' || def.tipo === 'multiseleccion') && !usaSelect && <p class="rp-label" id={idBase + '_l'}>{label}</p>}
+  {label && !enFila && usaSelect && <label class="rp-label" for={idBase}>{label}</label>}
+  {label && enFila && (usaSelect || !['seleccion', 'multiseleccion'].includes(def.tipo)) && <span class="rp-label">{label}</span>}
+  {label && enFila && !usaSelect && ['seleccion', 'multiseleccion'].includes(def.tipo) && <p class="rp-label">{label}</p>}
+
+  {def.tipo === 'texto_corto' && (
+    <input class="rp-input" type="text" id={idBase} data-campo={path} maxlength="500" autocomplete="off" placeholder={dic.placeholder} {...aria} />
+  )}
+  {def.tipo === 'texto_largo' && (
+    <textarea class="rp-input rp-textarea" id={idBase} data-campo={path} rows="4" maxlength="4000" placeholder={dic.placeholder} {...aria}></textarea>
+  )}
+  {def.tipo === 'numero' && (
+    <input class="rp-input rp-numero" type="number" inputmode="numeric" step="1" min={def.min} max={def.max} id={idBase} data-campo={path} autocomplete="off" {...aria} />
+  )}
+  {usaSelect && (
+    <select class="rp-input" id={idBase} data-campo={path} {...aria}>
+      <option value="">{t.ui.elegir}</option>
+      {opciones.map((o) => <option value={o}>{dic.opciones[o]}</option>)}
+    </select>
+  )}
+  {def.tipo === 'seleccion' && !usaSelect && (
+    <div class="rp-opciones" role="radiogroup" {...ariaGrupo}>
+      {opciones.map((o) => (
+        <label class="rp-opcion"><input type="radio" name={path} value={o} data-campo={path} /><span>{dic.opciones[o]}</span></label>
+      ))}
+    </div>
+  )}
+  {def.tipo === 'multiseleccion' && (
+    <div class="rp-opciones" role="group" {...ariaGrupo}>
+      {opciones.map((o) => (
+        <label class="rp-opcion"><input type="checkbox" name={path} value={o} data-campo={path} data-exclusiva={def.exclusiva === o ? '1' : undefined} /><span>{dic.opciones[o]}</span></label>
+      ))}
+    </div>
+  )}
+</div>
