@@ -246,14 +246,14 @@ function resumen() {
   let nose = 0;
   for (const id of ids) { if (noSe(id)) nose++; else if (!vacia(leerPregunta(id))) respondidas++; }
   const faltan = ids.filter((id) => EST.preguntas[id].obligatoria && !noSe(id) && vacia(leerPregunta(id)));
-  return { total: ids.length, respondidas, nose, faltan };
+  return { total: ids.length, respondidas, nose, contestadas: respondidas + nose, faltan }; // «No sé» cuenta como contestada
 }
 function irARevision(faltanServidor) {
   const r = resumen();
   const faltan = faltanServidor ?? r.faltan;
   S.activa = S.seccionesActivas.length;
   mostrar('revision');
-  $('[data-revision-resumen]').textContent = fmt(T.revision_resumen, { n: r.respondidas, total: r.total, nose: r.nose });
+  $('[data-revision-resumen]').textContent = fmt(T.revision_resumen, { c: r.contestadas, n: r.respondidas, total: r.total, nose: r.nose });
   $('[data-revision-pendientes]').hidden = faltan.length === 0;
   $('[data-revision-ok]').hidden = faltan.length > 0;
   const lista = $('[data-revision-lista]');

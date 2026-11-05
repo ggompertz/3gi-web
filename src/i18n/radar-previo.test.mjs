@@ -103,3 +103,14 @@ test('glosario de marca: «ERA Test» en inglés y «Test ERA» en español; Rad
   assert.match(en, /\bRadar\b/); assert.match(es, /\bRadar\b/);
   assert.doesNotMatch(`${en}${es}`, /\b[Ee]ra\b(?! de| en| a| que)/, 'ERA debe ir en mayúsculas');
 });
+
+// Misma frase que el aviso al consultor, el Pipeline y el archivo de respuestas (3gi-platform: validar.test.mjs, textoAvance).
+// Si se cambia aquí, hay que cambiarla allá: este ejemplo literal es idéntico en ambos repositorios.
+test('la frase del avance es la misma que en el resto del sistema y «No sé» cuenta como contestada', () => {
+  const fmt = (s, o) => s.replace(/\{(\w+)\}/g, (_, k) => o[k]); // igual que en src/scripts/radar-previo.js
+  const datos = { c: 4, total: 31, n: 2, nose: 2 };
+  assert.equal(fmt(radarPrevio.es.ui.revision_resumen, datos), '4 de 31 preguntas contestadas (respondidas: 2 · «No sé»: 2)');
+  assert.equal(fmt(radarPrevio.en.ui.revision_resumen, datos), '4 of 31 questions completed (answered: 2 · “I don’t know”: 2)');
+  const claves = (t) => [...t.matchAll(/\{(\w+)\}/g)].map((m) => m[1]).sort().join();
+  assert.equal(claves(radarPrevio.es.ui.revision_resumen), claves(radarPrevio.en.ui.revision_resumen));
+});
