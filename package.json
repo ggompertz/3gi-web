@@ -7,7 +7,8 @@
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "test:guardia": "node --test src/integrations/guardia-idioma.test.mjs src/integrations/guardia-diagnostico.test.mjs"
+    "test:guardia": "node --test src/integrations/guardia-idioma.test.mjs src/integrations/guardia-diagnostico.test.mjs",
+    "test:era": "node --test src/test-era-escala.test.mjs"
   },
   "repository": {
     "type": "git",
