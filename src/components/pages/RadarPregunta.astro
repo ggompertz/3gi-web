@@ -1,0 +1,54 @@
+---
+import RadarCampo from './RadarCampo.astro';
+// Una pregunta completa: título, ayuda, aviso de precarga, controles, «No sé» y su propio mensaje de error.
+const { id, def, dic, t } = Astro.props;
+const legendId = `rp-t-${id}`;
+const condicion = def.visible_si ? JSON.stringify(def.visible_si) : undefined;
+const camposDe = (d) => Object.entries(d.campos ?? {});
+---
+<div class="rp-pregunta" data-pregunta={id} data-tipo={def.tipo} data-visible-si={condicion} data-obligatoria={def.obligatoria ? '1' : undefined}>
+  <fieldset class="rp-fieldset">
+    <legend class="rp-titulo" id={legendId}>{dic.titulo}{def.obligatoria && <span class="rp-oblig">{t.ui.obligatoria}</span>}</legend>
+    {dic.ayuda && <p class="rp-ayuda">{dic.ayuda}</p>}
+
+    {def.precarga && (
+      <div class="rp-precarga" data-precarga hidden>
+        <p class="rp-precarga-t">{t.ui.precarga_titulo}</p>
+        <blockquote class="rp-precarga-texto" data-precarga-texto></blockquote>
+        <p class="rp-ayuda">{t.ui.precarga_nota}</p>
+        <button type="button" class="rp-btn rp-btn-sec" data-usar-precarga hidden>{t.ui.precarga_usar}</button>
+      </div>
+    )}
+
+    <div class="rp-controles" data-controles>
+      {def.tipo === 'compuesto' && camposDe(def).map(([k, c]) => <RadarCampo path={`${id}.${k}`} def={c} dic={dic.campos[k]} t={t} />)}
+
+      {def.tipo === 'repetidor' && (
+        <div class="rp-repetidor" data-repetidor data-max={def.max}>
+          <template data-fila>
+            <div class="rp-fila" data-fila-activa>
+              <p class="rp-fila-t" data-fila-titulo></p>
+              {camposDe(def).map(([k, c]) => <RadarCampo path={`${id}[#].${k}`} def={c} dic={dic.campos[k]} t={t} />)}
+              <button type="button" class="rp-btn rp-btn-sec rp-btn-chico" data-quitar-fila>{t.ui.quitar}</button>
+            </div>
+          </template>
+          <div data-filas></div>
+          <button type="button" class="rp-btn rp-btn-sec" data-agregar-fila>{t.ui.agregar_tarea}</button>
+        </div>
+      )}
+
+      {def.tipo === 'ref_repetidor' && (
+        <div class="rp-campo">
+          <select class="rp-input" data-campo={id} data-ref={def.ref} aria-labelledby={legendId}>
+            <option value="">{t.ui.elegir}</option>
+          </select>
+        </div>
+      )}
+
+      {!['compuesto', 'repetidor', 'ref_repetidor'].includes(def.tipo) && <RadarCampo path={id} def={def} dic={dic} labelledby={legendId} t={t} />}
+    </div>
+
+    <label class="rp-nose"><input type="checkbox" data-nose={id} /><span>{t.ui.no_se}</span></label>
+    <p class="rp-error" role="alert" data-error hidden></p>
+  </fieldset>
+</div>

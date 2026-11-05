@@ -1,0 +1,60 @@
+---
+// Layout de páginas privadas (enlace único por cliente): sin analítica, sin banner de cookies, sin canonical ni hreflang,
+// con noindex. NO reemplaza a Layout.astro; existe para no cargar GTM, PostHog ni LinkedIn donde el cliente escribe información
+// de su negocio. Hoy lo usa /radar/previo/. Las cabeceras X-Robots-Tag y Referrer-Policy van en public/_headers.
+import '@fontsource/syne/700.css';
+import '@fontsource/syne/800.css';
+import '@fontsource/dm-sans/400.css';
+import '@fontsource/dm-sans/500.css';
+
+interface Props {
+  title: string;
+  lang?: string;
+}
+const { title, lang = 'es' } = Astro.props;
+---
+<!doctype html>
+<html lang={lang}>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    <meta name="robots" content="noindex, nofollow, noarchive" />
+    <meta name="referrer" content="no-referrer" />
+    <meta name="color-scheme" content="dark" />
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%2306060D'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-family='Arial Black,sans-serif' font-weight='900' font-size='13' fill='%2300E891'%3E3G%3C/text%3E%3C/svg%3E" />
+    <style is:global>
+      :root {
+        --green: #00E891;
+        --grn-dk: #009E60;
+        --night: #06060D;
+        --surface: #0E0E1A;
+        --surface-2: #141422;
+        --offwh: #EEF1F6;
+        --muted: #A3ACBB;
+        --line: #26263A;
+        --amber: #F59E0B;
+        --danger: #FF6B6B;
+      }
+      *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+      html { scroll-behavior: smooth; }
+      body { background: var(--night); color: var(--offwh); font-family: 'DM Sans', sans-serif; font-size: 16px; line-height: 1.6; min-height: 100vh; -webkit-font-smoothing: antialiased; }
+      a { color: var(--green); }
+      :focus-visible { outline: 3px solid var(--green); outline-offset: 2px; border-radius: 4px; }
+      .rp-cabecera { border-bottom: 1px solid var(--line); background: rgba(6,6,13,.92); }
+      .rp-cabecera-in { max-width: 720px; margin: 0 auto; padding: 14px 20px; display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+      .rp-logo { width: 150px; height: auto; display: block; }
+      .rp-pie { max-width: 720px; margin: 0 auto; padding: 32px 20px 56px; font-size: 13px; color: var(--muted); }
+      .rp-sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+    </style>
+  </head>
+  <body>
+    <header class="rp-cabecera">
+      <div class="rp-cabecera-in">
+        <img class="rp-logo" src="/logo.png" width="1140" height="204" alt="3G Intelligence" />
+      </div>
+    </header>
+    <slot />
+    <footer class="rp-pie">3G Intelligence · IA aplicada al negocio real</footer>
+  </body>
+</html>

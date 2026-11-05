@@ -1,0 +1,22 @@
+{
+  "plantilla": "financiero",
+  "version": "1.0.0",
+  "inserta_despues": "s4",
+  "secciones": [
+    { "id": "sf", "preguntas": ["f01", "f02", "f03", "f04"] }
+  ],
+  "preguntas": {
+    "f01": {
+      "tipo": "multiseleccion", "opciones": ["ley_fintec", "ncg_502", "ley_21719", "otra"], "destino": "contexto"
+    },
+    "f02": {
+      "tipo": "seleccion", "opciones": ["no_formal", "papel", "excel", "plataforma_institucion", "formulario_propio"], "destino": "evidencia:procesos,datos"
+    },
+    "f03": {
+      "tipo": "seleccion", "opciones": ["no_formal", "papel", "excel", "plataforma_institucion", "formulario_propio"], "destino": "evidencia:procesos,gobernanza"
+    },
+    "f04": {
+      "tipo": "seleccion", "opciones": ["nada", "parte", "casi_todo"], "destino": "contexto"
+    }
+  }
+}

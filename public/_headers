@@ -2,3 +2,16 @@
   X-Robots-Tag: all
   X-Frame-Options: DENY
   Content-Security-Policy: frame-ancestors 'none'
+
+# Páginas privadas con enlace único (formulario «Preparación del Radar»): fuera de buscadores, sin Referer y sin caché.
+# Se quita el X-Robots-Tag general para que no conviva «all» con «noindex»; el <meta name="robots"> de LayoutPrivado refuerza lo mismo.
+/radar/*
+  ! X-Robots-Tag
+  X-Robots-Tag: noindex, nofollow, noarchive
+  Referrer-Policy: no-referrer
+  Cache-Control: no-store
+/en/radar/*
+  ! X-Robots-Tag
+  X-Robots-Tag: noindex, nofollow, noarchive
+  Referrer-Policy: no-referrer
+  Cache-Control: no-store
