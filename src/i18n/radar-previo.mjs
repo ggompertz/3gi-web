@@ -51,7 +51,8 @@ export const radarPrevio = {
       cerrado_titulo: 'Este formulario ya fue cerrado',
       cerrado_texto: 'Ya recibimos tus respuestas. Si necesitas cambiar algo, escríbenos.',
       revision_titulo: 'Revisa antes de enviar',
-      revision_resumen: 'Respondiste {n} de {total} preguntas y dejaste {nose} marcadas como «No sé / lo vemos en la reunión».',
+      // Misma frase que el aviso al consultor, el Pipeline y el archivo de respuestas (3gi-platform, textoAvance). «No sé» cuenta como contestada.
+      revision_resumen: '{c} de {total} preguntas contestadas (respondidas: {n} · «No sé»: {nose})',
       revision_pendientes: 'Faltan estas preguntas obligatorias:',
       revision_ok: 'Están todas las preguntas obligatorias.',
       revision_ir: 'Ir a la pregunta',
@@ -225,7 +226,7 @@ export const radarPrevio = {
       cerrado_titulo: 'This form is now closed',
       cerrado_texto: 'We have already received your answers. If you need to change something, write to us.',
       revision_titulo: 'Review before sending',
-      revision_resumen: 'You answered {n} of {total} questions and left {nose} marked as “I don’t know / let’s cover it in the meeting”.',
+      revision_resumen: '{c} of {total} questions completed (answered: {n} · “I don’t know”: {nose})',
       revision_pendientes: 'These required questions are still missing:',
       revision_ok: 'All required questions are answered.',
       revision_ir: 'Go to the question',
