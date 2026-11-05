@@ -33,7 +33,11 @@ El formulario «Preparación del Radar» (`/radar/previo/`) recoge información 
 
 ## Lo que NO se modificó porque no se pudo verificar (revisar)
 - La frase *«La transferencia se ampara en las Cláusulas Contractuales Modelo aprobadas por el Ministerio de Economía de Chile»*: no hay evidencia de que existan. En la ley nueva la Agencia es quien determina los países con nivel adecuado.
-- La frase *«Estos proveedores están ubicados en Estados Unidos»*: Hetzner opera desde Alemania (Núremberg, según la documentación de la plataforma).
+- La frase *«Estos proveedores están ubicados en Estados Unidos»* es incompleta. **Ubicación verificada el 2026-11-05** (resolución DNS y geolocalización de IP; la región de la base de datos, con el panel de Supabase):
+  - **Hetzner (servidor actual, `178.104.93.211`): Núremberg, Alemania.** Ahí resuelven n8n, auth, pipeline, los agentes, wa, slides y el resto de los subdominios de la plataforma. El servidor anterior (Ashburn, EE.UU.) fue dado de baja tras el incidente de seguridad de septiembre de 2026.
+  - **Supabase (base de datos, donde se guardan las respuestas del cuestionario): región `us-west-2`, EE.UU. (Oregón).**
+  - Cloudflare entrega el sitio y el servicio del cuestionario con presencia global; el portal interno (app.3gi.cl) va en Vercel (EE.UU.), que tampoco figura en la lista de proveedores y no recibe respuestas de clientes.
+  - Consecuencia: las respuestas **se almacenan en EE.UU.** y los avisos internos pasan por n8n en Alemania. La política debería decir dónde está cada proveedor en vez de una frase general.
 - `terminos.astro` y `en/terminos.astro` mantienen `gonzalo@3gi.cl` como contacto; no se revisaron.
 - Proveedores que ya existen pero no figuran en la lista: Zoho (correo) y Cal.com (agenda). No forman parte de este cambio.
 
