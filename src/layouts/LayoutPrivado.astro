@@ -55,6 +55,6 @@ const { title, lang = 'es' } = Astro.props;
       </div>
     </header>
     <slot />
-    <footer class="rp-pie">3G Intelligence · IA aplicada al negocio real</footer>
+    <footer class="rp-pie">3G Intelligence · {lang === 'en' ? 'AI applied to real business' : 'IA aplicada al negocio real'}</footer>
   </body>
 </html>
