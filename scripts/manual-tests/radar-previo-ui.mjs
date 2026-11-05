@@ -345,6 +345,73 @@ console.log('T16 textos');
   await t.ctx.close();
 }
 
+// ── T17 · versión en inglés ───────────────────────────────────────────────────
+console.log('T17 inglés (/en/radar/previo/)');
+{
+  const RUTA_EN = '/en/radar/previo/';
+  // Palabras de interfaz en español que NO deben aparecer en ningún texto de la página en inglés (visible u oculto)
+  const ESPANOL = /[ñ¿¡áéíóúÁÉÍÓÚ]|\b(Guardado|Guardando|Siguiente|Anterior|Empezar|Obligatoria|Enviar|Revisar|Cargando|cuestionario|respuestas|conexión|reunión|pregunta|empresa|clientes)\b/;
+  const api = crearApi({ respuestas: { n01: 'My business' }, progreso: { s1: true } });
+  const t = await abrir({ api, ruta: RUTA_EN }); await ya(t.page);
+  ok((await t.page.evaluate(() => document.documentElement.lang)) === 'en', '<html lang="en">');
+  ok((await t.page.locator('[data-pantalla="intro"] h1').innerText()) === 'Radar Preparation', 'el título usa el nombre público en inglés («Radar Preparation»)');
+  ok((await t.page.locator('[data-empezar-txt]').innerText()) === 'Continue where I left off', 'con progreso el botón dice «Continue where I left off»');
+  ok((await t.page.locator('[data-pantalla="intro"] a').getAttribute('href')) === '/en/privacidad/', 'el enlace de privacidad apunta a la política en inglés');
+  // Texto de la página, visible u oculto, sin el JSON de estructura (sus claves son identificadores internos, no texto que alguien lea)
+  const todo = await t.page.evaluate(() => { const c = document.body.cloneNode(true); c.querySelectorAll('script, style').forEach((e) => e.remove()); return c.textContent; });
+  ok(!ESPANOL.test(todo), `ningún texto en español, ni visible ni oculto (${(todo.match(ESPANOL) || [''])[0]})`);
+  ok(!/diagnosis|diagnostic|Post-?Scan|Pre-?Scan|Toolkit|\bF[1-5]\b|\bStage/i.test(todo), 'sin nomenclatura interna en inglés');
+  ok(/ERA Test/.test(todo) && !/Test ERA/.test(todo), 'glosario de marca: «ERA Test»');
+  ok((await t.page.locator('footer').innerText()).includes('AI applied to real business'), 'el pie está en inglés');
+
+  await t.page.click('[data-empezar]');
+  ok((await t.page.locator('[data-pantalla="seccion"]:not([hidden]) [data-prog-txt]').innerText()).includes('Section 1 of 8'), 'el progreso dice «Section 1 of 8»');
+  await t.page.fill('[data-campo="n04"]', 'Grow'); await esperar(1800);
+  ok(/Saved/.test(await estadoTxt(t.page)), 'el estado dice «Saved» tras el 200');
+  api.modo.fallaGuardado = 1; await t.page.fill('[data-campo="n04"]', 'Grow again'); await esperar(1800);
+  ok(/We could not save/.test(await estadoTxt(t.page)), 'el error de guardado está en inglés y sin texto del servidor');
+  await esperar(3500);
+  api.modo.sinRed = true; await t.page.fill('[data-campo="n04"]', 'Grow more'); await esperar(1800);
+  ok(/No connection/.test(await estadoTxt(t.page)), 'sin red dice «No connection»');
+  api.modo.sinRed = false; await t.page.evaluate(() => window.dispatchEvent(new Event('online'))); await esperar(1500);
+
+  for (let i = 0; i < 8; i++) await siguiente(t.page);
+  ok((await pantalla(t.page)) === 'revision', 'llega a la revisión');
+  ok((await t.page.locator('[data-pantalla="revision"] h2').innerText()) === 'Review before sending', 'la revisión está en inglés');
+  ok((await t.page.locator('[data-revision-lista] button').first().innerText()).includes('Go to the question'), 'los pendientes ofrecen «Go to the question»');
+  ok(await t.page.locator('[data-revision-pendientes]').innerText().then((x) => /These required questions are still missing/.test(x)), 'aviso de obligatorias pendientes en inglés');
+  const revision = await t.page.locator('[data-pantalla="revision"]').innerText();
+  ok(!ESPANOL.test(revision), 'la pantalla de revisión no tiene español');
+
+  // completar lo obligatorio y enviar
+  api.fila.respuestas = { ...api.fila.respuestas, n01: 'x', n02: { personas: 1 }, n06: [{ descripcion: 'x' }], n09: { herramientas: ['excel'] }, n10: 'excel', n26: 'x' };
+  api.fila.n++;
+  await t.page.reload(); await ya(t.page);
+  await t.page.click('[data-empezar]');
+  for (let i = 0; i < 8; i++) await siguiente(t.page);
+  ok(await t.page.locator('[data-revision-ok]').isVisible(), 'sin pendientes: «All required questions are answered.»');
+  await t.page.click('[data-enviar]'); await esperar(900);
+  ok((await t.page.locator('[data-pantalla="enviado"] h1').innerText()) === 'We received your answers', 'tras enviar: «We received your answers»');
+  await t.page.click('[data-editar]'); await t.page.fill('[data-campo="n01"]', 'Edited'); await esperar(1800);
+  ok(/send them again/.test(await estadoTxt(t.page)), 'editar tras enviar avisa en inglés que hay que reenviar');
+  await t.ctx.close();
+
+  const inv = await abrir({ hash: '', ruta: RUTA_EN }); await esperar(500);
+  ok((await inv.page.locator('[data-pantalla="invalido"] h1').innerText()) === 'This link is not valid or has expired', 'enlace inválido en inglés');
+  await inv.ctx.close();
+  const cer = await abrir({ api: crearApi({ estado: 'cerrado' }), ruta: RUTA_EN }); await esperar(800);
+  ok((await cer.page.locator('[data-pantalla="cerrado"] h1').innerText()) === 'This form is now closed', 'formulario cerrado en inglés');
+  await cer.ctx.close();
+
+  const mov = await abrir({ viewport: { width: 375, height: 812 }, ruta: RUTA_EN, extraContexto: { isMobile: true, hasTouch: true } }); await ya(mov.page);
+  await mov.page.click('[data-empezar]');
+  let desborde = false;
+  for (let i = 0; i < 8; i++) { const r = await mov.page.evaluate(() => document.documentElement.scrollWidth - innerWidth); if (r > 0) desborde = true; await siguiente(mov.page); }
+  ok(!desborde, 'en inglés tampoco hay desborde horizontal a 375 px (los textos son más largos)');
+  ok(mov.externas.length === 0 && (await mov.ctx.cookies()).length === 0 && (await sentryIniciado(mov.page)) === false, 'la versión en inglés tampoco usa cookies, terceros ni Sentry');
+  await mov.ctx.close();
+}
+
 await browser.close();
 console.log(`\n${verificaciones} verificaciones, ${fallos.length} fallas`);
 if (fallos.length) { console.log('FALLAS:\n - ' + fallos.join('\n - ')); process.exit(1); }

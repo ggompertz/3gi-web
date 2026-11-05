@@ -8,15 +8,16 @@ Especificación completa: `3gi-platform/docs/cambios/2026-11-05-radar-previo/` (
 | Archivo | Para qué |
 |---|---|
 | `src/pages/radar/previo.astro` | Ruta ES (`/radar/previo/`); envoltorio de la plantilla |
+| `src/pages/en/radar/previo.astro` | Ruta EN (`/en/radar/previo/`); la misma plantilla con `lang="en"` |
 | `src/components/pages/RadarPrevioPage.astro` | Pantallas (carga, enlace inválido, introducción, secciones, revisión, enviado), estilos con prefijo `rp-` |
 | `src/components/pages/RadarPregunta.astro`, `RadarCampo.astro` | Una pregunta y un control según su tipo |
 | `src/scripts/radar-previo.js` | Lógica del navegador: token, guardado automático, condiciones, envío |
 | `src/layouts/LayoutPrivado.astro` | Layout sin analítica, sin banner de cookies, con `noindex` |
-| `src/i18n/radar-previo.mjs` | Todos los textos (hoy solo `es`) y la verificación de cobertura |
+| `src/i18n/radar-previo.mjs` | Todos los textos (`es` y `en`), los enlaces por idioma y la verificación de cobertura |
 | `src/data/radar-previo/*.json` | **Copia** de la estructura de preguntas (fuente: 3gi-platform) |
 | `public/_headers` | `noindex`, `no-referrer` y `no-store` para `/radar/*` y `/en/radar/*` |
 | `sentry.client.config.ts` | No inicializa Sentry en `/radar/` ni `/en/radar/` |
-| `scripts/manual-tests/radar-previo-ui.mjs` | Prueba de interfaz con un Worker simulado (83 verificaciones) |
+| `scripts/manual-tests/radar-previo-ui.mjs` | Prueba de interfaz con un Worker simulado (107 verificaciones, ES y EN) |
 
 ## Sincronizar la estructura de preguntas con 3gi-platform
 La estructura (ids, tipos, opciones, condiciones) tiene **una fuente**: `3gi-platform/workers/radar-previo-api/estructura/`. Aquí vive una copia, y el
@@ -54,7 +55,12 @@ La prueba intercepta el Worker y toda solicitud externa: no escribe nada real.
 - **Cabeceras en Cloudflare:** `! X-Robots-Tag` (quitar la cabecera general antes de poner `noindex`) no se puede comprobar en local. Tras el primer despliegue
   de vista previa: `curl -sI https://<preview>/radar/previo/ | grep -i x-robots-tag` debe mostrar solo `noindex, nofollow, noarchive`. El `<meta robots>` de la
   página ya garantiza `noindex` aunque la cabecera falle.
-- **Inglés** (`/en/radar/previo/`): bloque C6.
+- **Inglés (hecho en C6).** Glosario de marca: Radar → Radar, Test ERA → ERA Test; «ERA» siempre en mayúsculas. Tres capas lo protegen: (1) la guardia de
+  idioma del build (rechaza español en `/en/` y frases idénticas al español); (2) `npm run test:radar`, que además exige que **ningún** texto en inglés
+  sea idéntico a su par en español salvo una lista corta de nombres propios, porque la guardia del build **no ve una palabra suelta sin tildes**
+  («Guardado», «Siguiente»); (3) la prueba de interfaz, que revisa el texto visible y el oculto. Al agregar una pregunta u opción hay que traducirla
+  en ambos idiomas o el build falla. Al cambiar un texto, revisar `innerText` en el navegador, como pide la regla del sitio.
+- Los nombres de instituciones o normas chilenas dentro del inglés llevan `lang="es"` si conservan tildes o «ñ».
 - **Texto de privacidad** de `/privacidad/`: ampliarlo para el uso de estas respuestas (sin revisión de un abogado).
 - **Observación sin verificar en producción:** en este build el cliente de Sentry queda sin DSN (`process.env.SENTRY_DSN` no llega al navegador). Si en producción
   tampoco llega, Sentry no estaría enviando errores del navegador; conviene comprobarlo aparte.

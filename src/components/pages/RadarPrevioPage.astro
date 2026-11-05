@@ -56,7 +56,7 @@ const json = JSON.stringify(paraNavegador).replace(/</g, '\\u003c');
           <li>{t.ui.intro_tiempo}</li>
           <li>{t.ui.intro_no_se}</li>
         </ul>
-        <p class="rp-privacidad">{t.ui.intro_privacidad} <a href="/privacidad/" target="_blank" rel="noopener noreferrer">{t.ui.privacidad_enlace}</a>.</p>
+        <p class="rp-privacidad">{t.ui.intro_privacidad} <a href={t.enlaces.privacidad} target="_blank" rel="noopener noreferrer">{t.ui.privacidad_enlace}</a>.</p>
         <button type="button" class="rp-btn" data-empezar><span data-empezar-txt>{t.ui.empezar}</span></button>
       </section>
 
@@ -83,7 +83,7 @@ const json = JSON.stringify(paraNavegador).replace(/</g, '\\u003c');
           <ul class="rp-lista" data-revision-lista></ul>
         </div>
         <p data-revision-ok hidden>{t.ui.revision_ok}</p>
-        <p class="rp-privacidad">{t.ui.revision_privacidad} <a href="/privacidad/" target="_blank" rel="noopener noreferrer">{t.ui.privacidad_enlace}</a>.</p>
+        <p class="rp-privacidad">{t.ui.revision_privacidad} <a href={t.enlaces.privacidad} target="_blank" rel="noopener noreferrer">{t.ui.privacidad_enlace}</a>.</p>
         <p class="rp-error" role="alert" data-error-envio hidden>{t.ui.error_enviar}</p>
         <div class="rp-nav">
           <button type="button" class="rp-btn rp-btn-sec" data-ir="anterior">{t.ui.anterior}</button>
