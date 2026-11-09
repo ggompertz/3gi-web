@@ -117,7 +117,7 @@ export const radarPrevio = {
           otra_cual: { label: '¿Qué otra herramienta?' },
         },
       },
-      n10: { titulo: '¿Dónde vive hoy la información de tus clientes?', ayuda: 'Marca la que más se parezca a tu realidad.', opciones: SEL(['cabeza_papel', 'En mi cabeza o en papel'], ['whatsapp_correo', 'En WhatsApp y correos'], ['excel', 'En Excel u hojas de cálculo'], ['sistema_diario', 'En un sistema que uso a diario'], ['varios_conectados', 'En varios sistemas conectados entre sí']) },
+      n10: { titulo: '¿Dónde vive hoy la información de tus clientes?', ayuda: 'Marca todas las que correspondan; puede ser más de una.', opciones: SEL(['cabeza_papel', 'En mi cabeza o en papel'], ['whatsapp_correo', 'En WhatsApp y correos'], ['excel', 'En Excel u hojas de cálculo'], ['sistema_diario', 'En un sistema que uso a diario'], ['varios_conectados', 'En varios sistemas conectados entre sí']) },
       n11: { titulo: '¿Tienes por escrito cómo haces tus procesos principales?', opciones: SEL(['no', 'No'], ['notas', 'Algunas notas'], ['principales', 'Sí, los principales'], ['revisa_mide', 'Sí, y los reviso o mido']) },
       n12: {
         titulo: '¿Has intentado antes digitalizar o automatizar algo?',
@@ -291,7 +291,7 @@ export const radarPrevio = {
           otra_cual: { label: 'Which other tool?' },
         },
       },
-      n10: { titulo: 'Where does your customers’ information live today?', ayuda: 'Pick the one closest to your reality.', opciones: SEL(['cabeza_papel', 'In my head or on paper'], ['whatsapp_correo', 'In WhatsApp and emails'], ['excel', 'In Excel or spreadsheets'], ['sistema_diario', 'In a system I use every day'], ['varios_conectados', 'In several systems connected to each other']) },
+      n10: { titulo: 'Where does your customers’ information live today?', ayuda: 'Select all that apply; it can be more than one.', opciones: SEL(['cabeza_papel', 'In my head or on paper'], ['whatsapp_correo', 'In WhatsApp and emails'], ['excel', 'In Excel or spreadsheets'], ['sistema_diario', 'In a system I use every day'], ['varios_conectados', 'In several systems connected to each other']) },
       n11: { titulo: 'Do you have your main processes written down?', opciones: SEL(['no', 'No'], ['notas', 'Some notes'], ['principales', 'Yes, the main ones'], ['revisa_mide', 'Yes, and I review or measure them']) },
       n12: {
         titulo: 'Have you tried to digitize or automate anything before?',
