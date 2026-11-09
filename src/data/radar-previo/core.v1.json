@@ -1,6 +1,6 @@
 {
   "plantilla": "core",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "secciones": [
     { "id": "s1", "preguntas": ["n01", "n02", "n03", "n04", "n05"] },
     { "id": "s2", "preguntas": ["n06", "n07", "n08"] },
@@ -52,7 +52,7 @@
       }
     },
     "n10": {
-      "tipo": "seleccion", "obligatoria": true,
+      "tipo": "multiseleccion", "obligatoria": true,
       "opciones": ["cabeza_papel", "whatsapp_correo", "excel", "sistema_diario", "varios_conectados"],
       "destino": "a3.centralizado",
       "sugiere": [
