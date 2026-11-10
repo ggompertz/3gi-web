@@ -13,12 +13,23 @@
  *   node scripts/manual-tests/radar-previo-ui.mjs [baseUrl]    (por defecto http://localhost:4399)
  */
 import { chromium } from 'playwright';
+import { readFileSync, existsSync } from 'node:fs';
+import { fileURLToPath } from 'node:url';
 
 const BASE = process.argv[2] || 'http://localhost:4399';
 const API = 'https://radar-previo-api.3gi.cl';
 const TOKEN = 'T'.repeat(43);
 const UA = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0 Safari/537.36';
 const OBLIGATORIAS = ['n01', 'n02', 'n06', 'n09', 'n10', 'n26'];
+// Validador REAL del Worker (3gi-platform). Las pruebas con `api.validar = true` lo usan en guardar y enviar; si no está, se avisa y esas pruebas se omiten.
+const RAIZ_WEB = fileURLToPath(new URL('../../', import.meta.url));
+const VALIDAR_JS = process.env.RADAR_VALIDAR_JS || '/home/ggomp/3gi-platform/workers/radar-previo-api/src/validar.js';
+let VAL = null;
+if (existsSync(VALIDAR_JS)) {
+  const v = await import(VALIDAR_JS);
+  const leer = (f) => JSON.parse(readFileSync(RAIZ_WEB + 'src/data/radar-previo/' + f, 'utf8'));
+  VAL = { ...v, idx: v.indexarEstructura([leer('core.v1.json'), leer('financiero.v1.json')]) };
+} else console.log('  (sin validador del Worker: se omiten las pruebas de «Otro» que dependen de él)');
 const fallos = [];
 let verificaciones = 0;
 const ok = (cond, msg) => { verificaciones++; if (!cond) { fallos.push(msg); console.log(`  ✗ ${msg}`); } };
@@ -55,6 +66,11 @@ function crearApi(inicial = {}) {
         a.modo.conflicto = false; f.n++; f.respuestas = { ...f.respuestas, n01: 'texto del servidor' };
         return json(409, { error: 'CONFLICTO', actualizado_en: ts(), respuestas: f.respuestas });
       }
+      if (a.validar && VAL) {
+        const r = VAL.validarCambios(VAL.idx, cuerpo.cambios, f.respuestas);
+        if (!r.ok) return json(422, { error: 'VALIDACION', campos: r.errores.map((e) => ({ id: e.id, codigo: e.codigo })) });
+        cuerpo.cambios = r.normalizados;
+      }
       f.respuestas = { ...f.respuestas, ...cuerpo.cambios };
       if (cuerpo.seccion) f.progreso = { ...f.progreso, [cuerpo.seccion]: true };
       if (f.estado === 'enviado') f.estado = 'borrador';
@@ -62,7 +78,7 @@ function crearApi(inicial = {}) {
       return json(200, { actualizado_en: ts(), estado: f.estado });
     }
     if (url.pathname === '/v1/enviar') {
-      const faltan = OBLIGATORIAS.filter((id) => f.respuestas[id] === undefined);
+      const faltan = a.validar && VAL ? VAL.faltantes(VAL.idx, f.respuestas) : OBLIGATORIAS.filter((id) => f.respuestas[id] === undefined);
       if (faltan.length) return json(422, { error: 'FALTAN', ids: faltan });
       f.estado = 'enviado'; f.n++;
       return json(200, { enviado_en: ts(), actualizado_en: ts() });
@@ -486,6 +502,103 @@ console.log('T18 «No sé» sobre una respuesta escrita, n07 y ayuda por correo'
   await t.page.fill('[data-campo="n06[0].descripcion"]', 'Review balances'); await t.page.check('[data-nose="n06"]');
   ok((await t.page.locator('[data-pregunta="n06"] [data-nose-aviso]').innerText()).includes('we will not send what you wrote'), 'en inglés el aviso de descarte está en inglés');
   ok((await t.page.locator('[data-pregunta="n07"] [data-ref-aviso]').innerText()).includes('Add your tasks above first'), 'en inglés la explicación de n07 está en inglés');
+  await t.ctx.close();
+}
+
+// ── T19 · «Otro» con texto obligatorio (2026-11-10) ───────────────────────────────────────────────────────────
+console.log('T19 «Otro» con texto obligatorio');
+if (VAL) {
+  const api = crearApi(); api.validar = true;
+  const t = await abrir({ api }); await ya(t.page); await t.page.click('[data-empezar]');
+  const n10o = t.page.locator('[data-pregunta="n10o"]');
+  const cajaO = t.page.locator('[data-campo="n10o"]');
+  const guardadosDe = (id) => api.llamadas.filter((c) => c.ruta === '/v1/guardar' && id in (c.cuerpo.cambios ?? {})).map((c) => c.cuerpo.cambios[id]);
+  // sección 3: n09, n10, n10o, n11, n12
+  await t.page.click('[data-ir="siguiente"]:visible'); await t.page.click('[data-ir="siguiente"]:visible');
+  ok((await t.page.locator('[data-pregunta="n10"]').count()) === 1 && (await n10o.count()) === 1, 'n10 y su acompañante n10o existen en la sección 3');
+  ok(!(await n10o.isVisible()), 'sin marcar «Otro» el campo no se ve');
+  ok((await t.page.locator('[data-campo="n10"][value="otro"]').count()) === 1, 'n10 ofrece la opción «Otro»');
+  ok((await t.page.locator('[data-pregunta="n10o"] [data-nose]').count()) === 0, 'el acompañante no tiene su propio «No sé»');
+
+  await t.page.check('[data-campo="n10"][value="otro"]');
+  ok(await n10o.isVisible(), 'al marcar «Otro» aparece el campo de texto');
+  ok(await t.page.evaluate(() => document.activeElement?.dataset?.campo === 'n10o'), 'el foco pasa al campo');
+  const adv = await t.page.locator('[data-pregunta="n10o"] .rp-ayuda').innerText();
+  ok(adv.includes('No escribas datos personales de tus clientes'), 'la advertencia de privacidad está junto al campo');
+  const descr = await cajaO.getAttribute('aria-describedby');
+  ok(!!descr && (await t.page.locator(`#${descr}`).innerText()).includes('datos personales'), 'el campo está asociado a la advertencia (aria-describedby)');
+  ok((await cajaO.getAttribute('maxlength')) === '300', 'el campo tiene tope de 300 caracteres');
+  ok((await t.page.locator('[data-contador="n10o"]').innerText()) === '0/300', 'el contador empieza en 0/300');
+
+  await t.page.fill('[data-campo="n10o"]', 'ab'); await esperar(1800);
+  ok(guardadosDe('n10o').includes('ab') && !(await t.page.locator('[data-pregunta="n10o"] [data-error]').isVisible()), 'un texto corto se guarda mientras se escribe (el mínimo se exige al enviar) y no muestra error todavía');
+  await t.page.fill('[data-campo="n10o"]', 'Libretas'); await esperar(1800);
+  ok((await t.page.locator('[data-contador="n10o"]').innerText()) === '8/300', 'el contador sigue lo escrito');
+  ok(api.fila.respuestas.n10o === 'Libretas' && JSON.stringify(api.fila.respuestas.n10) === '["otro"]', 'el servidor guardó «Otro» y el texto');
+
+  // Lo que se ve es lo que se guarda: desmarcar «Otro» oculta el campo y el servidor recibe «»
+  await t.page.uncheck('[data-campo="n10"][value="otro"]'); await esperar(1800);
+  ok(!(await n10o.isVisible()), 'al desmarcar «Otro» el campo se oculta');
+  ok(api.fila.respuestas.n10o === '', 'al desmarcar, el servidor recibe «» (el texto oculto no se guarda)');
+  await t.page.check('[data-campo="n10"][value="otro"]'); await esperar(1800);
+  ok((await cajaO.inputValue()) === 'Libretas' && api.fila.respuestas.n10o === 'Libretas', 'al marcar de nuevo reaparece el texto de la sesión y se vuelve a guardar');
+
+  // «No sé» en el padre: oculta el campo, avisa que el texto no se enviará y se vacía en el servidor
+  await t.page.check('[data-nose="n10"]'); await esperar(1800);
+  ok(!(await n10o.isVisible()), 'con «No sé» en n10 el campo de «Otro» se oculta');
+  ok(await t.page.locator('[data-pregunta="n10"] [data-nose-aviso]').isVisible(), 'y se avisa que lo escrito no se enviará');
+  ok(JSON.stringify(api.fila.respuestas.n10) === '{"_":"no_se"}' && api.fila.respuestas.n10o === '', 'el servidor tiene «No sé» en n10 y el texto de «Otro» vacío');
+  await t.page.uncheck('[data-nose="n10"]'); await esperar(1800);
+  ok(await n10o.isVisible() && (await cajaO.inputValue()) === 'Libretas', 'al quitar «No sé» vuelve el campo con su texto');
+
+  // Revisión: «Otro» con texto demasiado corto es un pendiente, con el mensaje junto al campo
+  await t.page.fill('[data-campo="n10o"]', 'ab'); await esperar(300);
+  for (let i = 0; i < 12 && !(await t.page.locator('[data-pantalla="revision"]:not([hidden])').count()); i++) await siguiente(t.page);
+  const lista = await t.page.locator('[data-revision-lista]').innerText();
+  ok(lista.includes('¿Dónde más vive esa información?'), 'la revisión lista «Otro» sin texto suficiente como pendiente');
+  await t.page.click('[data-ir-pregunta="n10o"]');
+  ok(await t.page.locator('[data-pregunta="n10o"] [data-error]').isVisible() && (await t.page.locator('[data-pregunta="n10o"] [data-error]').innerText()) === 'Escribe cuál (mínimo 3 caracteres).', 'el mensaje de error está junto al campo');
+  ok(await t.page.evaluate(() => document.activeElement?.dataset?.campo === 'n10o'), 'ir a la pregunta deja el foco en el campo');
+  await t.page.fill('[data-campo="n10o"]', 'abc'); await esperar(300);
+  ok(!(await t.page.locator('[data-pregunta="n10o"] [data-error]').isVisible()), 'al corregir el texto el error desaparece');
+  ok(api.llamadas.filter((c) => c.ruta === '/v1/guardar').every((c) => !(c.cuerpo.cambios && 'n10o' in c.cuerpo.cambios && c.cuerpo.cambios.n10o.length > 300)), 'ningún guardado superó 300 caracteres');
+  ok(t.errores.length === 0, `sin errores de JavaScript (${t.errores.join(' | ')})`);
+  await t.ctx.close();
+}
+if (VAL) {
+  // n05 («¿Quién?»), n13 con «Otro» y «Ninguno» (exclusiva), y móvil sin desborde
+  const api = crearApi(); api.validar = true;
+  const t = await abrir({ api, viewport: { width: 375, height: 800 } }); await ya(t.page); await t.page.click('[data-empezar]');
+  ok(!(await t.page.locator('[data-pregunta="n05q"]').isVisible()), '«¿Quién toma la decisión?» está oculta al inicio');
+  await t.page.check('[data-campo="n05"][value="otra_persona"]');
+  ok(await t.page.locator('[data-pregunta="n05q"]').isVisible(), 'con «Otra persona» aparece «¿Quién?»');
+  await t.page.fill('[data-campo="n05q"]', 'Mi socio'); await esperar(1800);
+  ok(api.fila.respuestas.n05q === 'Mi socio', 'n05q se guarda');
+  ok(await t.page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth), 'en móvil (375 px) no hay desborde horizontal con el campo visible');
+  await t.page.check('[data-campo="n05"][value="yo"]'); await esperar(1800);
+  ok(!(await t.page.locator('[data-pregunta="n05q"]').isVisible()) && api.fila.respuestas.n05q === '', 'con otra opción se oculta y se vacía en el servidor');
+  await t.page.click('[data-ir="siguiente"]:visible'); await t.page.click('[data-ir="siguiente"]:visible'); await t.page.click('[data-ir="siguiente"]:visible');
+  await t.page.check('[data-campo="n13"][value="otro"]');
+  ok(await t.page.locator('[data-pregunta="n13o"]').isVisible(), 'n13 con «Otro» muestra su campo');
+  ok((await t.page.locator('[data-pregunta="n13o"] .rp-ayuda').innerText()).includes('Solo el tipo de dato, no los datos.'), 'n13o conserva la ayuda propia («solo el tipo de dato»)');
+  await t.page.check('[data-campo="n13"][value="ninguno"]'); await esperar(300);
+  ok(!(await t.page.locator('[data-pregunta="n13o"]').isVisible()) && !(await t.page.locator('[data-campo="n13"][value="otro"]').isChecked()), '«Ninguno» es exclusiva: desmarca «Otro» y oculta el campo');
+  ok(await t.page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth), 'sin desborde horizontal en la sección 4');
+  ok(t.errores.length === 0, `sin errores de JavaScript (${t.errores.join(' | ')})`);
+  await t.ctx.close();
+}
+if (VAL) {
+  // Inglés
+  const api = crearApi(); api.validar = true;
+  const t = await abrir({ api, ruta: '/en/radar/previo/' }); await ya(t.page); await t.page.click('[data-empezar]');
+  await t.page.click('[data-ir="siguiente"]:visible'); await t.page.click('[data-ir="siguiente"]:visible');
+  ok((await t.page.locator('[data-campo="n10"][value="otro"]').locator('xpath=..').innerText()).trim() === 'Other', 'en inglés la opción dice «Other»');
+  await t.page.check('[data-campo="n10"][value="otro"]');
+  ok((await t.page.locator('[data-pregunta="n10o"] .rp-ayuda').innerText()).includes('Do not write personal data about your clients'), 'en inglés la advertencia está en inglés');
+  await t.page.fill('[data-campo="n10o"]', 'ab');
+  for (let i = 0; i < 12 && !(await t.page.locator('[data-pantalla="revision"]:not([hidden])').count()); i++) await siguiente(t.page);
+  await t.page.click('[data-ir-pregunta="n10o"]');
+  ok((await t.page.locator('[data-pregunta="n10o"] [data-error]').innerText()) === 'Write which one (at least 3 characters).', 'en inglés el error del mínimo está en inglés');
   await t.ctx.close();
 }
 

@@ -87,12 +87,25 @@ function leerCampo(def, path) {
   }
 }
 
+// «Otro» y «¿Quién?»: preguntas acompañantes (condición positiva `eq`/`incluye` sobre otra pregunta). Texto 3 a 300, obligatorio si su padre lo pide.
+const esAcomp = (id) => ['eq', 'incluye'].includes(EST.preguntas[id]?.visible_si?.op);
+const dependientes = (padre) => Object.keys(EST.preguntas).filter((c) => esAcomp(c) && EST.preguntas[c].visible_si.pregunta === padre);
+const valorLocal = (id) => campo(id)?.value.trim() ?? ''; // lo que hay escrito en el campo, esté o no visible
+// Igual que `sinContenido` del Worker: vacío, o un texto más corto que el mínimo de su pregunta (`min_chars`).
+const sinContenido = (id, v) => vacia(v) || (Number.isInteger(EST.preguntas[id]?.min_chars) && typeof v === 'string' && v.trim().length < EST.preguntas[id].min_chars);
+function actualizarContador(path) {
+  const c = $(`[data-contador="${path}"]`);
+  if (c) c.textContent = fmt(T.contador, { n: campo(path)?.value.length ?? 0, max: c.dataset.max });
+}
+
 const filasRep = (id) => $$('[data-fila-activa]', $(`[data-pregunta="${id}"]`));
 
 // `ignorarNoSe`: lee lo escrito aunque «No sé» esté marcado (sirve para avisar que eso no se enviará).
 function leerPregunta(id, { ignorarNoSe = false } = {}) {
   const def = EST.preguntas[id];
   if (!ignorarNoSe && noSe(id)) return { _: NO_SE };
+  // Lo que se ve es lo que se guarda: un acompañante oculto (su opción está desmarcada o su pregunta está en «No sé») viaja vacío, aunque el campo conserve el texto en esta sesión.
+  if (esAcomp(id) && !ignorarNoSe && !visible(id)) return '';
   if (def.tipo === 'compuesto') {
     const o = {};
     for (const [k, c] of Object.entries(def.campos)) { const v = leerCampo(c, `${id}.${k}`); if (!vacia(v)) o[k] = v; }
@@ -119,6 +132,7 @@ function escribirCampo(def, path, v) {
     campos(path).forEach((c) => { c.checked = Array.isArray(v) && v.includes(c.value); });
   } else if (campo(path)) {
     campo(path).value = v ?? '';
+    actualizarContador(path);
   }
 }
 
@@ -130,6 +144,7 @@ function bloquear(id, si) {
 // la persona debe saber que no se enviará; sin aviso cree que lo conservó (caso real del 2026-11-10: perdió una tarea que había escrito).
 function avisarNoSe(id) {
   const aviso = $(`[data-pregunta="${id}"] [data-nose-aviso]`);
+  // Con «Otro» marcado el padre ya trae contenido, así que este aviso también cubre el texto del acompañante.
   if (aviso) aviso.hidden = !(noSe(id) && !vacia(leerPregunta(id, { ignorarNoSe: true })));
 }
 
@@ -185,9 +200,11 @@ function actualizarRef() {
 function escribirPregunta(id, v) {
   const def = EST.preguntas[id];
   if (def.tipo === 'repetidor' && filasRep(id).length === 0) agregarFila(id);
-  const nose = $(`[data-nose="${id}"]`);
-  if (v && v._ === NO_SE) { nose.checked = true; bloquear(id, true); return; }
-  nose.checked = false; bloquear(id, false);
+  const nose = $(`[data-nose="${id}"]`); // los acompañantes de «Otro» no tienen «No sé»
+  if (v && v._ === NO_SE && nose) { nose.checked = true; bloquear(id, true); return; }
+  if (nose) nose.checked = false;
+  bloquear(id, false);
+  if (v && v._ === NO_SE) v = undefined;
   if (def.tipo === 'compuesto') {
     for (const [k, c] of Object.entries(def.campos)) escribirCampo(c, `${id}.${k}`, v?.[k]);
   } else if (def.tipo === 'repetidor') {
@@ -208,12 +225,16 @@ function visible(id) {
   const cond = JSON.parse($(`[data-pregunta="${id}"]`).dataset.visibleSi ?? 'null');
   if (!cond) return true;
   const r = leerPregunta(cond.pregunta);
-  if (r === undefined || (r && r._ === NO_SE)) return true;
+  // Condición positiva (`eq`, `incluye`): sin dato o «No sé» en el padre = oculta. Negativa (`gt`, `ne`): sin dato = visible. Misma regla que `esVisible` del Worker.
+  const sinDato = !['eq', 'incluye'].includes(cond.op);
+  if (r === undefined || (r && r._ === NO_SE)) return sinDato;
   const valor = cond.campo ? r?.[cond.campo] : r;
-  if (valor === undefined) return true;
+  if (valor === undefined) return sinDato;
   if (cond.op === 'gt') return Number(valor) > cond.valor;
   if (cond.op === 'ne') return valor !== cond.valor;
-  return true;
+  if (cond.op === 'eq') return valor === cond.valor;
+  if (cond.op === 'incluye') return Array.isArray(valor) && valor.includes(cond.valor);
+  return false;
 }
 function actualizarCondiciones() {
   for (const p of $$('[data-visible-si]')) p.hidden = !visible(p.dataset.pregunta);
@@ -259,8 +280,8 @@ function resumen() {
   const ids = S.seccionesActivas.flatMap((s) => EST.secciones.find((x) => x.id === s).preguntas).filter(visible);
   let respondidas = 0;
   let nose = 0;
-  for (const id of ids) { if (noSe(id)) nose++; else if (!vacia(leerPregunta(id))) respondidas++; }
-  const faltan = ids.filter((id) => EST.preguntas[id].obligatoria && !noSe(id) && vacia(leerPregunta(id)));
+  for (const id of ids) { if (noSe(id)) nose++; else if (!sinContenido(id, leerPregunta(id))) respondidas++; }
+  const faltan = ids.filter((id) => EST.preguntas[id].obligatoria && !noSe(id) && sinContenido(id, leerPregunta(id)));
   return { total: ids.length, respondidas, nose, contestadas: respondidas + nose, faltan }; // «No sé» cuenta como contestada
 }
 function irARevision(faltanServidor) {
@@ -279,6 +300,11 @@ function irARevision(faltanServidor) {
     b.type = 'button'; b.className = 'rp-btn rp-btn-sec rp-btn-chico'; b.dataset.irPregunta = id;
     b.textContent = `${$(`#rp-t-${id}`).childNodes[0].textContent} — ${T.revision_ir}`;
     li.append(b); lista.append(li);
+  }
+  // «Otro» marcado sin texto suficiente: el mensaje queda también junto al campo (no solo en la lista).
+  for (const id of faltan) if (esAcomp(id)) {
+    const e = $(`[data-pregunta="${id}"] [data-error]`);
+    if (e) { e.textContent = fmt(T.error_otro, { min: EST.preguntas[id].min_chars }); e.hidden = false; }
   }
   $('[data-error-envio]').hidden = true;
 }
@@ -408,7 +434,16 @@ function alCambiar(e) {
   if (id === 'n06' || id === 'n07') actualizarRef();
   marcarSucia(id);
   if (id === 'n06') marcarSucia('n07');
+  if (el.matches('[data-campo]')) actualizarContador(el.dataset.campo);
+  const deps = dependientes(id);
+  const antes = new Map(deps.map((c) => [c, !$(`[data-pregunta="${c}"]`).hidden])); // lo que se veía ANTES de este cambio (el DOM del padre ya cambió)
   actualizarCondiciones(); actualizarPrecarga();
+  for (const c of deps) {
+    const ahora = visible(c);
+    // Se guarda de nuevo el acompañante si ya había algo guardado (hay que vaciarlo al ocultarse) o si reaparece con el texto de esta sesión.
+    if (!vacia(S.respuestas[c]) || (ahora && valorLocal(c) !== '')) marcarSucia(c);
+    if (ahora && !antes.get(c) && el.type !== 'text') campo(c)?.focus(); // al marcar «Otro» el cursor pasa al campo
+  }
   programarGuardado(e.type === 'change' ? 600 : 1200);
 }
 raiz.addEventListener('input', alCambiar);

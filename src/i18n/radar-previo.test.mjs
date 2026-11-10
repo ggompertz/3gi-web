@@ -83,7 +83,7 @@ test('el detector de español marca frases en español (autoprueba: si no las ve
 });
 
 // Límite conocido de la guardia del build: no ve una palabra suelta sin tildes («Guardado», «Siguiente»). Esta prueba lo cubre.
-const IGUALES_PERMITIDOS = new Set(['~{m} min', 'chat@3gi.cl', 'Marketing', 'WhatsApp', 'No', 'Instagram', 'LinkedIn']);
+const IGUALES_PERMITIDOS = new Set(['~{m} min', '{n}/{max}', 'chat@3gi.cl', 'Marketing', 'WhatsApp', 'No', 'Instagram', 'LinkedIn']);
 const sinTraducir = (en, es) => Object.keys(es).filter((k) => es[k] === en[k] && !IGUALES_PERMITIDOS.has(es[k]));
 
 test('el inglés no deja textos sin traducir: ninguno es idéntico al español salvo nombres propios y «No»', () => {
@@ -113,4 +113,16 @@ test('la frase del avance es la misma que en el resto del sistema y «No sé» c
   assert.equal(fmt(radarPrevio.en.ui.revision_resumen, datos), '4 of 31 questions completed (answered: 2 · “I don’t know”: 2)');
   const claves = (t) => [...t.matchAll(/\{(\w+)\}/g)].map((m) => m[1]).sort().join();
   assert.equal(claves(radarPrevio.es.ui.revision_resumen), claves(radarPrevio.en.ui.revision_resumen));
+});
+
+test('«Otro»: cada pregunta de selección que lo ofrece y sus acompañantes tienen texto en ES y EN, y la advertencia de no escribir datos personales', () => {
+  for (const l of ['es', 'en']) {
+    const d = radarPrevio[l];
+    for (const id of ['n10', 'n13', 'n15']) assert.ok(d.preguntas[id].opciones.otro, `${l} ${id}: falta la opción «otro»`);
+    for (const id of ['n05q', 'n10o', 'n13o', 'n15o']) assert.ok(d.preguntas[id]?.titulo, `${l} ${id}: falta el título`);
+    assert.match(d.ui.otro_advertencia, l === 'es' ? /datos personales de tus clientes/ : /personal data about your clients/);
+    assert.match(d.ui.error_otro, /\{min\}/);
+  }
+  assert.equal(radarPrevio.es.preguntas.n10.opciones.otro, 'Otro');
+  assert.equal(radarPrevio.en.preguntas.n10.opciones.otro, 'Other');
 });
