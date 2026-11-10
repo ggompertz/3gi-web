@@ -1,12 +1,12 @@
 ---
 // Un control de formulario según su tipo en la estructura. `path` identifica el valor (p. ej. «n02.personas» o «n06[#].area»;
 // «#» se reemplaza por el índice al clonar una fila del repetidor). Los textos llegan del diccionario, nunca de JavaScript.
-const { path, def, dic = {}, labelledby, t } = Astro.props;
+const { path, def, dic = {}, labelledby, t, describedby } = Astro.props;
 const opciones = def.opciones ?? [];
 const enFila = path.includes('[#]'); // dentro de una fila clonada no se usan ids (las etiquetas envuelven al control)
 const idBase = enFila ? undefined : 'rp-' + path.replace(/[^\w]/g, '_');
 const label = dic.label;
-const aria = enFila ? { 'aria-label': label } : (!label && labelledby ? { 'aria-labelledby': labelledby } : {});
+const aria = enFila ? { 'aria-label': label } : { ...(!label && labelledby ? { 'aria-labelledby': labelledby } : {}), ...(describedby ? { 'aria-describedby': describedby } : {}) };
 const ariaGrupo = enFila ? { 'aria-label': label } : { 'aria-labelledby': label ? idBase + '_l' : labelledby };
 const usaSelect = def.tipo === 'seleccion' && opciones.length > 5;
 ---
@@ -18,7 +18,10 @@ const usaSelect = def.tipo === 'seleccion' && opciones.length > 5;
   {label && enFila && !usaSelect && ['seleccion', 'multiseleccion'].includes(def.tipo) && <p class="rp-label">{label}</p>}
 
   {def.tipo === 'texto_corto' && (
-    <input class="rp-input" type="text" id={idBase} data-campo={path} maxlength="500" autocomplete="off" placeholder={dic.placeholder} {...aria} />
+    <input class="rp-input" type="text" id={idBase} data-campo={path} maxlength={def.max_chars ?? 500} autocomplete="off" placeholder={dic.placeholder} {...aria} />
+  )}
+  {def.tipo === 'texto_corto' && def.max_chars && (
+    <p class="rp-contador" data-contador={path} data-max={def.max_chars} aria-hidden="true">{t.ui.contador.replace('{n}', '0').replace('{max}', String(def.max_chars))}</p>
   )}
   {def.tipo === 'texto_largo' && (
     <textarea class="rp-input rp-textarea" id={idBase} data-campo={path} rows="4" maxlength="4000" placeholder={dic.placeholder} {...aria}></textarea>

@@ -43,13 +43,23 @@ Si cambió una pregunta u opción, el build también falla (`RADAR_PREVIO_TEXTOS
   positivo (en una página pública Sentry sí se inicializa).
 - «Guardado» solo se muestra cuando el Worker respondió 200; ante un error nunca se muestra texto del servidor.
 
+## «Otro» con texto obligatorio (estructura 1.2.0, 2026-11-10)
+`n10`, `n13` y `n15` ofrecen la opción `otro`; `n05` pide «¿Quién?» con «Otra persona». El texto libre vive en **preguntas acompañantes** (`n05q`, `n10o`, `n13o`, `n15o`):
+`texto_corto` de 3 a 300 caracteres (`min_chars`, `max_chars`), obligatorias solo cuando su padre las pide (`visible_si` con `op` `eq` o `incluye`, condiciones POSITIVAS: sin dato o «No sé» en el padre = ocultas).
+- Un acompañante es una pregunta más en el HTML (`RadarPregunta.astro` la reconoce por la condición positiva): sin «No sé» propio, con la advertencia de no escribir datos personales, contador y foco al aparecer.
+- **Lo que se ve es lo que se guarda:** al desmarcar «Otro» o marcar «No sé» en el padre, el campo se oculta y el servidor recibe `''`; el texto queda solo en la sesión local y reaparece si se vuelve a marcar.
+- El mínimo de 3 caracteres se exige al **enviar** (revisión: «Escribe cuál (mínimo 3 caracteres)»), no al guardar. `visible()` en `src/scripts/radar-previo.js` repite la regla de `esVisible` del Worker.
+- `min_chars` y `max_chars` están en la lista blanca de `RadarPrevioPage.astro`: sin ellos el navegador no aplica el mínimo ni el tope.
+- **Orden de despliegue: Worker primero, web después.** Si la web sale antes, el Worker responde 422 `ID_DESCONOCIDO` al guardar un acompañante.
+- Especificación y plan: `3gi-platform/docs/cambios/2026-11-10-radar-otro/`.
+
 ## Probar
 ```bash
 npm run test:radar && npm run test:guardia
 npm run build && node_modules/.bin/astro preview --port 4399
 node scripts/manual-tests/radar-previo-ui.mjs        # otro terminal
 ```
-La prueba intercepta el Worker y toda solicitud externa: no escribe nada real.
+La prueba intercepta el Worker y toda solicitud externa: no escribe nada real. T19 («Otro») usa el validador REAL del Worker si encuentra `3gi-platform` (`RADAR_VALIDAR_JS`, por defecto `/home/ggomp/3gi-platform/workers/radar-previo-api/src/validar.js`); sin él lo omite y lo dice.
 
 ## Pendiente
 - **Cabeceras en Cloudflare:** `! X-Robots-Tag` (quitar la cabecera general antes de poner `noindex`) no se puede comprobar en local. Tras el primer despliegue

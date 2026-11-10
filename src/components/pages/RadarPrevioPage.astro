@@ -14,7 +14,7 @@ const API = import.meta.env.PUBLIC_RADAR_PREVIO_API ?? 'https://radar-previo-api
 // (campos de la ficha y rangos de madurez): NO deben salir en el HTML público.
 const paraCliente = (d) => {
   const o = { tipo: d.tipo };
-  for (const k of ['obligatoria', 'opciones', 'min', 'max', 'requerido', 'ref', 'exclusiva', 'visible_si']) if (d[k] !== undefined) o[k] = d[k];
+  for (const k of ['obligatoria', 'opciones', 'min', 'max', 'min_chars', 'max_chars', 'requerido', 'ref', 'exclusiva', 'visible_si']) if (d[k] !== undefined) o[k] = d[k];
   if (d.campos) o.campos = Object.fromEntries(Object.entries(d.campos).map(([k, c]) => [k, paraCliente(c)]));
   return o;
 };
@@ -151,6 +151,10 @@ const json = JSON.stringify(paraNavegador).replace(/</g, '\\u003c');
   .rp-error { color: var(--danger); font-size: 14px; margin-top: 8px; }
   .rp-aviso { color: var(--amber); font-size: 14px; margin-top: 4px; }
   .rp-ayuda-pie { margin-top: 24px; }
+  /* «Otro»: el campo cuelga de su pregunta (sin línea divisoria propia) y sangra para que se vea que pertenece a la opción marcada */
+  .rp-acomp { border-top: 0; margin: -6px 0 0 14px; padding: 4px 0 18px 14px; border-left: 2px solid var(--green); }
+  .rp-acomp .rp-titulo { font-size: 16px; }
+  .rp-contador { color: var(--muted); font-size: 13px; text-align: right; margin-top: 4px; }
   .rp-error-fuerte { color: var(--amber); font-weight: 500; margin-bottom: 8px; }
   .rp-precarga { background: rgba(0, 232, 145, .06); border: 1px dashed var(--grn-dk); border-radius: 10px; padding: 12px 14px; margin: 10px 0; display: grid; gap: 8px; }
   .rp-precarga-t { font-size: 14px; font-weight: 500; }

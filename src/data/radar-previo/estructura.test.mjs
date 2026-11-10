@@ -25,12 +25,13 @@ test('control negativo: faltan o sobran archivos respecto del registro', () => {
   assert.throws(() => verificarHashes({ ...archivos(), 'extra.json': '{}' }, registro()), /extra\.json: no está en el registro/);
 });
 
-test('combinar: 35 preguntas, el módulo financiero va después de la sección 4 y las obligatorias son seis', () => {
+test('combinar: 39 preguntas (35 + 4 acompañantes de «Otro»), el módulo financiero va después de la sección 4 y las obligatorias son seis más los 4 acompañantes', () => {
   const e = combinar(Object.values(archivos()).map((t) => JSON.parse(t)));
-  assert.equal(Object.keys(e.preguntas).length, 35);
+  assert.equal(Object.keys(e.preguntas).length, 39);
   assert.deepEqual(e.secciones.map((s) => s.id), ['s1', 's2', 's3', 's4', 'sf', 's5', 's6', 's7']);
   assert.equal(e.secciones.find((s) => s.id === 'sf').modulo, 'financiero');
-  assert.deepEqual([...e.obligatorias].sort(), ['n01', 'n02', 'n06', 'n09', 'n10', 'n26']);
+  assert.deepEqual([...e.obligatorias].sort(), ['n01', 'n02', 'n06', 'n09', 'n10', 'n10o', 'n13o', 'n15o', 'n26', 'n05q'].sort());
+  assert.equal(JSON.parse(archivos()['core.v1.json']).version, '1.2.0');
 });
 
 test('sha256 es el hash estándar', () => {

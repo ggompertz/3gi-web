@@ -40,6 +40,9 @@ export const radarPrevio = {
       error_ref_invalida: 'Esa opción ya no está en tu lista de tareas. Elige otra o marca «No sé».',
       nose_descarta: 'Marcaste «No sé»: no enviaremos lo que escribiste arriba. Desmarca la casilla para conservarlo.',
       ref_sin_tareas: 'Primero agrega tus tareas arriba, o marca «No sé» aquí y lo vemos en la reunión.',
+      otro_advertencia: 'No escribas datos personales de tus clientes.',
+      error_otro: 'Escribe cuál (mínimo {min} caracteres).',
+      contador: '{n}/{max}',
       ayuda_problemas: '¿Algo no funciona? Responde al correo con el que recibiste este enlace o escríbenos a',
       error_tamano: 'Esta respuesta es demasiado larga.',
       conflicto_titulo: 'Este formulario cambió en otra pestaña o dispositivo',
@@ -99,6 +102,7 @@ export const radarPrevio = {
       },
       n04: { titulo: '¿Qué quieres lograr en los próximos 12 meses?', ayuda: 'Una o dos metas, por ejemplo: más clientes, ordenar el cumplimiento o ahorrar tiempo.' },
       n05: { titulo: 'En este proyecto, ¿quién toma la decisión final?', opciones: SEL(['yo', 'Yo'], ['yo_con_otros', 'Yo, junto con otras personas'], ['otra_persona', 'Otra persona']) },
+      n05q: { titulo: '¿Quién toma la decisión?', placeholder: 'Por ejemplo: mi socio, el directorio, mi jefe' },
       n06: {
         titulo: '¿Qué tareas repetitivas te quitan más tiempo?',
         ayuda: 'Hasta tres. Una estimación sirve.',
@@ -121,7 +125,8 @@ export const radarPrevio = {
           otra_cual: { label: '¿Qué otra herramienta?' },
         },
       },
-      n10: { titulo: '¿Dónde vive hoy la información de tus clientes?', ayuda: 'Marca todas las que correspondan; puede ser más de una.', opciones: SEL(['cabeza_papel', 'En mi cabeza o en papel'], ['whatsapp_correo', 'En WhatsApp y correos'], ['excel', 'En Excel u hojas de cálculo'], ['sistema_diario', 'En un sistema que uso a diario'], ['varios_conectados', 'En varios sistemas conectados entre sí']) },
+      n10: { titulo: '¿Dónde vive hoy la información de tus clientes?', ayuda: 'Marca todas las que correspondan; puede ser más de una.', opciones: SEL(['cabeza_papel', 'En mi cabeza o en papel'], ['whatsapp_correo', 'En WhatsApp y correos'], ['excel', 'En Excel u hojas de cálculo'], ['sistema_diario', 'En un sistema que uso a diario'], ['varios_conectados', 'En varios sistemas conectados entre sí'], ['otro', 'Otro']) },
+      n10o: { titulo: '¿Dónde más vive esa información?', placeholder: 'Por ejemplo: libretas, un software del rubro' },
       n11: { titulo: '¿Tienes por escrito cómo haces tus procesos principales?', opciones: SEL(['no', 'No'], ['notas', 'Algunas notas'], ['principales', 'Sí, los principales'], ['revisa_mide', 'Sí, y los reviso o mido']) },
       n12: {
         titulo: '¿Has intentado antes digitalizar o automatizar algo?',
@@ -130,9 +135,11 @@ export const radarPrevio = {
           detalle: { label: 'Cuéntanos qué pasó' },
         },
       },
-      n13: { titulo: '¿Qué tipos de datos de tus clientes guardas?', ayuda: 'Solo el tipo de dato, no los datos.', opciones: SEL(['identificacion_contacto', 'Identificación y contacto'], ['situacion_financiera', 'Situación financiera o patrimonial'], ['perfil_riesgo', 'Perfil de riesgo o de inversión'], ['salud', 'Salud'], ['menores', 'Datos de menores de edad'], ['ninguno', 'Ninguno']) },
+      n13: { titulo: '¿Qué tipos de datos de tus clientes guardas?', ayuda: 'Solo el tipo de dato, no los datos.', opciones: SEL(['identificacion_contacto', 'Identificación y contacto'], ['situacion_financiera', 'Situación financiera o patrimonial'], ['perfil_riesgo', 'Perfil de riesgo o de inversión'], ['salud', 'Salud'], ['menores', 'Datos de menores de edad'], ['ninguno', 'Ninguno'], ['otro', 'Otro']) },
+      n13o: { titulo: '¿Qué otro tipo de dato guardas?', ayuda: 'Solo el tipo de dato, no los datos.', placeholder: 'Por ejemplo: datos laborales de empleados' },
       n14: { titulo: '¿Tienes una política de privacidad y el consentimiento de tus clientes por escrito?', opciones: SEL(['no', 'No'], ['informal', 'Algo informal'], ['escrita', 'Sí, escrita'], ['escrita_revisa', 'Sí, escrita y la reviso periódicamente']) },
-      n15: { titulo: '¿Qué medidas usas hoy para proteger esa información?', opciones: SEL(['clave_bloqueo', 'Clave y bloqueo en computador y celular'], ['doble_verificacion', 'Doble verificación en correo y nube'], ['respaldos_auto', 'Respaldos automáticos'], ['disco_cifrado', 'Disco cifrado'], ['confidencialidad_terceros', 'Acuerdos de confidencialidad con terceros'], ['ninguna', 'Ninguna de las anteriores']) },
+      n15: { titulo: '¿Qué medidas usas hoy para proteger esa información?', opciones: SEL(['clave_bloqueo', 'Clave y bloqueo en computador y celular'], ['doble_verificacion', 'Doble verificación en correo y nube'], ['respaldos_auto', 'Respaldos automáticos'], ['disco_cifrado', 'Disco cifrado'], ['confidencialidad_terceros', 'Acuerdos de confidencialidad con terceros'], ['ninguna', 'Ninguna de las anteriores'], ['otro', 'Otro']) },
+      n15o: { titulo: '¿Qué otra medida usas?', placeholder: 'Por ejemplo: guardia nocturna, caja fuerte' },
       n16: {
         titulo: '¿Has tenido algún incidente o susto de seguridad con esa información?',
         campos: {
@@ -219,6 +226,9 @@ export const radarPrevio = {
       error_ref_invalida: 'That option is no longer in your task list. Choose another one or tick “I don’t know”.',
       nose_descarta: 'You ticked “I don’t know”: we will not send what you wrote above. Untick the box to keep it.',
       ref_sin_tareas: 'Add your tasks above first, or tick “I don’t know” here and we will go over it in the meeting.',
+      otro_advertencia: 'Do not write personal data about your clients.',
+      error_otro: 'Write which one (at least {min} characters).',
+      contador: '{n}/{max}',
       ayuda_problemas: 'Something not working? Reply to the email you received this link with, or write to us at',
       error_tamano: 'This answer is too long.',
       conflicto_titulo: 'This form changed in another tab or device',
@@ -277,6 +287,7 @@ export const radarPrevio = {
       },
       n04: { titulo: 'What do you want to achieve in the next 12 months?', ayuda: 'One or two goals, for example: more customers, getting compliance in order, or saving time.' },
       n05: { titulo: 'In this project, who makes the final decision?', opciones: SEL(['yo', 'I do'], ['yo_con_otros', 'I do, together with other people'], ['otra_persona', 'Someone else']) },
+      n05q: { titulo: 'Who makes the decision?', placeholder: 'For example: my partner, the board, my boss' },
       n06: {
         titulo: 'Which repetitive tasks take up most of your time?',
         ayuda: 'Up to three. An estimate is fine.',
@@ -299,7 +310,8 @@ export const radarPrevio = {
           otra_cual: { label: 'Which other tool?' },
         },
       },
-      n10: { titulo: 'Where does your customers’ information live today?', ayuda: 'Select all that apply; it can be more than one.', opciones: SEL(['cabeza_papel', 'In my head or on paper'], ['whatsapp_correo', 'In WhatsApp and emails'], ['excel', 'In Excel or spreadsheets'], ['sistema_diario', 'In a system I use every day'], ['varios_conectados', 'In several systems connected to each other']) },
+      n10: { titulo: 'Where does your customers’ information live today?', ayuda: 'Select all that apply; it can be more than one.', opciones: SEL(['cabeza_papel', 'In my head or on paper'], ['whatsapp_correo', 'In WhatsApp and emails'], ['excel', 'In Excel or spreadsheets'], ['sistema_diario', 'In a system I use every day'], ['varios_conectados', 'In several systems connected to each other'], ['otro', 'Other']) },
+      n10o: { titulo: 'Where else does that information live?', placeholder: 'For example: notebooks, industry-specific software' },
       n11: { titulo: 'Do you have your main processes written down?', opciones: SEL(['no', 'No'], ['notas', 'Some notes'], ['principales', 'Yes, the main ones'], ['revisa_mide', 'Yes, and I review or measure them']) },
       n12: {
         titulo: 'Have you tried to digitize or automate anything before?',
@@ -308,9 +320,11 @@ export const radarPrevio = {
           detalle: { label: 'Tell us what happened' },
         },
       },
-      n13: { titulo: 'What types of customer data do you keep?', ayuda: 'Only the type of data, not the data itself.', opciones: SEL(['identificacion_contacto', 'Identification and contact details'], ['situacion_financiera', 'Financial or asset information'], ['perfil_riesgo', 'Risk or investment profile'], ['salud', 'Health'], ['menores', 'Data of minors'], ['ninguno', 'None']) },
+      n13: { titulo: 'What types of customer data do you keep?', ayuda: 'Only the type of data, not the data itself.', opciones: SEL(['identificacion_contacto', 'Identification and contact details'], ['situacion_financiera', 'Financial or asset information'], ['perfil_riesgo', 'Risk or investment profile'], ['salud', 'Health'], ['menores', 'Data of minors'], ['ninguno', 'None'], ['otro', 'Other']) },
+      n13o: { titulo: 'What other type of data do you keep?', ayuda: 'Only the type of data, not the data itself.', placeholder: 'For example: employees’ employment records' },
       n14: { titulo: 'Do you have a written privacy policy and your customers’ written consent?', opciones: SEL(['no', 'No'], ['informal', 'Something informal'], ['escrita', 'Yes, in writing'], ['escrita_revisa', 'Yes, in writing, and I review it periodically']) },
-      n15: { titulo: 'Which measures do you use today to protect that information?', opciones: SEL(['clave_bloqueo', 'Passwords and screen lock on computer and phone'], ['doble_verificacion', 'Two-step verification on email and cloud'], ['respaldos_auto', 'Automatic backups'], ['disco_cifrado', 'Encrypted disk'], ['confidencialidad_terceros', 'Confidentiality agreements with third parties'], ['ninguna', 'None of the above']) },
+      n15: { titulo: 'Which measures do you use today to protect that information?', opciones: SEL(['clave_bloqueo', 'Passwords and screen lock on computer and phone'], ['doble_verificacion', 'Two-step verification on email and cloud'], ['respaldos_auto', 'Automatic backups'], ['disco_cifrado', 'Encrypted disk'], ['confidencialidad_terceros', 'Confidentiality agreements with third parties'], ['ninguna', 'None of the above'], ['otro', 'Other']) },
+      n15o: { titulo: 'What other measure do you use?', placeholder: 'For example: night guard, safe' },
       n16: {
         titulo: 'Have you had any security incident or scare with that information?',
         campos: {

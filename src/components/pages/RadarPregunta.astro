@@ -5,11 +5,15 @@ const { id, def, dic, t } = Astro.props;
 const legendId = `rp-t-${id}`;
 const condicion = def.visible_si ? JSON.stringify(def.visible_si) : undefined;
 const camposDe = (d) => Object.entries(d.campos ?? {});
+// Acompañante de «Otro» / «¿Quién?»: pregunta de texto que solo aparece cuando su padre la pide (condición positiva `eq` o `incluye`).
+const esAcomp = ['eq', 'incluye'].includes(def.visible_si?.op);
+const ayudaId = `rp-a-${id}`;
 ---
-<div class="rp-pregunta" data-pregunta={id} data-tipo={def.tipo} data-visible-si={condicion} data-obligatoria={def.obligatoria ? '1' : undefined}>
+<div class={esAcomp ? 'rp-pregunta rp-acomp' : 'rp-pregunta'} data-pregunta={id} data-tipo={def.tipo} data-visible-si={condicion} data-acomp={esAcomp ? '1' : undefined} data-obligatoria={def.obligatoria ? '1' : undefined}>
   <fieldset class="rp-fieldset">
     <legend class="rp-titulo" id={legendId}>{dic.titulo}{def.obligatoria && <span class="rp-oblig">{t.ui.obligatoria}</span>}</legend>
-    {dic.ayuda && <p class="rp-ayuda">{dic.ayuda}</p>}
+    {dic.ayuda && !esAcomp && <p class="rp-ayuda">{dic.ayuda}</p>}
+    {esAcomp && <p class="rp-ayuda" id={ayudaId}>{dic.ayuda ? `${dic.ayuda} ` : ''}{t.ui.otro_advertencia}</p>}
 
     {def.precarga && (
       <div class="rp-precarga" data-precarga hidden>
@@ -46,11 +50,11 @@ const camposDe = (d) => Object.entries(d.campos ?? {});
         </div>
       )}
 
-      {!['compuesto', 'repetidor', 'ref_repetidor'].includes(def.tipo) && <RadarCampo path={id} def={def} dic={dic} labelledby={legendId} t={t} />}
+      {!['compuesto', 'repetidor', 'ref_repetidor'].includes(def.tipo) && <RadarCampo path={id} def={def} dic={dic} labelledby={legendId} t={t} describedby={esAcomp ? ayudaId : undefined} />}
     </div>
 
-    <label class="rp-nose"><input type="checkbox" data-nose={id} /><span>{t.ui.no_se}</span></label>
-    <p class="rp-aviso" role="status" data-nose-aviso hidden>{t.ui.nose_descarta}</p>
+    {!esAcomp && <label class="rp-nose"><input type="checkbox" data-nose={id} /><span>{t.ui.no_se}</span></label>}
+    {!esAcomp && <p class="rp-aviso" role="status" data-nose-aviso hidden>{t.ui.nose_descarta}</p>}
     <p class="rp-error" role="alert" data-error hidden></p>
   </fieldset>
 </div>

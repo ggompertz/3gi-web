@@ -1,11 +1,11 @@
 {
   "plantilla": "core",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "secciones": [
-    { "id": "s1", "preguntas": ["n01", "n02", "n03", "n04", "n05"] },
+    { "id": "s1", "preguntas": ["n01", "n02", "n03", "n04", "n05", "n05q"] },
     { "id": "s2", "preguntas": ["n06", "n07", "n08"] },
-    { "id": "s3", "preguntas": ["n09", "n10", "n11", "n12"] },
-    { "id": "s4", "preguntas": ["n13", "n14", "n15", "n16"] },
+    { "id": "s3", "preguntas": ["n09", "n10", "n10o", "n11", "n12"] },
+    { "id": "s4", "preguntas": ["n13", "n13o", "n14", "n15", "n15o", "n16"] },
     { "id": "s5", "preguntas": ["n17", "n18", "n19", "n20", "n21"] },
     { "id": "s6", "preguntas": ["n22", "n23", "n24", "n25"] },
     { "id": "s7", "preguntas": ["n26", "n27", "n28", "n29", "n30", "n31"] }
@@ -28,6 +28,7 @@
     },
     "n04": { "tipo": "texto_corto", "precarga": "objetivo", "destino": "a1.objetivos_12m" },
     "n05": { "tipo": "seleccion", "opciones": ["yo", "yo_con_otros", "otra_persona"], "destino": "gatillo:decide_solo" },
+    "n05q": { "tipo": "texto_corto", "obligatoria": true, "min_chars": 3, "max_chars": 300, "destino": "contexto", "visible_si": { "pregunta": "n05", "op": "eq", "valor": "otra_persona" } },
 
     "n06": {
       "tipo": "repetidor", "obligatoria": true, "min": 1, "max": 3, "destino": "a2.dolores",
@@ -53,13 +54,14 @@
     },
     "n10": {
       "tipo": "multiseleccion", "obligatoria": true,
-      "opciones": ["cabeza_papel", "whatsapp_correo", "excel", "sistema_diario", "varios_conectados"],
+      "opciones": ["cabeza_papel", "whatsapp_correo", "excel", "sistema_diario", "varios_conectados", "otro"],
       "destino": "a3.centralizado",
       "sugiere": [
         { "dimension": "datos", "rangos": { "cabeza_papel": [1, 1], "whatsapp_correo": [1, 1], "excel": [1, 2], "sistema_diario": [3, 4], "varios_conectados": [4, 4] } },
         { "dimension": "tecnologia", "rangos": { "cabeza_papel": [1, 1], "whatsapp_correo": [1, 1], "excel": [1, 2], "sistema_diario": [3, 4], "varios_conectados": [4, 4] } }
       ]
     },
+    "n10o": { "tipo": "texto_corto", "obligatoria": true, "min_chars": 3, "max_chars": 300, "destino": "contexto", "visible_si": { "pregunta": "n10", "op": "incluye", "valor": "otro" } },
     "n11": {
       "tipo": "seleccion", "opciones": ["no", "notas", "principales", "revisa_mide"], "destino": "evidencia:procesos",
       "sugiere": [{ "dimension": "procesos", "rangos": { "no": [1, 1], "notas": [2, 2], "principales": [3, 3], "revisa_mide": [4, 4] } }]
@@ -73,17 +75,19 @@
     },
 
     "n13": {
-      "tipo": "multiseleccion", "opciones": ["identificacion_contacto", "situacion_financiera", "perfil_riesgo", "salud", "menores", "ninguno"],
+      "tipo": "multiseleccion", "opciones": ["identificacion_contacto", "situacion_financiera", "perfil_riesgo", "salud", "menores", "otro", "ninguno"],
       "exclusiva": "ninguno", "destino": "a5.datos_regulados"
     },
+    "n13o": { "tipo": "texto_corto", "obligatoria": true, "min_chars": 3, "max_chars": 300, "destino": "contexto", "visible_si": { "pregunta": "n13", "op": "incluye", "valor": "otro" } },
     "n14": {
       "tipo": "seleccion", "opciones": ["no", "informal", "escrita", "escrita_revisa"], "destino": "a5.politica_privacidad",
       "sugiere": [{ "dimension": "gobernanza", "rangos": { "no": [1, 1], "informal": [2, 2], "escrita": [3, 3], "escrita_revisa": [3, 4] } }]
     },
     "n15": {
-      "tipo": "multiseleccion", "opciones": ["clave_bloqueo", "doble_verificacion", "respaldos_auto", "disco_cifrado", "confidencialidad_terceros", "ninguna"],
+      "tipo": "multiseleccion", "opciones": ["clave_bloqueo", "doble_verificacion", "respaldos_auto", "disco_cifrado", "confidencialidad_terceros", "otro", "ninguna"],
       "exclusiva": "ninguna", "destino": "evidencia:gobernanza,datos"
     },
+    "n15o": { "tipo": "texto_corto", "obligatoria": true, "min_chars": 3, "max_chars": 300, "destino": "contexto", "visible_si": { "pregunta": "n15", "op": "incluye", "valor": "otro" } },
     "n16": {
       "tipo": "compuesto", "destino": "senal",
       "campos": {
