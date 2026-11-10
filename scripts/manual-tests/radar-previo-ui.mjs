@@ -50,7 +50,7 @@ function crearApi(inicial = {}) {
     }
     if (url.pathname === '/v1/guardar') {
       if (a.modo.fallaGuardado > 0) { a.modo.fallaGuardado--; return json(500, { error: 'ERROR_INTERNO' }); }
-      if (a.modo.rechazar) { const malos = Object.keys(cuerpo.cambios).filter((id) => a.modo.rechazar.includes(id)); if (malos.length) return json(422, { error: 'VALIDACION', campos: malos.map((id) => ({ id, codigo: 'OPCION_INVALIDA' })) }); }
+      if (a.modo.rechazar) { const malos = Object.keys(cuerpo.cambios).filter((id) => a.modo.rechazar.includes(id)); if (malos.length) return json(422, { error: 'VALIDACION', campos: malos.map((id) => ({ id, codigo: a.modo.codigoRechazo ?? 'OPCION_INVALIDA' })) }); }
       if (a.modo.conflicto || cuerpo.base_actualizado_en !== ts()) {
         a.modo.conflicto = false; f.n++; f.respuestas = { ...f.respuestas, n01: 'texto del servidor' };
         return json(409, { error: 'CONFLICTO', actualizado_en: ts(), respuestas: f.respuestas });
@@ -414,6 +414,79 @@ console.log('T17 inglés (/en/radar/previo/)');
   ok(!desborde, 'en inglés tampoco hay desborde horizontal a 375 px (los textos son más largos)');
   ok(mov.externas.length === 0 && (await mov.ctx.cookies()).length === 0 && (await sentryIniciado(mov.page)) === false, 'la versión en inglés tampoco usa cookies, terceros ni Sentry');
   await mov.ctx.close();
+}
+
+// ── T18 · «No sé» sobre lo escrito, n07 sin lista y ayuda por correo (caso real del 2026-11-10) ──────────────
+console.log('T18 «No sé» sobre una respuesta escrita, n07 y ayuda por correo');
+{
+  const api = crearApi(); const t = await abrir({ api }); await ya(t.page); await t.page.click('[data-empezar]');
+  const ayuda = seccionVisible(t.page).locator('.rp-ayuda-pie');
+  ok((await ayuda.count()) === 1, 'cada sección muestra la ayuda por correo');
+  ok((await ayuda.count()) === 1 && (await ayuda.locator('a').getAttribute('href')) === 'mailto:chat@3gi.cl', 'la ayuda por correo enlaza a mailto:chat@3gi.cl');
+  ok((await ayuda.count()) === 1 && (await ayuda.innerText()).includes('Responde al correo'), 'la ayuda dice que se puede responder al correo');
+  await t.page.click('[data-ir="siguiente"]:visible');
+  const sel = t.page.locator('[data-ref="n06"]');
+  const aviso06 = t.page.locator('[data-pregunta="n06"] [data-nose-aviso]');
+  const avisoRef = t.page.locator('[data-pregunta="n07"] [data-ref-aviso]');
+  ok((await sel.isDisabled()) && (await avisoRef.isVisible()), 'sin tareas escritas, n07 está deshabilitada y explica qué hacer');
+  await t.page.fill('[data-campo="n06[0].descripcion"]', 'Revisar saldos');
+  ok(!(await sel.isDisabled()) && !(await avisoRef.isVisible()) && (await sel.locator('option').count()) === 2, 'al escribir una tarea, n07 se habilita y la ofrece');
+  await sel.selectOption('0'); await esperar(1800);
+  ok(api.fila.respuestas.n07 === 0, 'elegir la tarea en n07 se guarda (índice 0)');
+  const antes = api.llamadas.filter((c) => c.ruta === '/v1/guardar').length;
+  await t.page.check('[data-nose="n06"]'); await esperar(1800);
+  ok((await aviso06.isVisible()) && (await aviso06.innerText()).includes('no enviaremos lo que escribiste'), 'al tildar «No sé» sobre una tarea escrita avisa que no se enviará');
+  ok((await sel.isDisabled()) && (await sel.locator('option').count()) === 1 && (await avisoRef.isVisible()), 'con n06 en «No sé», n07 queda deshabilitada y sin tareas que ofrecer');
+  const guardados = api.llamadas.filter((c) => c.ruta === '/v1/guardar').slice(antes);
+  ok(guardados.length > 0 && guardados.every((c) => typeof c.cuerpo.cambios.n07 !== 'number'), 'no se envía un índice de n07 junto con n06 en «No sé»');
+  ok(JSON.stringify(api.fila.respuestas.n06) === JSON.stringify({ _: 'no_se' }), 'n06 quedó guardada como «No sé»');
+  // El «No sé» propio de n07 no debe volver a habilitarla mientras n06 siga sin lista (bloquear() la habilitaría).
+  await t.page.check('[data-nose="n07"]'); await t.page.uncheck('[data-nose="n07"]');
+  ok(await sel.isDisabled(), 'desmarcar el «No sé» de n07 no la habilita si n06 sigue en «No sé»');
+  await t.page.uncheck('[data-nose="n06"]'); await esperar(300);
+  ok(!(await aviso06.isVisible()) && !(await sel.isDisabled()) && (await sel.locator('option').count()) === 2, 'al desmarcar «No sé» en n06 vuelve la tarea y se habilita n07');
+  // Con «No sé» propio en n07, editar n06 recalcula las opciones pero no debe volver a habilitar el selector.
+  await t.page.check('[data-nose="n07"]'); await t.page.fill('[data-campo="n06[0].descripcion"]', 'Otra tarea');
+  ok(await sel.isDisabled(), 'con «No sé» en n07, editar n06 no vuelve a habilitar su selector');
+  await t.page.uncheck('[data-nose="n07"]');
+  await t.page.fill('[data-campo="n06[0].descripcion"]', ''); await t.page.check('[data-nose="n06"]');
+  ok(!(await aviso06.isVisible()), 'sin nada escrito, tildar «No sé» no muestra el aviso de descarte');
+  await t.ctx.close();
+}
+{
+  // Si el servidor igual rechaza el índice de n07, el mensaje dice qué hacer (antes era el texto genérico)
+  let api = crearApi(); api.modo.rechazar = ['n07']; api.modo.codigoRechazo = 'INDICE_INVALIDO';
+  let t = await abrir({ api }); await ya(t.page); await t.page.click('[data-empezar]'); await t.page.click('[data-ir="siguiente"]:visible');
+  await t.page.fill('[data-campo="n06[0].descripcion"]', 'Revisar saldos');
+  await t.page.locator('[data-ref="n06"]').selectOption('0'); await esperar(2600);
+  const msg = await t.page.locator('[data-pregunta="n07"] [data-error]').innerText();
+  ok(msg === 'Esa opción ya no está en tu lista de tareas. Elige otra o marca «No sé».', `el rechazo del índice de n07 explica qué hacer (${msg})`);
+  await t.ctx.close();
+  // Una pregunta cualquiera conserva el mensaje genérico
+  api = crearApi(); api.modo.rechazar = ['n04'];
+  t = await abrir({ api }); await ya(t.page); await t.page.click('[data-empezar]');
+  await t.page.fill('[data-campo="n04"]', 'rechazado'); await esperar(2600);
+  ok((await t.page.locator('[data-pregunta="n04"] [data-error]').innerText()) === 'Revisa esta respuesta: no tiene el formato esperado.', 'otras preguntas conservan el mensaje genérico');
+  await t.ctx.close();
+}
+{
+  // La ayuda por correo también está en la pantalla de revisión
+  const t = await abrir({ api: crearApi() }); await ya(t.page); await t.page.click('[data-empezar]');
+  for (let i = 0; i < 12 && !(await t.page.locator('[data-pantalla="revision"]:not([hidden])').count()); i++) await siguiente(t.page);
+  const pie = t.page.locator('[data-pantalla="revision"]:not([hidden]) .rp-ayuda-pie a');
+  ok((await pie.count()) === 1 && (await pie.getAttribute('href')) === 'mailto:chat@3gi.cl', 'la ayuda por correo también está en la revisión');
+  await t.ctx.close();
+}
+{
+  // Inglés: mismos avisos, en inglés
+  const t = await abrir({ api: crearApi(), ruta: '/en/radar/previo/' }); await ya(t.page); await t.page.click('[data-empezar]');
+  const ayudaEn = seccionVisible(t.page).locator('.rp-ayuda-pie');
+  ok((await ayudaEn.count()) === 1 && (await ayudaEn.innerText()).includes('Reply to the email'), 'en inglés la ayuda por correo también está');
+  await t.page.click('[data-ir="siguiente"]:visible');
+  await t.page.fill('[data-campo="n06[0].descripcion"]', 'Review balances'); await t.page.check('[data-nose="n06"]');
+  ok((await t.page.locator('[data-pregunta="n06"] [data-nose-aviso]').innerText()).includes('we will not send what you wrote'), 'en inglés el aviso de descarte está en inglés');
+  ok((await t.page.locator('[data-pregunta="n07"] [data-ref-aviso]').innerText()).includes('Add your tasks above first'), 'en inglés la explicación de n07 está en inglés');
+  await t.ctx.close();
 }
 
 await browser.close();
