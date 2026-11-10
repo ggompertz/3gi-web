@@ -89,9 +89,10 @@ function leerCampo(def, path) {
 
 const filasRep = (id) => $$('[data-fila-activa]', $(`[data-pregunta="${id}"]`));
 
-function leerPregunta(id) {
+// `ignorarNoSe`: lee lo escrito aunque «No sé» esté marcado (sirve para avisar que eso no se enviará).
+function leerPregunta(id, { ignorarNoSe = false } = {}) {
   const def = EST.preguntas[id];
-  if (noSe(id)) return { _: NO_SE };
+  if (!ignorarNoSe && noSe(id)) return { _: NO_SE };
   if (def.tipo === 'compuesto') {
     const o = {};
     for (const [k, c] of Object.entries(def.campos)) { const v = leerCampo(c, `${id}.${k}`); if (!vacia(v)) o[k] = v; }
@@ -123,6 +124,13 @@ function escribirCampo(def, path, v) {
 
 function bloquear(id, si) {
   for (const el of $$('input, select, textarea, button', $(`[data-pregunta="${id}"] [data-controles]`))) el.disabled = si;
+}
+
+// «No sé» REEMPLAZA lo escrito: al servidor solo viaja {_:'no_se'}. Lo escrito sigue a la vista (atenuado), así que si había algo
+// la persona debe saber que no se enviará; sin aviso cree que lo conservó (caso real del 2026-11-10: perdió una tarea que había escrito).
+function avisarNoSe(id) {
+  const aviso = $(`[data-pregunta="${id}"] [data-nose-aviso]`);
+  if (aviso) aviso.hidden = !(noSe(id) && !vacia(leerPregunta(id, { ignorarNoSe: true })));
 }
 
 // Repetidor: las filas se clonan de la plantilla; su índice va en `data-campo` y `name` («n06[0].area»).
@@ -163,8 +171,15 @@ function actualizarRef() {
   if (!sel) return;
   const previo = sel.value;
   sel.replaceChildren(new Option(T.elegir, ''));
-  filasRep('n06').forEach((_, i) => { const d = campo(`n06[${i}].descripcion`)?.value.trim(); if (d) sel.add(new Option(d.slice(0, 80), String(i))); });
-  sel.value = [...sel.options].some((o) => o.value === previo) ? previo : '';
+  // Con n06 en «No sé» el servidor la toma como lista vacía y rechaza cualquier índice: no se ofrecen las tareas aunque sigan escritas.
+  if (!noSe('n06')) {
+    filasRep('n06').forEach((_, i) => { const d = campo(`n06[${i}].descripcion`)?.value.trim(); if (d) sel.add(new Option(d.slice(0, 80), String(i))); });
+  }
+  const sinLista = sel.options.length === 1;
+  sel.value = !sinLista && [...sel.options].some((o) => o.value === previo) ? previo : '';
+  sel.disabled = sinLista || noSe('n07'); // el «No sé» propio de n07 también la bloquea (bloquear() la habilitaría al desmarcarlo)
+  const aviso = $('[data-ref-aviso]');
+  if (aviso) aviso.hidden = !sinLista || noSe('n07');
 }
 
 function escribirPregunta(id, v) {
@@ -295,6 +310,12 @@ async function guardar({ seccion } = {}) {
   return S.enVuelo;
 }
 
+// Mensaje del 422 por pregunta. El servidor manda un código; un texto único no le dice a la persona qué hacer.
+function mensajeError(c) {
+  const esRef = EST.preguntas[c.id]?.tipo === 'ref_repetidor';
+  return esRef && (c.codigo === 'INDICE_INVALIDO' || c.codigo === 'OPCION_INVALIDA') ? T.error_ref_invalida : T.error_validacion;
+}
+
 async function hacerGuardado() {
   const cambios = {};
   const versiones = {};
@@ -327,7 +348,7 @@ async function hacerGuardado() {
       if (!EST.preguntas[c.id]) continue;
       S.conError.add(c.id);
       const e = $(`[data-pregunta="${c.id}"] [data-error]`);
-      if (e) { e.textContent = T.error_validacion; e.hidden = false; }
+      if (e) { e.textContent = mensajeError(c); e.hidden = false; }
     }
     estado('error_validacion', 'error');
     if ([...S.sucias.keys()].some((id) => !S.conError.has(id))) programarGuardado(300); // lo válido se reenvía sin lo rechazado
@@ -378,13 +399,13 @@ function alCambiar(e) {
   const preg = el.closest('[data-pregunta]');
   if (!preg) return;
   const id = preg.dataset.pregunta;
-  if (el.matches('[data-nose]')) bloquear(id, el.checked);
+  if (el.matches('[data-nose]')) { bloquear(id, el.checked); avisarNoSe(id); }
   if (el.matches('input[type="checkbox"][data-campo]') && el.checked) {
     // «Ninguna» es exclusiva: marcarla desmarca el resto y marcar otra la desmarca
     if (el.dataset.exclusiva === '1') campos(el.dataset.campo).forEach((c) => { if (c !== el) c.checked = false; });
     else campos(el.dataset.campo).filter((c) => c.dataset.exclusiva === '1').forEach((c) => { c.checked = false; });
   }
-  if (id === 'n06') actualizarRef();
+  if (id === 'n06' || id === 'n07') actualizarRef();
   marcarSucia(id);
   if (id === 'n06') marcarSucia('n07');
   actualizarCondiciones(); actualizarPrecarga();

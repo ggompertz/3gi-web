@@ -72,6 +72,7 @@ const json = JSON.stringify(paraNavegador).replace(/</g, '\\u003c');
             <button type="button" class="rp-btn rp-btn-sec" data-ir="anterior">{t.ui.anterior}</button>
             <button type="button" class="rp-btn" data-ir="siguiente">{t.ui.siguiente}</button>
           </div>
+          <p class="rp-ayuda rp-ayuda-pie">{t.ui.ayuda_problemas} <a href={`mailto:${t.ui.contacto}`}>{t.ui.contacto}</a>.</p>
         </section>
       ))}
 
@@ -89,6 +90,7 @@ const json = JSON.stringify(paraNavegador).replace(/</g, '\\u003c');
           <button type="button" class="rp-btn rp-btn-sec" data-ir="anterior">{t.ui.anterior}</button>
           <button type="button" class="rp-btn" data-enviar>{t.ui.enviar}</button>
         </div>
+        <p class="rp-ayuda rp-ayuda-pie">{t.ui.ayuda_problemas} <a href={`mailto:${t.ui.contacto}`}>{t.ui.contacto}</a>.</p>
       </section>
 
       <section class="rp-pantalla" data-pantalla="enviado" hidden>
@@ -147,6 +149,8 @@ const json = JSON.stringify(paraNavegador).replace(/</g, '\\u003c');
   .rp-nose { display: inline-flex; align-items: center; gap: 10px; min-height: 44px; font-size: 14px; color: var(--muted); cursor: pointer; }
   .rp-nose input { width: 20px; height: 20px; accent-color: var(--green); }
   .rp-error { color: var(--danger); font-size: 14px; margin-top: 8px; }
+  .rp-aviso { color: var(--amber); font-size: 14px; margin-top: 4px; }
+  .rp-ayuda-pie { margin-top: 24px; }
   .rp-error-fuerte { color: var(--amber); font-weight: 500; margin-bottom: 8px; }
   .rp-precarga { background: rgba(0, 232, 145, .06); border: 1px dashed var(--grn-dk); border-radius: 10px; padding: 12px 14px; margin: 10px 0; display: grid; gap: 8px; }
   .rp-precarga-t { font-size: 14px; font-weight: 500; }

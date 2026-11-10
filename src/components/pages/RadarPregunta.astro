@@ -42,6 +42,7 @@ const camposDe = (d) => Object.entries(d.campos ?? {});
           <select class="rp-input" data-campo={id} data-ref={def.ref} aria-labelledby={legendId}>
             <option value="">{t.ui.elegir}</option>
           </select>
+          <p class="rp-ayuda" data-ref-aviso hidden>{t.ui.ref_sin_tareas}</p>
         </div>
       )}
 
@@ -49,6 +50,7 @@ const camposDe = (d) => Object.entries(d.campos ?? {});
     </div>
 
     <label class="rp-nose"><input type="checkbox" data-nose={id} /><span>{t.ui.no_se}</span></label>
+    <p class="rp-aviso" role="status" data-nose-aviso hidden>{t.ui.nose_descarta}</p>
     <p class="rp-error" role="alert" data-error hidden></p>
   </fieldset>
 </div>
