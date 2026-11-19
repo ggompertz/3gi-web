@@ -3,7 +3,6 @@ import sentry from '@sentry/astro';
 import guardiaContenido from './src/integrations/guardia-contenido.mjs';
 import guardiaIdioma from './src/integrations/guardia-idioma.mjs';
 import guardiaDiagnostico from './src/integrations/guardia-diagnostico.mjs';
-import academiaCondicional from './src/integrations/academia-condicional.mjs';
 
 // Node 20.6+ nativo — carga .env local para desarrollo/build manual.
 // En Cloudflare Pages (deploy automático) y en el fallback de wrangler en Hetzner,
@@ -37,8 +36,6 @@ export default defineConfig({
     guardiaIdioma(),
     // Falla el build si aparece «diagnóstico/diagnosis» fuera de los usos aceptados (ver src/integrations/guardia-diagnostico.mjs).
     guardiaDiagnostico(),
-    // La ruta /academia existe solo si la Academia es visible (src/data/academia.mjs); apagada, el sitio sale sin ella.
-    academiaCondicional(),
     // Init real de Sentry vive en sentry.client.config.ts (patrón recomendado por @sentry/astro
     // para evitar el warning de deprecación de pasar `dsn` acá). Sitio 100% estático (sin
     // adapter SSR), así que solo aplica sentry.client.config.ts, no hace falta el de server.
