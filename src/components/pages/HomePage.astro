@@ -18,6 +18,8 @@ const p = (path) => (lang === 'en' ? '/en' + path : path);
   @media (max-width: 600px) {
     .pg-home .book-strip { padding: 8px 0; }
     .pg-home .book-strip a { font-size: 12px; }
+    /* El enlace del libro no cabía en una línea a 375 px y ensanchaba toda la página (2026-11-19). */
+    .pg-home .book-strip-link { white-space: normal; }
   }
 </style>
 <div class="pg-home" data-lang={lang} style="display:contents">
