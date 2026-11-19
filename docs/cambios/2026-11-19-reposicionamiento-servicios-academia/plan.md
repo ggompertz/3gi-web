@@ -1,6 +1,6 @@
 # Plan: reposicionamiento de servicios y Academia 3GI
 
-Versión 1 · 2026-11-19 · borrador. Viene de [spec.md](spec.md) (← [intent.md](intent.md)). Cada chunk es de menos de 2 h y se puede desplegar solo. Estado: chunks 0, 1 y 2 fusionados (PR #37); chunk 3 implementado en esta rama (2026-11-19), pendiente de PR; chunk 4 (cierre) pendiente.
+Versión 1 · 2026-11-19 · borrador. Viene de [spec.md](spec.md) (← [intent.md](intent.md)). Cada chunk es de menos de 2 h y se puede desplegar solo. Estado (2026-11-19): chunks 0 a 4 hechos y fusionados (PR #36 división del `CLAUDE.md`, #37 chunks 1 y 2, #38 chunk 3). La Academia sigue apagada. Pendiente: la apertura (ver más abajo) y el seguimiento en Search Console.
 
 ## Límites para quien implemente
 - **Siempre:** seguir `frontend-astro.md`; rama nueva desde `master` y PR (nunca directo a `master`); textos solo en `src/i18n/*.mjs`; correr el build con las tres guardias; probar ES y EN en el HTML crudo y en el navegador (`innerText`); commits en español, con archivos específicos en `git add`.
@@ -62,3 +62,11 @@ Acciones: `ACADEMIA_PUBLICADA` a `true`; entrada de `/academia` en `sitemap.xml`
 - **No hecho a propósito:** `/academia` no está en `sitemap.xml` (se agrega solo al abrir) ni hay redirección de `academia.3gi.cl` (también al abrir).
 - **Pie de página:** con el enlace «Academia» los enlaces del pie pasan a dos filas a 1366 px; se ve centrado y legible.
 - **Control de no regresión:** con el interruptor apagado, el sitio generado es idéntico al de `origin/master` (34 archivos html, txt y xml comparados, sin CSS ni la clave pública de PostHog: 0 diferencias, ninguno nuevo).
+
+## Registro del chunk 4: cierre (2026-11-19)
+- PR #38 fusionado (63bb881). Verificado en `https://3gi.cl` en vivo, sin caché: la hoja de estilos desplegada trae la regla `nav-6` del PR #38; la frase aprobada, el encabezado y x-055 están en ES y EN; las frases viejas no aparecen; el JSON-LD del FAQ coincide con el texto visible; `llms.txt` y `sitemap.xml` actualizados; `/academia` y `/en/academia` responden 404.
+- Ninguna de las 26 URLs del sitemap, ni `llms.txt`, `robots.txt` o `sitemap.xml`, menciona la Academia.
+- No verificado: el identificador del despliegue en el panel de Cloudflare (se comprobó por el contenido publicado, no por el panel).
+- **Seguimiento recomendado en Search Console** (a los 7, 14 y 28 días): consultas, impresiones y posición de `/`, `/faq`, `/nosotros` y sus versiones EN, y el informe de fragmentos enriquecidos de preguntas frecuentes, porque cambiaron títulos, descripciones y la respuesta del FAQ en el JSON-LD. Si cae el tráfico de consultas como «consultoría de IA», reponer el término en el cuerpo y en los títulos meta. No se tomó una línea base antes del cambio.
+- Pendiente aparte: el scroll horizontal de la home a 375 px (anterior a este cambio).
+
