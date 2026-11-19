@@ -47,10 +47,10 @@ const p = (path) => (lang === 'en' ? '/en' + path : path);
   <button data-cal-link="3g-intelligence/30min" data-cal-config='{"layout":"month_view"}' class="btn btn-outline" style="width:100%; justify-content:center;"><span><Fragment set:html={t('prec-scan-btn')} /></span></button>
 </div>
 <!-- RADAR 360 -->
-<div class="inv-card featured" id="radar-360-card" data-popular={lang === 'en' ? 'Most popular' : 'Más popular'}>
+<div class="inv-card" id="radar-360-card">
   <div class="inv-name"><Fragment set:html={t('prec-full-name')} /></div>
   <div class="inv-desc"><Fragment set:html={t('prec-full-desc')} /></div>
-  <div class="inv-price">{usd(OFERTA.radar.r360.usd, lang)}</div>
+  <div class="inv-price"><Fragment set:html={t('prec-full-price')} /></div>
   <div class="inv-price-sub"><Fragment set:html={t('prec-full-priceSub')} /></div>
   <ul class="inv-includes"><li><Fragment set:html={t('prec-full-li1')} /></li><li><Fragment set:html={t('prec-full-li2')} /></li><li><Fragment set:html={t('prec-full-li3')} /></li><li><Fragment set:html={t('prec-full-li4')} /></li><li><Fragment set:html={t('prec-full-li5')} /></li></ul>
   <button data-cal-link="3g-intelligence/30min" data-cal-config='{"layout":"month_view"}' class="btn btn-primary" style="width:100%; justify-content:center;"><span><Fragment set:html={t('prec-full-btn')} /></span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"></path></svg></button>
