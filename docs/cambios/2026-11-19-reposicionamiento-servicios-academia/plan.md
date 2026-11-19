@@ -33,4 +33,4 @@ Acciones: `ACADEMIA_PUBLICADA` a `true`; entrada de `/academia` en `sitemap.xml`
 2. RF-11: `/nosotros` solo título y meta. **Resuelta: sí (Gonzalo, 2026-11-19).**
 3. Título y descripción de la home sin «consultoría», como hoy. **Resuelta: sí (Gonzalo, 2026-11-19).**
 4. Texto de `/academia`. **Resuelta: aprobado (Gonzalo, 2026-11-19).**
-5. División del `CLAUDE.md` de 3gi-web (42,7 KB): trabajo aparte.
+5. División del `CLAUDE.md` de 3gi-web. **Resuelta: se hace antes, en la rama `chore/dividir-claude-md` (Gonzalo, 2026-11-19).** Este plan se implementa después de fusionarla.

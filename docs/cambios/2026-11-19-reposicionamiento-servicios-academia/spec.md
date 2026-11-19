@@ -17,7 +17,7 @@ Versión 1 · 2026-11-19 · borrador. Viene de [intent.md](intent.md); sigue [pl
 | RF-09 | Ítem «Academia» en el menú de escritorio, el menú móvil y el pie, con su clave `nav-academia` en las tablas ES y EN de `Layout.astro`. El selector EN se oculta (o se desactiva) en páginas sin versión EN. | MVP | Encendido: 3 enlaces; en `/academia` no hay enlace a `/en/academia`. Sin scroll horizontal a 901, 1100 y 1239 px |
 | RF-10 | `public/sitemap.xml`: `lastmod` actualizado en las páginas modificadas. La entrada de `/academia` se agrega solo en el PR de apertura. | MVP | `lastmod` de home, `/faq` y las demás modificadas = fecha del cambio |
 | RF-11 | `/nosotros` (ES y EN): solo título y descripción meta, para que no digan «somos consultores». La historia personal no cambia. **Confirmado por Gonzalo (2026-11-19).** | Después | `dist/nosotros/index.html` sin «Consultores que mueven»; `<title>` actualizado |
-| RF-12 | `README.md` y `CLAUDE.md` de 3gi-web actualizados (posicionamiento, interruptor, regla de la guardia). | MVP | Los tres puntos están descritos |
+| RF-12 | `README.md` y los `CLAUDE.md` de 3gi-web actualizados (posicionamiento y interruptor en la raíz; regla de la guardia en `src/integrations/CLAUDE.md`). Depende de que el PR `chore/dividir-claude-md` esté fusionado: el `CLAUDE.md` ya está dividido por módulo. | MVP | Los tres puntos están descritos en los archivos correctos |
 
 ## Requisitos no funcionales
 - RNF-01: las tres guardias (contenido, idioma, diagnóstico) pasan con el interruptor apagado y con él encendido.
