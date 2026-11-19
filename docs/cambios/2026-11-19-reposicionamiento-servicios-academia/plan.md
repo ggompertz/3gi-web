@@ -24,7 +24,7 @@ Condiciones: (1) INAPI para «Academia 3GI» y «Saca Valor a la IA»; (2) revis
 Acciones: `ACADEMIA_PUBLICADA` a `true`; entrada de `/academia` en `sitemap.xml`; línea de `llms.txt`; redirección de la raíz de `academia.3gi.cl` a `https://3gi.cl/academia`; variable de entorno de Cloudflare si se usó; verificar en producción.
 
 ## Trabajo relacionado en otros repositorios (fuera de este PR)
-- `3gi-learning`: título de la pestaña «3G Intelligence · Capacitaciones» → «Academia 3GI»; redirección de la raíz al abrir (hoy responde 200 con cuerpo 404).
+- `3gi-learning`: título de la pestaña «3G Intelligence · Capacitaciones» → «Academia 3GI»; redirección de la raíz al abrir (hoy es una página mínima con el nombre viejo, sin `noindex`; la nota anterior que decía «cuerpo 404» era un error: esa era la respuesta de `/robots.txt`).
 - Diploma: pendiente de decisión de Gonzalo el pie «3G Intelligence · Movemos tu empresa de una ERA a otra» (propuesta: «3G Intelligence · Academia»); implica `plantilla_version` v3.
 - Lista para el abogado: `/terminos` y `/privacidad` de 3gi.cl dicen «consultora» y «consultoría»; la Academia necesita sus propios términos y privacidad.
 
