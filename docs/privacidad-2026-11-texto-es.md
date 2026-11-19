@@ -6,7 +6,7 @@ _Última actualización: noviembre 2026 · Versión 2026-11_
 
 ## 1. Quiénes somos
 
-3G Intelligence ofrece servicios de inteligencia artificial y automatización para empresas: evaluamos dónde la IA da retorno, construimos las soluciones y acompañamos su operación. Contacto: chat@3gi.cl
+3G Intelligence ofrece servicios de inteligencia artificial y automatización para empresas: evaluamos dónde aplicar IA, construimos las soluciones y acompañamos su operación. Contacto: chat@3gi.cl
 
 3G Intelligence es el nombre comercial de 3GI SpA, RUT 78.388.535-2, con domicilio en Viña del Mar, Chile, representada por Gonzalo Gompertz Geldres. 3GI SpA es la responsable del tratamiento de tus datos personales. Para ejercer tus derechos o resolver dudas sobre esta política, escribe a chat@3gi.cl.
 
