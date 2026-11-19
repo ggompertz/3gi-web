@@ -235,7 +235,7 @@ const p = (path) => (lang === 'en' ? '/en' + path : path);
   <div class="container">
     <OptDiv on={lang === 'es'} class="section-header">
       <div class="section-tag"><Fragment set:html={t('x-050')} /></div>
-      <h2 class="section-title" style="margin-bottom:12px;"><Fragment set:html={t('x-051')} /><br><Fragment set:html={t('x-052')} /></h2>
+      <h2 class="section-title" style="margin-bottom:12px; font-size:clamp(21px, 2.9vw, 35px);"><Fragment set:html={t('x-051')} /><br><Fragment set:html={t('x-052')} /></h2>
       <p class="section-sub" style="margin-bottom:20px;"><Fragment set:html={t('x-053')} /></p>
     </OptDiv>
     <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:20px; margin-bottom:20px;">

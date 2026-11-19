@@ -1,6 +1,6 @@
 # Plan: reposicionamiento de servicios y Academia 3GI
 
-Versión 1 · 2026-11-19 · borrador. Viene de [spec.md](spec.md) (← [intent.md](intent.md)). Cada chunk es de menos de 2 h y se puede desplegar solo. Estado: chunk 0 hecho (2026-11-19); chunk 1 implementado en esta rama (2026-11-19), pendiente de PR; chunks 2 a 4 pendientes.
+Versión 1 · 2026-11-19 · borrador. Viene de [spec.md](spec.md) (← [intent.md](intent.md)). Cada chunk es de menos de 2 h y se puede desplegar solo. Estado: chunks 0, 1 y 2 implementados en esta rama (2026-11-19), pendientes de PR; chunks 3 y 4 pendientes.
 
 ## Límites para quien implemente
 - **Siempre:** seguir `frontend-astro.md`; rama nueva desde `master` y PR (nunca directo a `master`); textos solo en `src/i18n/*.mjs`; correr el build con las tres guardias; probar ES y EN en el HTML crudo y en el navegador (`innerText`); commits en español, con archivos específicos en `git add`.
@@ -43,3 +43,13 @@ Acciones: `ACADEMIA_PUBLICADA` a `true`; entrada de `/academia` en `sitemap.xml`
 - **Hallazgo previo, no causado por este cambio:** la home (ES y EN) a 375 px tiene scroll horizontal (ancho 402 contra 360; banner del libro, botón «Ver cómo se recuperaron…» y el texto final). Idéntico en `master`. `/faq` no lo tiene.
 - **Para decidir:** el titular nuevo ocupa 6 líneas en escritorio y 9 en móvil (antes unas 4). Opciones: reducir su tamaño de letra o dejar la segunda frase en tamaño menor.
 - Sin tocar: x-055 («Entendemos el negocio antes de hablar de tecnología…») repite la idea del titular nuevo; decidir si se ajusta.
+
+## Registro del chunk 2 (2026-11-19)
+- Decisiones de Gonzalo: titular reducido de tamaño; x-055 ajustado. Titular con `font-size: clamp(21px, 2.9vw, 35px)` solo en ese bloque (antes 46 px y 26 px): 4 líneas en escritorio (antes 6) y 8 a 9 en móvil (antes 9).
+- x-055 ES: «Ventas, operaciones, ERP, equipos. Conocemos el negocio por dentro: eso es lo que pocos consultores de IA tienen.» EN: «Sales, operations, ERP, teams. We know the business from the inside: something few AI consultants have.»
+- `Layout.astro`: descripción por defecto (conserva «Consultoría» y el título por defecto), `description` y `OfferCatalog` del JSON-LD del servicio en ES y EN.
+- `llms.txt.ts`: presentación como servicios de IA, sin «consultora»; línea de Nosotros.
+- `/nosotros` (ES y EN): solo título y descripción meta. Textos nuevos escritos por Claude, por revisar en el PR.
+- `public/sitemap.xml`: `lastmod` 2026-11-19 en la home, `/faq` y `/nosotros` (ES y EN). `README.md` y `CLAUDE.md` (raíz y `src/integrations/`) actualizados.
+- Menciones de «consultor» que quedan a propósito: `/terminos` y `/privacidad` (textos legales, para el abogado), títulos meta de `/precios` y `/faq`, comparaciones de `/metodologia`, relato personal de `/nosotros`, página del libro y «Consultor dedicado, no software».
+- Verificado: build con las tres guardias en verde; las 7 frases viejas dan 0 resultados en `dist/`.

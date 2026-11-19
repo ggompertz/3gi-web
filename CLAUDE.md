@@ -46,6 +46,8 @@ CLOUDFLARE_API_TOKEN=$(grep CLOUDFLARE_API_TOKEN .env | cut -d= -f2) \
 
 Reglas que valen en todo el repo: nomenclatura pública (Test ERA, Radar, Plan de Vuelo, Piloto Automático; nunca F1 a F5 ni «Etapa»), ERA en mayúsculas, español neutro con «tú», y el Test ERA nunca se llama «diagnóstico».
 
+**Estructura de marca (2026-11-19, decisión de Gonzalo):** 3G Intelligence es la marca madre, con dos líneas separadas: *Servicios para empresas* (Radar, Plan de Vuelo, Piloto Automático; ya no se presentan solo como «consultoría», porque también se construye y se acompaña la operación) y *Academia 3GI* (programa «Saca Valor a la IA», en `academia.3gi.cl`). Frase de posicionamiento: «Entendemos tu negocio antes de hablar de IA. Después diagnosticamos, construimos y te acompañamos en la operación.» «Consultoría» se conserva en los títulos y descripciones meta donde ya estaba (`/precios`, `/faq`, valor por defecto de `Layout`). La Academia no se muestra al público hasta abrir (interruptor `ACADEMIA_PUBLICADA`, chunk 3 del plan). Plan y decisiones: `docs/cambios/2026-11-19-reposicionamiento-servicios-academia/`.
+
 ## graphify
 
 This project has a knowledge graph at graphify-out/ with god nodes, community structure, and cross-file relationships.
