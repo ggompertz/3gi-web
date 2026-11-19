@@ -1,5 +1,6 @@
 ---
 import { fill } from '../data/oferta.mjs';
+import { academiaVisible } from '../data/academia.mjs';
 import '@fontsource/syne/700.css';
 import '@fontsource/syne/800.css';
 import '@fontsource/dm-sans/300.css';
@@ -35,6 +36,11 @@ const ES_SLUGS_WITH_EN_VERSION = new Set([
 ]);
 const esPathNoSlash = esPath !== '/' ? esPath.replace(/\/$/, '') : esPath;
 const hasEnVersion = lang === 'en' || ES_SLUGS_WITH_EN_VERSION.has(esPathNoSlash);
+// Páginas que existen solo en español: no se ofrece el selector de idioma (el botón EN llevaría a un 404).
+const SOLO_ES = new Set(['/academia']);
+const sinEn = SOLO_ES.has(esPathNoSlash);
+// El ítem «Academia» solo aparece si la Academia es visible (src/data/academia.mjs) y en español.
+const mostrarAcademia = academiaVisible() && lang === 'es';
 const enPath = lang === 'en' ? currentPath : `/en${currentPath}`;
 const esUrl = `https://3gi.cl${esPath}`;
 const enUrl = `https://3gi.cl${enPath}`;
@@ -42,7 +48,7 @@ const p = lang === 'en' ? '/en' : '';
 
 const schemaServiceEs = {"@context": "https://schema.org", "@type": "ProfessionalService", "name": "3G Intelligence", "alternateName": "3GI", "url": "https://3gi.cl", "logo": "https://3gi.cl/isotipo.png", "description": "Servicios de inteligencia artificial para empresas latinoamericanas: diagnosticamos, construimos y te acompañamos en la operación. Radar (evaluación inicial), Plan de Vuelo (roadmap e implementación) y Piloto Automático (soporte continuo), con ROI medible.", "email": "chat@3gi.cl", "telephone": "+56978780575", "areaServed": "Latinoamérica", "hasOfferCatalog": {"@type": "OfferCatalog", "name": "Servicios de Inteligencia Artificial para Empresas"}, "priceRange": "USD [[precioMinimoPlano]] - USD [[precioMaximoPlano]]", "knowsAbout": ["Inteligencia Artificial", "Automatización", "PyMEs", "Madurez en IA", "Transformación Digital"], "founder": {"@type": "Person", "name": "Gonzalo Gompertz Geldres", "jobTitle": "Fundador y Director", "url": "https://www.linkedin.com/in/gonzalo-gompertz-geldres"}, "sameAs": ["https://www.linkedin.com/company/3g-intelligence", "https://www.instagram.com/3gintelligence/", "https://www.youtube.com/@3gintelligence", "https://www.facebook.com/3gintelligence/"]};
 const schemaServiceEn = {"@context": "https://schema.org", "@type": "ProfessionalService", "name": "3G Intelligence", "alternateName": "3GI", "url": "https://3gi.cl", "logo": "https://3gi.cl/isotipo.png", "description": "AI services for Latin American businesses: we diagnose, build and accompany you through operations. Radar (initial assessment), Flight Plan (roadmap and implementation), and Autopilot (ongoing support), with measurable ROI.", "email": "chat@3gi.cl", "telephone": "+56978780575", "areaServed": "Latin America", "hasOfferCatalog": {"@type": "OfferCatalog", "name": "AI Services for Businesses"}, "priceRange": "USD [[precioMinimoPlano]] - USD [[precioMaximoPlano]]", "knowsAbout": ["Artificial Intelligence", "Automation", "SMBs", "AI Maturity", "Digital Transformation"], "founder": {"@type": "Person", "name": "Gonzalo Gompertz Geldres", "jobTitle": "Founder & Director", "url": "https://www.linkedin.com/in/gonzalo-gompertz-geldres"}, "sameAs": ["https://www.linkedin.com/company/3g-intelligence", "https://www.instagram.com/3gintelligence/", "https://www.youtube.com/@3gintelligence", "https://www.facebook.com/3gintelligence/"]};
-const schemaFaqEs = {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "¿Cuánto cuesta trabajar con 3GI y qué incluye?", "acceptedAnswer": {"@type": "Answer", "text": "El Test ERA inicial es completamente gratuito. Radar Express parte en [[radarDesde]] según el tamaño de tu empresa, Plan de Vuelo desde [[pdvDesde]], y Piloto Automático (soporte continuo) va de [[pilotoMin]] a [[pilotoMax]] al mes — con precio fijo y entregables definidos antes de comenzar. No hay cobros por hora ni sorpresas al final."}}, {"@type": "Question", "name": "¿Cómo sé si la IA realmente le va a servir a mi negocio?", "acceptedAnswer": {"@type": "Answer", "text": "Eso es exactamente lo que mide el Test ERA: 5 dimensiones de madurez operacional. Desde 5 minutos sabes en qué ERA estás y qué oportunidades concretas tiene tu empresa — antes de comprometer un peso."}}, {"@type": "Question", "name": "¿Han trabajado con empresas de mi rubro o tamaño?", "acceptedAnswer": {"@type": "Answer", "text": "Sí. Servicios profesionales, certificaciones, manufactura, logística, comercio. Si tu empresa tiene procesos repetibles con 2–50 personas, el método funciona — independiente del rubro."}}, {"@type": "Question", "name": "¿Cuánto tiempo toma ver resultados?", "acceptedAnswer": {"@type": "Answer", "text": "El primer entregable concreto (tu Radar, con Score de Madurez) llega en menos de una semana. El roadmap ejecutable con ROI proyectado a 12 meses, dentro de Plan de Vuelo. Los resultados operacionales reales comienzan cuando Plan de Vuelo entra en la etapa de implementación."}}, {"@type": "Question", "name": "¿Quién hace el trabajo — ustedes o me dejan solo con una herramienta?", "acceptedAnswer": {"@type": "Answer", "text": "Nosotros: diagnosticamos, diseñamos y construimos la solución, y la dejamos funcionando en tu infraestructura. Si quieres, te acompañamos en la operación con Piloto Automático; si prefieres operarla por tu cuenta, tu equipo queda preparado para hacerlo."}}]};
+const schemaFaqEs = {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "¿Cuánto cuesta trabajar con 3GI y qué incluye?", "acceptedAnswer": {"@type": "Answer", "text": "El Test ERA inicial es completamente gratuito. Radar Express parte en [[radarDesde]] según el tamaño de tu empresa, Plan de Vuelo desde [[pdvDesde]], y Piloto Automático (soporte continuo) va de [[pilotoMin]] a [[pilotoMax]] al mes — con precio fijo y entregables definidos antes de comenzar. No hay cobros por hora ni sorpresas al final."}}, {"@type": "Question", "name": "¿Cómo sé si la IA realmente le va a servir a mi negocio?", "acceptedAnswer": {"@type": "Answer", "text": "Eso es exactamente lo que mide el Test ERA: 5 dimensiones de madurez operacional. Desde 5 minutos sabes en qué ERA estás y qué oportunidades concretas tiene tu empresa — antes de comprometer un peso."}}, {"@type": "Question", "name": "¿Han trabajado con empresas de mi rubro o tamaño?", "acceptedAnswer": {"@type": "Answer", "text": "Sí. Servicios profesionales, certificaciones, manufactura, logística, comercio. Si tu empresa tiene procesos repetibles con 2–50 personas, el método funciona — independiente del rubro."}}, {"@type": "Question", "name": "¿Cuánto tiempo toma ver resultados?", "acceptedAnswer": {"@type": "Answer", "text": "El primer entregable concreto (tu Radar, con Score de Madurez) llega en menos de una semana. El roadmap ejecutable con ROI proyectado a 12 meses, dentro de Plan de Vuelo. Los resultados operacionales reales comienzan cuando Plan de Vuelo entra en la etapa de implementación."}}, {"@type": "Question", "name": "¿Quién hace el trabajo — ustedes o me dejan solo con una herramienta?", "acceptedAnswer": {"@type": "Answer", "text": "Nosotros: diagnosticamos, diseñamos y construimos la solución, y la dejamos funcionando en tu infraestructura. Si quieres, te acompañamos en la operación con Piloto Automático; si prefieres operarla por tu cuenta, tu equipo queda preparado para hacerlo.[[academiaFrase]]"}}]};
 const schemaFaqEn = {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "How much does it cost to work with 3GI and what does it include?", "acceptedAnswer": {"@type": "Answer", "text": "The initial ERA Test is completely free. Radar Express starts at [[radarDesde]] depending on company size, Flight Plan from [[pdvDesde]], and Autopilot (ongoing support) runs [[pilotoMin]] to [[pilotoMax]] per month, with fixed pricing and defined deliverables before you start. No hourly fees, no surprises at the end."}}, {"@type": "Question", "name": "How do I know if AI will actually help my business?", "acceptedAnswer": {"@type": "Answer", "text": "That's exactly what the ERA Test measures: 5 dimensions of operational maturity. From 5 minutes you know what ERA you're in and what concrete opportunities your company has, before committing a single dollar."}}, {"@type": "Question", "name": "Have you worked with companies in my industry or size?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Professional services, certifications, manufacturing, logistics, trade. If your company has repeatable processes with 2 to 50 people, the method works, regardless of industry."}}, {"@type": "Question", "name": "How long does it take to see results?", "acceptedAnswer": {"@type": "Answer", "text": "The first concrete deliverable (your Radar, with a Maturity Score) arrives in under a week. The executable roadmap with 12-month projected ROI comes within Flight Plan. Real operational results start once Flight Plan reaches the implementation stage."}}, {"@type": "Question", "name": "Who does the work, you or do I get left with just a tool?", "acceptedAnswer": {"@type": "Answer", "text": "We do the work: we diagnose, design and build the solution and leave it running on your infrastructure. If you want, we accompany you in operations with Autopilot; if you prefer to run it yourself, your team will be ready to do so."}}]};
 ---
 <!DOCTYPE html>
@@ -239,6 +245,21 @@ const schemaFaqEn = {"@context": "https://schema.org", "@type": "FAQPage", "main
     .nav-links a { font-size: 13px; color: var(--muted); transition: color 0.2s; white-space: nowrap; }
     .nav-links a:hover { color: var(--offwh); }
     .nav-cta { display: flex; gap: 10px; align-items: center; }
+    /* Con el sexto ítem (Academia) el menú no cabe como está: medido el 2026-11-19, a 1366 px el logo se partía en dos líneas y
+       «Academia» tocaba el selector de idioma (con 5 ítems quedaban 44 px de holgura). Solo aplica cuando el ítem existe (clase nav-6):
+       separación menor, WhatsApp solo con ícono y, hasta 1100 px, menú de hamburguesa. */
+    nav.nav-6 .logo { flex-shrink: 0; }
+    nav.nav-6 .logo-name { white-space: nowrap; }
+    nav.nav-6 .nav-links { gap: 20px; }
+    nav.nav-6 .nav-cta .btn-outline span { display: none; }
+    nav.nav-6 .nav-cta .btn-outline { padding: 10px 12px !important; }
+    @media (max-width: 1100px) {
+      nav.nav-6 .nav-links { display: none; }
+      nav.nav-6 .nav-burger { display: flex; }
+      nav.nav-6 .nav-cta .lang-toggle { display: none; }
+      nav.nav-6 .nav-cta .btn-outline { display: none; }
+      nav.nav-6 .nav-cta .btn-primary { display: none; }
+    }
 
     /* Rango 900-1239px: caben los 5 links de nav-links (incluido "Contenido") pero
        no además el botón de WhatsApp con texto — se colapsa a solo ícono en vez de
@@ -747,7 +768,7 @@ const schemaFaqEn = {"@context": "https://schema.org", "@type": "FAQPage", "main
 </script>
 
 <!-- NAV -->
-<nav>
+<nav class={mostrarAcademia ? 'nav-6' : undefined}>
   <div class="nav-inner">
     <a href="/" class="logo" aria-label={lang === 'en' ? '3G Intelligence, home' : '3G Intelligence, inicio'}>
       <div class="logo-name"><span>3G</span> Intelligence</div>
@@ -759,12 +780,13 @@ const schemaFaqEn = {"@context": "https://schema.org", "@type": "FAQPage", "main
       <li><a href={`${p}/casos`} data-i18n="nav-casos">{lang === 'en' ? 'Cases' : 'Casos'}</a></li>
       <li><a href={`${p}/nosotros`} data-i18n="nav-nosotros">{lang === 'en' ? 'About' : 'Nosotros'}</a></li>
       <li><a href={`${p}/contenido`} data-i18n="nav-contenido">{lang === 'en' ? 'Content' : 'Contenido'}</a></li>
+      {mostrarAcademia && <li><a href="/academia">Academia</a></li>}
     </ul>
     <div class="nav-cta">
-      <div class="lang-toggle">
+      {!sinEn && (<div class="lang-toggle">
         <button class={`lang-btn${lang === 'es' ? ' active' : ''}`} onclick={`window.location.href='${esPath}'`}>ES</button>
         <button class={`lang-btn${lang === 'en' ? ' active' : ''}`} onclick={`window.location.href='${enPath}'`}>EN</button>
-      </div>
+      </div>)}
       <a href="https://wa.me/56988974898" target="_blank" class="btn btn-outline" style="padding:10px 18px; font-size:14px;" aria-label={lang === 'en' ? 'Contact via WhatsApp' : 'Contactar por WhatsApp'}>
         <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
         <span data-i18n="nav-whatsapp">{lang === 'en' ? 'WhatsApp' : 'WhatsApp'}</span>
@@ -785,12 +807,13 @@ const schemaFaqEn = {"@context": "https://schema.org", "@type": "FAQPage", "main
     <li><a href={`${p}/casos`} data-i18n="nav-casos">{lang === 'en' ? 'Cases' : 'Casos'}</a></li>
     <li><a href={`${p}/nosotros`} data-i18n="nav-nosotros">{lang === 'en' ? 'About' : 'Nosotros'}</a></li>
     <li><a href={`${p}/contenido`} data-i18n="nav-contenido">{lang === 'en' ? 'Content' : 'Contenido'}</a></li>
+      {mostrarAcademia && <li><a href="/academia">Academia</a></li>}
   </ul>
   <div class="mobile-menu-footer">
-    <div class="mobile-lang-toggle lang-toggle">
+    {!sinEn && (<div class="mobile-lang-toggle lang-toggle">
       <button class={`lang-btn${lang === 'es' ? ' active' : ''}`} onclick={`window.location.href='${esPath}'`}>ES</button>
       <button class={`lang-btn${lang === 'en' ? ' active' : ''}`} onclick={`window.location.href='${enPath}'`}>EN</button>
-    </div>
+    </div>)}
     <a href="https://cal.com/3g-intelligence/30min" target="_blank" class="btn btn-primary btn-lg" style="width:100%; justify-content:center;" data-i18n="nav-cta">{lang === 'en' ? 'Schedule a meeting' : 'Agendar reunión'}</a>
     <a href="https://wa.me/56988974898" target="_blank" class="btn btn-whatsapp" style="width:100%; justify-content:center;">
       <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
@@ -813,6 +836,7 @@ const schemaFaqEn = {"@context": "https://schema.org", "@type": "FAQPage", "main
         <li><a href={`${p}/faq`}>FAQ</a></li>
         <li><a href={`${p}/nosotros`}>{lang === 'en' ? 'About' : 'Nosotros'}</a></li>
         <li><a href={`${p}/contenido`}>{lang === 'en' ? 'Content' : 'Contenido'}</a></li>
+        {mostrarAcademia && <li><a href="/academia">Academia</a></li>}
         <li><a href="#" onclick="window.__tgiConsentReset();return false;" data-i18n="cookie-prefs">{lang === 'en' ? 'Cookie preferences' : 'Preferencias de cookies'}</a></li>
       </ul>
       <div class="footer-social">

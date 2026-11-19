@@ -9,7 +9,8 @@
     "preview": "astro preview",
     "test:guardia": "node --test src/integrations/guardia-idioma.test.mjs src/integrations/guardia-diagnostico.test.mjs",
     "test:era": "node --test src/test-era-escala.test.mjs",
-    "test:radar": "node --test src/data/radar-previo/estructura.test.mjs src/i18n/radar-previo.test.mjs"
+    "test:radar": "node --test src/data/radar-previo/estructura.test.mjs src/i18n/radar-previo.test.mjs",
+    "test:academia": "node scripts/probar-interruptor-academia.mjs"
   },
   "repository": {
     "type": "git",

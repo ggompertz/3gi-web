@@ -61,7 +61,7 @@ export const home = {
     "faq3-q": "¿Han trabajado con empresas de mi rubro o tamaño?",
     "faq4-a": "El <strong>primer entregable concreto</strong> (tu Radar, con Score de Madurez) llega en menos de una semana. El roadmap ejecutable con ROI proyectado a 12 meses queda listo dentro de Plan de Vuelo. Los resultados operacionales reales — procesos más rápidos, menos errores, ahorro medible — comienzan cuando <strong>Plan de Vuelo entra en implementación</strong>.",
     "faq4-q": "¿Cuánto tiempo toma ver resultados?",
-    "faq5-a": "<strong>Nosotros: diagnosticamos, diseñamos y construimos la solución</strong>, y la dejamos funcionando en tu infraestructura. Si quieres, te acompañamos en la operación con Piloto Automático; si prefieres operarla por tu cuenta, tu equipo queda preparado para hacerlo.",
+    "faq5-a": "<strong>Nosotros: diagnosticamos, diseñamos y construimos la solución</strong>, y la dejamos funcionando en tu infraestructura. Si quieres, te acompañamos en la operación con Piloto Automático; si prefieres operarla por tu cuenta, tu equipo queda preparado para hacerlo.[[academiaFrase]]",
     "faq5-q": "¿Quién hace el trabajo — ustedes o me dejan solo con una herramienta?",
     "hero-btn-calendar": "Hacer el Test ERA gratuito",
     "hero-btn-wa": "Escribir por WhatsApp",
