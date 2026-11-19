@@ -1,6 +1,6 @@
 # Plan: reposicionamiento de servicios y Academia 3GI
 
-Versión 1 · 2026-11-19 · borrador. Viene de [spec.md](spec.md) (← [intent.md](intent.md)). Cada chunk es de menos de 2 h y se puede desplegar solo. Estado de cada uno: pendiente (nada implementado todavía).
+Versión 1 · 2026-11-19 · borrador. Viene de [spec.md](spec.md) (← [intent.md](intent.md)). Cada chunk es de menos de 2 h y se puede desplegar solo. Estado: chunk 0 hecho (2026-11-19); chunk 1 implementado en esta rama (2026-11-19), pendiente de PR; chunks 2 a 4 pendientes.
 
 ## Límites para quien implemente
 - **Siempre:** seguir `frontend-astro.md`; rama nueva desde `master` y PR (nunca directo a `master`); textos solo en `src/i18n/*.mjs`; correr el build con las tres guardias; probar ES y EN en el HTML crudo y en el navegador (`innerText`); commits en español, con archivos específicos en `git add`.
@@ -34,3 +34,12 @@ Acciones: `ACADEMIA_PUBLICADA` a `true`; entrada de `/academia` en `sitemap.xml`
 3. Título y descripción de la home sin «consultoría», como hoy. **Resuelta: sí (Gonzalo, 2026-11-19).**
 4. Texto de `/academia`. **Resuelta: aprobado (Gonzalo, 2026-11-19).**
 5. División del `CLAUDE.md` de 3gi-web. **Resuelta: se hace antes, en la rama `chore/dividir-claude-md` (Gonzalo, 2026-11-19).** Este plan se implementa después de fusionarla.
+
+## Registro del chunk 1 (2026-11-19)
+- Guardia de «diagnóstico» acotada: acepta diagnosticamos, diagnosticar, diagnosticando y diagnosticaremos; sigue marcando diagnóstico, diagnóstica, diagnósticos, diagnostica y diagnosis. Mutación comprobada: con la expresión antigua fallan 3 pruebas.
+- Textos aprobados aplicados en `src/i18n/home.mjs` (x-051, x-052, x-053, `hero-tag`, `faq5-a`), `src/i18n/faq.mjs` (`faqp-c5a1`) y el JSON-LD del FAQ en `Layout.astro`, en ES y EN. Verificado: la respuesta del JSON-LD aparece idéntica en el texto visible de las 4 páginas.
+- Controles negativos: español dentro del inglés, «implementación incluida» y «diagnóstico» como sustantivo hacen fallar el build en la guardia correspondiente.
+- Revisión en navegador (375 px, 768 y 1366): sin errores; las peticiones externas se bloquearon para no escribir en el Supabase del embudo.
+- **Hallazgo previo, no causado por este cambio:** la home (ES y EN) a 375 px tiene scroll horizontal (ancho 402 contra 360; banner del libro, botón «Ver cómo se recuperaron…» y el texto final). Idéntico en `master`. `/faq` no lo tiene.
+- **Para decidir:** el titular nuevo ocupa 6 líneas en escritorio y 9 en móvil (antes unas 4). Opciones: reducir su tamaño de letra o dejar la segunda frase en tamaño menor.
+- Sin tocar: x-055 («Entendemos el negocio antes de hablar de tecnología…») repite la idea del titular nuevo; decidir si se ajusta.

@@ -30,6 +30,16 @@ test('detecta diagnostic, diagnostics, diagnóstico, diagnósticos y diagnosis e
   }
 });
 
+test('acepta las formas del verbo pero no el sustantivo ni el adjetivo', () => {
+  for (const ok of ['diagnosticamos', 'Después diagnosticamos, construimos', 'para diagnosticar', 'estamos diagnosticando', 'diagnosticaremos']) {
+    assert.deepEqual(revisarPagina('index.html', doc(`<p>${ok}</p>`), nada), [], ok);
+  }
+  for (const mal of ['el diagnóstico', 'diagnósticos', 'prueba diagnóstica', 'diagnostica', 'diagnosticarse', 'diagnosticamosx', 'Diagnosis']) {
+    assert.ok(revisarPagina('index.html', doc(`<p>${mal}</p>`), nada).length, mal);
+  }
+  assert.ok(revisarPagina('index.html', doc('<script type="application/ld+json">{"name":"El diagnóstico de IA"}</script>'), nada).length, 'JSON-LD sigue revisado');
+});
+
 test('una excepción exige página y fragmento, y no distingue mayúsculas', () => {
   const perm = [{ pagina: 'casos/index.html', texto: 'Antes de este diagnóstico', motivo: 'cita de un cliente' }];
   const html = doc('<p>"Antes de este DIAGNÓSTICO no teníamos claridad"</p>');
