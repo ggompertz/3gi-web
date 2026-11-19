@@ -6,7 +6,7 @@ _Last updated: November 2026 · Version 2026-11_
 
 ## 1. Who we are
 
-3G Intelligence offers AI and automation services for businesses: we assess where AI delivers returns, build the solutions and support their operation. Contact: chat@3gi.cl
+3G Intelligence offers AI and automation services for businesses: we assess where to apply AI, build the solutions and support their operation. Contact: chat@3gi.cl
 
 3G Intelligence is the trade name of 3GI SpA, tax ID (RUT) 78.388.535-2, domiciled in Viña del Mar, Chile, represented by Gonzalo Gompertz Geldres. 3GI SpA is the controller of your personal data. To exercise your rights or ask questions about this policy, write to chat@3gi.cl.
 
