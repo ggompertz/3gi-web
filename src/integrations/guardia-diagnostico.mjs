@@ -14,7 +14,11 @@ import { fileURLToPath } from 'node:url';
 import { extraerTextos } from './guardia-idioma.mjs';
 import { PERMITIDOS_DIAGNOSTICO } from '../data/diagnostico-permitido.mjs';
 
-export const DIAGNOSTICO = /diagn[oó]stic[oa]?s?|diagnosis/i;
+// El sustantivo y el adjetivo (diagnóstico, diagnóstica, diagnósticos) siguen prohibidos. Se aceptan solo las formas del VERBO que
+// nombran lo que hace la empresa y no un servicio: diagnosticamos, diagnosticar, diagnosticando, diagnosticaremos (decisión de
+// Gonzalo, 2026-11-19: «…Después diagnosticamos, construimos y te acompañamos en la operación»). «diagnostica» se sigue marcando
+// porque es ambigua (adjetivo femenino o verbo). Las páginas del Test ERA tienen además su propia regla estricta en guardia-contenido.
+export const DIAGNOSTICO = /diagn[oó]stic(?!(?:amos|ar|ando|aremos)(?![\p{L}]))[oa]?s?|diagnosis/iu;
 export const PAGINAS_TEST_ERA = ['test-era/index.html', 'en/test-era/index.html', 'test-era-ia/index.html', 'en/test-era-ia/index.html'];
 
 const normalizar = (s) => s.replace(/\s+/g, ' ').trim().toLowerCase();
@@ -68,11 +72,15 @@ export const CASOS = {
     ['index.html', '¿Cuánto cuesta el diagnóstico y qué incluye?'],
     ['en/faq/index.html', "That's precisely what the diagnosis measures."],
     ['era-prueba.html', 'Diagnóstico gratuito · desde 5 minutos'],
+    ['index.html', 'Una prueba diagnóstica gratuita'],
+    ['index.html', 'Diagnosticamos y entregamos el diagnóstico en una semana'],
   ],
   no_deben_marcarse: [
     ['en/test-era/index.html', 'Free ERA Test · 3G Intelligence'],
     ['index.html', '¿Cuánto cuesta trabajar con 3GI y qué incluye?'],
     ['metodologia/index.html', 'Evaluación pagada: dónde está tu empresa hoy'],
+    ['index.html', 'Después diagnosticamos, construimos y te acompañamos en la operación.'],
+    ['faq/index.html', 'Aprendemos a diagnosticar dónde la IA da retorno.'],
   ],
 };
 

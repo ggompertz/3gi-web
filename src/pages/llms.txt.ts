@@ -7,7 +7,7 @@ export function GET() {
   const pdv = OFERTA.planDeVuelo;
   const body = `# 3G Intelligence (3GI)
 
-> 3GI es una consultora de IA aplicada al negocio real, enfocada en PyMEs de Chile y LATAM. Ayudamos a las empresas a identificar qué procesos automatizar con mayor ROI usando el Framework 3 ERAs (ERA 1: Caos Operativo, ERA 2: Datos Organizados, ERA 3: Empresa con IA), una metodología propia. No vendemos herramientas de IA: hacemos el Radar, el análisis y la hoja de ruta de implementación con consultores dedicados, no software genérico.
+> 3GI ofrece servicios de IA aplicada al negocio real para empresas de Chile y LATAM, con foco en PyMEs: diagnosticamos, construimos y te acompañamos en la operación. Ayudamos a las empresas a identificar qué procesos automatizar con mayor ROI usando el Framework 3 ERAs (ERA 1: Caos Operativo, ERA 2: Datos Organizados, ERA 3: Empresa con IA), una metodología propia. No vendemos herramientas de IA genéricas: hacemos el Radar, el análisis y la hoja de ruta con consultores dedicados, construimos la solución y, si lo necesitas, te acompañamos en la operación.
 
 3GI trabaja con PyMEs de ${OFERTA.segmento.empleados[0]} a ${OFERTA.segmento.empleados[1]} empleados en Chile, México, Colombia, Argentina y Perú, en rubros como servicios profesionales, manufactura, logística y transporte, construcción/certificaciones, y comercio/distribución. El fundador y director es Gonzalo Gompertz G. (MBA, 20+ años de experiencia con PyMEs).
 
@@ -23,7 +23,7 @@ export function GET() {
 
 ## Sobre 3GI
 
-- [Nosotros](https://3gi.cl/nosotros): Historia de la consultora, equipo y filosofía de trabajo (ROI primero, foco LATAM, sin dependencia tecnológica).
+- [Nosotros](https://3gi.cl/nosotros): Historia de 3GI, equipo y filosofía de trabajo (ROI primero, foco LATAM, sin dependencia tecnológica).
 - [Libro: Inteligencia Organizacional en la Era IA](https://3gi.cl/inteligencia-organizacional): Libro de Gonzalo Gompertz sobre madurez organizacional y adopción de IA.
 - [FAQ](https://3gi.cl/faq): Preguntas frecuentes sobre costos, plazos, rubros atendidos y modelo de trabajo.
 - [Contenido](https://3gi.cl/contenido): Artículos y recursos publicados por 3GI.

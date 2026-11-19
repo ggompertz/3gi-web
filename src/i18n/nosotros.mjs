@@ -1,7 +1,7 @@
 // Textos de /nosotros (ES y EN). Las claves que existen en un solo idioma son de un bloque que solo ese idioma muestra.
 export const nosotros = {
   es: {
-    meta: {"title": "Consultores que mueven PyMEs de ERA en ERA · 3G Intelligence", "description": "No somos una tech company. Somos consultores que entienden PyMEs latinoamericanas y las mueven de ERA 1 (Caos) a ERA 3 (IA trabajando por ti)."},
+    meta: {"title": "Nosotros: servicios de IA que mueven empresas de ERA en ERA · 3G Intelligence", "description": "No somos una tech company. Entendemos a las empresas latinoamericanas y las movemos de ERA 1 (Caos) a ERA 3 (IA trabajando por ti): diagnosticamos, construimos y te acompañamos en la operación."},
     k: {
     "nos-bio1": "Llevo <strong>más de 20 años trabajando con empresas medianas</strong> en Chile y Latinoamérica. Vendí, gestioné equipos, implementé ERP, sobreviví transformaciones digitales que no terminaron bien y algunas que sí. Eso me dio una perspectiva que pocos consultores de IA tienen: entiendo el negocio antes de hablar de tecnología.",
     "nos-bio2": "Cuando el ciclo de LLMs maduró en 2023, vi algo claro: <strong>la brecha entre las grandes empresas y las PyMEs iba a ensancharse brutalmente</strong>, a menos que alguien se dedicara específicamente a cerrarla. Fundé 3G Intelligence para hacer eso.",
@@ -57,7 +57,7 @@ export const nosotros = {
   },
   },
   en: {
-    meta: {"title": "About · 3G Intelligence", "description": "We're not a tech company. We're consultants who understand Latin American SMBs and move them from ERA 1 (Chaos) to ERA 3 (AI working for you)."},
+    meta: {"title": "About · 3G Intelligence", "description": "We're not a tech company. We understand Latin American businesses and move them from ERA 1 (Chaos) to ERA 3 (AI working for you): we diagnose, build and accompany you through operations."},
     k: {
     "nos-bio1": "I've spent <strong>over 20 years working with mid-sized companies</strong> in Chile and Latin America. I sold, managed teams, implemented ERPs, survived digital transformations that didn't go well — and some that did. That gave me a perspective few AI consultants have: I understand the business before talking about technology.",
     "nos-bio2": "When the LLM cycle matured in 2023, I saw something clearly: <strong>the gap between large companies and SMBs was going to widen brutally</strong>, unless someone specifically dedicated themselves to closing it. I founded 3G Intelligence to do exactly that.",
