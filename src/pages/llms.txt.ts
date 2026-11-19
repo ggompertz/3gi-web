@@ -1,5 +1,6 @@
 // llms.txt generado desde src/data/oferta.ts (no editar a mano; antes vivía en public/).
 import { OFERTA, usd, usdRango } from '../data/oferta.mjs';
+import { academiaVisible } from '../data/academia.mjs';
 
 export function GET() {
   const L = 'es' as const;
@@ -27,7 +28,7 @@ export function GET() {
 - [Libro: Inteligencia Organizacional en la Era IA](https://3gi.cl/inteligencia-organizacional): Libro de Gonzalo Gompertz sobre madurez organizacional y adopción de IA.
 - [FAQ](https://3gi.cl/faq): Preguntas frecuentes sobre costos, plazos, rubros atendidos y modelo de trabajo.
 - [Contenido](https://3gi.cl/contenido): Artículos y recursos publicados por 3GI.
-
+${academiaVisible() ? '- [Academia 3GI](https://3gi.cl/academia): Programa de formación «Saca Valor a la IA» para profesionales y dueños de negocio, separado de los servicios para empresas.\n' : ''}
 ## English
 
 - [Home](https://3gi.cl/en/) · [Methodology](https://3gi.cl/en/metodologia) · [ERA Test](https://3gi.cl/en/test-era) · [Pricing](https://3gi.cl/en/precios) · [Cases](https://3gi.cl/en/casos) · [About](https://3gi.cl/en/nosotros) · [FAQ](https://3gi.cl/en/faq)

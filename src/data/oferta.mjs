@@ -1,6 +1,7 @@
 // Fuente única de la oferta de 3GI. Cambiar un precio, plazo o condición AQUÍ y solo aquí:
 // precios, metodología, llms.txt y el guardia del build leen este archivo.
 // Nomenclatura pública (nunca F1–F5 / «Etapa»). Detalle: skill ia-consultoria-pricing y CLAUDE.md global.
+import { academiaVisible, FRASE_FAQ_ACADEMIA } from './academia.mjs';
 
 /** @typedef {'es'|'en'} Lang */
 
@@ -82,6 +83,8 @@ export const radarExpressRango = () => [OFERTA.radar.express.tramos[0].usd[0], O
 function tokens(lang) {
   const pdv = OFERTA.planDeVuelo;
   return {
+    // Frase de la Academia al final del FAQ «¿Quién hace el trabajo?»: vacía mientras la Academia no se muestra y en inglés.
+    academiaFrase: lang === 'es' && academiaVisible() ? FRASE_FAQ_ACADEMIA : '',
     radarDesde: usd(OFERTA.radar.express.tramos[0].usd[0], lang),
     radarRango: usdRango(radarExpressRango(), lang),
     radar360: usd(OFERTA.radar.r360.usd, lang),

@@ -1,0 +1,13 @@
+---
+// Página de la Academia 3GI, solo en español. Se incluye en el build únicamente si la Academia es visible
+// (src/integrations/academia-condicional.mjs). No va en src/pages para que Astro no la publique por su cuenta.
+import Layout from '../layouts/Layout.astro';
+import AcademiaPage from '../components/pages/AcademiaPage.astro';
+import { academia } from '../i18n/academia.mjs';
+import { academiaSoloRevision } from '../data/academia.mjs';
+const lang = 'es';
+const { title, description } = academia[lang].meta;
+---
+<Layout title={title} description={description} lang={lang} noindex={academiaSoloRevision()}>
+  <AcademiaPage lang={lang} />
+</Layout>

@@ -1,0 +1,60 @@
+---
+// Plantilla de /academia (solo ES). Textos: src/i18n/academia.mjs. Sin botones ni formularios hasta abrir la inscripción.
+import { academia } from '../../i18n/academia.mjs';
+import { fill } from '../../data/oferta.mjs';
+const { lang = 'es' } = Astro.props;
+const t = (k) => fill(academia[lang].k[k], lang);
+const filas = ['f1', 'f2', 'f3', 'f4', 'f5'];
+---
+<style is:global>
+.pg-academia .aca-hero { padding: 140px 0 64px; background: var(--night-2); border-bottom: 1px solid var(--border); }
+.pg-academia .aca-tag { font-family: 'Syne', sans-serif; font-size: 11px; font-weight: 700; letter-spacing: .2em; text-transform: uppercase; color: var(--green); margin-bottom: 16px; }
+.pg-academia .aca-hero h1 { font-family: 'Syne', sans-serif; font-weight: 800; font-size: clamp(32px, 5vw, 52px); letter-spacing: -.03em; line-height: 1.05; margin-bottom: 16px; }
+.pg-academia .aca-hero p { font-size: 18px; font-weight: 300; color: rgba(238,241,246,0.6); max-width: 560px; line-height: 1.65; }
+.pg-academia .aca-body { background: var(--night); padding: 72px 0 96px; }
+.pg-academia .aca-prog { background: var(--night-3); border: 1px solid var(--border); border-left: 3px solid var(--green); border-radius: 12px; padding: 32px 32px 28px; max-width: 760px; }
+.pg-academia .aca-prog-tag { font-family: 'Syne', sans-serif; font-size: 11px; font-weight: 700; letter-spacing: .2em; text-transform: uppercase; color: var(--green); margin-bottom: 12px; }
+.pg-academia .aca-prog h2 { font-family: 'Syne', sans-serif; font-weight: 800; font-size: clamp(22px, 3vw, 30px); letter-spacing: -.02em; line-height: 1.15; margin-bottom: 12px; }
+.pg-academia .aca-ambito { font-size: 16px; color: rgba(238,241,246,0.7); line-height: 1.6; margin-bottom: 24px; }
+.pg-academia .aca-filas { display: grid; gap: 0; }
+.pg-academia .aca-fila { display: grid; grid-template-columns: 160px 1fr; gap: 16px; padding: 14px 0; border-top: 1px solid var(--border); }
+.pg-academia .aca-fila dt { font-family: 'Syne', sans-serif; font-size: 13px; font-weight: 700; color: var(--green); }
+.pg-academia .aca-fila dd { font-size: 15px; line-height: 1.55; color: rgba(238,241,246,0.85); margin: 0; }
+.pg-academia .aca-no { max-width: 760px; margin-top: 40px; }
+.pg-academia .aca-no h2 { font-family: 'Syne', sans-serif; font-weight: 800; font-size: clamp(20px, 2.6vw, 26px); letter-spacing: -.02em; margin-bottom: 10px; }
+.pg-academia .aca-no p { font-size: 16px; line-height: 1.65; color: rgba(238,241,246,0.7); }
+.pg-academia .aca-aclara { max-width: 760px; margin-top: 40px; padding-top: 20px; border-top: 1px solid var(--border); font-size: 14px; color: var(--muted); }
+@media (max-width: 640px) {
+  .pg-academia .aca-hero { padding: 112px 0 48px; }
+  .pg-academia .aca-prog { padding: 24px 20px; }
+  .pg-academia .aca-fila { grid-template-columns: 1fr; gap: 4px; }
+}
+</style>
+<div class="pg-academia" data-lang={lang} style="display:contents">
+  <section class="aca-hero">
+    <div class="container">
+      <div class="aca-tag"><Fragment set:html={t('aca-tag')} /></div>
+      <h1><Fragment set:html={t('aca-h1')} /></h1>
+      <p><Fragment set:html={t('aca-sub')} /></p>
+    </div>
+  </section>
+  <section class="aca-body">
+    <div class="container">
+      <div class="aca-prog">
+        <div class="aca-prog-tag"><Fragment set:html={t('aca-prog-tag')} /></div>
+        <h2><Fragment set:html={t('aca-prog-title')} /></h2>
+        <p class="aca-ambito"><Fragment set:html={t('aca-prog-ambito')} /></p>
+        <dl class="aca-filas">
+          {filas.map((f) => (
+            <div class="aca-fila"><dt><Fragment set:html={t(`aca-${f}-k`)} /></dt><dd><Fragment set:html={t(`aca-${f}-v`)} /></dd></div>
+          ))}
+        </dl>
+      </div>
+      <div class="aca-no">
+        <h2><Fragment set:html={t('aca-no-title')} /></h2>
+        <p><Fragment set:html={t('aca-no-body')} /></p>
+      </div>
+      <p class="aca-aclara"><Fragment set:html={t('aca-aclara')} /></p>
+    </div>
+  </section>
+</div>

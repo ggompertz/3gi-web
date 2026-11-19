@@ -1,6 +1,6 @@
 # Plan: reposicionamiento de servicios y Academia 3GI
 
-Versión 1 · 2026-11-19 · borrador. Viene de [spec.md](spec.md) (← [intent.md](intent.md)). Cada chunk es de menos de 2 h y se puede desplegar solo. Estado: chunks 0, 1 y 2 implementados en esta rama (2026-11-19), pendientes de PR; chunks 3 y 4 pendientes.
+Versión 1 · 2026-11-19 · borrador. Viene de [spec.md](spec.md) (← [intent.md](intent.md)). Cada chunk es de menos de 2 h y se puede desplegar solo. Estado: chunks 0, 1 y 2 fusionados (PR #37); chunk 3 implementado en esta rama (2026-11-19), pendiente de PR; chunk 4 (cierre) pendiente.
 
 ## Límites para quien implemente
 - **Siempre:** seguir `frontend-astro.md`; rama nueva desde `master` y PR (nunca directo a `master`); textos solo en `src/i18n/*.mjs`; correr el build con las tres guardias; probar ES y EN en el HTML crudo y en el navegador (`innerText`); commits en español, con archivos específicos en `git add`.
@@ -53,3 +53,12 @@ Acciones: `ACADEMIA_PUBLICADA` a `true`; entrada de `/academia` en `sitemap.xml`
 - `public/sitemap.xml`: `lastmod` 2026-11-19 en la home, `/faq` y `/nosotros` (ES y EN). `README.md` y `CLAUDE.md` (raíz y `src/integrations/`) actualizados.
 - Menciones de «consultor» que quedan a propósito: `/terminos` y `/privacidad` (textos legales, para el abogado), títulos meta de `/precios` y `/faq`, comparaciones de `/metodologia`, relato personal de `/nosotros`, página del libro y «Consultor dedicado, no software».
 - Verificado: build con las tres guardias en verde; las 7 frases viejas dan 0 resultados en `dist/`.
+
+## Registro del chunk 3 (2026-11-19)
+- **Hecho:** `src/data/academia.mjs` (interruptor, apagado), integración `academia-condicional`, página `src/paginas-pendientes/academia.astro` con plantilla `AcademiaPage.astro` y diccionario `src/i18n/academia.mjs` (solo ES, texto aprobado, sin botones ni enlaces), ítem de menú en escritorio, móvil y pie (solo ES), frase del FAQ vía `[[academiaFrase]]` (home, `/faq` y JSON-LD), línea de `llms.txt`, selector ES/EN oculto en páginas `SOLO_ES`, `noindex` cuando se enciende solo por variable de entorno.
+- **Prueba:** `npm run test:academia` construye apagado y encendido y comprueba 17 cosas; pasan todas. En su primera corrida detectó un error mío: las claves `nav-academia` en la tabla `T` dejaban «Academia» dentro de todas las páginas con el interruptor apagado; se quitaron.
+- **Hallazgo y corrección:** con 6 ítems el menú no cabía: a 1366 px el logo se partía en dos líneas y «Academia» tocaba el selector de idioma (con 5 ítems había 44 px de holgura; con 6, cero). Medido y corregido con la clase `nav-6` (separación de 20 px, WhatsApp solo ícono y hamburguesa hasta 1100 px). Holgura medida después: 32 a 69 px en la home y 78 a 115 px en `/academia` desde 1101 px.
+- **Revisión visual** a 375, 768, 901, 960, 1000, 1100, 1101, 1239, 1240, 1366 y 1600 px, con las peticiones externas bloqueadas. Menú de hamburguesa: 6 ítems en ES, 5 en EN, y sin selector de idioma en `/academia`.
+- **No hecho a propósito:** `/academia` no está en `sitemap.xml` (se agrega solo al abrir) ni hay redirección de `academia.3gi.cl` (también al abrir).
+- **Pie de página:** con el enlace «Academia» los enlaces del pie pasan a dos filas a 1366 px; se ve centrado y legible.
+- **Control de no regresión:** con el interruptor apagado, el sitio generado es idéntico al de `origin/master` (34 archivos html, txt y xml comparados, sin CSS ni la clave pública de PostHog: 0 diferencias, ninguno nuevo).
