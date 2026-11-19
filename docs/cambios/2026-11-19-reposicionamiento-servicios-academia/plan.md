@@ -30,7 +30,7 @@ Acciones: `ACADEMIA_PUBLICADA` a `true`; entrada de `/academia` en `sitemap.xml`
 
 ## Decisiones pendientes de Gonzalo
 1. Texto en inglés de la frase y del FAQ (propuesto en `spec.md`).
-2. RF-11: ¿`/nosotros` solo título y meta?
-3. Título y descripción de la home: ¿se dejan sin «consultoría», como hoy?
+2. RF-11: `/nosotros` solo título y meta. **Resuelta: sí (Gonzalo, 2026-11-19).**
+3. Título y descripción de la home sin «consultoría», como hoy. **Resuelta: sí (Gonzalo, 2026-11-19).**
 4. Texto de `/academia` (borrador en `spec.md`).
 5. División del `CLAUDE.md` de 3gi-web (42,7 KB): trabajo aparte.
