@@ -36,7 +36,7 @@ Versión 1 · 2026-11-19 · borrador. Viene de [intent.md](intent.md); sigue [pl
 | La home no contiene «consultoría» en título ni descripción meta | semántica | `src/i18n/home.mjs` línea 5 | verificada |
 | `academia.3gi.cl` raíz: HTTP 200 con cuerpo 404, `noindex` y título «3G Intelligence · Capacitaciones»; sin `sitemap.xml` | técnica | `curl` del 2026-11-19 | verificada |
 | El JSON-LD del FAQ debe coincidir con el texto visible | semántica | `CLAUDE.md` de 3gi-web, Fase 3 | documentada; se verifica en la prueba |
-| `injectRoute` de una integración puede condicionar una ruta en el build estático | técnica | Existe en los tipos de Astro 7.3.2 (`integrations.d.ts` línea 325); comportamiento en build estático sin probar | **no verificada**: chunk 0 |
+| `injectRoute` de una integración puede condicionar una ruta en el build estático | técnica | Probado el 2026-11-19 en una copia del repo (Astro 7.3.2): con `PUBLIC_ACADEMIA` ausente, 30 páginas y ningún rastro de «academia» en `dist/`; con `PUBLIC_ACADEMIA=1`, 31 páginas, `dist/academia/index.html` y solo `hreflang` es y x-default; las tres guardias en verde en ambos casos. Hallazgo confirmado: el selector EN de la página enlaza a `/en/academia/` (RF-09 lo corrige) | verificada |
 | Las vistas previas de Cloudflare Pages admiten variables propias y quedan sin protección de acceso | técnica | Sin consultar | **no verificada**: chunk 0, requiere a Gonzalo |
 | Los nombres «Academia 3GI» y «Saca Valor a la IA» están libres (INAPI clases 35 y 41; el dominio no requiere NIC Chile: es subdominio de 3gi.cl) | semántica | Sin consultar | **no verificada**: condición de apertura |
 
