@@ -40,7 +40,7 @@ Versión 1 · 2026-11-19 · borrador. Viene de [intent.md](intent.md); sigue [pl
 | Las vistas previas de Cloudflare Pages admiten variables propias y quedan sin protección de acceso | técnica | Sin consultar | **no verificada**: chunk 0, requiere a Gonzalo |
 | Los nombres «Academia 3GI» y «Saca Valor a la IA» están libres (INAPI clases 35 y 41; el dominio no requiere NIC Chile: es subdominio de 3gi.cl) | semántica | Sin consultar | **no verificada**: condición de apertura |
 
-## Borrador del texto de `/academia` (ES, por aprobar)
+## Texto de `/academia` (ES, **aprobado por Gonzalo el 2026-11-19**)
 - **Título:** Academia 3GI
 - **Bajada:** Aprende a usar IA en tu trabajo, con criterio y verificando lo que produce.
 - **Programa:** Saca Valor a la IA · Módulo 1. Uso de IA en tareas reales de trabajo, con verificación de resultados y cuidado de los datos.
@@ -54,7 +54,7 @@ Versión 1 · 2026-11-19 · borrador. Viene de [intent.md](intent.md); sigue [pl
 ## Frase del FAQ (borrador)
 - **ES, ahora:** «Nosotros: diagnosticamos, diseñamos y construimos la solución, y la dejamos funcionando en tu infraestructura. Si quieres, te acompañamos en la operación con Piloto Automático; si prefieres operarla por tu cuenta, tu equipo queda preparado para hacerlo.»
 - **ES, al publicar la Academia:** se agrega «Y si quieres que tú o tu equipo aprendan a usar IA, existe la Academia 3GI, un programa aparte.»
-- **EN:** versión equivalente, por confirmar. Glosario fijo: Piloto Automático → Autopilot, Plan de Vuelo → Flight Plan.
+- **EN (aprobado el 2026-11-19):** «We do the work: we diagnose, design and build the solution and leave it running on your infrastructure. If you want, we accompany you in operations with Autopilot; if you prefer to run it yourself, your team will be ready to do so.» Glosario fijo: Piloto Automático → Autopilot, Plan de Vuelo → Flight Plan.
 - «Diagnosticamos» en el FAQ depende de RF-06.
 
 ## Riesgos
@@ -62,3 +62,9 @@ Versión 1 · 2026-11-19 · borrador. Viene de [intent.md](intent.md); sigue [pl
 - El menú de 6 enlaces podría desbordar en 901 a 1239 px (hoy caben justo 5).
 - Las pruebas con navegador escriben en el Supabase real del embudo; se intercepta `funnel_events` desde la primera prueba.
 - El texto legal de `/terminos` y `/privacidad` sigue diciendo «consultora» y «consultoría». Queda en la lista para el abogado.
+
+## Textos en inglés (aprobados por Gonzalo el 2026-11-19)
+- Bloque «Por qué 3G Intelligence» (x-051 y x-052): «We understand your business before we talk about AI. Then we diagnose, build and accompany you through operations.»
+- `hero-tag`: «AI Services for Businesses · Chile & LATAM».
+- x-053 (ES): «La diferencia está en el Test ERA. Antes de proponer cualquier herramienta, medimos cómo opera tu empresa y si la IA realmente tiene retorno ahí.» (EN): «The difference is the ERA Test. Before proposing any tool, we measure how your company operates and whether AI really has a return there.»
+- FAQ en español aprobado tal como está en «Frase del FAQ».
