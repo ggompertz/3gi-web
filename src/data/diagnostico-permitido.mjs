@@ -28,7 +28,6 @@ export const PERMITIDOS_DIAGNOSTICO = [
   { pagina: "en/inteligencia-organizacional/index.html", texto: "Professionals accompanying organizational maturity processes who need", motivo: "marco teórico del libro (uso conceptual)" },
   { pagina: "en/metodologia/index.html", texto: "Does it start with a diagnosis or does it already have the solution?", motivo: "uso genérico del método («empieza con diagnóstico»), decidido por Gonzalo el 2026-10-22" },
   { pagina: "en/metodologia/index.html", texto: "Starts with diagnosis", motivo: "uso genérico del método («empieza con diagnóstico»), decidido por Gonzalo el 2026-10-22" },
-  { pagina: "en/privacidad/index.html", texto: "3G Intelligence is an artificial intelligence consultancy offering", motivo: "TEMPORAL: texto legal pendiente de revisión externa (revision-privacidad.md); retirar al fusionar el PR de privacidad" },
   { pagina: "en/privacidad/index.html", texto: "To generate internal diagnostic reports", motivo: "TEMPORAL: texto legal pendiente de revisión externa (revision-privacidad.md); retirar al fusionar el PR de privacidad" },
   { pagina: "index.html", texto: "Implementar IA sin diagnóstico es adivinar. Las empresas que fallan", motivo: "uso genérico del método («empieza con diagnóstico»), decidido por Gonzalo el 2026-10-22" },
   { pagina: "inteligencia-organizacional/index.html", texto: "\"La IA no transforma empresas. La estructura organizacional determina", motivo: "marco teórico del libro (uso conceptual)" },
@@ -39,6 +38,5 @@ export const PERMITIDOS_DIAGNOSTICO = [
   { pagina: "inteligencia-organizacional/index.html", texto: "Un marco de diagnóstico y acción", motivo: "marco teórico del libro (uso conceptual)" },
   { pagina: "metodologia/index.html", texto: "Empieza con diagnóstico", motivo: "uso genérico del método («empieza con diagnóstico»), decidido por Gonzalo el 2026-10-22" },
   { pagina: "metodologia/index.html", texto: "¿Empieza con diagnóstico o ya trae la solución?", motivo: "uso genérico del método («empieza con diagnóstico»), decidido por Gonzalo el 2026-10-22" },
-  { pagina: "privacidad/index.html", texto: "3G Intelligence es una consultora de inteligencia artificial que", motivo: "TEMPORAL: texto legal pendiente de revisión externa (revision-privacidad.md); retirar al fusionar el PR de privacidad" },
   { pagina: "privacidad/index.html", texto: "Generar reportes internos de diagnóstico", motivo: "TEMPORAL: texto legal pendiente de revisión externa (revision-privacidad.md); retirar al fusionar el PR de privacidad" },
 ];
