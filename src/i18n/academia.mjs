@@ -6,7 +6,15 @@ export const academia = {
       title: 'Academia 3GI: aprende a usar IA en tu trabajo · 3G Intelligence',
       description: 'Programa «Saca Valor a la IA»: 4 sesiones de 3 horas, en grupos de hasta 5 personas, para usar IA en tareas reales de tu trabajo, verificando resultados y cuidando los datos.',
     },
+    metaConstruccion: {
+      title: 'Academia 3GI: página en construcción · 3G Intelligence',
+      description: 'Estamos construyendo la Academia 3GI, una línea de 3G Intelligence para aprender a usar IA en el trabajo.',
+    },
     k: {
+      'cons-tag': 'Una línea de 3G Intelligence',
+      'cons-h1': 'Academia 3GI',
+      'cons-pill': 'Página en construcción',
+      'cons-txt': 'Estamos preparando un programa para aprender a usar IA en tu trabajo, con criterio. Muy pronto encontrarás aquí toda la información.',
       'aca-tag': 'Una línea de 3G Intelligence',
       'aca-h1': 'Academia 3GI',
       'aca-sub': 'Aprende a usar IA en tu trabajo, con criterio y verificando lo que produce.',

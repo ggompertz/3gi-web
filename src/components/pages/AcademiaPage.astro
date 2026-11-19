@@ -2,9 +2,11 @@
 // Plantilla de /academia (solo ES). Textos: src/i18n/academia.mjs. Sin botones ni formularios hasta abrir la inscripción.
 import { academia } from '../../i18n/academia.mjs';
 import { fill } from '../../data/oferta.mjs';
+import { academiaVisible } from '../../data/academia.mjs';
 const { lang = 'es' } = Astro.props;
 const t = (k) => fill(academia[lang].k[k], lang);
 const filas = ['f1', 'f2', 'f3', 'f4', 'f5'];
+const completa = academiaVisible();
 ---
 <style is:global>
 .pg-academia .aca-hero { padding: 140px 0 64px; background: var(--night-2); border-bottom: 1px solid var(--border); }
@@ -29,8 +31,49 @@ const filas = ['f1', 'f2', 'f3', 'f4', 'f5'];
   .pg-academia .aca-prog { padding: 24px 20px; }
   .pg-academia .aca-fila { grid-template-columns: 1fr; gap: 4px; }
 }
+
+/* PÁGINA EN CONSTRUCCIÓN (marca: verde #00E891, fondo Deep Night, Syne + DM Sans) */
+.pg-academia .acons { position: relative; min-height: 100vh; display: flex; align-items: center; justify-content: center; text-align: center; padding: 120px 0 96px; background: var(--night); overflow: hidden; }
+.pg-academia .acons::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse 60% 50% at 50% 38%, rgba(0,232,145,0.10), transparent 70%); pointer-events: none; }
+.pg-academia .acons::after { content: ''; position: absolute; inset: 0; background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%2300E891' fill-opacity='0.025'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E"); opacity: 0.5; pointer-events: none; }
+.pg-academia .acons-inner { position: relative; z-index: 1; display: flex; flex-direction: column; align-items: center; max-width: 900px; }
+.pg-academia .acons-iso { width: clamp(84px, 14vw, 120px); height: auto; margin-bottom: 36px; overflow: visible; }
+.pg-academia .acons-iso .barra { fill: var(--green); transform-box: fill-box; transform-origin: 50% 100%; animation: acons-crece 1.1s cubic-bezier(.2,.8,.2,1) both; }
+.pg-academia .acons-iso .b1 { animation-delay: .15s; } .pg-academia .acons-iso .b2 { animation-delay: .35s; } .pg-academia .acons-iso .b3 { animation-delay: .55s; }
+.pg-academia .acons-iso .arco { fill: none; stroke: var(--green); stroke-width: 1.3; stroke-opacity: .35; animation: acons-aparece .9s ease 1.1s both; }
+.pg-academia .acons-iso .nodo { fill: var(--night); stroke: var(--green); stroke-width: 1.6; animation: acons-aparece .6s ease 1.2s both; }
+@keyframes acons-crece { from { transform: scaleY(0); } to { transform: scaleY(1); } }
+@keyframes acons-aparece { from { opacity: 0; } to { opacity: 1; } }
+.pg-academia .acons-tag { font-family: 'Syne', sans-serif; font-size: 11px; font-weight: 700; letter-spacing: .2em; text-transform: uppercase; color: var(--green); margin-bottom: 18px; }
+.pg-academia .acons h1 { font-family: 'Syne', sans-serif; font-weight: 800; font-size: clamp(38px, 7vw, 72px); letter-spacing: -.03em; line-height: 1.02; margin-bottom: 26px; }
+.pg-academia .acons-pill { display: inline-flex; align-items: center; gap: 10px; padding: 9px 18px; border-radius: 999px; border: 1px solid rgba(0,232,145,0.35); background: rgba(0,232,145,0.08); font-family: 'Syne', sans-serif; font-size: 12px; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; color: var(--green); margin-bottom: 28px; }
+.pg-academia .acons-pill::before { content: ''; width: 8px; height: 8px; border-radius: 50%; background: var(--green); animation: acons-pulso 2s ease-in-out infinite; }
+@keyframes acons-pulso { 0%, 100% { opacity: 1; transform: scale(1); } 50% { opacity: .35; transform: scale(.7); } }
+.pg-academia .acons-txt { font-size: clamp(16px, 1.4vw, 19px); font-weight: 300; line-height: 1.7; color: rgba(238,241,246,0.62); max-width: 520px; }
+@media (max-width: 640px) { .pg-academia .acons { padding: 104px 0 72px; } .pg-academia .acons-iso { margin-bottom: 28px; } }
+@media (prefers-reduced-motion: reduce) { .pg-academia .acons-iso .barra, .pg-academia .acons-iso .arco, .pg-academia .acons-iso .nodo, .pg-academia .acons-pill::before { animation: none; } }
 </style>
 <div class="pg-academia" data-lang={lang} style="display:contents">
+  {!completa && (
+    <section class="acons">
+      <div class="container acons-inner">
+        <svg class="acons-iso" viewBox="0 0 56 60" aria-hidden="true" focusable="false">
+          <rect class="barra b1" x="2" y="38" width="11" height="20" rx="2.5" fill-opacity="0.78" />
+          <rect class="barra b2" x="22" y="24" width="11" height="34" rx="2.5" fill-opacity="0.9" />
+          <rect class="barra b3" x="42" y="7" width="11" height="51" rx="2.5" />
+          <path class="arco" d="M13 11Q28 4 42 7" />
+          <circle class="nodo" cx="7.5" cy="38" r="2.2" />
+          <circle class="nodo" cx="27.5" cy="24" r="2.2" />
+          <circle class="nodo" cx="47.5" cy="7" r="2.2" />
+        </svg>
+        <div class="acons-tag"><Fragment set:html={t('cons-tag')} /></div>
+        <h1><Fragment set:html={t('cons-h1')} /></h1>
+        <div class="acons-pill"><Fragment set:html={t('cons-pill')} /></div>
+        <p class="acons-txt"><Fragment set:html={t('cons-txt')} /></p>
+      </div>
+    </section>
+  )}
+  {completa && (<>
   <section class="aca-hero">
     <div class="container">
       <div class="aca-tag"><Fragment set:html={t('aca-tag')} /></div>
@@ -57,4 +100,5 @@ const filas = ['f1', 'f2', 'f3', 'f4', 'f5'];
       <p class="aca-aclara"><Fragment set:html={t('aca-aclara')} /></p>
     </div>
   </section>
+  </>)}
 </div>

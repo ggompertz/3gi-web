@@ -70,3 +70,9 @@ Acciones: `ACADEMIA_PUBLICADA` a `true`; entrada de `/academia` en `sitemap.xml`
 - **Seguimiento recomendado en Search Console** (a los 7, 14 y 28 días): consultas, impresiones y posición de `/`, `/faq`, `/nosotros` y sus versiones EN, y el informe de fragmentos enriquecidos de preguntas frecuentes, porque cambiaron títulos, descripciones y la respuesta del FAQ en el JSON-LD. Si cae el tráfico de consultas como «consultoría de IA», reponer el término en el cuerpo y en los títulos meta. No se tomó una línea base antes del cambio.
 - Pendiente aparte: el scroll horizontal de la home a 375 px (anterior a este cambio).
 
+## Cambio posterior: página en construcción (2026-11-19, decisión de Gonzalo)
+- `/academia` se publica en producción como **«Página en construcción»**, con diseño de marca (isotipo de tres barras animado, Syne y DM Sans, verde #00E891 sobre Deep Night; sin animación si la persona pidió movimiento reducido), `noindex`, sin botones ni enlaces, y sin revelar el programa. Solo llega quien tenga la dirección completa: no está en el menú, el sitemap, `llms.txt` ni el FAQ.
+- El interruptor pasó a tres estados (en construcción, revisión con `PUBLIC_ACADEMIA=1`, publicada). Se eliminó la integración `academia-condicional` y la carpeta `src/paginas-pendientes/`: la página vive en `src/pages/academia.astro`. `npm run test:academia` comprueba 22 cosas en los dos modos.
+- Riesgo aceptado: el nombre «Academia 3GI» queda accesible por dirección antes de verificar INAPI.
+- Al publicar: además de lo ya listado, el aviso «en construcción» desaparece solo al poner `ACADEMIA_PUBLICADA = true`.
+

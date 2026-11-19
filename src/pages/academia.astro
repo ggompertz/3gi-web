@@ -1,0 +1,13 @@
+---
+// Página de la Academia 3GI, solo en español. Según el interruptor de src/data/academia.mjs muestra «Página en construcción»
+// (hoy) o la página completa. Siempre con noindex mientras la Academia no esté publicada.
+import Layout from '../layouts/Layout.astro';
+import AcademiaPage from '../components/pages/AcademiaPage.astro';
+import { academia } from '../i18n/academia.mjs';
+import { academiaVisible, academiaNoindex } from '../data/academia.mjs';
+const lang = 'es';
+const { title, description } = academiaVisible() ? academia[lang].meta : academia[lang].metaConstruccion;
+---
+<Layout title={title} description={description} lang={lang} noindex={academiaNoindex()}>
+  <AcademiaPage lang={lang} />
+</Layout>
