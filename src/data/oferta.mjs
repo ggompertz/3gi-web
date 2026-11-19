@@ -17,7 +17,9 @@ export const OFERTA = {
         { id: 'grande', empleados: '200+', ventasUF: 'sobre 100.000 UF', usd: null },
       ],
     },
-    r360: { usd: 6000, desdeSemanas: 3, areasEntrevistadas: [4, 6], quickWins: { cantidad: [2, 3], maxSemanas: 4 } },
+    // Radar 360: precio a cotizar según tamaño y complejidad (decisión de Gonzalo, 2026-11-19). Los rangos son internos
+    // (skill ia-consultoria-pricing) y NO se publican; por eso aquí no hay `usd`.
+    r360: { aCotizar: true, desdeSemanas: 3, areasEntrevistadas: [4, 6], quickWins: { cantidad: [2, 3], maxSemanas: 4 } },
     descuentoEnPlanDeVueloDias: 90,
   },
   // Radar + Propuesta del Plan de Vuelo: plazo mínimo del tramo inicial (antes escrito a mano en el FAQ como «3–4 semanas»).
@@ -67,7 +69,6 @@ export function montosPermitidos() {
   const s = new Set();
   const add = (x) => { if (typeof x === 'number') s.add(x); else if (Array.isArray(x)) x.forEach(add); };
   OFERTA.radar.express.tramos.forEach((t) => add(t.usd));
-  add(OFERTA.radar.r360.usd);
   OFERTA.dataFoundation.niveles.forEach((n) => add(n.usd));
   add(OFERTA.planDeVuelo.propuesta.desdeUSD);
   add(OFERTA.planDeVuelo.ejecucion.umbralROIUSD);
@@ -87,7 +88,6 @@ function tokens(lang) {
     academiaFrase: lang === 'es' && academiaVisible() ? FRASE_FAQ_ACADEMIA : '',
     radarDesde: usd(OFERTA.radar.express.tramos[0].usd[0], lang),
     radarRango: usdRango(radarExpressRango(), lang),
-    radar360: usd(OFERTA.radar.r360.usd, lang),
     pdvDesde: usd(pdv.propuesta.desdeUSD, lang),
     umbralROI: usd(pdv.ejecucion.umbralROIUSD, lang),
     dfRango: usdRango([OFERTA.dataFoundation.niveles[0].usd[0], OFERTA.dataFoundation.niveles[2].usd[1]], lang),
