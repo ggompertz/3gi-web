@@ -20,7 +20,7 @@ Versión 1 · 2026-11-19 · borrador. Viene de [spec.md](spec.md) (← [intent.m
 Orden: 0, 1, 2 salen en el primer PR (reposicionamiento de servicios). El 3 puede ir en el mismo PR o en uno aparte, siempre apagado.
 
 ## Apertura de la Academia (otro PR, cuando se cumpla todo)
-Condiciones: (1) INAPI y NIC Chile para «Academia 3GI» y «Saca Valor a la IA»; (2) revisión legal de términos y privacidad de la Academia; (3) alias de correo propio y fin de `CORREO_PERMITIDOS`; (4) plan de Vercel apto para uso comercial; (5) tareas programadas con envío real probado; (6) decisión de precio e inscripción; (7) textos de `/academia` aprobados por Gonzalo.
+Condiciones: (1) INAPI para «Academia 3GI» y «Saca Valor a la IA»; (2) revisión legal de términos y privacidad de la Academia; (3) alias de correo propio y fin de `CORREO_PERMITIDOS`; (4) plan de Vercel apto para uso comercial; (5) tareas programadas con envío real probado; (6) decisión de precio e inscripción; (7) textos de `/academia` aprobados por Gonzalo.
 Acciones: `ACADEMIA_PUBLICADA` a `true`; entrada de `/academia` en `sitemap.xml`; línea de `llms.txt`; redirección de la raíz de `academia.3gi.cl` a `https://3gi.cl/academia`; variable de entorno de Cloudflare si se usó; verificar en producción.
 
 ## Trabajo relacionado en otros repositorios (fuera de este PR)

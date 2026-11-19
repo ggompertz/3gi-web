@@ -38,7 +38,7 @@ Versión 1 · 2026-11-19 · borrador. Viene de [intent.md](intent.md); sigue [pl
 | El JSON-LD del FAQ debe coincidir con el texto visible | semántica | `CLAUDE.md` de 3gi-web, Fase 3 | documentada; se verifica en la prueba |
 | `injectRoute` de una integración puede condicionar una ruta en el build estático | técnica | Existe en los tipos de Astro 7.3.2 (`integrations.d.ts` línea 325); comportamiento en build estático sin probar | **no verificada**: chunk 0 |
 | Las vistas previas de Cloudflare Pages admiten variables propias y quedan sin protección de acceso | técnica | Sin consultar | **no verificada**: chunk 0, requiere a Gonzalo |
-| Los nombres «Academia 3GI» y «Saca Valor a la IA» están libres (INAPI clases 35 y 41, NIC Chile) | semántica | Sin consultar | **no verificada**: condición de apertura |
+| Los nombres «Academia 3GI» y «Saca Valor a la IA» están libres (INAPI clases 35 y 41; el dominio no requiere NIC Chile: es subdominio de 3gi.cl) | semántica | Sin consultar | **no verificada**: condición de apertura |
 
 ## Borrador del texto de `/academia` (ES, por aprobar)
 - **Título:** Academia 3GI
