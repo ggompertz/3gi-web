@@ -38,7 +38,7 @@ Versión 1 · 2026-11-19 · borrador. Viene de [intent.md](intent.md); sigue [pl
 | El JSON-LD del FAQ debe coincidir con el texto visible | semántica | `CLAUDE.md` de 3gi-web, Fase 3 | documentada; se verifica en la prueba |
 | `injectRoute` de una integración puede condicionar una ruta en el build estático | técnica | Probado el 2026-11-19 en una copia del repo (Astro 7.3.2): con `PUBLIC_ACADEMIA` ausente, 30 páginas y ningún rastro de «academia» en `dist/`; con `PUBLIC_ACADEMIA=1`, 31 páginas, `dist/academia/index.html` y solo `hreflang` es y x-default; las tres guardias en verde en ambos casos. Hallazgo confirmado: el selector EN de la página enlaza a `/en/academia/` (RF-09 lo corrige) | verificada |
 | Las vistas previas de Cloudflare Pages admiten variables propias y quedan sin protección de acceso | técnica | Sin consultar | **no verificada**: chunk 0, requiere a Gonzalo |
-| Los nombres «Academia 3GI» y «Saca Valor a la IA» están libres (INAPI clases 35 y 41; el dominio no requiere NIC Chile: es subdominio de 3gi.cl) | semántica | Sin consultar | **no verificada**: condición de apertura |
+| Los nombres «Academia 3GI» y «Saca Valor a la IA» están libres (INAPI clase 41 (decisión de Gonzalo del 2026-11-19: cada clase se paga por separado; la 35 y la 42 quedan para los servicios más adelante); el dominio no requiere NIC Chile: es subdominio de 3gi.cl) | semántica | Sin consultar | **no verificada**: condición de apertura |
 
 ## Texto de `/academia` (ES, **aprobado por Gonzalo el 2026-11-19**)
 - **Título:** Academia 3GI
