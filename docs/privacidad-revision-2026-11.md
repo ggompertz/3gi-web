@@ -10,7 +10,7 @@ Páginas: `src/pages/privacidad.astro` (ES) y `src/pages/en/privacidad.astro` (E
 
 ## 1. Contexto
 
-**Quién:** 3GI SpA (nombre comercial 3G Intelligence), RUT 78.388.535-2, Viña del Mar, Chile. Consultora de inteligencia artificial para pymes. Representante: Gonzalo Gompertz Geldres.
+**Quién:** 3GI SpA (nombre comercial 3G Intelligence), RUT 78.388.535-2, Viña del Mar, Chile. Servicios de inteligencia artificial y automatización para empresas. Representante: Gonzalo Gompertz Geldres.
 
 **Qué cambia ahora:** la Ley 21.719 entra en vigencia el **1 de diciembre de 2026** (publicada el 13-dic-2024; reglamento de modelos de prevención: Decreto 662, 9-sep-2026). Además, 3GI lanza el formulario **«Preparación del Radar»** (`/radar/previo/`), donde un cliente entrega, antes de la reunión, información de su empresa. La política vigente (octubre 2026) cubría el Test ERA y el seguimiento comercial, pero no ese cuestionario, no identificaba a la sociedad responsable y no definía qué pasa con los datos de quien no contrata.
 
