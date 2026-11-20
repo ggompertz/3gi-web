@@ -44,7 +44,7 @@ CLOUDFLARE_API_TOKEN=$(grep CLOUDFLARE_API_TOKEN .env | cut -d= -f2) \
 | `docs/claude-md/test-era.md` | Test ERA: escala, errores de `/analizar` y servicio de OTP (en `docs/` porque un `.md` en `src/pages/` o `public/` se publicaría) |
 | `docs/claude-md/historial.md` | Backlog antiguo e incidentes ya resueltos |
 
-**Barrido móvil** (2026-11-20): `npm run build && npm run test:barrido` recorre todas las páginas del build a 375 y 1280 px y falla ante desborde horizontal o texto con contraste menor a 4,5:1 (3:1 si es grande). Intercepta todo lo externo, no escribe en Supabase. Los pendientes conocidos (colores de nivel ERA) viven en el propio script con su motivo.
+**Barrido móvil** (2026-11-20): `npm run build && npm run test:barrido` recorre todas las páginas del build a 375 y 1280 px y falla ante desborde horizontal o texto con contraste menor a 4,5:1 (3:1 si es grande). Intercepta todo lo externo, no escribe en Supabase. Los pendientes conocidos, si los hay, viven en el propio script con su motivo.
 
 Reglas que valen en todo el repo: nomenclatura pública (Test ERA, Radar, Plan de Vuelo, Piloto Automático; nunca F1 a F5 ni «Etapa»), ERA en mayúsculas, español neutro con «tú», y el Test ERA nunca se llama «diagnóstico».
 

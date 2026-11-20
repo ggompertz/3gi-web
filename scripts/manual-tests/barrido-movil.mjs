@@ -44,10 +44,8 @@ const VIEWPORTS = [{ w: 375, h: 812 }, { w: 1280, h: 800 }];
 const EXCLUIDAS = new Set(['/contenido/carrusel-mayo1-era-dos-lados.html']); // activo de contenido: slides en fila horizontal por diseño
 const MAX_FALLAS_POR_PAGINA = 40;
 // Pendientes conocidos: se IMPRIMEN pero no hacen fallar. Cada uno lleva su motivo; si deja de fallar, el script avisa para quitarlo.
-const PENDIENTES_CONOCIDOS = [
-  { colores: ['rgb(0, 232, 145)', 'rgb(234, 179, 8)', 'rgb(239, 68, 68)', 'rgb(248, 113, 113)'], ejemplo: 'ERA ',
-    motivo: 'colores semánticos de nivel ERA (verde/amarillo/rojo) en texto de 10 px sobre tarjeta clara; hace falta decidir variantes oscuras (framework-eras.md). Detectado 2026-11-20' },
-];
+// (vacío desde 2026-11-20: los colores de nivel ERA se resolvieron con variantes oscuras sobre fondo claro)
+const PENDIENTES_CONOCIDOS = [];
 
 const MIME = { '.html': 'text/html; charset=utf-8', '.js': 'text/javascript', '.mjs': 'text/javascript', '.css': 'text/css', '.json': 'application/json',
   '.svg': 'image/svg+xml', '.png': 'image/png', '.jpg': 'image/jpeg', '.webp': 'image/webp', '.woff': 'font/woff', '.woff2': 'font/woff2', '.ico': 'image/x-icon', '.xml': 'application/xml', '.txt': 'text/plain' };
