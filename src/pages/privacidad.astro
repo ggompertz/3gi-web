@@ -134,7 +134,7 @@ import Layout from '../layouts/Layout.astro';
   }
   .legal-doc .date {
     font-size: 12px;
-    color: #6B7280;
+    color: #9CA3AF;
     margin-bottom: 32px;
   }
   .legal-doc h2 {
@@ -156,6 +156,8 @@ import Layout from '../layouts/Layout.astro';
   .legal-doc li { margin-bottom: 4px; }
   .legal-doc a { color: #00E891; text-decoration: none; }
   .cookie-table {
+    display: block;
+    overflow-x: auto; /* en 375 px la tabla desbordaba la página; así hace scroll dentro de sí misma */
     width: 100%;
     border-collapse: collapse;
     margin-top: 16px;

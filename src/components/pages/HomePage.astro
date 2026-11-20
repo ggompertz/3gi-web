@@ -102,7 +102,7 @@ const p = (path) => (lang === 'en' ? '/en' + path : path);
     <OptDiv on={true} class={lang === 'es' ? 'section-header' : undefined} style={lang === 'en' ? 'text-align:center; margin-bottom:20px;' : undefined}>
       <div class="section-tag"><Fragment set:html={t('eras-tag')} /></div>
       <h2 class="section-title"><Fragment set:html={t('eras-title')} /></h2>
-      <p class={lang === 'es' ? 'section-sub' : undefined} style={lang === 'en' ? 'font-size:16px; font-weight:300; color:rgba(238,241,246,0.6); line-height:1.7; margin-top:16px; max-width:600px; margin-left:auto; margin-right:auto;' : undefined}><Fragment set:html={t('eras-sub')} /></p>
+      <p class={lang === 'es' ? 'section-sub' : undefined} style={lang === 'en' ? 'font-size:16px; font-weight:300; color:rgba(13,11,8,0.72); line-height:1.7; margin-top:16px; max-width:600px; margin-left:auto; margin-right:auto;' : undefined}><Fragment set:html={t('eras-sub')} /></p>
     </OptDiv>
 
     <!-- Tarjetas ERA (solo móvil ≤640px) -->
@@ -264,7 +264,7 @@ const p = (path) => (lang === 'en' ? '/en' + path : path);
     </div>
     <div style={lang === 'es' ? 'display:flex; align-items:center; gap:16px; padding:20px 24px; background:rgba(0,158,96,0.08); border:1px solid rgba(0,158,96,0.25); border-radius:12px; flex-wrap:wrap;' : 'display:flex; align-items:center; gap:16px; padding:20px 24px; background:rgba(0,232,145,0.04); border:1px solid rgba(0,232,145,0.15); border-radius:12px; flex-wrap:wrap;'}>
       <div style="flex:1; min-width:200px;">
-        <div style={lang === 'es' ? 'font-size:11px; font-weight:700; letter-spacing:.1em; text-transform:uppercase; color:#009E60; margin-bottom:4px;' : 'font-size:11px; font-weight:700; letter-spacing:.1em; text-transform:uppercase; color:var(--green); margin-bottom:4px;'}><Fragment set:html={t('x-062')} /></div>
+        <div style={lang === 'es' ? 'font-size:11px; font-weight:700; letter-spacing:.1em; text-transform:uppercase; color: #006B44; margin-bottom:4px;' : 'font-size:11px; font-weight:700; letter-spacing:.1em; text-transform:uppercase; color:var(--green); margin-bottom:4px;'}><Fragment set:html={t('x-062')} /></div>
         <div style={lang === 'es' ? 'font-family:Syne,sans-serif; font-weight:800; font-size:15px; margin-bottom:4px; color:#0D0B08;' : 'font-family:Syne,sans-serif; font-weight:800; font-size:15px; margin-bottom:4px;'}>Gonzalo Gompertz G.</div>
         <div style={lang === 'es' ? 'font-size:14px; color:rgba(13,11,8,0.65);' : 'font-size:14px; color:var(--muted);'}><Fragment set:html={t('x-063')} /></div>
       </div>
