@@ -41,7 +41,7 @@ export const OFERTA = {
     { id: 'estandar', horas: [10, 20], usd: [2500, 4500] },
     { id: 'avanzado', horas: [20, 40], usd: [4500, 8000] },
   ],
-  segmento: { empleados: [2, 50] },
+  segmento: { empleados: [2, 199] },
   // Cifras de casos y ejemplos que sí pueden aparecer en el sitio (cada una con su origen).
   otrosMontosUSD: [
     { usd: 250000, origen: 'Caso inspecciones y certificaciones (servicios entregados sin cobrar)' },
