@@ -10,7 +10,7 @@ export function GET() {
 
 > 3GI ofrece servicios de IA aplicada al negocio real para empresas de Chile y LATAM, con foco en PyMEs: diagnosticamos, construimos y te acompañamos en la operación. Ayudamos a las empresas a identificar qué procesos automatizar con mayor ROI usando el Framework 3 ERAs (ERA 1: Caos Operativo, ERA 2: Datos Organizados, ERA 3: Empresa con IA), una metodología propia. No vendemos herramientas de IA genéricas: hacemos el Radar, el análisis y la hoja de ruta con consultores dedicados, construimos la solución y, si lo necesitas, te acompañamos en la operación.
 
-3GI trabaja con PyMEs de ${OFERTA.segmento.empleados[0]} a ${OFERTA.segmento.empleados[1]} empleados en Chile, México, Colombia, Argentina y Perú, en rubros como servicios profesionales, manufactura, logística y transporte, construcción/certificaciones, y comercio/distribución. El fundador y director es Gonzalo Gompertz G. (MBA, 20+ años de experiencia con PyMEs).
+3GI trabaja con PyMEs (micro, pequeña y mediana: de ${OFERTA.segmento.empleados[0]} a ${OFERTA.segmento.empleados[1]} empleados) en Chile, México, Colombia, Argentina y Perú, en rubros como servicios profesionales, manufactura, logística y transporte, construcción/certificaciones, y comercio/distribución. El fundador y director es Gonzalo Gompertz G. (MBA, 20+ años de experiencia con PyMEs).
 
 ## Producto y metodología
 

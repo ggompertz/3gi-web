@@ -10,7 +10,7 @@ import { montosPermitidos } from '../data/oferta.mjs';
 const REGLAS = [
   { id: 'nomenclatura-interna', re: /\bF[1-5]\b|\bEtapas?\b|\bE[1-3]\b/g, msg: 'nomenclatura interna (F1–F5, «Etapa», E1–E3) visible al cliente' },
   { id: 'regionalismo', re: /(?<![\p{L}])(acá|vos|tenés|querés|hacés|mirá|podés|decime|contame|Operás)(?![\p{L}])/giu, msg: 'voseo o regionalismo (usar español neutro, «tú»)' },
-  { id: 'segmento-obsoleto', re: /5\s?[–-]\s?200|10\s?[–-]\s?200|entre 5 y 100|between 5 and 100|5 to 200/gi, msg: 'segmento obsoleto (el vigente es 2 a 50 empleados)' },
+  { id: 'segmento-obsoleto', re: /5\s?[–-]\s?200|10\s?[–-]\s?200|entre 5 y 100|between 5 and 100|5 to 200|\b2\s?(?:[–-]|a|to)\s?50\s?(?:empleados|personas|employees|people)|entre 2 y 50|between 2 and 50/gi, msg: 'segmento obsoleto (el vigente es PyMEs micro, pequeña y mediana: 2 a 199 empleados)' },
   { id: 'test-era-obsoleto', re: /15 minutos|15-minute|~\s?3 minutos|24\s?[–-]\s?48\s?(?:horas|h\b|hours)/gi, msg: 'duración/plazo obsoleto del Test ERA (es «desde 5 minutos», informe al terminar)' },
   { id: 'sin-fuente', re: /30[.,]000\s?[–-]\s?100[.,]000|M[ií]nimo \$50k|Min \$50k|USD 50[.,]000\+/gi, msg: 'afirmación sin fuente (se retiró; no reintroducir sin respaldo)' },
   { id: 'test-era-como-diagnostico', re: /Gratis \(Diagn[oó]stico\)|Sin costo \(Diagn[oó]stico\)|Reporte de Diagn[oó]stico|Diagnosis Report|Free \(Diagnosis\)|No cost \(Diagnosis\)|Free AI Diagnosis|Diagn[oó]stico de IA para PyMEs|AI Diagnosis for SMEs/g, msg: 'el Test ERA no se llama «diagnóstico/diagnosis» (el informe es el «Informe ERA»)' },

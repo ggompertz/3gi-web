@@ -13,7 +13,7 @@ Cada sección del `index.astro` tiene un rol específico en el funnel de convers
 | 5 | `#eras` | ERAs | Framework — ERA 1→2→3 con descripción y ERA Comercial teaser |
 | 6 | `#metodologia` | Metodología | Proceso — 3 pasos con plazos y entregables concretos |
 | 7 | `#caso` | Caso | Prueba social — métricas reales de cliente anonimizado |
-| 8 | `#para-quien` | Para quién | Relevancia — 5 rubros + tamaño ideal |
+| 8 | `#para-quien` | Para quién | Relevancia — 5 rubros + tamaño (PyMEs micro, pequeña y mediana) |
 | 9 | `#trust` | Trust | Objeciones — privacidad, cumplimiento, sin lock-in, acompañamiento |
 | 10 | `#faq` | FAQ | Objeciones finales — 5 preguntas de conversión con acordeón |
 | 11 | `#cta-final` | CTA Final | Conversión — diagnóstico gratuito + WhatsApp |
@@ -21,7 +21,7 @@ Cada sección del `index.astro` tiene un rol específico en el funnel de convers
 ## Secciones clave para editar
 
 ### `#para-quien`
-Agregada en mayo 2026. Muestra 5 rubros objetivo y el tamaño ideal (2–50 empleados, USD 500K–10M).  
+Agregada en mayo 2026. Muestra 5 rubros objetivo y el tamaño: PyMEs micro, pequeña y mediana (2 a 199 empleados; actualizado el 2026-11-20).  
 Si se agregan nuevos rubros objetivo, editar aquí + en `/faq` categoría "¿Es para mi empresa?".
 
 ### `#faq` (homepage)
